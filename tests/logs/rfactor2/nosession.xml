@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE rF [
+<!ENTITY rFEnt "rFactor Entity">
+]>
+<rFactorXML version="1.0">
+<RaceResults>
+<Setting>Multiplayer</Setting>
+<ServerName>RookiesNight_WSu</ServerName>
+<ClientFuelVisible>2</ClientFuelVisible>
+<PlayerFile>player</PlayerFile>
+<DateTime>1364151698</DateTime>
+<TimeString>2013/03/24 21:01:38</TimeString>
+<Mod>RNLOALS_10.RFM</Mod>
+<Season></Season>
+<TrackVenue>Sebring [Virtua_LM]</TrackVenue>
+<TrackCourse>Sebring 12h Course</TrackCourse>
+<TrackEvent>12h Course</TrackEvent>
+<TrackLength>5856.1</TrackLength>
+<GameVersion>1.155</GameVersion>
+<Dedicated>0</Dedicated>
+<ConnectionType upload="1034" download="8042">Custom</ConnectionType>
+<RaceLaps>0</RaceLaps>
+<RaceTime>20</RaceTime>
+<MechFailRate>2</MechFailRate>
+<DamageMult>50</DamageMult>
+<FuelMult>0</FuelMult>
+<TireMult>7</TireMult>
+<VehiclesAllowed>|LolaT280</VehiclesAllowed>
+<ParcFerme>3</ParcFerme>
+<FixedSetups>0</FixedSetups>
+<FreeSettings>2147483647</FreeSettings>
+<FixedUpgrades>0</FixedUpgrades>
+</RaceResults>
+</rFactorXML>

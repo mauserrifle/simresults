@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE rF [
+<!ENTITY rFEnt "rFactor Entity">
+]>
+<rFactorXML version="1.0">
+<RaceResults>
+<Setting>Multiplayer</Setting>
+<ServerName>RookiesNight_WSu</ServerName>
+<ClientFuelVisible>2</ClientFuelVisible>
+<PlayerFile>player</PlayerFile>
+<DateTime>1364151698</DateTime>
+<TimeString>2013/03/24 21:01:38</TimeString>
+<Mod>RNLOALS_10.RFM</Mod>
+<Season></Season>
+<TrackVenue>Sebring [Virtua_LM]</TrackVenue>
+<TrackCourse>Sebring 12h Course</TrackCourse>
+<TrackEvent>12h Course</TrackEvent>
+<TrackLength>5856.1</TrackLength>
+<GameVersion>1.155</GameVersion>
+<Dedicated>0</Dedicated>
+<ConnectionType upload="1034" download="8042">Custom</ConnectionType>
+<RaceLaps>0</RaceLaps>
+<RaceTime>20</RaceTime>
+<MechFailRate>2</MechFailRate>
+<DamageMult>50</DamageMult>
+<FuelMult>0</FuelMult>
+<TireMult>7</TireMult>
+<VehiclesAllowed>|LolaT280</VehiclesAllowed>
+<ParcFerme>3</ParcFerme>
+<FixedSetups>0</FixedSetups>
+<FreeSettings>2147483647</FreeSettings>
+<FixedUpgrades>0</FixedUpgrades>
+<Race>
+<DateTime>1364153781</DateTime>
+<TimeString>2013/03/24 21:36:21</TimeString>
+<Laps>2147483647</Laps>
+<Minutes>20</Minutes>
+<Stream>
+<Score et="94.0">Malek1th(5) lap=0 point=1 t=53.231 et=93.938</Score>
+<Score et="94.7">Jo Bonnier(78) lap=0 point=1 t=54.022 et=94.729</Score>
+<Score et="95.5">Tig_green(2) lap=0 point=1 t=54.832 et=95.539</Score>
+<Score et="96.2">mauserrifle(0) lap=0 point=1 t=55.410 et=96.117</Score>
+<Score et="96.7">Gérard larrousse(77) lap=0 point=1 t=56.012 et=96.719</Score>
+<Score et="126.3">Malek1th(5) lap=0 point=2 t=85.530 et=126.237</Score>
+<Score et="127.1">Jo Bonnier(78) lap=0 point=2 t=86.340 et=127.047</Score>
+<Score et="127.9">Tig_green(2) lap=0 point=2 t=87.138 et=127.844</Score>
+<Score et="128.5">mauserrifle(0) lap=0 point=2 t=87.728 et=128.435</Score>
+<Score et="129.2">Gérard larrousse(77) lap=0 point=2 t=88.503 et=129.210</Score>
+<Score et="171.5">Malek1th(5) lap=1 point=0 t=130.752 et=171.458</Score>
+<Score et="171.6">Jo Bonnier(78) lap=1 point=0 t=130.908 et=171.614</Score>
+<Score et="175.3">Tig_green(2) lap=1 point=0 t=134.567 et=175.273</Score>
+<Score et="175.4">mauserrifle(0) lap=1 point=0 t=134.638 et=175.345</Score>
+<Score et="175.6">Gérard larrousse(77) lap=1 point=0 t=134.848 et=175.555</Score>
+<Score et="218.9">Malek1th(5) lap=1 point=1 t=47.451 et=218.909</Score>
+<Score et="219.2">Jo Bonnier(78) lap=1 point=1 t=47.527 et=219.141</Score>
+<Score et="226.0">Gérard larrousse(77) lap=1 point=1 t=50.439 et=225.994</Score>
+<Score et="232.1">Tig_green(2) lap=1 point=1 t=56.784 et=232.057</Score>
+<Score et="233.0">mauserrifle(0) lap=1 point=1 t=57.637 et=232.982</Score>
+<Score et="251.0">Malek1th(5) lap=1 point=2 t=79.514 et=250.972</Score>
+<Score et="251.6">Jo Bonnier(78) lap=1 point=2 t=79.989 et=251.604</Score>
+<Score et="257.9">Gérard larrousse(77) lap=1 point=2 t=82.322 et=257.877</Score>
+<Score et="265.0">Tig_green(2) lap=1 point=2 t=89.672 et=264.946</Score>
+<Score et="266.4">mauserrifle(0) lap=1 point=2 t=91.025 et=266.370</Score>
+<Score et="296.8">Malek1th(5) lap=2 point=0 t=125.299 et=296.757</Score>
+<Score et="297.3">Jo Bonnier(78) lap=2 point=0 t=125.698 et=297.312</Score>
+<Score et="305.8">Gérard larrousse(77) lap=2 point=0 t=126.245 et=301.800</Score>
+<Score et="310.2">Tig_green(2) lap=2 point=0 t=134.869 et=310.143</Score>
+<Score et="313.2">mauserrifle(0) lap=2 point=0 t=137.836 et=313.180</Score>
+<Score et="343.4">Malek1th(5) lap=2 point=1 t=46.638 et=343.396</Score>
+<Score et="345.1">Jo Bonnier(78) lap=2 point=1 t=47.799 et=345.111</Score>
+<Score et="348.1">Gérard larrousse(77) lap=2 point=1 t=46.271 et=348.072</Score>
+<Score et="357.4">Tig_green(2) lap=2 point=1 t=47.198 et=357.341</Score>
+<Score et="360.7">mauserrifle(0) lap=2 point=1 t=47.495 et=360.675</Score>
+<Score et="375.4">Malek1th(5) lap=2 point=2 t=78.647 et=375.404</Score>
+<Score et="377.9">Jo Bonnier(78) lap=2 point=2 t=80.571 et=377.883</Score>
+<Score et="380.0">Gérard larrousse(77) lap=2 point=2 t=78.141 et=379.942</Score>
+<Score et="389.7">Tig_green(2) lap=2 point=2 t=79.566 et=389.709</Score>
+<Score et="403.2">mauserrifle(0) lap=2 point=2 t=89.951 et=403.132</Score>
+<Score et="422.3">Malek1th(5) lap=3 point=0 t=123.318 et=420.075</Score>
+<Score et="423.4">Jo Bonnier(78) lap=3 point=0 t=126.062 et=423.374</Score>
+<Score et="423.9">Gérard larrousse(77) lap=3 point=0 t=122.066 et=423.867</Score>
+<Score et="434.5">Tig_green(2) lap=3 point=0 t=124.389 et=434.531</Score>
+<Score et="450.0">mauserrifle(0) lap=3 point=0 t=136.293 et=449.474</Score>
+<Score et="467.0">Malek1th(5) lap=3 point=1 t=46.922 et=466.997</Score>
+<Score et="470.4">Jo Bonnier(78) lap=3 point=1 t=47.051 et=470.425</Score>
+<Score et="470.7">Gérard larrousse(77) lap=3 point=1 t=46.867 et=470.734</Score>
+<Score et="481.9">Tig_green(2) lap=3 point=1 t=47.346 et=481.877</Score>
+<Score et="497.5">mauserrifle(0) lap=3 point=1 t=47.967 et=497.440</Score>
+<Score et="498.7">Malek1th(5) lap=3 point=2 t=78.634 et=498.709</Score>
+<Score et="502.4">Jo Bonnier(78) lap=3 point=2 t=79.021 et=502.395</Score>
+<Score et="502.8">Gérard larrousse(77) lap=3 point=2 t=78.968 et=502.835</Score>
+<Score et="514.3">Tig_green(2) lap=3 point=2 t=79.735 et=514.266</Score>
+<Score et="535.6">mauserrifle(0) lap=3 point=2 t=86.090 et=535.563</Score>
+<Score et="544.0">Malek1th(5) lap=4 point=0 t=123.939 et=544.014</Score>
+<Score et="549.0">Jo Bonnier(78) lap=4 point=0 t=123.135 et=546.508</Score>
+<Score et="549.0">Gérard larrousse(77) lap=4 point=0 t=123.310 et=547.177</Score>
+<Score et="559.5">Tig_green(2) lap=4 point=0 t=124.934 et=559.466</Score>
+<Score et="581.2">mauserrifle(0) lap=4 point=0 t=131.714 et=581.188</Score>
+<Score et="591.0">Malek1th(5) lap=4 point=1 t=46.976 et=590.990</Score>
+<Score et="593.6">Jo Bonnier(78) lap=4 point=1 t=47.099 et=593.607</Score>
+<Score et="594.5">Gérard larrousse(77) lap=4 point=1 t=47.342 et=594.519</Score>
+<Score et="607.4">Tig_green(2) lap=4 point=1 t=47.883 et=607.349</Score>
+<Score et="622.9">Malek1th(5) lap=4 point=2 t=78.864 et=622.878</Score>
+<Score et="626.4">Jo Bonnier(78) lap=4 point=2 t=79.908 et=626.417</Score>
+<Score et="626.7">Gérard larrousse(77) lap=4 point=2 t=79.519 et=626.696</Score>
+<Score et="637.9">mauserrifle(0) lap=4 point=1 t=56.618 et=637.806</Score>
+<Score et="639.5">Tig_green(2) lap=4 point=2 t=80.002 et=639.467</Score>
+<Score et="667.3">Malek1th(5) lap=5 point=0 t=123.234 et=667.248</Score>
+<Score et="670.9">mauserrifle(0) lap=4 point=2 t=89.667 et=670.854</Score>
+<Score et="675.0">Jo Bonnier(78) lap=5 point=0 t=125.744 et=672.253</Score>
+<Score et="675.0">Gérard larrousse(77) lap=5 point=0 t=125.219 et=672.396</Score>
+<Score et="684.2">Tig_green(2) lap=5 point=0 t=124.740 et=684.206</Score>
+<Score et="715.5">Malek1th(5) lap=5 point=1 t=48.210 et=715.458</Score>
+<Score et="717.5">mauserrifle(0) lap=5 point=0 t=135.221 et=716.409</Score>
+<Score et="719.9">Jo Bonnier(78) lap=5 point=1 t=47.641 et=719.894</Score>
+<Score et="720.3">Gérard larrousse(77) lap=5 point=1 t=47.884 et=720.280</Score>
+<Score et="731.4">Tig_green(2) lap=5 point=1 t=47.192 et=731.398</Score>
+<Score et="747.5">Malek1th(5) lap=5 point=2 t=80.233 et=747.481</Score>
+<Score et="752.0">Jo Bonnier(78) lap=5 point=2 t=79.691 et=751.944</Score>
+<Score et="752.3">Gérard larrousse(77) lap=5 point=2 t=79.926 et=752.322</Score>
+<Score et="763.1">Tig_green(2) lap=5 point=2 t=78.934 et=763.140</Score>
+<Score et="764.8">mauserrifle(0) lap=5 point=1 t=48.386 et=764.795</Score>
+<Score et="797.3">Malek1th(5) lap=6 point=0 t=125.530 et=792.778</Score>
+<Score et="797.3">Jo Bonnier(78) lap=6 point=0 t=123.805 et=796.058</Score>
+<Score et="797.3">Gérard larrousse(77) lap=6 point=0 t=124.093 et=796.489</Score>
+<Score et="798.4">mauserrifle(0) lap=5 point=2 t=81.952 et=798.361</Score>
+<Score et="808.3">Tig_green(2) lap=6 point=0 t=124.051 et=808.257</Score>
+<Score et="839.2">Malek1th(5) lap=6 point=1 t=46.345 et=839.123</Score>
+<Score et="842.6">Jo Bonnier(78) lap=6 point=1 t=46.559 et=842.617</Score>
+<Score et="843.1">Gérard larrousse(77) lap=6 point=1 t=46.590 et=843.079</Score>
+<Score et="846.3">mauserrifle(0) lap=6 point=0 t=129.875 et=846.284</Score>
+<Score et="859.3">Tig_green(2) lap=6 point=1 t=51.000 et=859.257</Score>
+<Score et="871.2">Malek1th(5) lap=6 point=2 t=78.353 et=871.131</Score>
+<Score et="874.6">Jo Bonnier(78) lap=6 point=2 t=78.547 et=874.605</Score>
+<Score et="875.1">Gérard larrousse(77) lap=6 point=2 t=78.558 et=875.047</Score>
+<Score et="891.3">Tig_green(2) lap=6 point=2 t=83.067 et=891.324</Score>
+<Score et="898.1">mauserrifle(0) lap=6 point=1 t=51.740 et=898.024</Score>
+<Score et="917.8">Malek1th(5) lap=7 point=0 t=123.142 et=915.920</Score>
+<Score et="918.9">Jo Bonnier(78) lap=7 point=0 t=122.809 et=918.867</Score>
+<Score et="919.2">Gérard larrousse(77) lap=7 point=0 t=122.728 et=919.216</Score>
+<Score et="936.0">Tig_green(2) lap=7 point=0 t=127.686 et=935.943</Score>
+<Score et="936.1">mauserrifle(0) lap=6 point=2 t=89.784 et=936.068</Score>
+<Score et="962.5">Malek1th(5) lap=7 point=1 t=46.588 et=962.507</Score>
+<Score et="966.5">Jo Bonnier(78) lap=7 point=1 t=47.606 et=966.473</Score>
+<Score et="966.8">Gérard larrousse(77) lap=7 point=1 t=47.541 et=966.758</Score>
+<Score et="983.8">Tig_green(2) lap=7 point=1 t=47.824 et=983.766</Score>
+<Score et="987.8">mauserrifle(0) lap=7 point=0 t=136.503 et=982.787</Score>
+<Score et="994.3">Malek1th(5) lap=7 point=2 t=78.396 et=994.316</Score>
+<Score et="999.5">Jo Bonnier(78) lap=7 point=2 t=80.622 et=999.489</Score>
+<Score et="999.7">Gérard larrousse(77) lap=7 point=2 t=80.430 et=999.646</Score>
+<Score et="1016.0">Tig_green(2) lap=7 point=2 t=80.089 et=1016.032</Score>
+<Score et="1030.8">mauserrifle(0) lap=7 point=1 t=47.950 et=1030.737</Score>
+<Score et="1040.8">Malek1th(5) lap=8 point=0 t=124.636 et=1040.556</Score>
+<Score et="1044.8">Jo Bonnier(78) lap=8 point=0 t=125.945 et=1044.813</Score>
+<Score et="1045.0">Gérard larrousse(77) lap=8 point=0 t=125.754 et=1044.970</Score>
+<Score et="1060.8">Tig_green(2) lap=8 point=0 t=124.877 et=1060.819</Score>
+<Score et="1072.2">mauserrifle(0) lap=7 point=2 t=89.401 et=1072.188</Score>
+<Score et="1087.4">Malek1th(5) lap=8 point=1 t=46.799 et=1087.355</Score>
+<Score et="1092.1">Gérard larrousse(77) lap=8 point=1 t=47.119 et=1092.089</Score>
+<Score et="1093.1">Jo Bonnier(78) lap=8 point=1 t=48.254 et=1093.066</Score>
+<Score et="1107.3">Tig_green(2) lap=8 point=1 t=46.492 et=1107.311</Score>
+<Score et="1117.2">mauserrifle(0) lap=8 point=0 t=134.401 et=1117.188</Score>
+<Score et="1120.2">Malek1th(5) lap=8 point=2 t=79.575 et=1120.131</Score>
+<Score et="1124.2">Gérard larrousse(77) lap=8 point=2 t=79.213 et=1124.183</Score>
+<Score et="1125.1">Jo Bonnier(78) lap=8 point=2 t=80.306 et=1125.118</Score>
+<Score et="1139.5">Tig_green(2) lap=8 point=2 t=78.639 et=1139.458</Score>
+<Score et="1165.4">mauserrifle(0) lap=8 point=1 t=48.197 et=1165.385</Score>
+<Score et="1167.8">Malek1th(5) lap=9 point=0 t=123.764 et=1164.320</Score>
+<Score et="1169.5">Gérard larrousse(77) lap=9 point=0 t=124.502 et=1169.473</Score>
+<Score et="1169.6">Jo Bonnier(78) lap=9 point=0 t=124.823 et=1169.635</Score>
+<Score et="1183.4">Tig_green(2) lap=9 point=0 t=122.575 et=1183.395</Score>
+<Score et="1201.9">mauserrifle(0) lap=8 point=2 t=84.644 et=1201.832</Score>
+<Score et="1211.5">Malek1th(5) lap=9 point=1 t=47.131 et=1211.451</Score>
+<Score et="1216.9">Jo Bonnier(78) lap=9 point=1 t=47.285 et=1216.920</Score>
+<Score et="1217.9">Gérard larrousse(77) lap=9 point=1 t=48.461 et=1217.933</Score>
+<Score et="1230.2">Tig_green(2) lap=9 point=1 t=46.780 et=1230.174</Score>
+<Score et="1244.0">Malek1th(5) lap=9 point=2 t=79.663 et=1243.983</Score>
+<Score et="1248.8">mauserrifle(0) lap=9 point=0 t=130.879 et=1248.067</Score>
+<Score et="1248.9">Jo Bonnier(78) lap=9 point=2 t=79.294 et=1248.929</Score>
+<Score et="1250.1">Gérard larrousse(77) lap=9 point=2 t=80.628 et=1250.100</Score>
+<Score et="1262.4">Tig_green(2) lap=9 point=2 t=79.038 et=1262.433</Score>
+<Score et="1291.0">Checkered for Malek1th, laps=10/2147483647, endET=1290.938843/1240.706665, crossedAfterTime=0</Score>
+<Score et="1291.0">Malek1th(5) lap=10 point=0 t=126.619 et=1290.939</Score>
+<Score et="1295.6">mauserrifle(0) lap=9 point=1 t=47.523 et=1295.590</Score>
+<Score et="1296.0">Jo Bonnier(78) lap=10 point=0 t=123.703 et=1293.338</Score>
+<Score et="1296.0">Gérard larrousse(77) lap=10 point=0 t=124.881 et=1294.354</Score>
+<Score et="1308.8">Tig_green(2) lap=10 point=0 t=125.347 et=1308.742</Score>
+<Score et="1328.7">mauserrifle(0) lap=9 point=2 t=80.616 et=1328.683</Score>
+<Score et="1376.8">mauserrifle(0) lap=10 point=0 t=125.525 et=1373.592</Score>
+<Chat et="1413.2">Malek1th has left the race but vehicle has been stored in the garage</Chat>
+</Stream>
+<MostLapsCompleted>10</MostLapsCompleted>
+<Driver>
+<Name>Gérard larrousse</Name>
+<Connected>1</Connected>
+<VehFile>LOLAT280_01.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>Lola T280 1000 Kms Paris</VehName>
+<CarType>LolaT280</CarType>
+<CarClass>LolaT280</CarClass>
+<CarNumber>01</CarNumber>
+<TeamName>Ecurie Bonnier</TeamName>
+<isPlayer>0</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>5</GridPos>
+<Position>3</Position>
+<ClassGridPos>5</ClassGridPos>
+<ClassPosition>3</ClassPosition>
+<Points>3</Points>
+<ClassPoints>3</ClassPoints>
+<LapRankIncludingDiscos>1</LapRankIncludingDiscos>
+<Lap num="1" p="5" et="40.7067" s1="56.0119" s2="32.4913" s3="46.3452" fuel="-1.000">134.8484</Lap>
+<Lap num="2" p="3" et="175.5551" s1="50.4389" s2="31.8827" s3="43.9237" fuel="-1.000">126.2454</Lap>
+<Lap num="3" p="3" et="301.8005" s1="46.2715" s2="31.8696" s3="43.9252" fuel="-1.000">122.0663</Lap>
+<Lap num="4" p="3" et="423.8668" s1="46.8672" s2="32.1006" s3="44.3420" fuel="-1.000">123.3098</Lap>
+<Lap num="5" p="3" et="547.1766" s1="47.3421" s2="32.1774" s3="45.6999" fuel="-1.000">125.2194</Lap>
+<Lap num="6" p="3" et="672.3959" s1="47.8840" s2="32.0423" s3="44.1663" fuel="-1.000">124.0926</Lap>
+<Lap num="7" p="3" et="796.4885" s1="46.5901" s2="31.9680" s3="44.1696" fuel="-1.000">122.7277</Lap>
+<Lap num="8" p="3" et="919.2162" s1="47.5414" s2="32.8884" s3="45.3242" fuel="-1.000">125.7539</Lap>
+<Lap num="9" p="2" et="1044.9701" s1="47.1191" s2="32.0936" s3="45.2897" fuel="-1.000">124.5024</Lap>
+<Lap num="10" p="3" et="1169.4725" s1="48.4606" s2="32.1671" s3="44.2534" fuel="-1.000">124.8811</Lap>
+<BestLapTime>122.0663</BestLapTime>
+<FinishTime>1253.6470</FinishTime>
+<Laps>10</Laps>
+<Pitstops>1</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="10">UnknownControl</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Tig_green</Name>
+<Connected>1</Connected>
+<VehFile>LOLAT280_03.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>Lola T280 Fudji 1972</VehName>
+<CarType>LolaT280</CarType>
+<CarClass>LolaT280</CarClass>
+<CarNumber>01</CarNumber>
+<TeamName>Noritake Takahara</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>2</GridPos>
+<Position>4</Position>
+<ClassGridPos>2</ClassGridPos>
+<ClassPosition>4</ClassPosition>
+<Points>2</Points>
+<ClassPoints>2</ClassPoints>
+<LapRankIncludingDiscos>2</LapRankIncludingDiscos>
+<Lap num="1" p="3" et="40.7067" s1="54.8323" s2="32.3054" s3="47.4291" fuel="-1.000">134.5668</Lap>
+<Lap num="2" p="4" et="175.2735" s1="56.7837" s2="32.8888" s3="45.1966" fuel="-1.000">134.8691</Lap>
+<Lap num="3" p="4" et="310.1426" s1="47.1984" s2="32.3678" s3="44.8224" fuel="-1.000">124.3887</Lap>
+<Lap num="4" p="4" et="434.5313" s1="47.3457" s2="32.3892" s3="45.1995" fuel="-1.000">124.9344</Lap>
+<Lap num="5" p="4" et="559.4656" s1="47.8831" s2="32.1187" s3="44.7382" fuel="-1.000">124.7399</Lap>
+<Lap num="6" p="4" et="684.2056" s1="47.1921" s2="31.7423" s3="45.1166" fuel="-1.000">124.0510</Lap>
+<Lap num="7" p="4" et="808.2566" s1="51.0001" s2="32.0671" s3="44.6187" fuel="-1.000">127.6859</Lap>
+<Lap num="8" p="4" et="935.9425" s1="47.8239" s2="32.2655" s3="44.7872" fuel="-1.000">124.8766</Lap>
+<Lap num="9" p="4" et="1060.8191" s1="46.4916" s2="32.1477" s3="43.9362" fuel="-1.000">122.5754</Lap>
+<Lap num="10" p="4" et="1183.3945" s1="46.7798" s2="32.2584" s3="46.3091" fuel="-1.000">125.3473</Lap>
+<BestLapTime>122.5754</BestLapTime>
+<FinishTime>1268.0352</FinishTime>
+<Laps>10</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="10">PlayerControl,Clutch,Invulnerable,AutoBlip</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Jo Bonnier</Name>
+<Connected>1</Connected>
+<VehFile>LOLAT280_08.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>Lola T280 le mans 1972</VehName>
+<CarType>LolaT280</CarType>
+<CarClass>LolaT280</CarClass>
+<CarNumber>01</CarNumber>
+<TeamName>Ecurie Bonnier</TeamName>
+<isPlayer>0</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>1</GridPos>
+<Position>2</Position>
+<ClassGridPos>1</ClassGridPos>
+<ClassPosition>2</ClassPosition>
+<Points>5</Points>
+<ClassPoints>5</ClassPoints>
+<LapRankIncludingDiscos>3</LapRankIncludingDiscos>
+<Lap num="1" p="2" et="40.7067" s1="54.0223" s2="32.3176" s3="44.5677" fuel="-1.000">130.9077</Lap>
+<Lap num="2" p="2" et="171.6143" s1="47.5271" s2="32.4621" s3="45.7083" fuel="-1.000">125.6976</Lap>
+<Lap num="3" p="2" et="297.3119" s1="47.7989" s2="32.7721" s3="45.4910" fuel="-1.000">126.0620</Lap>
+<Lap num="4" p="2" et="423.3739" s1="47.0509" s2="31.9700" s3="44.1136" fuel="-1.000">123.1346</Lap>
+<Lap num="5" p="2" et="546.5084" s1="47.0988" s2="32.8095" s3="45.8362" fuel="-1.000">125.7444</Lap>
+<Lap num="6" p="2" et="672.2529" s1="47.6408" s2="32.0501" s3="44.1143" fuel="-1.000">123.8052</Lap>
+<Lap num="7" p="2" et="796.0580" s1="46.5594" s2="31.9877" s3="44.2621" fuel="-1.000">122.8093</Lap>
+<Lap num="8" p="2" et="918.8673" s1="47.6060" s2="33.0160" s3="45.3232" fuel="-1.000">125.9452</Lap>
+<Lap num="9" p="3" et="1044.8125" s1="48.2539" s2="32.0519" s3="44.5167" fuel="-1.000">124.8225</Lap>
+<Lap num="10" p="2" et="1169.6350" s1="47.2848" s2="32.0094" s3="44.4087" fuel="-1.000">123.7029</Lap>
+<BestLapTime>122.8093</BestLapTime>
+<FinishTime>1252.6312</FinishTime>
+<Laps>10</Laps>
+<Pitstops>1</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="10">UnknownControl</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Malek1th</Name>
+<Connected>1</Connected>
+<VehFile>LOLAT280_10.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>Lola T280 JL Lafosse</VehName>
+<CarType>LolaT280</CarType>
+<CarClass>LolaT280</CarClass>
+<CarNumber>31</CarNumber>
+<TeamName>jl lafosse</TeamName>
+<isPlayer>0</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>3</GridPos>
+<Position>1</Position>
+<ClassGridPos>3</ClassGridPos>
+<ClassPosition>1</ClassPosition>
+<Points>8</Points>
+<ClassPoints>8</ClassPoints>
+<LapRankIncludingDiscos>4</LapRankIncludingDiscos>
+<Lap num="1" p="1" et="40.7067" s1="53.2312" s2="32.2990" s3="45.2215" fuel="-1.000">130.7517</Lap>
+<Lap num="2" p="1" et="171.4584" s1="47.4511" s2="32.0630" s3="45.7848" fuel="-1.000">125.2989</Lap>
+<Lap num="3" p="1" et="296.7573" s1="46.6382" s2="32.0084" s3="44.6712" fuel="-1.000">123.3179</Lap>
+<Lap num="4" p="1" et="420.0752" s1="46.9220" s2="31.7118" s3="45.3053" fuel="-1.000">123.9391</Lap>
+<Lap num="5" p="1" et="544.0142" s1="46.9755" s2="31.8883" s3="44.3699" fuel="-1.000">123.2337</Lap>
+<Lap num="6" p="1" et="667.2479" s1="48.2102" s2="32.0224" s3="45.2974" fuel="-1.000">125.5300</Lap>
+<Lap num="7" p="1" et="792.7780" s1="46.3447" s2="32.0085" s3="44.7885" fuel="-1.000">123.1418</Lap>
+<Lap num="8" p="1" et="915.9197" s1="46.5875" s2="31.8085" s3="46.2401" fuel="-1.000">124.6360</Lap>
+<Lap num="9" p="1" et="1040.5558" s1="46.7993" s2="32.7761" s3="44.1887" fuel="-1.000">123.7642</Lap>
+<Lap num="10" p="1" et="1164.3199" s1="47.1306" s2="32.5320" s3="46.9563" fuel="-1.000">126.6189</Lap>
+<BestLapTime>123.1418</BestLapTime>
+<FinishTime>1250.2322</FinishTime>
+<Laps>10</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="10">PlayerControl,TC=3,ABS=2,Stability=2,AutoShift=3,Clutch,Invulnerable,Opposite,AutoLift,AutoBlip</ControlAndAids>
+</Driver>
+<Driver>
+<Name>mauserrifle</Name>
+<Connected>1</Connected>
+<VehFile>LOLAT280_31.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>Lola T280 Tanaka 1972</VehName>
+<CarType>LolaT280</CarType>
+<CarClass>LolaT280</CarClass>
+<CarNumber>31</CarNumber>
+<TeamName>scuderia filipinetti</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>4</GridPos>
+<Position>5</Position>
+<ClassGridPos>4</ClassGridPos>
+<ClassPosition>5</ClassPosition>
+<Points>1</Points>
+<ClassPoints>1</ClassPoints>
+<LapRankIncludingDiscos>5</LapRankIncludingDiscos>
+<Lap num="1" p="4" et="40.7067" s1="55.4103" s2="32.3182" s3="46.9097" fuel="-1.000">134.6382</Lap>
+<Lap num="2" p="5" et="175.3448" s1="57.6370" s2="33.3877" s3="46.8108" fuel="-1.000">137.8356</Lap>
+<Lap num="3" p="5" et="313.1804" s1="47.4948" s2="42.4565" s3="46.3419" fuel="-1.000">136.2932</Lap>
+<Lap num="4" p="5" et="449.4736" s1="47.9666" s2="38.1232" s3="45.6243" fuel="-1.000">131.7141</Lap>
+<Lap num="5" p="5" et="581.1876" s1="56.6179" s2="33.0487" s3="45.5547" fuel="-1.000">135.2213</Lap>
+<Lap num="6" p="5" et="716.4089" s1="48.3864" s2="33.5653" s3="47.9230" fuel="-1.000">129.8748</Lap>
+<Lap num="7" p="5" et="846.2837" s1="51.7405" s2="38.0439" s3="46.7188" fuel="-1.000">136.5032</Lap>
+<Lap num="8" p="5" et="982.7869" s1="47.9498" s2="41.4517" s3="44.9999" fuel="-1.000">134.4014</Lap>
+<Lap num="9" p="5" et="1117.1882" s1="48.1965" s2="36.4471" s3="46.2352" fuel="-1.000">130.8789</Lap>
+<Lap num="10" p="5" et="1248.0671" s1="47.5228" s2="33.0933" s3="44.9089" fuel="-1.000">125.5250</Lap>
+<BestLapTime>125.5250</BestLapTime>
+<FinishTime>1332.8855</FinishTime>
+<Laps>10</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="10">PlayerControl,Clutch,Invulnerable,AutoBlip</ControlAndAids>
+</Driver>
+</Race>
+</RaceResults>
+</rFactorXML>

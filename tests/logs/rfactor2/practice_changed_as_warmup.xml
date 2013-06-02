@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE rF [
+<!ENTITY rFEnt "rFactor Entity">
+]>
+<rFactorXML version="1.0">
+<RaceResults>
+<Setting>Multiplayer</Setting>
+<ServerName>RookiesNight_WSu</ServerName>
+<ClientFuelVisible>2</ClientFuelVisible>
+<PlayerFile>player</PlayerFile>
+<DateTime>1364155275</DateTime>
+<TimeString>2013/03/24 22:01:15</TimeString>
+<Mod>RNLOALS_10.RFM</Mod>
+<Season></Season>
+<TrackVenue>Essington Park</TrackVenue>
+<TrackCourse>Essington Park</TrackCourse>
+<TrackEvent>Essington Grand Prix</TrackEvent>
+<TrackLength>4710.7</TrackLength>
+<GameVersion>1.155</GameVersion>
+<Dedicated>1</Dedicated>
+<ConnectionType upload="1034" download="8042">Custom</ConnectionType>
+<MOTD></MOTD>
+<RaceLaps>0</RaceLaps>
+<RaceTime>20</RaceTime>
+<MechFailRate>2</MechFailRate>
+<DamageMult>50</DamageMult>
+<FuelMult>0</FuelMult>
+<TireMult>7</TireMult>
+<VehiclesAllowed>|LolaT280</VehiclesAllowed>
+<ParcFerme>3</ParcFerme>
+<FixedSetups>0</FixedSetups>
+<FreeSettings>11</FreeSettings>
+<FixedUpgrades>0</FixedUpgrades>
+<Warmup>
+<DateTime>1364155285</DateTime>
+<TimeString>2013/03/24 22:01:25</TimeString>
+<Laps>2147483647</Laps>
+<Minutes>15</Minutes>
+<Stream>
+<Chat et="0.0">mauserrifle has entered the race.</Chat>
+<System et="0.0">mauserrifle(0) 217.120.255.186 has joined as a participant</System>
+<Chat et="0.0">Tig_green has entered the race.</Chat>
+<System et="0.0">Tig_green(2) 192.168.100.1 has joined as a participant</System>
+<Chat et="237.6">Tig_green left the race.</Chat>
+<Chat et="245.8">mauserrifle left the race.</Chat>
+</Stream>
+<MostLapsCompleted>0</MostLapsCompleted>
+<Driver>
+<Name>mauserrifle</Name>
+<Connected>0</Connected>
+<VehFile>LOLAT280_31.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>Lola T280 Tanaka 1972</VehName>
+<CarType>LolaT280</CarType>
+<CarClass>LolaT280</CarClass>
+<CarNumber>31</CarNumber>
+<TeamName>scuderia filipinetti</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<Position>-1</Position>
+<ClassPosition>-1</ClassPosition>
+<LapRankIncludingDiscos>1</LapRankIncludingDiscos>
+<Laps>0</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>None</FinishStatus>
+</Driver>
+<Driver>
+<Name>Tig_green</Name>
+<Connected>0</Connected>
+<VehFile>LOLAT280_03.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>Lola T280 Fudji 1972</VehName>
+<CarType>LolaT280</CarType>
+<CarClass>LolaT280</CarClass>
+<CarNumber>01</CarNumber>
+<TeamName>Noritake Takahara</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<Position>-1</Position>
+<ClassPosition>-1</ClassPosition>
+<LapRankIncludingDiscos>2</LapRankIncludingDiscos>
+<Laps>0</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>None</FinishStatus>
+</Driver>
+</Warmup>
+</RaceResults>
+</rFactorXML>

@@ -1,0 +1,671 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rF [
+<!ENTITY rFEnt "rFactor Entity">
+]>
+<rFactorXML version="1.0">
+<RaceResults>
+<Setting>Multiplayer</Setting>
+<ServerName>BiteMe</ServerName>
+<PlayerFile>BiteMe</PlayerFile>
+<DateTime>1214106287</DateTime>
+<TimeString>2008/06/21 20:44:47</TimeString>
+<Mod>2006MiniChallenge.rfm</Mod>
+<Season/>
+<TrackVenue>Sandown Raceway</TrackVenue>
+<TrackCourse>Sandown International Raceway</TrackCourse>
+<TrackEvent>Betta Electrical 500 V1.01</TrackEvent>
+<TrackLength>3144.4</TrackLength>
+<GameVersion>1.255</GameVersion>
+<Dedicated>0</Dedicated>
+<ConnectionType upload="256" download="256">Cable/DSL 256 kbps upload</ConnectionType>
+<MOTD>BM's Place</MOTD>
+<RaceLaps>0</RaceLaps>
+<RaceTime>30</RaceTime>
+<MechFailRate>2</MechFailRate>
+<DamageMult>20</DamageMult>
+<FuelMult>1</FuelMult>
+<TireMult>1</TireMult>
+<VehiclesAllowed>|MiniChal06|MiniClubClass|MiniSClass</VehiclesAllowed>
+<ParcFerme>3</ParcFerme>
+<FixedSetups>0</FixedSetups>
+<FreeSettings>11</FreeSettings>
+<FixedUpgrades>0</FixedUpgrades>
+<Race>
+<DateTime>1214107757</DateTime>
+<TimeString>2008/06/21 21:09:17</TimeString>
+<Laps>2147483647</Laps>
+<Minutes>30</Minutes>
+<Stream>
+<Score et="80.0">Will Munney(5) lap=0 point=1 t=38.055 et=80.017</Score>
+<Score et="82.5">BiteMe(2) lap=0 point=1 t=40.474 et=82.436</Score>
+<Score et="84.6">[SLAK]tenebrea(3) lap=0 point=1 t=42.609 et=84.571</Score>
+<Score et="85.9">Lead(7) lap=0 point=1 t=43.914 et=85.875</Score>
+<Score et="89.5">TriggerFish(6) lap=0 point=1 t=47.450 et=89.412</Score>
+<Score et="104.7">Will Munney(5) lap=0 point=2 t=62.737 et=104.699</Score>
+<Score et="107.4">BiteMe(2) lap=0 point=2 t=65.425 et=107.387</Score>
+<Score et="109.2">[SLAK]tenebrea(3) lap=0 point=2 t=67.175 et=109.136</Score>
+<Score et="111.0">Lead(7) lap=0 point=2 t=68.952 et=110.914</Score>
+<Score et="114.3">TriggerFish(6) lap=0 point=2 t=72.298 et=114.260</Score>
+<Score et="132.8">Will Munney(5) lap=1 point=0 t=90.812 et=132.774</Score>
+<Chat et="136.7">BiteMe: Twonk</Chat>
+<Score et="137.2">BiteMe(2) lap=1 point=0 t=95.193 et=137.155</Score>
+<Score et="137.7">[SLAK]tenebrea(3) lap=1 point=0 t=95.675 et=137.637</Score>
+<Score et="139.8">Lead(7) lap=1 point=0 t=97.741 et=139.703</Score>
+<Score et="142.1">TriggerFish(6) lap=1 point=0 t=100.068 et=142.029</Score>
+<Chat et="145.2">BiteMe: Twonk</Chat>
+<Score et="163.3">Will Munney(5) lap=1 point=1 t=30.484 et=163.258</Score>
+<Score et="167.9">BiteMe(2) lap=1 point=1 t=30.678 et=167.833</Score>
+<Score et="168.1">[SLAK]tenebrea(3) lap=1 point=1 t=30.460 et=168.097</Score>
+<Score et="171.7">Lead(7) lap=1 point=1 t=31.899 et=171.602</Score>
+<Score et="172.3">TriggerFish(6) lap=1 point=1 t=30.269 et=172.299</Score>
+<Score et="187.8">Will Munney(5) lap=1 point=2 t=54.921 et=187.695</Score>
+<Score et="192.5">[SLAK]tenebrea(3) lap=1 point=2 t=54.815 et=192.452</Score>
+<Score et="192.6">BiteMe(2) lap=1 point=2 t=55.454 et=192.609</Score>
+<Incident et="195.5">BiteMe(2) reported contact (0.03) with another vehicle [SLAK]tenebrea(3)</Incident>
+<Score et="196.5">Lead(7) lap=1 point=2 t=56.717 et=196.420</Score>
+<Score et="197.0">TriggerFish(6) lap=1 point=2 t=54.901 et=196.930</Score>
+<Score et="215.3">Will Munney(5) lap=2 point=0 t=82.449 et=215.223</Score>
+<Incident et="217.3">Lead(7) reported contact (0.03) with Track</Incident>
+<Incident et="217.7">Lead(7) reported contact (0.03) with Track</Incident>
+<Incident et="219.3">Lead(7) reported contact (0.58) with Immovable</Incident>
+<Incident et="219.4">Lead(7) reported contact (0.03) with Immovable</Incident>
+<Incident et="219.4">Lead(7) reported contact (0.55) with Immovable</Incident>
+<Score et="220.3">[SLAK]tenebrea(3) lap=2 point=0 t=82.585 et=220.222</Score>
+<Incident et="220.4">Lead(7) reported contact (0.29) with Immovable</Incident>
+<Score et="224.0">BiteMe(2) lap=2 point=0 t=86.871 et=224.026</Score>
+<Score et="225.2">TriggerFish(6) lap=2 point=0 t=83.128 et=225.158</Score>
+<Score et="245.1">Will Munney(5) lap=2 point=1 t=29.877 et=245.100</Score>
+<Score et="250.9">[SLAK]tenebrea(3) lap=2 point=1 t=30.605 et=250.826</Score>
+<Score et="255.1">BiteMe(2) lap=2 point=1 t=31.074 et=255.099</Score>
+<Score et="255.8">TriggerFish(6) lap=2 point=1 t=30.635 et=255.793</Score>
+<Score et="269.4">Will Munney(5) lap=2 point=2 t=54.089 et=269.311</Score>
+<Score et="275.5">[SLAK]tenebrea(3) lap=2 point=2 t=55.249 et=275.470</Score>
+<Score et="279.5">Lead(7) lap=2 point=0 t=139.774 et=279.476</Score>
+<Score et="279.9">BiteMe(2) lap=2 point=2 t=55.812 et=279.838</Score>
+<Score et="280.4">TriggerFish(6) lap=2 point=2 t=55.216 et=280.374</Score>
+<Score et="296.9">Will Munney(5) lap=3 point=0 t=81.645 et=296.867</Score>
+<Score et="303.4">[SLAK]tenebrea(3) lap=3 point=0 t=83.146 et=303.367</Score>
+<Score et="308.9">TriggerFish(6) lap=3 point=0 t=83.677 et=308.835</Score>
+<Score et="309.2">BiteMe(2) lap=3 point=0 t=85.180 et=309.206</Score>
+<Score et="320.9">Lead(7) lap=2 point=1 t=41.406 et=320.882</Score>
+<Score et="326.8">Will Munney(5) lap=3 point=1 t=29.884 et=326.751</Score>
+<Score et="333.7">[SLAK]tenebrea(3) lap=3 point=1 t=30.270 et=333.637</Score>
+<Score et="339.4">TriggerFish(6) lap=3 point=1 t=30.525 et=339.360</Score>
+<Score et="340.1">BiteMe(2) lap=3 point=1 t=30.912 et=340.118</Score>
+<Score et="346.0">Lead(7) lap=2 point=2 t=66.445 et=345.921</Score>
+<Score et="351.0">Will Munney(5) lap=3 point=2 t=54.062 et=350.929</Score>
+<Score et="358.3">[SLAK]tenebrea(3) lap=3 point=2 t=54.899 et=358.266</Score>
+<Score et="364.0">TriggerFish(6) lap=3 point=2 t=55.137 et=363.972</Score>
+<Score et="364.7">BiteMe(2) lap=3 point=2 t=55.461 et=364.668</Score>
+<Score et="374.9">Lead(7) lap=3 point=0 t=95.312 et=374.788</Score>
+<Score et="378.5">Will Munney(5) lap=4 point=0 t=81.641 et=378.508</Score>
+<Score et="385.8">[SLAK]tenebrea(3) lap=4 point=0 t=82.441 et=385.808</Score>
+<Score et="391.5">TriggerFish(6) lap=4 point=0 t=82.624 et=391.459</Score>
+<Score et="393.7">BiteMe(2) lap=4 point=0 t=84.489 et=393.695</Score>
+<Score et="406.8">Lead(7) lap=3 point=1 t=31.928 et=406.716</Score>
+<Score et="408.4">Will Munney(5) lap=4 point=1 t=29.903 et=408.411</Score>
+<Score et="416.0">[SLAK]tenebrea(3) lap=4 point=1 t=30.147 et=415.954</Score>
+<Score et="421.7">TriggerFish(6) lap=4 point=1 t=30.196 et=421.655</Score>
+<Score et="423.8">BiteMe(2) lap=4 point=1 t=30.100 et=423.795</Score>
+<Score et="432.3">Lead(7) lap=3 point=2 t=57.496 et=432.284</Score>
+<Score et="432.7">Will Munney(5) lap=4 point=2 t=54.206 et=432.715</Score>
+<Incident et="433.0">Lead(7) reported contact (1.00) with Immovable</Incident>
+<Incident et="433.0">Lead(7) reported contact (0.10) with Part</Incident>
+<Incident et="433.0">Lead(7) reported contact (0.03) with Immovable</Incident>
+<Score et="440.4">[SLAK]tenebrea(3) lap=4 point=2 t=54.599 et=440.407</Score>
+<Incident et="444.0">Lead(7) reported contact (0.06) with Track</Incident>
+<Incident et="444.4">Lead(7) reported contact (0.10) with Track</Incident>
+<Incident et="444.8">Lead(7) reported contact (0.06) with Track</Incident>
+<Incident et="445.0">Lead(7) reported contact (0.10) with Track</Incident>
+<Score et="446.4">TriggerFish(6) lap=4 point=2 t=54.881 et=446.340</Score>
+<Score et="448.1">BiteMe(2) lap=4 point=2 t=54.388 et=448.083</Score>
+<Score et="460.3">Will Munney(5) lap=5 point=0 t=81.795 et=460.303</Score>
+<Score et="469.2">[SLAK]tenebrea(3) lap=5 point=0 t=83.357 et=469.165</Score>
+<Score et="473.8">TriggerFish(6) lap=5 point=0 t=82.299 et=473.758</Score>
+<Score et="476.1">BiteMe(2) lap=5 point=0 t=82.412 et=476.107</Score>
+<Score et="481.3">Lead(7) lap=4 point=0 t=106.465 et=481.253</Score>
+<Score et="490.4">Will Munney(5) lap=5 point=1 t=30.099 et=490.402</Score>
+<Score et="499.6">[SLAK]tenebrea(3) lap=5 point=1 t=30.391 et=499.556</Score>
+<Incident et="502.5">BiteMe(2) reported contact (0.29) with Immovable</Incident>
+<Score et="503.7">TriggerFish(6) lap=5 point=1 t=29.872 et=503.630</Score>
+<Score et="507.3">BiteMe(2) lap=5 point=1 t=31.124 et=507.231</Score>
+<Score et="512.9">Lead(7) lap=4 point=1 t=31.644 et=512.897</Score>
+<Score et="514.7">Will Munney(5) lap=5 point=2 t=54.402 et=514.705</Score>
+<Score et="523.8">[SLAK]tenebrea(3) lap=5 point=2 t=54.604 et=523.769</Score>
+<Score et="528.0">TriggerFish(6) lap=5 point=2 t=54.173 et=527.930</Score>
+<Score et="531.3">BiteMe(2) lap=5 point=2 t=55.189 et=531.296</Score>
+<Score et="538.1">Lead(7) lap=4 point=2 t=56.856 et=538.109</Score>
+<Score et="542.3">Will Munney(5) lap=6 point=0 t=81.929 et=542.232</Score>
+<Incident et="543.9">Lead(7) reported contact (0.06) with Track</Incident>
+<Incident et="544.3">Lead(7) reported contact (0.03) with Track</Incident>
+<Incident et="544.8">Lead(7) reported contact (0.10) with Track</Incident>
+<Incident et="545.0">Lead(7) reported contact (0.23) with Track</Incident>
+<Incident et="545.4">Lead(7) reported contact (0.10) with Track</Incident>
+<Incident et="545.5">Lead(7) reported contact (0.19) with Track</Incident>
+<Incident et="546.0">Lead(7) reported contact (0.03) with Track</Incident>
+<Incident et="546.4">Lead(7) reported contact (0.39) with Track</Incident>
+<Incident et="547.7">Lead(7) reported contact (0.77) with Track</Incident>
+<Incident et="547.9">Lead(7) reported contact (0.10) with Track</Incident>
+<Incident et="548.1">Lead(7) reported contact (0.19) with Track</Incident>
+<Incident et="548.7">Lead(7) reported contact (0.03) with Track</Incident>
+<Score et="551.5">[SLAK]tenebrea(3) lap=6 point=0 t=82.271 et=551.436</Score>
+<Score et="555.9">TriggerFish(6) lap=6 point=0 t=82.086 et=555.844</Score>
+<Score et="562.1">BiteMe(2) lap=6 point=0 t=85.951 et=562.058</Score>
+<Score et="572.2">Will Munney(5) lap=6 point=1 t=29.958 et=572.189</Score>
+<Score et="579.2">Lead(7) lap=5 point=0 t=97.910 et=579.163</Score>
+<Score et="581.9">[SLAK]tenebrea(3) lap=6 point=1 t=30.420 et=581.856</Score>
+<Score et="586.7">TriggerFish(6) lap=6 point=1 t=30.854 et=586.698</Score>
+<Score et="593.0">BiteMe(2) lap=6 point=1 t=30.960 et=593.018</Score>
+<Score et="596.4">Will Munney(5) lap=6 point=2 t=54.138 et=596.369</Score>
+<Score et="606.5">[SLAK]tenebrea(3) lap=6 point=2 t=54.979 et=606.415</Score>
+<Score et="611.1">Lead(7) lap=5 point=1 t=31.866 et=611.030</Score>
+<Score et="611.4">TriggerFish(6) lap=6 point=2 t=55.459 et=611.303</Score>
+<Score et="617.9">BiteMe(2) lap=6 point=2 t=55.852 et=617.910</Score>
+<Incident et="619.4">BiteMe(2) reported contact (1.00) with Immovable</Incident>
+<Incident et="619.4">BiteMe(2) reported contact (1.00) with Immovable</Incident>
+<Incident et="619.4">BiteMe(2) reported contact (1.00) with Immovable</Incident>
+<Incident et="619.4">BiteMe(2) reported contact (0.45) with Immovable</Incident>
+<Incident et="619.4">BiteMe(2) reported contact (0.32) with Immovable</Incident>
+<Score et="623.9">Will Munney(5) lap=7 point=0 t=81.569 et=623.801</Score>
+<Incident et="632.3">BiteMe(2) reported contact (0.03) with Track</Incident>
+<Score et="634.2">[SLAK]tenebrea(3) lap=7 point=0 t=82.693 et=634.130</Score>
+<Score et="635.7">Lead(7) lap=5 point=2 t=56.524 et=635.687</Score>
+<Score et="638.8">TriggerFish(6) lap=7 point=0 t=82.911 et=638.755</Score>
+<Score et="653.8">Will Munney(5) lap=7 point=1 t=30.016 et=653.816</Score>
+<Score et="663.3">BiteMe(2) lap=7 point=0 t=101.263 et=663.321</Score>
+<Score et="664.3">Lead(7) lap=6 point=0 t=85.033 et=664.196</Score>
+<Score et="664.5">[SLAK]tenebrea(3) lap=7 point=1 t=30.361 et=664.491</Score>
+<Score et="669.1">TriggerFish(6) lap=7 point=1 t=30.265 et=669.020</Score>
+<Score et="677.9">Will Munney(5) lap=7 point=2 t=54.080 et=677.881</Score>
+<Score et="688.9">[SLAK]tenebrea(3) lap=7 point=2 t=54.723 et=688.852</Score>
+<Score et="693.4">TriggerFish(6) lap=7 point=2 t=54.620 et=693.375</Score>
+<Score et="697.6">Lead(7) lap=6 point=1 t=33.382 et=697.578</Score>
+<Score et="701.6">BiteMe(2) lap=7 point=1 t=38.246 et=701.567</Score>
+<Score et="705.8">Will Munney(5) lap=8 point=0 t=81.973 et=705.774</Score>
+<Score et="716.9">[SLAK]tenebrea(3) lap=8 point=0 t=82.763 et=716.893</Score>
+<Score et="721.2">TriggerFish(6) lap=8 point=0 t=82.372 et=721.127</Score>
+<Score et="723.9">Lead(7) lap=6 point=2 t=59.643 et=723.839</Score>
+<Score et="726.4">BiteMe(2) lap=7 point=2 t=63.020 et=726.341</Score>
+<Score et="737.1">Will Munney(5) lap=8 point=1 t=31.308 et=737.082</Score>
+<Score et="747.2">[SLAK]tenebrea(3) lap=8 point=1 t=30.253 et=747.146</Score>
+<Score et="751.5">TriggerFish(6) lap=8 point=1 t=30.297 et=751.424</Score>
+<Score et="754.1">Lead(7) lap=7 point=0 t=89.884 et=754.080</Score>
+<Score et="755.5">BiteMe(2) lap=8 point=0 t=92.114 et=755.435</Score>
+<Score et="761.5">Will Munney(5) lap=8 point=2 t=55.627 et=761.401</Score>
+<Score et="771.5">[SLAK]tenebrea(3) lap=8 point=2 t=54.584 et=771.477</Score>
+<Score et="776.1">TriggerFish(6) lap=8 point=2 t=54.880 et=776.007</Score>
+<Score et="786.3">Lead(7) lap=7 point=1 t=32.192 et=786.271</Score>
+<Score et="787.0">BiteMe(2) lap=8 point=1 t=31.563 et=786.998</Score>
+<Score et="789.3">Will Munney(5) lap=9 point=0 t=83.495 et=789.269</Score>
+<Score et="799.0">[SLAK]tenebrea(3) lap=9 point=0 t=82.032 et=798.925</Score>
+<Score et="803.7">TriggerFish(6) lap=9 point=0 t=82.493 et=803.620</Score>
+<Score et="811.2">Lead(7) lap=7 point=2 t=57.053 et=811.133</Score>
+<Score et="812.0">BiteMe(2) lap=8 point=2 t=56.493 et=811.928</Score>
+<Score et="819.3">Will Munney(5) lap=9 point=1 t=30.042 et=819.311</Score>
+<Score et="829.2">[SLAK]tenebrea(3) lap=9 point=1 t=30.262 et=829.187</Score>
+<Score et="835.1">TriggerFish(6) lap=9 point=1 t=31.478 et=835.097</Score>
+<Score et="839.1">Lead(7) lap=8 point=0 t=85.021 et=839.101</Score>
+<Score et="840.4">BiteMe(2) lap=9 point=0 t=84.966 et=840.401</Score>
+<Score et="843.7">Will Munney(5) lap=9 point=2 t=54.402 et=843.671</Score>
+<Score et="853.9">[SLAK]tenebrea(3) lap=9 point=2 t=54.891 et=853.816</Score>
+<Score et="859.6">TriggerFish(6) lap=9 point=2 t=55.909 et=859.529</Score>
+<Score et="870.8">Lead(7) lap=8 point=1 t=31.663 et=870.764</Score>
+<Score et="871.3">BiteMe(2) lap=9 point=1 t=30.839 et=871.240</Score>
+<Score et="871.4">Will Munney(5) lap=10 point=0 t=82.116 et=871.385</Score>
+<Score et="881.6">[SLAK]tenebrea(3) lap=10 point=0 t=82.627 et=881.552</Score>
+<Score et="887.5">TriggerFish(6) lap=10 point=0 t=83.817 et=887.437</Score>
+<Score et="896.1">Lead(7) lap=8 point=2 t=56.908 et=896.009</Score>
+<Score et="896.6">BiteMe(2) lap=9 point=2 t=56.143 et=896.544</Score>
+<Penalty et="897.2">Lead received Drive Thru penalty, 0s, 0laps. Result: penalties=1, 1st=Drive Thru,0s</Penalty>
+<Incident et="899.5">Lead(7) reported contact (1.00) with Immovable</Incident>
+<Incident et="900.0">Lead(7) reported contact (1.00) with Immovable</Incident>
+<Incident et="900.0">Lead(7) reported contact (1.00) with Immovable</Incident>
+<Score et="901.3">Will Munney(5) lap=10 point=1 t=29.896 et=901.281</Score>
+<Score et="911.7">[SLAK]tenebrea(3) lap=10 point=1 t=30.123 et=911.675</Score>
+<Score et="917.7">TriggerFish(6) lap=10 point=1 t=30.167 et=917.604</Score>
+<Score et="925.3">BiteMe(2) lap=10 point=0 t=84.866 et=925.267</Score>
+<Score et="925.5">Will Munney(5) lap=10 point=2 t=54.077 et=925.462</Score>
+<Score et="928.4">Lead(7) lap=9 point=0 t=89.230 et=928.331</Score>
+<Score et="936.1">[SLAK]tenebrea(3) lap=10 point=2 t=54.514 et=936.067</Score>
+<Score et="942.0">TriggerFish(6) lap=10 point=2 t=54.478 et=941.915</Score>
+<Score et="953.0">Will Munney(5) lap=11 point=0 t=81.548 et=952.933</Score>
+<Incident et="955.0">BiteMe(2) reported contact (1.00) with Immovable</Incident>
+<Score et="957.0">BiteMe(2) lap=10 point=1 t=31.749 et=957.016</Score>
+<Score et="959.6">Lead(7) lap=9 point=1 t=31.168 et=959.499</Score>
+<Score et="964.2">[SLAK]tenebrea(3) lap=11 point=0 t=82.638 et=964.190</Score>
+<Score et="970.1">TriggerFish(6) lap=11 point=0 t=82.577 et=970.014</Score>
+<Score et="983.1">Will Munney(5) lap=11 point=1 t=30.129 et=983.062</Score>
+<Score et="984.7">Lead(7) lap=9 point=2 t=56.350 et=984.681</Score>
+<Score et="987.3">BiteMe(2) lap=10 point=2 t=61.987 et=987.254</Score>
+<Score et="994.3">[SLAK]tenebrea(3) lap=11 point=1 t=30.084 et=994.274</Score>
+<Score et="1000.7">TriggerFish(6) lap=11 point=1 t=30.590 et=1000.604</Score>
+<Score et="1007.2">Will Munney(5) lap=11 point=2 t=54.258 et=1007.191</Score>
+<Incident et="1014.8">Lead(7) reported contact (0.55) with Immovable</Incident>
+<Score et="1015.3">BiteMe(2) lap=11 point=0 t=90.045 et=1015.312</Score>
+<Score et="1018.8">[SLAK]tenebrea(3) lap=11 point=2 t=54.528 et=1018.718</Score>
+<Score et="1025.2">TriggerFish(6) lap=11 point=2 t=55.148 et=1025.162</Score>
+<Score et="1034.8">Will Munney(5) lap=12 point=0 t=81.797 et=1034.730</Score>
+<Score et="1046.7">[SLAK]tenebrea(3) lap=12 point=0 t=82.462 et=1046.652</Score>
+<Score et="1047.0">BiteMe(2) lap=11 point=1 t=31.636 et=1046.948</Score>
+<Score et="1053.3">TriggerFish(6) lap=12 point=0 t=83.238 et=1053.252</Score>
+<Score et="1058.0">Lead(7) lap=10 point=0 t=129.593 et=1057.925</Score>
+<Penalty et="1064.2">Lead received Drive Thru penalty, 0s, 0laps. Result: penalties=2, 1st=Drive Thru,0s</Penalty>
+<Score et="1064.8">Will Munney(5) lap=12 point=1 t=30.017 et=1064.747</Score>
+<Score et="1071.6">BiteMe(2) lap=11 point=2 t=56.216 et=1071.528</Score>
+<Score et="1077.2">[SLAK]tenebrea(3) lap=12 point=1 t=30.471 et=1077.123</Score>
+<Score et="1084.1">TriggerFish(6) lap=12 point=1 t=30.864 et=1084.116</Score>
+<Score et="1089.3">Will Munney(5) lap=12 point=2 t=54.507 et=1089.237</Score>
+<Score et="1101.6">Lead(7) lap=10 point=1 t=43.607 et=1101.532</Score>
+<Score et="1101.6">[SLAK]tenebrea(3) lap=12 point=2 t=54.913 et=1101.565</Score>
+<Score et="1108.8">TriggerFish(6) lap=12 point=2 t=55.482 et=1108.733</Score>
+<Chat et="1111.1">Will Munney: Slowing to pit</Chat>
+<Score et="1123.8">BiteMe(2) lap=12 point=0 t=108.472 et=1123.784</Score>
+<Score et="1127.2">Lead(7) lap=10 point=2 t=69.245 et=1127.169</Score>
+<Incident et="1128.5">Lead(7) reported contact (1.00) with Immovable</Incident>
+<Incident et="1128.5">Lead(7) reported contact (1.00) with Immovable</Incident>
+<Incident et="1128.6">Lead(7) reported contact (0.52) with Immovable</Incident>
+<Incident et="1128.6">Lead(7) reported contact (0.77) with Immovable</Incident>
+<Incident et="1128.6">Lead(7) reported contact (0.32) with Immovable</Incident>
+<Score et="1130.5">Will Munney(5) lap=13 point=0 t=95.774 et=1130.504</Score>
+<Score et="1136.9">TriggerFish(6) lap=13 point=0 t=83.639 et=1136.890</Score>
+<Chat et="1151.6">Will Munney: Leaving pits</Chat>
+<Score et="1152.7">[SLAK]tenebrea(3) lap=13 point=0 t=105.985 et=1152.637</Score>
+<Chat et="1155.7">[SLAK]tenebrea: Entering Pits!!!</Chat>
+<Chat et="1158.5">[SLAK]tenebrea: Entering Pits!!!</Chat>
+<Score et="1166.2">BiteMe(2) lap=12 point=1 t=42.350 et=1166.135</Score>
+<Score et="1168.1">TriggerFish(6) lap=13 point=1 t=31.194 et=1168.084</Score>
+<Score et="1173.3">Lead(7) lap=11 point=0 t=115.295 et=1173.220</Score>
+<Penalty et="1179.5">Lead served 1st Drive Thru penalty, result: penalties=1, 1st=Drive Thru,0s</Penalty>
+<Penalty et="1179.5">Lead received Drive Thru penalty, 0s, 0laps. Result: penalties=2, 1st=Drive Thru,0s</Penalty>
+<Score et="1180.6">Will Munney(5) lap=13 point=1 t=50.111 et=1180.616</Score>
+<Score et="1191.7">BiteMe(2) lap=12 point=2 t=67.875 et=1191.659</Score>
+<Score et="1192.9">TriggerFish(6) lap=13 point=2 t=55.965 et=1192.856</Score>
+<Score et="1194.3">[SLAK]tenebrea(3) lap=13 point=1 t=41.638 et=1194.275</Score>
+<Chat et="1197.9">BiteMe: Pass on Right</Chat>
+<Score et="1205.0">Will Munney(5) lap=13 point=2 t=74.477 et=1204.981</Score>
+<Score et="1215.2">Lead(7) lap=11 point=1 t=41.878 et=1215.097</Score>
+<Score et="1218.9">[SLAK]tenebrea(3) lap=13 point=2 t=66.203 et=1218.840</Score>
+<Score et="1220.8">TriggerFish(6) lap=14 point=0 t=83.842 et=1220.732</Score>
+<Score et="1221.2">BiteMe(2) lap=13 point=0 t=97.418 et=1221.202</Score>
+<Score et="1232.7">Will Munney(5) lap=14 point=0 t=102.176 et=1232.681</Score>
+<Score et="1240.9">Lead(7) lap=11 point=2 t=67.578 et=1240.798</Score>
+<Score et="1246.4">[SLAK]tenebrea(3) lap=14 point=0 t=93.740 et=1246.376</Score>
+<Score et="1251.3">TriggerFish(6) lap=14 point=1 t=30.538 et=1251.270</Score>
+<Score et="1251.7">BiteMe(2) lap=13 point=1 t=30.466 et=1251.668</Score>
+<Score et="1262.6">Will Munney(5) lap=14 point=1 t=29.901 et=1262.582</Score>
+<Score et="1275.8">TriggerFish(6) lap=14 point=2 t=54.995 et=1275.727</Score>
+<Score et="1276.3">BiteMe(2) lap=13 point=2 t=55.061 et=1276.263</Score>
+<Score et="1276.6">[SLAK]tenebrea(3) lap=14 point=1 t=30.203 et=1276.579</Score>
+<Score et="1286.7">Will Munney(5) lap=14 point=2 t=53.956 et=1286.637</Score>
+<Score et="1289.8">Lead(7) lap=12 point=0 t=116.559 et=1289.779</Score>
+<Chat et="1292.1">TriggerFish: Slowing to Pit</Chat>
+<Penalty et="1296.1">Lead served 1st Drive Thru penalty, result: penalties=1, 1st=Drive Thru,0s</Penalty>
+<Score et="1301.3">[SLAK]tenebrea(3) lap=14 point=2 t=54.849 et=1301.226</Score>
+<Score et="1304.8">BiteMe(2) lap=14 point=0 t=83.566 et=1304.768</Score>
+<Score et="1314.1">Will Munney(5) lap=15 point=0 t=81.431 et=1314.112</Score>
+<Score et="1328.0">TriggerFish(6) lap=15 point=0 t=107.201 et=1327.933</Score>
+<Score et="1329.1">[SLAK]tenebrea(3) lap=15 point=0 t=82.644 et=1329.020</Score>
+<Score et="1333.1">Lead(7) lap=12 point=1 t=43.298 et=1333.077</Score>
+<Score et="1335.8">BiteMe(2) lap=14 point=1 t=30.993 et=1335.762</Score>
+<Score et="1344.4">Will Munney(5) lap=15 point=1 t=30.254 et=1344.366</Score>
+<Score et="1358.1">Lead(7) lap=12 point=2 t=68.292 et=1358.071</Score>
+<Score et="1359.1">[SLAK]tenebrea(3) lap=15 point=1 t=30.029 et=1359.050</Score>
+<Score et="1360.8">BiteMe(2) lap=14 point=2 t=55.987 et=1360.755</Score>
+<Score et="1368.6">TriggerFish(6) lap=15 point=1 t=40.610 et=1368.544</Score>
+<Score et="1368.7">Will Munney(5) lap=15 point=2 t=54.556 et=1368.668</Score>
+<Score et="1383.6">[SLAK]tenebrea(3) lap=15 point=2 t=54.507 et=1383.527</Score>
+<Incident et="1383.9">BiteMe(2) reported contact (0.55) with Immovable</Incident>
+<Score et="1387.2">Lead(7) lap=13 point=0 t=97.354 et=1387.133</Score>
+<Score et="1393.3">TriggerFish(6) lap=15 point=2 t=65.286 et=1393.219</Score>
+<Score et="1393.5">BiteMe(2) lap=15 point=0 t=88.674 et=1393.442</Score>
+<Score et="1396.3">Will Munney(5) lap=16 point=0 t=82.125 et=1396.237</Score>
+<Score et="1411.3">[SLAK]tenebrea(3) lap=16 point=0 t=82.274 et=1411.294</Score>
+<Score et="1419.5">Lead(7) lap=13 point=1 t=32.292 et=1419.425</Score>
+<Score et="1421.2">TriggerFish(6) lap=16 point=0 t=93.177 et=1421.111</Score>
+<Score et="1424.9">BiteMe(2) lap=15 point=1 t=31.399 et=1424.841</Score>
+<Score et="1427.3">Will Munney(5) lap=16 point=1 t=31.026 et=1427.263</Score>
+<Score et="1441.9">[SLAK]tenebrea(3) lap=16 point=1 t=30.569 et=1441.863</Score>
+<Incident et="1444.3">Lead(7) reported contact (0.87) with Immovable</Incident>
+<Incident et="1444.3">Lead(7) reported contact (1.00) with Immovable</Incident>
+<Score et="1445.8">Lead(7) lap=13 point=2 t=58.593 et=1445.725</Score>
+<Incident et="1447.5">Lead(7) reported contact (1.00) with Immovable</Incident>
+<Incident et="1447.7">Lead(7) reported contact (0.71) with Immovable</Incident>
+<Score et="1449.3">BiteMe(2) lap=15 point=2 t=55.822 et=1449.264</Score>
+<Incident et="1449.9">Lead(7) reported contact (0.10) with Part</Incident>
+<Incident et="1449.9">Lead(7) reported contact (0.13) with Part</Incident>
+<Incident et="1450.1">Lead(7) reported contact (0.13) with Part</Incident>
+<Incident et="1450.3">Lead(7) reported contact (0.06) with Part</Incident>
+<Incident et="1450.7">Lead(7) reported contact (0.00) with Part</Incident>
+<Score et="1451.9">TriggerFish(6) lap=16 point=1 t=30.696 et=1451.807</Score>
+<Score et="1452.9">Will Munney(5) lap=16 point=2 t=56.592 et=1452.828</Score>
+<Score et="1466.4">[SLAK]tenebrea(3) lap=16 point=2 t=55.015 et=1466.309</Score>
+<Score et="1476.5">TriggerFish(6) lap=16 point=2 t=55.296 et=1476.407</Score>
+<Score et="1477.8">BiteMe(2) lap=16 point=0 t=84.328 et=1477.770</Score>
+<Score et="1480.5">Will Munney(5) lap=17 point=0 t=84.198 et=1480.435</Score>
+<Score et="1493.8">[SLAK]tenebrea(3) lap=17 point=0 t=82.451 et=1493.745</Score>
+<Incident et="1495.4">Lead(7) reported contact (1.00) with Immovable</Incident>
+<Incident et="1495.6">Lead(7) reported contact (0.19) with Immovable</Incident>
+<Score et="1504.6">TriggerFish(6) lap=17 point=0 t=83.474 et=1504.585</Score>
+<Score et="1507.5">Lead(7) lap=14 point=0 t=120.284 et=1507.417</Score>
+<Score et="1508.1">BiteMe(2) lap=16 point=1 t=30.347 et=1508.117</Score>
+<Score et="1510.6">Will Munney(5) lap=17 point=1 t=30.125 et=1510.560</Score>
+<Penalty et="1513.7">Lead served 1st Drive Thru penalty, result: penalties=0, 1st=Drive Thru,0s</Penalty>
+<Score et="1523.8">[SLAK]tenebrea(3) lap=17 point=1 t=30.006 et=1523.750</Score>
+<Score et="1532.7">BiteMe(2) lap=16 point=2 t=54.913 et=1532.683</Score>
+<Score et="1534.7">Will Munney(5) lap=17 point=2 t=54.261 et=1534.696</Score>
+<Score et="1535.1">TriggerFish(6) lap=17 point=1 t=30.500 et=1535.084</Score>
+<Score et="1548.0">[SLAK]tenebrea(3) lap=17 point=2 t=54.173 et=1547.917</Score>
+<Score et="1549.7">Lead(7) lap=14 point=1 t=42.176 et=1549.593</Score>
+<Score et="1559.8">TriggerFish(6) lap=17 point=2 t=55.130 et=1559.714</Score>
+<Score et="1561.9">BiteMe(2) lap=17 point=0 t=84.152 et=1561.922</Score>
+<Score et="1568.1">Will Munney(5) lap=18 point=0 t=87.587 et=1568.022</Score>
+<Score et="1575.1">Lead(7) lap=14 point=2 t=67.657 et=1575.073</Score>
+<Score et="1575.5">[SLAK]tenebrea(3) lap=18 point=0 t=81.748 et=1575.493</Score>
+<Score et="1587.4">TriggerFish(6) lap=18 point=0 t=82.768 et=1587.353</Score>
+<Score et="1592.3">BiteMe(2) lap=17 point=1 t=30.345 et=1592.267</Score>
+<Score et="1598.6">Will Munney(5) lap=18 point=1 t=30.489 et=1598.511</Score>
+<Score et="1604.1">Lead(7) lap=15 point=0 t=96.660 et=1604.076</Score>
+<Score et="1605.6">[SLAK]tenebrea(3) lap=18 point=1 t=30.111 et=1605.604</Score>
+<Score et="1616.9">BiteMe(2) lap=17 point=2 t=55.001 et=1616.923</Score>
+<Score et="1617.5">TriggerFish(6) lap=18 point=1 t=30.109 et=1617.462</Score>
+<Score et="1622.8">Will Munney(5) lap=18 point=2 t=54.743 et=1622.765</Score>
+<Score et="1629.9">[SLAK]tenebrea(3) lap=18 point=2 t=54.387 et=1629.880</Score>
+<Score et="1636.0">Lead(7) lap=15 point=1 t=31.900 et=1635.976</Score>
+<Score et="1642.2">TriggerFish(6) lap=18 point=2 t=54.784 et=1642.137</Score>
+<Score et="1645.0">BiteMe(2) lap=18 point=0 t=83.074 et=1644.996</Score>
+<Score et="1650.4">Will Munney(5) lap=19 point=0 t=82.311 et=1650.334</Score>
+<Score et="1658.2">[SLAK]tenebrea(3) lap=19 point=0 t=82.650 et=1658.143</Score>
+<Score et="1660.8">Lead(7) lap=15 point=2 t=56.615 et=1660.691</Score>
+<Score et="1669.6">TriggerFish(6) lap=19 point=0 t=82.182 et=1669.535</Score>
+<Score et="1675.4">BiteMe(2) lap=18 point=1 t=30.413 et=1675.410</Score>
+<Score et="1680.6">Will Munney(5) lap=19 point=1 t=30.243 et=1680.577</Score>
+<Score et="1688.6">[SLAK]tenebrea(3) lap=19 point=1 t=30.451 et=1688.594</Score>
+<Score et="1694.9">Lead(7) lap=16 point=0 t=90.752 et=1694.828</Score>
+<Score et="1699.5">TriggerFish(6) lap=19 point=1 t=29.961 et=1699.495</Score>
+<Score et="1700.2">BiteMe(2) lap=18 point=2 t=55.185 et=1700.181</Score>
+<Score et="1704.7">Will Munney(5) lap=19 point=2 t=54.337 et=1704.670</Score>
+<Score et="1713.0">[SLAK]tenebrea(3) lap=19 point=2 t=54.845 et=1712.987</Score>
+<Score et="1724.0">TriggerFish(6) lap=19 point=2 t=54.409 et=1723.944</Score>
+<Score et="1727.4">Lead(7) lap=16 point=1 t=32.522 et=1727.351</Score>
+<Score et="1728.6">BiteMe(2) lap=19 point=0 t=83.554 et=1728.551</Score>
+<Score et="1732.2">Will Munney(5) lap=20 point=0 t=81.802 et=1732.136</Score>
+<Score et="1741.7">[SLAK]tenebrea(3) lap=20 point=0 t=83.572 et=1741.715</Score>
+<Score et="1751.6">TriggerFish(6) lap=20 point=0 t=81.984 et=1751.519</Score>
+<Score et="1752.5">Lead(7) lap=16 point=2 t=57.612 et=1752.440</Score>
+<Score et="1759.8">BiteMe(2) lap=19 point=1 t=31.252 et=1759.802</Score>
+<Score et="1762.3">Will Munney(5) lap=20 point=1 t=30.128 et=1762.263</Score>
+<Incident et="1764.9">Lead(7) reported contact (0.03) with Track</Incident>
+<Incident et="1765.4">Lead(7) reported contact (0.13) with Track</Incident>
+<Incident et="1765.6">Lead(7) reported contact (0.03) with Track</Incident>
+<Incident et="1765.9">Lead(7) reported contact (0.10) with Track</Incident>
+<Incident et="1766.0">Lead(7) reported contact (0.06) with Track</Incident>
+<Incident et="1766.6">Lead(7) reported contact (0.19) with Track</Incident>
+<Incident et="1767.7">Lead(7) reported contact (0.39) with Track</Incident>
+<Incident et="1768.1">Lead(7) reported contact (0.13) with Track</Incident>
+<Score et="1772.1">[SLAK]tenebrea(3) lap=20 point=1 t=30.381 et=1772.095</Score>
+<Score et="1782.2">TriggerFish(6) lap=20 point=1 t=30.604 et=1782.123</Score>
+<Score et="1784.8">BiteMe(2) lap=19 point=2 t=56.206 et=1784.756</Score>
+<Score et="1786.6">Will Munney(5) lap=20 point=2 t=54.438 et=1786.574</Score>
+<Score et="1796.7">[SLAK]tenebrea(3) lap=20 point=2 t=54.917 et=1796.632</Score>
+<Score et="1799.9">Lead(7) lap=17 point=0 t=105.002 et=1799.830</Score>
+<Score et="1806.7">TriggerFish(6) lap=20 point=2 t=55.102 et=1806.620</Score>
+<Score et="1814.0">Will Munney(5) lap=21 point=0 t=81.802 et=1813.938</Score>
+<Score et="1814.0">BiteMe(2) lap=20 point=0 t=85.445 et=1813.995</Score>
+<Score et="1824.4">[SLAK]tenebrea(3) lap=21 point=0 t=82.597 et=1824.312</Score>
+<Score et="1831.5">Lead(7) lap=17 point=1 t=31.588 et=1831.419</Score>
+<Score et="1833.9">TriggerFish(6) lap=21 point=0 t=82.350 et=1833.869</Score>
+<Score et="1843.9">Will Munney(5) lap=21 point=1 t=29.889 et=1843.827</Score>
+<Score et="1844.8">BiteMe(2) lap=20 point=1 t=30.825 et=1844.821</Score>
+<Score et="1855.2">[SLAK]tenebrea(3) lap=21 point=1 t=30.852 et=1855.163</Score>
+<Score et="1856.4">Lead(7) lap=17 point=2 t=56.549 et=1856.379</Score>
+<Score et="1864.0">TriggerFish(6) lap=21 point=1 t=30.080 et=1863.948</Score>
+<Score et="1868.0">Will Munney(5) lap=21 point=2 t=53.989 et=1867.926</Score>
+<Score et="1869.3">BiteMe(2) lap=20 point=2 t=55.312 et=1869.307</Score>
+<Score et="1879.5">[SLAK]tenebrea(3) lap=21 point=2 t=55.117 et=1879.428</Score>
+<Score et="1885.9">Lead(7) lap=18 point=0 t=86.025 et=1885.855</Score>
+<Score et="1888.3">TriggerFish(6) lap=21 point=2 t=54.384 et=1888.253</Score>
+<Score et="1895.5">Checkered for Will Munney, laps=22/2147483647, endET=1895.490234/1841.961914, crossedAfterTime=0</Score>
+<Score et="1895.5">Will Munney(5) lap=22 point=0 t=81.552 et=1895.490</Score>
+<Score et="1897.6">BiteMe(2) lap=21 point=0 t=83.545 et=1897.540</Score>
+<Score et="1907.1">[SLAK]tenebrea(3) lap=22 point=0 t=82.734 et=1907.045</Score>
+<Score et="1915.7">TriggerFish(6) lap=22 point=0 t=81.793 et=1915.662</Score>
+<Score et="1916.9">Lead(7) lap=18 point=1 t=30.997 et=1916.852</Score>
+<Score et="1942.7">Lead(7) lap=18 point=2 t=56.818 et=1942.673</Score>
+<Chat et="1950.3">[SLAK]tenebrea: /editgrid 1 [slak]t</Chat>
+<Chat et="1959.6">[SLAK]tenebrea: /editgrid 5 WI</Chat>
+</Stream>
+<MostLapsCompleted>22</MostLapsCompleted>
+<Driver>
+<Name>Will Munney</Name>
+<Connected>1</Connected>
+<VehFile>DUNLOPGB_66.VEH</VehFile>
+<UpgradeCode>00060000 00000000</UpgradeCode>
+<VehName>#66 Anthony Scragg</VehName>
+<CarType>S Class</CarType>
+<CarClass>S Class</CarClass>
+<CarNumber>66</CarNumber>
+<TeamName>Dunlop GB</TeamName>
+<isPlayer>1</isPlayer>
+<GridPos>1</GridPos>
+<Position>1</Position>
+<ClassGridPos>1</ClassGridPos>
+<ClassPosition>1</ClassPosition>
+<Points>10</Points>
+<ClassPoints>10</ClassPoints>
+<LapRankIncludingDiscos>1</LapRankIncludingDiscos>
+<Lap num="1" p="1" et="41.9619" s1="38.0548" s2="24.6824" s3="28.0746" fuel="0.294">90.8118</Lap>
+<Lap num="2" p="1" et="132.7737" s1="30.4843" s2="24.4370" s3="27.5276" fuel="0.275">82.4489</Lap>
+<Lap num="3" p="1" et="215.2226" s1="29.8773" s2="24.2112" s3="27.5563" fuel="0.255">81.6449</Lap>
+<Lap num="4" p="1" et="296.8675" s1="29.8839" s2="24.1780" s3="27.5787" fuel="0.235">81.6406</Lap>
+<Lap num="5" p="1" et="378.5081" s1="29.9026" s2="24.3039" s3="27.5880" fuel="0.220">81.7945</Lap>
+<Lap num="6" p="1" et="460.3026" s1="30.0991" s2="24.3029" s3="27.5270" fuel="0.200">81.9290</Lap>
+<Lap num="7" p="1" et="542.2316" s1="29.9575" s2="24.1803" s3="27.4312" fuel="0.180">81.5690</Lap>
+<Lap num="8" p="1" et="623.8006" s1="30.0158" s2="24.0645" s3="27.8929" fuel="0.161">81.9732</Lap>
+<Lap num="9" p="1" et="705.7738" s1="31.3078" s2="24.3189" s3="27.8682" fuel="0.141">83.4950</Lap>
+<Lap num="10" p="1" et="789.2688" s1="30.0420" s2="24.3600" s3="27.7143" fuel="0.125">82.1163</Lap>
+<Lap num="11" p="1" et="871.3851" s1="29.8958" s2="24.1808" s3="27.4711" fuel="0.106">81.5477</Lap>
+<Lap num="12" p="1" et="952.9328" s1="30.1290" s2="24.1293" s3="27.5389" fuel="0.086">81.7971</Lap>
+<Lap num="13" p="1" et="1034.7300" s1="30.0175" s2="24.4892" s3="41.2678" fuel="0.067" pit="1">95.7744</Lap>
+<Lap num="14" p="2" et="1130.5044" s1="50.1114" s2="24.3654" s3="27.6995" fuel="0.298">102.1762</Lap>
+<Lap num="15" p="1" et="1232.6807" s1="29.9011" s2="24.0553" s3="27.4746" fuel="0.278">81.4310</Lap>
+<Lap num="16" p="1" et="1314.1116" s1="30.2542" s2="24.3022" s3="27.5687" fuel="0.259">82.1252</Lap>
+<Lap num="17" p="1" et="1396.2367" s1="31.0264" s2="25.5652" s3="27.6068" fuel="0.239">84.1984</Lap>
+<Lap num="18" p="1" et="1480.4351" s1="30.1247" s2="24.1363" s3="33.3264" fuel="0.220">87.5873</Lap>
+<Lap num="19" p="1" et="1568.0223" s1="30.4886" s2="24.2545" s3="27.5682" fuel="0.200">82.3113</Lap>
+<Lap num="20" p="1" et="1650.3336" s1="30.2429" s2="24.0939" s3="27.4654" fuel="0.180">81.8022</Lap>
+<Lap num="21" p="1" et="1732.1359" s1="30.1276" s2="24.3105" s3="27.3639" fuel="0.161">81.8019</Lap>
+<Lap num="22" p="1" et="1813.9379" s1="29.8888" s2="24.0997" s3="27.5638" fuel="0.145">81.5524</Lap>
+<BestLapTime>81.4310</BestLapTime>
+<FinishTime>1853.5283</FinishTime>
+<Laps>22</Laps>
+<Pitstops>1</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="22">PlayerControl,TC=1,ABS=1</ControlAndAids>
+</Driver>
+<Driver>
+<Name>[SLAK]tenebrea</Name>
+<Connected>1</Connected>
+<VehFile>SQUAREFOOT_09.VEH</VehFile>
+<UpgradeCode>40070000 00000000</UpgradeCode>
+<VehName>#09 Mike Jones</VehName>
+<CarType>S Class</CarType>
+<CarClass>S Class</CarClass>
+<CarNumber>09</CarNumber>
+<TeamName>Square Foot</TeamName>
+<isPlayer>1</isPlayer>
+<GridPos>2</GridPos>
+<Position>2</Position>
+<ClassGridPos>2</ClassGridPos>
+<ClassPosition>2</ClassPosition>
+<Points>8</Points>
+<ClassPoints>8</ClassPoints>
+<LapRankIncludingDiscos>2</LapRankIncludingDiscos>
+<Lap num="1" p="3" et="41.9619" s1="42.6087" s2="24.5659" s3="28.5003" fuel="0.275">95.6749</Lap>
+<Lap num="2" p="2" et="137.6368" s1="30.4601" s2="24.3552" s3="27.7694" fuel="0.259">82.5848</Lap>
+<Lap num="3" p="2" et="220.2216" s1="30.6048" s2="24.6438" s3="27.8971" fuel="0.239">83.1457</Lap>
+<Lap num="4" p="2" et="303.3672" s1="30.2701" s2="24.6288" s3="27.5418" fuel="0.220">82.4407</Lap>
+<Lap num="5" p="2" et="385.8079" s1="30.1466" s2="24.4524" s3="28.7577" fuel="0.200">83.3567</Lap>
+<Lap num="6" p="2" et="469.1646" s1="30.3911" s2="24.2129" s3="27.6675" fuel="0.180">82.2715</Lap>
+<Lap num="7" p="2" et="551.4360" s1="30.4202" s2="24.5590" s3="27.7142" fuel="0.161">82.6935</Lap>
+<Lap num="8" p="2" et="634.1295" s1="30.3614" s2="24.3616" s3="28.0401" fuel="0.141">82.7631</Lap>
+<Lap num="9" p="2" et="716.8926" s1="30.2531" s2="24.3313" s3="27.4479" fuel="0.122">82.0323</Lap>
+<Lap num="10" p="2" et="798.9249" s1="30.2620" s2="24.6288" s3="27.7364" fuel="0.102">82.6272</Lap>
+<Lap num="11" p="2" et="881.5521" s1="30.1229" s2="24.3915" s3="28.1234" fuel="0.082">82.6378</Lap>
+<Lap num="12" p="2" et="964.1899" s1="30.0844" s2="24.4440" s3="27.9336" fuel="0.063">82.4619</Lap>
+<Lap num="13" p="3" et="1046.6519" s1="30.4713" s2="24.4420" s3="51.0717" fuel="0.047" pit="1">105.9850</Lap>
+<Lap num="14" p="3" et="1152.6368" s1="41.6376" s2="24.5656" s3="27.5364" fuel="0.196">93.7397</Lap>
+<Lap num="15" p="3" et="1246.3765" s1="30.2027" s2="24.6466" s3="27.7945" fuel="0.176">82.6438</Lap>
+<Lap num="16" p="2" et="1329.0203" s1="30.0294" s2="24.4778" s3="27.7664" fuel="0.157">82.2736</Lap>
+<Lap num="17" p="2" et="1411.2939" s1="30.5687" s2="24.4468" s3="27.4353" fuel="0.137">82.4508</Lap>
+<Lap num="18" p="2" et="1493.7448" s1="30.0055" s2="24.1672" s3="27.5752" fuel="0.118">81.7479</Lap>
+<Lap num="19" p="2" et="1575.4927" s1="30.1113" s2="24.2760" s3="28.2628" fuel="0.098">82.6502</Lap>
+<Lap num="20" p="2" et="1658.1428" s1="30.4510" s2="24.3936" s3="28.7273" fuel="0.078">83.5718</Lap>
+<Lap num="21" p="2" et="1741.7147" s1="30.3806" s2="24.5368" s3="27.6795" fuel="0.059">82.5969</Lap>
+<Lap num="22" p="2" et="1824.3116" s1="30.8517" s2="24.2649" s3="27.6169" fuel="0.039">82.7335</Lap>
+<BestLapTime>81.7479</BestLapTime>
+<FinishTime>1865.0833</FinishTime>
+<Laps>22</Laps>
+<Pitstops>1</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="22">PlayerControl,ABS=2,Stability=2,Clutch,AutoBlip</ControlAndAids>
+</Driver>
+<Driver>
+<Name>TriggerFish</Name>
+<Connected>1</Connected>
+<VehFile>NFRACING_99.VEH</VehFile>
+<UpgradeCode>00020000 00000000</UpgradeCode>
+<VehName>#99 Stephane Amiel</VehName>
+<CarType>S Class</CarType>
+<CarClass>S Class</CarClass>
+<CarNumber>99</CarNumber>
+<TeamName>NormeFancaiseRacing</TeamName>
+<isPlayer>1</isPlayer>
+<GridPos>3</GridPos>
+<Position>3</Position>
+<ClassGridPos>3</ClassGridPos>
+<ClassPosition>3</ClassPosition>
+<Points>6</Points>
+<ClassPoints>6</ClassPoints>
+<LapRankIncludingDiscos>3</LapRankIncludingDiscos>
+<Lap num="1" p="5" et="41.9619" s1="47.4497" s2="24.8486" s3="27.7692" fuel="0.294">100.0676</Lap>
+<Lap num="2" p="4" et="142.0295" s1="30.2695" s2="24.6311" s3="28.2275" fuel="0.275">83.1281</Lap>
+<Lap num="3" p="3" et="225.1575" s1="30.6350" s2="24.5812" s3="28.4613" fuel="0.255">83.6775</Lap>
+<Lap num="4" p="3" et="308.8350" s1="30.5248" s2="24.6121" s3="27.4870" fuel="0.235">82.6240</Lap>
+<Lap num="5" p="3" et="391.4590" s1="30.1965" s2="24.6843" s3="27.4177" fuel="0.220">82.2985</Lap>
+<Lap num="6" p="3" et="473.7576" s1="29.8723" s2="24.3006" s3="27.9133" fuel="0.200">82.0862</Lap>
+<Lap num="7" p="3" et="555.8438" s1="30.8544" s2="24.6049" s3="27.4520" fuel="0.180">82.9113</Lap>
+<Lap num="8" p="3" et="638.7551" s1="30.2653" s2="24.3544" s3="27.7523" fuel="0.161">82.3720</Lap>
+<Lap num="9" p="3" et="721.1271" s1="30.2973" s2="24.5826" s3="27.6127" fuel="0.141">82.4927</Lap>
+<Lap num="10" p="3" et="803.6198" s1="31.4777" s2="24.4315" s3="27.9079" fuel="0.125">83.8171</Lap>
+<Lap num="11" p="3" et="887.4369" s1="30.1673" s2="24.3105" s3="28.0991" fuel="0.106">82.5769</Lap>
+<Lap num="12" p="3" et="970.0138" s1="30.5903" s2="24.5577" s3="28.0901" fuel="0.086">83.2381</Lap>
+<Lap num="13" p="2" et="1053.2518" s1="30.8640" s2="24.6176" s3="28.1571" fuel="0.067">83.6386</Lap>
+<Lap num="14" p="1" et="1136.8904" s1="31.1938" s2="24.7715" s3="27.8762" fuel="0.047">83.8415</Lap>
+<Lap num="15" p="2" et="1220.7319" s1="30.5378" s2="24.4570" s3="52.2066" fuel="0.035" pit="1">107.2015</Lap>
+<Lap num="16" p="3" et="1327.9335" s1="40.6103" s2="24.6754" s3="27.8918" fuel="0.259">93.1775</Lap>
+<Lap num="17" p="3" et="1421.1110" s1="30.6961" s2="24.6004" s3="28.1771" fuel="0.239">83.4736</Lap>
+<Lap num="18" p="3" et="1504.5846" s1="30.4997" s2="24.6298" s3="27.6390" fuel="0.220">82.7685</Lap>
+<Lap num="19" p="3" et="1587.3530" s1="30.1088" s2="24.6748" s3="27.3980" fuel="0.200">82.1815</Lap>
+<Lap num="20" p="3" et="1669.5345" s1="29.9608" s2="24.4482" s3="27.5750" fuel="0.180">81.9841</Lap>
+<Lap num="21" p="3" et="1751.5187" s1="30.6045" s2="24.4973" s3="27.2485" fuel="0.161">82.3503</Lap>
+<Lap num="22" p="3" et="1833.8690" s1="30.0795" s2="24.3046" s3="27.4086" fuel="0.145">81.7926</Lap>
+<BestLapTime>81.7926</BestLapTime>
+<FinishTime>1873.6997</FinishTime>
+<Laps>22</Laps>
+<Pitstops>1</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="1">PlayerControl,TC=2,ABS=2,Steering=1,Clutch,AutoBlip</ControlAndAids>
+<ControlAndAids startLap="2" endLap="22">PlayerControl,ABS=2,Steering=1,Clutch,AutoBlip</ControlAndAids>
+</Driver>
+<Driver>
+<Name>BiteMe</Name>
+<Connected>1</Connected>
+<VehFile>REDPROJECTS_02.VEH</VehFile>
+<UpgradeCode>20020000 00000000</UpgradeCode>
+<VehName>#02 Nico Destroem</VehName>
+<CarType>S Class</CarType>
+<CarClass>S Class</CarClass>
+<CarNumber>02</CarNumber>
+<TeamName>Red-Projects.com</TeamName>
+<isPlayer>1</isPlayer>
+<GridPos>4</GridPos>
+<Position>4</Position>
+<ClassGridPos>4</ClassGridPos>
+<ClassPosition>4</ClassPosition>
+<Points>5</Points>
+<ClassPoints>5</ClassPoints>
+<LapRankIncludingDiscos>4</LapRankIncludingDiscos>
+<Lap num="1" p="2" et="41.9619" s1="40.4744" s2="24.9506" s3="29.7683" fuel="0.243">95.1934</Lap>
+<Lap num="2" p="3" et="137.1553" s1="30.6777" s2="24.7763" s3="31.4166" fuel="0.224">86.8706</Lap>
+<Lap num="3" p="4" et="224.0258" s1="31.0736" s2="24.7387" s3="29.3680" fuel="0.208">85.1803</Lap>
+<Lap num="4" p="4" et="309.2061" s1="30.9123" s2="24.5491" s3="29.0279" fuel="0.188">84.4893</Lap>
+<Lap num="5" p="4" et="393.6954" s1="30.0999" s2="24.2876" s3="28.0242" fuel="0.169">82.4117</Lap>
+<Lap num="6" p="4" et="476.1071" s1="31.1243" s2="24.0644" s3="30.7620" fuel="0.149">85.9507</Lap>
+<Lap num="7" p="4" et="562.0578" s1="30.9602" s2="24.8922" s3="45.4106" fuel="0.129">101.2630</Lap>
+<Lap num="8" p="4" et="663.3208" s1="38.2458" s2="24.7746" s3="29.0939" fuel="0.110">92.1143</Lap>
+<Lap num="9" p="4" et="755.4351" s1="31.5628" s2="24.9301" s3="28.4731" fuel="0.090">84.9660</Lap>
+<Lap num="10" p="4" et="840.4011" s1="30.8387" s2="25.3039" s3="28.7232" fuel="0.071">84.8658</Lap>
+<Lap num="11" p="4" et="925.2669" s1="31.7495" s2="30.2373" s3="28.0582" fuel="0.051">90.0450</Lap>
+<Lap num="12" p="4" et="1015.3118" s1="31.6358" s2="24.5804" s3="52.2561" fuel="0.039" pit="1">108.4723</Lap>
+<Lap num="13" p="4" et="1123.7842" s1="42.3504" s2="25.5246" s3="29.5427" fuel="0.314">97.4177</Lap>
+<Lap num="14" p="4" et="1221.2019" s1="30.4662" s2="24.5945" s3="28.5057" fuel="0.294">83.5663</Lap>
+<Lap num="15" p="4" et="1304.7683" s1="30.9933" s2="24.9939" s3="32.6863" fuel="0.275">88.6736</Lap>
+<Lap num="16" p="4" et="1393.4419" s1="31.3994" s2="24.4222" s3="28.5065" fuel="0.255">84.3282</Lap>
+<Lap num="17" p="4" et="1477.7700" s1="30.3468" s2="24.5664" s3="29.2388" fuel="0.235">84.1520</Lap>
+<Lap num="18" p="4" et="1561.9220" s1="30.3451" s2="24.6561" s3="28.0731" fuel="0.220">83.0742</Lap>
+<Lap num="19" p="4" et="1644.9962" s1="30.4133" s2="24.7718" s3="28.3692" fuel="0.200">83.5544</Lap>
+<Lap num="20" p="4" et="1728.5505" s1="31.2519" s2="24.9539" s3="29.2391" fuel="0.180">85.4449</Lap>
+<Lap num="21" p="4" et="1813.9954" s1="30.8254" s2="24.4865" s3="28.2329" fuel="0.161">83.5447</Lap>
+<BestLapTime>82.4117</BestLapTime>
+<FinishTime>1855.5781</FinishTime>
+<Laps>21</Laps>
+<Pitstops>1</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="21">PlayerControl,TC=2,ABS=1,Clutch,AutoBlip</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Lead</Name>
+<Connected>1</Connected>
+<VehFile>DUNLOPGB_66.VEH</VehFile>
+<UpgradeCode>00060000 00000000</UpgradeCode>
+<VehName>#66 Anthony Scragg</VehName>
+<CarType>S Class</CarType>
+<CarClass>S Class</CarClass>
+<CarNumber>66</CarNumber>
+<TeamName>Dunlop GB</TeamName>
+<isPlayer>1</isPlayer>
+<GridPos>5</GridPos>
+<Position>5</Position>
+<ClassGridPos>5</ClassGridPos>
+<ClassPosition>5</ClassPosition>
+<Points>4</Points>
+<ClassPoints>4</ClassPoints>
+<LapRankIncludingDiscos>5</LapRankIncludingDiscos>
+<Lap num="1" p="4" et="41.9619" s1="43.9136" s2="25.0384" s3="28.7887" fuel="0.557">97.7407</Lap>
+<Lap num="2" p="5" et="139.7026" s1="31.8994" s2="24.8177" s3="83.0567" fuel="0.537" pit="1">139.7738</Lap>
+<Lap num="3" p="5" et="279.4764" s1="41.4058" s2="25.0390" s3="28.8668" fuel="0.518">95.3116</Lap>
+<Lap num="4" p="5" et="374.7880" s1="31.9282" s2="25.5682" s3="48.9691" fuel="0.494">106.4655</Lap>
+<Lap num="5" p="5" et="481.2535" s1="31.6436" s2="25.2123" s3="41.0539" fuel="0.475">97.9098</Lap>
+<Lap num="6" p="5" et="579.1633" s1="31.8663" s2="24.6578" s3="28.5086" fuel="0.455">85.0326</Lap>
+<Lap num="7" p="5" et="664.1959" s1="33.3816" s2="26.2615" s3="30.2408" fuel="0.435">89.8839</Lap>
+<Lap num="8" p="5" et="754.0798" s1="32.1915" s2="24.8616" s3="27.9683" fuel="0.416">85.0215</Lap>
+<Lap num="9" p="5" et="839.1013" s1="31.6632" s2="25.2445" s3="32.3223" fuel="0.396">89.2300</Lap>
+<Lap num="10" p="5" et="928.3313" s1="31.1676" s2="25.1819" s3="73.2438" fuel="0.380" pit="1">129.5934</Lap>
+<Lap num="11" p="5" et="1057.9247" s1="43.6072" s2="25.6373" s3="46.0504" fuel="0.922" pit="1">115.2949</Lap>
+<Lap num="12" p="5" et="1173.2196" s1="41.8777" s2="25.7003" s3="48.9812" fuel="0.902" pit="1">116.5592</Lap>
+<Lap num="13" p="5" et="1289.7788" s1="43.2979" s2="24.9940" s3="29.0621" fuel="0.878">97.3541</Lap>
+<Lap num="14" p="5" et="1387.1328" s1="32.2919" s2="26.3007" s3="61.6913" fuel="0.859" pit="1">120.2839</Lap>
+<Lap num="15" p="5" et="1507.4167" s1="42.1759" s2="25.4807" s3="29.0030" fuel="0.835">96.6597</Lap>
+<Lap num="16" p="5" et="1604.0764" s1="31.8996" s2="24.7151" s3="34.1373" fuel="0.816">90.7520</Lap>
+<Lap num="17" p="5" et="1694.8285" s1="32.5222" s2="25.0897" s3="47.3897" fuel="0.796">105.0017</Lap>
+<Lap num="18" p="5" et="1799.8302" s1="31.5884" s2="24.9606" s3="29.4757" fuel="0.773">86.0248</Lap>
+<BestLapTime>85.0215</BestLapTime>
+<Laps>18</Laps>
+<Pitstops>5</Pitstops>
+<FinishStatus>DNF</FinishStatus>
+<DNFReason>DNF</DNFReason>
+<ControlAndAids startLap="1" endLap="18">PlayerControl,TC=2,ABS=2,Stability=2,Clutch,AutoBlip</ControlAndAids>
+</Driver>
+</Race>
+</RaceResults>
+</rFactorXML>

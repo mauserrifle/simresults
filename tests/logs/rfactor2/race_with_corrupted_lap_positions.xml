@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE rF [
+<!ENTITY rFEnt "rFactor Entity">
+]>
+<rFactorXML version="1.0">
+<RaceResults>
+<Setting>Multiplayer</Setting>
+<ServerName>RookiesNight_WSu</ServerName>
+<ClientFuelVisible>2</ClientFuelVisible>
+<PlayerFile>player</PlayerFile>
+<DateTime>1369244649</DateTime>
+<TimeString>2013/05/22 19:44:09</TimeString>
+<Mod>RNWSU_10.RFM</Mod>
+<Season></Season>
+<TrackVenue>Mid-Ohio [Virtua_LM]</TrackVenue>
+<TrackCourse>Mid-Ohio No Chicane</TrackCourse>
+<TrackEvent>No Chicane</TrackEvent>
+<TrackLength>3586.8</TrackLength>
+<GameVersion>1.217</GameVersion>
+<Dedicated>0</Dedicated>
+<ConnectionType upload="128" download="128">Cable/DSL 128 kbps upload</ConnectionType>
+<RaceLaps>0</RaceLaps>
+<RaceTime>15</RaceTime>
+<MechFailRate>2</MechFailRate>
+<DamageMult>65</DamageMult>
+<FuelMult>1</FuelMult>
+<TireMult>1</TireMult>
+<VehiclesAllowed>|GT2_C6R</VehiclesAllowed>
+<ParcFerme>3</ParcFerme>
+<FixedSetups>0</FixedSetups>
+<FreeSettings>2147483647</FreeSettings>
+<FixedUpgrades>0</FixedUpgrades>
+<Race>
+<DateTime>1369246022</DateTime>
+<TimeString>2013/05/22 20:07:02</TimeString>
+<Laps>2147483647</Laps>
+<Minutes>15</Minutes>
+<Stream>
+<Chat et="5.7">Matriskie left the race.</Chat>
+<Chat et="19.4">Tig_green: all, don&apos;t alt-tab if you didn&apos;t already notice</Chat>
+<Chat et="33.4">Tig_green: gla</Chat>
+<Chat et="56.7">[Server]: &quot;Matriskie&quot; Is Pending An Open Session</Chat>
+<Score et="82.0">tHenOrthfAce(25) lap=0 point=1 t=41.084 et=81.955</Score>
+<Score et="84.7">Tig_green(11) lap=0 point=1 t=43.785 et=84.656</Score>
+<Score et="84.9">~IsR~Jason [SR4L](26) lap=0 point=1 t=43.965 et=84.836</Score>
+<Score et="86.1">cookie(24) lap=0 point=1 t=45.092 et=85.963</Score>
+<Score et="86.1">sergec(29) lap=0 point=1 t=45.129 et=86.000</Score>
+<Score et="87.3">DougSpinster(7) lap=0 point=1 t=-1.000 et=87.145</Score>
+<Score et="91.0">mauserrifle(12) lap=0 point=1 t=50.139 et=91.010</Score>
+<Score et="92.6">Jani(31) lap=0 point=1 t=-1.000 et=92.482</Score>
+<Score et="108.7">tHenOrthfAce(25) lap=0 point=2 t=67.715 et=108.586</Score>
+<Score et="113.4">Tig_green(11) lap=0 point=2 t=72.477 et=113.348</Score>
+<Score et="113.7">~IsR~Jason [SR4L](26) lap=0 point=2 t=72.720 et=113.591</Score>
+<Score et="114.2">cookie(24) lap=0 point=2 t=73.207 et=114.078</Score>
+<Score et="121.3">mauserrifle(12) lap=0 point=2 t=80.427 et=121.298</Score>
+<Score et="121.6">Jani(31) lap=0 point=2 t=-1.000 et=121.427</Score>
+<Score et="122.6">sergec(29) lap=0 point=2 t=81.449 et=122.320</Score>
+<Score et="123.3">DougSpinster(7) lap=0 point=2 t=-1.000 et=123.071</Score>
+<Score et="130.2">tHenOrthfAce(25) lap=1 point=0 t=89.222 et=130.093</Score>
+<Score et="135.6">Tig_green(11) lap=1 point=0 t=94.666 et=135.537</Score>
+<Score et="136.0">~IsR~Jason [SR4L](26) lap=1 point=0 t=95.031 et=135.902</Score>
+<Score et="136.7">cookie(24) lap=1 point=0 t=95.690 et=136.561</Score>
+<Score et="143.6">mauserrifle(12) lap=1 point=0 t=102.745 et=143.616</Score>
+<Score et="144.1">Jani(31) lap=1 point=0 t=-1.000 et=143.998</Score>
+<Score et="144.7">sergec(29) lap=1 point=0 t=103.597 et=144.468</Score>
+<Score et="152.0">DougSpinster(7) lap=1 point=0 t=-1.000 et=151.905</Score>
+<Score et="167.4">tHenOrthfAce(25) lap=1 point=1 t=37.172 et=167.264</Score>
+<Score et="172.3">Tig_green(11) lap=1 point=1 t=36.687 et=172.224</Score>
+<Score et="172.6">~IsR~Jason [SR4L](26) lap=1 point=1 t=36.530 et=172.432</Score>
+<Score et="173.6">cookie(24) lap=1 point=1 t=36.815 et=173.376</Score>
+<Score et="180.4">mauserrifle(12) lap=1 point=1 t=36.759 et=180.374</Score>
+<Score et="180.6">Jani(31) lap=1 point=1 t=36.495 et=180.493</Score>
+<Score et="181.3">sergec(29) lap=1 point=1 t=36.647 et=181.115</Score>
+<Score et="197.7">tHenOrthfAce(25) lap=1 point=2 t=67.522 et=197.615</Score>
+<Score et="199.2">Tig_green(11) lap=1 point=2 t=63.562 et=199.099</Score>
+<Score et="199.6">~IsR~Jason [SR4L](26) lap=1 point=2 t=63.545 et=199.447</Score>
+<Score et="200.6">cookie(24) lap=1 point=2 t=63.849 et=200.409</Score>
+<Score et="207.7">mauserrifle(12) lap=1 point=2 t=64.116 et=207.731</Score>
+<Score et="208.3">Jani(31) lap=1 point=2 t=64.239 et=208.237</Score>
+<Score et="215.7">sergec(29) lap=1 point=2 t=70.952 et=215.421</Score>
+<Score et="220.0">tHenOrthfAce(25) lap=2 point=0 t=89.793 et=219.886</Score>
+<Score et="221.3">Tig_green(11) lap=2 point=0 t=85.762 et=221.298</Score>
+<Score et="221.9">~IsR~Jason [SR4L](26) lap=2 point=0 t=85.950 et=221.852</Score>
+<Score et="222.3">cookie(24) lap=2 point=0 t=85.576 et=222.136</Score>
+<Score et="229.7">Jani(31) lap=2 point=0 t=85.624 et=229.622</Score>
+<Score et="237.7">sergec(29) lap=2 point=0 t=93.088 et=237.556</Score>
+<Chat et="242.1">[Server]: &quot;Matriskie&quot; Is Pending An Open Session</Chat>
+<Score et="247.8">mauserrifle(12) lap=2 point=0 t=104.130 et=247.745</Score>
+<Score et="257.1">tHenOrthfAce(25) lap=2 point=1 t=37.019 et=256.905</Score>
+<Score et="257.4">Tig_green(11) lap=2 point=1 t=35.999 et=257.297</Score>
+<Score et="258.3">~IsR~Jason [SR4L](26) lap=2 point=1 t=36.274 et=258.126</Score>
+<Score et="258.3">cookie(24) lap=2 point=1 t=36.059 et=258.196</Score>
+<Score et="265.2">Jani(31) lap=2 point=1 t=35.501 et=265.122</Score>
+<Score et="273.9">sergec(29) lap=2 point=1 t=36.097 et=273.653</Score>
+<Score et="284.5">Tig_green(11) lap=2 point=2 t=63.113 et=284.412</Score>
+<Score et="286.1">~IsR~Jason [SR4L](26) lap=2 point=2 t=64.068 et=285.920</Score>
+<Score et="286.2">cookie(24) lap=2 point=2 t=63.936 et=286.073</Score>
+<Score et="286.7">tHenOrthfAce(25) lap=2 point=2 t=66.676 et=286.562</Score>
+<Score et="291.7">Jani(31) lap=2 point=2 t=62.015 et=291.637</Score>
+<Score et="301.1">sergec(29) lap=2 point=2 t=63.396 et=300.952</Score>
+<Score et="306.5">Tig_green(11) lap=3 point=0 t=85.162 et=306.461</Score>
+<Score et="308.6">cookie(24) lap=3 point=0 t=86.385 et=308.521</Score>
+<Score et="308.9">tHenOrthfAce(25) lap=3 point=0 t=88.975 et=308.861</Score>
+<Score et="310.7">~IsR~Jason [SR4L](26) lap=3 point=0 t=88.714 et=310.566</Score>
+<Score et="313.3">Jani(31) lap=3 point=0 t=83.593 et=313.214</Score>
+<Score et="323.5">sergec(29) lap=3 point=0 t=85.687 et=323.243</Score>
+<Score et="342.8">Tig_green(11) lap=3 point=1 t=36.186 et=342.647</Score>
+<Score et="344.2">cookie(24) lap=3 point=1 t=35.553 et=344.074</Score>
+<Score et="344.8">tHenOrthfAce(25) lap=3 point=1 t=35.794 et=344.655</Score>
+<Score et="346.7">~IsR~Jason [SR4L](26) lap=3 point=1 t=36.007 et=346.574</Score>
+<Score et="348.5">Jani(31) lap=3 point=1 t=35.196 et=348.411</Score>
+<Score et="359.9">sergec(29) lap=3 point=1 t=36.395 et=359.638</Score>
+<Score et="369.9">Tig_green(11) lap=3 point=2 t=63.349 et=369.810</Score>
+<Score et="370.8">cookie(24) lap=3 point=2 t=62.083 et=370.604</Score>
+<Score et="371.1">tHenOrthfAce(25) lap=3 point=2 t=62.050 et=370.911</Score>
+<Score et="375.4">Jani(31) lap=3 point=2 t=62.111 et=375.326</Score>
+<Score et="383.6">~IsR~Jason [SR4L](26) lap=3 point=2 t=72.958 et=383.525</Score>
+<Score et="387.3">sergec(29) lap=3 point=2 t=63.745 et=386.988</Score>
+<Score et="391.6">Tig_green(11) lap=4 point=0 t=85.047 et=391.508</Score>
+<Score et="392.4">cookie(24) lap=4 point=0 t=83.764 et=392.285</Score>
+<Score et="392.7">tHenOrthfAce(25) lap=4 point=0 t=83.754 et=392.615</Score>
+<Score et="397.0">Jani(31) lap=4 point=0 t=83.743 et=396.958</Score>
+<Score et="406.4">~IsR~Jason [SR4L](26) lap=4 point=0 t=95.733 et=406.299</Score>
+<Score et="409.1">sergec(29) lap=4 point=0 t=85.649 et=408.893</Score>
+<Score et="427.8">Tig_green(11) lap=4 point=1 t=36.156 et=427.664</Score>
+<Score et="431.8">tHenOrthfAce(25) lap=4 point=1 t=39.048 et=431.663</Score>
+<Score et="432.7">Jani(31) lap=4 point=1 t=35.669 et=432.627</Score>
+<Score et="437.3">cookie(24) lap=4 point=1 t=44.863 et=437.148</Score>
+<Score et="437.9">mauserrifle(12) lap=2 point=1 t=190.099 et=437.844</Score>
+<Score et="445.9">sergec(29) lap=4 point=1 t=36.711 et=445.604</Score>
+<Score et="451.7">~IsR~Jason [SR4L](26) lap=4 point=1 t=45.288 et=451.587</Score>
+<Score et="454.5">Tig_green(11) lap=4 point=2 t=62.903 et=454.411</Score>
+<Score et="458.3">tHenOrthfAce(25) lap=4 point=2 t=65.529 et=458.145</Score>
+<Score et="459.2">Jani(31) lap=4 point=2 t=62.104 et=459.062</Score>
+<Score et="465.3">cookie(24) lap=4 point=2 t=72.815 et=465.100</Score>
+<Score et="466.4">mauserrifle(12) lap=2 point=2 t=218.653 et=466.398</Score>
+<Score et="473.9">sergec(29) lap=4 point=2 t=64.787 et=473.680</Score>
+<Score et="476.1">Tig_green(11) lap=5 point=0 t=84.587 et=476.094</Score>
+<Score et="478.5">~IsR~Jason [SR4L](26) lap=4 point=2 t=72.054 et=478.353</Score>
+<Score et="480.8">Jani(31) lap=5 point=0 t=83.723 et=480.681</Score>
+<Score et="482.8">tHenOrthfAce(25) lap=5 point=0 t=90.086 et=482.702</Score>
+<Score et="487.9">cookie(24) lap=5 point=0 t=95.519 et=487.804</Score>
+<Score et="489.0">mauserrifle(12) lap=3 point=0 t=241.221 et=488.966</Score>
+<Score et="498.9">sergec(29) lap=5 point=0 t=89.907 et=498.800</Score>
+<Score et="499.9">~IsR~Jason [SR4L](26) lap=5 point=0 t=93.561 et=499.860</Score>
+<Score et="512.2">Tig_green(11) lap=5 point=1 t=36.015 et=512.109</Score>
+<Score et="516.5">Jani(31) lap=5 point=1 t=35.678 et=516.359</Score>
+<Score et="518.4">tHenOrthfAce(25) lap=5 point=1 t=35.596 et=518.297</Score>
+<Score et="524.3">cookie(24) lap=5 point=1 t=36.289 et=524.093</Score>
+<Score et="526.3">mauserrifle(12) lap=3 point=1 t=37.314 et=526.281</Score>
+<Score et="538.9">Tig_green(11) lap=5 point=2 t=62.736 et=538.830</Score>
+<Score et="542.8">Jani(31) lap=5 point=2 t=62.019 et=542.700</Score>
+<Score et="544.5">tHenOrthfAce(25) lap=5 point=2 t=61.662 et=544.363</Score>
+<Score et="551.1">cookie(24) lap=5 point=2 t=63.087 et=550.891</Score>
+<Chat et="553.6">sergec left the race.</Chat>
+<Chat et="553.8">sergec has left the race but vehicle has been stored in the garage</Chat>
+<Score et="553.8">mauserrifle(12) lap=3 point=2 t=64.785 et=553.751</Score>
+<Score et="555.8">~IsR~Jason [SR4L](26) lap=5 point=1 t=55.796 et=555.655</Score>
+<Score et="561.3">Tig_green(11) lap=6 point=0 t=85.173 et=561.267</Score>
+<Score et="564.0">Jani(31) lap=6 point=0 t=83.253 et=563.933</Score>
+<Score et="566.4">tHenOrthfAce(25) lap=6 point=0 t=83.579 et=566.281</Score>
+<Score et="574.2">cookie(24) lap=6 point=0 t=86.280 et=574.084</Score>
+<Score et="576.0">mauserrifle(12) lap=4 point=0 t=87.053 et=576.019</Score>
+<Score et="592.0">~IsR~Jason [SR4L](26) lap=5 point=2 t=91.979 et=591.839</Score>
+<Score et="597.4">Tig_green(11) lap=6 point=1 t=36.037 et=597.304</Score>
+<Score et="599.3">Jani(31) lap=6 point=1 t=35.311 et=599.244</Score>
+<Score et="602.3">tHenOrthfAce(25) lap=6 point=1 t=35.956 et=602.237</Score>
+<Score et="612.0">cookie(24) lap=6 point=1 t=37.747 et=611.831</Score>
+<Score et="612.7">mauserrifle(12) lap=4 point=1 t=36.718 et=612.738</Score>
+<Score et="614.0">~IsR~Jason [SR4L](26) lap=6 point=0 t=113.985 et=613.845</Score>
+<Score et="623.6">Tig_green(11) lap=6 point=2 t=62.256 et=623.523</Score>
+<Score et="625.8">Jani(31) lap=6 point=2 t=61.835 et=625.768</Score>
+<Score et="628.6">tHenOrthfAce(25) lap=6 point=2 t=62.213 et=628.494</Score>
+<Score et="639.3">cookie(24) lap=6 point=2 t=65.111 et=639.195</Score>
+<Score et="640.3">mauserrifle(12) lap=4 point=2 t=64.228 et=640.247</Score>
+<Score et="645.1">Tig_green(11) lap=7 point=0 t=83.764 et=645.031</Score>
+<Score et="647.0">Jani(31) lap=7 point=0 t=83.024 et=646.957</Score>
+<Score et="649.9">tHenOrthfAce(25) lap=7 point=0 t=83.588 et=649.870</Score>
+<Score et="652.1">~IsR~Jason [SR4L](26) lap=6 point=1 t=38.193 et=652.038</Score>
+<Score et="661.2">cookie(24) lap=7 point=0 t=86.999 et=661.083</Score>
+<Score et="662.3">mauserrifle(12) lap=5 point=0 t=86.247 et=662.266</Score>
+<Score et="679.6">~IsR~Jason [SR4L](26) lap=6 point=2 t=65.674 et=679.518</Score>
+<Score et="681.3">Tig_green(11) lap=7 point=1 t=36.115 et=681.146</Score>
+<Score et="682.8">Jani(31) lap=7 point=1 t=35.711 et=682.668</Score>
+<Score et="685.3">tHenOrthfAce(25) lap=7 point=1 t=35.364 et=685.234</Score>
+<Score et="696.8">cookie(24) lap=7 point=1 t=35.522 et=696.605</Score>
+<Score et="698.5">mauserrifle(12) lap=5 point=1 t=36.211 et=698.477</Score>
+<Score et="702.2">~IsR~Jason [SR4L](26) lap=7 point=0 t=88.305 et=702.149</Score>
+<Score et="707.3">Tig_green(11) lap=7 point=2 t=62.146 et=707.177</Score>
+<Score et="709.3">Jani(31) lap=7 point=2 t=62.200 et=709.157</Score>
+<Score et="711.8">tHenOrthfAce(25) lap=7 point=2 t=61.789 et=711.659</Score>
+<Score et="724.6">cookie(24) lap=7 point=2 t=63.382 et=724.464</Score>
+<Score et="725.3">mauserrifle(12) lap=5 point=2 t=63.046 et=725.312</Score>
+<Score et="729.3">Tig_green(11) lap=8 point=0 t=84.218 et=729.249</Score>
+<Score et="731.6">Jani(31) lap=8 point=0 t=84.596 et=731.553</Score>
+<Score et="733.1">tHenOrthfAce(25) lap=8 point=0 t=83.114 et=732.984</Score>
+<Score et="739.6">~IsR~Jason [SR4L](26) lap=7 point=1 t=37.374 et=739.523</Score>
+<Score et="746.7">cookie(24) lap=8 point=0 t=85.537 et=746.620</Score>
+<Score et="747.5">mauserrifle(12) lap=6 point=0 t=85.223 et=747.489</Score>
+<Score et="765.7">Tig_green(11) lap=8 point=1 t=36.321 et=765.570</Score>
+<Score et="766.8">~IsR~Jason [SR4L](26) lap=7 point=2 t=64.581 et=766.730</Score>
+<Score et="767.6">Jani(31) lap=8 point=1 t=35.991 et=767.543</Score>
+<Score et="775.2">tHenOrthfAce(25) lap=8 point=1 t=42.123 et=775.106</Score>
+<Score et="782.6">cookie(24) lap=8 point=1 t=35.812 et=782.432</Score>
+<Score et="783.7">mauserrifle(12) lap=6 point=1 t=36.214 et=783.704</Score>
+<Score et="790.9">~IsR~Jason [SR4L](26) lap=8 point=0 t=88.647 et=790.797</Score>
+<Score et="792.9">Tig_green(11) lap=8 point=2 t=63.596 et=792.844</Score>
+<Score et="794.5">Jani(31) lap=8 point=2 t=62.841 et=794.394</Score>
+<Score et="801.6">tHenOrthfAce(25) lap=8 point=2 t=68.499 et=801.482</Score>
+<Score et="812.8">mauserrifle(12) lap=6 point=2 t=65.324 et=812.813</Score>
+<Score et="816.0">cookie(24) lap=8 point=2 t=69.177 et=815.797</Score>
+<Score et="816.6">Tig_green(11) lap=9 point=0 t=87.258 et=816.507</Score>
+<Score et="816.7">Jani(31) lap=9 point=0 t=85.095 et=816.648</Score>
+<Score et="823.6">tHenOrthfAce(25) lap=9 point=0 t=90.508 et=823.491</Score>
+<Score et="830.2">~IsR~Jason [SR4L](26) lap=8 point=1 t=39.283 et=830.079</Score>
+<Score et="853.1">Tig_green(11) lap=9 point=1 t=36.424 et=852.931</Score>
+<Score et="853.3">Jani(31) lap=9 point=1 t=36.502 et=853.150</Score>
+<Chat et="854.1">Matriskie: pitty Dougspinster, nice race otherwise</Chat>
+<Score et="855.3">mauserrifle(12) lap=7 point=0 t=107.792 et=855.281</Score>
+<Score et="857.3">~IsR~Jason [SR4L](26) lap=8 point=2 t=66.430 et=857.226</Score>
+<Score et="858.9">tHenOrthfAce(25) lap=9 point=1 t=35.308 et=858.800</Score>
+<Chat et="874.7">cookie left the race.</Chat>
+<Chat et="874.7">cookie has left the race but vehicle has been stored in the garage</Chat>
+<Score et="879.9">Tig_green(11) lap=9 point=2 t=63.345 et=879.852</Score>
+<Score et="880.6">Jani(31) lap=9 point=2 t=63.847 et=880.495</Score>
+<Score et="880.7">~IsR~Jason [SR4L](26) lap=9 point=0 t=89.814 et=880.611</Score>
+<Score et="885.8">tHenOrthfAce(25) lap=9 point=2 t=62.157 et=885.648</Score>
+<Score et="893.1">mauserrifle(12) lap=7 point=1 t=37.825 et=893.106</Score>
+<Chat et="899.6">Matriskie: I mean cookie</Chat>
+<Score et="901.9">Tig_green(11) lap=10 point=0 t=85.358 et=901.865</Score>
+<Score et="902.1">Jani(31) lap=10 point=0 t=85.399 et=902.047</Score>
+<Score et="907.2">tHenOrthfAce(25) lap=10 point=0 t=83.616 et=907.107</Score>
+<Score et="917.2">~IsR~Jason [SR4L](26) lap=9 point=1 t=36.483 et=917.093</Score>
+<Score et="923.4">mauserrifle(12) lap=7 point=2 t=68.141 et=923.422</Score>
+<Score et="937.9">Jani(31) lap=10 point=1 t=35.753 et=937.799</Score>
+<Score et="938.6">Tig_green(11) lap=10 point=1 t=36.573 et=938.438</Score>
+<Score et="942.5">tHenOrthfAce(25) lap=10 point=1 t=35.287 et=942.394</Score>
+<Score et="944.5">~IsR~Jason [SR4L](26) lap=9 point=2 t=63.737 et=944.347</Score>
+<Score et="946.3">mauserrifle(12) lap=8 point=0 t=90.991 et=946.272</Score>
+<Score et="964.3">Jani(31) lap=10 point=2 t=62.205 et=964.252</Score>
+<Score et="964.8">Tig_green(11) lap=10 point=2 t=62.881 et=964.747</Score>
+<Score et="966.9">~IsR~Jason [SR4L](26) lap=10 point=0 t=86.173 et=966.783</Score>
+<Score et="968.6">tHenOrthfAce(25) lap=10 point=2 t=61.296 et=968.403</Score>
+<Score et="983.4">mauserrifle(12) lap=8 point=1 t=37.148 et=983.421</Score>
+<Score et="985.7">Checkered for Jani, laps=11/2147483647, endET=985.666443/940.870972, crossedAfterTime=0</Score>
+<Score et="985.7">Jani(31) lap=11 point=0 t=83.620 et=985.666</Score>
+<Score et="986.9">Tig_green(11) lap=11 point=0 t=84.940 et=986.806</Score>
+<Score et="990.1">tHenOrthfAce(25) lap=11 point=0 t=82.890 et=989.997</Score>
+<Chat et="1004.6">Tig_green: gr</Chat>
+<Chat et="1009.4">Jani: gr</Chat>
+<Chat et="1011.7">Tig_green: great fight Jani</Chat>
+<Score et="1019.2">mauserrifle(12) lap=8 point=2 t=72.907 et=1019.179</Score>
+<Chat et="1021.1">Jani: yep</Chat>
+<Score et="1044.1">mauserrifle(12) lap=9 point=0 t=97.801 et=1044.073</Score>
+<Chat et="1081.3">Tig_green: sorry guys, I forgot to put invurneability on when I did fresh install :s</Chat>
+<Chat et="1093.4">DougSpinster: I had to get out..I was trying quickly to save Tig&apos;s set up and didn&apos;t have enough time to reload mine./.. Sorry fir who wasd</Chat>
+<Chat et="1114.8">DougSpinster: behind me</Chat>
+<Chat et="1125.9">DougSpinster: His car slows down quicker lol</Chat>
+<Chat et="1127.9">tHenOrthfAce: sorry cookie for spinning you around in t2....</Chat>
+<Chat et="1153.4">tHenOrthfAce: i overshoot the brakingpoint</Chat>
+</Stream>
+<MostLapsCompleted>11</MostLapsCompleted>
+<Driver>
+<Name>tHenOrthfAce</Name>
+<Connected>1</Connected>
+<VehFile>C6R_06.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>Corvette C6.R GT2 #06</VehName>
+<CarType>Corvette ALMS GT2 2009</CarType>
+<CarClass>Corvette ALMS GT2 2009</CarClass>
+<CarNumber>06</CarNumber>
+<TeamName>Corvette Racing</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>1</GridPos>
+<Position>3</Position>
+<ClassGridPos>1</ClassGridPos>
+<ClassPosition>3</ClassPosition>
+<Points>3</Points>
+<ClassPoints>3</ClassPoints>
+<LapRankIncludingDiscos>1</LapRankIncludingDiscos>
+<Lap num="1" p="1" et="40.8710" s1="41.0840" s2="26.6311" s3="21.5065" fuel="-1.000">89.2216</Lap>
+<Lap num="2" p="1" et="130.0927" s1="37.1716" s2="30.3506" s3="22.2711" fuel="-1.000">89.7934</Lap>
+<Lap num="3" p="3" et="219.8860" s1="37.0185" s2="29.6573" s3="22.2990" fuel="-1.000">88.9748</Lap>
+<Lap num="4" p="3" et="308.8609" s1="35.7942" s2="26.2557" s3="21.7044" fuel="-1.000">83.7542</Lap>
+<Lap num="5" p="3" et="392.6151" s1="39.0484" s2="26.4811" s3="24.5570" fuel="-1.000">90.0865</Lap>
+<Lap num="6" p="3" et="482.7016" s1="35.5955" s2="26.0660" s3="21.9179" fuel="-1.000">83.5795</Lap>
+<Lap num="7" p="3" et="566.2811" s1="35.9555" s2="26.2575" s3="21.3754" fuel="-1.000">83.5884</Lap>
+<Lap num="8" p="3" et="649.8695" s1="35.3643" s2="26.4249" s3="21.3248" fuel="-1.000">83.1141</Lap>
+<Lap num="9" p="3" et="732.9836" s1="42.1227" s2="26.3762" s3="22.0088" fuel="-1.000">90.5077</Lap>
+<Lap num="10" p="3" et="823.4913" s1="35.3085" s2="26.8481" s3="21.4596" fuel="-1.000">83.6161</Lap>
+<Lap num="11" p="3" et="907.1074" s1="35.2869" s2="26.0088" s3="21.5939" fuel="-1.000">82.8896</Lap>
+<BestLapTime>82.8896</BestLapTime>
+<FinishTime>949.1260</FinishTime>
+<Laps>11</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="11">PlayerControl</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Jani</Name>
+<Connected>1</Connected>
+<VehFile>C6R_03.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>Corvette C6.R GT2 #03</VehName>
+<CarType>Corvette ALMS GT2 2009</CarType>
+<CarClass>Corvette ALMS GT2 2009</CarClass>
+<CarNumber>03</CarNumber>
+<TeamName>Corvette Racing</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>3</GridPos>
+<Position>1</Position>
+<ClassGridPos>2</ClassGridPos>
+<ClassPosition>1</ClassPosition>
+<Points>8</Points>
+<ClassPoints>8</ClassPoints>
+<LapRankIncludingDiscos>2</LapRankIncludingDiscos>
+<Lap num="1" p="6" et="40.8710" fuel="-1.000">--.----</Lap>
+<Lap num="2" p="5" et="143.9980" s1="36.4953" s2="27.7436" s3="21.3849" fuel="-1.000">85.6238</Lap>
+<Lap num="3" p="5" et="229.6218" s1="35.5007" s2="26.5147" s3="21.5773" fuel="-1.000">83.5927</Lap>
+<Lap num="4" p="4" et="313.2145" s1="35.1962" s2="26.9151" s3="21.6320" fuel="-1.000">83.7433</Lap>
+<Lap num="5" p="2" et="396.9578" s1="35.6694" s2="26.4346" s3="21.6190" fuel="-1.000">83.7230</Lap>
+<Lap num="6" p="2" et="480.6808" s1="35.6779" s2="26.3414" s3="21.2332" fuel="-1.000">83.2525</Lap>
+<Lap num="7" p="2" et="563.9333" s1="35.3112" s2="26.5239" s3="21.1887" fuel="-1.000">83.0238</Lap>
+<Lap num="8" p="2" et="646.9571" s1="35.7110" s2="26.4886" s3="22.3959" fuel="-1.000">84.5956</Lap>
+<Lap num="9" p="2" et="731.5527" s1="35.9906" s2="26.8503" s3="22.2543" fuel="-1.000">85.0953</Lap>
+<Lap num="10" p="2" et="816.6479" s1="36.5017" s2="27.3454" s3="21.5515" fuel="-1.000">85.3986</Lap>
+<Lap num="11" p="1" et="902.0466" s1="35.7529" s2="26.4524" s3="21.4146" fuel="-1.000">83.6199</Lap>
+<BestLapTime>83.0238</BestLapTime>
+<FinishTime>944.7955</FinishTime>
+<Laps>11</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="11">PlayerControl,ABS=1,Clutch,AutoBlip</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Tig_green</Name>
+<Connected>1</Connected>
+<VehFile>C6R_06.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>Corvette C6.R GT2 #06</VehName>
+<CarType>Corvette ALMS GT2 2009</CarType>
+<CarClass>Corvette ALMS GT2 2009</CarClass>
+<CarNumber>06</CarNumber>
+<TeamName>Corvette Racing</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>4</GridPos>
+<Position>2</Position>
+<ClassGridPos>3</ClassGridPos>
+<ClassPosition>2</ClassPosition>
+<Points>5</Points>
+<ClassPoints>5</ClassPoints>
+<LapRankIncludingDiscos>3</LapRankIncludingDiscos>
+<Lap num="1" p="2" et="40.8710" s1="43.7850" s2="28.6918" s3="22.1887" fuel="-1.000">94.6655</Lap>
+<Lap num="2" p="2" et="135.5365" s1="36.6873" s2="26.8751" s3="22.1996" fuel="-1.000">85.7619</Lap>
+<Lap num="3" p="1" et="221.2984" s1="35.9988" s2="27.1147" s3="22.0490" fuel="-1.000">85.1624</Lap>
+<Lap num="4" p="1" et="306.4609" s1="36.1865" s2="27.1624" s3="21.6980" fuel="-1.000">85.0469</Lap>
+<Lap num="5" p="1" et="391.5078" s1="36.1559" s2="26.7473" s3="21.6833" fuel="-1.000">84.5866</Lap>
+<Lap num="6" p="1" et="476.0944" s1="36.0150" s2="26.7208" s3="22.4372" fuel="-1.000">85.1729</Lap>
+<Lap num="7" p="1" et="561.2673" s1="36.0371" s2="26.2190" s3="21.5077" fuel="-1.000">83.7638</Lap>
+<Lap num="8" p="1" et="645.0311" s1="36.1152" s2="26.0306" s3="22.0718" fuel="-1.000">84.2177</Lap>
+<Lap num="9" p="1" et="729.2488" s1="36.3207" s2="27.2748" s3="23.6627" fuel="-1.000">87.2582</Lap>
+<Lap num="10" p="1" et="816.5070" s1="36.4242" s2="26.9210" s3="22.0132" fuel="-1.000">85.3585</Lap>
+<Lap num="11" p="2" et="901.8654" s1="36.5728" s2="26.3085" s3="22.0589" fuel="-1.000">84.9402</Lap>
+<BestLapTime>83.7638</BestLapTime>
+<FinishTime>945.9347</FinishTime>
+<Laps>11</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="11">PlayerControl,Clutch,AutoBlip</ControlAndAids>
+</Driver>
+<Driver>
+<Name>cookie</Name>
+<Connected>1</Connected>
+<VehFile>C6R_06.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>Corvette C6.R GT2 #06</VehName>
+<CarType>Corvette ALMS GT2 2009</CarType>
+<CarClass>Corvette ALMS GT2 2009</CarClass>
+<CarNumber>06</CarNumber>
+<TeamName>Corvette Racing</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>8</GridPos>
+<Position>6</Position>
+<ClassGridPos>6</ClassGridPos>
+<ClassPosition>6</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>4</LapRankIncludingDiscos>
+<Lap num="1" p="105" et="--.---" fuel="-1.000">--.----</Lap>
+<Lap num="2" p="105" et="--.---" fuel="-1.000">--.----</Lap>
+<Lap num="3" p="105" et="--.---" fuel="-1.000">--.----</Lap>
+<Lap num="4" p="105" et="--.---" fuel="-1.000">--.----</Lap>
+<Lap num="5" p="105" et="--.---" fuel="-1.000">--.----</Lap>
+<Lap num="6" p="105" et="--.---" fuel="-1.000">--.----</Lap>
+<Lap num="7" p="105" et="--.---" fuel="-1.000">--.----</Lap>
+<Lap num="8" p="105" et="--.---" fuel="-1.000">--.----</Lap>
+<BestLapTime>83.7640</BestLapTime>
+<Laps>8</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>None</FinishStatus>
+<ControlAndAids startLap="1" endLap="8">UnknownControl</ControlAndAids>
+<Swap startLap="1" endLap="8"></Swap></Driver>
+<Driver>
+<Name>mauserrifle</Name>
+<Connected>1</Connected>
+<VehFile>C6R_03.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>Corvette C6.R GT2 #03</VehName>
+<CarType>Corvette ALMS GT2 2009</CarType>
+<CarClass>Corvette ALMS GT2 2009</CarClass>
+<CarNumber>03</CarNumber>
+<TeamName>Corvette Racing</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>5</GridPos>
+<Position>5</Position>
+<ClassGridPos>4</ClassGridPos>
+<ClassPosition>5</ClassPosition>
+<Points>1</Points>
+<ClassPoints>1</ClassPoints>
+<LapRankIncludingDiscos>5</LapRankIncludingDiscos>
+<Lap num="1" p="5" et="40.8710" s1="50.1391" s2="30.2881" s3="22.3173" fuel="-1.000">102.7445</Lap>
+<Lap num="2" p="7" et="143.6155" s1="36.7587" s2="27.3573" s3="40.0136" fuel="-1.000" pit="1">104.1296</Lap>
+<Lap num="3" p="7" et="247.7451" s1="190.0986" s2="28.5547" s3="22.5679" fuel="-1.000">241.2212</Lap>
+<Lap num="4" p="7" et="488.9664" s1="37.3142" s2="27.4703" s3="22.2683" fuel="-1.000">87.0529</Lap>
+<Lap num="5" p="7" et="576.0192" s1="36.7184" s2="27.5097" s3="22.0187" fuel="-1.000">86.2469</Lap>
+<Lap num="6" p="6" et="662.2661" s1="36.2113" s2="26.8348" s3="22.1771" fuel="-1.000">85.2231</Lap>
+<Lap num="7" p="6" et="747.4893" s1="36.2143" s2="29.1095" s3="42.4678" fuel="-1.000">107.7916</Lap>
+<Lap num="8" p="6" et="855.2808" s1="37.8250" s2="30.3163" s3="22.8500" fuel="-1.000">90.9913</Lap>
+<Lap num="9" p="5" et="946.2721" s1="37.1484" s2="35.7587" s3="24.8934" fuel="-1.000">97.8005</Lap>
+<BestLapTime>85.2231</BestLapTime>
+<FinishTime>1003.2017</FinishTime>
+<Laps>9</Laps>
+<Pitstops>1</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="9">PlayerControl</ControlAndAids>
+</Driver>
+<Driver>
+<Name>sergec</Name>
+<Connected>1</Connected>
+<VehFile>C6R_03.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>Corvette C6.R GT2 #03</VehName>
+<CarType>Corvette ALMS GT2 2009</CarType>
+<CarClass>Corvette ALMS GT2 2009</CarClass>
+<CarNumber>03</CarNumber>
+<TeamName>Corvette Racing</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>8</GridPos>
+<Position>7</Position>
+<ClassGridPos>6</ClassGridPos>
+<ClassPosition>7</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>6</LapRankIncludingDiscos>
+<Lap num="1" p="105" et="--.---" fuel="-1.000">--.----</Lap>
+<Lap num="2" p="105" et="--.---" fuel="-1.000">--.----</Lap>
+<Lap num="3" p="105" et="--.---" fuel="-1.000">--.----</Lap>
+<Lap num="4" p="105" et="--.---" fuel="-1.000">--.----</Lap>
+<Lap num="5" p="105" et="--.---" fuel="-1.000">--.----</Lap>
+<BestLapTime>85.6490</BestLapTime>
+<Laps>5</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>None</FinishStatus>
+<ControlAndAids startLap="1" endLap="5">UnknownControl</ControlAndAids>
+<Swap startLap="1" endLap="5"></Swap></Driver>
+<Driver>
+<Name>~IsR~Jason [SR4L]</Name>
+<Connected>1</Connected>
+<VehFile>C6R_06.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>Corvette C6.R GT2 #06</VehName>
+<CarType>Corvette ALMS GT2 2009</CarType>
+<CarClass>Corvette ALMS GT2 2009</CarClass>
+<CarNumber>06</CarNumber>
+<TeamName>Corvette Racing</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>6</GridPos>
+<Position>4</Position>
+<ClassGridPos>5</ClassGridPos>
+<ClassPosition>4</ClassPosition>
+<Points>2</Points>
+<ClassPoints>2</ClassPoints>
+<LapRankIncludingDiscos>7</LapRankIncludingDiscos>
+<Lap num="1" p="3" et="40.8710" s1="43.9650" s2="28.7552" s3="22.3107" fuel="-1.000">95.0308</Lap>
+<Lap num="2" p="3" et="135.9018" s1="36.5302" s2="27.0152" s3="22.4048" fuel="-1.000">85.9502</Lap>
+<Lap num="3" p="4" et="221.8520" s1="36.2739" s2="27.7941" s3="24.6465" fuel="-1.000">88.7144</Lap>
+<Lap num="4" p="5" et="310.5664" s1="36.0073" s2="36.9510" s3="22.7744" fuel="-1.000">95.7327</Lap>
+<Lap num="5" p="6" et="406.2991" s1="45.2875" s2="26.7668" s3="21.5063" fuel="-1.000">93.5606</Lap>
+<Lap num="6" p="5" et="499.8597" s1="55.7957" s2="36.1835" s3="22.0057" fuel="-1.000">113.9848</Lap>
+<Lap num="7" p="5" et="613.8445" s1="38.1934" s2="27.4802" s3="22.6312" fuel="-1.000">88.3048</Lap>
+<Lap num="8" p="5" et="702.1494" s1="37.3736" s2="27.2069" s3="24.0667" fuel="-1.000">88.6472</Lap>
+<Lap num="9" p="4" et="790.7965" s1="39.2828" s2="27.1467" s3="23.3846" fuel="-1.000">89.8141</Lap>
+<Lap num="10" p="4" et="880.6107" s1="36.4826" s2="27.2542" s3="22.4359" fuel="-1.000">86.1727</Lap>
+<BestLapTime>85.9502</BestLapTime>
+<Laps>10</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>DNF</FinishStatus>
+<DNFReason>Suspension</DNFReason>
+<ControlAndAids startLap="1" endLap="10">PlayerControl</ControlAndAids>
+</Driver>
+<Driver>
+<Name>DougSpinster</Name>
+<Connected>1</Connected>
+<VehFile>C6R_06.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>Corvette C6.R GT2 #06</VehName>
+<CarType>Corvette ALMS GT2 2009</CarType>
+<CarClass>Corvette ALMS GT2 2009</CarClass>
+<CarNumber>06</CarNumber>
+<TeamName>Corvette Racing</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>8</GridPos>
+<Position>8</Position>
+<ClassGridPos>6</ClassGridPos>
+<ClassPosition>8</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>8</LapRankIncludingDiscos>
+<Lap num="1" p="8" et="40.8710" fuel="-1.000">--.----</Lap>
+<Laps>1</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>DNF</FinishStatus>
+<DNFReason>DNF</DNFReason>
+<ControlAndAids startLap="1" endLap="1">PlayerControl,TC=1,Clutch,AutoBlip</ControlAndAids>
+</Driver>
+</Race>
+</RaceResults>
+</rFactorXML>

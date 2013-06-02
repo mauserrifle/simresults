@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE rF [
+<!ENTITY rFEnt "rFactor Entity">
+]>
+<rFactorXML version="1.0">
+<RaceResults>
+<Setting>Multiplayer</Setting>
+<ServerName>RookiesNight_WSu</ServerName>
+<ClientFuelVisible>2</ClientFuelVisible>
+<PlayerFile>player</PlayerFile>
+<DateTime>1368378104</DateTime>
+<TimeString>2013/05/12 20:01:44</TimeString>
+<Mod>RNMEG_10.RFM</Mod>
+<Season></Season>
+<TrackVenue>Mills Metropark</TrackVenue>
+<TrackCourse>Mills Outer Loop C</TrackCourse>
+<TrackEvent>Outer Loop C</TrackEvent>
+<TrackLength>4253.6</TrackLength>
+<GameVersion>1.197</GameVersion>
+<Dedicated>0</Dedicated>
+<ConnectionType upload="1034" download="8042">Custom</ConnectionType>
+<RaceLaps>0</RaceLaps>
+<RaceTime>20</RaceTime>
+<MechFailRate>2</MechFailRate>
+<DamageMult>50</DamageMult>
+<FuelMult>1</FuelMult>
+<TireMult>1</TireMult>
+<VehiclesAllowed>|Megane_Trophy</VehiclesAllowed>
+<ParcFerme>3</ParcFerme>
+<FixedSetups>0</FixedSetups>
+<FreeSettings>2147483647</FreeSettings>
+<FixedUpgrades>0</FixedUpgrades>
+<Qualify>
+<DateTime>1368379109</DateTime>
+<TimeString>2013/05/12 20:18:29</TimeString>
+<Laps>2147483647</Laps>
+<Minutes>20</Minutes>
+<Stream>
+<Chat et="1.1">soul: how much fuel for 20 minutes!?</Chat>
+<Chat et="17.7">Tig_green: fuel usage is on so check your fuel</Chat>
+<Chat et="28.0">Leonardo Saponti: good luck all</Chat>
+<Chat et="34.3">Leonardo Saponti: slow at first corner</Chat>
+<Chat et="88.3">topper harley: ????</Chat>
+<Score et="89.6">mauserrifle(2) lap=0 point=1 t=47.814 et=89.256</Score>
+<Score et="90.4">Leonardo Saponti(13) lap=0 point=1 t=-1.000 et=89.991</Score>
+<Score et="90.6">Maverik(15) lap=0 point=1 t=48.928 et=90.369</Score>
+<Score et="91.7">Tig_green(0) lap=0 point=1 t=50.294 et=91.735</Score>
+<Score et="97.8">soul(8) lap=0 point=1 t=51.613 et=93.054</Score>
+<Score et="97.8">Malek1th(4) lap=0 point=1 t=-1.000 et=96.416</Score>
+<Score et="134.1">mauserrifle(2) lap=0 point=2 t=92.379 et=133.820</Score>
+<Score et="135.8">Leonardo Saponti(13) lap=0 point=2 t=-1.000 et=135.487</Score>
+<Chat et="136.6">topper harley: nobody on grid?but time is running?</Chat>
+<Score et="140.1">soul(8) lap=0 point=2 t=98.519 et=139.960</Score>
+<Score et="141.0">Maverik(15) lap=0 point=2 t=99.320 et=140.761</Score>
+<Score et="149.5">Malek1th(4) lap=0 point=2 t=-1.000 et=149.248</Score>
+<Score et="153.4">Tig_green(0) lap=0 point=2 t=111.990 et=153.432</Score>
+<Score et="159.8">mauserrifle(2) lap=1 point=0 t=115.426 et=156.868</Score>
+<Score et="159.8">Leonardo Saponti(13) lap=1 point=0 t=-1.000 et=158.658</Score>
+<Score et="167.5">Maverik(15) lap=1 point=0 t=122.228 et=163.669</Score>
+<Score et="167.5">soul(8) lap=1 point=0 t=125.671 et=167.112</Score>
+<Chat et="169.8">Tig_green: restart?</Chat>
+<Score et="176.3">Malek1th(4) lap=1 point=0 t=-1.000 et=174.214</Score>
+<Score et="187.0">Tig_green(0) lap=1 point=0 t=145.537 et=186.978</Score>
+<Score et="198.0">mauserrifle(2) lap=1 point=1 t=40.833 et=197.701</Score>
+<Chat et="199.1">topper harley: if your race is ok looks like problem is on my end</Chat>
+<Score et="199.8">Leonardo Saponti(13) lap=1 point=1 t=40.827 et=199.485</Score>
+<Score et="204.1">Maverik(15) lap=1 point=1 t=40.303 et=203.972</Score>
+<Chat et="206.5">topper harley has left the race but vehicle has been stored in the garage</Chat>
+<Chat et="218.1">soul has left the race but vehicle has been stored in the garage</Chat>
+<Score et="219.2">Malek1th(4) lap=1 point=1 t=44.764 et=218.978</Score>
+<Score et="228.1">Tig_green(0) lap=1 point=1 t=41.098 et=228.076</Score>
+<Score et="242.2">mauserrifle(2) lap=1 point=2 t=85.113 et=241.981</Score>
+<Score et="249.0">Maverik(15) lap=1 point=2 t=85.206 et=248.875</Score>
+<Score et="251.0">Leonardo Saponti(13) lap=1 point=2 t=92.117 et=250.775</Score>
+<Chat et="269.0">Maverik has left the race but vehicle has been stored in the garage</Chat>
+<Score et="269.0">mauserrifle(2) lap=2 point=0 t=107.941 et=264.808</Score>
+<Score et="273.1">Tig_green(0) lap=1 point=2 t=86.087 et=273.065</Score>
+<Score et="275.8">Malek1th(4) lap=1 point=2 t=101.378 et=275.592</Score>
+<Score et="278.3">Leonardo Saponti(13) lap=2 point=0 t=115.214 et=273.872</Score>
+<Score et="296.0">Tig_green(0) lap=2 point=0 t=109.009 et=295.988</Score>
+<Score et="303.8">Malek1th(4) lap=2 point=0 t=126.329 et=300.543</Score>
+<Score et="305.5">mauserrifle(2) lap=2 point=1 t=40.487 et=305.296</Score>
+<Score et="315.6">Leonardo Saponti(13) lap=2 point=1 t=41.575 et=315.447</Score>
+<Score et="337.0">Tig_green(0) lap=2 point=1 t=41.014 et=337.001</Score>
+<Score et="345.3">Malek1th(4) lap=2 point=1 t=44.734 et=345.277</Score>
+<Score et="349.1">mauserrifle(2) lap=2 point=2 t=84.249 et=349.058</Score>
+<Score et="360.1">Leonardo Saponti(13) lap=2 point=2 t=86.165 et=360.038</Score>
+<Score et="374.3">mauserrifle(2) lap=3 point=0 t=106.807 et=371.615</Score>
+<Score et="380.5">Tig_green(0) lap=2 point=2 t=84.479 et=380.467</Score>
+<Score et="385.8">Leonardo Saponti(13) lap=3 point=0 t=109.297 et=383.170</Score>
+<Score et="392.0">Malek1th(4) lap=2 point=2 t=91.428 et=391.972</Score>
+<Score et="403.8">Tig_green(0) lap=3 point=0 t=107.789 et=403.776</Score>
+<Score et="412.5">mauserrifle(2) lap=3 point=1 t=40.823 et=412.438</Score>
+<Score et="420.5">Malek1th(4) lap=3 point=0 t=115.915 et=416.458</Score>
+<Score et="423.9">Leonardo Saponti(13) lap=3 point=1 t=40.668 et=423.837</Score>
+<Chat et="428.8">[Server]: &quot;soul&quot; Is Pending An Open Session</Chat>
+<Score et="444.3">Tig_green(0) lap=3 point=1 t=40.508 et=444.284</Score>
+<Score et="456.7">mauserrifle(2) lap=3 point=2 t=85.015 et=456.630</Score>
+<Score et="460.3">Malek1th(4) lap=3 point=1 t=43.787 et=460.245</Score>
+<Score et="469.5">Leonardo Saponti(13) lap=3 point=2 t=86.241 et=469.411</Score>
+<Score et="479.6">mauserrifle(2) lap=4 point=0 t=107.951 et=479.566</Score>
+<Score et="487.9">Tig_green(0) lap=3 point=2 t=84.153 et=487.929</Score>
+<Score et="494.5">Leonardo Saponti(13) lap=4 point=0 t=109.122 et=492.292</Score>
+<Score et="506.8">Malek1th(4) lap=3 point=2 t=90.261 et=506.719</Score>
+<Score et="510.6">Tig_green(0) lap=4 point=0 t=106.858 et=510.634</Score>
+<Score et="520.0">mauserrifle(2) lap=4 point=1 t=40.336 et=519.903</Score>
+<Score et="531.2">Malek1th(4) lap=4 point=0 t=114.716 et=531.174</Score>
+<Score et="533.5">Leonardo Saponti(13) lap=4 point=1 t=41.181 et=533.473</Score>
+<Score et="552.1">Tig_green(0) lap=4 point=1 t=41.439 et=552.073</Score>
+<Score et="563.6">mauserrifle(2) lap=4 point=2 t=83.992 et=563.558</Score>
+<Score et="574.6">Malek1th(4) lap=4 point=1 t=43.350 et=574.524</Score>
+<Score et="577.8">Leonardo Saponti(13) lap=4 point=2 t=85.406 et=577.697</Score>
+<Score et="586.4">mauserrifle(2) lap=5 point=0 t=106.772 et=586.338</Score>
+<Score et="597.0">Tig_green(0) lap=4 point=2 t=86.393 et=597.027</Score>
+<Score et="600.8">Leonardo Saponti(13) lap=5 point=0 t=108.503 et=600.795</Score>
+<Score et="619.8">Tig_green(0) lap=5 point=0 t=109.199 et=619.833</Score>
+<Score et="621.4">Malek1th(4) lap=4 point=2 t=90.183 et=621.357</Score>
+<Score et="626.8">mauserrifle(2) lap=5 point=1 t=40.400 et=626.739</Score>
+<Score et="641.3">Leonardo Saponti(13) lap=5 point=1 t=40.409 et=641.205</Score>
+<Score et="648.0">Malek1th(4) lap=5 point=0 t=114.706 et=645.880</Score>
+<Score et="660.9">Tig_green(0) lap=5 point=1 t=41.034 et=660.868</Score>
+<Score et="671.0">mauserrifle(2) lap=5 point=2 t=84.613 et=670.952</Score>
+<Score et="685.0">Leonardo Saponti(13) lap=5 point=2 t=84.047 et=684.842</Score>
+<Score et="693.8">mauserrifle(2) lap=6 point=0 t=107.397 et=693.735</Score>
+<Score et="704.6">Tig_green(0) lap=5 point=2 t=84.716 et=704.549</Score>
+<Score et="705.7">Malek1th(4) lap=5 point=1 t=59.812 et=705.691</Score>
+<Score et="707.6">Leonardo Saponti(13) lap=6 point=0 t=106.735 et=707.530</Score>
+<Score et="727.1">Tig_green(0) lap=6 point=0 t=107.289 et=727.122</Score>
+<Score et="734.0">mauserrifle(2) lap=6 point=1 t=40.159 et=733.895</Score>
+<Score et="748.5">Leonardo Saponti(13) lap=6 point=1 t=40.835 et=748.366</Score>
+<Score et="767.2">Tig_green(0) lap=6 point=1 t=40.088 et=767.210</Score>
+<Score et="778.1">mauserrifle(2) lap=6 point=2 t=84.307 et=778.042</Score>
+<Score et="795.1">Leonardo Saponti(13) lap=6 point=2 t=87.463 et=794.994</Score>
+<Score et="801.0">mauserrifle(2) lap=7 point=0 t=107.242 et=800.977</Score>
+<Score et="813.0">Tig_green(0) lap=6 point=2 t=85.871 et=812.993</Score>
+<Score et="817.9">Leonardo Saponti(13) lap=7 point=0 t=110.351 et=817.881</Score>
+<Score et="835.7">Tig_green(0) lap=7 point=0 t=108.609 et=835.731</Score>
+<Score et="841.3">mauserrifle(2) lap=7 point=1 t=40.212 et=841.189</Score>
+<Score et="858.4">Leonardo Saponti(13) lap=7 point=1 t=40.458 et=858.340</Score>
+<Score et="876.4">Tig_green(0) lap=7 point=1 t=40.681 et=876.412</Score>
+<Score et="885.5">mauserrifle(2) lap=7 point=2 t=84.398 et=885.376</Score>
+<Score et="903.4">Leonardo Saponti(13) lap=7 point=2 t=85.448 et=903.330</Score>
+<Score et="908.5">mauserrifle(2) lap=8 point=0 t=107.541 et=908.519</Score>
+<Score et="919.8">Tig_green(0) lap=7 point=2 t=84.101 et=919.832</Score>
+<Score et="926.4">Leonardo Saponti(13) lap=8 point=0 t=108.483 et=926.364</Score>
+<Score et="948.8">mauserrifle(2) lap=8 point=1 t=40.165 et=948.684</Score>
+<Score et="950.3">Tig_green(0) lap=8 point=0 t=114.575 et=950.305</Score>
+<Score et="967.1">Leonardo Saponti(13) lap=8 point=1 t=40.694 et=967.058</Score>
+<Score et="990.9">Tig_green(0) lap=8 point=1 t=40.605 et=990.910</Score>
+<Score et="999.3">mauserrifle(2) lap=8 point=2 t=90.713 et=999.231</Score>
+<Score et="1011.0">Leonardo Saponti(13) lap=8 point=2 t=84.588 et=1010.952</Score>
+<Score et="1022.8">mauserrifle(2) lap=9 point=0 t=113.587 et=1022.106</Score>
+<Score et="1034.0">Tig_green(0) lap=8 point=2 t=83.710 et=1034.015</Score>
+<Score et="1035.0">Leonardo Saponti(13) lap=9 point=0 t=107.466 et=1033.830</Score>
+<Score et="1056.8">Tig_green(0) lap=9 point=0 t=106.526 et=1056.832</Score>
+<Score et="1062.6">mauserrifle(2) lap=9 point=1 t=40.487 et=1062.593</Score>
+<Score et="1074.0">Leonardo Saponti(13) lap=9 point=1 t=40.020 et=1073.850</Score>
+<Score et="1099.1">Tig_green(0) lap=9 point=1 t=42.240 et=1099.072</Score>
+<Score et="1106.5">mauserrifle(2) lap=9 point=2 t=84.366 et=1106.472</Score>
+<Score et="1122.3">Leonardo Saponti(13) lap=9 point=2 t=88.365 et=1122.195</Score>
+<Score et="1132.5">mauserrifle(2) lap=10 point=0 t=106.952 et=1129.058</Score>
+<Score et="1143.5">Tig_green(0) lap=9 point=2 t=86.668 et=1143.500</Score>
+<Score et="1145.0">Leonardo Saponti(13) lap=10 point=0 t=111.167 et=1144.997</Score>
+<Score et="1166.0">Tig_green(0) lap=10 point=0 t=109.181 et=1166.013</Score>
+<Score et="1169.2">mauserrifle(2) lap=10 point=1 t=40.106 et=1169.165</Score>
+<Score et="1185.1">Leonardo Saponti(13) lap=10 point=1 t=39.972 et=1184.969</Score>
+<Score et="1206.5">Tig_green(0) lap=10 point=1 t=40.508 et=1206.521</Score>
+<Score et="1213.1">mauserrifle(2) lap=10 point=2 t=84.037 et=1213.095</Score>
+<Score et="1230.3">Leonardo Saponti(13) lap=10 point=2 t=85.202 et=1230.199</Score>
+<Score et="1236.7">mauserrifle(2) lap=11 point=0 t=107.632 et=1236.691</Score>
+<Score et="1250.4">Tig_green(0) lap=10 point=2 t=84.409 et=1250.422</Score>
+<Score et="1253.6">Leonardo Saponti(13) lap=11 point=0 t=108.526 et=1253.523</Score>
+<Score et="1272.9">Tig_green(0) lap=11 point=0 t=106.866 et=1272.878</Score>
+<Score et="1277.3">mauserrifle(2) lap=11 point=1 t=40.508 et=1277.198</Score>
+<Score et="1293.9">Leonardo Saponti(13) lap=11 point=1 t=40.276 et=1293.800</Score>
+<Score et="1313.4">Tig_green(0) lap=11 point=1 t=40.508 et=1313.386</Score>
+<Score et="1321.6">mauserrifle(2) lap=11 point=2 t=84.801 et=1321.492</Score>
+<Score et="1338.1">Leonardo Saponti(13) lap=11 point=2 t=84.477 et=1338.000</Score>
+<Score et="1347.5">Checkered for mauserrifle, laps=12/2147483647, endET=1344.134033/1241.441284, crossedAfterTime=0</Score>
+<Score et="1347.5">mauserrifle(2) lap=12 point=0 t=107.443 et=1344.134</Score>
+<Score et="1357.0">Tig_green(0) lap=11 point=2 t=84.096 et=1356.974</Score>
+<Score et="1360.9">Leonardo Saponti(13) lap=12 point=0 t=107.283 et=1360.806</Score>
+<Chat et="1368.0">[Server]: &quot;Kork&quot; Is Pending An Open Session</Chat>
+<Score et="1379.5">Tig_green(0) lap=12 point=0 t=106.588 et=1379.466</Score>
+<Chat et="1448.3">[Server]: &quot;soul&quot; Is Pending An Open Session</Chat>
+<Chat et="1470.3">soul left the race.</Chat>
+<Chat et="1470.3">topper harley left the race.</Chat>
+<Chat et="1470.3">Maverik left the race.</Chat>
+</Stream>
+<MostLapsCompleted>12</MostLapsCompleted>
+<Driver>
+<Name>Tig_green</Name>
+<Connected>1</Connected>
+<VehFile>M2009_06.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>Megane Trophy #6</VehName>
+<CarType>Megane Trophy</CarType>
+<CarClass>Megane Trophy</CarClass>
+<CarNumber>06</CarNumber>
+<TeamName>Griffin</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>5</GridPos>
+<Position>1</Position>
+<ClassGridPos>3</ClassGridPos>
+<ClassPosition>1</ClassPosition>
+<Points>8</Points>
+<ClassPoints>8</ClassPoints>
+<LapRankIncludingDiscos>1</LapRankIncludingDiscos>
+<Lap num="1" p="6" et="41.4413" s1="50.2941" s2="61.6963" s3="33.5464" fuel="-1.000">145.5368</Lap>
+<Lap num="2" p="3" et="186.9782" s1="41.0976" s2="44.9891" s3="22.9226" fuel="-1.000">109.0094</Lap>
+<Lap num="3" p="3" et="295.9875" s1="41.0136" s2="43.4658" s3="23.3091" fuel="-1.000">107.7885</Lap>
+<Lap num="4" p="3" et="403.7761" s1="40.5081" s2="43.6450" s3="22.7048" fuel="-1.000">106.8579</Lap>
+<Lap num="5" p="3" et="510.6340" s1="41.4388" s2="44.9539" s3="22.8066" fuel="-1.000">109.1993</Lap>
+<Lap num="6" p="3" et="619.8333" s1="41.0343" s2="43.6814" s3="22.5734" fuel="-1.000">107.2891</Lap>
+<Lap num="7" p="3" et="727.1224" s1="40.0880" s2="45.7827" s3="22.7380" fuel="-1.000">108.6086</Lap>
+<Lap num="8" p="3" et="835.7310" s1="40.6812" s2="43.4199" s3="30.4734" fuel="-1.000">114.5745</Lap>
+<Lap num="9" p="3" et="950.3055" s1="40.6048" s2="43.1049" s3="22.8167" fuel="-1.000">106.5263</Lap>
+<Lap num="10" p="3" et="1056.8318" s1="42.2402" s2="44.4277" s3="22.5129" fuel="-1.000">109.1809</Lap>
+<Lap num="11" p="3" et="1166.0127" s1="40.5079" s2="43.9012" s3="22.4565" fuel="-1.000">106.8657</Lap>
+<Lap num="12" p="3" et="1272.8784" s1="40.5077" s2="43.5879" s3="22.4919" fuel="-1.000">106.5875</Lap>
+<BestLapTime>106.5263</BestLapTime>
+<FinishTime>1338.0247</FinishTime>
+<Laps>12</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="12">PlayerControl,Clutch,Invulnerable,AutoBlip</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Leonardo Saponti</Name>
+<Connected>1</Connected>
+<VehFile>M2009_04.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>Megane Trophy #4</VehName>
+<CarType>Megane Trophy</CarType>
+<CarClass>Megane Trophy</CarClass>
+<CarNumber>04</CarNumber>
+<TeamName>Resolute</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>3</GridPos>
+<Position>4</Position>
+<ClassGridPos>2</ClassGridPos>
+<ClassPosition>4</ClassPosition>
+<Points>2</Points>
+<ClassPoints>2</ClassPoints>
+<LapRankIncludingDiscos>2</LapRankIncludingDiscos>
+<Lap num="1" p="2" et="41.4413" fuel="-1.000">--.----</Lap>
+<Lap num="2" p="2" et="158.6581" s1="40.8267" s2="51.2900" s3="23.0975" fuel="-1.000">115.2142</Lap>
+<Lap num="3" p="2" et="273.8723" s1="41.5751" s2="44.5902" s3="23.1320" fuel="-1.000">109.2974</Lap>
+<Lap num="4" p="2" et="383.1696" s1="40.6675" s2="45.5738" s3="22.8809" fuel="-1.000">109.1223</Lap>
+<Lap num="5" p="2" et="492.2919" s1="41.1810" s2="44.2245" s3="23.0978" fuel="-1.000">108.5033</Lap>
+<Lap num="6" p="2" et="600.7952" s1="40.4093" s2="43.6372" s3="22.6886" fuel="-1.000">106.7351</Lap>
+<Lap num="7" p="2" et="707.5303" s1="40.8354" s2="46.6278" s3="22.8876" fuel="-1.000">110.3508</Lap>
+<Lap num="8" p="2" et="817.8812" s1="40.4584" s2="44.9901" s3="23.0344" fuel="-1.000">108.4828</Lap>
+<Lap num="9" p="2" et="926.3640" s1="40.6945" s2="43.8932" s3="22.8788" fuel="-1.000">107.4664</Lap>
+<Lap num="10" p="2" et="1033.8304" s1="40.0197" s2="48.3453" s3="22.8020" fuel="-1.000">111.1670</Lap>
+<Lap num="11" p="2" et="1144.9974" s1="39.9718" s2="45.2302" s3="23.3237" fuel="-1.000">108.5258</Lap>
+<Lap num="12" p="2" et="1253.5232" s1="40.2764" s2="44.2004" s3="22.8064" fuel="-1.000">107.2832</Lap>
+<BestLapTime>106.7351</BestLapTime>
+<FinishTime>1319.3651</FinishTime>
+<Laps>12</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="12">PlayerControl,Invulnerable</ControlAndAids>
+</Driver>
+<Driver>
+<Name>mauserrifle</Name>
+<Connected>1</Connected>
+<VehFile>M2009_01.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>Megane Trophy #1</VehName>
+<CarType>Megane Trophy</CarType>
+<CarClass>Megane Trophy</CarClass>
+<CarNumber>01</CarNumber>
+<TeamName>Blue Sphere</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>1</GridPos>
+<Position>2</Position>
+<ClassGridPos>1</ClassGridPos>
+<ClassPosition>2</ClassPosition>
+<Points>5</Points>
+<ClassPoints>5</ClassPoints>
+<LapRankIncludingDiscos>3</LapRankIncludingDiscos>
+<Lap num="1" p="1" et="41.4413" s1="47.8144" s2="44.5642" s3="23.0478" fuel="-1.000">115.4264</Lap>
+<Lap num="2" p="1" et="156.8677" s1="40.8331" s2="44.2802" s3="22.8273" fuel="-1.000">107.9406</Lap>
+<Lap num="3" p="1" et="264.8083" s1="40.4873" s2="43.7620" s3="22.5577" fuel="-1.000">106.8070</Lap>
+<Lap num="4" p="1" et="371.6153" s1="40.8225" s2="44.1923" s3="22.9362" fuel="-1.000">107.9511</Lap>
+<Lap num="5" p="1" et="479.5663" s1="40.3362" s2="43.6557" s3="22.7800" fuel="-1.000">106.7719</Lap>
+<Lap num="6" p="1" et="586.3383" s1="40.4003" s2="44.2131" s3="22.7838" fuel="-1.000">107.3972</Lap>
+<Lap num="7" p="1" et="693.7354" s1="40.1595" s2="44.1475" s3="22.9349" fuel="-1.000">107.2419</Lap>
+<Lap num="8" p="1" et="800.9774" s1="40.2120" s2="44.1864" s3="23.1428" fuel="-1.000">107.5413</Lap>
+<Lap num="9" p="1" et="908.5186" s1="40.1653" s2="50.5474" s3="22.8746" fuel="-1.000">113.5873</Lap>
+<Lap num="10" p="1" et="1022.1059" s1="40.4868" s2="43.8789" s3="22.5868" fuel="-1.000">106.9525</Lap>
+<Lap num="11" p="1" et="1129.0583" s1="40.1064" s2="43.9305" s3="23.5953" fuel="-1.000">107.6323</Lap>
+<Lap num="12" p="1" et="1236.6907" s1="40.5077" s2="44.2937" s3="22.6420" fuel="-1.000">107.4434</Lap>
+<BestLapTime>106.7719</BestLapTime>
+<FinishTime>1302.6927</FinishTime>
+<Laps>12</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="12">PlayerControl,Invulnerable</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Malek1th</Name>
+<Connected>1</Connected>
+<VehFile>M2009_06.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>Megane Trophy #6</VehName>
+<CarType>Megane Trophy</CarType>
+<CarClass>Megane Trophy</CarClass>
+<CarNumber>06</CarNumber>
+<TeamName>Griffin</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>6</GridPos>
+<Position>3</Position>
+<ClassGridPos>4</ClassGridPos>
+<ClassPosition>3</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>4</LapRankIncludingDiscos>
+<Lap num="1" p="5" et="41.4413" fuel="-1.000">--.----</Lap>
+<Lap num="2" p="4" et="174.2141" s1="44.7643" s2="56.6135" s3="24.9514" fuel="-1.000">126.3292</Lap>
+<Lap num="3" p="4" et="300.5433" s1="44.7340" s2="46.6943" s3="24.4864" fuel="-1.000">115.9147</Lap>
+<Lap num="4" p="4" et="416.4580" s1="43.7871" s2="46.4740" s3="24.4549" fuel="-1.000">114.7160</Lap>
+<Lap num="5" p="4" et="531.1740" s1="43.3503" s2="46.8329" s3="24.5223" fuel="-1.000">114.7056</Lap>
+<BestLapTime>114.7056</BestLapTime>
+<Laps>5</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>DNF</FinishStatus>
+<DNFReason>DNF</DNFReason>
+<ControlAndAids startLap="1" endLap="5">PlayerControl,TC=1,ABS=1,AutoShift=3,Clutch,Invulnerable,AutoLift,AutoBlip</ControlAndAids>
+</Driver>
+</Qualify>
+</RaceResults>
+</rFactorXML>

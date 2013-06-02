@@ -1,0 +1,23 @@
+# Ignore vendor code
+/vendor
+
+# Ignore eclipse files
+/.settings
+/.buildpath
+/.project
+
+# Ignore lock files
+.~lock*
+
+# Ignore temp files by gedit etc
+*~
+
+# Ignore bak files
+*.bak
+
+# Ignore vim swap files
+*.swp
+*.swo
+
+# Ignore vim tag files
+*.tags
