@@ -34,7 +34,7 @@ to support more games in the future.
 * Offers extra methods to get specific data, e.g. `getBestLap()` and 
   `getBestLapBySector(<int>)`
 * Offers a Helper class to sort laps by time and format times to human readable 
-  format (`h:s.u`)
+  format (`h:i:s.u`)
 * Detects and fixes data from corrupted rfactor 2 log files (sometimes log 
   files report complete wrong positions due to lag/bugs).
 * The API is unittested
