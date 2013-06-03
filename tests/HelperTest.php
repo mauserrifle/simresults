@@ -31,6 +31,9 @@ class HelperTest extends PHPUnit_Framework_TestCase {
 
         // Validate special case that had rounding problem (01:23.128099)
         $this->assertSame('01:23.1281', Helper::formatTime(83.1281));
+
+        // Validate time with hours
+        $this->assertSame('01:31:56.5879', Helper::formatTime(5516.5879));
     }
 
     /**
