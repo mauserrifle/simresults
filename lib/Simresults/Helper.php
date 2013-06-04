@@ -11,7 +11,7 @@ namespace Simresults;
 class Helper {
 
     /**
-     * Format seconds to a h:s.u format
+     * Format seconds to a (h:)i:s.u format
      *
      * @return  string
      */
@@ -23,15 +23,27 @@ class Helper {
             round((round($seconds - floor($seconds), 4)) * 1000000, 4)
         );
 
-        // Remove micro time from seconds
-        $new_seconds = (int) $seconds;
+        // Make seconds without micro
+        $seconds = (int) $seconds;
 
-        // Create datetime instance. Do not include microseconds here, because
-        // DateTime had issues with that
-        $d = new \DateTime( date('H:i:s', $new_seconds));
+        // Get hours
+        $hours = floor($seconds / 3600);
 
-        // Format time and add micro time ourself
-        $format = $d->format("i:s").'.'.$micro;
+        // Get minutes
+        $minutes = floor(($seconds - ($hours*3600)) / 60);
+
+        // Get remaining seconds
+		$secs = floor(($seconds - ($hours*3600) - ($minutes*60)));
+
+        // Make format
+        $format = sprintf('%02d:%02d.%d', $minutes, $secs, $micro);
+
+        // Has hours
+        if ($hours)
+        {
+			// Prefix format with hours
+			$format = sprintf('%02d:', $hours).$format;
+        }
 
         // Replace any trailing zeros
         $format = preg_replace('/00$/', '', $format);

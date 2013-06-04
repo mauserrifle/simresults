@@ -571,8 +571,9 @@ class Data_Reader_Rfactor2 extends Data_Reader {
             $participant->setDriver($driver);
 
 
-            // Remember whether the driver is human from the look at aids
-            $is_human_by_aids = false;
+            // Remember whether the driver is human or not from the look at
+            // the aids
+            $is_human_by_aids = null;
 
             //-- Set laps
 
@@ -614,6 +615,12 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                     {
                         // Remember this driver is human
                         $is_human_by_aids = true;
+                    }
+                	// Is a non-human player
+                    elseif ($aid_name === 'UnknownControl')
+                    {
+                        // Remember this driver is not human
+                        $is_human_by_aids = false;
                     }
 
                     // Set key => value of aid
@@ -688,11 +695,11 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                 $all_laps_by_lap_number[$lap->getNumber()][] = $lap;
             }
 
-            // Driver is human the aids say
-            if ($is_human_by_aids)
+            // Detected human state by aids
+            if ($is_human_by_aids !== null)
             {
                 // Force human mark
-                $driver->setHuman(true);
+                $driver->setHuman($is_human_by_aids);
             }
 
 

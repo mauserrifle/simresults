@@ -28,16 +28,22 @@ to support more games in the future.
 
 ## Features
 
-* Can read out a full session consisting of the following information: Game, 
-  Server, Track, Participants/Drivers, Vehicle, Chats, Laps/Sectors, Penalties 
-  and Incidents
-* Offers extra methods to get specific data, e.g. `getBestLap()` and 
+* Can read out a full session consisting of the following information: Game,
+  Server, Settings, Track, Participants/Drivers, Vehicle, Chats, Laps/Sectors,
+  Penalties and Incidents
+* Offers extra methods to get specific data, e.g. `getBestLap()` and
   `getBestLapBySector(<int>)`
 * Offers a Helper class to sort laps by time and format times to human readable 
-  format (`h:s.u`)
-* Detects and fixes data from corrupted rfactor 2 log files (sometimes log 
-  files report complete wrong positions due to lag/bugs).
+  format (`h:i:s.u`)
 * The API is unittested
+
+### rFactor reader
+
+* Supports both rFactor and rFactor 2  
+* Detects and fixes position data (sometimes log files report complete wrong 
+  positions due to lag/bugs)
+* Detects human and AI players using their aids (sometimes log files report 
+  wrong player state)
 
 ## Example
 

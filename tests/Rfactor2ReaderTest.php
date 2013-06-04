@@ -253,6 +253,10 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
 
         // Validate human state of first driver
         $this->assertTrue($participants[0]->getDriver()->isHuman());
+
+        // Validate a non-human driver where the log files it is a human.
+        // It should be non-human based on its "UnknownControl" aid
+        $this->assertFalse($participants[1]->getDriver()->isHuman());
     }
 
     /**

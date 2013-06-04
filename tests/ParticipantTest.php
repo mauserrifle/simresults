@@ -198,7 +198,7 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
         $participant->setPosition(5);
         $participant->setGridPosition(2);
 
-        // Validate positive position difference
+        // Validate negative position difference
         $this->assertSame(-3, $participant->getPositionDifference());
 
         // Set position data
