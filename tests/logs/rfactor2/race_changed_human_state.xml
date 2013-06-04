@@ -272,7 +272,7 @@
 <CarClass>LolaT280</CarClass>
 <CarNumber>01</CarNumber>
 <TeamName>Ecurie Bonnier</TeamName>
-<isPlayer>0</isPlayer>
+<isPlayer>1</isPlayer>
 <ServerScored>1</ServerScored>
 <GridPos>1</GridPos>
 <Position>2</Position>
