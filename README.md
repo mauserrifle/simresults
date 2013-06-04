@@ -37,7 +37,9 @@ to support more games in the future.
   format (`h:i:s.u`)
 * The API is unittested
 
-  ### rFactor / rFactor 2
+### rFactor reader
+
+* Supports both rFactor and rFactor 2  
 * Detects and fixes position data (sometimes log files report complete wrong 
   positions due to lag/bugs)
 * Detects human and AI players using their aids (sometimes log files report 
