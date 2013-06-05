@@ -236,7 +236,7 @@
 <CarClass>LolaT280</CarClass>
 <CarNumber>01</CarNumber>
 <TeamName>Noritake Takahara</TeamName>
-<isPlayer>1</isPlayer>
+<isPlayer>0</isPlayer>
 <ServerScored>1</ServerScored>
 <GridPos>2</GridPos>
 <Position>4</Position>
@@ -260,7 +260,6 @@
 <Laps>10</Laps>
 <Pitstops>0</Pitstops>
 <FinishStatus>Finished Normally</FinishStatus>
-<ControlAndAids startLap="1" endLap="10">PlayerControl,Clutch,Invulnerable,AutoBlip</ControlAndAids>
 </Driver>
 <Driver>
 <Name>Jo Bonnier</Name>

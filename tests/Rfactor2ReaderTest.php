@@ -261,6 +261,9 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
         // Validate a driver with PlayerControl,UnknownControl.
         // It should be human based on PlayerControl
         $this->assertTrue($participants[2]->getDriver()->isHuman());
+
+         // Validate a driver with no aids at all. Should always be human
+        $this->assertTrue($participants[3]->getDriver()->isHuman());
     }
 
     /**

@@ -636,6 +636,13 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                 );
             }
 
+            // No aids
+            if ( ! $aids)
+            {
+            	// Always human
+            	$is_human_by_aids = true;
+            }
+
             // Loop each available lap
             /* @var $lap_xml \DOMNode */
             foreach ($driver_xml->getElementsByTagName('Lap') as $lap_xml)
