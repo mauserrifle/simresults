@@ -224,7 +224,7 @@
 <Laps>10</Laps>
 <Pitstops>1</Pitstops>
 <FinishStatus>Finished Normally</FinishStatus>
-<ControlAndAids startLap="1" endLap="10">UnknownControl</ControlAndAids>
+<ControlAndAids startLap="1" endLap="10">PlayerControl,UnknownControl</ControlAndAids>
 </Driver>
 <Driver>
 <Name>Tig_green</Name>
