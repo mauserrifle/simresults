@@ -224,7 +224,7 @@
 <Laps>10</Laps>
 <Pitstops>1</Pitstops>
 <FinishStatus>Finished Normally</FinishStatus>
-<ControlAndAids startLap="1" endLap="10">PlayerControl,UnknownControl</ControlAndAids>
+<ControlAndAids startLap="1" endLap="10">PlayerControl,UnknownControl,AIControl</ControlAndAids>
 </Driver>
 <Driver>
 <Name>Tig_green</Name>
@@ -367,7 +367,7 @@
 <Laps>10</Laps>
 <Pitstops>0</Pitstops>
 <FinishStatus>Finished Normally</FinishStatus>
-<ControlAndAids startLap="1" endLap="10">PlayerControl,Clutch,Invulnerable,AutoBlip</ControlAndAids>
+<ControlAndAids startLap="1" endLap="10">AIControl</ControlAndAids>
 </Driver>
 </Race>
 </RaceResults>

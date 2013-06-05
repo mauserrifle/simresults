@@ -617,7 +617,9 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                         $is_human_by_aids = true;
                     }
                 	// Is a non-human player and no human detection yet
-                    elseif ($aid_name === 'UnknownControl' AND
+                    elseif ( ($aid_name === 'UnknownControl' OR
+                    		  $aid_name === 'AIControl')
+                    		AND
                     	    $is_human_by_aids === null)
                     {
                         // Remember this driver is not human
