@@ -257,6 +257,16 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
         // Validate a non-human driver where the log files it is a human.
         // It should be non-human based on its "UnknownControl" aid
         $this->assertFalse($participants[1]->getDriver()->isHuman());
+
+        // Validate a driver with PlayerControl,UnknownControl,AIControl.
+        // It should be human based on PlayerControl
+        $this->assertTrue($participants[2]->getDriver()->isHuman());
+
+         // Validate a driver with no aids at all. Should always be human
+        $this->assertTrue($participants[3]->getDriver()->isHuman());
+
+        // Validate a driver with AIControl. It should be non-human.
+        $this->assertFalse($participants[4]->getDriver()->isHuman());
     }
 
     /**
@@ -350,8 +360,9 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
 
     /**
      * Test reading corrupted lap positions. Sometimes laps are marked 105 and
-     * all lap info is missing. The reader needs to remove these corrupted
-     * laps
+     * all lap info is missing. The reader needs to remove the laps if they
+     * are ALL corrupted. When only one is corrupted (or more), the laps must
+     * not be deleted and the values should be null.
      */
     public function testReadingCorruptedLapPositions()
     {
@@ -364,17 +375,35 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
         // Get participants
         $participants = $reader->getSession()->getParticipants();
 
-        // Get the position 6 driver with corrupted laps
+        // Get the position 6 driver with only corrupted laps
         $participant = $participants[5];
 
-        // Validate laps
+        // Validate laps, which should be all deleted
         $this->assertSame(array(), $participant->getLaps());
 
-        // Get the position 7 driver with corrupted laps
+        // Get the position 7 driver with only corrupted laps
         $participant = $participants[6];
 
-        // Validate laps
+        // Validate laps,which should be all deleted
         $this->assertSame(array(), $participant->getLaps());
+
+
+
+        // Get the position 2 driver laps two corrupted laps
+       	$laps = $participants[1]->getLaps();
+
+       	// Validate the number of laps, there should be no deletion
+       	$this->assertSame(11, count($laps));
+
+       	// Validate corrupted lap 2. It should have no info
+       	$this->assertNull($laps[1]->getPosition());
+       	$this->assertNull($laps[1]->getTime());
+       	$this->assertNull($laps[1]->getElapsedSeconds());
+
+       	// Validate corrupted lap 6. It should have no info
+       	$this->assertNull($laps[5]->getPosition());
+       	$this->assertNull($laps[5]->getTime());
+       	$this->assertNull($laps[5]->getElapsedSeconds());
     }
 
 

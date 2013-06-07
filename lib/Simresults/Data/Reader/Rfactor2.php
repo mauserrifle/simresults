@@ -616,8 +616,11 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                         // Remember this driver is human
                         $is_human_by_aids = true;
                     }
-                	// Is a non-human player
-                    elseif ($aid_name === 'UnknownControl')
+                	// Is a non-human player and no human detection yet
+                    elseif ( ($aid_name === 'UnknownControl' OR
+                    		  $aid_name === 'AIControl')
+                    		AND
+                    	    $is_human_by_aids === null)
                     {
                         // Remember this driver is not human
                         $is_human_by_aids = false;
@@ -633,6 +636,13 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                     'end_lap'     =>  (int) $aid_xml->getAttribute('endLap'),
                      'aids'        =>  $aid_items,
                 );
+            }
+
+            // No aids
+            if ( ! $aids)
+            {
+            	// Always human
+            	$is_human_by_aids = true;
             }
 
             // Loop each available lap
@@ -653,13 +663,23 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                 $lap_positions[] = $lap_position =
                     (int) $lap_xml->getAttribute('p');
 
+                // Elapsed seconds by default null
+                $elapsed_seconds = null;
+
+                // Valid value
+                if ($lap_xml->getAttribute('et') !== '--.---')
+                {
+                	// Create float value
+                	$elapsed_seconds = (float) $lap_xml->getAttribute('et');
+                }
+
                 // Set lap values
                 $lap
                     ->setTime($lap_time)
                     ->setPosition($lap_position)
                     ->setNumber( (int) $lap_xml->getAttribute('num'))
                     ->setParticipant($participant)
-                    ->setElapsedSeconds( (float) $lap_xml->getAttribute('et'));
+                    ->setElapsedSeconds($elapsed_seconds);
 
                 // Find lap aids
                 foreach ($aids as $aid)
@@ -726,7 +746,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
             }
 
             // First position aint 1 OR lap is 2 positions higher than previous,
-            // we have some wrong lap numbers
+            // we have some wrong lap positions
             if ( ($key === 0 AND $lap_position > 1) OR
                  ($key > 0 AND ($lap_position - $lap_positions[$key-1]) > 1))
             {
@@ -737,42 +757,73 @@ class Data_Reader_Rfactor2 extends Data_Reader {
 
 
 
-        //--- Remove fully corrupted laps
-        // We have corrupted lap positions, we need to remove all these laps
+        // We have corrupted lap positions
         if ($corrupted_lap_positions)
         {
-            // Refill all laps array
-            $all_laps_by_lap_number = array();
+            // Whether we need to refill $all_laps_by_lap_number
+            $refill_all_laps_by_lap_number = false;
 
-            // Loop each participant
+            // Loop each participant to find out if they are really all
+            // corrupted
             foreach ($participants as $participant)
             {
-                // New laps array
-                $laps = array();
+	            // By default all laps of participant are corrupted
+	            $all_corrupted = true;
 
-                // Loop each lap
+	            // By default we have no corruption at all
+	            $corruption = false;
+
+                // Loop each lap to see whether all laps are corrupted
                 foreach ($participant->getLaps() as $lap)
                 {
                     // Lap position is not corrupted
                     if ( ! in_array($lap->getPosition(),
                             $corrupted_lap_positions))
                     {
-                        // Keep this lap
-                        $laps[] = $lap;
+                    	// Not all corrupted
+                    	$all_corrupted = false;
+                    }
+                    // Corrupted
+                    else
+                    {
+                    	// No position known
+                    	$lap->setPosition(null);
 
-                        // Remember lap
-                        $all_laps_by_lap_number[$lap->getNumber()][] = $lap;
+                    	// We have corruption
+                    	$corruption = true;
                     }
                 }
 
-                // Set new laps
-                $participant->setLaps($laps);
+				// All are corrupted
+				if ($all_corrupted)
+				{
+					// Unset all participant laps
+					$participant->setLaps(array());
+
+					// We need to refill all laps by lap number array
+					$refill_all_laps_by_lap_number = true;
+				}
+            }
+
+            // Refill all laps by lap number array because laps are removed
+            if ($refill_all_laps_by_lap_number)
+            {
+	            $all_laps_by_lap_number = array();
+	            foreach ($participants as $participant)
+	            {
+	            	// Loop each lap
+	                foreach ($participant->getLaps() as $lap)
+	                {
+						// Remember lap
+	                 	$all_laps_by_lap_number[$lap->getNumber()][] = $lap;
+	                }
+	            }
             }
         }
 
 
         //--- Fix wrong positions of laps
-        // We have wrong lap numbers, we need to fix this
+        // We have wrong lap positions, we need to fix this
         if ($wrong_lap_positions)
         {
             // Loop all lap numbers and their laps
@@ -798,6 +849,20 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                         return 0;
                     }
 
+                    // a has no elapsed seconds
+                    if ( ! $a->getElapsedSeconds())
+                    {
+                    	// $b is the faster
+                   		return 1;
+                    }
+
+                    // b has no elapsed seconds
+                    if ( ! $b->getElapsedSeconds())
+                    {
+                    	// $a is faster
+                   		return -1;
+                    }
+
                     // a lap is not completed
                     if ( ! $a->isCompleted())
                     {
@@ -813,7 +878,8 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                     }
 
                     // Return normal comparison
-                    return ($a->getElapsedSeconds() < $b->getElapsedSeconds()) ? -1 : 1;
+                    return ($a->getElapsedSeconds() < $b->getElapsedSeconds())
+                    	      ? -1 : 1;
                 });
 
                 // Make 100% sure we have proper array keys
@@ -822,8 +888,11 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                 // Fix the positions
                 foreach ($laps as $lap_key => $lap)
                 {
-                    // Set new position
-                    $lap->setPosition($lap_key+1);
+                    // Set new position if it's not null (null = corruption)
+                    if ($lap->getPosition() !== null)
+                    {
+                    	$lap->setPosition($lap_key+1);
+                    }
                 }
             }
         }

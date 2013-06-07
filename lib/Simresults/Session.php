@@ -831,9 +831,12 @@ class Session {
                 continue;
             }
 
-            // Leading participant not known or this is earlier than current
-            if ( ! $leading_lap OR
-                 $lap->getElapsedSeconds() < $leading_lap->getElapsedSeconds())
+            // Leading lap not known yet or (this lap has elapsed seconds and
+            // (leading lap not or this is earlier than current))
+            if ( ! $leading_lap OR ($lap->getElapsedSeconds() !== null AND
+                 ($leading_lap->getElapsedSeconds() === null OR
+                  $lap->getElapsedSeconds()
+                      < $leading_lap->getElapsedSeconds())))
             {
                 // Return this participant
                 $leading_lap = $lap;
