@@ -194,7 +194,11 @@ class SessionTest extends PHPUnit_Framework_TestCase {
      * functionality for precise gap calculations etc, as the 'position' of a
      * lap is not always correct in this matter
      *
-     * Note: This could use better tests..
+     * TODO: Actually test using laps that have elapsed time and test whether
+     *       the method skips laps with no elapsed time (already implemented).
+     *       Make sure the test passes like it is now too (without elapsed time).
+     *       That way we test that the method fallbacks on normal behavior like
+     *       `getLeadingParticipant`
      */
     public function testLeadingParticipantByElapsedTime()
     {
