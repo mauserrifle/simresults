@@ -282,7 +282,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
             // We have position corruption
             if ($position_corruption)
             {
-                // Sort by best lap instead of position, positions
+                // Sort by best lap instead of position
                 usort($participants, function($a, $b) {
 
                     // Get best laps
@@ -290,7 +290,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                     $b_best_lap = $b->getBestLap();
 
                     // Both participants have no best lap
-                    if ( ! $a_best_lap AND $b_best_lap)
+                    if ( ! $a_best_lap AND ! $b_best_lap)
                     {
                         // Same
                         return 0;

@@ -325,6 +325,31 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
 
         $this->assertSame('Malek1th', $participants[3]->getDriver()->getName());
         $this->assertSame(4, $participants[3]->getPosition());
+
+
+        //-- Do another test with a log file that bugged on a specific typo in
+        //   sorting of participants
+
+        // Get reader
+        $reader = Data_Reader::factory(realpath(
+               __DIR__.
+            '/logs/rfactor2/qualify_with_corrupted_positions.xml'));
+
+        // Get participants
+        $participants = $reader->getSession()->getParticipants();
+
+        // Validate the first 4 drivers
+        $this->assertSame('Capeta', $participants[0]->getDriver()->getName());
+        $this->assertSame(1, $participants[0]->getPosition());
+
+        $this->assertSame('lemming77', $participants[1]->getDriver()->getName());
+        $this->assertSame(2, $participants[1]->getPosition());
+
+        $this->assertSame('Coutie', $participants[2]->getDriver()->getName());
+         $this->assertSame(3, $participants[2]->getPosition());
+
+        $this->assertSame('CoNa', $participants[3]->getDriver()->getName());
+        $this->assertSame(4, $participants[3]->getPosition());
     }
 
 
