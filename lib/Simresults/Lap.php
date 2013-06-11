@@ -21,6 +21,12 @@ class Lap {
     protected $participant;
 
     /**
+     * @var  Driver  The driver that drove this lap. A driver is part of the
+     *               participant's team
+     */
+    protected $driver;
+
+    /**
      * @var  int  The position the participant was in
      */
     protected $position;
@@ -88,6 +94,30 @@ class Lap {
     public function getParticipant()
     {
         return $this->participant;
+    }
+
+    /**
+     * Set the driver that drove this lap. This driver should be part of the
+     * participant team.
+     *
+     * @param   Driver  $driver
+     * @return  Lap
+     */
+    public function setDriver(Driver $driver)
+    {
+        $this->driver = $driver;
+        return $this;
+    }
+
+    /**
+     * Get the driver that drove this lap. This driver is part of the
+     * participant team.
+     *
+     * @return  Driver
+     */
+    public function getDriver()
+    {
+        return $this->driver;
     }
 
     /**

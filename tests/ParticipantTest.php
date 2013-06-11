@@ -1,4 +1,6 @@
 <?php
+use Simresults\Driver;
+
 use Simresults\Participant;
 
 use Simresults\Lap;
@@ -219,6 +221,26 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
 
         // Validate no position difference
         $this->assertSame(0, $participant->getPositionDifference());
+    }
+
+    /**
+     * Test getting driver by number
+     */
+    public function testDriverByNumber()
+    {
+    	// Create new participant
+    	$participant = new Participant;
+
+    	// Add drivers
+    	$participant->setDrivers(array(
+			$driver1 = new Driver,
+    		$driver2 = new Driver,
+    	));
+
+    	// Validate drivers
+    	$this->assertSame($driver1, $participant->getDriver());
+    	$this->assertSame($driver1, $participant->getDriver(1));
+    	$this->assertSame($driver2, $participant->getDriver(2));
     }
 
     /**
