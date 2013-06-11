@@ -54,9 +54,9 @@ class Participant {
     //------ Participant values
 
     /**
-     * @var  Driver  The driver
+     * @var  array  The drivers
      */
-    protected $driver;
+    protected $drivers = array();
 
     /**
      * @var  Vehicle  The vehicle
@@ -116,25 +116,35 @@ class Participant {
     protected $finish_status_comment;
 
     /**
-     * Set the driver
+     * Set the drivers
      *
-     * @param   Driver  $driver
+     * @param   array  $drivers
      * @return  Participant
      */
-    public function setDriver(Driver $driver)
+    public function setDrivers(array $drivers)
     {
-        $this->driver = $driver;
+        $this->drivers = $drivers;
         return $this;
     }
 
     /**
-     * Get the driver
+     * Get the drivers
      *
-     * @return  Driver
+     * @return  array
      */
-    public function getDriver()
+    public function getDrivers()
     {
-        return $this->driver;
+        return $this->drivers;
+    }
+
+    /**
+     * Return one driver. Defaults to the first driver
+     *
+     * @param  int  $driver_number
+     */
+    public function getDriver($driver_number = 1)
+    {
+    	return $this->drivers[$driver_number-1];
     }
 
     /**

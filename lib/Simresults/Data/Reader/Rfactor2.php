@@ -484,13 +484,13 @@ class Data_Reader_Rfactor2 extends Data_Reader {
         foreach ($this->dom->getElementsByTagName('Driver') as $driver_xml)
         {
             // Create new driver
-            $driver = new Driver;
+            $main_driver = new Driver;
 
             // Get position
             $position = (int) $this->dom_value('Position', $driver_xml);
 
             // Set driver values
-            $driver
+            $main_driver
                 ->setName($this->dom_value('Name', $driver_xml))
                 ->setHuman( (bool) $this->dom_value('isPlayer', $driver_xml));
 
@@ -564,18 +564,79 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                 $participant->setFinishStatus(Participant::FINISH_NONE);
             }
 
+
+            // Get the driver swaps
+            $swaps_xml = $driver_xml->getElementsByTagName('Swap');
+
+            // Init drivers array, a participant can have multiple
+            $drivers = array();
+
+            // Remember the drivers per laps
+            $drivers_per_laps = array();
+
+            // Remember drivers by name so we can re-use them
+            $drivers_by_name = array();
+
+            // Loop each swap
+            foreach ($swaps_xml as $swap_xml)
+            {
+                // Empty driver name
+                if ( ! $driver_name = $swap_xml->nodeValue)
+                {
+                	// Skip this swap
+                	continue;
+                }
+
+                // Driver already processed
+                if (array_key_exists($driver_name, $drivers_by_name))
+                {
+                	// Use existing found driver instance
+                	$swap_driver = $drivers_by_name[$driver_name];
+                }
+                // New driver
+                else
+                {
+	                // Create new driver
+	                $swap_driver = new Driver;
+
+	                // Set name
+	                $swap_driver->setName($driver_name);
+
+	                // Use human state the same of main driver within XML
+	                $swap_driver->setHuman($main_driver->isHuman());
+
+	                // Add swap driver to drivers array
+	                $drivers[] = $swap_driver;
+
+	                // Remember swap driver by name
+	                $drivers_by_name[$driver_name] = $swap_driver;
+                }
+
+                // Add swap driver to drivers per lap
+                $drivers_per_laps[] = array(
+					'start_lap'  =>  (int) $swap_xml->getAttribute('startLap'),
+                	'end_lap'    =>  (int) $swap_xml->getAttribute('endLap'),
+                	'driver'     =>  $swap_driver,
+                );
+            }
+
+            // No drivers yet, so no drivers through swap info
+            if ( ! $drivers)
+            {
+            	// Add main driver to drivers array because we could not get
+            	// it from the swap info
+            	$drivers[] = $main_driver;
+            }
+
             // Add vehicle to participant
             $participant->setVehicle($vehicle);
 
-            // Add driver to participant
-            $participant->setDriver($driver);
+            // Add drivers to participant
+            $participant->setDrivers($drivers);
 
-
-            // Remember whether the driver is human or not from the look at
+            // Remember whether the drivers are human or not from the look at
             // the aids
             $is_human_by_aids = null;
-
-            //-- Set laps
 
             // Get lap aids information and convert to friendly array
             $aids_xml = $driver_xml->getElementsByTagName('ControlAndAids');
@@ -634,7 +695,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                 $aids[] = array(
                     'start_lap'   =>  (int) $aid_xml->getAttribute('startLap'),
                     'end_lap'     =>  (int) $aid_xml->getAttribute('endLap'),
-                     'aids'        =>  $aid_items,
+                    'aids'        =>  $aid_items,
                 );
             }
 
@@ -644,6 +705,9 @@ class Data_Reader_Rfactor2 extends Data_Reader {
             	// Always human
             	$is_human_by_aids = true;
             }
+
+
+            //-- Set laps
 
             // Loop each available lap
             /* @var $lap_xml \DOMNode */
@@ -696,6 +760,28 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                     }
                 }
 
+                // Find lap driver
+                foreach ($drivers_per_laps as $driver_lap)
+                {
+                    // Lap match
+                    if ($driver_lap['start_lap'] <= $lap->getNumber() AND
+                        $driver_lap['end_lap'] >= $lap->getNumber())
+                    {
+                        // Set driver
+                        $lap->setDriver($driver_lap['driver']);
+
+                        // Stop searching
+                        break;
+                    }
+                }
+
+                // No driver yet
+                if ( ! $lap->getDriver())
+                {
+                	// Just put first driver on lap
+                	$lap->setDriver($drivers[0]);
+                }
+
                 // Add each sector available
                 $sector = 1;
                 while($lap_xml->hasAttribute($sector_attribute = 's'.$sector))
@@ -718,8 +804,11 @@ class Data_Reader_Rfactor2 extends Data_Reader {
             // Detected human state by aids
             if ($is_human_by_aids !== null)
             {
-                // Force human mark
-                $driver->setHuman($is_human_by_aids);
+                // Force human mark on all drivers
+                foreach ($drivers as $driver)
+                {
+                	$driver->setHuman($is_human_by_aids);
+                }
             }
 
 

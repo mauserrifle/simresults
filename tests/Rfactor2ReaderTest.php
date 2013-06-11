@@ -490,6 +490,73 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
     }
 
 
+    /**
+     * Test reading a session with driver swaps. The result contains a driver
+     * who drives twice. He should not be part of drivers list twice.
+     */
+    public function testReadingSessionWithDriverSwaps()
+    {
+        // Get the data reader for the given data source
+        $reader = Data_Reader::factory(
+            realpath(__DIR__.'/logs/rfactor2/race_changed_with_swaps.xml'));
+
+        // Get session
+        $session = $reader->getSession();
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Get first participant drivers
+        $drivers = $participants[0]->getDrivers();
+
+        // Validate drivers
+        $this->assertSame(3, count($drivers));
+        $this->assertSame('Paul Schuman', $drivers[0]->getName());
+        $this->assertTrue($drivers[0]->isHuman());
+        $this->assertSame('Malek1th', $drivers[1]->getName());
+        $this->assertTrue($drivers[2]->isHuman());
+        $this->assertSame('Nick Woodbury', $drivers[2]->getName());
+        $this->assertTrue($drivers[2]->isHuman());
+
+        // Get first participant laps
+        $laps = $participants[0]->getLaps();
+
+        // Validate laps
+        for ($lap=1; $lap <= 3; $lap++)
+        {
+        	// Paul
+        	$this->assertSame($drivers[0], $laps[$lap-1]->getDriver());
+        }
+    	for ($lap=4; $lap <= 5; $lap++)
+        {
+        	// Malek
+        	$this->assertSame($drivers[1], $laps[$lap-1]->getDriver());
+        }
+    	for ($lap=6; $lap <= 8; $lap++)
+        {
+        	// Nick
+        	$this->assertSame($drivers[2], $laps[$lap-1]->getDriver());
+        }
+        for ($lap=9; $lap <= 10; $lap++)
+        {
+        	// Malek
+        	$this->assertSame($drivers[1], $laps[$lap-1]->getDriver());
+        }
+
+
+        //--- Test second participant that has a empty swap tag
+
+        // Get second participant drivers
+        $drivers = $participants[1]->getDrivers();
+
+        // Validate
+        $this->assertSame(1, count($drivers));
+        $this->assertSame('Jo Bonnier', $drivers[0]->getName());
+
+
+    }
+
+
 
     //---------------------------------------------------------------
 
@@ -700,6 +767,9 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
         // Get the laps of first participants
         $laps = $participants[0]->getLaps();
 
+        // Get driver of first participant (only one cause there are no swaps)
+        $driver = $participants[0]->getDriver();
+
         // Get first lap only
         $lap = $laps[0];
 
@@ -723,6 +793,7 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertSame(130.7517, $lap->getTime());
         $this->assertSame(40.7067, $lap->getElapsedSeconds());
         $this->assertSame($participants[0], $lap->getParticipant());
+        $this->assertSame($driver, $lap->getDriver());
 
         // Get aids
         $aids = $lap->getAids();

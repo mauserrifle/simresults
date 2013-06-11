@@ -29,8 +29,8 @@ to support more games in the future.
 ## Features
 
 * Can read out a full session consisting of the following information: Game,
-  Server, Settings, Track, Participants/Drivers, Vehicle, Chats, Laps/Sectors,
-  Penalties and Incidents
+  Server, Settings, Track, Participants/Drivers including swaps, Vehicle, 
+  Chats, Laps/Sectors, Penalties and Incidents
 * Offers extra methods to get specific data, e.g. `getBestLap()` and
   `getBestLapBySector(<int>)`
 * Offers a Helper class to sort laps by time and format times to human readable 
