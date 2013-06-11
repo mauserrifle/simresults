@@ -35,6 +35,8 @@ to support more games in the future.
   `getBestLapBySector(<int>)`
 * Offers a Helper class to sort laps by time and format times to human readable 
   format (`h:i:s.u`)
+* Caches heavy methods like `getLapsSortedBySector(<int>)`. This is very useful 
+  with endurance results that have 200+ laps
 * The API is unittested
 
 ### rFactor reader
