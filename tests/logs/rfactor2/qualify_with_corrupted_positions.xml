@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE rF [
+<!ENTITY rFEnt "rFactor Entity">
+]>
+<rFactorXML version="1.0">
+<RaceResults>
+<Setting>Multiplayer</Setting>
+<ServerName>SimHQ Motorsports SCES</ServerName>
+<ClientFuelVisible>2</ClientFuelVisible>
+<PlayerFile>player</PlayerFile>
+<DateTime>1370793996</DateTime>
+<TimeString>2013/06/09 11:06:36</TimeString>
+<Mod>SCES V2_10.RFM</Mod>
+<Season></Season>
+<TrackVenue>Mid-Ohio [Virtua_LM]</TrackVenue>
+<TrackCourse>Mid-Ohio No Chicane</TrackCourse>
+<TrackEvent>No Chicane</TrackEvent>
+<TrackLength>3586.8</TrackLength>
+<GameVersion>1.217</GameVersion>
+<Dedicated>1</Dedicated>
+<ConnectionType upload="8042" download="8042">Custom</ConnectionType>
+<MOTD></MOTD>
+<RaceLaps>0</RaceLaps>
+<RaceTime>360</RaceTime>
+<MechFailRate>1</MechFailRate>
+<DamageMult>50</DamageMult>
+<FuelMult>1</FuelMult>
+<TireMult>1</TireMult>
+<VehiclesAllowed>|GT2_C6R|LMP1|SCES</VehiclesAllowed>
+<ParcFerme>0</ParcFerme>
+<FixedSetups>0</FixedSetups>
+<FreeSettings>11</FreeSettings>
+<FixedUpgrades>0</FixedUpgrades>
+<Qualify>
+<DateTime>1370794002</DateTime>
+<TimeString>2013/06/09 11:06:42</TimeString>
+<Laps>2147483647</Laps>
+<Minutes>15</Minutes>
+<Stream>
+<Score et="77.9">lemming77(35) lap=0 point=2 t=-1.000 et=77.485</Score>
+<Score et="77.9">lemming77(35) lap=0 point=1 t=-1.000 et=77.485</Score>
+<Score et="77.9">lemming77(35) lap=1 point=0 t=-1.000 et=77.485</Score>
+<Score et="85.8">SinL_Mathius_bm(30) lap=0 point=1 t=-1.000 et=85.662</Score>
+<Score et="90.6">~IsR~Lachgummi(21) lap=0 point=1 t=-1.000 et=90.496</Score>
+<Score et="92.9">Stewart Forgie(11) lap=0 point=1 t=-1.000 et=92.822</Score>
+<Score et="94.1">Coutie(29) lap=0 point=1 t=-1.000 et=94.054</Score>
+<Score et="112.4">SinL_Mathius_bm(30) lap=0 point=2 t=-1.000 et=112.302</Score>
+<Score et="117.8">~IsR~Lachgummi(21) lap=0 point=2 t=-1.000 et=117.679</Score>
+<Score et="119.6">Stewart Forgie(11) lap=0 point=2 t=-1.000 et=119.505</Score>
+<Score et="119.8">Coutie(29) lap=0 point=2 t=-1.000 et=119.757</Score>
+<Score et="123.4">lemming77(35) lap=1 point=1 t=-1.000 et=123.329</Score>
+<Score et="126.9">CoNa(36) lap=0 point=1 t=-1.000 et=126.812</Score>
+<Score et="130.3">Capeta(40) lap=0 point=1 t=-1.000 et=130.162</Score>
+<Score et="133.8">SinL_Mathius_bm(30) lap=1 point=0 t=-1.000 et=133.672</Score>
+<Score et="140.1">Coutie(29) lap=1 point=0 t=-1.000 et=140.049</Score>
+<Score et="141.5">Stewart Forgie(11) lap=1 point=0 t=-1.000 et=141.436</Score>
+<Score et="143.6">~IsR~Lachgummi(21) lap=1 point=0 t=-1.000 et=143.542</Score>
+<Score et="149.2">lemming77(35) lap=1 point=2 t=-1.000 et=149.105</Score>
+<Score et="152.5">CoNa(36) lap=0 point=2 t=-1.000 et=152.383</Score>
+<Score et="154.3">Chris(32) lap=0 point=1 t=-1.000 et=154.223</Score>
+<Score et="162.6">Capeta(40) lap=0 point=2 t=-1.000 et=162.540</Score>
+<Score et="169.2">lemming77(35) lap=2 point=0 t=-1.000 et=169.136</Score>
+<Score et="169.5">SinL_Mathius_bm(30) lap=1 point=1 t=35.730 et=169.401</Score>
+<Score et="169.6">~IsR~Lachgummi(21) lap=2 point=0 t=-1.000 et=169.395</Score>
+<Score et="169.6">~IsR~Lachgummi(21) lap=2 point=1 t=-1.000 et=169.395</Score>
+<Score et="169.6">~IsR~Lachgummi(21) lap=2 point=2 t=-1.000 et=169.395</Score>
+<Score et="172.7">Coutie(29) lap=1 point=1 t=32.611 et=172.660</Score>
+<Score et="173.4">CoNa(36) lap=1 point=0 t=-1.000 et=173.333</Score>
+<Score et="177.2">Stewart Forgie(11) lap=1 point=1 t=35.722 et=177.157</Score>
+<Score et="180.3">Chris(32) lap=0 point=2 t=-1.000 et=180.189</Score>
+<Score et="185.9">Capeta(40) lap=1 point=0 t=-1.000 et=185.833</Score>
+<Score et="195.3">SinL_Mathius_bm(30) lap=1 point=2 t=61.527 et=195.199</Score>
+<Score et="197.3">Coutie(29) lap=1 point=2 t=57.241 et=197.290</Score>
+<Score et="200.9">lemming77(35) lap=2 point=1 t=31.625 et=200.761</Score>
+<Score et="201.5">Chris(32) lap=1 point=0 t=-1.000 et=201.425</Score>
+<Score et="203.8">Stewart Forgie(11) lap=1 point=2 t=62.254 et=203.690</Score>
+<Score et="208.1">CoNa(36) lap=1 point=1 t=34.649 et=207.982</Score>
+<Score et="210.8">~IsR~Lachgummi(21) lap=2 point=1 t=-1.000 et=210.741</Score>
+<Score et="216.3">SinL_Mathius_bm(30) lap=2 point=0 t=82.483 et=216.154</Score>
+<Score et="216.8">Coutie(29) lap=2 point=0 t=76.729 et=216.777</Score>
+<Score et="218.3">Capeta(40) lap=1 point=1 t=32.317 et=218.151</Score>
+<Score et="225.5">Stewart Forgie(11) lap=2 point=0 t=84.017 et=225.452</Score>
+<Score et="226.4">lemming77(35) lap=2 point=2 t=57.175 et=226.311</Score>
+<Score et="233.4">CoNa(36) lap=1 point=2 t=59.944 et=233.276</Score>
+<Score et="236.4">~IsR~Lachgummi(21) lap=2 point=2 t=-1.000 et=236.292</Score>
+<Score et="237.7">Chris(32) lap=1 point=1 t=36.156 et=237.581</Score>
+<Score et="243.0">Capeta(40) lap=1 point=2 t=57.038 et=242.872</Score>
+<Score et="246.0">lemming77(35) lap=3 point=0 t=76.802 et=245.938</Score>
+<Score et="249.7">Coutie(29) lap=2 point=1 t=32.851 et=249.629</Score>
+<Score et="253.4">SinL_Mathius_bm(30) lap=2 point=1 t=37.086 et=253.241</Score>
+<Score et="254.0">CoNa(36) lap=2 point=0 t=80.549 et=253.882</Score>
+<Score et="257.3">~IsR~Lachgummi(21) lap=3 point=0 t=-1.000 et=257.177</Score>
+<Score et="260.9">Stewart Forgie(11) lap=2 point=1 t=35.394 et=260.846</Score>
+<Score et="262.2">Capeta(40) lap=2 point=0 t=76.253 et=262.086</Score>
+<Score et="263.6">Chris(32) lap=1 point=2 t=62.130 et=263.556</Score>
+<Score et="274.5">Coutie(29) lap=2 point=2 t=57.716 et=274.493</Score>
+<Score et="277.6">lemming77(35) lap=3 point=1 t=31.539 et=277.476</Score>
+<Score et="279.5">SinL_Mathius_bm(30) lap=2 point=2 t=63.285 et=279.439</Score>
+<Score et="284.7">Chris(32) lap=2 point=0 t=83.223 et=284.649</Score>
+<Score et="288.7">CoNa(36) lap=2 point=1 t=34.778 et=288.659</Score>
+<Score et="292.1">~IsR~Lachgummi(21) lap=3 point=1 t=34.875 et=292.053</Score>
+<Score et="293.9">Capeta(40) lap=2 point=1 t=31.753 et=293.839</Score>
+<Score et="294.1">Coutie(29) lap=3 point=0 t=77.315 et=294.093</Score>
+<Score et="295.1">Stewart Forgie(11) lap=2 point=2 t=69.538 et=294.990</Score>
+<Score et="301.0">SinL_Mathius_bm(30) lap=3 point=0 t=84.713 et=300.867</Score>
+<Score et="303.1">lemming77(35) lap=3 point=2 t=57.074 et=303.012</Score>
+<Score et="314.0">CoNa(36) lap=2 point=2 t=60.067 et=313.949</Score>
+<Score et="319.5">Capeta(40) lap=2 point=2 t=57.320 et=319.406</Score>
+<Score et="319.7">~IsR~Lachgummi(21) lap=3 point=2 t=62.386 et=319.563</Score>
+<Score et="320.1">Chris(32) lap=2 point=1 t=35.364 et=320.013</Score>
+<Score et="323.2">lemming77(35) lap=4 point=0 t=77.188 et=323.126</Score>
+<Score et="326.4">Stewart Forgie(11) lap=3 point=0 t=100.857 et=326.309</Score>
+<Score et="327.1">Coutie(29) lap=3 point=1 t=33.026 et=327.118</Score>
+<Score et="333.4">Stewart Forgie(11) lap=3 point=1 t=-1.000 et=333.174</Score>
+<Score et="333.4">Stewart Forgie(11) lap=3 point=2 t=-1.000 et=333.174</Score>
+<Score et="333.4">Stewart Forgie(11) lap=4 point=0 t=-1.000 et=333.174</Score>
+<Score et="334.6">CoNa(36) lap=3 point=0 t=80.581 et=334.463</Score>
+<Score et="336.5">SinL_Mathius_bm(30) lap=3 point=1 t=35.562 et=336.429</Score>
+<Score et="341.2">Capeta(40) lap=3 point=0 t=78.990 et=341.075</Score>
+<Score et="342.6">~IsR~Lachgummi(21) lap=4 point=0 t=85.294 et=342.471</Score>
+<Score et="346.0">Chris(32) lap=2 point=2 t=61.278 et=345.927</Score>
+<Score et="350.0">Stewart Forgie(11) lap=4 point=1 t=-1.000 et=349.807</Score>
+<Score et="350.0">Stewart Forgie(11) lap=4 point=2 t=-1.000 et=349.807</Score>
+<Score et="350.0">Stewart Forgie(11) lap=5 point=0 t=-1.000 et=349.807</Score>
+<Score et="351.9">Coutie(29) lap=3 point=2 t=57.745 et=351.837</Score>
+<Score et="355.0">lemming77(35) lap=4 point=1 t=31.785 et=354.911</Score>
+<Score et="362.7">SinL_Mathius_bm(30) lap=3 point=2 t=61.740 et=362.607</Score>
+<Score et="367.2">Chris(32) lap=3 point=0 t=82.483 et=367.132</Score>
+<Score et="369.6">CoNa(36) lap=3 point=1 t=35.016 et=369.479</Score>
+<Score et="371.8">Coutie(29) lap=4 point=0 t=77.716 et=371.809</Score>
+<Score et="373.5">Capeta(40) lap=3 point=1 t=32.307 et=373.382</Score>
+<Score et="377.7">~IsR~Lachgummi(21) lap=4 point=1 t=35.129 et=377.600</Score>
+<Score et="379.8">lemming77(35) lap=4 point=2 t=56.546 et=379.671</Score>
+<Score et="383.9">SinL_Mathius_bm(30) lap=4 point=0 t=82.949 et=383.816</Score>
+<Score et="384.8">~IsR~Lachgummi(21) lap=5 point=0 t=-1.000 et=384.618</Score>
+<Score et="384.8">~IsR~Lachgummi(21) lap=5 point=2 t=-1.000 et=384.618</Score>
+<Score et="392.6">Stewart Forgie(11) lap=5 point=1 t=-1.000 et=392.490</Score>
+<Score et="394.8">CoNa(36) lap=3 point=2 t=60.259 et=394.722</Score>
+<Score et="397.9">Capeta(40) lap=3 point=2 t=56.698 et=397.774</Score>
+<Score et="399.2">lemming77(35) lap=5 point=0 t=76.003 et=399.128</Score>
+<Score et="404.6">Coutie(29) lap=4 point=1 t=32.759 et=404.568</Score>
+<Score et="414.4">Chris(32) lap=3 point=1 t=47.188 et=414.320</Score>
+<Score et="415.4">CoNa(36) lap=4 point=0 t=80.853 et=415.315</Score>
+<Score et="417.1">Capeta(40) lap=4 point=0 t=75.904 et=416.980</Score>
+<Score et="419.2">Stewart Forgie(11) lap=5 point=2 t=-1.000 et=419.061</Score>
+<Score et="419.7">SinL_Mathius_bm(30) lap=4 point=1 t=35.743 et=419.559</Score>
+<Score et="428.4">~IsR~Lachgummi(21) lap=5 point=1 t=-1.000 et=428.306</Score>
+<Score et="429.7">Coutie(29) lap=4 point=2 t=57.826 et=429.635</Score>
+<Score et="430.6">lemming77(35) lap=5 point=1 t=31.412 et=430.540</Score>
+<Score et="439.1">Capeta(40) lap=5 point=0 t=-1.000 et=438.846</Score>
+<Score et="439.1">Capeta(40) lap=5 point=1 t=-1.000 et=438.846</Score>
+<Score et="439.1">Capeta(40) lap=5 point=2 t=-1.000 et=438.846</Score>
+<Score et="439.5">CoNa(36) lap=5 point=0 t=-1.000 et=439.287</Score>
+<Score et="439.5">CoNa(36) lap=5 point=1 t=-1.000 et=439.287</Score>
+<Score et="439.5">CoNa(36) lap=5 point=2 t=-1.000 et=439.287</Score>
+<Score et="441.1">Chris(32) lap=3 point=2 t=73.840 et=440.971</Score>
+<Score et="441.3">Stewart Forgie(11) lap=6 point=0 t=-1.000 et=441.164</Score>
+<Score et="445.7">SinL_Mathius_bm(30) lap=4 point=2 t=61.779 et=445.595</Score>
+<Score et="449.6">Coutie(29) lap=5 point=0 t=77.756 et=449.565</Score>
+<Score et="453.9">~IsR~Lachgummi(21) lap=5 point=2 t=-1.000 et=453.778</Score>
+<Score et="455.9">lemming77(35) lap=5 point=2 t=56.682 et=455.810</Score>
+<Score et="466.5">Chris(32) lap=4 point=0 t=-1.000 et=466.420</Score>
+<Score et="467.0">SinL_Mathius_bm(30) lap=5 point=0 t=83.100 et=466.916</Score>
+<Score et="475.9">lemming77(35) lap=6 point=0 t=76.672 et=475.801</Score>
+<Score et="477.6">Stewart Forgie(11) lap=6 point=1 t=36.307 et=477.471</Score>
+<Score et="482.0">Coutie(29) lap=5 point=1 t=32.421 et=481.987</Score>
+<Score et="495.3">CoNa(36) lap=5 point=1 t=-1.000 et=495.258</Score>
+<Chat et="501.8">~IsR~Lachgummi left the race.</Chat>
+<Score et="502.5">SinL_Mathius_bm(30) lap=5 point=1 t=35.489 et=502.405</Score>
+<Score et="503.7">Stewart Forgie(11) lap=6 point=2 t=62.429 et=503.593</Score>
+<Score et="506.7">Coutie(29) lap=5 point=2 t=57.085 et=506.650</Score>
+<Score et="508.1">lemming77(35) lap=6 point=1 t=32.201 et=508.002</Score>
+<Score et="509.3">Capeta(40) lap=5 point=1 t=-1.000 et=509.223</Score>
+<Score et="521.0">CoNa(36) lap=5 point=2 t=-1.000 et=520.951</Score>
+<Score et="525.6">Stewart Forgie(11) lap=7 point=0 t=84.357 et=525.520</Score>
+<Score et="526.6">Coutie(29) lap=6 point=0 t=76.969 et=526.534</Score>
+<Score et="528.8">SinL_Mathius_bm(30) lap=5 point=2 t=61.750 et=528.666</Score>
+<Score et="533.0">lemming77(35) lap=6 point=2 t=57.132 et=532.933</Score>
+<Score et="536.2">Capeta(40) lap=5 point=2 t=-1.000 et=536.087</Score>
+<Score et="541.7">CoNa(36) lap=6 point=0 t=-1.000 et=541.568</Score>
+<Score et="552.8">lemming77(35) lap=7 point=0 t=76.884 et=552.685</Score>
+<Score et="553.9">SinL_Mathius_bm(30) lap=6 point=0 t=-1.000 et=553.720</Score>
+<Score et="558.3">Capeta(40) lap=6 point=0 t=-1.000 et=558.185</Score>
+<Score et="560.3">Coutie(29) lap=6 point=1 t=33.698 et=560.232</Score>
+<Score et="571.8">Stewart Forgie(11) lap=7 point=1 t=46.160 et=571.680</Score>
+<Score et="576.3">CoNa(36) lap=6 point=1 t=34.601 et=576.169</Score>
+<Score et="584.4">lemming77(35) lap=7 point=1 t=31.600 et=584.285</Score>
+<Score et="585.8">Coutie(29) lap=6 point=2 t=59.233 et=585.767</Score>
+<Score et="589.8">Capeta(40) lap=6 point=1 t=31.517 et=589.702</Score>
+<Score et="597.7">Stewart Forgie(11) lap=7 point=2 t=72.078 et=597.598</Score>
+<Score et="601.2">CoNa(36) lap=6 point=2 t=59.571 et=601.139</Score>
+<Score et="606.7">Coutie(29) lap=7 point=0 t=80.138 et=606.672</Score>
+<Score et="609.2">lemming77(35) lap=7 point=2 t=56.435 et=609.121</Score>
+<Score et="614.0">Capeta(40) lap=6 point=2 t=55.728 et=613.913</Score>
+<Score et="619.2">Stewart Forgie(11) lap=8 point=0 t=93.630 et=619.150</Score>
+<Score et="621.9">CoNa(36) lap=7 point=0 t=80.259 et=621.827</Score>
+<Score et="628.8">lemming77(35) lap=8 point=0 t=76.060 et=628.745</Score>
+<Score et="633.0">Capeta(40) lap=7 point=0 t=74.734 et=632.920</Score>
+<Score et="639.2">Coutie(29) lap=7 point=1 t=32.545 et=639.217</Score>
+<Score et="655.9">Stewart Forgie(11) lap=8 point=1 t=36.703 et=655.853</Score>
+<Score et="656.6">CoNa(36) lap=7 point=1 t=34.641 et=656.468</Score>
+<Score et="660.5">lemming77(35) lap=8 point=1 t=31.668 et=660.413</Score>
+<Score et="665.6">Coutie(29) lap=7 point=2 t=58.895 et=665.566</Score>
+<Score et="667.7">Capeta(40) lap=7 point=1 t=34.680 et=667.599</Score>
+<Score et="682.4">Stewart Forgie(11) lap=8 point=2 t=63.182 et=682.331</Score>
+<Score et="686.2">CoNa(36) lap=7 point=2 t=64.295 et=686.122</Score>
+<Score et="686.4">lemming77(35) lap=8 point=2 t=57.592 et=686.338</Score>
+<Score et="690.6">Coutie(29) lap=8 point=0 t=-1.000 et=690.517</Score>
+<Score et="697.4">Capeta(40) lap=7 point=2 t=64.388 et=697.308</Score>
+<Score et="703.8">Stewart Forgie(11) lap=9 point=0 t=84.603 et=703.753</Score>
+<Score et="706.0">lemming77(35) lap=9 point=0 t=77.185 et=705.930</Score>
+<Score et="709.1">CoNa(36) lap=8 point=0 t=87.217 et=709.044</Score>
+<Score et="720.7">Capeta(40) lap=8 point=0 t=87.654 et=720.574</Score>
+<Score et="738.2">lemming77(35) lap=9 point=1 t=32.154 et=738.084</Score>
+<Score et="739.9">Stewart Forgie(11) lap=9 point=1 t=36.031 et=739.784</Score>
+<Score et="743.8">CoNa(36) lap=8 point=1 t=34.680 et=743.724</Score>
+<Score et="757.6">Capeta(40) lap=8 point=1 t=36.917 et=757.491</Score>
+<Score et="763.0">lemming77(35) lap=9 point=2 t=56.935 et=762.865</Score>
+<Score et="766.5">Stewart Forgie(11) lap=9 point=2 t=62.627 et=766.380</Score>
+<Score et="768.9">CoNa(36) lap=8 point=2 t=59.765 et=768.809</Score>
+<Score et="782.5">lemming77(35) lap=10 point=0 t=76.508 et=782.438</Score>
+<Score et="785.3">Capeta(40) lap=8 point=2 t=64.598 et=785.171</Score>
+<Score et="786.0">Stewart Forgie(11) lap=10 point=0 t=-1.000 et=785.757</Score>
+<Score et="789.5">CoNa(36) lap=9 point=0 t=80.362 et=789.407</Score>
+<Score et="794.1">CoNa(36) lap=9 point=1 t=-1.000 et=793.864</Score>
+<Score et="794.1">CoNa(36) lap=9 point=2 t=-1.000 et=793.864</Score>
+<Score et="794.1">CoNa(36) lap=10 point=0 t=-1.000 et=793.864</Score>
+<Score et="807.3">Capeta(40) lap=9 point=0 t=86.637 et=807.210</Score>
+<Score et="814.1">lemming77(35) lap=10 point=1 t=31.543 et=813.981</Score>
+<Score et="830.2">Stewart Forgie(11) lap=10 point=1 t=-1.000 et=830.106</Score>
+<Score et="839.3">Capeta(40) lap=9 point=1 t=32.039 et=839.250</Score>
+<Score et="839.4">lemming77(35) lap=10 point=2 t=56.854 et=839.292</Score>
+<Score et="856.4">Stewart Forgie(11) lap=10 point=2 t=-1.000 et=856.318</Score>
+<Score et="859.1">lemming77(35) lap=11 point=0 t=76.567 et=859.005</Score>
+<Score et="863.9">Capeta(40) lap=9 point=2 t=56.621 et=863.831</Score>
+<Score et="878.2">Stewart Forgie(11) lap=11 point=0 t=-1.000 et=878.147</Score>
+<Score et="885.0">Capeta(40) lap=10 point=0 t=77.707 et=884.917</Score>
+<Score et="892.3">lemming77(35) lap=11 point=1 t=33.192 et=892.198</Score>
+<Score et="913.8">Stewart Forgie(11) lap=11 point=1 t=35.544 et=913.691</Score>
+<Score et="916.7">Capeta(40) lap=10 point=1 t=31.670 et=916.587</Score>
+<Score et="917.7">lemming77(35) lap=11 point=2 t=58.568 et=917.573</Score>
+<Score et="939.8">Stewart Forgie(11) lap=11 point=2 t=61.588 et=939.735</Score>
+<Score et="941.1">Capeta(40) lap=10 point=2 t=56.109 et=941.027</Score>
+<Score et="943.0">lemming77(35) lap=12 point=0 t=-1.000 et=942.893</Score>
+<Score et="961.7">Stewart Forgie(11) lap=12 point=0 t=83.418 et=961.566</Score>
+<Score et="965.3">Stewart Forgie(11) lap=12 point=1 t=-1.000 et=965.077</Score>
+<Score et="965.3">Stewart Forgie(11) lap=12 point=2 t=-1.000 et=965.077</Score>
+<Score et="965.3">Stewart Forgie(11) lap=13 point=0 t=-1.000 et=965.077</Score>
+<Score et="967.9">Capeta(40) lap=11 point=0 t=-1.000 et=967.855</Score>
+</Stream>
+<MostLapsCompleted>13</MostLapsCompleted>
+<Driver>
+<Name>Capeta</Name>
+<Connected>1</Connected>
+<VehFile>LMP1_07.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>Pescarolo P01 - Judd LMP1 Racing #07</VehName>
+<CarType>SCES LMP1</CarType>
+<CarClass>SCES LMP1</CarClass>
+<CarNumber>07</CarNumber>
+<TeamName>LMP1 Racing</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<Position>1</Position>
+<ClassPosition>1</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>1</LapRankIncludingDiscos>
+<Lap num="1" p="8" et="--.---" fuel="0.145">--.----</Lap>
+<Lap num="2" p="1" et="185.8333" s1="32.3175" s2="24.7208" s3="19.2143" fuel="0.114">76.2525</Lap>
+<Lap num="3" p="1" et="262.0858" s1="31.7532" s2="25.5673" s3="21.6691" fuel="0.082">78.9896</Lap>
+<Lap num="4" p="1" et="341.0753" s1="32.3068" s2="24.3917" s3="19.2059" fuel="0.051">75.9044</Lap>
+<Lap num="5" p="1" et="416.9797" fuel="0.165">--.----</Lap>
+<Lap num="6" p="1" et="438.8461" fuel="0.141">--.----</Lap>
+<Lap num="7" p="1" et="558.1855" s1="31.5168" s2="24.2109" s3="19.0067" fuel="0.110">74.7343</Lap>
+<Lap num="8" p="1" et="632.9198" s1="34.6797" s2="29.7083" s3="23.2659" fuel="0.090">87.6539</Lap>
+<Lap num="9" p="1" et="720.5737" s1="36.9174" s2="27.6801" s3="22.0392" fuel="0.071">86.6368</Lap>
+<Lap num="10" p="1" et="807.2104" s1="32.0395" s2="24.5811" s3="21.0862" fuel="0.043">77.7068</Lap>
+<Lap num="11" p="1" et="884.9173" s1="31.6697" s2="24.4398" fuel="0.016" pit="1">--.----</Lap>
+<BestLapTime>74.7343</BestLapTime>
+<Laps>11</Laps>
+<Pitstops>3</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="11">PlayerControl,TC=1,ABS=2,Stability=1,Clutch,AutoBlip</ControlAndAids>
+</Driver>
+<Driver>
+<Name>lemming77</Name>
+<Connected>1</Connected>
+<VehFile>LMP1_88.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>Pescarolo P01 - Judd Hot Wheels Racing #88</VehName>
+<CarType>SCES LMP1</CarType>
+<CarClass>SCES LMP1</CarClass>
+<CarNumber>88</CarNumber>
+<TeamName>Hot Wheels Racing</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<Position>2</Position>
+<ClassPosition>2</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>2</LapRankIncludingDiscos>
+<Lap num="1" p="7" et="--.---" fuel="0.333">--.----</Lap>
+<Lap num="2" p="7" et="77.4853" fuel="0.310">--.----</Lap>
+<Lap num="3" p="2" et="169.1360" s1="31.6252" s2="25.5497" s3="19.6268" fuel="0.282">76.8017</Lap>
+<Lap num="4" p="3" et="245.9376" s1="31.5386" s2="25.5358" s3="20.1136" fuel="0.259">77.1880</Lap>
+<Lap num="5" p="1" et="323.1256" s1="31.7855" s2="24.7601" s3="19.4572" fuel="0.231">76.0028</Lap>
+<Lap num="6" p="2" et="399.1284" s1="31.4116" s2="25.2702" s3="19.9905" fuel="0.208">76.6723</Lap>
+<Lap num="7" p="2" et="475.8007" s1="32.2012" s2="24.9310" s3="19.7523" fuel="0.184">76.8844</Lap>
+<Lap num="8" p="2" et="552.6851" s1="31.6000" s2="24.8354" s3="19.6245" fuel="0.161">76.0599</Lap>
+<Lap num="9" p="2" et="628.7451" s1="31.6682" s2="25.9243" s3="19.5926" fuel="0.133">77.1851</Lap>
+<Lap num="10" p="2" et="705.9301" s1="32.1542" s2="24.7806" s3="19.5733" fuel="0.110">76.5081</Lap>
+<Lap num="11" p="2" et="782.4382" s1="31.5433" s2="25.3110" s3="19.7128" fuel="0.082">76.5670</Lap>
+<Lap num="12" p="2" et="859.0052" s1="33.1923" s2="25.3760" fuel="0.063" pit="1">--.----</Lap>
+<BestLapTime>76.0028</BestLapTime>
+<Laps>12</Laps>
+<Pitstops>3</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="12">PlayerControl,TC=1,ABS=2,Stability=1,Clutch,AutoLift,AutoBlip</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Coutie</Name>
+<Connected>1</Connected>
+<VehFile>LMP1_03.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>Pescarolo P01 - Judd LMP1 Racing #03</VehName>
+<CarType>SCES LMP1</CarType>
+<CarClass>SCES LMP1</CarClass>
+<CarNumber>03</CarNumber>
+<TeamName>LMP1 Racing</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<Position>3</Position>
+<ClassPosition>3</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>3</LapRankIncludingDiscos>
+<Lap num="1" p="3" et="--.---" fuel="0.361">--.----</Lap>
+<Lap num="2" p="1" et="140.0486" s1="32.6110" s2="24.6301" s3="19.4877" fuel="0.333">76.7287</Lap>
+<Lap num="3" p="2" et="216.7773" s1="32.8514" s2="24.8647" s3="19.5993" fuel="0.302">77.3154</Lap>
+<Lap num="4" p="2" et="294.0927" s1="33.0257" s2="24.7190" s3="19.9717" fuel="0.275">77.7165</Lap>
+<Lap num="5" p="3" et="371.8092" s1="32.7585" s2="25.0671" s3="19.9303" fuel="0.243">77.7560</Lap>
+<Lap num="6" p="3" et="449.5652" s1="32.4213" s2="24.6636" s3="19.8839" fuel="0.216">76.9688</Lap>
+<Lap num="7" p="3" et="526.5340" s1="33.6985" s2="25.5342" s3="20.9050" fuel="0.188">80.1378</Lap>
+<Lap num="8" p="3" et="606.6718" s1="32.5455" s2="26.3492" fuel="0.388" pit="1">--.----</Lap>
+<BestLapTime>76.7287</BestLapTime>
+<Laps>8</Laps>
+<Pitstops>2</Pitstops>
+<FinishStatus>None</FinishStatus>
+<ControlAndAids startLap="1" endLap="8">PlayerControl,Clutch,AutoPit,AutoBlip</ControlAndAids>
+</Driver>
+<Driver>
+<Name>CoNa</Name>
+<Connected>1</Connected>
+<VehFile>C6R_06.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>Corvette C6.R GT2 #06</VehName>
+<CarType>Corvette ALMS GT2 2009</CarType>
+<CarClass>Corvette ALMS GT2 2009</CarClass>
+<CarNumber>06</CarNumber>
+<TeamName>Corvette Racing</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<Position>4</Position>
+<ClassPosition>1</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>4</LapRankIncludingDiscos>
+<Lap num="1" p="6" et="--.---" fuel="0.114">--.----</Lap>
+<Lap num="2" p="3" et="173.3327" s1="34.6491" s2="25.2947" s3="20.6053" fuel="0.094">80.5491</Lap>
+<Lap num="3" p="4" et="253.8818" s1="34.7776" s2="25.2892" s3="20.5141" fuel="0.078">80.5809</Lap>
+<Lap num="4" p="4" et="334.4626" s1="35.0163" s2="25.2432" s3="20.5932" fuel="0.059">80.8527</Lap>
+<Lap num="5" p="4" et="415.3153" fuel="0.129">--.----</Lap>
+<Lap num="6" p="4" et="439.2868" fuel="0.114">--.----</Lap>
+<Lap num="7" p="4" et="541.5676" s1="34.6014" s2="24.9698" s3="20.6882" fuel="0.094">80.2595</Lap>
+<Lap num="8" p="4" et="621.8271" s1="34.6406" s2="29.6544" s3="22.9223" fuel="0.078">87.2173</Lap>
+<Lap num="9" p="4" et="709.0444" s1="34.6801" s2="25.0849" s3="20.5972" fuel="0.063">80.3622</Lap>
+<Lap num="10" p="4" et="789.4066" fuel="0.129">--.----</Lap>
+<BestLapTime>80.2595</BestLapTime>
+<Laps>10</Laps>
+<Pitstops>3</Pitstops>
+<FinishStatus>None</FinishStatus>
+<ControlAndAids startLap="1" endLap="10">PlayerControl,ABS=2,Stability=1,Clutch,AutoBlip</ControlAndAids>
+</Driver>
+<Driver>
+<Name>SinL_Mathius_bm</Name>
+<Connected>1</Connected>
+<VehFile>C6R_06.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>Corvette C6.R GT2 #06</VehName>
+<CarType>Corvette ALMS GT2 2009</CarType>
+<CarClass>Corvette ALMS GT2 2009</CarClass>
+<CarNumber>06</CarNumber>
+<TeamName>Corvette Racing</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<Position>5</Position>
+<ClassPosition>2</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>5</LapRankIncludingDiscos>
+<Lap num="1" p="4" et="--.---" fuel="0.984">--.----</Lap>
+<Lap num="2" p="1" et="133.6717" s1="35.7296" s2="25.7975" s3="20.9555" fuel="0.965">82.4827</Lap>
+<Lap num="3" p="5" et="216.1545" s1="37.0863" s2="26.1982" s3="21.4281" fuel="0.949">84.7126</Lap>
+<Lap num="4" p="5" et="300.8670" s1="35.5623" s2="26.1777" s3="21.2094" fuel="0.933">82.9494</Lap>
+<Lap num="5" p="5" et="383.8164" s1="35.7427" s2="26.0364" s3="21.3205" fuel="0.914">83.0996</Lap>
+<Lap num="6" p="5" et="466.9160" s1="35.4893" s2="26.2603" fuel="0.898" pit="1">--.----</Lap>
+<BestLapTime>82.4827</BestLapTime>
+<Laps>6</Laps>
+<Pitstops>2</Pitstops>
+<FinishStatus>None</FinishStatus>
+<ControlAndAids startLap="1" endLap="3">PlayerControl,TC=1,ABS=1,Clutch,AutoBlip</ControlAndAids>
+<ControlAndAids startLap="4" endLap="6">PlayerControl,ABS=1,Clutch,AutoBlip</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Chris</Name>
+<Connected>1</Connected>
+<VehFile>C6R_00.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>Corvette C6.R GT2 #00</VehName>
+<CarType>Corvette ALMS GT2 2009</CarType>
+<CarClass>Corvette ALMS GT2 2009</CarClass>
+<CarNumber>00</CarNumber>
+<TeamName>Corvette Racing</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<Position>6</Position>
+<ClassPosition>3</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>6</LapRankIncludingDiscos>
+<Lap num="1" p="5" et="--.---" fuel="0.122">--.----</Lap>
+<Lap num="2" p="6" et="201.4255" s1="36.1557" s2="25.9743" s3="21.0930" fuel="0.106">83.2231</Lap>
+<Lap num="3" p="6" et="284.6486" s1="35.3640" s2="25.9142" s3="21.2048" fuel="0.086">82.4830</Lap>
+<Lap num="4" p="6" et="367.1316" s1="47.1885" s2="26.6511" fuel="0.071" pit="1">--.----</Lap>
+<BestLapTime>82.4830</BestLapTime>
+<Laps>4</Laps>
+<Pitstops>2</Pitstops>
+<FinishStatus>None</FinishStatus>
+<ControlAndAids startLap="1" endLap="4">PlayerControl,TC=1,ABS=2,Stability=1,Clutch,AutoPit,AutoBlip</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Stewart Forgie</Name>
+<Connected>1</Connected>
+<VehFile>C6R_06.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>Corvette C6.R GT2 #06</VehName>
+<CarType>Corvette ALMS GT2 2009</CarType>
+<CarClass>Corvette ALMS GT2 2009</CarClass>
+<CarNumber>06</CarNumber>
+<TeamName>Corvette Racing</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<Position>7</Position>
+<ClassPosition>4</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>7</LapRankIncludingDiscos>
+<Lap num="1" p="1" et="--.---" fuel="0.071">--.----</Lap>
+<Lap num="2" p="3" et="141.4355" s1="35.7216" s2="26.5328" s3="21.7621" fuel="0.055">84.0165</Lap>
+<Lap num="3" p="7" et="225.4520" s1="35.3943" s2="34.1433" s3="31.3189" fuel="0.035">100.8566</Lap>
+<Lap num="4" p="7" et="326.3086" fuel="0.086">--.----</Lap>
+<Lap num="5" p="7" et="333.1737" fuel="0.086">--.----</Lap>
+<Lap num="6" p="7" et="349.8073" fuel="0.071">--.----</Lap>
+<Lap num="7" p="7" et="441.1637" s1="36.3070" s2="26.1219" s3="21.9277" fuel="0.055">84.3566</Lap>
+<Lap num="8" p="7" et="525.5203" s1="46.1600" s2="25.9175" s3="21.5521" fuel="0.035">93.6296</Lap>
+<Lap num="9" p="7" et="619.1499" s1="36.7035" s2="26.4780" s3="21.4218" fuel="0.020">84.6033</Lap>
+<Lap num="10" p="7" et="703.7532" s1="36.0310" s2="26.5956" fuel="0.086">--.----</Lap>
+<Lap num="11" p="7" et="785.7570" fuel="0.071">--.----</Lap>
+<Lap num="12" p="7" et="878.1473" s1="35.5436" s2="26.0443" s3="21.8306" fuel="0.051">83.4185</Lap>
+<Lap num="13" p="7" et="961.5658" fuel="0.086">--.----</Lap>
+<BestLapTime>83.4185</BestLapTime>
+<Laps>13</Laps>
+<Pitstops>5</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="13">PlayerControl,ABS=2,Stability=1,Clutch,AutoBlip</ControlAndAids>
+</Driver>
+<Driver>
+<Name>~IsR~Lachgummi</Name>
+<Connected>0</Connected>
+<VehFile>C6R_06.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>Corvette C6.R GT2 #06</VehName>
+<CarType>Corvette ALMS GT2 2009</CarType>
+<CarClass>Corvette ALMS GT2 2009</CarClass>
+<CarNumber>06</CarNumber>
+<TeamName>Corvette Racing</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<Position>-1</Position>
+<ClassPosition>-1</ClassPosition>
+<LapRankIncludingDiscos>8</LapRankIncludingDiscos>
+<Lap num="1" p="2" et="--.---" fuel="0.161">--.----</Lap>
+<Lap num="2" p="2" et="143.5423" fuel="0.173">--.----</Lap>
+<Lap num="3" p="6" et="169.3950" fuel="0.157">--.----</Lap>
+<Lap num="4" p="8" et="257.1772" s1="34.8754" s2="27.5103" s3="22.9078" fuel="0.141">85.2935</Lap>
+<Lap num="5" p="8" et="342.4707" s1="35.1289" fuel="0.173">--.----</Lap>
+<BestLapTime>85.2935</BestLapTime>
+<Laps>5</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>None</FinishStatus>
+<ControlAndAids startLap="1" endLap="5">PlayerControl,TC=1,ABS=2,Stability=1,Clutch,AutoBlip</ControlAndAids>
+<Swap startLap="1" endLap="5"></Swap></Driver>
+<Driver>
+<Name>guod</Name>
+<Connected>1</Connected>
+<VehFile>C6R_03.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>Corvette C6.R GT2 #03</VehName>
+<CarType>Corvette ALMS GT2 2009</CarType>
+<CarClass>Corvette ALMS GT2 2009</CarClass>
+<CarNumber>03</CarNumber>
+<TeamName>Corvette Racing</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<Position>8</Position>
+<ClassPosition>5</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>9</LapRankIncludingDiscos>
+<Laps>0</Laps>
+<Pitstops>1</Pitstops>
+<FinishStatus>None</FinishStatus>
+</Driver>
+</Qualify>
+</RaceResults>
+</rFactorXML>

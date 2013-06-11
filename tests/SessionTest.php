@@ -31,8 +31,12 @@ class SessionTest extends PHPUnit_Framework_TestCase {
         // Get session
         $session = $this->getSessionWithData();
 
-        // Validate lasted laps
-        $this->assertSame(3, $session->getLastedLaps());
+        //-- Run twice to test cache
+        for($i=0; $i<2; $i++)
+        {
+        	// Validate lasted laps
+        	$this->assertSame(3, $session->getLastedLaps());
+        }
     }
 
     /**
@@ -43,14 +47,18 @@ class SessionTest extends PHPUnit_Framework_TestCase {
         // Get session
         $session = $this->getSessionWithData();
 
-        // Get the best lap
-        $laps = $session->getLapsSortedByTime();
+        //-- Run twice to test cache
+        for($i=0; $i<2; $i++)
+        {
+	        // Get the best lap
+	        $laps = $session->getLapsSortedByTime();
 
-        // Get participants
-        $participants = $session->getParticipants();
+	        // Get participants
+	        $participants = $session->getParticipants();
 
-        // Validate laps
-        $this->assertSame($participants[2]->getLap(3), $laps[0]);
+	        // Validate laps
+	        $this->assertSame($participants[2]->getLap(3), $laps[0]);
+        }
     }
 
     /**
@@ -61,14 +69,18 @@ class SessionTest extends PHPUnit_Framework_TestCase {
         // Get session
         $session = $this->getSessionWithData();
 
-        // Get the second laps
-        $laps = $session->getLapsByLapNumberSortedByTime(2);
+        //-- Run twice to test cache
+        for($i=0; $i<2; $i++)
+        {
+	        // Get the second laps
+	        $laps = $session->getLapsByLapNumberSortedByTime(2);
 
-        // Get participants
-        $participants = $session->getParticipants();
+	        // Get participants
+	        $participants = $session->getParticipants();
 
-        // Validate laps
-        $this->assertSame($participants[0]->getLap(2), $laps[0]);
+	        // Validate laps
+	        $this->assertSame($participants[0]->getLap(2), $laps[0]);
+        }
     }
 
     /**
@@ -79,16 +91,20 @@ class SessionTest extends PHPUnit_Framework_TestCase {
         // Get session
         $session = $this->getSessionWithData();
 
-        // Get the best lap
-        $laps = $session->getBestLapsGroupedByParticipant();
+        //-- Run twice to test cache
+        for($i=0; $i<2; $i++)
+        {
+	        // Get the best lap
+	        $laps = $session->getBestLapsGroupedByParticipant();
 
-        // Get participants
-        $participants = $session->getParticipants();
+	        // Get participants
+	        $participants = $session->getParticipants();
 
-        // Validate laps
-        $this->assertSame($participants[2]->getLap(3), $laps[0]);
-        $this->assertSame($participants[0]->getLap(3), $laps[1]);
-        $this->assertSame($participants[1]->getLap(2), $laps[2]);
+	        // Validate laps
+	        $this->assertSame($participants[2]->getLap(3), $laps[0]);
+	        $this->assertSame($participants[0]->getLap(3), $laps[1]);
+	        $this->assertSame($participants[1]->getLap(2), $laps[2]);
+        }
     }
 
     /**
@@ -117,16 +133,20 @@ class SessionTest extends PHPUnit_Framework_TestCase {
         // Get session
         $session = $this->getSessionWithData();
 
-        // Get laps above percent of the fastest lap
-        $laps = $session->getBadLaps($above_percent = 107);
+        //-- Run twice to test cache
+        for($i=0; $i<2; $i++)
+        {
+	        // Get laps above percent of the fastest lap
+	        $laps = $session->getBadLaps($above_percent = 107);
 
-        // Get participants
-        $participants = $session->getParticipants();
+	        // Get participants
+	        $participants = $session->getParticipants();
 
-        // Validate laps
-        $this->assertSame($participants[0]->getLap(1), $laps[0]);
-        $this->assertSame($participants[1]->getLap(1), $laps[1]);
-        $this->assertSame($participants[2]->getLap(1), $laps[2]);
+	        // Validate laps
+	        $this->assertSame($participants[0]->getLap(1), $laps[0]);
+	        $this->assertSame($participants[1]->getLap(1), $laps[1]);
+	        $this->assertSame($participants[2]->getLap(1), $laps[2]);
+        }
     }
 
     /**
@@ -137,14 +157,18 @@ class SessionTest extends PHPUnit_Framework_TestCase {
         // Get session
         $session = $this->getSessionWithData();
 
-        // Get the led most participant
-        $led_most_participant = $session->getLedMostParticipant();
+        //-- Run twice to test cache
+        for($i=0; $i<2; $i++)
+        {
+	        // Get the led most participant
+	        $led_most_participant = $session->getLedMostParticipant();
 
-        // Get participants
-        $participants = $session->getParticipants();
+	        // Get participants
+	        $participants = $session->getParticipants();
 
-        // Validate participant
-        $this->assertSame($participants[0], $led_most_participant);
+	        // Validate participant
+	        $this->assertSame($participants[0], $led_most_participant);
+        }
     }
 
     /**
@@ -176,17 +200,21 @@ class SessionTest extends PHPUnit_Framework_TestCase {
         // Get session
         $session = $this->getSessionWithData();
 
-        // Get the leading participant for lap 3
-        $leading_participant = $session->getLeadingParticipant(3);
+        //-- Run twice to test cache
+        for($i=0; $i<2; $i++)
+        {
+	        // Get the leading participant for lap 3
+	        $leading_participant = $session->getLeadingParticipant(3);
 
-        // Get participants
-        $participants = $session->getParticipants();
+	        // Get participants
+	        $participants = $session->getParticipants();
 
-        // Validate participant
-        $this->assertSame($participants[0], $leading_participant);
+	        // Validate participant
+	        $this->assertSame($participants[0], $leading_participant);
 
-        // Validate the position to be sure
-        $this->assertSame(1, $leading_participant->getPosition());
+	        // Validate the position to be sure
+	        $this->assertSame(1, $leading_participant->getPosition());
+        }
     }
 
     /**
@@ -205,17 +233,21 @@ class SessionTest extends PHPUnit_Framework_TestCase {
         // Get session
         $session = $this->getSessionWithData();
 
-        // Get the leading participant for lap 3
-        $leading_participant = $session->getLeadingParticipantByElapsedTime(3);
+        //-- Run twice to test cache
+        for($i=0; $i<2; $i++)
+        {
+	        // Get the leading participant for lap 3
+	        $leading_participant = $session->getLeadingParticipantByElapsedTime(3);
 
-        // Get participants
-        $participants = $session->getParticipants();
+	        // Get participants
+	        $participants = $session->getParticipants();
 
-        // Validate participant
-        $this->assertSame($participants[0], $leading_participant);
+	        // Validate participant
+	        $this->assertSame($participants[0], $leading_participant);
 
-        // Validate the position to be sure
-        $this->assertSame(1, $leading_participant->getPosition());
+	        // Validate the position to be sure
+	        $this->assertSame(1, $leading_participant->getPosition());
+        }
     }
 
     /**
@@ -228,8 +260,12 @@ class SessionTest extends PHPUnit_Framework_TestCase {
         // Get session
         $session = $this->getSessionWithData();
 
-        // Validate
-        $this->assertSame(12, $session->getMaxPosition());
+        //-- Run twice to test cache
+        for($i=0; $i<2; $i++)
+        {
+        	// Validate
+        	$this->assertSame(12, $session->getMaxPosition());
+        }
     }
 
     /**
@@ -243,15 +279,19 @@ class SessionTest extends PHPUnit_Framework_TestCase {
         // Get participants
         $participants = $session->getParticipants();
 
-        // Get laps sorted by sector 1
-        $laps = $session->getLapsSortedBySector(1);
+        //-- Run twice to test cache
+        for($i=0; $i<2; $i++)
+        {
+	        // Get laps sorted by sector 1
+	        $laps = $session->getLapsSortedBySector(1);
 
-        // Validate laps
-        $this->assertSame($participants[5]->getLap(1), $laps[0]);
-        $this->assertSame($participants[2]->getLap(3), $laps[1]);
-        $this->assertSame($participants[0]->getLap(3), $laps[2]);
-        $this->assertSame($participants[0]->getLap(2), $laps[3]);
-        $this->assertSame($participants[1]->getLap(2), $laps[4]);
+	        // Validate laps
+	        $this->assertSame($participants[5]->getLap(1), $laps[0]);
+	        $this->assertSame($participants[2]->getLap(3), $laps[1]);
+	        $this->assertSame($participants[0]->getLap(3), $laps[2]);
+	        $this->assertSame($participants[0]->getLap(2), $laps[3]);
+	        $this->assertSame($participants[1]->getLap(2), $laps[4]);
+        }
     }
 
     public function testBestLapBySector()
@@ -280,25 +320,29 @@ class SessionTest extends PHPUnit_Framework_TestCase {
         // Get participants
         $participants = $session->getParticipants();
 
-        // Get best laps of sector 1
-        $laps = $session->getBestLapsBySectorGroupedByParticipant(1);
+        //-- Run twice to test cache
+        for($i=0; $i<2; $i++)
+        {
+	        // Get best laps of sector 1
+	        $laps = $session->getBestLapsBySectorGroupedByParticipant(1);
 
-        // NOTE: Below tests by time. Could be refactored to just check by lap
-        // instance
+	        // NOTE: Below tests by time. Could be refactored to just check by lap
+	        // instance
 
-        // Validate couple sector 1 laps. The first sector is a lap that
-        // is NOT completed.
-        $this->assertSame(42.4389, $laps[0]->getSectorTime(1));
-        $this->assertSame(46.2715, $laps[1]->getSectorTime(1));
-        $this->assertSame(46.6382, $laps[2]->getSectorTime(1));
+	        // Validate couple sector 1 laps. The first sector is a lap that
+	        // is NOT completed.
+	        $this->assertSame(42.4389, $laps[0]->getSectorTime(1));
+	        $this->assertSame(46.2715, $laps[1]->getSectorTime(1));
+	        $this->assertSame(46.6382, $laps[2]->getSectorTime(1));
 
-        // Get best laps of sector 3
-        $laps = $session->getBestLapsBySectorGroupedByParticipant(3);
+	        // Get best laps of sector 3
+	        $laps = $session->getBestLapsBySectorGroupedByParticipant(3);
 
-        // Validate couple sector 3 laps
-        $this->assertSame(43.9237, $laps[0]->getSectorTime(3));
-        $this->assertSame(44.5677, $laps[1]->getSectorTime(3));
-        $this->assertSame(44.6712, $laps[2]->getSectorTime(3));
+	        // Validate couple sector 3 laps
+	        $this->assertSame(43.9237, $laps[0]->getSectorTime(3));
+	        $this->assertSame(44.5677, $laps[1]->getSectorTime(3));
+	        $this->assertSame(44.6712, $laps[2]->getSectorTime(3));
+        }
     }
 
     /**
@@ -312,16 +356,20 @@ class SessionTest extends PHPUnit_Framework_TestCase {
         // Get participants
         $participants = $session->getParticipants();
 
-        // Get best laps of sector 3 of lap number 2
-        $laps = $session->getLapsSortedBySectorByLapNumber(3, 2);
+        //-- Run twice to test cache
+        for($i=0; $i<2; $i++)
+        {
+	        // Get best laps of sector 3 of lap number 2
+	        $laps = $session->getLapsSortedBySectorByLapNumber(3, 2);
 
-        // Validate laps
-        $this->assertSame($participants[2]->getLap(2), $laps[0]);
-        $this->assertSame($participants[1]->getLap(2), $laps[1]);
-        $this->assertSame($participants[0]->getLap(2), $laps[2]);
+	        // Validate laps
+	        $this->assertSame($participants[2]->getLap(2), $laps[0]);
+	        $this->assertSame($participants[1]->getLap(2), $laps[1]);
+	        $this->assertSame($participants[0]->getLap(2), $laps[2]);
 
-        // Validate the fatsets lap
-        $this->assertSame($participants[2]->getLap(2), $session->getBestLapBySectorByLapNumber(3, 2));
+	        // Validate the fatsets lap
+	        $this->assertSame($participants[2]->getLap(2), $session->getBestLapBySectorByLapNumber(3, 2));
+        }
     }
 
 
