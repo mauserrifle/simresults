@@ -503,14 +503,25 @@ class Participant {
     }
 
     /**
-     * Returns the best lap for this participant
+     * Returns the (completed) best lap for this participant
      *
-     * @return  Lap
+     * @return  Lap|null
      */
     public function getBestLap()
     {
+    	// Get laps
         $laps = $this->getLapsSortedByTime();
-        return array_shift($laps);
+
+        // Only return a completed lap
+        foreach ($laps as $lap)
+        {
+        	if ($lap->isCompleted())
+        	{
+        		return $lap;
+        	}
+        }
+
+        return NULL;
     }
 
     /**

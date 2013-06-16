@@ -89,6 +89,16 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
         	// Test number of completed laps
         	$this->assertSame(3, $participant->getNumberOfCompletedLaps());
         }
+
+
+        //-- Create participant with 2 uncompleted laps and test NULL best lap
+        $participant = new Participant;
+		$participant->setLaps(array(
+			new Lap,
+			new Lap,
+		));
+		// No best lap
+		$this->assertNull($participant->getBestLap());
     }
 
     /**
