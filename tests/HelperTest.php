@@ -29,11 +29,18 @@ class HelperTest extends PHPUnit_Framework_TestCase {
         // Validate
         $this->assertSame('01:40.5279', Helper::formatTime(100.5279));
 
+        // Validate leading zeros for seconds
+        $this->assertSame('01:02.5279', Helper::formatTime(62.5279));
+
         // Validate special case that had rounding problem (01:23.128099)
         $this->assertSame('01:23.1281', Helper::formatTime(83.1281));
 
         // Validate the microseconds are always 4 digits
         $this->assertSame('01:11.0661', Helper::formatTime(71.0661));
+
+        // Make sure a smaller number, without leading zero, will not result in
+        // formatting with leading zeros
+        $this->assertSame('01:11.6610', Helper::formatTime(71.661));
 
         // Validate time with hours
         $this->assertSame('01:31:56.5879', Helper::formatTime(5516.5879));
