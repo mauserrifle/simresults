@@ -577,10 +577,10 @@ class Session {
     public function getLapsSortedByTime()
     {
         // There is cache
-    	if ($this->cache_laps_sorted_by_time !== null)
-    	{
-    		return $this->cache_laps_sorted_by_time;
-    	}
+        if ($this->cache_laps_sorted_by_time !== null)
+        {
+            return $this->cache_laps_sorted_by_time;
+        }
 
         // Init laps
         $laps = array();
@@ -594,7 +594,7 @@ class Session {
 
         // Return sorted laps and cache it
         return $this->cache_laps_sorted_by_time =
-        	Helper::sortLapsByTime($laps);
+            Helper::sortLapsByTime($laps);
     }
 
     /**
@@ -604,16 +604,16 @@ class Session {
      */
     public function getBestLap()
     {
-    	// Get laps
+        // Get laps
         $laps = $this->getLapsSortedByTime();
 
         // Only return a completed lap
         foreach ($laps as $lap)
         {
-        	if ($lap->isCompleted())
-        	{
-        		return $lap;
-        	}
+            if ($lap->isCompleted())
+            {
+                return $lap;
+            }
         }
 
         return NULL;
@@ -628,11 +628,11 @@ class Session {
     public function getLapsByLapNumberSortedByTime($lap_number)
     {
         // There is cache
-    	if (array_key_exists($lap_number,
-    		    $this->cache_laps_by_lap_number_sorted_by_time))
-    	{
-    		return $this->cache_laps_by_lap_number_sorted_by_time[$lap_number];
-    	}
+        if (array_key_exists($lap_number,
+                $this->cache_laps_by_lap_number_sorted_by_time))
+        {
+            return $this->cache_laps_by_lap_number_sorted_by_time[$lap_number];
+        }
 
         // Init laps
         $laps = array();
@@ -650,7 +650,7 @@ class Session {
 
         // Return sorted laps and cache it
         return $this->cache_laps_by_lap_number_sorted_by_time[$lap_number] =
-        	Helper::sortLapsByTime($laps);
+            Helper::sortLapsByTime($laps);
     }
 
     /**
@@ -674,10 +674,10 @@ class Session {
     public function getBestLapsGroupedByParticipant()
     {
         // There is cache
-    	if ($this->cache_best_laps_grouped_by_participant !== null)
-    	{
-    		return $this->cache_best_laps_grouped_by_participant;
-    	}
+        if ($this->cache_best_laps_grouped_by_participant !== null)
+        {
+            return $this->cache_best_laps_grouped_by_participant;
+        }
 
         // Init laps
         $laps = array();
@@ -695,7 +695,7 @@ class Session {
 
         // Return sorted laps and cache it
         return $this->cache_best_laps_grouped_by_participant =
-        	Helper::sortLapsByTime($laps);
+            Helper::sortLapsByTime($laps);
     }
 
     /**
@@ -706,10 +706,10 @@ class Session {
     public function getLapsSortedBySector($sector)
     {
         // There is cache
-    	if (array_key_exists($sector, $this->cache_laps_sorted_by_sector))
-    	{
-    		return $this->cache_laps_sorted_by_sector[$sector];
-    	}
+        if (array_key_exists($sector, $this->cache_laps_sorted_by_sector))
+        {
+            return $this->cache_laps_sorted_by_sector[$sector];
+        }
 
         // Get the laps
         $laps = array();
@@ -720,7 +720,7 @@ class Session {
 
         // Return sorted laps and cache it
         return $this->cache_laps_sorted_by_sector[$sector] =
-        	Helper::sortLapsBySector($laps, $sector);
+            Helper::sortLapsBySector($laps, $sector);
     }
 
     /**
@@ -746,12 +746,12 @@ class Session {
     public function getBestLapsBySectorGroupedByParticipant($sector)
     {
         // There is cache
-    	if (array_key_exists($sector,
-    		    $this->cache_best_laps_by_sector_grouped_by_participant))
-    	{
-    		return $this->cache_best_laps_by_sector_grouped_by_participant[
-    		           $sector];
-    	}
+        if (array_key_exists($sector,
+                $this->cache_best_laps_by_sector_grouped_by_participant))
+        {
+            return $this->cache_best_laps_by_sector_grouped_by_participant[
+                       $sector];
+        }
 
         // Init laps array
         $laps = array();
@@ -769,7 +769,7 @@ class Session {
 
         // Return sorted laps and cache it
         return $this->cache_best_laps_by_sector_grouped_by_participant[$sector]
-        	= Helper::sortLapsBySector($laps, $sector);
+            = Helper::sortLapsBySector($laps, $sector);
     }
 
     /**
@@ -782,12 +782,12 @@ class Session {
     public function getLapsSortedBySectorByLapNumber($sector, $lap_number)
     {
         // There is cache
-    	if (array_key_exists("$sector-$lap_number",
-    		    $this->cache_laps_sorted_by_sector_by_lap_number))
-    	{
-    		return $this->cache_laps_sorted_by_sector_by_lap_number[
-    		           "$sector-$lap_number"];
-    	}
+        if (array_key_exists("$sector-$lap_number",
+                $this->cache_laps_sorted_by_sector_by_lap_number))
+        {
+            return $this->cache_laps_sorted_by_sector_by_lap_number[
+                       "$sector-$lap_number"];
+        }
 
         // Init laps array
         $laps = array();
@@ -804,7 +804,7 @@ class Session {
 
         // Return sorted laps and cache it
         return $this->cache_laps_sorted_by_sector_by_lap_number[
-        	"$sector-$lap_number"] = Helper::sortLapsBySector($laps, $sector);
+            "$sector-$lap_number"] = Helper::sortLapsBySector($laps, $sector);
     }
 
     /**
@@ -829,10 +829,10 @@ class Session {
     public function getBadLaps($above_percent = 107)
     {
         // There is cache
-    	if ($this->cache_bad_laps !== null)
-    	{
-    		return $this->cache_bad_laps;
-    	}
+        if ($this->cache_bad_laps !== null)
+        {
+            return $this->cache_bad_laps;
+        }
 
         // No best lap
         if ( ! $best_lap = $this->getBestLap())
@@ -864,10 +864,10 @@ class Session {
     public function getLedMostParticipant()
     {
         // There is cache
-    	if ($this->cache_led_most_participant !== null)
-    	{
-    		return $this->cache_led_most_participant;
-    	}
+        if ($this->cache_led_most_participant !== null)
+        {
+            return $this->cache_led_most_participant;
+        }
 
         $led_most_participant = null;
 
@@ -924,10 +924,10 @@ class Session {
     public function getLeadingParticipant($lap_number)
     {
         // There is cache
-    	if (array_key_exists($lap_number, $this->cache_leading_participant))
-    	{
-    		return $this->cache_leading_participant[$lap_number];
-    	}
+        if (array_key_exists($lap_number, $this->cache_leading_participant))
+        {
+            return $this->cache_leading_participant[$lap_number];
+        }
 
         // Loop each participant
         foreach ($this->getParticipants() as $part)
@@ -962,12 +962,12 @@ class Session {
     public function getLeadingParticipantByElapsedTime($lap_number)
     {
         // There is cache
-    	if (array_key_exists($lap_number,
-    		    $this->cache_leading_participant_by_elapsed_time))
-    	{
-    		return $this->cache_leading_participant_by_elapsed_time[
-    		    $lap_number];
-    	}
+        if (array_key_exists($lap_number,
+                $this->cache_leading_participant_by_elapsed_time))
+        {
+            return $this->cache_leading_participant_by_elapsed_time[
+                $lap_number];
+        }
 
         $leading_lap = null;
 
@@ -995,7 +995,7 @@ class Session {
 
         // Return and cache it
         return $this->cache_leading_participant_by_elapsed_time[$lap_number] =
-        	$leading_lap ? $leading_lap->getParticipant() : null;
+            $leading_lap ? $leading_lap->getParticipant() : null;
     }
 
     /**
@@ -1006,10 +1006,10 @@ class Session {
     public function getLastedLaps()
     {
         // There is cache
-    	if ($this->cache_lasted_laps !== null)
-    	{
-    		return $this->cache_lasted_laps;
-    	}
+        if ($this->cache_lasted_laps !== null)
+        {
+            return $this->cache_lasted_laps;
+        }
 
         // No laps by default
         $laps = 0;
@@ -1041,10 +1041,10 @@ class Session {
     public function getMaxPosition()
     {
         // There is cache
-    	if ($this->cache_max_position !== null)
-    	{
-    		return $this->cache_max_position;
-    	}
+        if ($this->cache_max_position !== null)
+        {
+            return $this->cache_max_position;
+        }
 
         // Max position
         $max_position = 1;

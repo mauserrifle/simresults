@@ -17,17 +17,17 @@ class Helper {
      */
     public static function formatTime($seconds)
     {
-    	// Default micro time
-    	$micro = 0;
+        // Default micro time
+        $micro = 0;
 
-    	// Contains decimal separater
-    	if (strpos((string) $seconds, '.'))
-    	{
-    		// Get micro the nasty way so we always get the decimals as
-    		// original rounded
-    		$seconds_arr = explode('.', (string) $seconds);
-    		$micro = (int) $seconds_arr[1];
-    	}
+        // Contains decimal separater
+        if (strpos((string) $seconds, '.'))
+        {
+            // Get micro the nasty way so we always get the decimals as
+            // original rounded
+            $seconds_arr = explode('.', (string) $seconds);
+            $micro = (int) $seconds_arr[1];
+        }
 
         // Make seconds without micro
         $seconds = (int) $seconds;
@@ -39,7 +39,7 @@ class Helper {
         $minutes = floor(($seconds - ($hours*3600)) / 60);
 
         // Get remaining seconds
-		$secs = floor(($seconds - ($hours*3600) - ($minutes*60)));
+        $secs = floor(($seconds - ($hours*3600) - ($minutes*60)));
 
         // Make format
         $format = sprintf('%02d:%02d.%04d', $minutes, $secs, $micro);
@@ -47,8 +47,8 @@ class Helper {
         // Has hours
         if ($hours)
         {
-			// Prefix format with hours
-			$format = sprintf('%02d:', $hours).$format;
+            // Prefix format with hours
+            $format = sprintf('%02d:', $hours).$format;
         }
 
         // Return the format

@@ -415,20 +415,20 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
 
 
         // Get the position 2 driver laps two corrupted laps
-       	$laps = $participants[1]->getLaps();
+           $laps = $participants[1]->getLaps();
 
-       	// Validate the number of laps, there should be no deletion
-       	$this->assertSame(11, count($laps));
+           // Validate the number of laps, there should be no deletion
+           $this->assertSame(11, count($laps));
 
-       	// Validate corrupted lap 2. It should have no info
-       	$this->assertNull($laps[1]->getPosition());
-       	$this->assertNull($laps[1]->getTime());
-       	$this->assertNull($laps[1]->getElapsedSeconds());
+           // Validate corrupted lap 2. It should have no info
+           $this->assertNull($laps[1]->getPosition());
+           $this->assertNull($laps[1]->getTime());
+           $this->assertNull($laps[1]->getElapsedSeconds());
 
-       	// Validate corrupted lap 6. It should have no info
-       	$this->assertNull($laps[5]->getPosition());
-       	$this->assertNull($laps[5]->getTime());
-       	$this->assertNull($laps[5]->getElapsedSeconds());
+           // Validate corrupted lap 6. It should have no info
+           $this->assertNull($laps[5]->getPosition());
+           $this->assertNull($laps[5]->getTime());
+           $this->assertNull($laps[5]->getElapsedSeconds());
     }
 
 
@@ -524,23 +524,23 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
         // Validate laps
         for ($lap=1; $lap <= 3; $lap++)
         {
-        	// Paul
-        	$this->assertSame($drivers[0], $laps[$lap-1]->getDriver());
+            // Paul
+            $this->assertSame($drivers[0], $laps[$lap-1]->getDriver());
         }
-    	for ($lap=4; $lap <= 5; $lap++)
+        for ($lap=4; $lap <= 5; $lap++)
         {
-        	// Malek
-        	$this->assertSame($drivers[1], $laps[$lap-1]->getDriver());
+            // Malek
+            $this->assertSame($drivers[1], $laps[$lap-1]->getDriver());
         }
-    	for ($lap=6; $lap <= 8; $lap++)
+        for ($lap=6; $lap <= 8; $lap++)
         {
-        	// Nick
-        	$this->assertSame($drivers[2], $laps[$lap-1]->getDriver());
+            // Nick
+            $this->assertSame($drivers[2], $laps[$lap-1]->getDriver());
         }
         for ($lap=9; $lap <= 10; $lap++)
         {
-        	// Malek
-        	$this->assertSame($drivers[1], $laps[$lap-1]->getDriver());
+            // Malek
+            $this->assertSame($drivers[1], $laps[$lap-1]->getDriver());
         }
 
 
