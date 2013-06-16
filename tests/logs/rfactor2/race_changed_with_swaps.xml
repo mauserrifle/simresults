@@ -331,7 +331,7 @@
 <BestLapTime>123.1418</BestLapTime>
 <FinishTime>1250.2322</FinishTime>
 <Laps>10</Laps>
-<Pitstops>0</Pitstops>
+<Pitstops>1</Pitstops>
 <FinishStatus>Finished Normally</FinishStatus>
 <ControlAndAids startLap="1" endLap="10">PlayerControl,TC=3,ABS=2,Stability=2,AutoShift=3,Clutch,Invulnerable,Opposite,AutoLift,AutoBlip</ControlAndAids>
 <Swap startLap="1" endLap="3">Paul Schuman</Swap><Swap startLap="4" endLap="5">Malek1th</Swap><Swap startLap="6" endLap="8">Nick Woodbury</Swap><Swap startLap="9" endLap="10">Malek1th</Swap>

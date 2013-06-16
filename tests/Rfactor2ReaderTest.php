@@ -509,6 +509,10 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
         // Get first participant drivers
         $drivers = $participants[0]->getDrivers();
 
+        // Validate pitstop counter, it should be incremented when lower
+        // than the actual swaps. XML says 1 in this case.
+        $this->assertSame(3, $participants[0]->getPitstops());
+
         // Validate drivers
         $this->assertSame(3, count($drivers));
         $this->assertSame('Paul Schuman', $drivers[0]->getName());

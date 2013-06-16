@@ -577,8 +577,13 @@ class Data_Reader_Rfactor2 extends Data_Reader {
             // Remember drivers by name so we can re-use them
             $drivers_by_name = array();
 
+            // Remember the number of swaps (always -1 of number of swap
+            // elements in XML, because first driver starts on grid, which is
+            // actually not really a swap)
+            $number_of_swaps = 0;
+
             // Loop each swap
-            foreach ($swaps_xml as $swap_xml)
+            foreach ($swaps_xml as $swap_xml_key => $swap_xml)
             {
                 // Empty driver name
                 if ( ! $driver_name = $swap_xml->nodeValue)
@@ -618,6 +623,14 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                     'end_lap'    =>  (int) $swap_xml->getAttribute('endLap'),
                     'driver'     =>  $swap_driver,
                 );
+
+                // Not first swap element, so this is a real swap that happend
+                // within pits
+                if ($swap_xml_key > 0)
+                {
+                    // Increment the number of swaps
+                    $number_of_swaps++;
+                }
             }
 
             // No drivers yet, so no drivers through swap info
@@ -626,6 +639,13 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                 // Add main driver to drivers array because we could not get
                 // it from the swap info
                 $drivers[] = $main_driver;
+            }
+
+            // Pitcounter is lower than number of swaps
+            if ($participant->getPitstops() < $number_of_swaps)
+            {
+                // Set pitstop counter to the number of swaps
+                $participant->setPitstops($number_of_swaps);
             }
 
             // Add vehicle to participant
