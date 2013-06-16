@@ -123,6 +123,20 @@ class SessionTest extends PHPUnit_Framework_TestCase {
 
         // Validate best lap
         $this->assertSame($participants[2]->getBestLap(), $lap);
+
+
+        //-- Create participant with 2 uncompleted laps and test NULL best lap
+        //   from the session
+        $participant = new Participant;
+		$participant->setLaps(array(
+			new Lap,
+			new Lap,
+		));
+		$session = new Session;
+		$session->setParticipants(array($participant));
+
+		// No best lap
+		$this->assertNull($session->getBestLap());
     }
 
     /**
