@@ -13,42 +13,39 @@ class Helper {
     /**
      * Format seconds to a (h:)i:s.u format
      *
+     * @param   float   $seconds
      * @return  string
      */
     public static function formatTime($seconds)
     {
-    	// Default micro time
-    	$micro = 0;
-
-    	// Contains decimal separater
-    	if (strpos((string) $seconds, '.'))
-    	{
-    		// Get micro the nasty way so we always get the decimals as
-    		// original rounded
-    		$seconds_arr = explode('.', (string) $seconds);
-    		$micro = (int) $seconds_arr[1];
-    	}
-
         // Make seconds without micro
-        $seconds = (int) $seconds;
+        $round_seconds = (int) $seconds;
 
         // Get hours
-        $hours = floor($seconds / 3600);
+        $hours = floor($round_seconds / 3600);
 
         // Get minutes
-        $minutes = floor(($seconds - ($hours*3600)) / 60);
+        $minutes = floor(($round_seconds - ($hours*3600)) / 60);
 
         // Get remaining seconds
-		$secs = floor(($seconds - ($hours*3600) - ($minutes*60)));
+        $secs = floor(($round_seconds - ($hours*3600) - ($minutes*60)));
 
-        // Make format
-        $format = sprintf('%02d:%02d.%04d', $minutes, $secs, $micro);
+        // Make the remanings seconds including micro to format easier
+        $secs_micro = round($seconds - $round_seconds, 4) + $secs;
+
+        // Format seconds. Decimal is always 4 digits, seconds has always
+        // a leading zero, which is fixed through str_pad
+        $secs_formatted = str_pad(
+            sprintf('%02.4f', $secs_micro), 7, 0, STR_PAD_LEFT);
+
+        // Format
+        $format = sprintf('%02d:%s', $minutes, $secs_formatted);
 
         // Has hours
         if ($hours)
         {
-			// Prefix format with hours
-			$format = sprintf('%02d:', $hours).$format;
+            // Prefix format with hours
+            $format = sprintf('%02d:', $hours).$format;
         }
 
         // Return the format

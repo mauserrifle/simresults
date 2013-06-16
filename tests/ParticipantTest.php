@@ -56,13 +56,13 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
         //-- Run twice to test cache
         for($i=0; $i<2; $i++)
         {
-	        // Get laps by time
-	        $laps_by_time = $participant->getLapsSortedByTime();
+            // Get laps by time
+            $laps_by_time = $participant->getLapsSortedByTime();
 
-	        // Validate laps
-	        $this->assertSame($laps[1], $laps_by_time[0]);
-	        $this->assertSame($laps[0], $laps_by_time[1]);
-	        $this->assertSame($laps[2], $laps_by_time[2]);
+            // Validate laps
+            $this->assertSame($laps[1], $laps_by_time[0]);
+            $this->assertSame($laps[0], $laps_by_time[1]);
+            $this->assertSame($laps[2], $laps_by_time[2]);
         }
     }
 
@@ -86,9 +86,19 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
         //-- Run twice to test cache
         for($i=0; $i<2; $i++)
         {
-        	// Test number of completed laps
-        	$this->assertSame(3, $participant->getNumberOfCompletedLaps());
+            // Test number of completed laps
+            $this->assertSame(3, $participant->getNumberOfCompletedLaps());
         }
+
+
+        //-- Create participant with 2 uncompleted laps and test NULL best lap
+        $participant = new Participant;
+        $participant->setLaps(array(
+            new Lap,
+            new Lap,
+        ));
+        // No best lap
+        $this->assertNull($participant->getBestLap());
     }
 
     /**
@@ -183,13 +193,13 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
         //-- Run twice to test cache
         for($i=0; $i<2; $i++)
         {
-	        // Get the laps sorted by sector 3
-	        $laps = $participant->getLapsSortedBySector(3);
+            // Get the laps sorted by sector 3
+            $laps = $participant->getLapsSortedBySector(3);
 
-	        // Validate the laps
-	        $this->assertSame($participant->getLap(2), $laps[0]);
-	        $this->assertSame($participant->getLap(1), $laps[1]);
-	        $this->assertSame($participant->getLap(3), $laps[2]);
+            // Validate the laps
+            $this->assertSame($participant->getLap(2), $laps[0]);
+            $this->assertSame($participant->getLap(1), $laps[1]);
+            $this->assertSame($participant->getLap(3), $laps[2]);
         }
     }
 
@@ -228,19 +238,19 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
      */
     public function testDriverByNumber()
     {
-    	// Create new participant
-    	$participant = new Participant;
+        // Create new participant
+        $participant = new Participant;
 
-    	// Add drivers
-    	$participant->setDrivers(array(
-			$driver1 = new Driver,
-    		$driver2 = new Driver,
-    	));
+        // Add drivers
+        $participant->setDrivers(array(
+            $driver1 = new Driver,
+            $driver2 = new Driver,
+        ));
 
-    	// Validate drivers
-    	$this->assertSame($driver1, $participant->getDriver());
-    	$this->assertSame($driver1, $participant->getDriver(1));
-    	$this->assertSame($driver2, $participant->getDriver(2));
+        // Validate drivers
+        $this->assertSame($driver1, $participant->getDriver());
+        $this->assertSame($driver1, $participant->getDriver(1));
+        $this->assertSame($driver2, $participant->getDriver(2));
     }
 
     /**
@@ -254,8 +264,8 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
         //-- Run twice to test cache
         for($i=0; $i<2; $i++)
         {
-        	// Validate
-        	$this->assertSame(2, $participant->getNumberOfLapsLed());
+            // Validate
+            $this->assertSame(2, $participant->getNumberOfLapsLed());
         }
     }
 
@@ -286,20 +296,20 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
         //-- Run twice to test cache
         for($i=0; $i<2; $i++)
         {
-	        // Get average lap
-	        $average_lap = $participant->getAverageLap();
+            // Get average lap
+            $average_lap = $participant->getAverageLap();
 
-	        // Validate
-	        $this->assertSame(136.557, $average_lap->getTime());
-	        $this->assertSame(
-	            array(43.1343, 39.9667, 53.456),
-	            $average_lap->getSectorTimes()
-	        );
-	        $this->assertSame($participant, $average_lap->getParticipant());
-	        $this->assertSame(array(), $average_lap->getAids());
-	        $this->assertNull($average_lap->getNumber());
-	        $this->assertNull($average_lap->getPosition());
-	        $this->assertNull($average_lap->getElapsedSeconds());
+            // Validate
+            $this->assertSame(136.557, $average_lap->getTime());
+            $this->assertSame(
+                array(43.1343, 39.9667, 53.456),
+                $average_lap->getSectorTimes()
+            );
+            $this->assertSame($participant, $average_lap->getParticipant());
+            $this->assertSame(array(), $average_lap->getAids());
+            $this->assertNull($average_lap->getNumber());
+            $this->assertNull($average_lap->getPosition());
+            $this->assertNull($average_lap->getElapsedSeconds());
         }
 
         // Validate empty participant
@@ -324,20 +334,20 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
         //-- Run twice to test cache
         for($i=0; $i<2; $i++)
         {
-	        // Get average lap
-	        $possible_lap = $participant->getBestPossibleLap();
+            // Get average lap
+            $possible_lap = $participant->getBestPossibleLap();
 
-	        // Validate
-	        $this->assertSame(121.03, $possible_lap->getTime());
-	        $this->assertSame(
-	            array(39.601, 33.500, 47.929),
-	            $possible_lap->getSectorTimes()
-	        );
-	        $this->assertSame($participant, $possible_lap->getParticipant());
-	        $this->assertSame(array(), $possible_lap->getAids());
-	        $this->assertNull($possible_lap->getNumber());
-	        $this->assertNull($possible_lap->getPosition());
-	        $this->assertNull($possible_lap->getElapsedSeconds());
+            // Validate
+            $this->assertSame(121.03, $possible_lap->getTime());
+            $this->assertSame(
+                array(39.601, 33.500, 47.929),
+                $possible_lap->getSectorTimes()
+            );
+            $this->assertSame($participant, $possible_lap->getParticipant());
+            $this->assertSame(array(), $possible_lap->getAids());
+            $this->assertNull($possible_lap->getNumber());
+            $this->assertNull($possible_lap->getPosition());
+            $this->assertNull($possible_lap->getElapsedSeconds());
         }
 
         // Validate empty participant

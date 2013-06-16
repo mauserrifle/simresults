@@ -577,55 +577,75 @@ class Data_Reader_Rfactor2 extends Data_Reader {
             // Remember drivers by name so we can re-use them
             $drivers_by_name = array();
 
+            // Remember the number of swaps (always -1 of number of swap
+            // elements in XML, because first driver starts on grid, which is
+            // actually not really a swap)
+            $number_of_swaps = 0;
+
             // Loop each swap
-            foreach ($swaps_xml as $swap_xml)
+            foreach ($swaps_xml as $swap_xml_key => $swap_xml)
             {
                 // Empty driver name
                 if ( ! $driver_name = $swap_xml->nodeValue)
                 {
-                	// Skip this swap
-                	continue;
+                    // Skip this swap
+                    continue;
                 }
 
                 // Driver already processed
                 if (array_key_exists($driver_name, $drivers_by_name))
                 {
-                	// Use existing found driver instance
-                	$swap_driver = $drivers_by_name[$driver_name];
+                    // Use existing found driver instance
+                    $swap_driver = $drivers_by_name[$driver_name];
                 }
                 // New driver
                 else
                 {
-	                // Create new driver
-	                $swap_driver = new Driver;
+                    // Create new driver
+                    $swap_driver = new Driver;
 
-	                // Set name
-	                $swap_driver->setName($driver_name);
+                    // Set name
+                    $swap_driver->setName($driver_name);
 
-	                // Use human state the same of main driver within XML
-	                $swap_driver->setHuman($main_driver->isHuman());
+                    // Use human state the same of main driver within XML
+                    $swap_driver->setHuman($main_driver->isHuman());
 
-	                // Add swap driver to drivers array
-	                $drivers[] = $swap_driver;
+                    // Add swap driver to drivers array
+                    $drivers[] = $swap_driver;
 
-	                // Remember swap driver by name
-	                $drivers_by_name[$driver_name] = $swap_driver;
+                    // Remember swap driver by name
+                    $drivers_by_name[$driver_name] = $swap_driver;
                 }
 
                 // Add swap driver to drivers per lap
                 $drivers_per_laps[] = array(
-					'start_lap'  =>  (int) $swap_xml->getAttribute('startLap'),
-                	'end_lap'    =>  (int) $swap_xml->getAttribute('endLap'),
-                	'driver'     =>  $swap_driver,
+                    'start_lap'  =>  (int) $swap_xml->getAttribute('startLap'),
+                    'end_lap'    =>  (int) $swap_xml->getAttribute('endLap'),
+                    'driver'     =>  $swap_driver,
                 );
+
+                // Not first swap element, so this is a real swap that happend
+                // within pits
+                if ($swap_xml_key > 0)
+                {
+                    // Increment the number of swaps
+                    $number_of_swaps++;
+                }
             }
 
             // No drivers yet, so no drivers through swap info
             if ( ! $drivers)
             {
-            	// Add main driver to drivers array because we could not get
-            	// it from the swap info
-            	$drivers[] = $main_driver;
+                // Add main driver to drivers array because we could not get
+                // it from the swap info
+                $drivers[] = $main_driver;
+            }
+
+            // Pitcounter is lower than number of swaps
+            if ($participant->getPitstops() < $number_of_swaps)
+            {
+                // Set pitstop counter to the number of swaps
+                $participant->setPitstops($number_of_swaps);
             }
 
             // Add vehicle to participant
@@ -677,11 +697,11 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                         // Remember this driver is human
                         $is_human_by_aids = true;
                     }
-                	// Is a non-human player and no human detection yet
+                    // Is a non-human player and no human detection yet
                     elseif ( ($aid_name === 'UnknownControl' OR
-                    		  $aid_name === 'AIControl')
-                    		AND
-                    	    $is_human_by_aids === null)
+                              $aid_name === 'AIControl')
+                            AND
+                            $is_human_by_aids === null)
                     {
                         // Remember this driver is not human
                         $is_human_by_aids = false;
@@ -702,8 +722,8 @@ class Data_Reader_Rfactor2 extends Data_Reader {
             // No aids
             if ( ! $aids)
             {
-            	// Always human
-            	$is_human_by_aids = true;
+                // Always human
+                $is_human_by_aids = true;
             }
 
 
@@ -733,8 +753,8 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                 // Valid value
                 if ($lap_xml->getAttribute('et') !== '--.---')
                 {
-                	// Create float value
-                	$elapsed_seconds = (float) $lap_xml->getAttribute('et');
+                    // Create float value
+                    $elapsed_seconds = (float) $lap_xml->getAttribute('et');
                 }
 
                 // Set lap values
@@ -778,8 +798,8 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                 // No driver yet
                 if ( ! $lap->getDriver())
                 {
-                	// Just put first driver on lap
-                	$lap->setDriver($drivers[0]);
+                    // Just put first driver on lap
+                    $lap->setDriver($drivers[0]);
                 }
 
                 // Add each sector available
@@ -807,7 +827,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                 // Force human mark on all drivers
                 foreach ($drivers as $driver)
                 {
-                	$driver->setHuman($is_human_by_aids);
+                    $driver->setHuman($is_human_by_aids);
                 }
             }
 
@@ -856,11 +876,11 @@ class Data_Reader_Rfactor2 extends Data_Reader {
             // corrupted
             foreach ($participants as $participant)
             {
-	            // By default all laps of participant are corrupted
-	            $all_corrupted = true;
+                // By default all laps of participant are corrupted
+                $all_corrupted = true;
 
-	            // By default we have no corruption at all
-	            $corruption = false;
+                // By default we have no corruption at all
+                $corruption = false;
 
                 // Loop each lap to see whether all laps are corrupted
                 foreach ($participant->getLaps() as $lap)
@@ -869,44 +889,44 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                     if ( ! in_array($lap->getPosition(),
                             $corrupted_lap_positions))
                     {
-                    	// Not all corrupted
-                    	$all_corrupted = false;
+                        // Not all corrupted
+                        $all_corrupted = false;
                     }
                     // Corrupted
                     else
                     {
-                    	// No position known
-                    	$lap->setPosition(null);
+                        // No position known
+                        $lap->setPosition(null);
 
-                    	// We have corruption
-                    	$corruption = true;
+                        // We have corruption
+                        $corruption = true;
                     }
                 }
 
-				// All are corrupted
-				if ($all_corrupted)
-				{
-					// Unset all participant laps
-					$participant->setLaps(array());
+                // All are corrupted
+                if ($all_corrupted)
+                {
+                    // Unset all participant laps
+                    $participant->setLaps(array());
 
-					// We need to refill all laps by lap number array
-					$refill_all_laps_by_lap_number = true;
-				}
+                    // We need to refill all laps by lap number array
+                    $refill_all_laps_by_lap_number = true;
+                }
             }
 
             // Refill all laps by lap number array because laps are removed
             if ($refill_all_laps_by_lap_number)
             {
-	            $all_laps_by_lap_number = array();
-	            foreach ($participants as $participant)
-	            {
-	            	// Loop each lap
-	                foreach ($participant->getLaps() as $lap)
-	                {
-						// Remember lap
-	                 	$all_laps_by_lap_number[$lap->getNumber()][] = $lap;
-	                }
-	            }
+                $all_laps_by_lap_number = array();
+                foreach ($participants as $participant)
+                {
+                    // Loop each lap
+                    foreach ($participant->getLaps() as $lap)
+                    {
+                        // Remember lap
+                         $all_laps_by_lap_number[$lap->getNumber()][] = $lap;
+                    }
+                }
             }
         }
 
@@ -941,15 +961,15 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                     // a has no elapsed seconds
                     if ( ! $a->getElapsedSeconds())
                     {
-                    	// $b is the faster
-                   		return 1;
+                        // $b is the faster
+                           return 1;
                     }
 
                     // b has no elapsed seconds
                     if ( ! $b->getElapsedSeconds())
                     {
-                    	// $a is faster
-                   		return -1;
+                        // $a is faster
+                           return -1;
                     }
 
                     // a lap is not completed
@@ -968,7 +988,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
 
                     // Return normal comparison
                     return ($a->getElapsedSeconds() < $b->getElapsedSeconds())
-                    	      ? -1 : 1;
+                              ? -1 : 1;
                 });
 
                 // Make 100% sure we have proper array keys
@@ -980,7 +1000,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                     // Set new position if it's not null (null = corruption)
                     if ($lap->getPosition() !== null)
                     {
-                    	$lap->setPosition($lap_key+1);
+                        $lap->setPosition($lap_key+1);
                     }
                 }
             }
@@ -1141,8 +1161,8 @@ class Data_Reader_Rfactor2 extends Data_Reader {
         $allowed_vehicles_objects = array();
         foreach ($allowed_vehicles as $vehicle_name)
         {
-        	$vehicle = new Vehicle;
-        	$vehicle->setName($vehicle_name);
+            $vehicle = new Vehicle;
+            $vehicle->setName($vehicle_name);
             $allowed_vehicles_objects[] = $vehicle;
         }
 
