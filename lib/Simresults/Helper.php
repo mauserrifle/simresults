@@ -11,12 +11,14 @@ namespace Simresults;
 class Helper {
 
     /**
-     * Format seconds to a (h:)i:s.u format
+     * Format seconds to a (h:)i:s.u format. Hours are optional by default and 
+     * may be forced through param $force_hours
      *
-     * @param   float   $seconds
+     * @param   float    $seconds
+     * @param   boolean  $force_hours  force hours format (even 00:)
      * @return  string
      */
-    public static function formatTime($seconds)
+    public static function formatTime($seconds, $force_hours=false)
     {
         // Make seconds without micro
         $round_seconds = (int) $seconds;
@@ -41,8 +43,8 @@ class Helper {
         // Format
         $format = sprintf('%02d:%s', $minutes, $secs_formatted);
 
-        // Has hours
-        if ($hours)
+        // Has hours or hours are forced into markup
+        if ($hours OR $force_hours)
         {
             // Prefix format with hours
             $format = sprintf('%02d:', $hours).$format;

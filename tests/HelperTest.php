@@ -44,6 +44,9 @@ class HelperTest extends PHPUnit_Framework_TestCase {
 
         // Validate time with hours
         $this->assertSame('01:31:56.5879', Helper::formatTime(5516.5879));
+
+        // Validate forcing hours
+        $this->assertSame('00:01:40.5279', Helper::formatTime(100.5279, true));
     }
 
     /**
