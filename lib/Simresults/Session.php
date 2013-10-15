@@ -1068,5 +1068,3 @@ class Session {
         return $this->cache_max_position = $max_position;
     }
 }
-
-?>

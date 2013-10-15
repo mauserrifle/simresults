@@ -1202,5 +1202,3 @@ class Data_Reader_Rfactor2 extends Data_Reader {
     }
 
 }
-
-?>
