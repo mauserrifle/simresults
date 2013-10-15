@@ -755,5 +755,3 @@ class Participant {
         return $this->cache_best_possible_lap = $best_possible_lap;
     }
 }
-
-?>

@@ -30,12 +30,12 @@ class VehicleTest extends PHPUnit_Framework_TestCase {
 
         // Set names
         $vehicle->setName('Lola T280 JL Lafosse');
-        $vehicle->setType('LolaT280');
+        $vehicle->setType('LolaT280 ('); // Set ( char to test for regex errors
         $vehicle->setClass('LolaT280');
 
         // Validate friendly name
         $this->assertSame(
-                'Lola T280 JL Lafosse - LolaT280',
+                'Lola T280 JL Lafosse - LolaT280 (',
                 $vehicle->getFriendlyName()
         );
 
@@ -44,7 +44,7 @@ class VehicleTest extends PHPUnit_Framework_TestCase {
 
         // Validate friendly name
         $this->assertSame(
-                'Lola T280 JL Lafosse - LolaT280 (LolaT280B)',
+                'Lola T280 JL Lafosse - LolaT280 ( (LolaT280B)',
                 $vehicle->getFriendlyName()
         );
     }

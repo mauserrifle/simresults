@@ -115,5 +115,3 @@ abstract class Data_Reader {
     protected function init() { }
 
 }
-
-?>

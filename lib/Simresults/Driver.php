@@ -86,5 +86,3 @@ class Driver {
         return $this->human;
     }
 }
-
-?>
