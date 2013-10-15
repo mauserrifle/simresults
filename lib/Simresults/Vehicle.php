@@ -133,7 +133,9 @@ class Vehicle {
         if ($vehicle_type = $this->getType())
         {
             // Course name is not already part of the name
-            if ( ! preg_match(sprintf('/\b(%s)\b/i', $vehicle_type), $vehicle_name))
+            if ( ! preg_match(
+                       sprintf('/\b(%s)\b/i', preg_quote($vehicle_type)), 
+                       $vehicle_name))
             {
                 // Add course name to vehicle name
                 $vehicle_name .= ' - '.$vehicle_type;
@@ -144,7 +146,9 @@ class Vehicle {
         if ($vehicle_class = $this->getClass())
         {
             // Event name is not already part of the name
-            if ( ! preg_match(sprintf('/\b(%s)\b/i', $vehicle_class), $vehicle_name))
+            if ( ! preg_match(
+                       sprintf('/\b(%s)\b/i', preg_quote($vehicle_class)), 
+                       $vehicle_name))
             {
                 // Add event to vehicle name
                 $vehicle_name .= sprintf(' (%s)',$vehicle_class);

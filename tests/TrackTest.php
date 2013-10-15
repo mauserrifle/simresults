@@ -30,13 +30,14 @@ class TrackTest extends PHPUnit_Framework_TestCase {
 
         // Set names
         $track->setVenue('Sebring [Virtua_LM]');
-        $track->setCourse('Sebring 12h Course');
+        $track->setCourse('Sebring 12h Course (');
         $track->setEvent('12h Course');
 
         // Validate friendly name
         $this->assertSame(
-                'Sebring [Virtua_LM], Sebring 12h Course',
-                $track->getFriendlyName()
+            'Sebring [Virtua_LM], Sebring 12h Course (', // Set ( char to test 
+                                                         // for regex errors
+            $track->getFriendlyName()
         );
 
         // Change event name
@@ -44,8 +45,8 @@ class TrackTest extends PHPUnit_Framework_TestCase {
 
         // Validate friendly name
         $this->assertSame(
-                'Sebring [Virtua_LM], Sebring 12h Course (12h Alternative course)',
-                $track->getFriendlyName()
+            'Sebring [Virtua_LM], Sebring 12h Course ( (12h Alternative course)',
+            $track->getFriendlyName()
         );
     }
 

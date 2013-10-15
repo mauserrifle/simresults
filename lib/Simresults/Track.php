@@ -134,7 +134,9 @@ class Track {
         if ($track_course = $this->getCourse())
         {
             // Course name is not already part of the name
-            if ( ! preg_match(sprintf('/\b(%s)\b/i', $track_course), $track_name))
+            if ( ! preg_match(
+                       sprintf('/\b(%s)\b/i', preg_quote($track_course)), 
+                       $track_name))
             {
                 // Add course name to track name
                 $track_name .= ', '.$track_course;
@@ -145,7 +147,9 @@ class Track {
         if ($track_event = $this->getEvent())
         {
             // Event name is not already part of the name
-            if ( ! preg_match(sprintf('/\b(%s)\b/i', $track_event), $track_name))
+            if ( ! preg_match(
+                       sprintf('/\b(%s)\b/i', preg_quote($track_event)), 
+                       $track_name))
             {
                 // Add event to track name
                 $track_name .= sprintf(' (%s)',$track_event);
