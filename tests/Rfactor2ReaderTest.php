@@ -200,8 +200,8 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
 
         // Validate compound values
         // TODO: ISI should fix this so we can map the ints to proper compounds
-        //       or have a string version of the compound. This implementation 
-        //       is temporary! Extra info/findings are found at the ISI forums: 
+        //       or have a string version of the compound. This implementation
+        //       is temporary! Extra info/findings are found at the ISI forums:
         //       http://isiforums.net/f/showthread.php/16512
         $this->assertSame('0', $laps[1]->getFrontCompound());
         $this->assertSame('0', $laps[1]->getRearCompound());
@@ -215,6 +215,14 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertSame('4', $laps[13]->getRearCompound());
         $this->assertSame('5', $laps[16]->getFrontCompound());
         $this->assertSame('5', $laps[16]->getRearCompound());
+
+        // Test for different front and rear values
+        $this->assertSame('1', $laps[18]->getFrontCompound());
+        $this->assertSame('4', $laps[18]->getRearCompound());
+
+        // Test for proper NULL values
+        $this->assertNull($laps[19]->getFrontCompound());
+        $this->assertNull($laps[19]->getRearCompound());
     }
 
     /**

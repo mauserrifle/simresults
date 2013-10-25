@@ -757,8 +757,10 @@
 <Lap num="16" p="10" et="803.6871" fuel="0.910" fcompound="5" rcompound="5">--.----</Lap>
 <Lap num="17" p="10" et="882.3235" s1="13.2724" s2="22.2355" s3="19.7421" fuel="0.902" fcompound="5" rcompound="5">55.2499</Lap>
 <Lap num="18" p="10" et="937.5734" fuel="0.922" fcompound="5" rcompound="5">--.----</Lap>
+<Lap num="19" p="10" et="937.5734" fuel="0.922" fcompound="1" rcompound="4">--.----</Lap>
+<Lap num="20" p="10" et="937.5734" fuel="0.922" rcompound="">--.----</Lap>
 <BestLapTime>53.9968</BestLapTime>
-<Laps>18</Laps>
+<Laps>20</Laps>
 <Pitstops>6</Pitstops>
 <FinishStatus>None</FinishStatus>
 <ControlAndAids startLap="1" endLap="18">PlayerControl,Invulnerable</ControlAndAids>

@@ -757,6 +757,21 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                     $elapsed_seconds = (float) $lap_xml->getAttribute('et');
                 }
 
+                // Default compound values
+                $front_compound = null;
+                $rear_compound = null;
+
+                // Front compound isset
+                if (($fcompound = $lap_xml->getAttribute('fcompound')) !== '')
+                {
+                    $front_compound = $fcompound;
+                }
+                // Rear compound isset
+                if (($rcompound = $lap_xml->getAttribute('rcompound')) !== '')
+                {
+                    $rear_compound = $rcompound;
+                }
+
                 // Set lap values
                 $lap
                     ->setTime($lap_time)
@@ -764,8 +779,8 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                     ->setNumber( (int) $lap_xml->getAttribute('num'))
                     ->setParticipant($participant)
                     ->setElapsedSeconds($elapsed_seconds)
-                    ->setFrontCompound($lap_xml->getAttribute('fcompound'))
-                    ->setRearCompound($lap_xml->getAttribute('rcompound'));
+                    ->setFrontCompound($front_compound)
+                    ->setRearCompound($rear_compound);
 
                 // Find lap aids
                 foreach ($aids as $aid)
