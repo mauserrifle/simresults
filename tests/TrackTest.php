@@ -35,7 +35,7 @@ class TrackTest extends PHPUnit_Framework_TestCase {
 
         // Validate friendly name
         $this->assertSame(
-            'Sebring [Virtua_LM], Sebring 12h Course (', // Set ( char to test 
+            'Sebring [Virtua_LM], Sebring 12h Course (', // Set ( char to test
                                                          // for regex errors
             $track->getFriendlyName()
         );
