@@ -763,7 +763,9 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                     ->setPosition($lap_position)
                     ->setNumber( (int) $lap_xml->getAttribute('num'))
                     ->setParticipant($participant)
-                    ->setElapsedSeconds($elapsed_seconds);
+                    ->setElapsedSeconds($elapsed_seconds)
+                    ->setFrontCompound($lap_xml->getAttribute('fcompound'))
+                    ->setRearCompound($lap_xml->getAttribute('rcompound'));
 
                 // Find lap aids
                 foreach ($aids as $aid)

@@ -1,0 +1,768 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE rF [
+<!ENTITY rFEnt "rFactor Entity">
+]>
+<rFactorXML version="1.0">
+<RaceResults>
+<Setting>Race Weekend</Setting>
+<PlayerFile>player</PlayerFile>
+<DateTime>1382700769</DateTime>
+<TimeString>2013/10/25 13:32:49</TimeString>
+<Mod>ALL_TRACKS_AND_CARS_10.RFM</Mod>
+<Season></Season>
+<TrackVenue>Malaysia</TrackVenue>
+<TrackCourse>Malaysian South Loop</TrackCourse>
+<TrackEvent>South Loop</TrackEvent>
+<TrackLength>2597.5</TrackLength>
+<GameVersion>1.342</GameVersion>
+<Dedicated>0</Dedicated>
+<ConnectionType upload="128" download="128">Cable/DSL 128 kbps upload</ConnectionType>
+<RaceLaps>4</RaceLaps>
+<RaceTime>0</RaceTime>
+<MechFailRate>2</MechFailRate>
+<DamageMult>50</DamageMult>
+<FuelMult>1</FuelMult>
+<TireMult>1</TireMult>
+<VehiclesAllowed>FISI_2012</VehiclesAllowed>
+<ParcFerme>3</ParcFerme>
+<FixedSetups>0</FixedSetups>
+<FreeSettings>11</FreeSettings>
+<FixedUpgrades>0</FixedUpgrades>
+<Practice1>
+<DateTime>1382700805</DateTime>
+<TimeString>2013/10/25 13:33:25</TimeString>
+<Laps>2147483647</Laps>
+<Minutes>120</Minutes>
+<Stream>
+<Score et="53.6">Martijn Bont(1) lap=0 point=1 t=-1.000 et=53.593</Score>
+<Score et="66.2">Maurice van der Star(0) lap=0 point=1 t=-1.000 et=66.197</Score>
+<Score et="72.9">Martijn Bont(1) lap=0 point=2 t=-1.000 et=72.863</Score>
+<Score et="90.8">Martijn Bont(1) lap=1 point=0 t=-1.000 et=90.764</Score>
+<Score et="102.6">Martijn Bont(1) lap=1 point=1 t=11.843 et=102.607</Score>
+<Score et="104.8">Peter Rayfield(6) lap=0 point=1 t=-1.000 et=104.839</Score>
+<Score et="106.1">Maurice van der Star(0) lap=0 point=2 t=-1.000 et=106.097</Score>
+<Score et="120.7">Antonio Segura(5) lap=0 point=1 t=-1.000 et=120.738</Score>
+<Score et="121.9">Martijn Bont(1) lap=1 point=2 t=31.102 et=121.866</Score>
+<Score et="124.2">Peter Rayfield(6) lap=0 point=2 t=-1.000 et=124.217</Score>
+<Score et="126.7">Maurice van der Star(0) lap=1 point=0 t=-1.000 et=126.732</Score>
+<Score et="139.8">Martijn Bont(1) lap=2 point=0 t=48.981 et=139.746</Score>
+<Score et="140.1">Antonio Segura(5) lap=0 point=2 t=-1.000 et=140.128</Score>
+<Score et="141.1">Maurice van der Star(0) lap=1 point=1 t=14.335 et=141.068</Score>
+<Score et="142.1">Peter Rayfield(6) lap=1 point=0 t=-1.000 et=142.135</Score>
+<Score et="147.5">Vlad Podraza(9) lap=0 point=1 t=-1.000 et=147.455</Score>
+<Score et="151.6">Martijn Bont(1) lap=2 point=1 t=11.827 et=151.573</Score>
+<Score et="154.0">Peter Rayfield(6) lap=1 point=1 t=11.821 et=153.956</Score>
+<Score et="158.2">Antonio Segura(5) lap=1 point=0 t=-1.000 et=158.168</Score>
+<Score et="167.1">Vlad Podraza(9) lap=0 point=2 t=-1.000 et=167.090</Score>
+<Score et="170.0">Antonio Segura(5) lap=1 point=1 t=11.841 et=170.009</Score>
+<Score et="170.9">Martijn Bont(1) lap=2 point=2 t=31.108 et=170.854</Score>
+<Score et="173.3">Peter Rayfield(6) lap=1 point=2 t=31.182 et=173.317</Score>
+<Score et="181.4">Maurice van der Star(0) lap=1 point=2 t=54.700 et=181.432</Score>
+<Score et="185.3">Vlad Podraza(9) lap=1 point=0 t=-1.000 et=185.331</Score>
+<Score et="188.7">Martijn Bont(1) lap=3 point=0 t=48.989 et=188.734</Score>
+<Score et="189.3">Antonio Segura(5) lap=1 point=2 t=31.169 et=189.337</Score>
+<Score et="191.2">Peter Rayfield(6) lap=2 point=0 t=49.098 et=191.233</Score>
+<Score et="197.2">Vlad Podraza(9) lap=1 point=1 t=11.822 et=197.154</Score>
+<Score et="200.6">Martijn Bont(1) lap=3 point=1 t=11.833 et=200.568</Score>
+<Score et="203.1">Peter Rayfield(6) lap=2 point=1 t=11.831 et=203.064</Score>
+<Score et="203.2">Maurice van der Star(0) lap=2 point=0 t=76.483 et=203.215</Score>
+<Score et="207.3">Antonio Segura(5) lap=2 point=0 t=49.125 et=207.293</Score>
+<Score et="207.6">Maurice van der Star(0) lap=2 point=1 t=-1.000 et=207.706</Score>
+<Score et="207.6">Maurice van der Star(0) lap=2 point=2 t=-1.000 et=207.706</Score>
+<Score et="207.6">Maurice van der Star(0) lap=3 point=0 t=-1.000 et=207.706</Score>
+<Score et="216.7">Vlad Podraza(9) lap=1 point=2 t=31.354 et=216.686</Score>
+<Score et="219.8">Martijn Bont(1) lap=3 point=2 t=31.095 et=219.829</Score>
+<Score et="220.5">Antonio Segura(5) lap=2 point=1 t=13.188 et=220.481</Score>
+<Score et="222.3">Peter Rayfield(6) lap=2 point=2 t=31.036 et=222.269</Score>
+<Score et="234.8">Vlad Podraza(9) lap=2 point=0 t=49.453 et=234.784</Score>
+<Score et="236.6">Mikhail Schubert(2) lap=0 point=1 t=-1.000 et=236.627</Score>
+<Score et="237.6">Martijn Bont(1) lap=4 point=0 t=48.866 et=237.601</Score>
+<Score et="239.8">Antonio Segura(5) lap=2 point=2 t=32.535 et=239.828</Score>
+<Score et="240.1">Peter Rayfield(6) lap=3 point=0 t=48.862 et=240.095</Score>
+<Score et="246.7">Vlad Podraza(9) lap=2 point=1 t=11.881 et=246.665</Score>
+<Score et="249.4">Martijn Bont(1) lap=4 point=1 t=11.825 et=249.425</Score>
+<Score et="251.9">Peter Rayfield(6) lap=3 point=1 t=11.818 et=251.913</Score>
+<Score et="255.9">Mikhail Schubert(2) lap=0 point=2 t=-1.000 et=255.846</Score>
+<Score et="257.8">Antonio Segura(5) lap=3 point=0 t=50.450 et=257.743</Score>
+<Score et="260.0">Maurice van der Star(0) lap=3 point=1 t=-1.000 et=260.018</Score>
+<Score et="266.3">Vlad Podraza(9) lap=2 point=2 t=31.468 et=266.252</Score>
+<Score et="268.7">Martijn Bont(1) lap=4 point=2 t=31.107 et=268.708</Score>
+<Score et="269.6">Antonio Segura(5) lap=3 point=1 t=11.819 et=269.563</Score>
+<Score et="271.2">Peter Rayfield(6) lap=3 point=2 t=31.065 et=271.160</Score>
+<Score et="273.6">Mikhail Schubert(2) lap=1 point=0 t=-1.000 et=273.614</Score>
+<Score et="283.2">Maurice van der Star(0) lap=3 point=2 t=-1.000 et=283.194</Score>
+<Score et="284.4">Vlad Podraza(9) lap=3 point=0 t=49.595 et=284.379</Score>
+<Score et="285.4">Mikhail Schubert(2) lap=1 point=1 t=11.770 et=285.384</Score>
+<Score et="286.5">Martijn Bont(1) lap=5 point=0 t=48.902 et=286.503</Score>
+<Score et="288.9">Antonio Segura(5) lap=3 point=2 t=31.104 et=288.847</Score>
+<Score et="289.1">Peter Rayfield(6) lap=4 point=0 t=48.967 et=289.062</Score>
+<Score et="296.2">Vlad Podraza(9) lap=3 point=1 t=11.826 et=296.205</Score>
+<Score et="298.4">Martijn Bont(1) lap=5 point=1 t=11.857 et=298.360</Score>
+<Score et="300.9">Peter Rayfield(6) lap=4 point=1 t=11.836 et=300.899</Score>
+<Score et="303.0">Maurice van der Star(0) lap=4 point=0 t=-1.000 et=302.982</Score>
+<Score et="304.6">Mikhail Schubert(2) lap=1 point=2 t=30.960 et=304.574</Score>
+<Score et="306.8">Antonio Segura(5) lap=4 point=0 t=49.032 et=306.776</Score>
+<Score et="315.8">Vlad Podraza(9) lap=3 point=2 t=31.377 et=315.757</Score>
+<Score et="316.6">Maurice van der Star(0) lap=4 point=1 t=13.608 et=316.590</Score>
+<Score et="317.7">Martijn Bont(1) lap=5 point=2 t=31.152 et=317.655</Score>
+<Score et="318.6">Antonio Segura(5) lap=4 point=1 t=11.830 et=318.605</Score>
+<Score et="320.2">Peter Rayfield(6) lap=4 point=2 t=31.167 et=320.229</Score>
+<Score et="321.5">Jack Basford(3) lap=0 point=1 t=-1.000 et=321.537</Score>
+<Score et="322.4">Mikhail Schubert(2) lap=2 point=0 t=48.757 et=322.371</Score>
+<Score et="333.9">Vlad Podraza(9) lap=4 point=0 t=49.476 et=333.855</Score>
+<Score et="334.2">Mikhail Schubert(2) lap=2 point=1 t=11.814 et=334.185</Score>
+<Score et="335.4">Martijn Bont(1) lap=6 point=0 t=48.930 et=335.433</Score>
+<Score et="337.9">Antonio Segura(5) lap=4 point=2 t=31.137 et=337.913</Score>
+<Score et="338.1">Peter Rayfield(6) lap=5 point=0 t=49.036 et=338.098</Score>
+<Score et="339.5">Maurice van der Star(0) lap=4 point=2 t=36.517 et=339.499</Score>
+<Score et="340.6">Jack Basford(3) lap=0 point=2 t=-1.000 et=340.542</Score>
+<Score et="345.7">Vlad Podraza(9) lap=4 point=1 t=11.854 et=345.709</Score>
+<Score et="347.3">Martijn Bont(1) lap=6 point=1 t=11.846 et=347.279</Score>
+<Score et="350.0">Peter Rayfield(6) lap=5 point=1 t=11.848 et=349.946</Score>
+<Score et="353.4">Mikhail Schubert(2) lap=2 point=2 t=30.979 et=353.350</Score>
+<Score et="355.8">Antonio Segura(5) lap=5 point=0 t=49.055 et=355.831</Score>
+<Score et="358.2">Jack Basford(3) lap=1 point=0 t=-1.000 et=358.189</Score>
+<Score et="358.9">Maurice van der Star(0) lap=5 point=0 t=55.888 et=358.871</Score>
+<Score et="365.1">Maurice van der Star(0) lap=5 point=1 t=-1.000 et=365.154</Score>
+<Score et="365.1">Maurice van der Star(0) lap=5 point=2 t=-1.000 et=365.154</Score>
+<Score et="365.1">Maurice van der Star(0) lap=6 point=0 t=-1.000 et=365.154</Score>
+<Score et="365.3">Vlad Podraza(9) lap=4 point=2 t=31.425 et=365.280</Score>
+<Score et="366.6">Martijn Bont(1) lap=6 point=2 t=31.157 et=366.590</Score>
+<Score et="367.7">Antonio Segura(5) lap=5 point=1 t=11.837 et=367.668</Score>
+<Score et="369.2">Peter Rayfield(6) lap=5 point=2 t=31.065 et=369.163</Score>
+<Score et="369.9">Jack Basford(3) lap=1 point=1 t=11.745 et=369.933</Score>
+<Score et="371.3">Mikhail Schubert(2) lap=3 point=0 t=48.877 et=371.248</Score>
+<Score et="383.4">Vlad Podraza(9) lap=5 point=0 t=49.511 et=383.366</Score>
+<Score et="384.3">Mikhail Schubert(2) lap=3 point=1 t=13.039 et=384.287</Score>
+<Score et="384.4">Martijn Bont(1) lap=7 point=0 t=48.959 et=384.392</Score>
+<Incident et="385.4">Martijn Bont(1) reported contact (1.00) with Immovable</Incident>
+<Incident et="385.4">Martijn Bont(1) reported contact (1.00) with Immovable</Incident>
+<Incident et="385.5">Martijn Bont(1) reported contact (0.00) with Immovable</Incident>
+<Incident et="385.5">Martijn Bont(1) reported contact (0.03) with Immovable</Incident>
+<Incident et="385.5">Martijn Bont(1) reported contact (1.00) with Immovable</Incident>
+<Incident et="386.7">Martijn Bont(1) reported contact (0.87) with Immovable</Incident>
+<Score et="387.0">Antonio Segura(5) lap=5 point=2 t=31.147 et=386.978</Score>
+<Score et="387.0">Peter Rayfield(6) lap=6 point=0 t=48.876 et=386.974</Score>
+<Incident et="387.7">Martijn Bont(1) reported contact (0.03) with Immovable</Incident>
+<Score et="388.8">Stelio Perkins(8) lap=0 point=1 t=-1.000 et=388.761</Score>
+<Score et="389.0">Jack Basford(3) lap=1 point=2 t=30.782 et=388.971</Score>
+<Score et="395.2">Vlad Podraza(9) lap=5 point=1 t=11.846 et=395.212</Score>
+<Score et="398.8">Peter Rayfield(6) lap=6 point=1 t=11.866 et=398.839</Score>
+<Score et="403.4">Mikhail Schubert(2) lap=3 point=2 t=32.151 et=403.399</Score>
+<Score et="404.9">Antonio Segura(5) lap=6 point=0 t=49.034 et=404.865</Score>
+<Score et="406.6">Jack Basford(3) lap=2 point=0 t=48.405 et=406.594</Score>
+<Score et="407.9">Stelio Perkins(8) lap=0 point=2 t=-1.000 et=407.843</Score>
+<Incident et="411.3">Martijn Bont(1) reported contact (0.13) with Immovable</Incident>
+<Score et="411.8">Maurice van der Star(0) lap=6 point=1 t=-1.000 et=411.799</Score>
+<Score et="414.7">Vlad Podraza(9) lap=5 point=2 t=31.325 et=414.690</Score>
+<Score et="416.8">Antonio Segura(5) lap=6 point=1 t=11.876 et=416.741</Score>
+<Score et="418.0">Peter Rayfield(6) lap=6 point=2 t=31.063 et=418.037</Score>
+<Score et="418.4">Jack Basford(3) lap=2 point=1 t=11.759 et=418.353</Score>
+<Score et="421.3">Mikhail Schubert(2) lap=4 point=0 t=49.998 et=421.246</Score>
+<Score et="425.6">Stelio Perkins(8) lap=1 point=0 t=-1.000 et=425.557</Score>
+<Score et="427.0">Martijn Bont(1) lap=7 point=1 t=42.589 et=426.981</Score>
+<Score et="432.8">Vlad Podraza(9) lap=6 point=0 t=49.454 et=432.820</Score>
+<Score et="433.1">Mikhail Schubert(2) lap=4 point=1 t=11.831 et=433.077</Score>
+<Score et="433.9">Maurice van der Star(0) lap=6 point=2 t=-1.000 et=433.853</Score>
+<Score et="435.9">Peter Rayfield(6) lap=7 point=0 t=48.930 et=435.904</Score>
+<Score et="436.0">Antonio Segura(5) lap=6 point=2 t=31.152 et=436.016</Score>
+<Score et="437.3">Stelio Perkins(8) lap=1 point=1 t=11.753 et=437.310</Score>
+<Score et="437.4">Jack Basford(3) lap=2 point=2 t=30.822 et=437.416</Score>
+<Score et="444.7">Vlad Podraza(9) lap=6 point=1 t=11.885 et=444.705</Score>
+<Score et="446.2">Martijn Bont(1) lap=7 point=2 t=61.835 et=446.226</Score>
+<Score et="447.8">Peter Rayfield(6) lap=7 point=1 t=11.899 et=447.803</Score>
+<Score et="452.2">Mikhail Schubert(2) lap=4 point=2 t=30.927 et=452.172</Score>
+<Score et="453.5">Maurice van der Star(0) lap=7 point=0 t=-1.000 et=453.516</Score>
+<Score et="453.9">Antonio Segura(5) lap=7 point=0 t=49.036 et=453.901</Score>
+<Score et="455.1">Jack Basford(3) lap=3 point=0 t=48.477 et=455.071</Score>
+<Score et="456.4">Stelio Perkins(8) lap=1 point=2 t=30.823 et=456.379</Score>
+<Score et="464.0">Martijn Bont(1) lap=8 point=0 t=79.600 et=463.992</Score>
+<Score et="464.2">Vlad Podraza(9) lap=6 point=2 t=31.397 et=464.217</Score>
+<Score et="465.8">Antonio Segura(5) lap=7 point=1 t=11.864 et=465.766</Score>
+<Score et="466.9">Jack Basford(3) lap=3 point=1 t=11.771 et=466.842</Score>
+<Score et="467.1">Peter Rayfield(6) lap=7 point=2 t=31.234 et=467.137</Score>
+<Score et="467.6">Maurice van der Star(0) lap=7 point=1 t=14.044 et=467.560</Score>
+<Score et="470.1">Mikhail Schubert(2) lap=5 point=0 t=48.841 et=470.087</Score>
+<Score et="474.1">Stelio Perkins(8) lap=2 point=0 t=48.513 et=474.070</Score>
+<Score et="475.9">Martijn Bont(1) lap=8 point=1 t=11.880 et=475.873</Score>
+<Score et="481.9">Mikhail Schubert(2) lap=5 point=1 t=11.840 et=481.927</Score>
+<Score et="482.3">Vlad Podraza(9) lap=7 point=0 t=49.499 et=482.318</Score>
+<Score et="485.0">Peter Rayfield(6) lap=8 point=0 t=49.095 et=484.998</Score>
+<Score et="485.1">Antonio Segura(5) lap=7 point=2 t=31.215 et=485.117</Score>
+<Score et="485.8">Stelio Perkins(8) lap=2 point=1 t=11.730 et=485.799</Score>
+<Score et="485.8">Jack Basford(3) lap=3 point=2 t=30.733 et=485.804</Score>
+<Score et="489.7">Maurice van der Star(0) lap=7 point=2 t=36.187 et=489.703</Score>
+<Score et="494.2">Vlad Podraza(9) lap=7 point=1 t=11.905 et=494.223</Score>
+<Score et="495.1">Martijn Bont(1) lap=8 point=2 t=31.124 et=495.116</Score>
+<Score et="496.9">Peter Rayfield(6) lap=8 point=1 t=11.882 et=496.880</Score>
+<Score et="501.0">Mikhail Schubert(2) lap=5 point=2 t=30.923 et=501.010</Score>
+<Score et="503.0">Antonio Segura(5) lap=8 point=0 t=49.094 et=502.995</Score>
+<Score et="503.5">Jack Basford(3) lap=4 point=0 t=48.377 et=503.448</Score>
+<Score et="504.8">Stelio Perkins(8) lap=2 point=2 t=30.759 et=504.829</Score>
+<Score et="509.7">Maurice van der Star(0) lap=8 point=0 t=56.133 et=509.649</Score>
+<Score et="513.8">Vlad Podraza(9) lap=7 point=2 t=31.464 et=513.783</Score>
+<Score et="514.9">Antonio Segura(5) lap=8 point=1 t=11.875 et=514.870</Score>
+<Score et="515.0">Maurice van der Star(0) lap=8 point=1 t=-1.000 et=515.142</Score>
+<Score et="515.0">Maurice van der Star(0) lap=8 point=2 t=-1.000 et=515.142</Score>
+<Score et="515.0">Maurice van der Star(0) lap=9 point=0 t=-1.000 et=515.142</Score>
+<Score et="515.3">Jack Basford(3) lap=4 point=1 t=11.798 et=515.246</Score>
+<Score et="516.2">Peter Rayfield(6) lap=8 point=2 t=31.160 et=516.158</Score>
+<Score et="519.0">Mikhail Schubert(2) lap=6 point=0 t=48.882 et=518.969</Score>
+<Score et="522.6">Stelio Perkins(8) lap=3 point=0 t=48.482 et=522.552</Score>
+<Score et="532.0">Vlad Podraza(9) lap=8 point=0 t=49.645 et=531.963</Score>
+<Score et="532.1">Mikhail Schubert(2) lap=6 point=1 t=13.094 et=532.062</Score>
+<Score et="534.0">Peter Rayfield(6) lap=9 point=0 t=48.957 et=533.955</Score>
+<Score et="534.2">Antonio Segura(5) lap=8 point=2 t=31.152 et=534.147</Score>
+<Score et="534.3">Jack Basford(3) lap=4 point=2 t=30.803 et=534.251</Score>
+<Score et="534.3">Stelio Perkins(8) lap=3 point=1 t=11.749 et=534.301</Score>
+<Score et="543.8">Vlad Podraza(9) lap=8 point=1 t=11.861 et=543.824</Score>
+<Score et="545.8">Peter Rayfield(6) lap=9 point=1 t=11.863 et=545.818</Score>
+<Score et="551.2">Mikhail Schubert(2) lap=6 point=2 t=32.194 et=551.162</Score>
+<Score et="552.0">Jack Basford(3) lap=5 point=0 t=48.582 et=552.030</Score>
+<Score et="552.1">Antonio Segura(5) lap=9 point=0 t=49.066 et=552.061</Score>
+<Score et="553.4">Stelio Perkins(8) lap=3 point=2 t=30.790 et=553.342</Score>
+<Score et="560.6">Kevin Kubatu(7) lap=0 point=1 t=-1.000 et=560.612</Score>
+<Score et="563.3">Vlad Podraza(9) lap=8 point=2 t=31.348 et=563.311</Score>
+<Score et="563.4">Maurice van der Star(0) lap=9 point=1 t=-1.000 et=563.389</Score>
+<Score et="563.9">Jack Basford(3) lap=5 point=1 t=11.825 et=563.854</Score>
+<Score et="564.0">Antonio Segura(5) lap=9 point=1 t=11.901 et=563.962</Score>
+<Score et="565.0">Peter Rayfield(6) lap=9 point=2 t=31.047 et=565.003</Score>
+<Score et="569.2">Mikhail Schubert(2) lap=7 point=0 t=50.185 et=569.153</Score>
+<Score et="571.0">Stelio Perkins(8) lap=4 point=0 t=48.452 et=571.004</Score>
+<Score et="579.7">Kevin Kubatu(7) lap=0 point=2 t=-1.000 et=579.693</Score>
+<Score et="581.0">Mikhail Schubert(2) lap=7 point=1 t=11.855 et=581.009</Score>
+<Score et="581.4">Vlad Podraza(9) lap=9 point=0 t=49.419 et=581.382</Score>
+<Score et="582.8">Stelio Perkins(8) lap=4 point=1 t=11.766 et=582.770</Score>
+<Score et="582.8">Peter Rayfield(6) lap=10 point=0 t=48.852 et=582.808</Score>
+<Score et="583.0">Jack Basford(3) lap=5 point=2 t=30.917 et=582.947</Score>
+<Score et="583.3">Antonio Segura(5) lap=9 point=2 t=31.185 et=583.246</Score>
+<Score et="585.4">Maurice van der Star(0) lap=9 point=2 t=-1.000 et=585.360</Score>
+<Score et="593.3">Vlad Podraza(9) lap=9 point=1 t=11.922 et=593.305</Score>
+<Score et="594.7">Peter Rayfield(6) lap=10 point=1 t=11.901 et=594.709</Score>
+<Score et="597.4">Kevin Kubatu(7) lap=1 point=0 t=-1.000 et=597.354</Score>
+<Score et="600.2">Mikhail Schubert(2) lap=7 point=2 t=31.019 et=600.172</Score>
+<Score et="600.8">Jack Basford(3) lap=6 point=0 t=48.737 et=600.766</Score>
+<Score et="601.1">Antonio Segura(5) lap=10 point=0 t=48.987 et=601.049</Score>
+<Score et="601.8">Stelio Perkins(8) lap=4 point=2 t=30.833 et=601.837</Score>
+<Score et="605.3">Maurice van der Star(0) lap=10 point=0 t=-1.000 et=605.302</Score>
+<Score et="609.1">Kevin Kubatu(7) lap=1 point=1 t=11.702 et=609.056</Score>
+<Score et="612.6">Jack Basford(3) lap=6 point=1 t=11.816 et=612.582</Score>
+<Score et="612.9">Vlad Podraza(9) lap=9 point=2 t=31.517 et=612.899</Score>
+<Score et="613.0">Antonio Segura(5) lap=10 point=1 t=11.899 et=612.947</Score>
+<Score et="613.9">Peter Rayfield(6) lap=10 point=2 t=31.128 et=613.935</Score>
+<Score et="618.0">Mikhail Schubert(2) lap=8 point=0 t=48.873 et=618.026</Score>
+<Score et="619.0">Maurice van der Star(0) lap=10 point=1 t=13.692 et=618.994</Score>
+<Score et="619.5">Stelio Perkins(8) lap=5 point=0 t=48.524 et=619.528</Score>
+<Score et="628.1">Kevin Kubatu(7) lap=1 point=2 t=30.748 et=628.102</Score>
+<Score et="629.9">Mikhail Schubert(2) lap=8 point=1 t=11.851 et=629.877</Score>
+<Score et="631.0">Vlad Podraza(9) lap=10 point=0 t=49.621 et=631.003</Score>
+<Score et="631.3">Stelio Perkins(8) lap=5 point=1 t=11.772 et=631.300</Score>
+<Score et="631.6">Jack Basford(3) lap=6 point=2 t=30.860 et=631.627</Score>
+<Score et="631.8">Peter Rayfield(6) lap=11 point=0 t=48.980 et=631.787</Score>
+<Score et="632.3">Antonio Segura(5) lap=10 point=2 t=31.196 et=632.245</Score>
+<Score et="642.2">Maurice van der Star(0) lap=10 point=2 t=36.882 et=642.184</Score>
+<Score et="642.9">Vlad Podraza(9) lap=10 point=1 t=11.885 et=642.888</Score>
+<Score et="643.7">Peter Rayfield(6) lap=11 point=1 t=11.905 et=643.693</Score>
+<Score et="645.8">Kevin Kubatu(7) lap=2 point=0 t=48.424 et=645.778</Score>
+<Score et="649.1">Mikhail Schubert(2) lap=8 point=2 t=31.073 et=649.099</Score>
+<Score et="649.4">Jack Basford(3) lap=7 point=0 t=48.581 et=649.347</Score>
+<Score et="650.1">Antonio Segura(5) lap=11 point=0 t=49.037 et=650.085</Score>
+<Score et="650.4">Stelio Perkins(8) lap=5 point=2 t=30.856 et=650.384</Score>
+<Score et="657.5">Kevin Kubatu(7) lap=2 point=1 t=11.732 et=657.510</Score>
+<Score et="661.2">Jack Basford(3) lap=7 point=1 t=11.835 et=661.182</Score>
+<Score et="662.0">Antonio Segura(5) lap=11 point=1 t=11.881 et=661.966</Score>
+<Score et="662.2">Maurice van der Star(0) lap=11 point=0 t=56.854 et=662.156</Score>
+<Score et="662.4">Vlad Podraza(9) lap=10 point=2 t=31.352 et=662.355</Score>
+<Score et="663.0">Peter Rayfield(6) lap=11 point=2 t=31.215 et=663.003</Score>
+<Score et="666.9">Mikhail Schubert(2) lap=9 point=0 t=48.853 et=666.879</Score>
+<Score et="667.0">Maurice van der Star(0) lap=11 point=1 t=-1.000 et=667.157</Score>
+<Score et="667.0">Maurice van der Star(0) lap=11 point=2 t=-1.000 et=667.157</Score>
+<Score et="667.0">Maurice van der Star(0) lap=12 point=0 t=-1.000 et=667.157</Score>
+<Score et="668.1">Stelio Perkins(8) lap=6 point=0 t=48.555 et=668.083</Score>
+<Score et="676.5">Kevin Kubatu(7) lap=2 point=2 t=30.745 et=676.523</Score>
+<Score et="679.9">Mikhail Schubert(2) lap=9 point=1 t=12.988 et=679.867</Score>
+<Score et="679.9">Stelio Perkins(8) lap=6 point=1 t=11.779 et=679.862</Score>
+<Score et="680.2">Jack Basford(3) lap=7 point=2 t=30.862 et=680.209</Score>
+<Score et="680.4">Vlad Podraza(9) lap=11 point=0 t=49.436 et=680.439</Score>
+<Score et="680.8">Peter Rayfield(6) lap=12 point=0 t=49.017 et=680.804</Score>
+<Score et="681.2">Antonio Segura(5) lap=11 point=2 t=31.103 et=681.189</Score>
+<Score et="692.3">Vlad Podraza(9) lap=11 point=1 t=11.891 et=692.330</Score>
+<Score et="692.7">Peter Rayfield(6) lap=12 point=1 t=11.864 et=692.668</Score>
+<Score et="694.2">Kevin Kubatu(7) lap=3 point=0 t=48.408 et=694.185</Score>
+<Score et="698.0">Jack Basford(3) lap=8 point=0 t=48.646 et=697.994</Score>
+<Score et="699.0">Stelio Perkins(8) lap=6 point=2 t=30.898 et=698.981</Score>
+<Score et="699.0">Antonio Segura(5) lap=12 point=0 t=48.916 et=699.001</Score>
+<Score et="699.1">Mikhail Schubert(2) lap=9 point=2 t=32.214 et=699.092</Score>
+<Score et="700.2">Hans Klemann(4) lap=0 point=1 t=-1.000 et=700.199</Score>
+<Score et="701.7">Maurice van der Star(0) lap=12 point=1 t=-1.000 et=701.717</Score>
+<Score et="705.9">Kevin Kubatu(7) lap=3 point=1 t=11.735 et=705.920</Score>
+<Score et="709.9">Jack Basford(3) lap=8 point=1 t=11.850 et=709.844</Score>
+<Score et="710.9">Antonio Segura(5) lap=12 point=1 t=11.891 et=710.892</Score>
+<Score et="711.8">Peter Rayfield(6) lap=12 point=2 t=30.997 et=711.801</Score>
+<Score et="711.9">Vlad Podraza(9) lap=11 point=2 t=31.435 et=711.874</Score>
+<Score et="715.2">Martijn Bont(1) lap=9 point=0 t=-1.000 et=715.142</Score>
+<Score et="716.8">Stelio Perkins(8) lap=7 point=0 t=48.662 et=716.746</Score>
+<Score et="717.1">Mikhail Schubert(2) lap=10 point=0 t=50.188 et=717.067</Score>
+<Score et="719.5">Hans Klemann(4) lap=0 point=2 t=-1.000 et=719.471</Score>
+<Score et="724.2">Maurice van der Star(0) lap=12 point=2 t=-1.000 et=724.227</Score>
+<Score et="725.0">Kevin Kubatu(7) lap=3 point=2 t=30.799 et=724.984</Score>
+<Score et="728.6">Stelio Perkins(8) lap=7 point=1 t=11.833 et=728.578</Score>
+<Score et="728.9">Mikhail Schubert(2) lap=10 point=1 t=11.857 et=728.923</Score>
+<Score et="729.0">Jack Basford(3) lap=8 point=2 t=30.951 et=728.945</Score>
+<Score et="730.0">Vlad Podraza(9) lap=12 point=0 t=49.506 et=729.945</Score>
+<Score et="730.2">Antonio Segura(5) lap=12 point=2 t=31.182 et=730.183</Score>
+<Score et="730.8">Martijn Bont(1) lap=9 point=1 t=-1.000 et=730.806</Score>
+<Score et="737.2">Hans Klemann(4) lap=1 point=0 t=-1.000 et=737.235</Score>
+<Score et="741.9">Vlad Podraza(9) lap=12 point=1 t=11.909 et=741.854</Score>
+<Score et="742.7">Kevin Kubatu(7) lap=4 point=0 t=48.501 et=742.686</Score>
+<Score et="745.5">Maurice van der Star(0) lap=13 point=0 t=-1.000 et=745.487</Score>
+<Score et="746.8">Jack Basford(3) lap=9 point=0 t=48.807 et=746.800</Score>
+<Score et="747.8">Stelio Perkins(8) lap=7 point=2 t=31.002 et=747.748</Score>
+<Score et="748.0">Antonio Segura(5) lap=13 point=0 t=49.002 et=748.004</Score>
+<Score et="748.1">Mikhail Schubert(2) lap=10 point=2 t=31.026 et=748.093</Score>
+<Score et="749.0">Hans Klemann(4) lap=1 point=1 t=11.776 et=749.012</Score>
+<Score et="749.8">Martijn Bont(1) lap=9 point=2 t=-1.000 et=749.827</Score>
+<Score et="754.4">Kevin Kubatu(7) lap=4 point=1 t=11.747 et=754.433</Score>
+<Score et="758.7">Jack Basford(3) lap=9 point=1 t=11.856 et=758.657</Score>
+<Score et="758.8">Maurice van der Star(0) lap=13 point=1 t=13.271 et=758.758</Score>
+<Score et="759.9">Antonio Segura(5) lap=13 point=1 t=11.888 et=759.892</Score>
+<Score et="761.4">Vlad Podraza(9) lap=12 point=2 t=31.404 et=761.349</Score>
+<Score et="765.5">Stelio Perkins(8) lap=8 point=0 t=48.730 et=765.476</Score>
+<Score et="766.0">Mikhail Schubert(2) lap=11 point=0 t=48.878 et=765.945</Score>
+<Score et="767.5">Martijn Bont(1) lap=10 point=0 t=-1.000 et=767.497</Score>
+<Score et="768.3">Hans Klemann(4) lap=1 point=2 t=31.049 et=768.284</Score>
+<Score et="773.5">Kevin Kubatu(7) lap=4 point=2 t=30.844 et=773.531</Score>
+<Score et="777.3">Stelio Perkins(8) lap=8 point=1 t=11.838 et=777.314</Score>
+<Score et="777.8">Jack Basford(3) lap=9 point=2 t=30.950 et=777.751</Score>
+<Score et="777.8">Mikhail Schubert(2) lap=11 point=1 t=11.861 et=777.806</Score>
+<Score et="779.2">Antonio Segura(5) lap=13 point=2 t=31.158 et=779.161</Score>
+<Score et="779.3">Martijn Bont(1) lap=10 point=1 t=11.758 et=779.255</Score>
+<Score et="779.3">Vlad Podraza(9) lap=13 point=0 t=49.371 et=779.316</Score>
+<Score et="780.4">Maurice van der Star(0) lap=13 point=2 t=34.911 et=780.398</Score>
+<Score et="786.1">Hans Klemann(4) lap=2 point=0 t=48.859 et=786.094</Score>
+<Score et="791.2">Vlad Podraza(9) lap=13 point=1 t=11.900 et=791.216</Score>
+<Score et="791.2">Kevin Kubatu(7) lap=5 point=0 t=48.534 et=791.220</Score>
+<Score et="795.6">Jack Basford(3) lap=10 point=0 t=48.792 et=795.592</Score>
+<Score et="796.5">Stelio Perkins(8) lap=8 point=2 t=30.995 et=796.471</Score>
+<Score et="796.9">Mikhail Schubert(2) lap=11 point=2 t=30.954 et=796.899</Score>
+<Score et="797.0">Antonio Segura(5) lap=14 point=0 t=48.975 et=796.979</Score>
+<Score et="797.9">Hans Klemann(4) lap=2 point=1 t=11.777 et=797.871</Score>
+<Score et="798.3">Martijn Bont(1) lap=10 point=2 t=30.808 et=798.305</Score>
+<Score et="799.5">Maurice van der Star(0) lap=14 point=0 t=53.997 et=799.484</Score>
+<Score et="803.0">Kevin Kubatu(7) lap=5 point=1 t=11.801 et=803.021</Score>
+<Score et="803.6">Maurice van der Star(0) lap=14 point=1 t=-1.000 et=803.687</Score>
+<Score et="803.6">Maurice van der Star(0) lap=14 point=2 t=-1.000 et=803.687</Score>
+<Score et="803.6">Maurice van der Star(0) lap=15 point=0 t=-1.000 et=803.687</Score>
+<Score et="807.4">Jack Basford(3) lap=10 point=1 t=11.832 et=807.424</Score>
+<Score et="808.9">Antonio Segura(5) lap=14 point=1 t=11.903 et=808.881</Score>
+<Score et="810.7">Vlad Podraza(9) lap=13 point=2 t=31.342 et=810.658</Score>
+<Score et="814.9">Mikhail Schubert(2) lap=12 point=0 t=48.898 et=814.843</Score>
+<Score et="815.9">Martijn Bont(1) lap=11 point=0 t=48.440 et=815.937</Score>
+<Score et="817.1">Hans Klemann(4) lap=2 point=2 t=31.020 et=817.114</Score>
+<Score et="822.1">Kevin Kubatu(7) lap=5 point=2 t=30.905 et=822.125</Score>
+<Score et="826.5">Jack Basford(3) lap=10 point=2 t=30.896 et=826.488</Score>
+<Score et="827.9">Martijn Bont(1) lap=11 point=1 t=11.948 et=827.885</Score>
+<Score et="827.9">Mikhail Schubert(2) lap=12 point=1 t=13.054 et=827.897</Score>
+<Score et="828.1">Antonio Segura(5) lap=14 point=2 t=31.154 et=828.133</Score>
+<Score et="828.7">Vlad Podraza(9) lap=14 point=0 t=49.375 et=828.691</Score>
+<Score et="834.9">Hans Klemann(4) lap=3 point=0 t=48.826 et=834.921</Score>
+<Score et="839.8">Kevin Kubatu(7) lap=6 point=0 t=48.549 et=839.769</Score>
+<Score et="840.6">Vlad Podraza(9) lap=14 point=1 t=11.942 et=840.633</Score>
+<Score et="840.9">Maurice van der Star(0) lap=15 point=1 t=-1.000 et=840.927</Score>
+<Score et="846.0">Antonio Segura(5) lap=15 point=0 t=48.996 et=845.975</Score>
+<Score et="846.7">Hans Klemann(4) lap=3 point=1 t=11.770 et=846.691</Score>
+<Score et="847.0">Martijn Bont(1) lap=11 point=2 t=31.020 et=846.957</Score>
+<Score et="847.0">Mikhail Schubert(2) lap=12 point=2 t=32.117 et=846.960</Score>
+<Score et="851.6">Kevin Kubatu(7) lap=6 point=1 t=11.812 et=851.580</Score>
+<Score et="857.9">Antonio Segura(5) lap=15 point=1 t=11.897 et=857.871</Score>
+<Score et="860.1">Vlad Podraza(9) lap=14 point=2 t=31.447 et=860.139</Score>
+<Score et="863.1">Maurice van der Star(0) lap=15 point=2 t=-1.000 et=863.116</Score>
+<Score et="864.6">Martijn Bont(1) lap=12 point=0 t=48.668 et=864.605</Score>
+<Score et="864.9">Mikhail Schubert(2) lap=13 point=0 t=50.017 et=864.860</Score>
+<Score et="865.9">Hans Klemann(4) lap=3 point=2 t=31.004 et=865.925</Score>
+<Score et="870.7">Kevin Kubatu(7) lap=6 point=2 t=30.937 et=870.706</Score>
+<Score et="876.4">Martijn Bont(1) lap=12 point=1 t=11.750 et=876.355</Score>
+<Score et="876.7">Mikhail Schubert(2) lap=13 point=1 t=11.861 et=876.721</Score>
+<Score et="877.1">Antonio Segura(5) lap=15 point=2 t=31.129 et=877.103</Score>
+<Score et="882.3">Maurice van der Star(0) lap=16 point=0 t=-1.000 et=882.323</Score>
+<Score et="883.8">Hans Klemann(4) lap=4 point=0 t=48.835 et=883.755</Score>
+<Score et="888.5">Kevin Kubatu(7) lap=7 point=0 t=48.672 et=888.441</Score>
+<Score et="895.5">Martijn Bont(1) lap=12 point=2 t=30.865 et=895.469</Score>
+<Score et="895.6">Hans Klemann(4) lap=4 point=1 t=11.823 et=895.579</Score>
+<Score et="895.6">Maurice van der Star(0) lap=16 point=1 t=13.272 et=895.596</Score>
+<Score et="895.8">Mikhail Schubert(2) lap=13 point=2 t=30.924 et=895.785</Score>
+<Score et="900.3">Kevin Kubatu(7) lap=7 point=1 t=11.827 et=900.268</Score>
+<Score et="913.2">Martijn Bont(1) lap=13 point=0 t=48.555 et=913.160</Score>
+<Score et="913.7">Mikhail Schubert(2) lap=14 point=0 t=48.815 et=913.675</Score>
+<Score et="914.8">Hans Klemann(4) lap=4 point=2 t=31.016 et=914.772</Score>
+<Score et="917.8">Maurice van der Star(0) lap=16 point=2 t=35.508 et=917.831</Score>
+<Score et="919.5">Kevin Kubatu(7) lap=7 point=2 t=31.002 et=919.443</Score>
+<Score et="924.9">Martijn Bont(1) lap=13 point=1 t=11.779 et=924.939</Score>
+<Score et="925.5">Mikhail Schubert(2) lap=14 point=1 t=11.860 et=925.535</Score>
+<Score et="932.6">Hans Klemann(4) lap=5 point=0 t=48.813 et=932.569</Score>
+<Score et="937.2">Kevin Kubatu(7) lap=8 point=0 t=48.719 et=937.160</Score>
+<Score et="937.6">Maurice van der Star(0) lap=17 point=0 t=55.250 et=937.573</Score>
+<Score et="942.6">Maurice van der Star(0) lap=17 point=1 t=-1.000 et=942.697</Score>
+<Score et="942.6">Maurice van der Star(0) lap=17 point=2 t=-1.000 et=942.697</Score>
+<Score et="942.6">Maurice van der Star(0) lap=18 point=0 t=-1.000 et=942.697</Score>
+<Score et="944.1">Martijn Bont(1) lap=13 point=2 t=30.935 et=944.094</Score>
+<Score et="944.4">Hans Klemann(4) lap=5 point=1 t=11.821 et=944.390</Score>
+<Score et="944.6">Mikhail Schubert(2) lap=14 point=2 t=30.942 et=944.617</Score>
+<Score et="949.0">Kevin Kubatu(7) lap=8 point=1 t=11.847 et=949.007</Score>
+<Score et="961.9">Peter Rayfield(6) lap=13 point=0 t=-1.000 et=961.851</Score>
+<Score et="961.9">Martijn Bont(1) lap=14 point=0 t=48.779 et=961.939</Score>
+<Score et="963.7">Hans Klemann(4) lap=5 point=2 t=31.075 et=963.644</Score>
+</Stream>
+<MostLapsCompleted>18</MostLapsCompleted>
+<Driver>
+<Name>Jack Basford</Name>
+<Connected>1</Connected>
+<VehFile>FISIR_2012_09.VEH</VehFile>
+<UpgradeCode>00000000 00000000 00000000 00000000</UpgradeCode>
+<VehName>Formula ISI 2012 #9</VehName>
+<CarType>Formula ISI 2012</CarType>
+<CarClass>Formula ISI 2012</CarClass>
+<CarNumber>9</CarNumber>
+<TeamName>iGPManager</TeamName>
+<isPlayer>0</isPlayer>
+<ServerScored>1</ServerScored>
+<Position>1</Position>
+<ClassPosition>1</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>1</LapRankIncludingDiscos>
+<Lap num="1" p="7" et="--.---" fuel="0.086" fcompound="5" rcompound="5">--.----</Lap>
+<Lap num="2" p="1" et="358.1886" s1="11.7445" s2="19.0377" s3="17.6233" fuel="0.078" fcompound="5" rcompound="5">48.4055</Lap>
+<Lap num="3" p="1" et="406.5941" s1="11.7588" s2="19.0635" s3="17.6545" fuel="0.071" fcompound="5" rcompound="5">48.4769</Lap>
+<Lap num="4" p="1" et="455.0709" s1="11.7711" s2="18.9622" s3="17.6438" fuel="0.059" fcompound="5" rcompound="5">48.3772</Lap>
+<Lap num="5" p="1" et="503.4481" s1="11.7975" s2="19.0051" s3="17.7789" fuel="0.051" fcompound="5" rcompound="5">48.5815</Lap>
+<Lap num="6" p="1" et="552.0297" s1="11.8246" s2="19.0923" s3="17.8198" fuel="0.043" fcompound="5" rcompound="5">48.7368</Lap>
+<Lap num="7" p="1" et="600.7664" s1="11.8158" s2="19.0447" s3="17.7203" fuel="0.035" fcompound="5" rcompound="5">48.5807</Lap>
+<Lap num="8" p="1" et="649.3472" s1="11.8348" s2="19.0269" s3="17.7847" fuel="0.027" fcompound="5" rcompound="5">48.6464</Lap>
+<Lap num="9" p="1" et="697.9935" s1="11.8503" s2="19.1012" s3="17.8553" fuel="0.020" fcompound="5" rcompound="5">48.8068</Lap>
+<Lap num="10" p="1" et="746.8003" s1="11.8564" s2="19.0939" s3="17.8416" fuel="0.012" fcompound="5" rcompound="5">48.7919</Lap>
+<BestLapTime>48.3772</BestLapTime>
+<Laps>10</Laps>
+<Pitstops>1</Pitstops>
+<FinishStatus>None</FinishStatus>
+<ControlAndAids startLap="1" endLap="10">AIControl</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Kevin Kubatu</Name>
+<Connected>1</Connected>
+<VehFile>FISIR_2012_01.VEH</VehFile>
+<UpgradeCode>00000000 00000000 00000000 00000000</UpgradeCode>
+<VehName>Formula ISI 2012 #1</VehName>
+<CarType>Formula ISI 2012</CarType>
+<CarClass>Formula ISI 2012</CarClass>
+<CarNumber>1</CarNumber>
+<TeamName>Zimmer-Ferrum</TeamName>
+<isPlayer>0</isPlayer>
+<ServerScored>1</ServerScored>
+<Position>2</Position>
+<ClassPosition>2</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>2</LapRankIncludingDiscos>
+<Lap num="1" p="10" et="--.---" fuel="0.071" fcompound="5" rcompound="5">--.----</Lap>
+<Lap num="2" p="2" et="597.3540" s1="11.7018" s2="19.0463" s3="17.6755" fuel="0.063" fcompound="5" rcompound="5">48.4236</Lap>
+<Lap num="3" p="2" et="645.7776" s1="11.7322" s2="19.0132" s3="17.6624" fuel="0.055" fcompound="5" rcompound="5">48.4078</Lap>
+<Lap num="4" p="2" et="694.1854" s1="11.7349" s2="19.0641" s3="17.7018" fuel="0.043" fcompound="5" rcompound="5">48.5009</Lap>
+<Lap num="5" p="2" et="742.6862" s1="11.7470" s2="19.0975" s3="17.6895" fuel="0.035" fcompound="5" rcompound="5">48.5339</Lap>
+<Lap num="6" p="2" et="791.2202" s1="11.8007" s2="19.1046" s3="17.6434" fuel="0.027" fcompound="5" rcompound="5">48.5486</Lap>
+<Lap num="7" p="2" et="839.7687" s1="11.8116" s2="19.1252" s3="17.7355" fuel="0.020" fcompound="5" rcompound="5">48.6723</Lap>
+<Lap num="8" p="2" et="888.4410" s1="11.8271" s2="19.1750" s3="17.7170" fuel="0.012" fcompound="5" rcompound="5">48.7191</Lap>
+<BestLapTime>48.4078</BestLapTime>
+<Laps>8</Laps>
+<Pitstops>1</Pitstops>
+<FinishStatus>None</FinishStatus>
+<ControlAndAids startLap="1" endLap="8">AIControl</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Martijn Bont</Name>
+<Connected>1</Connected>
+<VehFile>FISIR_2012_11.VEH</VehFile>
+<UpgradeCode>00000000 00000000 00000000 00000000</UpgradeCode>
+<VehName>Formula ISI 2012 #11</VehName>
+<CarType>Formula ISI 2012</CarType>
+<CarClass>Formula ISI 2012</CarClass>
+<CarNumber>11</CarNumber>
+<TeamName>iGPManager</TeamName>
+<isPlayer>0</isPlayer>
+<ServerScored>1</ServerScored>
+<Position>3</Position>
+<ClassPosition>3</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>3</LapRankIncludingDiscos>
+<Lap num="1" p="2" et="--.---" fuel="0.071" fcompound="5" rcompound="5">--.----</Lap>
+<Lap num="2" p="1" et="90.7643" s1="11.8430" s2="19.2588" s3="17.8796" fuel="0.063" fcompound="5" rcompound="5">48.9814</Lap>
+<Lap num="3" p="1" et="139.7457" s1="11.8273" s2="19.2806" s3="17.8808" fuel="0.055" fcompound="5" rcompound="5">48.9887</Lap>
+<Lap num="4" p="1" et="188.7344" s1="11.8333" s2="19.2612" s3="17.7716" fuel="0.043" fcompound="5" rcompound="5">48.8662</Lap>
+<Lap num="5" p="2" et="237.6005" s1="11.8249" s2="19.2825" s3="17.7949" fuel="0.035" fcompound="5" rcompound="5">48.9022</Lap>
+<Lap num="6" p="3" et="286.5028" s1="11.8568" s2="19.2953" s3="17.7781" fuel="0.027" fcompound="5" rcompound="5">48.9302</Lap>
+<Lap num="7" p="3" et="335.4330" s1="11.8459" s2="19.3109" s3="17.8019" fuel="0.020" fcompound="5" rcompound="5">48.9587</Lap>
+<Lap num="8" p="4" et="384.3917" s1="42.5890" s2="19.2456" s3="17.7658" fuel="0.012" fcompound="5" rcompound="5">79.6005</Lap>
+<Lap num="9" p="6" et="463.9922" s1="11.8804" s2="19.2435" fuel="0.176" fcompound="5" rcompound="5" pit="1">--.----</Lap>
+<Lap num="10" p="6" et="715.1415" fuel="0.169" fcompound="5" rcompound="5">--.----</Lap>
+<Lap num="11" p="3" et="767.4974" s1="11.7581" s2="19.0499" s3="17.6320" fuel="0.161" fcompound="5" rcompound="5">48.4399</Lap>
+<Lap num="12" p="3" et="815.9373" s1="11.9477" s2="19.0724" s3="17.6475" fuel="0.153" fcompound="5" rcompound="5">48.6676</Lap>
+<Lap num="13" p="3" et="864.6049" s1="11.7497" s2="19.1149" s3="17.6902" fuel="0.145" fcompound="5" rcompound="5">48.5547</Lap>
+<Lap num="14" p="3" et="913.1597" s1="11.7789" s2="19.1559" s3="17.8442" fuel="0.133" fcompound="5" rcompound="5">48.7791</Lap>
+<BestLapTime>48.4399</BestLapTime>
+<Laps>14</Laps>
+<Pitstops>2</Pitstops>
+<FinishStatus>None</FinishStatus>
+<ControlAndAids startLap="1" endLap="14">AIControl</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Stelio Perkins</Name>
+<Connected>1</Connected>
+<VehFile>FISIR_2012_02.VEH</VehFile>
+<UpgradeCode>00000000 00000000 00000000 00000000</UpgradeCode>
+<VehName>Formula ISI 2012 #2</VehName>
+<CarType>Formula ISI 2012</CarType>
+<CarClass>Formula ISI 2012</CarClass>
+<CarNumber>2</CarNumber>
+<TeamName>Zimmer-Ferrum</TeamName>
+<isPlayer>0</isPlayer>
+<ServerScored>1</ServerScored>
+<Position>4</Position>
+<ClassPosition>4</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>4</LapRankIncludingDiscos>
+<Lap num="1" p="10" et="--.---" fuel="0.071" fcompound="5" rcompound="5">--.----</Lap>
+<Lap num="2" p="2" et="425.5567" s1="11.7529" s2="19.0697" s3="17.6902" fuel="0.063" fcompound="5" rcompound="5">48.5128</Lap>
+<Lap num="3" p="2" et="474.0695" s1="11.7296" s2="19.0295" s3="17.7233" fuel="0.051" fcompound="5" rcompound="5">48.4825</Lap>
+<Lap num="4" p="2" et="522.5520" s1="11.7485" s2="19.0418" s3="17.6617" fuel="0.043" fcompound="5" rcompound="5">48.4520</Lap>
+<Lap num="5" p="2" et="571.0040" s1="11.7659" s2="19.0667" s3="17.6915" fuel="0.035" fcompound="5" rcompound="5">48.5241</Lap>
+<Lap num="6" p="3" et="619.5281" s1="11.7721" s2="19.0840" s3="17.6992" fuel="0.027" fcompound="5" rcompound="5">48.5553</Lap>
+<Lap num="7" p="3" et="668.0834" s1="11.7787" s2="19.1193" s3="17.7643" fuel="0.020" fcompound="5" rcompound="5">48.6623</Lap>
+<Lap num="8" p="3" et="716.7457" s1="11.8328" s2="19.1694" s3="17.7280" fuel="0.012" fcompound="5" rcompound="5">48.7302</Lap>
+<BestLapTime>48.4520</BestLapTime>
+<Laps>8</Laps>
+<Pitstops>1</Pitstops>
+<FinishStatus>None</FinishStatus>
+<ControlAndAids startLap="1" endLap="8">AIControl</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Mikhail Schubert</Name>
+<Connected>1</Connected>
+<VehFile>FISIR_2012_06.VEH</VehFile>
+<UpgradeCode>00000000 00000000 00000000 00000000</UpgradeCode>
+<VehName>Formula ISI 2012 #6</VehName>
+<CarType>Formula ISI 2012</CarType>
+<CarClass>Formula ISI 2012</CarClass>
+<CarNumber>6</CarNumber>
+<TeamName>AutoGermania</TeamName>
+<isPlayer>0</isPlayer>
+<ServerScored>1</ServerScored>
+<Position>5</Position>
+<ClassPosition>5</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>5</LapRankIncludingDiscos>
+<Lap num="1" p="6" et="--.---" fuel="0.118" fcompound="5" rcompound="5">--.----</Lap>
+<Lap num="2" p="1" et="273.6138" s1="11.7704" s2="19.1894" s3="17.7971" fuel="0.110" fcompound="5" rcompound="5">48.7568</Lap>
+<Lap num="3" p="1" et="322.3706" s1="11.8140" s2="19.1653" s3="17.8982" fuel="0.098" fcompound="5" rcompound="5">48.8775</Lap>
+<Lap num="4" p="2" et="371.2480" s1="13.0394" s2="19.1112" s3="17.8470" fuel="0.090" fcompound="5" rcompound="5">49.9977</Lap>
+<Lap num="5" p="2" et="421.2457" s1="11.8311" s2="19.0954" s3="17.9145" fuel="0.082" fcompound="5" rcompound="5">48.8411</Lap>
+<Lap num="6" p="3" et="470.0868" s1="11.8398" s2="19.0835" s3="17.9584" fuel="0.075" fcompound="5" rcompound="5">48.8817</Lap>
+<Lap num="7" p="3" et="518.9685" s1="13.0936" s2="19.1000" s3="17.9911" fuel="0.067" fcompound="5" rcompound="5">50.1848</Lap>
+<Lap num="8" p="3" et="569.1533" s1="11.8553" s2="19.1633" s3="17.8541" fuel="0.059" fcompound="5" rcompound="5">48.8727</Lap>
+<Lap num="9" p="4" et="618.0260" s1="11.8510" s2="19.2223" s3="17.7794" fuel="0.051" fcompound="5" rcompound="5">48.8527</Lap>
+<Lap num="10" p="4" et="666.8787" s1="12.9883" s2="19.2253" s3="17.9742" fuel="0.043" fcompound="5" rcompound="5">50.1878</Lap>
+<Lap num="11" p="4" et="717.0665" s1="11.8568" s2="19.1696" s3="17.8521" fuel="0.031" fcompound="5" rcompound="5">48.8785</Lap>
+<Lap num="12" p="4" et="765.9450" s1="11.8607" s2="19.0935" s3="17.9437" fuel="0.024" fcompound="5" rcompound="5">48.8979</Lap>
+<Lap num="13" p="5" et="814.8430" s1="13.0537" s2="19.0636" s3="17.8999" fuel="0.016" fcompound="5" rcompound="5">50.0172</Lap>
+<Lap num="14" p="5" et="864.8602" s1="11.8611" s2="19.0632" s3="17.8904" fuel="0.008" fcompound="5" rcompound="5">48.8148</Lap>
+<BestLapTime>48.7568</BestLapTime>
+<Laps>14</Laps>
+<Pitstops>1</Pitstops>
+<FinishStatus>None</FinishStatus>
+<ControlAndAids startLap="1" endLap="14">AIControl</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Hans Klemann</Name>
+<Connected>1</Connected>
+<VehFile>FISIR_2012_07.VEH</VehFile>
+<UpgradeCode>00000000 00000000 00000000 00000000</UpgradeCode>
+<VehName>Formula ISI 2012 #7</VehName>
+<CarType>Formula ISI 2012</CarType>
+<CarClass>Formula ISI 2012</CarClass>
+<CarNumber>7</CarNumber>
+<TeamName>Camheads</TeamName>
+<isPlayer>0</isPlayer>
+<ServerScored>1</ServerScored>
+<Position>6</Position>
+<ClassPosition>6</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>6</LapRankIncludingDiscos>
+<Lap num="1" p="10" et="--.---" fuel="0.102" fcompound="5" rcompound="5">--.----</Lap>
+<Lap num="2" p="6" et="737.2350" s1="11.7765" s2="19.2729" s3="17.8100" fuel="0.094" fcompound="5" rcompound="5">48.8594</Lap>
+<Lap num="3" p="6" et="786.0945" s1="11.7769" s2="19.2430" s3="17.8065" fuel="0.082" fcompound="5" rcompound="5">48.8264</Lap>
+<Lap num="4" p="6" et="834.9209" s1="11.7700" s2="19.2343" s3="17.8302" fuel="0.075" fcompound="5" rcompound="5">48.8345</Lap>
+<Lap num="5" p="6" et="883.7554" s1="11.8234" s2="19.1927" s3="17.7972" fuel="0.067" fcompound="5" rcompound="5">48.8134</Lap>
+<BestLapTime>48.8134</BestLapTime>
+<Laps>5</Laps>
+<Pitstops>1</Pitstops>
+<FinishStatus>None</FinishStatus>
+<ControlAndAids startLap="1" endLap="5">AIControl</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Peter Rayfield</Name>
+<Connected>1</Connected>
+<VehFile>FISIR_2012_03.VEH</VehFile>
+<UpgradeCode>00000000 00000000 00000000 00000000</UpgradeCode>
+<VehName>Formula ISI 2012 #3</VehName>
+<CarType>Formula ISI 2012</CarType>
+<CarClass>Formula ISI 2012</CarClass>
+<CarNumber>3</CarNumber>
+<TeamName>Forty Eleven</TeamName>
+<isPlayer>0</isPlayer>
+<ServerScored>1</ServerScored>
+<Position>7</Position>
+<ClassPosition>7</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>7</LapRankIncludingDiscos>
+<Lap num="1" p="7" et="--.---" fuel="0.102" fcompound="5" rcompound="5">--.----</Lap>
+<Lap num="2" p="2" et="142.1349" s1="11.8213" s2="19.3605" s3="17.9164" fuel="0.094" fcompound="5" rcompound="5">49.0982</Lap>
+<Lap num="3" p="1" et="191.2332" s1="11.8310" s2="19.2045" s3="17.8266" fuel="0.082" fcompound="5" rcompound="5">48.8622</Lap>
+<Lap num="4" p="1" et="240.0953" s1="11.8178" s2="19.2467" s3="17.9024" fuel="0.075" fcompound="5" rcompound="5">48.9669</Lap>
+<Lap num="5" p="2" et="289.0622" s1="11.8364" s2="19.3304" s3="17.8692" fuel="0.067" fcompound="5" rcompound="5">49.0360</Lap>
+<Lap num="6" p="2" et="338.0982" s1="11.8480" s2="19.2172" s3="17.8105" fuel="0.059" fcompound="5" rcompound="5">48.8756</Lap>
+<Lap num="7" p="3" et="386.9739" s1="11.8656" s2="19.1978" s3="17.8665" fuel="0.051" fcompound="5" rcompound="5">48.9299</Lap>
+<Lap num="8" p="4" et="435.9037" s1="11.8995" s2="19.3341" s3="17.8612" fuel="0.043" fcompound="5" rcompound="5">49.0947</Lap>
+<Lap num="9" p="4" et="484.9985" s1="11.8815" s2="19.2780" s3="17.7972" fuel="0.035" fcompound="5" rcompound="5">48.9568</Lap>
+<Lap num="10" p="4" et="533.9553" s1="11.8630" s2="19.1843" s3="17.8050" fuel="0.027" fcompound="5" rcompound="5">48.8523</Lap>
+<Lap num="11" p="4" et="582.8076" s1="11.9011" s2="19.2264" s3="17.8523" fuel="0.020" fcompound="5" rcompound="5">48.9799</Lap>
+<Lap num="12" p="5" et="631.7874" s1="11.9052" s2="19.3099" s3="17.8017" fuel="0.012" fcompound="5" rcompound="5">49.0168</Lap>
+<Lap num="13" p="7" et="680.8042" s1="11.8640" s2="19.1332" fuel="0.322" fcompound="5" rcompound="5" pit="1">--.----</Lap>
+<BestLapTime>48.8523</BestLapTime>
+<Laps>13</Laps>
+<Pitstops>2</Pitstops>
+<FinishStatus>None</FinishStatus>
+<ControlAndAids startLap="1" endLap="13">AIControl</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Antonio Segura</Name>
+<Connected>1</Connected>
+<VehFile>FISIR_2012_13.VEH</VehFile>
+<UpgradeCode>00000000 00000000 00000000 00000000</UpgradeCode>
+<VehName>Formula ISI 2012 #13</VehName>
+<CarType>Formula ISI 2012</CarType>
+<CarClass>Formula ISI 2012</CarClass>
+<CarNumber>13</CarNumber>
+<TeamName>Deep Red</TeamName>
+<isPlayer>0</isPlayer>
+<ServerScored>1</ServerScored>
+<Position>8</Position>
+<ClassPosition>8</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>8</LapRankIncludingDiscos>
+<Lap num="1" p="6" et="--.---" fuel="0.133" fcompound="5" rcompound="5">--.----</Lap>
+<Lap num="2" p="3" et="158.1681" s1="11.8406" s2="19.3286" s3="17.9562" fuel="0.125" fcompound="5" rcompound="5">49.1254</Lap>
+<Lap num="3" p="3" et="207.2934" s1="13.1877" s2="19.3469" s3="17.9153" fuel="0.118" fcompound="5" rcompound="5">50.4499</Lap>
+<Lap num="4" p="3" et="257.7433" s1="11.8193" s2="19.2845" s3="17.9287" fuel="0.106" fcompound="5" rcompound="5">49.0325</Lap>
+<Lap num="5" p="4" et="306.7758" s1="11.8297" s2="19.3074" s3="17.9180" fuel="0.098" fcompound="5" rcompound="5">49.0551</Lap>
+<Lap num="6" p="4" et="355.8309" s1="11.8374" s2="19.3093" s3="17.8871" fuel="0.090" fcompound="5" rcompound="5">49.0338</Lap>
+<Lap num="7" p="5" et="404.8647" s1="11.8759" s2="19.2758" s3="17.8848" fuel="0.082" fcompound="5" rcompound="5">49.0365</Lap>
+<Lap num="8" p="6" et="453.9012" s1="11.8644" s2="19.3510" s3="17.8785" fuel="0.075" fcompound="5" rcompound="5">49.0940</Lap>
+<Lap num="9" p="6" et="502.9951" s1="11.8750" s2="19.2772" s3="17.9140" fuel="0.067" fcompound="5" rcompound="5">49.0663</Lap>
+<Lap num="10" p="6" et="552.0614" s1="11.9007" s2="19.2843" s3="17.8021" fuel="0.059" fcompound="5" rcompound="5">48.9871</Lap>
+<Lap num="11" p="7" et="601.0485" s1="11.8987" s2="19.2975" s3="17.8407" fuel="0.051" fcompound="5" rcompound="5">49.0369</Lap>
+<Lap num="12" p="7" et="650.0854" s1="11.8807" s2="19.2227" s3="17.8125" fuel="0.039" fcompound="5" rcompound="5">48.9159</Lap>
+<Lap num="13" p="7" et="699.0013" s1="11.8909" s2="19.2910" s3="17.8204" fuel="0.031" fcompound="5" rcompound="5">49.0023</Lap>
+<Lap num="14" p="8" et="748.0036" s1="11.8884" s2="19.2691" s3="17.8174" fuel="0.024" fcompound="5" rcompound="5">48.9749</Lap>
+<Lap num="15" p="8" et="796.9785" s1="11.9026" s2="19.2516" s3="17.8417" fuel="0.016" fcompound="5" rcompound="5">48.9960</Lap>
+<BestLapTime>48.9159</BestLapTime>
+<Laps>15</Laps>
+<Pitstops>1</Pitstops>
+<FinishStatus>None</FinishStatus>
+<ControlAndAids startLap="1" endLap="15">AIControl</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Vlad Podraza</Name>
+<Connected>1</Connected>
+<VehFile>FISIR_2012_08.VEH</VehFile>
+<UpgradeCode>00000000 00000000 00000000 00000000</UpgradeCode>
+<VehName>Formula ISI 2012 #8</VehName>
+<CarType>Formula ISI 2012</CarType>
+<CarClass>Formula ISI 2012</CarClass>
+<CarNumber>8</CarNumber>
+<TeamName>Camheads</TeamName>
+<isPlayer>0</isPlayer>
+<ServerScored>1</ServerScored>
+<Position>9</Position>
+<ClassPosition>9</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>9</LapRankIncludingDiscos>
+<Lap num="1" p="10" et="--.---" fuel="0.118" fcompound="5" rcompound="5">--.----</Lap>
+<Lap num="2" p="4" et="185.3313" s1="11.8223" s2="19.5320" s3="18.0984" fuel="0.110" fcompound="5" rcompound="5">49.4526</Lap>
+<Lap num="3" p="4" et="234.7839" s1="11.8812" s2="19.5865" s3="18.1277" fuel="0.102" fcompound="5" rcompound="5">49.5954</Lap>
+<Lap num="4" p="5" et="284.3792" s1="11.8258" s2="19.5515" s3="18.0985" fuel="0.094" fcompound="5" rcompound="5">49.4758</Lap>
+<Lap num="5" p="5" et="333.8550" s1="11.8543" s2="19.5703" s3="18.0860" fuel="0.082" fcompound="5" rcompound="5">49.5107</Lap>
+<Lap num="6" p="6" et="383.3657" s1="11.8464" s2="19.4781" s3="18.1295" fuel="0.075" fcompound="5" rcompound="5">49.4540</Lap>
+<Lap num="7" p="7" et="432.8197" s1="11.8853" s2="19.5121" s3="18.1013" fuel="0.067" fcompound="5" rcompound="5">49.4986</Lap>
+<Lap num="8" p="7" et="482.3183" s1="11.9049" s2="19.5595" s3="18.1805" fuel="0.059" fcompound="5" rcompound="5">49.6450</Lap>
+<Lap num="9" p="7" et="531.9633" s1="11.8607" s2="19.4870" s3="18.0712" fuel="0.051" fcompound="5" rcompound="5">49.4189</Lap>
+<Lap num="10" p="7" et="581.3822" s1="11.9224" s2="19.5945" s3="18.1042" fuel="0.043" fcompound="5" rcompound="5">49.6212</Lap>
+<Lap num="11" p="8" et="631.0034" s1="11.8846" s2="19.4670" s3="18.0840" fuel="0.035" fcompound="5" rcompound="5">49.4356</Lap>
+<Lap num="12" p="8" et="680.4390" s1="11.8909" s2="19.5438" s3="18.0716" fuel="0.024" fcompound="5" rcompound="5">49.5063</Lap>
+<Lap num="13" p="8" et="729.9453" s1="11.9085" s2="19.4957" s3="17.9667" fuel="0.016" fcompound="5" rcompound="5">49.3708</Lap>
+<Lap num="14" p="9" et="779.3161" s1="11.9002" s2="19.4414" s3="18.0334" fuel="0.008" fcompound="5" rcompound="5">49.3751</Lap>
+<BestLapTime>49.3708</BestLapTime>
+<Laps>14</Laps>
+<Pitstops>1</Pitstops>
+<FinishStatus>None</FinishStatus>
+<ControlAndAids startLap="1" endLap="14">AIControl</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Maurice van der Star</Name>
+<Connected>1</Connected>
+<VehFile>FISIR_2012_04.VEH</VehFile>
+<UpgradeCode>00000000 00000000 00000000 00000000</UpgradeCode>
+<VehName>Formula ISI 2012 #4</VehName>
+<CarType>Formula ISI 2012</CarType>
+<CarClass>Formula ISI 2012</CarClass>
+<CarNumber>4</CarNumber>
+<TeamName>Forty Eleven</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<Position>10</Position>
+<ClassPosition>10</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>10</LapRankIncludingDiscos>
+<Lap num="1" p="1" et="--.---" fuel="0.914" fcompound="0" rcompound="0">--.----</Lap>
+<Lap num="2" p="3" et="126.7322" s1="14.3354" s2="40.3648" s3="21.7826" fuel="0.906" fcompound="0" rcompound="0">76.4828</Lap>
+<Lap num="3" p="4" et="203.2150" fuel="0.922" fcompound="0" rcompound="0">--.----</Lap>
+<Lap num="4" p="5" et="207.7057" fuel="0.910" fcompound="1" rcompound="1">--.----</Lap>
+<Lap num="5" p="6" et="302.9824" s1="13.6079" s2="22.9086" s3="19.3717" fuel="0.902" fcompound="1" rcompound="1">55.8882</Lap>
+<Lap num="6" p="6" et="358.8706" fuel="0.922" fcompound="1" rcompound="1">--.----</Lap>
+<Lap num="7" p="7" et="365.1544" fuel="0.910" fcompound="2" rcompound="2">--.----</Lap>
+<Lap num="8" p="8" et="453.5161" s1="14.0444" s2="22.1425" s3="19.9464" fuel="0.902" fcompound="2" rcompound="2">56.1333</Lap>
+<Lap num="9" p="8" et="509.6493" fuel="0.922" fcompound="2" rcompound="2">--.----</Lap>
+<Lap num="10" p="8" et="515.1423" fuel="0.910" fcompound="3" rcompound="3">--.----</Lap>
+<Lap num="11" p="9" et="605.3021" s1="13.6923" s2="23.1895" s3="19.9717" fuel="0.902" fcompound="3" rcompound="3">56.8535</Lap>
+<Lap num="12" p="9" et="662.1556" fuel="0.922" fcompound="3" rcompound="3">--.----</Lap>
+<Lap num="13" p="9" et="667.1570" fuel="0.910" fcompound="4" rcompound="4">--.----</Lap>
+<Lap num="14" p="10" et="745.4869" s1="13.2715" s2="21.6393" s3="19.0861" fuel="0.902" fcompound="4" rcompound="4">53.9968</Lap>
+<Lap num="15" p="10" et="799.4837" fuel="0.922" fcompound="4" rcompound="4">--.----</Lap>
+<Lap num="16" p="10" et="803.6871" fuel="0.910" fcompound="5" rcompound="5">--.----</Lap>
+<Lap num="17" p="10" et="882.3235" s1="13.2724" s2="22.2355" s3="19.7421" fuel="0.902" fcompound="5" rcompound="5">55.2499</Lap>
+<Lap num="18" p="10" et="937.5734" fuel="0.922" fcompound="5" rcompound="5">--.----</Lap>
+<BestLapTime>53.9968</BestLapTime>
+<Laps>18</Laps>
+<Pitstops>6</Pitstops>
+<FinishStatus>None</FinishStatus>
+<ControlAndAids startLap="1" endLap="18">PlayerControl,Invulnerable</ControlAndAids>
+</Driver>
+</Practice1>
+</RaceResults>
+</rFactorXML>
