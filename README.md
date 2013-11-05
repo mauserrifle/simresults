@@ -23,8 +23,22 @@ This project is created and maintained by
 
 ## Supported games
 
+### rFactor
+
 Currently rFactor and rFactor 2 are supported, though the project is designed
 to support more games in the future.
+
+#### rFactor powered games
+
+Because the rFactor engine is used within other games, those below are
+confirmed to be working too:
+
+* Game Stock Car 2012
+* Game Stock Car 2013
+* Formula Truck 2013
+
+Please note that anything other than rFactor or rFactor 2 is reported as a
+rFactor game.
 
 ## Features
 
@@ -41,7 +55,8 @@ to support more games in the future.
 
 ### rFactor reader
 
-* Supports both rFactor and rFactor 2
+* Supports rFactor and rFactor 2. Also works for other rFactor powered games:
+  Game Stock Car 2012, Game Stock Car 2013 and Formula Truck 2013
 * Detects and fixes position data (sometimes log files report complete wrong
   positions due to lag/bugs)
 * Detects human and AI players using their aids (sometimes log files report
