@@ -11,7 +11,7 @@ namespace Simresults;
 class Helper {
 
     /**
-     * Format seconds to a (h:)i:s.u format. Hours are optional by default and 
+     * Format seconds to a (h:)i:s.u format. Hours are optional by default and
      * may be forced through param $force_hours
      *
      * @param   float    $seconds

@@ -35,9 +35,8 @@ class Data_Reader_Rfactor2 extends Data_Reader {
             // Create new dom document
             $dom = new \DOMDocument('1.0', 'utf-8');
 
-            // Make sure the data is utf-8 encoded, rFactor2 logs are windows
-            // encoded by default
-            $data = utf8_encode($data);
+            // Clean xml data
+            $data = self::cleanXML($data);
 
             // Cannot read data into dom document
             if ( ! $dom->loadXML($data))
@@ -363,9 +362,8 @@ class Data_Reader_Rfactor2 extends Data_Reader {
         // Create the new DOMDocument
         $dom = $this->dom = new \DOMDocument('1.0', 'utf-8');
 
-        // Make sure the data is utf-8 encoded, rFactor2 logs are windows
-        // encoded by default
-        $data = utf8_encode($this->data);
+        // Clean xml data
+        $data = self::cleanXML($this->data);
 
         // Load the data as XML
         $dom->loadXML($data);
@@ -1216,6 +1214,27 @@ class Data_Reader_Rfactor2 extends Data_Reader {
 
         // Just return null
         return null;
+    }
+
+
+
+    /**
+     * Clean XML data
+     *
+     * @param   string  $xml
+     * @return  string
+     */
+    protected static function cleanXML($xml)
+    {
+        // Make sure the data is utf-8 encoded, rFactor2 logs are windows
+        // encoded by default
+        $xml = utf8_encode($xml);
+
+        // Remove any unwanted chars after the end of the file (after last
+        // XML closing tag)
+        $xml = substr($xml, 0, 1+strrpos($xml, '>'));
+
+        return $xml;
     }
 
 }

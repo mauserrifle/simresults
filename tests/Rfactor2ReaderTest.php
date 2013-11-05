@@ -605,6 +605,19 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
 
     }
 
+    /**
+     * Test reading a file that contains invalid characters at the end. It
+     * should read without errors. The issue happend for an user of
+     * simresults.net. Maybe the user edited this file by hand, but library
+     * should be able to detect, fix and read it
+     */
+    public function testReadingFileWithInvalidCharacters()
+    {
+        // Get the data reader for the given data source
+        $reader = Data_Reader::factory(
+            realpath(__DIR__.'/logs/rfactor2/qualify_with_invalid_chars.xml'));
+    }
+
 
 
     //---------------------------------------------------------------

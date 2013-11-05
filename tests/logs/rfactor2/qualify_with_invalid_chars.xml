@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE rF [
+<!ENTITY rFEnt "rFactor Entity">
+]>
+<rFactorXML version="1.0">
+<RaceResults>
+<Setting>Multiplayer</Setting>
+<ServerName>~~GTSR Olds WTM Bathurst</ServerName>
+<PlayerFile>DedicatedServer</PlayerFile>
+<DateTime>1383345279</DateTime>
+<TimeString>2013/11/02 09:34:39</TimeString>
+<Mod>reiza2.rfm</Mod>
+<Season></Season>
+<TrackVenue>Bathurst2011</TrackVenue>
+<TrackCourse>Mount Panorama</TrackCourse>
+<TrackEvent>Bathurst2011</TrackEvent>
+<TrackLength>6181.6</TrackLength>
+<GameVersion>1.700</GameVersion>
+<Dedicated>1</Dedicated>
+<ConnectionType upload="8042" download="8042">Custom</ConnectionType>
+<MOTD>Welcome to the gtsimracing.com.au GSC 2012 server. Please check out our website!</MOTD>
+<RaceLaps>15</RaceLaps>
+<RaceTime>0</RaceTime>
+<MechFailRate>1</MechFailRate>
+<DamageMult>85</DamageMult>
+<FuelMult>1</FuelMult>
+<TireMult>2</TireMult>
+<VehiclesAllowed>|RDTCL</VehiclesAllowed>
+<ParcFerme>3</ParcFerme>
+<FixedSetups>0</FixedSetups>
+<FreeSettings>11</FreeSettings>
+<FixedUpgrades>0</FixedUpgrades>
+<Qualify>
+<DateTime>1383469620</DateTime>
+<TimeString>2013/11/03 20:07:00</TimeString>
+<Laps>3</Laps>
+<Minutes>15</Minutes>
+<Stream>
+<Score et="84.2">Jordan B(15) lap=0 point=1 t=-1.000 et=84.162</Score>
+<Score et="102.3">Mike(13) lap=0 point=1 t=-1.000 et=102.208</Score>
+<Score et="110.1">Steve Crossland(18) lap=0 point=1 t=-1.000 et=110.090</Score>
+<Score et="121.5">Hazim Azul(20) lap=0 point=1 t=-1.000 et=121.493</Score>
+<Score et="133.6">Jordan B(15) lap=0 point=2 t=-1.000 et=133.608</Score>
+<Score et="138.6">Eric James(17) lap=0 point=1 t=-1.000 et=138.442</Score>
+<Incident et="149.0">Steve Crossland(18) reported contact (0.48) with Cone</Incident>
+<Score et="152.8">Mike(13) lap=0 point=2 t=-1.000 et=152.749</Score>
+<Score et="158.2">Steve Crossland(18) lap=0 point=2 t=-1.000 et=158.178</Score>
+<Score et="171.8">Hazim Azul(20) lap=0 point=2 t=-1.000 et=171.749</Score>
+<Score et="172.0">Jordan B(15) lap=1 point=0 t=-1.000 et=171.922</Score>
+<Score et="188.5">Eric James(17) lap=0 point=2 t=-1.000 et=188.339</Score>
+<Score et="191.7">Mike(13) lap=1 point=0 t=-1.000 et=191.677</Score>
+<Score et="199.8">Steve Crossland(18) lap=1 point=0 t=-1.000 et=199.795</Score>
+<Score et="210.2">Hazim Azul(20) lap=1 point=0 t=-1.000 et=210.191</Score>
+<Score et="220.7">Jordan B(15) lap=1 point=1 t=48.678 et=220.600</Score>
+<Score et="226.6">Eric James(17) lap=1 point=0 t=-1.000 et=226.516</Score>
+<Vote et="235.8">Eric James: /vote yes</Vote>
+<Sent et="235.8">Vote ignored: There is no vote in progress</Sent>
+<Score et="240.4">Mike(13) lap=1 point=1 t=48.696 et=240.374</Score>
+<Incident et="242.0">Jordan B(15) reported contact (0.06) with Immovable</Incident>
+<Incident et="243.9">Jordan B(15) reported contact (0.39) with Immovable</Incident>
+<Score et="247.7">Steve Crossland(18) lap=1 point=1 t=47.891 et=247.686</Score>
+<Score et="258.7">Hazim Azul(20) lap=1 point=1 t=48.506 et=258.697</Score>
+<Incident et="267.7">Hazim Azul(20) reported contact (1.00) with Immovable</Incident>
+<Incident et="267.8">Hazim Azul(20) reported contact (0.58) with Immovable</Incident>
+<Incident et="267.8">Hazim Azul(20) reported contact (0.74) with Immovable</Incident>
+<Incident et="269.1">Hazim Azul(20) reported contact (1.00) with Immovable</Incident>
+<Incident et="269.3">Hazim Azul(20) reported contact (0.94) with Immovable</Incident>
+<Incident et="269.6">Hazim Azul(20) reported contact (0.16) with Immovable</Incident>
+<Score et="271.0">Jordan B(15) lap=1 point=2 t=99.027 et=270.949</Score>
+<Score et="275.6">Eric James(17) lap=1 point=1 t=48.948 et=275.464</Score>
+<Score et="290.1">Mike(13) lap=1 point=2 t=98.411 et=290.089</Score>
+<Score et="296.0">Steve Crossland(18) lap=1 point=2 t=96.183 et=295.978</Score>
+<Incident et="300.3">Eric James(17) reported contact (1.00) with Immovable</Incident>
+<Incident et="300.6">Eric James(17) reported contact (0.81) with Immovable</Incident>
+<Score et="308.9">Jordan B(15) lap=2 point=0 t=136.959 et=308.881</Score>
+<Score et="316.8">Hazim Azul(20) lap=1 point=2 t=106.566 et=316.758</Score>
+<Score et="328.6">Mike(13) lap=2 point=0 t=136.928 et=328.606</Score>
+<Score et="329.6">Eric James(17) lap=1 point=2 t=102.958 et=329.474</Score>
+<Score et="333.7">Steve Crossland(18) lap=2 point=0 t=133.878 et=333.672</Score>
+<Score et="340.5">Steve Crossland(18) lap=2 point=1 t=-1.000 et=340.426</Score>
+<Score et="340.5">Steve Crossland(18) lap=2 point=2 t=-1.000 et=340.426</Score>
+<Score et="340.5">Steve Crossland(18) lap=3 point=0 t=-1.000 et=340.426</Score>
+<Score et="344.1">Mike(13) lap=3 point=0 t=-1.000 et=344.018</Score>
+<Score et="344.1">Mike(13) lap=3 point=1 t=-1.000 et=344.018</Score>
+<Score et="344.1">Mike(13) lap=3 point=2 t=-1.000 et=344.018</Score>
+<Score et="352.6">Jordan B(15) lap=3 point=0 t=-1.000 et=352.434</Score>
+<Score et="352.6">Jordan B(15) lap=3 point=1 t=-1.000 et=352.434</Score>
+<Score et="352.6">Jordan B(15) lap=3 point=2 t=-1.000 et=352.434</Score>
+<Score et="358.3">Hazim Azul(20) lap=2 point=0 t=148.125 et=358.316</Score>
+<Score et="369.3">Eric James(17) lap=2 point=0 t=142.665 et=369.181</Score>
+<Score et="370.4">Eric James(17) lap=2 point=1 t=-1.000 et=370.041</Score>
+<Score et="370.4">Eric James(17) lap=2 point=2 t=-1.000 et=370.041</Score>
+<Score et="370.4">Eric James(17) lap=3 point=0 t=-1.000 et=370.041</Score>
+<Incident et="406.2">Hazim Azul(20) reported contact (0.74) with Immovable</Incident>
+<Incident et="406.4">Hazim Azul(20) reported contact (0.10) with Immovable</Incident>
+<Score et="409.4">Hazim Azul(20) lap=2 point=1 t=51.043 et=409.360</Score>
+<Incident et="436.7">Hazim Azul(20) reported contact (1.00) with Immovable</Incident>
+<Incident et="436.8">Hazim Azul(20) reported contact (0.71) with Immovable</Incident>
+<Incident et="436.8">Hazim Azul(20) reported contact (1.00) with Immovable</Incident>
+<Score et="466.3">Hazim Azul(20) lap=2 point=2 t=107.924 et=466.240</Score>
+<Incident et="514.8">Hazim Azul(20) reported contact (1.00) with Immovable</Incident>
+<Incident et="514.8">Hazim Azul(20) reported contact (0.06) with Immovable</Incident>
+<Incident et="515.5">Hazim Azul(20) reported contact (1.00) with Immovable</Incident>
+<Score et="517.2">Hazim Azul(20) lap=3 point=0 t=-1.000 et=517.097</Score>
+<Chat et="557.5">MozzMann has entered the game.</Chat>
+<System et="557.5">MozzMann(21) 138.130.72.154 has joined as a participant</System>
+<Score et="679.8">MozzMann(21) lap=0 point=1 t=-1.000 et=679.751</Score>
+<Score et="730.0">MozzMann(21) lap=0 point=2 t=-1.000 et=729.889</Score>
+<Score et="769.2">MozzMann(21) lap=1 point=0 t=-1.000 et=769.147</Score>
+<Score et="819.0">MozzMann(21) lap=1 point=1 t=49.776 et=818.924</Score>
+<Score et="868.6">MozzMann(21) lap=1 point=2 t=99.417 et=868.564</Score>
+<Score et="907.2">MozzMann(21) lap=2 point=0 t=138.018 et=907.165</Score>
+<Score et="922.8">MozzMann(21) lap=2 point=1 t=-1.000 et=922.106</Score>
+<Score et="922.8">MozzMann(21) lap=2 point=2 t=-1.000 et=922.106</Score>
+<Score et="922.8">MozzMann(21) lap=3 point=0 t=-1.000 et=922.106</Score>
+</Stream>
+<MostLapsCompleted>3</MostLapsCompleted>
+<Driver>
+<Name>Steve Crossland</Name>
+<Connected>1</Connected>
+<VehFile>2402.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>#01 Robbie Francevic</VehName>
+<CarType>Volvo</CarType>
+<CarClass>Group A</CarClass>
+<CarNumber>1</CarNumber>
+<TeamName>Volvo 240 Turbo</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<Position>1</Position>
+<ClassPosition>1</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>1</LapRankIncludingDiscos>
+<Lap num="1" p="1" et="--.---" fuel="0.106">--.----</Lap>
+<Lap num="2" p="1" et="199.7947" s1="47.8910" s2="48.2925" s3="37.6941" fuel="0.078">133.8776</Lap>
+<Lap num="3" p="1" et="333.6723" fuel="0.137">--.----</Lap>
+<BestLapTime>133.8776</BestLapTime>
+<Laps>3</Laps>
+<Pitstops>1</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="3">PlayerControl,Clutch,AutoLift,AutoBlip</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Mike</Name>
+<Connected>1</Connected>
+<VehFile>R318.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>#01 Mark Skaife</VehName>
+<CarType>Nissan</CarType>
+<CarClass>Group A</CarClass>
+<CarNumber>1</CarNumber>
+<TeamName>Nissan Skyline GTS-R HR31</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<Position>2</Position>
+<ClassPosition>2</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>2</LapRankIncludingDiscos>
+<Lap num="1" p="2" et="--.---" fuel="0.290">--.----</Lap>
+<Lap num="2" p="1" et="191.6774" s1="48.6964" s2="49.7151" s3="38.5170" fuel="0.259">136.9284</Lap>
+<Lap num="3" p="2" et="328.6058" fuel="0.318">--.----</Lap>
+<BestLapTime>136.9284</BestLapTime>
+<Laps>3</Laps>
+<Pitstops>1</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="3">PlayerControl,Clutch,AutoLift,AutoBlip</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Jordan B</Name>
+<Connected>1</Connected>
+<VehFile>SUP3.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>#01 Chris Hodgetts</VehName>
+<CarType>Toyota</CarType>
+<CarClass>Group A</CarClass>
+<CarNumber>1</CarNumber>
+<TeamName>Toyota Supra Mk3 3.0i</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<Position>3</Position>
+<ClassPosition>3</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>3</LapRankIncludingDiscos>
+<Lap num="1" p="4" et="--.---" fuel="0.243">--.----</Lap>
+<Lap num="2" p="1" et="171.9218" s1="48.6780" s2="50.3493" s3="37.9318" fuel="0.216">136.9591</Lap>
+<Lap num="3" p="3" et="308.8809" fuel="0.275">--.----</Lap>
+<BestLapTime>136.9591</BestLapTime>
+<Laps>3</Laps>
+<Pitstops>1</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="3">PlayerControl</ControlAndAids>
+</Driver>
+<Driver>
+<Name>MozzMann</Name>
+<Connected>1</Connected>
+<VehFile>M31.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>#05 Peter Brock</VehName>
+<CarType>BMW</CarType>
+<CarClass>Group A</CarClass>
+<CarNumber>05</CarNumber>
+<TeamName>BMW M3 E30</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<Position>4</Position>
+<ClassPosition>4</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>4</LapRankIncludingDiscos>
+<Lap num="1" p="6" et="--.---" fuel="0.847">--.----</Lap>
+<Lap num="2" p="4" et="769.1473" s1="49.7765" s2="49.6401" s3="38.6014" fuel="0.824">138.0179</Lap>
+<Lap num="3" p="4" et="907.1652" fuel="0.875">--.----</Lap>
+<BestLapTime>138.0179</BestLapTime>
+<Laps>3</Laps>
+<Pitstops>1</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="3">PlayerControl</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Eric James</Name>
+<Connected>1</Connected>
+<VehFile>R318.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>#01 Mark Skaife</VehName>
+<CarType>Nissan</CarType>
+<CarClass>Group A</CarClass>
+<CarNumber>1</CarNumber>
+<TeamName>Nissan Skyline GTS-R HR31</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<Position>5</Position>
+<ClassPosition>5</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>5</LapRankIncludingDiscos>
+<Lap num="1" p="3" et="--.---" fuel="0.133">--.----</Lap>
+<Lap num="2" p="4" et="226.5157" s1="48.9482" s2="54.0097" s3="39.7071" fuel="0.102">142.6650</Lap>
+<Lap num="3" p="4" et="369.1807" fuel="0.165">--.----</Lap>
+<BestLapTime>142.6650</BestLapTime>
+<Laps>3</Laps>
+<Pitstops>1</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="3">PlayerControl</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Hazim Azul</Name>
+<Connected>1</Connected>
+<VehFile>RS9.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>#09 Niedzwiedz/Moffat/Hansford</VehName>
+<CarType>Ford</CarType>
+<CarClass>Group A</CarClass>
+<CarNumber>9</CarNumber>
+<TeamName>Ford Sierra RS500 Cosworth</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<Position>6</Position>
+<ClassPosition>6</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>6</LapRankIncludingDiscos>
+<Lap num="1" p="5" et="--.---" fuel="0.271">--.----</Lap>
+<Lap num="2" p="4" et="210.1913" s1="48.5060" s2="58.0603" s3="41.5589" fuel="0.243">148.1252</Lap>
+<Lap num="3" p="5" et="358.3164" s1="51.0433" s2="56.8806" fuel="0.224" pit="1">--.----</Lap>
+<BestLapTime>148.1252</BestLapTime>
+<Laps>3</Laps>
+<Pitstops>1</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="3">PlayerControl,Clutch,AutoLift,AutoBlip</ControlAndAids>
+</Driver>
+</Qualify>
+</RaceResults>
+</rFactorXML>
+í
