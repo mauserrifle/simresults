@@ -181,6 +181,51 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
+     * Test reading compound information on laps
+     */
+    public function testReadingCompoundOfLaps()
+    {
+        // Get the data reader for the given data source
+        $reader = Data_Reader::factory(
+            realpath(__DIR__.'/logs/rfactor2/practice_with_compound_info.xml'));
+
+        // Get participants
+        $participants = $reader->getSession()->getParticipants();
+
+        // Get the first participant
+        $participant = $participants[9];
+
+        // Get laps
+        $laps = $participant->getLaps();
+
+        // Validate compound values
+        // TODO: ISI should fix this so we can map the ints to proper compounds
+        //       or have a string version of the compound. This implementation
+        //       is temporary! Extra info/findings are found at the ISI forums:
+        //       http://isiforums.net/f/showthread.php/16512
+        $this->assertSame('0', $laps[1]->getFrontCompound());
+        $this->assertSame('0', $laps[1]->getRearCompound());
+        $this->assertSame('1', $laps[4]->getFrontCompound());
+        $this->assertSame('1', $laps[4]->getRearCompound());
+        $this->assertSame('2', $laps[7]->getFrontCompound());
+        $this->assertSame('2', $laps[7]->getRearCompound());
+        $this->assertSame('3', $laps[10]->getFrontCompound());
+        $this->assertSame('3', $laps[10]->getRearCompound());
+        $this->assertSame('4', $laps[13]->getFrontCompound());
+        $this->assertSame('4', $laps[13]->getRearCompound());
+        $this->assertSame('5', $laps[16]->getFrontCompound());
+        $this->assertSame('5', $laps[16]->getRearCompound());
+
+        // Test for different front and rear values
+        $this->assertSame('1', $laps[18]->getFrontCompound());
+        $this->assertSame('4', $laps[18]->getRearCompound());
+
+        // Test for proper NULL values
+        $this->assertNull($laps[19]->getFrontCompound());
+        $this->assertNull($laps[19]->getRearCompound());
+    }
+
+    /**
      * Test reading finish statusses of participants
      */
     public function testReadingParticipantFinishStatus()
