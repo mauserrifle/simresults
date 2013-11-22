@@ -51,6 +51,16 @@ class Lap {
      */
     protected $elapsed_seconds;
 
+    /**
+     * @var  string  The front compound used within this lap
+     */
+    protected $front_compound;
+
+    /**
+     * @var  string  The rear compound used within this lap
+     */
+    protected $rear_compound;
+
 
     /**
      * Set the lap number
@@ -293,6 +303,51 @@ class Lap {
     {
         return $this->elapsed_seconds;
     }
+
+    /**
+     * Set the front compound used within this lap
+     *
+     * @param   string  $front_compound
+     * @return  Lap
+     */
+    public function setFrontCompound($front_compound)
+    {
+        $this->front_compound = $front_compound;
+        return $this;
+    }
+
+    /**
+     * Get the front compound used within this lap
+     *
+     * @return  string
+     */
+    public function getFrontCompound()
+    {
+        return $this->front_compound;
+    }
+
+    /**
+     * Set the rear compound used within this lap
+     *
+     * @param   string  $rear_compound
+     * @return  Lap
+     */
+    public function setRearCompound($rear_compound)
+    {
+        $this->rear_compound = $rear_compound;
+        return $this;
+    }
+
+    /**
+     * Get the rear compound used within this lap
+     *
+     * @return  string
+     */
+    public function getRearCompound()
+    {
+        return $this->rear_compound;
+    }
+
 
     /**
      * Returns whether this lap is completed or not
