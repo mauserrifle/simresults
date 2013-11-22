@@ -39,8 +39,7 @@ class AssettoCorsaReaderTest extends PHPUnit_Framework_TestCase {
 
 
     /***
-    **** Simple tests that do not fit in the full race log used for testing.
-    **** Most of the below tests are done on modfied XML files
+    **** Simple tests that do not fit in the 1 log file
     ***/
 
 
@@ -60,6 +59,41 @@ class AssettoCorsaReaderTest extends PHPUnit_Framework_TestCase {
         // Get session
         $session = $reader->getSession();
     }
+
+
+    /**
+     * Test reading drift data as session settings data
+     *
+     * TODO: Find a clean API for this when more extra info is available from
+     *       AC.
+     */
+    public function testReadingSessionDriftData()
+    {
+        // The path to the data source
+        $file_path = realpath(
+            __DIR__.'/logs/assettocorsa/offline_drift_session.json');
+
+        // Get the data reader for the given data source
+        $reader = Data_Reader::factory($file_path);
+
+        // Get session
+        $session = $reader->getSession();
+
+        // Validate drift data
+        $this->assertSame(
+            array(
+                'Drift points'   =>  29,
+                'Drift combos'   =>  2,
+                'Drift levels'   =>  1,
+            ),
+            $session->getOtherSettings()
+        );
+    }
+
+
+    /***
+    **** Below tests use 1 log file
+    ***/
 
     /**
      * Test reading the session
@@ -154,9 +188,6 @@ class AssettoCorsaReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertSame(38.736, $sectors[2]);
     }
 
-
-    // Code...
-    // 119404 = 119.404
 
 
     /**

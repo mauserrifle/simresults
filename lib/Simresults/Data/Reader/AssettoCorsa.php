@@ -62,6 +62,29 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
             $participants[] = $participant;
         }
 
+        // Get extra data for all sessions
+        $extras = array();
+        foreach ($this->get($data, 'extras', array()) as $extras_data)
+        {
+            // Get name
+            $name = $this->get($extras_data, 'name');
+
+            // Loop all values and add as extra settings
+            foreach ($extras_data as $extra_data_key => $extra_data_value)
+            {
+                // Is name
+                if ($extra_data_key === 'name')
+                {
+                    // Skip this
+                    continue;
+                }
+
+                // Add to extras collection
+                $extras[ucfirst($name).' '.$extra_data_key]
+                    = $extra_data_value;
+            }
+        }
+
         // Gather all sessions
         foreach ($sessions_data as $session_data)
         {
@@ -137,6 +160,9 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
                 // Add lap to participant
                 $lap_participant->addLap($lap);
             }
+
+            // Add extras to session
+            $session->setOtherSettings($extras);
 
             // Add session to collection
             $sessions[] = $session;
