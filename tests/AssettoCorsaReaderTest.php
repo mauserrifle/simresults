@@ -114,6 +114,8 @@ class AssettoCorsaReaderTest extends PHPUnit_Framework_TestCase {
 
         $this->assertSame('Maurice van der Star',
                           $participant->getDriver()->getName());
+        $this->assertSame('ferrari_458',
+                          $participant->getVehicle()->getName());
     }
 
     /**

@@ -53,6 +53,11 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
             $participant = new Participant;
             $participant->setDrivers(array($driver));
 
+            // Create vehicle and add to participant
+            $vehicle = new Vehicle;
+            $vehicle->setName($this->get($player_data, 'car'));
+            $participant->setVehicle($vehicle);
+
             // Add participant to collection
             $participants[] = $participant;
         }
