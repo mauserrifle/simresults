@@ -1,0 +1,504 @@
+
+{
+	"track": "silverstone",
+	"players": [
+		{
+			"name": "Maurice van der Star",
+			"car": "ferrari_458",
+			"skin": "avorio"
+		}, 
+		{
+			"name": "Hugh Lemont",
+			"car": "lotus_exige_scura",
+			"skin": "scura"
+		}, 
+		{
+			"name": "Riccardo Defendi",
+			"car": "lotus_exige_scura",
+			"skin": "scura"
+		}, 
+		{
+			"name": "Dominic La Sarthe",
+			"car": "lotus_exige_scura",
+			"skin": "scura"
+		}, 
+		{
+			"name": "Pablo Marquez",
+			"car": "bmw_m3_e92",
+			"skin": "Black_Sapphire_metallic"
+		}, 
+		{
+			"name": "Dan Gooch",
+			"car": "bmw_m3_e92",
+			"skin": "Orange"
+		}, 
+		{
+			"name": "Diego Perez",
+			"car": "bmw_m3_e92",
+			"skin": "Frozen_Black"
+		}, 
+		{
+			"name": "Mitsuo Yoshida",
+			"car": "ferrari_458",
+			"skin": "rosso_corsa"
+		}, 
+		{
+			"name": "Sven Jackermeier",
+			"car": "ferrari_458",
+			"skin": "rosso_mugello"
+		}, 
+		{
+			"name": "Stefano Lavezzi",
+			"car": "ferrari_458",
+			"skin": "blupozzi"
+		}, 
+		{
+			"name": "David Lewis",
+			"car": "mclaren_mp412c",
+			"skin": "mclaren_orange"
+		}, 
+		{
+			"name": "Alex Cardinali",
+			"car": "mclaren_mp412c",
+			"skin": "volcano_red"
+		}],
+	"number_of_sessions": 1,
+	"sessions": [
+		{
+			"name": "Quick Race",
+			"type": 3,
+			"lapsCount": 5,
+			"duration": 30,
+			"laps": [
+				{
+					"lap": 0,
+					"car": 0,
+					"sectors": [74956, 65584, 49071],
+					"time": 189611
+				}, 
+				{
+					"lap": 1,
+					"car": 0,
+					"sectors": [39172, 63632, 40122],
+					"time": 142926
+				}, 
+				{
+					"lap": 2,
+					"car": 0,
+					"sectors": [39229, 64016, 40821],
+					"time": 144066
+				}, 
+				{
+					"lap": 3,
+					"car": 0,
+					"sectors": [38855, 63734, 39440],
+					"time": 142029
+				}, 
+				{
+					"lap": 4,
+					"car": 0,
+					"sectors": [38316, 68144, 40245],
+					"time": 146705
+				}, 
+				{
+					"lap": 0,
+					"car": 1,
+					"sectors": [79595, 70774, 44789],
+					"time": 195158
+				}, 
+				{
+					"lap": 1,
+					"car": 1,
+					"sectors": [43917, 72186, 45968],
+					"time": 162071
+				}, 
+				{
+					"lap": 2,
+					"car": 1,
+					"sectors": [42483, 72337, 42885],
+					"time": 157705
+				}, 
+				{
+					"lap": 3,
+					"car": 1,
+					"sectors": [43052, 70554, 45131],
+					"time": 158737
+				}, 
+				{
+					"lap": 4,
+					"car": 1,
+					"sectors": [41670, 70560, 44928],
+					"time": 157158
+				}, 
+				{
+					"lap": 0,
+					"car": 2,
+					"sectors": [80129, 71125, 43989],
+					"time": 195243
+				}, 
+				{
+					"lap": 1,
+					"car": 2,
+					"sectors": [44500, 72415, 44790],
+					"time": 161705
+				}, 
+				{
+					"lap": 2,
+					"car": 2,
+					"sectors": [43841, 70491, 43482],
+					"time": 157814
+				}, 
+				{
+					"lap": 3,
+					"car": 2,
+					"sectors": [42440, 70303, 43936],
+					"time": 156679
+				}, 
+				{
+					"lap": 4,
+					"car": 2,
+					"sectors": [43123, 70443, 44736],
+					"time": 158302
+				}, 
+				{
+					"lap": 0,
+					"car": 3,
+					"sectors": [77905, 70101, 45398],
+					"time": 193404
+				}, 
+				{
+					"lap": 1,
+					"car": 3,
+					"sectors": [40640, 68501, 42282],
+					"time": 151423
+				}, 
+				{
+					"lap": 2,
+					"car": 3,
+					"sectors": [40462, 68571, 42309],
+					"time": 151342
+				}, 
+				{
+					"lap": 3,
+					"car": 3,
+					"sectors": [40674, 68539, 42427],
+					"time": 151640
+				}, 
+				{
+					"lap": 4,
+					"car": 3,
+					"sectors": [40528, 68570, 42438],
+					"time": 151536
+				}, 
+				{
+					"lap": 0,
+					"car": 4,
+					"sectors": [77228, 71455, 45947],
+					"time": 194630
+				}, 
+				{
+					"lap": 1,
+					"car": 4,
+					"sectors": [44093, 72123, 45424],
+					"time": 161640
+				}, 
+				{
+					"lap": 2,
+					"car": 4,
+					"sectors": [41509, 69360, 42970],
+					"time": 153839
+				}, 
+				{
+					"lap": 3,
+					"car": 4,
+					"sectors": [41507, 69585, 43082],
+					"time": 154174
+				}, 
+				{
+					"lap": 4,
+					"car": 4,
+					"sectors": [41448, 69551, 43030],
+					"time": 154029
+				}, 
+				{
+					"lap": 0,
+					"car": 5,
+					"sectors": [79286, 70294, 45360],
+					"time": 194940
+				}, 
+				{
+					"lap": 1,
+					"car": 5,
+					"sectors": [42730, 71691, 42677],
+					"time": 157098
+				}, 
+				{
+					"lap": 2,
+					"car": 5,
+					"sectors": [41042, 68773, 42688],
+					"time": 152503
+				}, 
+				{
+					"lap": 3,
+					"car": 5,
+					"sectors": [41108, 69093, 42693],
+					"time": 152894
+				}, 
+				{
+					"lap": 4,
+					"car": 5,
+					"sectors": [41111, 68833, 42752],
+					"time": 152696
+				}, 
+				{
+					"lap": 0,
+					"car": 6,
+					"sectors": [76619, 71136, 46561],
+					"time": 194316
+				}, 
+				{
+					"lap": 1,
+					"car": 6,
+					"sectors": [42309, 73728, 46272],
+					"time": 162309
+				}, 
+				{
+					"lap": 2,
+					"car": 6,
+					"sectors": [42459, 70817, 43856],
+					"time": 157132
+				}, 
+				{
+					"lap": 3,
+					"car": 6,
+					"sectors": [42271, 70817, 44229],
+					"time": 157317
+				}, 
+				{
+					"lap": 4,
+					"car": 6,
+					"sectors": [42315, 70848, 46272],
+					"time": 159435
+				}, 
+				{
+					"lap": 0,
+					"car": 7,
+					"sectors": [72859, 66977, 42143],
+					"time": 181979
+				}, 
+				{
+					"lap": 1,
+					"car": 7,
+					"sectors": [38857, 65483, 40357],
+					"time": 144697
+				}, 
+				{
+					"lap": 2,
+					"car": 7,
+					"sectors": [38764, 65450, 40416],
+					"time": 144630
+				}, 
+				{
+					"lap": 3,
+					"car": 7,
+					"sectors": [38850, 65552, 40437],
+					"time": 144839
+				}, 
+				{
+					"lap": 4,
+					"car": 7,
+					"sectors": [38921, 65562, 40502],
+					"time": 144985
+				}, 
+				{
+					"lap": 0,
+					"car": 8,
+					"sectors": [73755, 68566, 41413],
+					"time": 183734
+				}, 
+				{
+					"lap": 1,
+					"car": 8,
+					"sectors": [39639, 66310, 40826],
+					"time": 146775
+				}, 
+				{
+					"lap": 2,
+					"car": 8,
+					"sectors": [39380, 66592, 42543],
+					"time": 148515
+				}, 
+				{
+					"lap": 3,
+					"car": 8,
+					"sectors": [39454, 66598, 40671],
+					"time": 146723
+				}, 
+				{
+					"lap": 4,
+					"car": 8,
+					"sectors": [39977, 66085, 40587],
+					"time": 146649
+				}, 
+				{
+					"lap": 0,
+					"car": 9,
+					"sectors": [72145, 67093, 43216],
+					"time": 182454
+				}, 
+				{
+					"lap": 1,
+					"car": 9,
+					"sectors": [39688, 66458, 41024],
+					"time": 147170
+				}, 
+				{
+					"lap": 2,
+					"car": 9,
+					"sectors": [39549, 66325, 42741],
+					"time": 148615
+				}, 
+				{
+					"lap": 3,
+					"car": 9,
+					"sectors": [39523, 66528, 40891],
+					"time": 146942
+				}, 
+				{
+					"lap": 4,
+					"car": 9,
+					"sectors": [39511, 66433, 40853],
+					"time": 146797
+				}, 
+				{
+					"lap": 0,
+					"car": 10,
+					"sectors": [70651, 65312, 39750],
+					"time": 175713
+				}, 
+				{
+					"lap": 1,
+					"car": 10,
+					"sectors": [38646, 64699, 39781],
+					"time": 143126
+				}, 
+				{
+					"lap": 2,
+					"car": 10,
+					"sectors": [38680, 64607, 39883],
+					"time": 143170
+				}, 
+				{
+					"lap": 3,
+					"car": 10,
+					"sectors": [38648, 64741, 39829],
+					"time": 143218
+				}, 
+				{
+					"lap": 4,
+					"car": 10,
+					"sectors": [38727, 64747, 39861],
+					"time": 143335
+				}, 
+				{
+					"lap": 0,
+					"car": 11,
+					"sectors": [69147, 64934, 39802],
+					"time": 173883
+				}, 
+				{
+					"lap": 1,
+					"car": 11,
+					"sectors": [38499, 64480, 39681],
+					"time": 142660
+				}, 
+				{
+					"lap": 2,
+					"car": 11,
+					"sectors": [38543, 64918, 39691],
+					"time": 143152
+				}, 
+				{
+					"lap": 3,
+					"car": 11,
+					"sectors": [38666, 64512, 39734],
+					"time": 142912
+				}, 
+				{
+					"lap": 4,
+					"car": 11,
+					"sectors": [38666, 64533, 39739],
+					"time": 142938
+				}],
+			"lapstotal": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+			"bestLaps": [
+				{
+					"car": 0,
+					"time": 142029,
+					"lap": 3
+				}, 
+				{
+					"car": 1,
+					"time": 157158,
+					"lap": 4
+				}, 
+				{
+					"car": 2,
+					"time": 156679,
+					"lap": 3
+				}, 
+				{
+					"car": 3,
+					"time": 151342,
+					"lap": 2
+				}, 
+				{
+					"car": 4,
+					"time": 153839,
+					"lap": 2
+				}, 
+				{
+					"car": 5,
+					"time": 152503,
+					"lap": 2
+				}, 
+				{
+					"car": 6,
+					"time": 157132,
+					"lap": 2
+				}, 
+				{
+					"car": 7,
+					"time": 144630,
+					"lap": 2
+				}, 
+				{
+					"car": 8,
+					"time": 146649,
+					"lap": 4
+				}, 
+				{
+					"car": 9,
+					"time": 146797,
+					"lap": 4
+				}, 
+				{
+					"car": 10,
+					"time": 143126,
+					"lap": 1
+				}, 
+				{
+					"car": 11,
+					"time": 142660,
+					"lap": 1
+				}],
+			"raceResult": [11, 10, 7, 0, 9, 8, 3, 5, 4, 2, 6, 1]
+		}],
+	"extras": [
+		{
+			"name": "special_event",
+			"guid": "26",
+			"max": 4,
+			"tier": -1
+		}]
+}

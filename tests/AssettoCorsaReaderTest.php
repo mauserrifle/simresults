@@ -91,8 +91,9 @@ class AssettoCorsaReaderTest extends PHPUnit_Framework_TestCase {
     }
 
 
+
     /***
-    **** Below tests use 1 log file
+    **** Below tests use 1 race log file
     ***/
 
     /**
@@ -104,12 +105,11 @@ class AssettoCorsaReaderTest extends PHPUnit_Framework_TestCase {
         $session = $this->getWorkingReader()->getSession();
 
         //-- Validate
-        $this->assertSame(Session::TYPE_PRACTICE, $session->getType());
-        $this->assertSame('Hotlapping Session', $session->getName());
-        $this->assertSame(0, $session->getMaxLaps());
+        $this->assertSame(Session::TYPE_RACE, $session->getType());
+        $this->assertSame('Quick Race', $session->getName());
+        $this->assertSame(5, $session->getMaxLaps());
         $this->assertSame(30, $session->getMaxMinutes());
-        // TODO: Enable this
-        // $this->assertSame(3, $session->getLastedLaps());
+        $this->assertSame(5, $session->getLastedLaps());
     }
 
     /**
@@ -133,7 +133,7 @@ class AssettoCorsaReaderTest extends PHPUnit_Framework_TestCase {
         $track = $this->getWorkingReader()->getSession()->getTrack();
 
         // Validate track
-        $this->assertSame('imola', $track->getVenue());
+        $this->assertSame('silverstone', $track->getVenue());
     }
 
     /**
@@ -141,15 +141,28 @@ class AssettoCorsaReaderTest extends PHPUnit_Framework_TestCase {
      */
     public function testReadingSessionParticipants()
     {
-        // Get participant
+        // Get first participant
         $participants = $this->getWorkingReader()->getSession()
             ->getParticipants();
         $participant = $participants[0];
 
-        $this->assertSame('Maurice van der Star',
+        $this->assertSame('Alex Cardinali',
                           $participant->getDriver()->getName());
-        $this->assertSame('ferrari_458',
+        $this->assertSame('mclaren_mp412c',
                           $participant->getVehicle()->getName());
+        $this->assertSame(1, $participant->getPosition());
+        $this->assertSame(Participant::FINISH_NORMAL,
+            $participant->getFinishStatus());
+
+        // Get last participant
+        $participant = $participants[11];
+        $this->assertSame('Hugh Lemont',
+                          $participant->getDriver()->getName());
+        $this->assertSame('lotus_exige_scura',
+                          $participant->getVehicle()->getName());
+        $this->assertSame(12, $participant->getPosition());
+        $this->assertSame(Participant::FINISH_NORMAL,
+            $participant->getFinishStatus());
     }
 
     /**
@@ -165,7 +178,7 @@ class AssettoCorsaReaderTest extends PHPUnit_Framework_TestCase {
         $laps = $participants[0]->getLaps();
 
         // Validate we have 7 laps
-        $this->assertSame(7, count($laps));
+        $this->assertSame(5, count($laps));
 
         // Get driver of first participant (only one cause there are no swaps)
         $driver = $participants[0]->getDriver();
@@ -173,9 +186,11 @@ class AssettoCorsaReaderTest extends PHPUnit_Framework_TestCase {
         // Get first lap only
         $lap = $laps[0];
 
-        // Validate lap
+        // Validate laps
         $this->assertSame(1, $lap->getNumber());
-        $this->assertSame(119.404, $lap->getTime());
+        $this->assertNull($lap->getPosition());
+        $this->assertSame(173.883, $lap->getTime());
+        $this->assertSame(0, $lap->getElapsedSeconds());
         $this->assertSame($participants[0], $lap->getParticipant());
         $this->assertSame($driver, $lap->getDriver());
 
@@ -183,9 +198,21 @@ class AssettoCorsaReaderTest extends PHPUnit_Framework_TestCase {
         $sectors = $lap->getSectorTimes();
 
         // Validate sectors
-        $this->assertSame(34.668, $sectors[0]);
-        $this->assertSame(46, $sectors[1]);
-        $this->assertSame(38.736, $sectors[2]);
+        $this->assertSame(69.147, $sectors[0]);
+        $this->assertSame(64.934, $sectors[1]);
+        $this->assertSame(39.802, $sectors[2]);
+
+        // Second lap
+        $lap = $laps[1];
+        $this->assertSame(2, $lap->getNumber());
+        $this->assertSame(1, $lap->getPosition());
+        $this->assertSame(142.660, $lap->getTime());
+        $this->assertSame(173.883, $lap->getElapsedSeconds());
+
+        // Validate extra positions
+        $laps = $participants[3]->getLaps();
+        $this->assertNull($laps[0]->getPosition());
+        $this->assertSame(6, $laps[1]->getPosition());
     }
 
 
@@ -204,7 +231,7 @@ class AssettoCorsaReaderTest extends PHPUnit_Framework_TestCase {
         }
 
         // The path to the data source
-        $file_path = realpath(__DIR__.'/logs/assettocorsa/offline_hotlap_session.json');
+        $file_path = realpath(__DIR__.'/logs/assettocorsa/offline_quick_race_session.json');
 
         // Get the data reader for the given data source
         $reader = Data_Reader::factory($file_path);
