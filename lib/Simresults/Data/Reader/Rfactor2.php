@@ -1109,6 +1109,20 @@ class Data_Reader_Rfactor2 extends Data_Reader {
             // Add date to incident
             $incident->setDate($date);
 
+            // Is incident with another vehicle
+            if (strpos(strtolower($incident->getMessage()),
+                'with another vehicle'))
+            {
+                // Match impact
+                preg_match('/reported contact \((.*)\) with another vehicle/i',
+                           $incident->getMessage(), $matches);
+
+                // Worth reviewing when impact is >= 60%
+                $incident->setForReview(
+                    (isset($matches[1]) AND ((float) $matches[1]) >= 0.60)
+                );
+            }
+
             // Add incident to incidents
             $incidents[] = $incident;
         }
