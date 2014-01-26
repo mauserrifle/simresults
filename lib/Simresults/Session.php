@@ -446,6 +446,20 @@ class Session {
     }
 
     /**
+     * Get the incidents for reviewing
+     *
+     * @return  array
+     */
+    public function getIncidentsForReview()
+    {
+        // Return filtered incidents
+        return array_values(
+            array_filter($this->incidents,
+            function(Incident $incident){return ($incident->isForReview());}
+        ));
+    }
+
+    /**
      * Set the penalties within this session
      *
      * @param   array    $penalties

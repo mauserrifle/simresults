@@ -2,6 +2,7 @@
 use Simresults\Participant;
 
 use Simresults\Session;
+use Simresults\Incident;
 use Simresults\Lap;
 
 /**
@@ -403,6 +404,29 @@ class SessionTest extends PHPUnit_Framework_TestCase {
 
         // Validate lap
         $this->assertSame($participants[2]->getLap(3), $lap);
+    }
+
+    /**
+     * Test getting incidents for reviewing
+     */
+    public function testIncidentsForReview()
+    {
+        // Create session
+        $session = new Session;
+
+        // Create some incidents
+        $incident1 = new Incident;
+        $session->addIncident($incident1->setForReview(true));
+        $incident2 = new Incident;
+        $session->addIncident($incident2->setForReview(false));
+        $incident3 = new Incident;
+        $session->addIncident($incident3->setForReview(true));
+
+        // Validate incidents for review
+        $this->assertSame(
+            array($incident1, $incident3),
+            $session->getIncidentsForReview()
+        );
     }
 
 
