@@ -26,6 +26,11 @@ class Incident {
      */
     protected $elapsed_seconds;
 
+    /**
+     * @var  boolean  Whether this incident is worth reviewing
+     */
+    protected $for_review = false;
+
 
     /**
      * Set the incident message
@@ -97,4 +102,25 @@ class Incident {
         return $this->elapsed_seconds;
     }
 
+    /**
+     * Set whether this incident is worth reviewing
+     *
+     * @param   boolean  $for_review
+     * @return  Incident
+     */
+    public function setForReview($for_review)
+    {
+        $this->for_review = $for_review;
+        return $this;
+    }
+
+    /**
+     * Get whether this incident is worth reviewing
+     *
+     * @return  boolean
+     */
+    public function isForReview()
+    {
+        return $this->for_review;
+    }
 }
