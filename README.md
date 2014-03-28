@@ -25,8 +25,7 @@ This project is created and maintained by
 
 ### rFactor
 
-Currently rFactor and rFactor 2 are supported, though the project is designed
-to support more games in the future.
+Both rFactor and rFactor 2 are supported, or anything based on these engines.
 
 #### rFactor powered games
 
@@ -39,6 +38,11 @@ confirmed to be working too:
 
 Please note that anything other than rFactor or rFactor 2 is reported as a
 rFactor game.
+
+### Assetto Corsa
+
+Very limited support due to BETA state. Only laps and drifting points are read.
+
 
 ## Features
 

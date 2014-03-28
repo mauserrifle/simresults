@@ -89,6 +89,11 @@ class Session {
     protected $type;
 
     /**
+     * @var  string  The session name
+     */
+    protected $name;
+
+    /**
      * @var  Game  The game this session was driven on
      */
     protected $game;
@@ -181,6 +186,28 @@ class Session {
     public function getType()
     {
         return $this->type;
+    }
+
+    /**
+     * Set the session name
+     *
+     * @param   int      $name
+     * @return  Session
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+        return $this;
+    }
+
+    /**
+     * Get the session name
+     *
+     * @return  int
+     */
+    public function getName()
+    {
+        return $this->name;
     }
 
     /**

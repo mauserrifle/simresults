@@ -34,7 +34,10 @@ abstract class Data_Reader {
     public static function factory($data)
     {
         // Known readers
-        $known_readers = array('Simresults\Data_Reader_Rfactor2');
+        $known_readers = array(
+            'Simresults\Data_Reader_Rfactor2',
+            'Simresults\Data_Reader_AssettoCorsa',
+        );
 
         // Data is a file
         if (is_file($data))
@@ -102,12 +105,25 @@ abstract class Data_Reader {
     }
 
     /**
-     * Returns the session
+     * Returns one session
      *
      * @return  Session
      */
-    abstract public function getSession();
+    public function getSession($session_number=1)
+    {
+        // Get sessions
+        $sessions = $this->getSessions();
 
+        // Return
+        return $sessions[$session_number-1];
+    }
+
+    /**
+     * Returns all sessions
+     *
+     * @return  Session
+     */
+    abstract public function getSessions();
 
     /**
      * Optional init method

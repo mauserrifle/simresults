@@ -1,0 +1,33 @@
+
+{
+	"track": "drift",
+	"players": [
+		{
+			"name": "Maurice van der Star",
+			"car": "bmw_m3_e92",
+			"skin": "black_sapphire_metallic"
+		}],
+	"number_of_sessions": 1,
+	"sessions": [
+		{
+			"name": "Drift Session",
+			"type": 1,
+			"lapsCount": 0,
+			"duration": 30,
+			"laps": [],
+			"lapstotal": [1],
+			"bestLaps": [
+				{
+					"car": 0,
+					"time": 59380,
+					"lap": 0
+				}]
+		}],
+	"extras": [
+		{
+			"name": "drift",
+			"points": 29,
+			"combos": 2,
+			"levels": 1
+		}]
+}

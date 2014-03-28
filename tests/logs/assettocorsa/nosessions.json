@@ -1,0 +1,16 @@
+
+{
+	"track": "imola",
+	"players": [
+		{
+			"name": "Maurice van der Star",
+			"car": "ferrari_458",
+			"skin": "rossocorsa"
+		}],
+	"number_of_sessions": 1,
+	"sessions": [],
+	"extras": [
+		{
+
+		}]
+}
