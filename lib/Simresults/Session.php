@@ -1108,4 +1108,57 @@ class Session {
         // Return max position and cache it
         return $this->cache_max_position = $max_position;
     }
+
+    /**
+     * Splits the session into multiple sessions by vehicle class. The sessions
+     * are sorted by class name (asc)
+     *
+     * @return  array
+     */
+    public function splitByVehicleClass()
+    {
+        // Filter participants by vehicle class
+        $participants = array();
+        foreach ($this->getParticipants() as $part)
+        {
+            $participants[$part->getVehicle()->getClass()][] = $part;
+        }
+
+        // Sort by class name
+        ksort($participants);
+
+        // Create new sessions
+        $sessions = array();
+        foreach ($participants as $part_array)
+        {
+            // Clone session and set new participants
+            $session = clone $this;
+            $session->setParticipants($part_array);
+
+            $sessions[] = $session;
+        }
+
+        return $sessions;
+    }
+
+
+    /**
+     * Reset cache on cloning
+     */
+    public function __clone()
+    {
+        $this->cache_laps_sorted_by_time = NULL;
+        $this->cache_laps_by_lap_number_sorted_by_time = array();
+        $this->cache_best_laps_grouped_by_participant = NULL;
+        $this->cache_laps_sorted_by_sector = array();
+        $this->cache_best_laps_by_sector_grouped_by_participant = array();
+        $this->cache_laps_sorted_by_sector_by_lap_number = array();
+        $this->cache_bad_laps = NULL;
+        $this->cache_led_most_participant = NULL;
+        $this->cache_leading_participant = array();
+        $this->cache_leading_participant_by_elapsed_time = array();
+        $this->cache_lasted_laps = NULL;
+        $this->cache_max_position = NULL;
+    }
+
 }
