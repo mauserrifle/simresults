@@ -507,6 +507,8 @@ class Data_Reader_Rfactor2 extends Data_Reader {
 
             // Set participant values
             $participant
+                ->setTeam(
+                    $this->dom_value('TeamName', $driver_xml))
                 ->setPosition(
                     (int) $this->dom_value('Position', $driver_xml))
                 ->setClassPosition(

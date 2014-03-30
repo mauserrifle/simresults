@@ -59,6 +59,11 @@ class Participant {
     protected $drivers = array();
 
     /**
+     * @var  string  The team
+     */
+    protected $team;
+
+    /**
      * @var  Vehicle  The vehicle
      */
     protected $vehicle;
@@ -145,6 +150,28 @@ class Participant {
     public function getDriver($driver_number = 1)
     {
         return $this->drivers[$driver_number-1];
+    }
+
+    /**
+     * Set the team
+     *
+     * @param   string      $team
+     * @return  Participant
+     */
+    public function setTeam($team)
+    {
+        $this->team = $team;
+        return $this;
+    }
+
+    /**
+     * Get the team
+     *
+     * @return  string
+     */
+    public function getTeam()
+    {
+        return $this->team;
     }
 
     /**
