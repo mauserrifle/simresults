@@ -134,7 +134,7 @@ class Vehicle {
         {
             // Course name is not already part of the name
             if ( ! preg_match(
-                       sprintf('/\b(%s)\b/i', preg_quote($vehicle_type)),
+                       sprintf('#\b(%s)\b#i', preg_quote($vehicle_type)),
                        $vehicle_name))
             {
                 // Add course name to vehicle name
@@ -147,7 +147,7 @@ class Vehicle {
         {
             // Event name is not already part of the name
             if ( ! preg_match(
-                       sprintf('/\b(%s)\b/i', preg_quote($vehicle_class)),
+                       sprintf('#\b(%s)\b#i', preg_quote($vehicle_class)),
                        $vehicle_name))
             {
                 // Add event to vehicle name
