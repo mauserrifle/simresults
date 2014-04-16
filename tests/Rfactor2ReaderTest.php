@@ -720,6 +720,7 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
         // Validate data
         $validate = array(
             array(
+                'team'           => 'jl lafosse',
                 'vehicle_name'   =>  'Lola T280 JL Lafosse',
                 'vehicle_type'   =>  'LolaT280',
                 'vehicle_class'  =>  'LolaT280',
@@ -734,6 +735,7 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
                                  => null,
             ),
             array(
+                'team'           => 'Ecurie Bonnier',
                 'vehicle_name'   =>  'Lola T280 le mans 1972',
                 'vehicle_type'   =>  'LolaT280',
                 'vehicle_class'  =>  'LolaT280',
@@ -748,6 +750,7 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
                                  => null,
             ),
             array(
+                'team'           => 'Ecurie Bonnier',
                 'vehicle_name'   =>  'Lola T280 1000 Kms Paris',
                 'vehicle_type'   =>  'LolaT280',
                 'vehicle_class'  =>  'LolaT280',
@@ -762,6 +765,7 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
                                  => null,
             ),
             array(
+                'team'           => 'Noritake Takahara',
                 'vehicle_name'   =>  'Lola T280 Fudji 1972',
                 'vehicle_type'   =>  'LolaT280',
                 'vehicle_class'  =>  'LolaT280',
@@ -776,6 +780,7 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
                                  => null,
             ),
             array(
+                'team'           => 'scuderia filipinetti',
                 'vehicle_name'   =>  'Lola T280 Tanaka 1972',
                 'vehicle_type'   =>  'LolaT280',
                 'vehicle_class'  =>  'LolaT280',
@@ -794,6 +799,8 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
         // Validate each validate array
         foreach ($validate as $index => $validate_data)
         {
+            $this->assertSame($validate_data['team'],
+                $participants[$index]->getTeam());
             $this->assertSame($validate_data['position'],
                 $participants[$index]->getPosition());
             $this->assertSame($validate_data['class_position'],

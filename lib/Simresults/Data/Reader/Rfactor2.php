@@ -59,9 +59,9 @@ class Data_Reader_Rfactor2 extends Data_Reader {
     }
 
     /**
-     * @see \Simresults\Data_Reader::getSession()
+     * @see \Simresults\Data_Reader::getSessions()
      */
-    public function getSession()
+    public function getSessions()
     {
         // Create new session instance
         $session = new Session;
@@ -348,7 +348,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
         $this->setPenalties($session);
 
         // Return the session
-        return $session;
+        return array($session);
 
     }
 
@@ -507,6 +507,8 @@ class Data_Reader_Rfactor2 extends Data_Reader {
 
             // Set participant values
             $participant
+                ->setTeam(
+                    $this->dom_value('TeamName', $driver_xml))
                 ->setPosition(
                     (int) $this->dom_value('Position', $driver_xml))
                 ->setClassPosition(

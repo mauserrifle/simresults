@@ -1,0 +1,72 @@
+
+{
+	"track": "imola",
+	"players": [
+		{
+			"name": "Maurice van der Star",
+			"car": "ferrari_458",
+			"skin": "rossocorsa"
+		}],
+	"number_of_sessions": 1,
+	"sessions": [
+		{
+			"name": "Hotlapping Session",
+			"type": 1,
+			"lapsCount": 0,
+			"duration": 30,
+			"laps": [
+				{
+					"lap": 0,
+					"car": 0,
+					"sectors": [34668, 46000, 38736],
+					"time": 119404
+				}, 
+				{
+					"lap": 1,
+					"car": 0,
+					"sectors": [32916, 45324, 39116],
+					"time": 117356
+				}, 
+				{
+					"lap": 2,
+					"car": 0,
+					"sectors": [41904, 46176, 39400],
+					"time": 127480
+				}, 
+				{
+					"lap": 3,
+					"car": 0,
+					"sectors": [33088, 45804, 38552],
+					"time": 117444
+				}, 
+				{
+					"lap": 4,
+					"car": 0,
+					"sectors": [32704, 45248, 39608],
+					"time": 117560
+				}, 
+				{
+					"lap": 5,
+					"car": 0,
+					"sectors": [32664, 45496, 65472],
+					"time": 143632
+				}, 
+				{
+					"lap": 6,
+					"car": 0,
+					"sectors": [33064, 46708, 40996],
+					"time": 120768
+				}],
+			"lapstotal": [7],
+			"bestLaps": [
+				{
+					"car": 0,
+					"time": 117356,
+					"lap": 1
+				}]
+		}],
+	"extras": [
+		{
+
+		}]
+}

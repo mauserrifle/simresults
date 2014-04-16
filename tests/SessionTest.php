@@ -1,5 +1,6 @@
 <?php
 use Simresults\Participant;
+use Simresults\Vehicle;
 
 use Simresults\Session;
 use Simresults\Incident;
@@ -429,6 +430,71 @@ class SessionTest extends PHPUnit_Framework_TestCase {
         );
     }
 
+    /*
+     * Test getting multiple sessions based on the original, split by vehicle
+     * classes
+     */
+    public function testSplitSessionsByVehicleClass()
+    {
+        // Get session
+        $session = $this->getSessionWithData();
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Get session data splitted by vehicle class
+        $sessions_by_class = $session->splitByVehicleClass();
+
+        // Get first class session
+        $class_session = $sessions_by_class[0];
+
+        // Test participants
+        $class_participants = $class_session->getParticipants();
+        $this->assertSame($participants[0], $class_participants[0]);
+        $this->assertSame($participants[3], $class_participants[1]);
+
+        // Test whether the session is the same when resetting the participants
+        // to its original participants. This way we test whether the session
+        // is just a clone with new participants. This tests through Equals
+        // so PHP does attribute comparison instead of object reference
+        $class_session->setParticipants($session->getParticipants());
+        $this->assertEquals($session, $class_session);
+
+        // Test whether the second class session is the second vehicle by name
+        // (abc sort)
+        $class_participants = $sessions_by_class[1]->getParticipants();
+        $this->assertSame($participants[2], $class_participants[0]);
+    }
+
+    /*
+     * Test whether we don't have any cache conflicts when getting multiple
+     * sessions based on the original, split by vehicle classes.
+     *
+     * We're getting laps sorted by time first, then we split session (thus
+     * are cloned) and test whether the sorted laps of a split are not the
+     * same as the original session.
+     */
+    public function testSplitSessionsByVehicleClassCacheConflicts()
+    {
+        // Get session
+        $session = $this->getSessionWithData();
+
+        // Get laps sorted by time, we do this before splitting to test
+        // cache conflicts
+        $laps_sorted = $session->getLapsSortedByTime();
+
+        // Get session data splitted by vehicle class
+        $sessions_by_class = $session->splitByVehicleClass();
+
+        // Get first class session
+        $class_session = $sessions_by_class[0];
+
+        // Test whether the laps sorted by time of the class session are not
+        // the same as the original
+        $this->assertNotSame($laps_sorted,
+            $class_session->getLapsSortedByTime());
+    }
+
 
     /**
      * Get a Session instance populated with test data.
@@ -447,6 +513,9 @@ class SessionTest extends PHPUnit_Framework_TestCase {
         $participants_data = array(
             array(
                 'position'     =>  1,
+                'vehicle'      => array(
+                    'class'  =>  'class1',
+                ),
                 'laps'           => array(
                     array(
                         'time'      => 130.7517,
@@ -467,6 +536,9 @@ class SessionTest extends PHPUnit_Framework_TestCase {
             ),
             array(
                 'position'     =>  2,
+                'vehicle'      => array(
+                    'class'  =>  'class3',
+                ),
                 'laps'           => array(
                     array(
                         'time'      => 130.9077,
@@ -487,6 +559,9 @@ class SessionTest extends PHPUnit_Framework_TestCase {
             ),
             array(
                 'position'     =>  3,
+                'vehicle'      => array(
+                    'class'  =>  'class2',
+                ),
                 'laps'           => array(
                     array(
                         'time'      => 134.8484,
@@ -508,6 +583,9 @@ class SessionTest extends PHPUnit_Framework_TestCase {
             // Lapped participant
             array(
                 'position'     =>  4,
+                'vehicle'      => array(
+                    'class'  =>  'class1',
+                ),
                 'laps'           => array(
                     array(
                         'time'      => 155.1491,
@@ -523,6 +601,9 @@ class SessionTest extends PHPUnit_Framework_TestCase {
             ),
             array(
                 'position'     =>  5,
+                'vehicle'      => array(
+                    'class'  =>  'class2',
+                ),
 
                 // No laps for this participant, to check code not failing
                 // on null objects
@@ -531,6 +612,9 @@ class SessionTest extends PHPUnit_Framework_TestCase {
 
             array(
                 'position'     =>  6,
+                'vehicle'      => array(
+                    'class'  =>  'class3',
+                ),
 
                 // Non completed laps to check calculating best laps
                 'laps'           => array(
@@ -549,6 +633,10 @@ class SessionTest extends PHPUnit_Framework_TestCase {
             // Create the new participant and populate
             $participant = new Participant;
             $participant->setPosition($participant_data['position']);
+
+            $vehicle = new Vehicle;
+            $vehicle->setClass($participant_data['vehicle']['class']);
+            $participant->setVehicle($vehicle);
 
             // Create each lap
             foreach ($participant_data['laps'] as $lap_key => $lap_data)
