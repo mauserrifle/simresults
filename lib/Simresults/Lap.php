@@ -61,6 +61,11 @@ class Lap {
      */
     protected $rear_compound;
 
+    /**
+     * @var  float  Fuel percentage left in tank
+     */
+    protected $fuel;
+
 
     /**
      * Set the lap number
@@ -346,6 +351,28 @@ class Lap {
     public function getRearCompound()
     {
         return $this->rear_compound;
+    }
+
+    /**
+     * Set the fuel percentage left in tank
+     *
+     * @param   float  $fuel
+     * @return  Lap
+     */
+    public function setFuel($fuel)
+    {
+        $this->fuel = $fuel;
+        return $this;
+    }
+
+    /**
+     * Get the fuel percentage left in tank
+     *
+     * @return  float
+     */
+    public function getFuel()
+    {
+        return $this->fuel;
     }
 
 

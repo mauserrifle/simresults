@@ -225,6 +225,47 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertNull($laps[19]->getRearCompound());
     }
 
+    public function testReadingFuelUsage()
+    {
+        // Get the data reader for the given data source
+        $reader = Data_Reader::factory(
+            realpath(__DIR__.'/logs/rfactor2/practice_with_compound_info.xml'));
+
+        // Get participants
+        $participants = $reader->getSession()->getParticipants();
+
+        // Get the first participant
+        $participant = $participants[0];
+
+        // Get laps
+        $laps = $participant->getLaps();
+
+        // Validate fuel percentage on laps
+        $this->assertSame(8.6, $laps[0]->getFuel());
+        $this->assertSame(7.8, $laps[1]->getFuel());
+        $this->assertSame(7.1, $laps[2]->getFuel());
+        $this->assertSame(5.9, $laps[3]->getFuel());
+        $this->assertSame(5.1, $laps[4]->getFuel());
+        $this->assertSame(4.3, $laps[5]->getFuel());
+
+        // Get the data reader for source data with bad fuel info (negative
+        // values)
+        $reader = Data_Reader::factory(
+            realpath(__DIR__.'/logs/rfactor2/race.xml'));
+
+        // Get participants
+        $participants = $reader->getSession()->getParticipants();
+
+        // Get the first participant
+        $participant = $participants[0];
+
+        // Get laps
+        $laps = $participant->getLaps();
+
+        // Check whether fuel is NULL
+        $this->assertNull($laps[0]->getFuel());
+    }
+
     /**
      * Test reading finish statusses of participants
      */
