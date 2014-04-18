@@ -192,7 +192,7 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
         // Get participants
         $participants = $reader->getSession()->getParticipants();
 
-        // Get the first participant
+        // Get participant
         $participant = $participants[9];
 
         // Get laps
