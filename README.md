@@ -48,7 +48,7 @@ Very limited support due to BETA state. Only laps and drifting points are read.
 
 * Can read out a full session consisting of the following information: Game,
   Server, Settings, Track, Participants/Drivers including swaps, Vehicle,
-  Compound choice, Chats, Laps/Sectors, Penalties and Incidents
+  Compound choice, Chats, Laps/Sectors, Fuel usage, Penalties and Incidents
 * Offers extra methods to get specific data, e.g. `getBestLap()` and
   `getBestLapBySector(<int>)`
 * Offers a Helper class to sort laps by time and format times to human readable
