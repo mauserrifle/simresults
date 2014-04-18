@@ -267,6 +267,30 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
+     * Test reading pitstop laps
+     */
+    public function testReadingPitLaps()
+    {
+        // Get the data reader for the given data source
+        $reader = Data_Reader::factory(
+            realpath(__DIR__.'/logs/rfactor2/practice_with_compound_info.xml'));
+
+        // Get participants
+        $participants = $reader->getSession()->getParticipants();
+
+        // Get participant
+        $participant = $participants[2];
+
+        // Get laps
+        $laps = $participant->getLaps();
+
+        // Validate laps
+        $this->assertFalse($laps[7]->isPitLap());
+        $this->assertTrue($laps[8]->isPitLap());
+        $this->assertFalse($laps[9]->isPitLap());
+    }
+
+    /**
      * Test reading finish statusses of participants
      */
     public function testReadingParticipantFinishStatus()

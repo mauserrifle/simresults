@@ -790,7 +790,8 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                     ->setElapsedSeconds($elapsed_seconds)
                     ->setFrontCompound($front_compound)
                     ->setRearCompound($rear_compound)
-                    ->setFuel($fuel);
+                    ->setFuel($fuel)
+                    ->setPitLap((boolean) $lap_xml->getAttribute('pit'));
 
                 // Find lap aids
                 foreach ($aids as $aid)
