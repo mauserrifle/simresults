@@ -61,6 +61,16 @@ class Lap {
      */
     protected $rear_compound;
 
+    /**
+     * @var  float  Fuel percentage left in tank
+     */
+    protected $fuel;
+
+    /**
+     * @var  boolean  Whether there was a pitstop on this lap
+     */
+    protected $pit_lap;
+
 
     /**
      * Set the lap number
@@ -346,6 +356,50 @@ class Lap {
     public function getRearCompound()
     {
         return $this->rear_compound;
+    }
+
+    /**
+     * Set the fuel percentage left in tank
+     *
+     * @param   float  $fuel
+     * @return  Lap
+     */
+    public function setFuel($fuel)
+    {
+        $this->fuel = $fuel;
+        return $this;
+    }
+
+    /**
+     * Get the fuel percentage left in tank
+     *
+     * @return  float
+     */
+    public function getFuel()
+    {
+        return $this->fuel;
+    }
+
+    /**
+     * Set whether there was a pitstop on this lap
+     *
+     * @param   boolean  $pit_lap
+     * @return  Lap
+     */
+    public function setPitLap($pit_lap)
+    {
+        $this->pit_lap = $pit_lap;
+        return $this;
+    }
+
+    /**
+     * Get whether there was a pitstop on this lap
+     *
+     * @return  boolean
+     */
+    public function isPitLap()
+    {
+        return $this->pit_lap;
     }
 
 

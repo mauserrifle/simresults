@@ -772,6 +772,15 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                     $rear_compound = $rcompound;
                 }
 
+                // Has fuel info and is positive
+                $fuel = NULL;
+                if (($fuel_data = (float) $lap_xml->getAttribute('fuel')) AND
+                    $fuel_data > 0 )
+                {
+                    // Get proper percentage
+                    $fuel = $fuel_data*100;
+                }
+
                 // Set lap values
                 $lap
                     ->setTime($lap_time)
@@ -780,7 +789,9 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                     ->setParticipant($participant)
                     ->setElapsedSeconds($elapsed_seconds)
                     ->setFrontCompound($front_compound)
-                    ->setRearCompound($rear_compound);
+                    ->setRearCompound($rear_compound)
+                    ->setFuel($fuel)
+                    ->setPitLap((boolean) $lap_xml->getAttribute('pit'));
 
                 // Find lap aids
                 foreach ($aids as $aid)
