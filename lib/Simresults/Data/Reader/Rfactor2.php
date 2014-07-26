@@ -446,7 +446,8 @@ class Data_Reader_Rfactor2 extends Data_Reader {
         // Set game values
         $server
             ->setName($this->dom_value('ServerName'))
-            ->setMotd($this->dom_value('MOTD'));
+            ->setMotd($this->dom_value('MOTD'))
+            ->setDedicated( (bool) $this->dom_value('Dedicated'));
 
         // Return game
         return $server;

@@ -757,6 +757,7 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
         // Validate server
         $this->assertSame('RookiesNight_WSu', $server->getName());
         $this->assertNull($server->getMotd());
+        $this->assertFalse($server->isDedicated());
     }
 
     /**
