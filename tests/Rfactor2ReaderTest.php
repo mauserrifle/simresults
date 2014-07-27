@@ -182,6 +182,9 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
 
     /**
      * Test reading compound information on laps
+     *
+     * This test uses numeric values as string because it uses an old result
+     * XML, newer results include strings like 'soft'
      */
     public function testReadingCompoundOfLaps()
     {
@@ -198,11 +201,9 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
         // Get laps
         $laps = $participant->getLaps();
 
-        // Validate compound values
-        // TODO: ISI should fix this so we can map the ints to proper compounds
-        //       or have a string version of the compound. This implementation
-        //       is temporary! Extra info/findings are found at the ISI forums:
-        //       http://isiforums.net/f/showthread.php/16512
+        // Validate compound values. This test uses numeric values as string
+        // because it uses an old result XML, newer results include strings
+        // like 'soft'
         $this->assertSame('0', $laps[1]->getFrontCompound());
         $this->assertSame('0', $laps[1]->getRearCompound());
         $this->assertSame('1', $laps[4]->getFrontCompound());
@@ -708,7 +709,7 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
         // Validate timestamp of date
         $this->assertSame(1364153781, $date->getTimestamp());
 
-        // Tets default timezone (UTC)
+        // Test default timezone (UTC)
         $this->assertSame('2013-03-24 19:36:21', $date->format('Y-m-d H:i:s'));
         $this->assertSame('UTC', $date->getTimezone()->getName());
 
@@ -757,6 +758,7 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
         // Validate server
         $this->assertSame('RookiesNight_WSu', $server->getName());
         $this->assertNull($server->getMotd());
+        $this->assertFalse($server->isDedicated());
     }
 
     /**

@@ -1,5 +1,7 @@
 # Simresults
 
+[![Build Status](https://travis-ci.org/mauserrifle/simresults.svg)](https://travis-ci.org/mauserrifle/simresults)
+
 Simresults is an open-source, object-oriented library built using PHP5. It
 allows you to read out log files of a race game and transforms them to a simple
 data model to easily read out this data.
@@ -48,7 +50,8 @@ Very limited support due to BETA state. Only laps and drifting points are read.
 
 * Can read out a full session consisting of the following information: Game,
   Server, Settings, Track, Participants/Drivers including swaps, Vehicle,
-  Compound choice, Chats, Laps/Sectors, Fuel usage, Penalties and Incidents
+  Compound choice, Chats, Laps/Sectors, Fuel usage, Pit info, Penalties and
+  Incidents
 * Offers extra methods to get specific data, e.g. `getBestLap()` and
   `getBestLapBySector(<int>)`
 * Offers a Helper class to sort laps by time and format times to human readable
@@ -66,10 +69,52 @@ Very limited support due to BETA state. Only laps and drifting points are read.
 * Detects human and AI players using their aids (sometimes log files report
   wrong player state)
 
-## Example
+## Requirements
 
-    // Get a reader using a source file
-    $reader = \Simresults\Data_Reader::factory('qualify.xml');
+- PHP 5.3
+- Composer (for easy installing and autoloading)
+
+## Installation and example
+
+Simresults can be installed and autoloaded using
+[composer](https://packagist.org). But ofcourse it will work with any
+[PSR-0](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md)
+autoloader.
+
+### Example for Linux/OSX
+
+Install composer:
+
+    curl -s http://getcomposer.org/installer | php
+
+
+Create file `composer.json`:
+
+    {
+        "require": {
+            "mauserrifle/simresults":"dev-develop"
+        }
+    }
+
+Run composer install
+
+    ./composer.phar install
+
+
+Create index.php:
+
+    <?php
+
+    // Load code
+    require(realpath('vendor/autoload.php'));
+
+    // Path to the result source file
+    $file = realpath(dirname(__FILE__)
+            .'/vendor/mauserrifle/simresults/tests/logs/rfactor2'
+            .DIRECTORY_SEPARATOR.'race.xml');
+
+    // Get a reader using the source file
+    $reader = \Simresults\Data_Reader::factory($file);
 
     // Get the session
     $session = $reader->getSession();
@@ -89,22 +134,26 @@ Very limited support due to BETA state. Only laps and drifting points are read.
     // Format the gap between the two laps
     $best_lap_gap = \Simresults\Helper::formatTime(
         $session_best_lap->getGap($best_lap));
+    echo $best_lap_gap;
 
-## Installation
+ Run server
 
-Simresults can be installed and autoloaded using
-[composer](https://packagist.org). But ofcourse it will work with any
-[PSR-0](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md)
-autoloader.
+     php -S localhost:8000
 
-## Requirements
 
-- PHP 5.3
+Open <http://localhost:8000> and all should work!
 
 ## Bugs
 
 Have a bug or a feature request?
 [Please open a new issue](https://github.com/mauserrifle/simresults/issues).
+
+## Known issues
+
+Some classes like `Participant` do heavy caching. So changing any value after
+calling sorting methods will be pointless. There are no cache invalidate
+methods (yet). Most likely they will never be needed as there's no use case you
+actually would want to change values after reading out all data.
 
 ## Contributing
 

@@ -135,7 +135,8 @@ class Track {
         {
             // Course name is not already part of the name
             if ( ! preg_match(
-                       sprintf('#\b(%s)\b#i', preg_quote($track_course)),
+                       sprintf('`\b(%s)\b`i',
+                           str_replace('`', '\`', preg_quote($track_course))),
                        $track_name))
             {
                 // Add course name to track name
@@ -148,7 +149,8 @@ class Track {
         {
             // Event name is not already part of the name
             if ( ! preg_match(
-                       sprintf('#\b(%s)\b#i', preg_quote($track_event)),
+                       sprintf('`\b(%s)\b`i',
+                           str_replace('`', '\`', preg_quote($track_event))),
                        $track_name))
             {
                 // Add event to track name

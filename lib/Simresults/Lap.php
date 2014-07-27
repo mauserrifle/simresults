@@ -71,6 +71,11 @@ class Lap {
      */
     protected $pit_lap;
 
+    /**
+     * @var  float  The time spend on pitting
+     */
+    protected $pit_time;
+
 
     /**
      * Set the lap number
@@ -400,6 +405,86 @@ class Lap {
     public function isPitLap()
     {
         return $this->pit_lap;
+    }
+
+    /**
+     * Set the time spend on pitting
+     *
+     * @param   float  $pit_time
+     * @return  Lap
+     */
+    public function setPitTime($pit_time)
+    {
+        $this->pit_time = $pit_time;
+        return $this;
+    }
+
+    /**
+     * Get the time spend on pitting
+     *
+     * @return  float
+     */
+    public function getPitTime()
+    {
+        // Has pit time
+        if ($this->pit_time !== null)
+        {
+            return $this->pit_time;
+        }
+
+        //-- No pit time, let's try figure this out ourself if it's really
+        //-- a pit lap
+
+        // No pit lap or no average lap found
+        if ( ! $this->pit_lap OR
+             ! $average_lap = $this->participant->getAverageLap(true))
+        {
+            return 0;
+        }
+
+        //-- Calculate sector 3 pit time of this lap
+
+        // No sector 3 by default
+        $sector_3_pit = 0;
+
+        // Has sector 3 time
+        if ($this->getSectorTime(3))
+        {
+            $sector_3_pit =
+                $this->getSectorTime(3) - $average_lap->getSectorTime(3);
+        }
+
+        //-- Calculate sector 1 pit time of next lap
+
+        // No next lap by default
+        $next_lap = null;
+
+        // No sector 1 time by default
+        $sector_1_pit = 0;
+
+        // Loop all laps
+        foreach (($laps=$this->participant->getLaps()) as $lap_key => $lap)
+        {
+            // Current lap found
+            if ($lap === $this )
+            {
+                // Next lap found, store it
+                if (isset($laps[$lap_key+1]))
+                {
+                    $next_lap = $laps[$lap_key+1];
+
+                    // Calculate sector 1 pit time using the next lap
+                    $sector_1_pit = $next_lap->getSectorTime(1) -
+                                    $average_lap->getSectorTime(1);
+                }
+
+                // Stop looping
+                break;
+            }
+        }
+
+        // Return total pit time
+        return round($sector_3_pit + $sector_1_pit, 4);
     }
 
 

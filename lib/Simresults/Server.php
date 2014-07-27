@@ -21,6 +21,11 @@ class Server {
     protected $motd;
 
     /**
+     * @var  boolean  Whether this was a dedicated server or not
+     */
+    protected $dedicated;
+
+    /**
      * Set the name of the server
      *
      * @param   string  $name
@@ -62,6 +67,28 @@ class Server {
     public function getMotd()
     {
         return $this->motd;
+    }
+
+    /**
+     * Set whether this was a dedicated server
+     *
+     * @param   boolean  $dedicated
+     * @return  Server
+     */
+    public function setDedicated($dedicated)
+    {
+        $this->dedicated = $dedicated;
+        return $this;
+    }
+
+    /**
+     * Get whether this was a dedicated server
+     *
+     * @return  boolean
+     */
+    public function isDedicated()
+    {
+        return $this->dedicated;
     }
 
 }

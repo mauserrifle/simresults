@@ -446,7 +446,8 @@ class Data_Reader_Rfactor2 extends Data_Reader {
         // Set game values
         $server
             ->setName($this->dom_value('ServerName'))
-            ->setMotd($this->dom_value('MOTD'));
+            ->setMotd($this->dom_value('MOTD'))
+            ->setDedicated( (bool) $this->dom_value('Dedicated'));
 
         // Return game
         return $server;
@@ -583,6 +584,8 @@ class Data_Reader_Rfactor2 extends Data_Reader {
             $number_of_swaps = 0;
 
             // Loop each swap
+            $first_swap = true; // First swap reminder, can't use $swap_xml_key
+                                // to detect because it is bugged in hhvm!
             foreach ($swaps_xml as $swap_xml_key => $swap_xml)
             {
                 // Empty driver name
@@ -626,11 +629,14 @@ class Data_Reader_Rfactor2 extends Data_Reader {
 
                 // Not first swap element, so this is a real swap that happend
                 // within pits
-                if ($swap_xml_key > 0)
+                if ( ! $first_swap)
                 {
                     // Increment the number of swaps
                     $number_of_swaps++;
                 }
+
+                // Not first swap anymore
+                $first_swap = false;
             }
 
             // No drivers yet, so no drivers through swap info
