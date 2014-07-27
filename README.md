@@ -106,6 +106,13 @@ autoloader.
 Have a bug or a feature request?
 [Please open a new issue](https://github.com/mauserrifle/simresults/issues).
 
+## Known issues
+
+Some classes like `Participant` do heavy caching. So changing any value after
+calling sorting methods will be pointless. There are no cache invalidate
+methods (yet). Most likely they will never be needed as there's no use case you
+actually would want to change values after reading out all data.
+
 ## Contributing
 
 The project is designed to be extended with new features and game support.

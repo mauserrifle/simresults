@@ -70,6 +70,32 @@ class RfactorReaderTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
+     * Test reading pitstop times
+     *
+     * For inner understanding how these values are calculated, please see
+     * the document `docs/RfactorReaderTest_testReadingPitTimes.ods`
+     */
+    public function testReadingPitTimes()
+    {
+        // Get the data reader for the given data source
+        $reader = $this->getWorkingReader();
+
+        // Get participants
+        $participants = $reader->getSession()->getParticipants();
+
+        // Get participant (Will Munney)
+        $participant = $participants[0];
+
+        // Get laps
+        $laps = $participant->getLaps();
+
+        // Validate pit lap
+        $this->assertTrue($laps[12]->isPitLap());
+        $this->assertSame(32.9445, $laps[12]->getPitTime());
+    }
+
+
+    /**
      * Test reading incidents worth reviewing
      */
     public function testReadingSessionIncidentsForReview()

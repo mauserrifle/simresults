@@ -40,9 +40,9 @@ class Participant {
     protected $cache_laps_sorted_by_sector = array();
 
     /**
-     * @var  Lap|null  The cache for average lap
+     * @var  array  The cache for average lap, with or without pit sectors
      */
-    protected $cache_average_lap;
+    protected $cache_average_lap = array();
 
     /**
      * @var  Lap|null  The cache for best possible lap
@@ -665,14 +665,19 @@ class Participant {
     /**
      * Get the average lap. Based on sectors. Also includes non-completed laps.
      *
+     * @param   boolean   $exclude_pitstop_sectors  Set to true to exclude any
+     *                                              sectors that were part of
+     *                                              pitting (e.g. L1S3->L2S1)
+     *
      * @return  Lap|null
      */
-    public function getAverageLap()
+    public function getAverageLap($exclude_pitstop_sectors=false)
     {
         // There is cache
-        if ($this->cache_average_lap !== null)
+        if (array_key_exists( (int) $exclude_pitstop_sectors,
+            $this->cache_average_lap))
         {
-            return $this->cache_average_lap;
+            return $this->cache_average_lap[ (int) $exclude_pitstop_sectors];
         }
 
         // No completed laps
@@ -687,13 +692,25 @@ class Participant {
         // Init count per sector
         $sectors_count = array(0, 0, 0);
 
+        // No previous lap by default in laps loop
+        $prev_lap = null;
+
         // Loop each lap
-        foreach ($this->getLaps() as $lap)
+        foreach (($laps=$this->getLaps()) as $lap_key => $lap)
         {
+            // Loop 3 sectors
             for ($i=0; $i<3; $i++)
             {
                 // Has sector
-                if ($sector = $lap->getSectorTime($i+1))
+                if ($sector = $lap->getSectorTime($i+1) AND
+                    // Is not a pit lap and not looping sector 3
+                    ! ($exclude_pitstop_sectors AND $lap->isPitLap() AND
+                        $i ==2 )
+                    AND
+                    // Previous lap is not a pit lap and not looping sector 1
+                    // of the current lap
+                    ! ($exclude_pitstop_sectors AND $prev_lap
+                        AND $prev_lap->isPitLap() AND $i === 0))
                 {
                     // Sum sector time
                     $sectors_sum[$i] =
@@ -703,6 +720,9 @@ class Participant {
                     $sectors_count[$i]++;
                 }
             }
+
+            // Remember previous lap
+            $prev_lap = $lap;
         }
 
         // Not all sectors have been driven
@@ -731,8 +751,17 @@ class Participant {
             ->setParticipant($this);
 
         // Return average lap and cache it
-        return $this->cache_average_lap = $average_lap;
+        return $this->cache_average_lap[ (int) $exclude_pitstop_sectors] =
+            $average_lap;
 
+    }
+
+    /**
+     * Invalidate the average lap cache
+     */
+    public function invalidateAverageLapCache()
+    {
+        $this->cache_average_lap = array();
     }
 
     /**

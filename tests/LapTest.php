@@ -1,5 +1,6 @@
 <?php
 use Simresults\Lap;
+use Simresults\Participant;
 
 /**
  * Tests for the lap.
@@ -120,6 +121,101 @@ class LapTest extends PHPUnit_Framework_TestCase {
 
         // Validate
         $this->assertNull($lap->getSectorGap($lap2, 3));
+    }
+
+    /**
+     * Test calculating the pitstop times based on laps
+     *
+     * Pit time is calculated using 2 sectors that were part of the pitstop
+     * (e.g. L1S3->L2S1) MINUS the averages of all non pitstop sectors.
+     *
+     * For inner understanding how these values are calculated, please see
+     * the document `docs/RfactorReaderTest_testReadingPitTimes.ods`
+     */
+    public function testCalculatingPitTimes()
+    {
+        // Init participant
+        $participant = new Participant;
+
+        // Init new laps
+        $laps = array();
+
+        // Normal lap
+        $lap1  = new Lap;
+        $lap1->setSectorTimes(array(42.9237, 42.9237, 44.9237))
+             ->setParticipant($participant);
+        $laps[] = $lap1;
+
+        // Pit lap
+        $lap2  = new Lap;
+        $lap2->setSectorTimes($lap2_sectors=array(41.9237, 42.9237, 53.9237))
+             ->setParticipant($participant)
+             ->setPitLap(true);
+        $laps[] = $lap2;
+
+        // Normal lap
+        $lap3  = new Lap;
+        $lap3->setSectorTimes(array(51.9237, 42.9237, 56.9237))
+             ->setParticipant($participant);
+        $laps[] = $lap3;
+
+        // Set laps to participant
+        $participant->setLaps($laps);
+
+        //---- Validate pit times
+        $this->assertSame(0, $lap1->getPitTime());
+        $this->assertSame(
+            // Sector 3 pit time MINUS averages of others
+            // +
+            // Sector 1 pit time MINUS averages of others
+            (53.9237-((44.9237+56.9237)/2))+(51.9237-((42.9237+41.9237)/2)),
+            $lap2->getPitTime());
+        $this->assertSame(0, $lap3->getPitTime());
+
+
+
+        //---- Validate special cases
+
+        // Invalidate participant cache
+        $participant->invalidateAverageLapCache();
+
+        // Validate that when sector 3 is missing no calculation is done on that
+        $lap2->setSectorTimes(array(41.9237, 42.9237, null));
+        $this->assertSame((51.9237-((42.9237+41.9237)/2)),
+                          $lap2->getPitTime());
+
+        // Restore lap 2 sectors
+        $lap2->setSectorTimes($lap2_sectors);
+
+        //-----
+
+        // Validate that when sector 1 of next lap is missing, any calculation
+        // on that sector is ignored, thus pit time is only based on sector 3
+        // of this pit lap. This also validates ignoring multipe pit sectors
+        // that should be ignored in the averages as we're now marking a
+        // second lap as pit lap
+
+        // Invalidate participant cache
+        $participant->invalidateAverageLapCache();
+
+        // Set lap3 as pit lap
+        $lap3->setPitLap(true);
+
+        // Invalidate participant cache
+        $participant->invalidateAverageLapCache();
+
+        // Check time
+        $this->assertSame(
+            (56.9237-44.9237), // No average calculation, cause only 1 lap is
+                               // non-pit
+            $lap3->getPitTime()
+        );
+
+        //-----
+
+        // Validate that calculation is done when hard pit time is available
+        $lap2->setPitTime(21);
+        $this->assertSame(21, $lap2->getPitTime());
     }
 
 }

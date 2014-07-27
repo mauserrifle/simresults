@@ -310,6 +310,10 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
             $this->assertNull($average_lap->getNumber());
             $this->assertNull($average_lap->getPosition());
             $this->assertNull($average_lap->getElapsedSeconds());
+
+            // Get average lap excluding pitstop sectors and validate it
+            $average_lap = $participant->getAverageLap(true);
+            $this->assertSame(136.0872, $average_lap->getTime());
         }
 
         // Validate empty participant
@@ -402,6 +406,7 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
                 ->setAids(array(
                     'AutoShift'      => 3,
                 ))
+                ->setPitLap(true)
         );
 
         $lap = new Lap;
