@@ -182,6 +182,9 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
 
     /**
      * Test reading compound information on laps
+     *
+     * This test uses numeric values as string because it uses an old result
+     * XML, newer results include strings like 'soft'
      */
     public function testReadingCompoundOfLaps()
     {
@@ -198,11 +201,9 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
         // Get laps
         $laps = $participant->getLaps();
 
-        // Validate compound values
-        // TODO: ISI should fix this so we can map the ints to proper compounds
-        //       or have a string version of the compound. This implementation
-        //       is temporary! Extra info/findings are found at the ISI forums:
-        //       http://isiforums.net/f/showthread.php/16512
+        // Validate compound values. This test uses numeric values as string
+        // because it uses an old result XML, newer results include strings
+        // like 'soft'
         $this->assertSame('0', $laps[1]->getFrontCompound());
         $this->assertSame('0', $laps[1]->getRearCompound());
         $this->assertSame('1', $laps[4]->getFrontCompound());
