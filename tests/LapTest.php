@@ -69,7 +69,7 @@ class LapTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
-     * Tets calculating the gap between lap times
+     * Test calculating the gap between lap times
      */
     public function testCalculatingGapBetweenLaps()
     {
@@ -93,7 +93,7 @@ class LapTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
-     * Tets calculating the gap between sector times
+     * Test calculating the gap between sector times
      */
     public function testCalculatingGapBetweenSectors()
     {

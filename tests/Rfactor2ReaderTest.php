@@ -709,7 +709,7 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
         // Validate timestamp of date
         $this->assertSame(1364153781, $date->getTimestamp());
 
-        // Tets default timezone (UTC)
+        // Test default timezone (UTC)
         $this->assertSame('2013-03-24 19:36:21', $date->format('Y-m-d H:i:s'));
         $this->assertSame('UTC', $date->getTimezone()->getName());
 
