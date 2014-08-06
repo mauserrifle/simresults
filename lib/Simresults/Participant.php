@@ -49,6 +49,11 @@ class Participant {
      */
     protected $cache_best_possible_lap;
 
+    /**
+     * @var  Lap|null  The cache for best lap
+     */
+    protected $cache_best_lap;
+
 
 
     //------ Participant values
@@ -536,6 +541,12 @@ class Participant {
      */
     public function getBestLap()
     {
+        // There is cache
+        if ($this->cache_best_lap !== null)
+        {
+            return $this->cache_best_lap;
+        }
+
         // Get laps
         $laps = $this->getLapsSortedByTime();
 
@@ -544,7 +555,7 @@ class Participant {
         {
             if ($lap->isCompleted())
             {
-                return $lap;
+                return $this->cache_best_lap = $lap;
             }
         }
 
