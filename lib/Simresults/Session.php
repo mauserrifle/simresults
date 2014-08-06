@@ -30,6 +30,11 @@ class Session {
     protected $cache_laps_by_lap_number_sorted_by_time = array();
 
     /**
+     * @var  array  The cache for best lap by lap number
+     */
+    protected $cache_best_lap_by_lap_number = array();
+
+    /**
      * @var  array|null  The cache for best laps grouped by participant
      */
     protected $cache_best_laps_grouped_by_participant;
@@ -48,6 +53,11 @@ class Session {
      * @var  array  The cache for laps sorted by sector by lap number
      */
     protected $cache_laps_sorted_by_sector_by_lap_number = array();
+
+    /**
+     * @var  array  The cache for best lap by sector by lap number
+     */
+    protected $cache_best_lap_by_sector_by_lap_number = array();
 
     /**
      * @var  array|null  The cache for bad laps
@@ -702,8 +712,16 @@ class Session {
      */
     public function getBestLapByLapNumber($lap_number)
     {
+        // There is cache
+        if (array_key_exists($lap_number,
+                $this->cache_best_lap_by_lap_number))
+        {
+            return $this->cache_best_lap_by_lap_number[$lap_number];
+        }
+
         $laps = $this->getLapsByLapNumberSortedByTime($lap_number);
-        return array_shift($laps);
+        return $this->cache_best_lap_by_lap_number[$lap_number] =
+            array_shift($laps);
     }
 
     /**
@@ -857,8 +875,17 @@ class Session {
      */
     public function getBestLapBySectorByLapNumber($sector, $lap_number)
     {
+        // There is cache
+        if (array_key_exists("$sector-$lap_number",
+                $this->cache_best_lap_by_sector_by_lap_number))
+        {
+            return $this->cache_best_lap_by_sector_by_lap_number[
+                       "$sector-$lap_number"];
+        }
+
         $laps = $this->getLapsSortedBySectorByLapNumber($sector, $lap_number);
-        return array_shift($laps);
+        return $this->cache_best_lap_by_sector_by_lap_number[
+                   "$sector-$lap_number"] = array_shift($laps);
     }
 
     /**
