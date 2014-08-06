@@ -40,6 +40,11 @@ class Participant {
     protected $cache_laps_sorted_by_sector = array();
 
     /**
+     * @var  array  The cache for best lap by sector
+     */
+    protected $cache_best_lap_by_sector = array();
+
+    /**
      * @var  array  The cache for average lap, with or without pit sectors
      */
     protected $cache_average_lap = array();
@@ -636,8 +641,14 @@ class Participant {
      */
     public function getBestLapBySector($sector)
     {
+        // There is cache
+        if (array_key_exists($sector, $this->cache_best_lap_by_sector))
+        {
+            return $this->cache_best_lap_by_sector[$sector];
+        }
+
         $laps = $this->getLapsSortedBySector($sector);
-        return array_shift($laps);
+        return $this->cache_best_lap_by_sector[$sector] = array_shift($laps);
     }
 
     /**
