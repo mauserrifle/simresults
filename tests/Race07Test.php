@@ -92,7 +92,7 @@ class Race07Test extends PHPUnit_Framework_TestCase {
 
     /**
      * Test qualify session type. We expect qualify because the participant
-     * in position 1 has DNF status
+     * in position 1 has DNF status. Also validates the order of participants
      */
     public function testQualifySessionType()
     {
@@ -110,6 +110,17 @@ class Race07Test extends PHPUnit_Framework_TestCase {
         // Validate
         $this->assertSame(Session::TYPE_QUALIFY, $session->getType());
         $this->assertSame('Qualify or practice session', $session->getName());
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Validate order of participants
+        $this->assertSame(
+            'Silvio Goes', $participants[0]->getDriver()->getName());
+        $this->assertSame(
+            'Fabio Feliciano', $participants[10]->getDriver()->getName());
+        $this->assertSame(
+            'Andersom Cunha', $participants[19]->getDriver()->getName());
     }
 
 

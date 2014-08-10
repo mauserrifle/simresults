@@ -11,6 +11,7 @@ use Simresults\Helper;
  * * F1 challenge 99-02
  *
  *  TODO:
+ *  * Sort participants by qualify times on qualify session
  *  * For F1 challenge logs without laps, add dummy laps and one with best lap
  *  * DNF reasons ints in log? What do they mean?
  *  * Somehow include qualify times in a (race) result too?
@@ -80,7 +81,7 @@ class Data_Reader_Race07 extends Data_Reader {
         $session->setTrack($track);
 
         // Get participants
-        $session->setParticipants($participants = $this->getParticipants());
+        $this->setParticipantsAndSessionType($session);
 
 
         // Fix driver positions for laps
@@ -134,27 +135,16 @@ class Data_Reader_Race07 extends Data_Reader {
             }
         }
 
-
-        // Set default session type to RACE
-        $session->setType(Session::TYPE_RACE);
-
-        // Get first participant
-        if ($participants AND $participant = $participants[0])
-        {
-            // First participant has DNF status
-            if ($participant->getFinishStatus() === Participant::FINISH_DNF)
-            {
-                // Assume we're dealing with qualify session
-                $session->setType(Session::TYPE_QUALIFY);
-                $session->setName('Qualify or practice session');
-            }
-        }
-
         return array($session);
     }
 
 
-    protected function getParticipants()
+    /**
+     * Set participants and session type on a session instance
+     *
+     * @param  Session  $session
+     */
+    protected function setParticipantsAndSessionType(Session $session)
     {
         $data = $this->array_data;
 
@@ -224,9 +214,12 @@ class Data_Reader_Race07 extends Data_Reader {
             unset($driver_data_array_item);
         }
 
-       // Loop each driver
-       foreach ($driver_data_array as $driver_data)
-       {
+        // All participants are dnf by default
+        $all_dnf = true;
+
+        // Loop each driver
+        foreach ($driver_data_array as $driver_data)
+        {
             // Create driver
             $driver = new Driver;
             $driver->setName($driver_data['driver']);
@@ -253,6 +246,11 @@ class Data_Reader_Race07 extends Data_Reader {
             // Has race time information
             if ($race_time = $this->get($driver_data, 'racetime'))
             {
+                // Not dnf by default if it's not 0:00:00.000
+                $set_dnf = ($race_time === '0:00:00.000');
+
+                // Try setting seconds if not dnf
+                if ( ! $set_dnf)
                 try
                 {
                     // Get seconds
@@ -264,9 +262,17 @@ class Data_Reader_Race07 extends Data_Reader {
                     // Is finished
                     $participant->setFinishStatus(Participant::FINISH_NORMAL);
 
+                    $all_dnf = false;
+
                 }
                 // Catch invalid argument, probably a string status like DNF
                 catch (\InvalidArgumentException $ex)
+                {
+                    $set_dnf = true;
+                }
+
+                // Should set this participant dnf
+                if ($set_dnf)
                 {
                     $participant->setFinishStatus(Participant::FINISH_DNF);
 
@@ -318,49 +324,113 @@ class Data_Reader_Race07 extends Data_Reader {
             $participants[] = $participant;
         }
 
-        // Sort participants by total time
-        // TODO: Move to helper with own unittest?
-        // TODO: Sort lap distance too....
-        usort($participants, function($a, $b) {
 
-            // Same time
-            if ($a->getTotalTime() === $b->getTotalTime()) {
-                return 0;
-            }
 
-            // Both have DNF status
-            if ($a->getFinishStatus() === Participant::FINISH_DNF AND
-                $b->getFinishStatus() === Participant::FINISH_DNF)
-            {
-                // Both ran same amount of laps
-                if ($a->getNumberOfLaps() === $b->getNumberOfLaps())
-                {
-                    // TODO: Check last lap distance...
+        // All participants are dnf
+        if ($all_dnf)
+        {
+            // Assume we're dealing with qualify session
+            $session->setType(Session::TYPE_QUALIFY);
+            $session->setName('Qualify or practice session');
+        }
+        // Not all participants are dnf
+        else
+        {
+            // Race session
+            $session->setType(Session::TYPE_RACE);
+        }
+
+
+        // Is race result
+        if ($session->getType() === Session::TYPE_RACE)
+        {
+
+            // Sort participants by total time
+            // TODO: Move to helper with own unittest?
+            // TODO: Sort lap distance too....
+            usort($participants, function($a, $b) {
+
+                // Same time
+                if ($a->getTotalTime() === $b->getTotalTime()) {
+                    return 0;
                 }
 
-                // A is slower when having less laps than b
-                return ($a->getNumberOfLaps() < $b->getNumberOfLaps()) ? 1 : -1;
-            }
+                // Both have DNF status
+                if ($a->getFinishStatus() === Participant::FINISH_DNF AND
+                    $b->getFinishStatus() === Participant::FINISH_DNF)
+                {
+                    // Both ran same amount of laps
+                    if ($a->getNumberOfLaps() === $b->getNumberOfLaps())
+                    {
+                        // TODO: Check last lap distance...
+                    }
 
-            // a has no time
-            if ( ! $a->getTotalTime() OR
-                $a->getFinishStatus() === Participant::FINISH_DNF)
-            {
-                // $b is faster
-                return 1;
-            }
+                    // A is slower when having less laps than b
+                    return ($a->getNumberOfLaps() < $b->getNumberOfLaps()) ? 1 : -1;
+                }
 
-            // b has no time
-            if ( ! $b->getTotalTime() OR
-                $b->getFinishStatus() === Participant::FINISH_DNF)
-            {
-                // $a is faster
-                return -1;
-            }
+                // a has no time
+                if ( ! $a->getTotalTime() OR
+                    $a->getFinishStatus() === Participant::FINISH_DNF)
+                {
+                    // $b is faster
+                    return 1;
+                }
 
-            return ($a->getTotalTime() < $b->getTotalTime()) ? -1 : 1;
-        });
+                // b has no time
+                if ( ! $b->getTotalTime() OR
+                    $b->getFinishStatus() === Participant::FINISH_DNF)
+                {
+                    // $a is faster
+                    return -1;
+                }
 
+                return ($a->getTotalTime() < $b->getTotalTime()) ? -1 : 1;
+            });
+        }
+        // Is practice of qualify
+        else
+        {
+                // TODO: Fix duplicate code. This is copied from rFactor2 reader
+                // Make central method with unittest in helper?
+                // Sort by best lap instead of position
+                usort($participants, function($a, $b) {
+
+                    // Get best laps
+                    $a_best_lap = $a->getBestLap();
+                    $b_best_lap = $b->getBestLap();
+
+                    // Both participants have no best lap
+                    if ( ! $a_best_lap AND ! $b_best_lap)
+                    {
+                        // Same
+                        return 0;
+                    }
+
+                    // a has no best lap
+                    if ( ! $a_best_lap)
+                    {
+                        return 1;
+                    }
+
+                    // b has no best lap
+                    if ( ! $b_best_lap)
+                    {
+                        return -1;
+                    }
+
+                    // Same time
+                     if ($a_best_lap->getTime() === $b_best_lap->getTime()) {
+                        return 0;
+                    }
+
+                    // Return normal comparison
+                    return ((
+                        $a_best_lap->getTime() <
+                            $b_best_lap->getTime())
+                        ? -1 : 1);
+                });
+        }
 
         // Fix participant positions
         foreach ($participants as $key => $part)
@@ -368,7 +438,8 @@ class Data_Reader_Race07 extends Data_Reader {
             $part->setPosition($key+1);
         }
 
-        return $participants;
+        // Set participants on session
+        $session->setParticipants($participants);
     }
 
     /**
