@@ -156,11 +156,12 @@ class Race07Test extends PHPUnit_Framework_TestCase {
      */
     public function testReadingSessionParticipants()
     {
-        // Get first participant (winner, slotXXX)
+        // Get participants
         $participants = $this->getWorkingReader()->getSession()
             ->getParticipants();
-        $participant = $participants[0];
 
+        // Validate first participant (winner, slotXXX)
+        $participant = $participants[0];
         $this->assertSame('zezette racing', $participant->getTeam());
         $this->assertSame('[PRG]Yozeze34',
                           $participant->getDriver()->getName());
@@ -171,19 +172,16 @@ class Race07Test extends PHPUnit_Framework_TestCase {
         $this->assertSame(Participant::FINISH_NORMAL,
             $participant->getFinishStatus());
 
-
-        // TODO: DNF status etc
-
-        // TODO:
-        // // Get last participant
-        // $participant = $participants[20];
-        // $this->assertSame('Hugh Lemont',
-        //                   $participant->getDriver()->getName());
-        // $this->assertSame('lotus_exige_scura',
-        //                   $participant->getVehicle()->getName());
-        // $this->assertSame(12, $participant->getPosition());
-        // $this->assertSame(Participant::FINISH_NORMAL,
-        //     $participant->getFinishStatus());
+        // Validate last participant (Seb63)
+        $participant = $participants[20];
+        $this->assertSame('Seb63',
+                          $participant->getDriver()->getName());
+        $this->assertSame('Renault Sport Clio CUP France 2008',
+                          $participant->getVehicle()->getName());
+        $this->assertSame(21, $participant->getPosition());
+        $this->assertSame(Participant::FINISH_DNF,
+            $participant->getFinishStatus());
+        $this->assertSame('DNF (reason 0)', $participant->getFinishStatusComment());
     }
 
     /**

@@ -261,6 +261,12 @@ class Data_Reader_Race07 extends Data_Reader {
                 catch (\InvalidArgumentException $ex)
                 {
                     $participant->setFinishStatus(Participant::FINISH_DNF);
+
+                    // Has reason
+                    if (null !== $reason = $this->get($driver_data, 'reason'))
+                    {
+                        $participant->setFinishComment("DNF (reason $reason)");
+                    }
                 }
             }
 
