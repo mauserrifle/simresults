@@ -55,6 +55,51 @@ class Helper {
     }
 
     /**
+     * Get seconds from time format: h:i:s.u.
+     *
+     * @param   string    $formatted_time
+     * @return  string
+     */
+    public static function secondsFromFormattedTime($formatted_time)
+    {
+        // Matched h:i:s.u
+        if (preg_match (
+            '/(.*):(.*):(.*)\.(.*)/i',
+            $formatted_time, $time_matches))
+        {
+            // Get seconds
+            $seconds = ($time_matches[1] * 3600) +
+                       ($time_matches[2] * 60) +
+                       $time_matches[3];
+
+            // Add microseconds to seconds using string functions and convert back
+            // to float
+            $seconds = (float) ($seconds.'.'.$time_matches[4]);
+
+            return $seconds;
+        }
+
+        // Matched i:s.u
+        if (preg_match (
+            '/(.*):(.*)\.(.*)/i',
+            $formatted_time, $time_matches))
+        {
+            // Get seconds
+            $seconds = ($time_matches[1] * 60) +
+                       $time_matches[2];
+
+            // Add microseconds to seconds using string functions and convert back
+            // to float
+            $seconds = (float) ($seconds.'.'.$time_matches[3]);
+
+            return $seconds;
+        }
+
+        // Throw invalid argument by default
+        throw new \InvalidArgumentException;
+    }
+
+    /**
      * Returns the given laps sorted by a sector (ASC)
      *
      * @return  array  the laps
