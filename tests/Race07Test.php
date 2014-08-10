@@ -47,7 +47,9 @@ class Race07Test extends PHPUnit_Framework_TestCase {
     public function testNonZeroBasedLaps()
     {
         // The path to the data source
-        $file_path = realpath(__DIR__.'/logs/race07/prosracing Clio Cup_2013_02_12_22_06_19_Race2_changed_lap_numbers.txt');
+        $file_path = realpath(
+            __DIR__.'/logs/race07/prosracing Clio Cup_2013_02_12_22_06_19_'
+                   .'Race2_changed_lap_numbers.txt');
 
         // Get the data reader for the given data source
         $reader = Data_Reader::factory($file_path);
