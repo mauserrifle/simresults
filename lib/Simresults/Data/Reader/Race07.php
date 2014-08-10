@@ -46,11 +46,6 @@ class Data_Reader_Race07 extends Data_Reader {
         // Create new session instance
         $session = new Session;
 
-        // Set session type to RACE. We can't figure this out on these logs
-        $session->setType(Session::TYPE_RACE);
-        $session->setName(
-            'Unknown. Session type cannot be deteced for this sim.');
-
         // Get date from human string.
         // WARNING: Default timezone used. Please note that this is not correct.
         // The date is the date of the server, but we will never know the
@@ -85,7 +80,7 @@ class Data_Reader_Race07 extends Data_Reader {
         $session->setTrack($track);
 
         // Get participants
-        $session->setParticipants($this->getParticipants());
+        $session->setParticipants($participants = $this->getParticipants());
 
 
         // Fix driver positions for laps
@@ -139,8 +134,21 @@ class Data_Reader_Race07 extends Data_Reader {
             }
         }
 
-        // print_r($laps_sorted[0]);
-        // print_r($laps_sorted[1]);
+
+        // Set default session type to RACE
+        $session->setType(Session::TYPE_RACE);
+
+        // Get first participant
+        if ($participants AND $participant = $participants[0])
+        {
+            // First participant has DNF status
+            if ($participant->getFinishStatus() === Participant::FINISH_DNF)
+            {
+                // Assume we're dealing with qualify session
+                $session->setType(Session::TYPE_QUALIFY);
+                $session->setName('Qualify or practice session');
+            }
+        }
 
         return array($session);
     }

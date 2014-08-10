@@ -90,6 +90,29 @@ class Race07Test extends PHPUnit_Framework_TestCase {
         $this->assertNull($participants[0]->getGridPosition());
     }
 
+    /**
+     * Test qualify session type. We expect qualify because the participant
+     * in position 1 has DNF status
+     */
+    public function testQualifySessionType()
+    {
+        // The path to the data source
+        $file_path = realpath(
+            __DIR__.'/logs/race07/SPEEDV CLIO T2 2013_2013_07_16_22_18_32_'
+                   .'Qualify.txt');
+
+        // Get the data reader for the given data source
+        $reader = Data_Reader::factory($file_path);
+
+        // Get session
+        $session = $reader->getSession();
+
+        // Validate
+        $this->assertSame(Session::TYPE_QUALIFY, $session->getType());
+        $this->assertSame('Qualify or practice session', $session->getName());
+    }
+
+
 
 
     /***
@@ -117,9 +140,6 @@ class Race07Test extends PHPUnit_Framework_TestCase {
 
         //-- Validate other
         $this->assertSame(Session::TYPE_RACE, $session->getType());
-        $this->assertSame(
-            'Unknown. Session type cannot be deteced for this sim.',
-            $session->getName());
         $this->assertSame(12, $session->getLastedLaps());
     }
 
