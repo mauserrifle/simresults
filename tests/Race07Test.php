@@ -67,6 +67,30 @@ class Race07Test extends PHPUnit_Framework_TestCase {
     }
 
 
+    /**
+     * Test no grid positions when missing qualitimes
+     */
+    public function testNoGridPositionWhenMissingQualitimes()
+    {
+        // The path to the data source
+        $file_path = realpath(
+            __DIR__.'/logs/race07/SPEEDV CLIO T2 2013_2013_07_16_22_18_32_'
+                   .'Qualify.txt');
+
+        // Get the data reader for the given data source
+        $reader = Data_Reader::factory($file_path);
+
+        // Get session
+        $session = $reader->getSession();
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Validate
+        $this->assertNull($participants[0]->getGridPosition());
+    }
+
+
 
     /***
     **** Below tests use a full valid race log file
@@ -93,6 +117,9 @@ class Race07Test extends PHPUnit_Framework_TestCase {
 
         //-- Validate other
         $this->assertSame(Session::TYPE_RACE, $session->getType());
+        $this->assertSame(
+            'Unknown. Session type cannot be deteced for this sim.',
+            $session->getName());
         $this->assertSame(12, $session->getLastedLaps());
     }
 
@@ -140,6 +167,7 @@ class Race07Test extends PHPUnit_Framework_TestCase {
         $this->assertSame('Renault Sport Clio CUP France 2008',
                           $participant->getVehicle()->getName());
         $this->assertSame(1, $participant->getPosition());
+        $this->assertSame(2, $participant->getGridPosition());
         $this->assertSame(Participant::FINISH_NORMAL,
             $participant->getFinishStatus());
 

@@ -12,7 +12,6 @@ use Simresults\Helper;
  *
  *  TODO:
  *  * For F1 challenge logs without laps, add dummy laps and one with best lap
- *  * Fix grid position using qualify times
  *  * DNF reasons ints in log? What do they mean?
  *  * Somehow include qualify times in a (race) result too?
  *
@@ -49,6 +48,8 @@ class Data_Reader_Race07 extends Data_Reader {
 
         // Set session type to RACE. We can't figure this out on these logs
         $session->setType(Session::TYPE_RACE);
+        $session->setName(
+            'Unknown. Session type cannot be deteced for this sim.');
 
         // Get date from human string.
         // WARNING: Default timezone used. Please note that this is not correct.
@@ -152,7 +153,11 @@ class Data_Reader_Race07 extends Data_Reader {
         // Init participants array
         $participants = array();
 
-        // Loop each driver in data
+        // Collect drivers in array
+        $driver_data_array = array();
+
+        // No grid position by default
+        $set_grid_position = false;
         foreach ($data as $key => $driver_data)
         {
             // Not a driver driver_data
@@ -161,9 +166,59 @@ class Data_Reader_Race07 extends Data_Reader {
                 continue;
             }
 
-            // Get slot number as number
-            $slot_number = (int) $matches[1];
+            // No qualtime
+            if ( ! array_key_exists('qualtime', $driver_data))
+            {
+                // Create qualtime, we need it for easier closure usage
+                $driver_data['qualtime'] = null;
+            }
+            // Has qualtime
+            else
+            {
+                $set_grid_position = true;
+            }
 
+            $driver_data_array[] = $driver_data;
+        }
+
+        // Set grid positions
+        if ($set_grid_position)
+        {
+            // Sort drivers by qualify time to figure out grid positions
+            usort($driver_data_array, function($a, $b){
+                // Same time
+                if ($a['qualtime'] === $b['qualtime']) {
+                    return 0;
+                }
+
+                // a has no time
+                if ( ! $a['qualtime'])
+                {
+                    // $b is faster
+                    return 1;
+                }
+
+                // b has no time
+                if ( ! $b['qualtime'])
+                {
+                    // $a is faster
+                    return -1;
+                }
+
+                return ($a['qualtime'] < $b['qualtime']) ? -1 : 1;
+            });
+
+            // Set grid positions
+            foreach ($driver_data_array as $driver_key => &$driver_data_array_item)
+            {
+                $driver_data_array_item['grid_position'] = $driver_key+1;
+            }
+            unset($driver_data_array_item);
+        }
+
+       // Loop each driver
+       foreach ($driver_data_array as $driver_data)
+       {
             // Create driver
             $driver = new Driver;
             $driver->setName($driver_data['driver']);
@@ -172,6 +227,15 @@ class Data_Reader_Race07 extends Data_Reader {
             $participant = new Participant;
             $participant->setDrivers(array($driver))
                         ->setTeam($this->get($driver_data, 'team'));
+                        // Finish position will be set later using an special
+                        // sort
+
+            // We have laps and must set grid positions
+            if($this->get($driver_data, 'laps_collection') AND
+                $set_grid_position)
+            {
+                $participant->setGridPosition($driver_data['grid_position']);
+            }
 
             // Create vehicle and add to participant
             $vehicle = new Vehicle;
