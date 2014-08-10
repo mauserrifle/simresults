@@ -150,10 +150,21 @@ Have a bug or a feature request?
 
 ## Known issues
 
+### Caching
+
 Some classes like `Participant` do heavy caching. So changing any value after
 calling sorting methods will be pointless. There are no cache invalidate
 methods (yet). Most likely they will never be needed as there's no use case you
 actually would want to change values after reading out all data.
+
+### Always "Race" session
+
+GTR, GTL, F1 challenge always show session RACE. Theres no session type in
+these log files
+
+### Laps missing
+
+Logs tend to miss lap data on all games. Check the logs.
 
 ## Contributing
 

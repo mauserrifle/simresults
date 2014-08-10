@@ -34,6 +34,43 @@ class Race07Test extends PHPUnit_Framework_TestCase {
         $reader = new Data_Reader_Race07('Unknown data for reader');
     }
 
+
+    /***
+    **** Simple tests that do not fit in the full race log used for testing.
+    **** Most of the below tests are done on modfied files
+    ***/
+
+
+    /**
+     * Test non-zero based logs on laps. Found on F1 challenge log files
+     */
+    public function testNonZeroBasedLaps()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.'/logs/race07/prosracing Clio Cup_2013_02_12_22_06_19_Race2_changed_lap_numbers.txt');
+
+        // Get the data reader for the given data source
+        $reader = Data_Reader::factory($file_path);
+
+        // Get session
+        $session = $reader->getSession();
+
+        // Get participant "flashdepau"
+        $participants = $session->getParticipants();
+        $laps = $participants[1]->getLaps();
+
+        // Validate using time, to prevent any false positives due to number
+        // fixes
+        $this->assertSame(147.888, $laps[0]->getTime());
+    }
+
+
+
+    /***
+    **** Below tests use a full valid race log file
+    ***/
+
+
     /**
      * Test reading the session
      */

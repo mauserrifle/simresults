@@ -11,9 +11,9 @@ use Simresults\Helper;
  * * F1 challenge 99-02
  *
  *  TODO:
- *  * Figure out the session type
  *  * For F1 challenge logs without laps, add dummy laps and one with best lap
- *  * GTR laps are not zero based, does this have effect on parsing?
+ *  * Fix grid position using qualify times
+ *  * DNF reasons ints in log? What do they mean?
  *
  * @author     Maurice van der Star <mauserrifle@gmail.com>
  * @copyright  (c) 2013 Maurice van der Star
@@ -46,8 +46,7 @@ class Data_Reader_Race07 extends Data_Reader {
         // Create new session instance
         $session = new Session;
 
-        // Set session type
-        // TODO: Make dynamic
+        // Set session type to RACE. We can't figure this out on these logs
         $session->setType(Session::TYPE_RACE);
 
         // Get date from human string.
@@ -242,6 +241,7 @@ class Data_Reader_Race07 extends Data_Reader {
 
         // Sort participants by total time
         // TODO: Move to helper with own unittest?
+        // TODO: Sort lap distance too....
         usort($participants, function($a, $b) {
 
             // Same time
@@ -282,7 +282,6 @@ class Data_Reader_Race07 extends Data_Reader {
             return ($a->getTotalTime() < $b->getTotalTime()) ? -1 : 1;
         });
 
-        // TODO: Sort on DNF, number of laps and lap distance too....
 
         // Fix participant positions
         foreach ($participants as $key => $part)
@@ -316,6 +315,9 @@ class Data_Reader_Race07 extends Data_Reader {
         // Prepare array data
         $array_data = array();
 
+        // Are laps zero based?
+        $laps_zero_based = (bool) strpos($data, 'Lap=(0,');
+
         //----  Loop each line
         // Remember section
         $section = null;
@@ -340,6 +342,7 @@ class Data_Reader_Race07 extends Data_Reader {
             // Get key value for array
             $key = strtolower($split[0]);
 
+
             // Is lap value
             if ($key === 'lap')
             {
@@ -353,8 +356,18 @@ class Data_Reader_Race07 extends Data_Reader {
                 // Match lap information. e.g. (0, -1.000, 2:20.923)
                 preg_match('/^\((.*), (.*), (.*)\)$/i', $split[1], $lap_matches);
 
-                // Define lap number
-                $lap_number = $lap_matches[1]+1;
+                // Zero based laps
+                if ($laps_zero_based)
+                {
+                    // Increment lap number by 1
+                    $lap_number = $lap_matches[1]+1;
+                }
+                // No zero based laps
+                else
+                {
+                    // Use lap numbers defined in file
+                    $lap_number = $lap_matches[1];
+                }
 
                 // Elapsed time negative, make sure it's positive
                 if ( 0 > $elapsed_time = (float) $lap_matches[2])
