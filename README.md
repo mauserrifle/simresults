@@ -166,6 +166,11 @@ these log files
 
 Logs tend to miss lap data on all games. Check the logs.
 
+### Date is not right of session
+
+GTR, GTL, F1 challenge don't have a timestamp or timezone information. So
+dates are created using the default timezone.
+
 ## Contributing
 
 The project is designed to be extended with new features and game support.

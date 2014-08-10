@@ -14,6 +14,7 @@ use Simresults\Helper;
  *  * For F1 challenge logs without laps, add dummy laps and one with best lap
  *  * Fix grid position using qualify times
  *  * DNF reasons ints in log? What do they mean?
+ *  * Somehow include qualify times in a (race) result too?
  *
  * @author     Maurice van der Star <mauserrifle@gmail.com>
  * @copyright  (c) 2013 Maurice van der Star
