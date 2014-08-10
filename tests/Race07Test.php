@@ -54,9 +54,7 @@ class Race07Test extends PHPUnit_Framework_TestCase {
 
         //-- Validate other
         $this->assertSame(Session::TYPE_RACE, $session->getType());
-
-        // TODO: Enable
-        // $this->assertSame(5, $session->getLastedLaps());
+        $this->assertSame(12, $session->getLastedLaps());
     }
 
     /**
