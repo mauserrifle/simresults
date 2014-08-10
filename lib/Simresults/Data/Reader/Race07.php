@@ -317,7 +317,7 @@ class Data_Reader_Race07 extends Data_Reader {
         $array_data = array();
 
         //----  Loop each line
-        // Rmember section
+        // Remember section
         $section = null;
         foreach(preg_split("/((\r?\n)|(\r\n?))/", $data) as $line){
             // Empty line or META info, ignore this
