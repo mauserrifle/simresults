@@ -6,8 +6,9 @@ use Simresults\Helper;
  * The reader for Race07
  *
  * Supports the following games too:
- * * GTL
- * * GTR and GTR2
+ * * GT Legends
+ * * GTR
+ * * GTR 2
  * * F1 challenge 99-02
  *
  *  TODO:

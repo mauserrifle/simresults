@@ -25,26 +25,24 @@ This project is created and maintained by
 
 ## Supported games
 
-### rFactor
+Simresults supports a wide range of games:
 
-Both rFactor and rFactor 2 are supported, or anything based on these engines.
-
-#### rFactor powered games
-
-Because the rFactor engine is used within other games, those below are
-confirmed to be working too:
-
+* rFactor
+* rFactor 2
 * Game Stock Car 2012
 * Game Stock Car 2013
 * Formula Truck 2013
+* Assetto Corsa
+* RACE 07
+* GTR
+* GTR2
+* GT Legends
+* F1 challenge 99-02
 
-Please note that anything other than rFactor or rFactor 2 is reported as a
+Please note that Game Stock Car and Formula Truck will be reported as as a
 rFactor game.
 
-### Assetto Corsa
-
-Very limited support due to BETA state. Only laps and drifting points are read.
-
+Assetto Corsa support is very limited due to simple log files.
 
 ## Features
 
@@ -62,12 +60,28 @@ Very limited support due to BETA state. Only laps and drifting points are read.
 
 ### rFactor reader
 
+`lib/Data/Reader/Rfactor2.php`
+
 * Supports rFactor and rFactor 2. Also works for other rFactor powered games:
   Game Stock Car 2012, Game Stock Car 2013 and Formula Truck 2013
 * Detects and fixes position data (sometimes log files report complete wrong
   positions due to lag/bugs)
 * Detects human and AI players using their aids (sometimes log files report
   wrong player state)
+
+### Assetto Corsa reader
+
+`lib/Data/Reader/AssettoCorsa.php`
+
+* Supports practice sessions. Very limited support due to simple log files.
+
+### RACE 07 reader
+
+`lib/Data/Reader/Race07.php`
+
+* Also works for the following games: GTR, GTR2, GT Legends,
+  F1 challenge 99-02
+* Checks and fixes log variations like non-zero based laps and missing lap data
 
 ## Requirements
 
