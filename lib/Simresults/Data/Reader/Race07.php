@@ -11,11 +11,7 @@ use Simresults\Helper;
  * * F1 challenge 99-02
  *
  *  TODO:
- *  * DNF reasons ints in log? What do they mean?
  *  * Somehow include qualify times in a (race) result too?
- *  * Because of dummy laps, the order of a race log can be bugged because
- *    of a driver having less laps than first participant that wins?
- *    http://localhost:8000/140810-2av
  *
  * @author     Maurice van der Star <mauserrifle@gmail.com>
  * @copyright  (c) 2013 Maurice van der Star
