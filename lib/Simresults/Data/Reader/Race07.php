@@ -11,10 +11,11 @@ use Simresults\Helper;
  * * F1 challenge 99-02
  *
  *  TODO:
- *  * Sort participants by qualify times on qualify session
- *  * For F1 challenge logs without laps, add dummy laps and one with best lap
  *  * DNF reasons ints in log? What do they mean?
  *  * Somehow include qualify times in a (race) result too?
+ *  * Because of dummy laps, the order of a race log can be bugged because
+ *    of a driver having less laps than first participant that wins?
+ *    http://localhost:8000/140810-2av
  *
  * @author     Maurice van der Star <mauserrifle@gmail.com>
  * @copyright  (c) 2013 Maurice van der Star
@@ -284,12 +285,22 @@ class Data_Reader_Race07 extends Data_Reader {
                 }
             }
 
-            // Has laps data
-            if ($laps_collection = $this->get($driver_data, 'laps_collection'))
+            // Laps count not found
+            if (null === $laps_count = $this->get($driver_data, 'laps'))
             {
+                // Try racelaps key
+                $laps_count = $this->get($driver_data, 'racelaps');
+            }
+
+            // Has run laps
+            if ($laps_count !== null AND $laps_count > 0)
+            {
+                // Get laps collection
+                $laps_collection = $this->get($driver_data, 'laps_collection');
+
                 // Loop laps by lap count due to missing laps in results
                 // so we can fill up the gaps
-                for ($lap_i=1; $lap_i <= $driver_data['laps']; $lap_i++)
+                for ($lap_i=1; $lap_i <= $laps_count; $lap_i++)
                 {
                     // Init new lap
                     $lap = new Lap;
@@ -313,10 +324,21 @@ class Data_Reader_Race07 extends Data_Reader {
                         // Set lap times
                         $lap->setTime($lap_data['time'])
                             ->setElapsedSeconds($lap_data['elapsed_time']);
+
+                        $all_laps_missing = false;
                     }
 
                     // Add lap to participant
                     $participant->addLap($lap);
+                }
+
+                // All laps missing but has best lap
+                if (sizeof($laps_collection) === 0 AND
+                    $racebestlap = $this->get($driver_data, 'racebestlap'))
+                {
+                    // Get first lap and change time
+                    $participant->getLap(1)->setTime(
+                        Helper::secondsFromFormattedTime($racebestlap));
                 }
             }
 

@@ -59,6 +59,8 @@ class Race07Test extends PHPUnit_Framework_TestCase {
 
         // Get participant "flashdepau"
         $participants = $session->getParticipants();
+        // print_r($participants[1]);
+        // die();
         $laps = $participants[1]->getLaps();
 
         // Validate using time, to prevent any false positives due to number
@@ -123,6 +125,34 @@ class Race07Test extends PHPUnit_Framework_TestCase {
             'Andersom Cunha', $participants[19]->getDriver()->getName());
     }
 
+
+    /**
+     * Test whether the parser adds dummy laps so we still know how much laps
+     * drivers have ran
+     */
+    public function testDummyLapsOnMissingAllLapsInResult()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.'/logs/f1c/race.txt');
+
+        // Get the data reader for the given data source
+        $reader = Data_Reader::factory($file_path);
+
+        // Get session
+        $session = $reader->getSession();
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Get first paerticipant (Gummy)
+        $participant = $participants[0];
+
+        // Validate laps
+        $laps = $participant->getLaps();
+        $this->assertSame(7, $participant->getNumberOfLaps());
+        $this->assertSame(75.645, $laps[0]->getTime());
+        $this->assertNull($laps[1]->getTime());
+    }
 
 
 
