@@ -178,6 +178,22 @@ class Race07Test extends PHPUnit_Framework_TestCase {
         $this->assertSame('Kostia', $participant->getDriver()->getName());
     }
 
+    /**
+     * Test there is no error on parsing a GTR2 files with no spaces after
+     * lap data commas (e.g. Lap=(1,180.671,1:46.557))
+     */
+    public function testNoErrorsOnGTR2Log()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.'/logs/gtr2/GTRSpain_2011_04_27_20_11_02_UNIDO.txt');
+
+        // Get the data reader for the given data source
+        $reader = Data_Reader::factory($file_path);
+
+        // Get session
+        $session = $reader->getSession();
+    }
+
 
 
     /***

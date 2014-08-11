@@ -445,7 +445,7 @@ class Data_Reader_Race07 extends Data_Reader {
                 }
 
                 // Match lap information. e.g. (0, -1.000, 2:20.923)
-                preg_match('/^\((.*), (.*), (.*)\)$/i', $split[1], $lap_matches);
+                preg_match('/^\((.*), ?(.*), ?(.*)\)$/i', $split[1], $lap_matches);
 
                 // Zero based laps
                 if ($laps_zero_based)

@@ -33,11 +33,31 @@ Simresults supports a wide range of games:
 * Game Stock Car 2013
 * Formula Truck 2013
 * Assetto Corsa
+* RACE
 * RACE 07
 * GTR
 * GTR2
 * GT Legends
+* BMW M3 Challenge
 * F1 challenge 99-02
+
+The following expansions of RACE (07) should work too:
+
+* Race: Caterham expansion
+* GTR Evolution
+* Crowne Plaza
+* STCC - The Game
+* STCC 2 - The Game
+* RACE On
+* Raceroom - The Game
+* Raceroom - The Game 2
+* Formula Raceroom
+* GT Power
+* WTCC 2010
+* Retro
+* Race Injection
+* Volvo - The Game
+
 
 Please note that Game Stock Car and Formula Truck will be reported as as a
 rFactor game.
@@ -79,8 +99,8 @@ Assetto Corsa support is very limited due to simple log files.
 
 `lib/Data/Reader/Race07.php`
 
-* Also works for the following games: GTR, GTR2, GT Legends,
-  F1 challenge 99-02
+* Also works for the following games: RACE, GTR, GTR2, GT Legends,
+  BMW M3 Challenge, F1 challenge 99-02 and all expansions of these games
 * Checks and fixes log variations like non-zero based laps and missing lap data
 
 ## Requirements
