@@ -366,92 +366,14 @@ class Data_Reader_Race07 extends Data_Reader {
         // Is race result
         if ($session->getType() === Session::TYPE_RACE)
         {
-
             // Sort participants by total time
-            // TODO: Move to helper with own unittest?
-            // TODO: Sort lap distance too....
-            usort($participants, function($a, $b) {
-
-                // Same time
-                if ($a->getTotalTime() === $b->getTotalTime()) {
-                    return 0;
-                }
-
-                // Both have DNF status
-                if ($a->getFinishStatus() === Participant::FINISH_DNF AND
-                    $b->getFinishStatus() === Participant::FINISH_DNF)
-                {
-                    // Both ran same amount of laps
-                    if ($a->getNumberOfLaps() === $b->getNumberOfLaps())
-                    {
-                        // TODO: Check last lap distance...
-                    }
-
-                    // A is slower when having less laps than b
-                    return ($a->getNumberOfLaps() < $b->getNumberOfLaps()) ? 1 : -1;
-                }
-
-                // a has no time
-                if ( ! $a->getTotalTime() OR
-                    $a->getFinishStatus() === Participant::FINISH_DNF)
-                {
-                    // $b is faster
-                    return 1;
-                }
-
-                // b has no time
-                if ( ! $b->getTotalTime() OR
-                    $b->getFinishStatus() === Participant::FINISH_DNF)
-                {
-                    // $a is faster
-                    return -1;
-                }
-
-                return ($a->getTotalTime() < $b->getTotalTime()) ? -1 : 1;
-            });
+            $participants = Helper::sortParticipantsByTotalTime($participants);
         }
         // Is practice of qualify
         else
         {
-                // TODO: Fix duplicate code. This is copied from rFactor2 reader
-                // Make central method with unittest in helper?
-                // Sort by best lap instead of position
-                usort($participants, function($a, $b) {
-
-                    // Get best laps
-                    $a_best_lap = $a->getBestLap();
-                    $b_best_lap = $b->getBestLap();
-
-                    // Both participants have no best lap
-                    if ( ! $a_best_lap AND ! $b_best_lap)
-                    {
-                        // Same
-                        return 0;
-                    }
-
-                    // a has no best lap
-                    if ( ! $a_best_lap)
-                    {
-                        return 1;
-                    }
-
-                    // b has no best lap
-                    if ( ! $b_best_lap)
-                    {
-                        return -1;
-                    }
-
-                    // Same time
-                     if ($a_best_lap->getTime() === $b_best_lap->getTime()) {
-                        return 0;
-                    }
-
-                    // Return normal comparison
-                    return ((
-                        $a_best_lap->getTime() <
-                            $b_best_lap->getTime())
-                        ? -1 : 1);
-                });
+            // Sort by best lap
+            $participants = Helper::sortParticipantsByBestLap($participants);
         }
 
         // Fix participant positions

@@ -154,6 +154,30 @@ class Race07Test extends PHPUnit_Framework_TestCase {
         $this->assertNull($laps[1]->getTime());
     }
 
+    /**
+     * Test whether lapped drivers are positioned properly
+     */
+    public function testLappedDriversPosition()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.'/logs/f1c/race.txt');
+
+        // Get the data reader for the given data source
+        $reader = Data_Reader::factory($file_path);
+
+        // Get session
+        $session = $reader->getSession();
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Get first paerticipant (Kostia)
+        $participant = $participants[4];
+
+        // Validate
+        $this->assertSame('Kostia', $participant->getDriver()->getName());
+    }
+
 
 
     /***
