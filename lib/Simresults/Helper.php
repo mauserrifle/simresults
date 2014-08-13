@@ -197,9 +197,17 @@ class Helper {
     public static function sortLapsByElapsedTime(array $laps)
     {
         usort($laps, function($a,$b) {
-            // Same time
+            // Same elapsed seconds
              if ($a->getElapsedSeconds() === $b->getElapsedSeconds()) {
-                return 0;
+
+                 // Same time
+                 if ($a->getTime() === $b->getTime())
+                 {
+                     return 0;
+                 }
+
+                // Return time comparison as fallback
+                return ($a->getTime() < $b->getTime()) ? -1 : 1;
             }
 
             // a has no elapsed seconds

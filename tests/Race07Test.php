@@ -318,7 +318,7 @@ class Race07Test extends PHPUnit_Framework_TestCase {
         // // Second lap
         $lap = $laps[1];
         $this->assertSame(2, $lap->getNumber());
-        $this->assertSame(2, $lap->getPosition());
+        $this->assertSame(1, $lap->getPosition());
         $this->assertSame(126.276, $lap->getTime());
         $this->assertSame(128.404, $lap->getElapsedSeconds());
 
