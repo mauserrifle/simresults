@@ -1,0 +1,86 @@
+[Header]
+Game=F1 Challenge 99-02
+Version=1.026
+TimeString=2009/02/21 17:17:20
+
+[Race]
+RaceMode=5
+Scene=SEASONDATA\CIRCUITS\Australia\2007_Albert_Park\2007_Albert_Park.SCN
+AIDB=SEASONDATA\CIRCUITS\Australia\2007_Albert_Park\2007_Albert_Park.AIW
+Qualify Laps=12
+Race Laps=8
+Race Time=120
+Race Length=0.143
+Track Length=5251.1870
+
+[Slot000]
+Driver=Gummy
+Vehicle=2007 Ferrari
+QualPlace=2
+QualTime=-:--.---
+RacePlace=1
+RaceLaps=7
+RaceBestLap=1:15.645
+RaceTime=0:09:41.649
+
+[Slot002]
+Driver=Pablo Bermudez
+Vehicle=2007 McLaren
+QualPlace=3
+QualTime=-:--.---
+RacePlace=2
+RaceLaps=7
+RaceBestLap=1:30.771
+RaceTime=0:10:40.613
+
+[Slot004]
+Driver=mathesinho
+Vehicle=2007 Spyker
+QualPlace=7
+QualTime=-:--.---
+RacePlace=3
+RaceLaps=7
+RaceBestLap=1:30.380
+RaceTime=0:10:49.449
+
+[Slot003]
+Driver=Luis Felipe
+Vehicle=2007 Renault
+QualPlace=5
+QualTime=-:--.---
+RacePlace=4
+RaceLaps=7
+RaceBestLap=1:27.178
+RaceTime=0:10:57.873
+
+[Slot005]
+Driver=Kostia
+Vehicle=2007 McLaren
+QualPlace=8
+QualTime=-:--.---
+RacePlace=5
+RaceLaps=6
+RaceBestLap=1:35.910
+RaceTime=0:10:48.011
+
+[Slot001]
+Driver=@ndre
+Vehicle=2007 Ferrari
+QualPlace=4
+QualTime=-:--.---
+RacePlace=6
+RaceLaps=2
+RaceBestLap=1:25.592
+RaceTime=DNF
+Reason=0
+
+[Slot006]
+Driver=Denia
+Vehicle=2007 McLaren
+QualPlace=9
+QualTime=-:--.---
+RacePlace=7
+RaceLaps=4
+RaceBestLap=1:35.990
+RaceTime=DQ
+

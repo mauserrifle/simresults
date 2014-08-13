@@ -201,19 +201,11 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
             // figure out positions for lap 1 in AC
             for($i=2; $i <= $session_lasted_laps; $i++)
             {
-                // Get laps sorted by elapsed time
+                // Get laps by lap number from session
                 $laps_sorted = $session->getLapsByLapNumberSortedByTime($i);
 
-                // Sort laps by elapsed time
-                usort($laps_sorted, function($a,$b) {
-                    // Same time
-                     if ($a->getElapsedSeconds() === $b->getElapsedSeconds()) {
-                        return 0;
-                    }
-
-                    // Return normal comparison
-                    return ($a->getElapsedSeconds() < $b->getElapsedSeconds()) ? -1 : 1;
-                });
+                // Sort the laps by elapsed time
+                $laps_sorted = Helper::sortLapsByElapsedTime($laps_sorted);
 
                 // Loop each lap and fix position data
                 foreach ($laps_sorted as $lap_key => $lap)

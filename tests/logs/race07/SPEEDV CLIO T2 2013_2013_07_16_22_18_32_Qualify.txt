@@ -1,0 +1,292 @@
+[Header]
+Game=RACE 07
+Version=1.2.1.10
+TimeString=2013/07/16 22:18:32
+Aids=0,0,0,0,0,1,0,0,0
+
+[Race]
+RaceMode=5
+Scene=GameData\Locations\Road_America\Road_America.TRK
+AIDB=GameData\Locations\Road_America\Road_America.AIW
+Race Length=0.100
+Track Length=6564.5591
+
+[Slot001]
+Driver=Gustavo Prada
+SteamUser=gustavoprada
+SteamId=30911382
+Vehicle=Renault Sport Clio CUP France 2008
+Team=TEMPLATE_TEAM
+Laps=2
+Lap=(0, -1.000, 2:35.716)
+Lap=(1, 200.194, 2:33.480)
+LapDistanceTravelled=5859.793945
+BestLap=2:33.480
+RaceTime=DNF
+Reason=0
+
+[Slot002]
+Driver=Rodrigo Slash
+SteamUser=nikows87
+SteamId=26764513
+Vehicle=Renault Sport Clio CUP France 2008
+Team=Motorhead BNT Racing
+Laps=3
+Lap=(1, 95.025, 2:33.681)
+Lap=(2, 273.669, 2:30.510)
+LapDistanceTravelled=6538.097168
+BestLap=2:30.510
+RaceTime=DNF
+Reason=0
+
+[Slot003]
+Driver=Fabio Feliciano
+SteamUser=fsorcerer
+SteamId=22376119
+Vehicle=Renault Sport Clio CUP France 2008
+Team=TEMPLATE_TEAM
+Laps=2
+Lap=(0, -1.000, 2:32.150)
+Lap=(1, 206.562, 2:31.223)
+LapDistanceTravelled=6013.009766
+BestLap=2:31.223
+RaceTime=DNF
+Reason=0
+
+[Slot004]
+Driver=Maartijmm Ekstrom
+SteamUser=martijmm
+SteamId=52676829
+Vehicle=Renault Sport Clio CUP France 2008
+Team=MOTÖRHEAD RACING TEAM
+Laps=2
+Lap=(0, -1.000, 2:34.850)
+Lap=(1, 200.033, 2:32.350)
+LapDistanceTravelled=6105.881836
+BestLap=2:32.350
+RaceTime=DNF
+Reason=0
+
+[Slot005]
+Driver=Jose Uchoa
+SteamUser=zeuchoa
+SteamId=19985536
+Vehicle=Renault Sport Clio CUP France 2008
+Team=RPS Racing
+Laps=3
+Lap=(0, -1.000, 2:31.918)
+Lap=(1, 177.533, 2:30.828)
+Lap=(2, 329.451, 2:30.605)
+LapDistanceTravelled=16.528320
+BestLap=2:30.605
+RaceTime=0:00:00.000
+
+[Slot006]
+Driver=Andersom Cunha
+SteamUser=andertechbr
+SteamId=44186540
+Vehicle=Renault Sport Clio CUP France 2008
+Team=Amika VoaBaixo Racing
+Laps=2
+Lap=(0, -1.000, 2:39.302)
+Lap=(1, 252.378, 2:53.258)
+LapDistanceTravelled=2627.790527
+BestLap=2:39.302
+RaceTime=DNF
+Reason=0
+
+[Slot007]
+Driver=Silvio Goes
+SteamUser=silvio_goes1
+SteamId=53607487
+Vehicle=Renault Sport Clio CUP France 2008
+Team=Motorhead BNT Racing
+Laps=2
+Lap=(0, -1.000, 2:29.106)
+Lap=(1, 217.470, 2:32.272)
+LapDistanceTravelled=49.204102
+BestLap=2:29.106
+RaceTime=DNF
+Reason=0
+
+[Slot009]
+Driver=chrisdash
+SteamUser=chrisdash
+SteamId=66832051
+Vehicle=Renault Sport Clio CUP France 2008
+Team=Amika VoaBaixo Racing
+Laps=2
+Lap=(0, -1.000, 2:33.476)
+Lap=(1, 221.565, 2:33.282)
+LapDistanceTravelled=4580.982422
+BestLap=2:33.282
+RaceTime=DNF
+Reason=0
+
+[Slot010]
+Driver=Eduardo Loner
+SteamUser=eduloner
+SteamId=52263820
+Vehicle=Renault Sport Clio CUP France 2008
+Team=TEMPLATE_TEAM
+Laps=1
+Lap=(0, -1.000, 2:31.815)
+LapDistanceTravelled=86.553223
+BestLap=2:31.815
+RaceTime=DNF
+Reason=0
+
+[Slot011]
+Driver=Lucas Lopes
+SteamUser=lucaslopes2
+SteamId=34760661
+Vehicle=Renault Sport Clio CUP France 2008
+Team=Amika VoaBaixo Racing
+Laps=1
+Lap=(0, -1.000, 2:30.077)
+LapDistanceTravelled=100.722168
+BestLap=2:30.077
+RaceTime=DNF
+Reason=0
+
+[Slot012]
+Driver=alexandre flores
+SteamUser=alexandreflores
+SteamId=68806472
+Vehicle=Renault Sport Clio CUP France 2008
+Team=TEMPLATE_TEAM
+Laps=2
+Lap=(0, -1.000, 2:38.757)
+Lap=(1, 262.678, 2:44.160)
+LapDistanceTravelled=2655.033447
+BestLap=2:38.757
+RaceTime=DNF
+Reason=0
+
+[Slot013]
+Driver=Beto Assis
+SteamUser=racetime01
+SteamId=50538349
+Vehicle=Renault Sport Clio CUP France 2008
+Team=Team Milan Competition
+Laps=3
+Lap=(0, -1.000, 2:30.175)
+Lap=(1, 192.752, 2:30.352)
+Lap=(2, 342.928, 2:31.350)
+LapDistanceTravelled=296.016846
+BestLap=2:30.175
+RaceTime=0:00:00.000
+
+[Slot014]
+Driver=Renato Peixinho
+SteamUser=renato_peixinho
+SteamId=25976333
+Vehicle=Renault Sport Clio CUP France 2008
+Team=Amika RPS Racing
+Laps=2
+Lap=(0, -1.000, 2:31.271)
+Lap=(1, 170.735, 2:32.793)
+LapDistanceTravelled=145.892578
+BestLap=2:31.271
+RaceTime=DNF
+Reason=0
+
+[Slot015]
+Driver=Bruno Povoa
+SteamUser=bruno_povoa
+SteamId=67683592
+Vehicle=Renault Sport Clio CUP France 2008
+Team=Amika RPS Racing
+Laps=3
+Lap=(0, -1.000, 2:30.499)
+Lap=(1, 173.993, 2:33.721)
+Lap=(2, 324.492, 2:29.475)
+LapDistanceTravelled=155.065918
+BestLap=2:29.475
+RaceTime=DNF
+Reason=0
+
+[Slot016]
+Driver=Paulo Henrique
+SteamUser=racetime02
+SteamId=51525799
+Vehicle=Renault Sport Clio CUP France 2008
+Team=Team Milan Competition
+Laps=1
+Lap=(0, -1.000, 2:30.136)
+LapDistanceTravelled=174.459473
+BestLap=2:30.136
+RaceTime=DNF
+Reason=0
+
+[Slot017]
+Driver=allancristian
+SteamUser=allancristian2
+SteamId=62140635
+Vehicle=Renault Sport Clio CUP France 2008
+Team=Motorhead BNT Racing
+Laps=2
+Lap=(0, -1.000, 2:49.296)
+Lap=(1, 316.151, 2:38.513)
+LapDistanceTravelled=188.785156
+BestLap=2:38.513
+RaceTime=0:00:00.000
+
+[Slot018]
+Driver=Jayson Fabianno
+SteamUser=jayson_fabiano
+SteamId=57761376
+Vehicle=Renault Sport Clio CUP France 2008
+Team=MOTÖRHEAD RACING TEAM
+Laps=2
+Lap=(0, -1.000, 2:29.275)
+Lap=(1, 218.150, 2:29.592)
+LapDistanceTravelled=4955.813965
+BestLap=2:29.275
+RaceTime=DNF
+Reason=0
+
+[Slot019]
+Driver=Adriano Martins
+SteamUser=adrian0martins
+SteamId=56980439
+Vehicle=Renault Sport Clio CUP France 2008
+Team=MOTÖRHEAD RACING TEAM
+Laps=2
+Lap=(0, -1.000, 2:29.869)
+Lap=(1, 197.056, 2:29.367)
+LapDistanceTravelled=6190.104980
+BestLap=2:29.367
+RaceTime=DNF
+Reason=0
+
+[Slot020]
+Driver=Joao Junior
+SteamUser=crazybh27
+SteamId=18321788
+Vehicle=Renault Sport Clio CUP France 2008
+Team=RPS Racing
+Laps=3
+Lap=(0, -1.000, 2:31.908)
+Lap=(1, 168.050, 2:45.302)
+Lap=(2, 319.958, 2:30.443)
+LapDistanceTravelled=230.579590
+BestLap=2:30.443
+RaceTime=0:00:00.000
+
+[Slot021]
+Driver=Eyder Rodrigues
+SteamUser=eyyder
+SteamId=20120362
+Vehicle=Renault Sport Clio CUP France 2008
+Team=TEMPLATE_TEAM
+Laps=3
+Lap=(0, -1.000, 2:33.311)
+Lap=(1, 165.713, 2:32.389)
+Lap=(2, 319.024, 2:31.243)
+LapDistanceTravelled=1203.276611
+BestLap=2:31.243
+RaceTime=DNF
+Reason=0
+
+[END]

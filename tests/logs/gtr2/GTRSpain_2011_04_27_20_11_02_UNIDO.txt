@@ -1,0 +1,397 @@
+[Header]
+Game=GTR2
+Version=1.100
+TimeString=2011/04/27 20:11:02
+Aids=0,0,0,0,0,1,0,0,0
+
+[Race]
+RaceMode=5
+Scene=GAMEDATA\LOCATIONS\Estoril\3Estoril.TRK
+AIDB=GAMEDATA\LOCATIONS\Estoril\3Estoril.AIW
+Race Length=0.100
+Track Length=4148.0020
+
+[Slot000]
+Driver=jvr
+Lobby Username=jvr
+Vehicle=BMW M3 GTR
+VehicleNumber=11041
+Team=AyCop�n! Krusty Burger
+Laps=7
+Lap=(1,211.35,1:41.063)
+Lap=(2,312.413,1:40.767)
+Lap=(3,413.18,1:39.882)
+Lap=(4,2772.23,1:40.263)
+Lap=(5,2872.493,1:45.635)
+LapDistanceTravelled=8115.784668
+BestLap=1:39.882
+RaceTime=DNF
+Reason=
+
+[Slot001]
+Driver=Busi
+Lobby Username=Busi
+Vehicle=BMW M3 GTR
+VehicleNumber=11007
+Team=Black Wolfs
+Laps=7
+Lap=(1,163.103,1:40.628)
+Lap=(2,263.731,1:39.279)
+Lap=(4,594.305,1:39.955)
+Lap=(5,694.26,1:39.008)
+Lap=(6,793.268,1:38.820)
+LapDistanceTravelled=4019.510742
+BestLap=1:38.820
+RaceTime=DNF
+Reason=
+
+[Slot002]
+Driver=Manu
+Lobby Username=manunu86
+Vehicle=BMW M3 GTR
+VehicleNumber=11008
+Team=Z's Team
+Laps=10
+Lap=(1,150.127,1:40.052)
+Lap=(3,371.313,1:39.060)
+Lap=(4,538.075,1:39.782)
+Lap=(5,668.271,1:40.375)
+LapDistanceTravelled=12038.575929
+BestLap=1:39.060
+RaceTime=DNF
+Reason=
+
+[Slot003]
+Driver=(dTr) Farruquito
+Lobby Username=(gtrs)farru
+Vehicle=BMW M3 GTR
+VehicleNumber=11009
+Team=RASTA TEAM
+Laps=10
+Lap=(1,180.373,1:41.997)
+Lap=(2,1934.109,1:46.965)
+Lap=(3,2041.075,1:41.838)
+Lap=(5,2367.732,1:42.403)
+Lap=(6,2470.135,1:44.766)
+Lap=(7,2574.901,1:42.052)
+Lap=(9,2850.355,1:42.477)
+LapDistanceTravelled=8080.663086
+BestLap=1:41.838
+RaceTime=DNF
+Reason=
+
+[Slot004]
+Driver=Gonzalo
+Lobby Username=Gonzalo
+Vehicle=BMW M3 GTR
+VehicleNumber=11021
+Team=AF Racing
+Laps=7
+Lap=(1,175.504,1:39.133)
+Lap=(3,417.069,1:43.571)
+Lap=(4,520.64,1:39.777)
+Lap=(6,781.762,1:38.886)
+LapDistanceTravelled=4047.108643
+BestLap=1:38.886
+RaceTime=DNF
+Reason=
+
+[Slot005]
+Driver=juansanch
+Lobby Username=juansanch
+Vehicle=BMW M3 GTR
+VehicleNumber=11018
+Team=DuanSanch Team
+Laps=10
+Lap=(1,1270.38,1:45.043)
+Lap=(2,3054.255,1:44.089)
+Lap=(3,3158.345,1:43.646)
+Lap=(5,3488.727,1:43.888)
+Lap=(6,3592.615,1:43.590)
+Lap=(7,3696.205,1:43.620)
+Lap=(9,4209.876,1:42.711)
+LapDistanceTravelled=6268.347168
+BestLap=1:42.711
+RaceTime=DNF
+Reason=
+
+[Slot006]
+Driver=Manolo Ortiz
+Lobby Username=mob1964
+Vehicle=BMW M3 GTR
+VehicleNumber=64
+Team=Warthog Nation
+Laps=10
+Lap=(1,1846.644,1:42.867)
+Lap=(2,1949.511,1:42.520)
+Lap=(3,3621.377,1:44.584)
+Lap=(4,3725.961,1:44.209)
+Lap=(6,4123.462,1:42.606)
+Lap=(7,4226.068,1:42.486)
+Lap=(8,4328.554,1:43.511)
+LapDistanceTravelled=8067.571534
+BestLap=1:42.486
+RaceTime=DNF
+Reason=
+
+[Slot007]
+Driver=Luisito
+Lobby Username=Luisito
+Vehicle=BMW M3 GTR
+VehicleNumber=11088
+Team=TROCCOLA
+Laps=9
+Lap=(1,795.277,1:42.199)
+Lap=(2,897.476,1:41.738)
+Lap=(3,999.213,1:42.315)
+Lap=(5,1647.369,1:43.021)
+Lap=(6,1750.39,1:42.686)
+Lap=(7,1853.076,2:04.200)
+LapDistanceTravelled=4012.858643
+BestLap=1:41.738
+RaceTime=DNF
+Reason=
+
+[Slot008]
+Driver=Jorgerock
+Lobby Username=JORGEMARCO1980
+Vehicle=BMW M3 GTR
+VehicleNumber=10080
+Team=rock & bones team
+Laps=10
+Lap=(1,258.272,1:39.572)
+Lap=(4,756.666,1:39.524)
+Lap=(5,915.268,1:38.977)
+Lap=(7,1156.833,1:39.035)
+Lap=(9,1380.579,1:39.021)
+LapDistanceTravelled=4012.858643
+BestLap=1:38.977
+RaceTime=DNF
+Reason=
+
+[Slot009]
+Driver=Txas
+Lobby Username=Txas
+Vehicle=BMW M3 GTR
+VehicleNumber=11000
+Team=TROCCOLA
+Laps=9
+Lap=(1,149.72,1:48.064)
+Lap=(2,257.785,1:47.130)
+Lap=(3,1380.842,1:48.729)
+Lap=(4,1489.571,2:01.603)
+Lap=(5,1611.173,1:47.626)
+Lap=(6,1718.799,1:50.077)
+Lap=(7,1828.876,1:48.964)
+LapDistanceTravelled=8067.567627
+BestLap=1:47.130
+RaceTime=DNF
+Reason=
+
+[Slot010]
+Driver=Lucas Skywalker
+Lobby Username=Lucas Skywalker
+Vehicle=BMW M3 GTR
+VehicleNumber=11053
+Team=AyCop�n! Krusty Burger
+Laps=8
+Lap=(1,139.025,1:47.679)
+Lap=(2,246.704,1:42.944)
+Lap=(3,349.648,1:42.242)
+Lap=(4,3163.101,1:42.885)
+Lap=(5,3265.986,1:41.608)
+Lap=(6,3367.594,1:42.646)
+LapDistanceTravelled=8066.619385
+BestLap=1:41.608
+RaceTime=DNF
+Reason=
+
+[Slot011]
+Driver=chemary
+Lobby Username=CHEMARY
+Vehicle=BMW M3 GTR
+VehicleNumber=11066
+Team=Z's Team
+Laps=10
+Lap=(1,179.081,1:43.515)
+Lap=(3,424.373,1:42.303)
+Lap=(4,4624.081,1:44.528)
+Lap=(5,4728.609,1:43.916)
+Lap=(7,4983.748,1:42.248)
+Lap=(8,5085.996,1:42.659)
+LapDistanceTravelled=8025.717286
+BestLap=1:42.248
+RaceTime=DNF
+Reason=
+
+[Slot012]
+Driver=Bloudin
+Lobby Username=Bloudin
+Vehicle=BMW M3 GTR
+VehicleNumber=90
+Team=Warthog Nation
+Laps=8
+Lap=(1,263.12,1:41.412)
+Lap=(3,558.118,1:41.176)
+Lap=(4,659.294,1:43.951)
+Lap=(6,928.149,1:41.055)
+Lap=(7,1029.204,1:40.542)
+LapDistanceTravelled=4012.858643
+BestLap=1:40.542
+RaceTime=DNF
+Reason=
+
+[Slot013]
+Driver=rellik
+Lobby Username=estebanpelilatomelloso
+Vehicle=BMW M3 GTR
+VehicleNumber=10006
+Team=Team Pelila
+Laps=8
+Lap=(1,135.683,1:40.256)
+Lap=(2,235.939,1:40.446)
+Lap=(4,510.949,1:40.362)
+Lap=(5,611.312,1:40.510)
+Lap=(7,996.8,1:41.195)
+LapDistanceTravelled=4012.858643
+BestLap=1:40.256
+RaceTime=DNF
+Reason=
+
+[Slot014]
+Driver=Rioku
+Lobby Username=Rioku
+Vehicle=BMW M3 GTR
+VehicleNumber=11077
+Team=BMW Racing Team
+Laps=5
+Lap=(1,1070.021,1:44.106)
+Lap=(2,1174.127,1:43.214)
+Lap=(4,1540.822,1:44.053)
+LapDistanceTravelled=4047.108643
+BestLap=1:43.214
+RaceTime=DNF
+Reason=
+
+[Slot015]
+Driver=kikeruiz
+Lobby Username=kikeruiz
+Vehicle=BMW M3 GTR
+VehicleNumber=11799
+Team=RASTA TEAM
+Laps=4
+Lap=(1,1671.293,1:39.199)
+Lap=(3,1896.752,1:39.836)
+LapDistanceTravelled=4019.510742
+BestLap=1:39.199
+RaceTime=DNF
+Reason=
+
+[Slot016]
+Driver=duan
+Lobby Username=duan1
+Vehicle=BMW M3 GTR
+VehicleNumber=11055
+Team=DuanSanch Team
+Laps=9
+Lap=(1,185.434,1:56.745)
+Lap=(2,302.179,1:45.923)
+Lap=(4,574.365,1:43.273)
+Lap=(6,1025.927,1:46.913)
+Lap=(8,1441.91,1:43.118)
+LapDistanceTravelled=4019.510742
+BestLap=1:43.118
+RaceTime=DNF
+Reason=
+
+[Slot017]
+Driver=Sisco
+Lobby Username=Sisco-72
+Vehicle=BMW M3 GTR
+VehicleNumber=11072
+Team=JS Racing Team
+Laps=9
+Lap=(1,937.829,1:41.102)
+Lap=(3,1411.318,1:40.474)
+Lap=(4,1722.764,1:41.394)
+Lap=(5,1824.157,1:40.619)
+Lap=(7,2097.61,1:40.498)
+Lap=(8,2198.108,1:39.685)
+LapDistanceTravelled=4040.340088
+BestLap=1:39.685
+RaceTime=DNF
+Reason=
+
+[Slot018]
+Driver=Vitu
+Lobby Username=V-Itu
+Vehicle=BMW M3 GTR
+VehicleNumber=11036
+Team=Vanzays Ap7a GTR
+Laps=9
+Lap=(1,2028.991,1:38.689)
+Lap=(3,2557.48,1:39.381)
+Lap=(5,2930.818,1:38.753)
+Lap=(6,3057.475,1:38.676)
+Lap=(8,3289.875,1:38.613)
+LapDistanceTravelled=4012.858643
+BestLap=1:38.613
+RaceTime=DNF
+Reason=
+
+[Slot019]
+Driver=mekinen
+Lobby Username=MEKINEN
+Vehicle=BMW M3 GTR
+VehicleNumber=11111
+Team=BMW Racing Team
+Laps=10
+Lap=(1,2346.927,1:40.046)
+Lap=(2,2446.973,1:40.051)
+Lap=(4,2686.745,1:39.375)
+Lap=(5,2786.119,1:39.760)
+Lap=(7,3032.14,1:40.126)
+Lap=(9,3408.135,1:40.201)
+LapDistanceTravelled=4075.12085
+BestLap=1:39.375
+RaceTime=DNF
+Reason=
+
+[Slot020]
+Driver=TK-Han
+Lobby Username=TK_Han
+Vehicle=BMW M3 GTR
+VehicleNumber=11035
+Team=CANNOMBALLS TEAM
+Laps=9
+Lap=(1,180.671,1:46.557)
+Lap=(2,287.228,1:48.054)
+Lap=(3,395.283,2:02.338)
+Lap=(5,835.547,1:45.009)
+Lap=(6,940.556,1:48.950)
+Lap=(7,1049.506,1:57.612)
+Lap=(8,1167.118,1:46.325)
+LapDistanceTravelled=4019.510986
+BestLap=1:45.009
+RaceTime=DNF
+Reason=
+
+[Slot021]
+Driver=Leon
+Lobby Username=LeonGTR
+Vehicle=BMW M3 GTR
+VehicleNumber=11003
+Team=Vanzays Ap7a GTR
+Laps=9
+Lap=(1,956.444,1:41.539)
+Lap=(2,1057.983,1:40.900)
+Lap=(4,1403.611,1:41.277)
+Lap=(5,1504.888,1:40.586)
+Lap=(7,1889.973,1:40.937)
+Lap=(8,1990.91,1:40.266)
+LapDistanceTravelled=4047.108643
+BestLap=1:40.266
+RaceTime=DNF
+Reason=
+
+[END]

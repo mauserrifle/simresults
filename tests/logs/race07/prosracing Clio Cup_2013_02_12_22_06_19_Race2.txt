@@ -1,0 +1,460 @@
+//[[gMa1.000f (c)2004    ]] [[            ]]
+//RANDOM.COMMENT.TO.TEST.FOR.NO.FAILURE
+[Header]
+Game=RACE 07
+Version=1.2.1.10
+TimeString=2013/02/12 22:06:19
+Aids=0,0,0,0,0,1,0,0,0
+
+[Race]
+RaceMode=5
+Scene=GameData\Locations\Monza_2007\2007_Monza.TRK
+AIDB=GameData\Locations\Monza_2007\2007_Monza.AIW
+Race Length=0.100
+Track Length=5782.6406
+
+[Slot019]
+Driver=Seb63
+SteamUser=Unknown
+SteamId=Unknown
+Vehicle=Renault Sport Clio CUP France 2008
+Team=Team Speed Car
+QualTime=2:14.387
+Laps=0
+LapDistanceTravelled=5693.156738
+RaceTime=DNF
+Reason=0
+
+[Slot005]
+Driver=[PRG]flashdepau
+SteamUser=Unknown
+SteamId=Unknown
+Vehicle=Renault Sport Clio CUP France 2008
+Team=flash racing
+QualTime=2:08.149
+Laps=3
+Lap=(0, -1.000, 2:27.888)
+Lap=(2, 276.292, 2:22.652)
+LapDistanceTravelled=2461.032715
+BestLap=2:22.652
+RaceTime=DNF
+Reason=1
+
+[Slot000]
+Driver=lemans
+SteamUser=dicetheone
+SteamId=35780368
+Vehicle=Renault Sport Clio CUP France 2008
+Team=New Deal Racing
+QualTime=2:07.772
+Laps=12
+Lap=(1, 128.404, 2:17.831)
+Lap=(2, 270.670, 2:07.945)
+Lap=(3, 408.501, 2:09.949)
+Lap=(4, 536.446, 2:08.445)
+Lap=(5, 666.395, 2:09.773)
+Lap=(6, 794.840, 2:08.119)
+Lap=(7, 924.613, 2:09.082)
+Lap=(8, 1052.733, 2:08.313)
+Lap=(9, 1181.814, 2:08.522)
+Lap=(10, 1310.127, 2:08.347)
+Lap=(11, 1438.650, 2:09.051)
+LapDistanceTravelled=5714.981445
+BestLap=2:07.945
+RaceTime=0:26:07.644
+
+[Slot001]
+Driver=ormec83
+SteamUser=ormec83
+SteamId=35780593
+Vehicle=Renault Sport Clio CUP France 2008
+Team=Team Exigence Motorsport
+QualTime=2:08.172
+Laps=12
+Lap=(1, 128.404, 2:11.167)
+Lap=(3, 405.678, 2:08.673)
+Lap=(5, 663.391, 2:14.963)
+Lap=(6, 813.065, 2:08.924)
+Lap=(8, 1076.952, 2:15.578)
+Lap=(9, 1227.905, 2:15.378)
+Lap=(10, 1363.483, 2:09.487)
+Lap=(11, 1498.861, 2:08.192)
+LapDistanceTravelled=5710.558105
+BestLap=2:08.192
+RaceTime=0:27:08.136
+
+[Slot002]
+Driver=[PRG] Sebastien
+SteamUser=faya869
+SteamId=33854655
+Vehicle=Renault Sport Clio CUP France 2008
+Team=seb racing
+QualTime=2:06.094
+Laps=12
+Lap=(0, -1.000, 2:19.380)
+Lap=(1, 128.404, 2:07.064)
+Lap=(2, 267.783, 2:07.459)
+Lap=(3, 394.848, 2:07.303)
+Lap=(4, 522.306, 2:07.555)
+Lap=(5, 649.609, 2:09.310)
+Lap=(7, 906.474, 2:12.852)
+Lap=(8, 1034.160, 2:07.921)
+Lap=(9, 1167.011, 2:06.877)
+Lap=(10, 1294.933, 2:07.272)
+Lap=(11, 1421.809, 2:14.221)
+LapDistanceTravelled=5699.210449
+BestLap=2:06.877
+RaceTime=0:25:54.899
+
+[Slot003]
+Driver=[GTR-O]totomms
+SteamUser=totomms
+SteamId=30711914
+Vehicle=Renault Sport Clio CUP France 2008
+QualTime=2:07.006
+Laps=12
+Lap=(0, -1.000, 2:20.574)
+Lap=(1, 128.404, 2:09.438)
+Lap=(2, 268.978, 2:08.030)
+Lap=(3, 398.416, 2:06.993)
+Lap=(4, 526.446, 2:07.144)
+Lap=(5, 653.439, 2:07.215)
+Lap=(6, 780.582, 2:09.643)
+Lap=(7, 907.798, 2:10.352)
+Lap=(8, 1037.440, 2:09.309)
+Lap=(9, 1167.792, 2:07.978)
+Lap=(11, 1425.079, 2:08.849)
+LapDistanceTravelled=5694.735840
+BestLap=2:06.993
+RaceTime=0:25:53.711
+
+[Slot004]
+Driver=[GTR-O]Billou
+SteamUser=nawakk
+SteamId=14825328
+Vehicle=Renault Sport Clio CUP France 2008
+Team=Team Baziret Sport
+QualTime=2:07.922
+Laps=12
+Lap=(0, -1.000, 2:26.679)
+Lap=(1, 128.404, 2:10.357)
+Lap=(2, 275.083, 2:10.312)
+Lap=(3, 405.440, 2:08.473)
+Lap=(4, 535.752, 2:08.071)
+Lap=(5, 664.226, 2:08.329)
+Lap=(6, 792.296, 2:07.366)
+Lap=(7, 920.625, 2:17.607)
+Lap=(8, 1047.992, 2:08.166)
+Lap=(9, 1185.599, 2:08.267)
+Lap=(11, 1442.031, 2:08.454)
+LapDistanceTravelled=5686.916504
+BestLap=2:07.366
+RaceTime=0:26:10.091
+
+[Slot006]
+Driver=[PRG]Fabiensky
+SteamUser=SKIDROW
+SteamId=93939860
+Vehicle=Renault Sport Clio CUP France 2008
+Team=Team Speed Car
+QualTime=2:07.330
+Laps=12
+Lap=(0, -1.000, 2:23.234)
+Lap=(1, 128.404, 2:09.537)
+Lap=(2, 271.638, 2:08.974)
+Lap=(3, 401.176, 2:08.151)
+Lap=(4, 530.150, 2:07.812)
+Lap=(5, 658.301, 2:11.532)
+Lap=(6, 786.114, 2:09.118)
+Lap=(7, 917.646, 2:14.936)
+Lap=(8, 1046.764, 2:09.794)
+Lap=(9, 1181.700, 2:08.523)
+Lap=(10, 1311.494, 2:08.450)
+Lap=(11, 1440.017, 2:10.598)
+LapDistanceTravelled=5670.883789
+BestLap=2:07.812
+RaceTime=0:26:10.660
+
+[Slot007]
+Driver=stefb
+SteamUser=stefb12
+SteamId=16060854
+Vehicle=Renault Sport Clio CUP France 2008
+Team=Team Exigence Motorsport
+QualTime=2:08.170
+Laps=12
+Lap=(0, -1.000, 2:30.376)
+Lap=(3, 408.295, 2:08.550)
+Lap=(4, 537.661, 2:08.549)
+Lap=(5, 666.211, 2:08.566)
+Lap=(6, 794.760, 2:08.342)
+Lap=(7, 923.326, 2:08.777)
+Lap=(9, 1180.445, 2:17.021)
+Lap=(10, 1333.393, 2:08.980)
+Lap=(11, 1470.414, 2:09.996)
+LapDistanceTravelled=5662.891602
+BestLap=2:08.342
+RaceTime=0:26:40.987
+
+[Slot008]
+Driver=joekart
+SteamUser=joekart
+SteamId=15504140
+Vehicle=Renault Sport Clio CUP France 2008
+Team=Team Speed Car
+QualTime=2:05.425
+Laps=12
+Lap=(0, -1.000, 2:21.040)
+Lap=(1, 128.404, 2:08.940)
+Lap=(2, 269.444, 2:06.952)
+Lap=(3, 398.384, 2:07.381)
+Lap=(4, 525.336, 2:06.915)
+Lap=(5, 652.717, 2:06.730)
+Lap=(6, 779.632, 2:09.511)
+Lap=(8, 1035.873, 2:07.319)
+Lap=(9, 1164.304, 2:07.170)
+Lap=(10, 1291.624, 2:06.771)
+Lap=(11, 1418.794, 2:19.157)
+LapDistanceTravelled=5651.371582
+BestLap=2:06.730
+RaceTime=0:25:56.318
+
+[Slot009]
+Driver=[PRG]felagund
+SteamUser=gerardderis
+SteamId=45251964
+Vehicle=Renault Sport Clio CUP France 2008
+Team=PRG-Sel'Picards
+QualTime=2:12.789
+Laps=12
+Lap=(0, -1.000, 2:30.030)
+Lap=(1, 128.404, 2:14.849)
+Lap=(2, 278.434, 2:14.210)
+Lap=(3, 413.284, 2:11.707)
+Lap=(4, 547.493, 2:12.665)
+Lap=(5, 679.201, 2:11.245)
+Lap=(6, 811.866, 2:11.075)
+Lap=(7, 943.111, 2:13.088)
+Lap=(8, 1074.186, 2:12.776)
+Lap=(9, 1207.274, 2:13.620)
+Lap=(10, 1340.051, 2:12.615)
+Lap=(11, 1473.671, 2:14.513)
+LapDistanceTravelled=5643.306641
+BestLap=2:11.075
+RaceTime=0:26:52.395
+
+[Slot010]
+Driver=[GTR-O]Shiryu
+SteamUser=shiryu_65
+SteamId=26861934
+Vehicle=Renault Sport Clio CUP France 2008
+Team=Team Milan Competition
+QualTime=2:07.888
+Laps=12
+Lap=(0, -1.000, 2:22.161)
+Lap=(2, 270.565, 2:08.025)
+Lap=(3, 399.794, 2:08.455)
+Lap=(4, 527.819, 2:08.959)
+Lap=(6, 785.232, 2:07.284)
+Lap=(8, 1041.487, 2:07.737)
+Lap=(9, 1171.389, 2:31.144)
+Lap=(10, 1299.126, 2:14.527)
+LapDistanceTravelled=5638.763184
+BestLap=2:07.284
+RaceTime=0:26:43.104
+
+[Slot011]
+Driver=[PRG]Yozeze34
+SteamUser=yozeze34
+SteamId=34077627
+Vehicle=Renault Sport Clio CUP France 2008
+Team=zezette racing
+QualTime=2:05.615
+Laps=12
+Lap=(0, -1.000, 2:18.685)
+Lap=(1, 128.404, 2:06.276)
+Lap=(3, 393.365, 2:07.409)
+Lap=(4, 519.556, 2:06.540)
+Lap=(5, 646.965, 2:06.890)
+Lap=(6, 773.505, 2:06.803)
+Lap=(7, 900.395, 2:07.497)
+Lap=(8, 1027.197, 2:08.166)
+Lap=(9, 1154.694, 2:10.123)
+Lap=(10, 1282.861, 2:07.124)
+Lap=(11, 1412.984, 2:11.264)
+LapDistanceTravelled=5627.368652
+BestLap=2:06.276
+RaceTime=0:25:42.968
+
+[Slot012]
+Driver=[PRG]Pilototo
+SteamUser=jl_sniper
+SteamId=38483210
+Vehicle=Renault Sport Clio CUP France 2008
+Team=PRG-Sel'Picards
+QualTime=2:09.102
+Laps=12
+Lap=(0, -1.000, 2:26.782)
+Lap=(1, 128.404, 2:15.411)
+Lap=(2, 275.186, 2:10.227)
+Lap=(3, 410.597, 2:08.929)
+Lap=(4, 540.824, 2:08.968)
+Lap=(5, 669.753, 2:08.594)
+Lap=(6, 798.722, 2:16.034)
+Lap=(7, 927.316, 2:08.852)
+Lap=(8, 1063.350, 2:09.604)
+Lap=(9, 1192.202, 2:09.340)
+Lap=(10, 1321.807, 2:08.902)
+Lap=(11, 1451.147, 2:09.630)
+LapDistanceTravelled=5622.928223
+BestLap=2:08.594
+RaceTime=0:26:21.274
+
+[Slot013]
+Driver=[PRG]sparcal
+SteamUser=sparcal
+SteamId=22490499
+Vehicle=Renault Sport Clio CUP France 2008
+Team=PRG-Sel'Picards
+QualTime=2:08.924
+Laps=12
+Lap=(0, -1.000, 2:25.966)
+Lap=(2, 274.369, 2:10.759)
+Lap=(3, 404.427, 2:11.426)
+Lap=(4, 535.187, 2:09.724)
+Lap=(5, 666.613, 2:13.660)
+Lap=(7, 929.997, 2:10.550)
+Lap=(8, 1063.542, 2:10.421)
+Lap=(9, 1194.093, 2:09.716)
+Lap=(10, 1324.514, 2:10.492)
+Lap=(11, 1454.230, 2:15.481)
+LapDistanceTravelled=5611.427246
+BestLap=2:09.716
+RaceTime=0:26:31.799
+
+[Slot014]
+Driver=[PRG]damien
+SteamUser=dam3462
+SteamId=34337075
+Vehicle=Renault Sport Clio CUP France 2008
+Team=Team Thierry Boutsen Energy Racing
+QualTime=2:06.477
+Laps=12
+Lap=(0, -1.000, 2:19.307)
+Lap=(1, 128.404, 2:07.208)
+Lap=(2, 267.711, 2:07.501)
+Lap=(3, 394.920, 2:07.301)
+Lap=(4, 522.421, 2:07.481)
+Lap=(6, 777.203, 2:10.246)
+Lap=(8, 1036.111, 2:08.537)
+Lap=(9, 1166.896, 2:08.580)
+Lap=(10, 1295.433, 2:08.204)
+Lap=(11, 1424.013, 2:09.537)
+LapDistanceTravelled=5606.990723
+BestLap=2:07.208
+RaceTime=0:25:53.350
+
+[Slot015]
+Driver=spaxxy
+SteamUser=spaxxy
+SteamId=54023339
+Vehicle=Renault Sport Clio CUP France 2008
+Team=Team Asami
+QualTime=2:07.126
+Laps=8
+Lap=(0, -1.000, 2:15.936)
+Lap=(1, 128.404, 2:07.585)
+Lap=(2, 264.340, 2:07.583)
+Lap=(3, 391.925, 2:09.880)
+Lap=(4, 519.508, 2:07.796)
+Lap=(5, 649.388, 2:08.493)
+Lap=(7, 905.677, 3:04.331)
+LapDistanceTravelled=1833.197144
+BestLap=2:07.583
+RaceTime=DNF
+Reason=0
+
+[Slot016]
+Driver=[GTR-O]Stef63
+SteamUser=steph12345
+SteamId=19144197
+Vehicle=Renault Sport Clio CUP France 2008
+Team=Team Exigence Motorsport
+QualTime=2:07.370
+Laps=7
+Lap=(0, -1.000, 2:24.107)
+Lap=(1, 128.404, 2:09.219)
+Lap=(2, 272.511, 2:07.886)
+Lap=(3, 401.730, 2:06.582)
+Lap=(4, 529.616, 2:09.132)
+Lap=(5, 656.198, 2:08.028)
+Lap=(6, 785.331, 2:06.571)
+LapDistanceTravelled=1887.119629
+BestLap=2:06.571
+RaceTime=DNF
+Reason=6
+
+[Slot017]
+Driver=Michel
+SteamUser=mde694
+SteamId=13410557
+Vehicle=Renault Sport Clio CUP France 2008
+Team=proracers
+QualTime=2:08.517
+Laps=12
+Lap=(0, -1.000, 2:24.026)
+Lap=(1, 128.404, 2:09.683)
+Lap=(2, 272.430, 2:09.438)
+Lap=(4, 531.551, 2:08.731)
+Lap=(5, 658.778, 2:09.163)
+Lap=(6, 787.509, 2:08.422)
+Lap=(7, 916.672, 2:08.933)
+Lap=(8, 1045.095, 2:09.176)
+Lap=(10, 1303.205, 2:11.258)
+Lap=(11, 1432.395, 2:32.144)
+LapDistanceTravelled=5583.062500
+BestLap=2:08.422
+RaceTime=0:26:27.394
+
+[Slot018]
+Driver=[PRG]fuzbass
+SteamUser=fuzbass
+SteamId=33650618
+Vehicle=Renault Sport Clio CUP France 2008
+Team=Team Pole Position 81
+QualTime=2:06.814
+Laps=12
+Lap=(0, -1.000, 2:19.971)
+Lap=(1, 128.404, 2:08.225)
+Lap=(2, 268.375, 2:08.468)
+Lap=(3, 396.600, 2:08.646)
+Lap=(4, 525.068, 2:06.554)
+Lap=(5, 653.714, 2:07.621)
+Lap=(7, 907.889, 2:09.501)
+Lap=(8, 1037.267, 2:09.439)
+Lap=(9, 1166.768, 2:07.635)
+Lap=(10, 1296.207, 2:08.284)
+LapDistanceTravelled=5571.457031
+BestLap=2:06.554
+RaceTime=0:25:53.168
+
+[Slot020]
+Driver=[PRG] lajo64
+SteamUser=lajo64
+SteamId=51860321
+Vehicle=Renault Sport Clio CUP France 2008
+Team=Team Thierry Boutsen Energy Racing
+QualTime=2:06.895
+Laps=10
+Lap=(0, -1.000, 2:20.923)
+Lap=(2, 269.326, 2:08.724)
+Lap=(3, 398.562, 2:07.737)
+Lap=(4, 527.286, 2:08.020)
+Lap=(6, 783.043, 2:08.244)
+Lap=(8, 1039.973, 2:36.925)
+LapDistanceTravelled=914.061279
+BestLap=2:07.737
+RaceTime=DNF
+Reason=4
+
+[END]
