@@ -59,8 +59,6 @@ class Race07Test extends PHPUnit_Framework_TestCase {
 
         // Get participant "flashdepau"
         $participants = $session->getParticipants();
-        // print_r($participants[1]);
-        // die();
         $laps = $participants[1]->getLaps();
 
         // Validate using time, to prevent any false positives due to number

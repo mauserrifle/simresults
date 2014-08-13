@@ -55,7 +55,7 @@ class Helper {
     }
 
     /**
-     * Get seconds from time format: h:i:s.u.
+     * Get seconds from time format: (h:)i:s.u.
      *
      * @param   string    $formatted_time
      * @return  string

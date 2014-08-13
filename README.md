@@ -64,6 +64,8 @@ rFactor game.
 
 Assetto Corsa support is very limited due to simple log files.
 
+Results from F1 challengte and GTR might miss laps.
+
 ## Features
 
 * Can read out a full session consisting of the following information: Game,
@@ -191,14 +193,14 @@ calling sorting methods will be pointless. There are no cache invalidate
 methods (yet). Most likely they will never be needed as there's no use case you
 actually would want to change values after reading out all data.
 
-### Always "Race" session
-
-GTR, GTL, F1 challenge always show session RACE. Theres no session type in
-these log files
-
 ### Laps missing
 
 Logs tend to miss lap data on all games. Check the logs.
+
+### Marked as RACE session while it's not
+
+The Race 07 reader detects qualify if all drivers are DNF. There's no session
+type in these log files. This detection might be false in some cases.
 
 ### Date is not right of session
 

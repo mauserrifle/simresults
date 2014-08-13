@@ -183,7 +183,6 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
             }
 
             // Fix elapsed seconds for all participant laps
-            // TODO: Make central function to prevent duplicate code
             foreach ($session->getParticipants() as $participant)
             {
                $elapsed_time = 0;
@@ -196,7 +195,6 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
             }
 
             // Fix driver positions for laps
-            // TODO: Make central function to prevent duplicate code
             $session_lasted_laps = $session->getLastedLaps();
 
             // Loop each lap number, beginning from 2, because we can't

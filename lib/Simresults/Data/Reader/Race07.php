@@ -48,7 +48,7 @@ class Data_Reader_Race07 extends Data_Reader {
         // Get date from human string.
         // WARNING: Default timezone used. Please note that this is not correct.
         // The date is the date of the server, but we will never know the
-        // thezome because the data does not provide a timestamp or timezone
+        // timezone because the data does not provide a timestamp or timezone
         // information
         $date = \DateTime::createFromFormat(
             'Y/m/d H:i:s',
@@ -96,29 +96,7 @@ class Data_Reader_Race07 extends Data_Reader {
             $laps_sorted = $session->getLapsByLapNumberSortedByTime($i);
 
             // Sort laps by elapsed time
-            usort($laps_sorted, function($a,$b) {
-                // Same time
-                 if ($a->getElapsedSeconds() === $b->getElapsedSeconds()) {
-                    return 0;
-                }
-
-                // A has no elapsed time
-                if ( ! $a->getElapsedSeconds())
-                {
-                    // b is faster
-                    return 1;
-                }
-
-                // B has no elapsed time
-                if ( ! $b->getElapsedSeconds())
-                {
-                    // a is faster
-                    return -1;
-                }
-
-                // Return normal comparison
-                return ($a->getElapsedSeconds() < $b->getElapsedSeconds()) ? -1 : 1;
-            });
+            $laps_sorted = Helper::sortLapsByElapsedTime($laps_sorted);
 
             // Loop each lap and fix position data
             foreach ($laps_sorted as $lap_key => $lap)
@@ -384,14 +362,12 @@ class Data_Reader_Race07 extends Data_Reader {
     }
 
     /**
-     * @see Simresults\Data_Reader::canRead()
+     * @see Simresults\Data_Reader::init()
      */
     protected function init()
     {
         $this->array_data = $this->parse_data($this->data);
     }
-
-
 
     /**
      * Parses and converts the data to an array. Keys will be converted to
@@ -402,7 +378,6 @@ class Data_Reader_Race07 extends Data_Reader {
      */
     protected static function parse_data($data)
     {
-
         // Prepare array data
         $array_data = array();
 
@@ -433,7 +408,6 @@ class Data_Reader_Race07 extends Data_Reader {
             // Get key value for array
             $key = strtolower($split[0]);
 
-
             // Is lap value
             if ($key === 'lap')
             {
@@ -461,7 +435,7 @@ class Data_Reader_Race07 extends Data_Reader {
                 }
 
                 // Elapsed time negative, make sure it's positive
-                if ( 0 > $elapsed_time = (float) $lap_matches[2])
+                if ( 0 > ($elapsed_time = (float) $lap_matches[2]))
                 {
                     $elapsed_time = 0;
                 }
