@@ -285,8 +285,6 @@ class Race07Test extends PHPUnit_Framework_TestCase {
 
     /**
      * Test reading laps of participants
-     *
-     * TODO: Fix positions
      */
     public function testReadingLapsOfParticipants()
     {
@@ -308,8 +306,7 @@ class Race07Test extends PHPUnit_Framework_TestCase {
 
         // Validate laps
         $this->assertSame(1, $lap->getNumber());
-        // TODO: FIX?
-        $this->assertSame(null, $lap->getPosition());
+        $this->assertSame(2, $lap->getPosition());
         $this->assertSame(138.685, $lap->getTime());
         $this->assertSame(0, $lap->getElapsedSeconds());
         $this->assertSame($participants[0], $lap->getParticipant());
@@ -333,7 +330,7 @@ class Race07Test extends PHPUnit_Framework_TestCase {
 
         // // Validate extra positions
         $laps = $participants[3]->getLaps(); // totomms laps
-        $this->assertNull($laps[0]->getPosition());
+        $this->assertSame(7, $laps[0]->getPosition());
         $this->assertSame(5, $laps[2]->getPosition());
         $this->assertSame(7, $laps[4]->getPosition());
     }

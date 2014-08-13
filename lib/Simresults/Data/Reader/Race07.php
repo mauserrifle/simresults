@@ -85,11 +85,8 @@ class Data_Reader_Race07 extends Data_Reader {
         // Fix driver positions for laps
         $session_lasted_laps = $session->getLastedLaps();
 
-        // Loop each lap number, beginning from 2, because we can't
-        // figure out positions for lap 1 in
-        // TODO: What about qualy time???
-        // TODO: Make central function to prevent duplicate code. AC uses this
-        // too!!
+        // Loop each lap number, beginning from 2 because lap 1 has grid
+        // position
         for($i=2; $i <= $session_lasted_laps; $i++)
         {
             // Get laps sorted by elapsed time
@@ -289,6 +286,14 @@ class Data_Reader_Race07 extends Data_Reader {
 
                     // Set lap number
                     $lap->setNumber($lap_i);
+
+                    // Is first lap
+                    if ($lap->getNumber() === 1)
+                    {
+                        // Set grid position as lap position
+                        $lap->setPosition($this->get(
+                            $driver_data, 'grid_position'));
+                    }
 
                     // Lap data exists
                     if (isset($laps_collection[$lap_i]))
