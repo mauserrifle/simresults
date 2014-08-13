@@ -64,7 +64,7 @@ rFactor game.
 
 Assetto Corsa support is very limited due to simple log files.
 
-Results from F1 challengte and GTR might miss laps.
+Results from F1 challenge and GTR might miss laps.
 
 ## Features
 
