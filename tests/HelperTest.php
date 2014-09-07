@@ -59,6 +59,10 @@ class HelperTest extends PHPUnit_Framework_TestCase {
             100.5279, helper::secondsfromformattedtime('01:40.5279'));
         $this->assertsame(
             5516.5879, helper::secondsfromformattedtime('01:31:56.5879'));
+        $this->assertsame(
+            123.506, helper::secondsfromformattedtime('02:03:506', true));
+        $this->assertsame(
+            3723.506, helper::secondsfromformattedtime('01:02:03:506', true));
     }
 
     /**
