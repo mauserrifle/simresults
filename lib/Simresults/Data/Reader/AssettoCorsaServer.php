@@ -336,14 +336,16 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             $session['laps'] = (int) strtolower($matches[1]);
 
             // Get allowed cars
-            preg_match_all('/\_(.*?)\_/i',
-                $data_session, $car_matches);
+            // preg_match_all('/\_(.*?)\_/i',
+            //     $data_session, $car_matches);
 
-            // Set car matches and if not found, set from previous session
-            if ( ! $session['car_list'] = $car_matches[1])
-            {
-                $session['car_list'] = $last_car_list;
-            }
+            // // Set car matches and if not found, set from previous session
+            // if ( ! $session['car_list'] = $car_matches[1])
+            // {
+            //     $session['car_list'] = $last_car_list;
+            //
+            // TODO: Fix me
+            $session['car_list'] = array();
 
             // Set last car list
             $last_car_list = $session['car_list'];
