@@ -1148,6 +1148,9 @@ class Session {
         $participants = array();
         foreach ($this->getParticipants() as $part)
         {
+            // No vehicle
+            if ( ! $part->getVehicle()) continue;
+
             $participants[$part->getVehicle()->getClass()][] = $part;
         }
 
