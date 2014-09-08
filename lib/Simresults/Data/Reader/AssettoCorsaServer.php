@@ -130,9 +130,12 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 }
 
                 // Create vehicle and add to participant
-                $vehicle = new Vehicle;
-                $vehicle->setName($part_data['vehicle']);
-                $participant->setVehicle($vehicle);
+                if (isset($part_data['vehicle']))
+                {
+                    $vehicle = new Vehicle;
+                    $vehicle->setName($part_data['vehicle']);
+                    $participant->setVehicle($vehicle);
+                }
 
                 // Collect laps
                 foreach ($part_data['laps'] as $lap_i => $lap_data)
@@ -352,7 +355,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 .'(?:\[\]).*?OK/si', $data_session, $part_matches);
 
             // No participants, ignore this session
-            if ( ! $part_matches OR ! $part_matches[0]) continue;
+            // if ( ! $part_matches OR ! $part_matches[0]) continue;
 
             // Loop each match and collect participants
             $participants = array();
@@ -363,6 +366,25 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                     'vehicle' => trim($part_matches[1][$part_key]),
                     'laps'    => array(),
                 );
+            }
+
+            // No participants found, try different method
+            if ( ! $participants)
+            {
+                preg_match_all(
+                    '/Adding car: (.*?) name=(.*?) model=(.*?) skin=(.*?)/si',
+                    $data_session, $part_matches);
+
+                    // Loop each match and collect participants
+                    foreach ($part_matches[0] as $part_key => $part_data)
+                    {
+                        $participants[$part_matches[2][$part_key]] = array(
+                            'name'    => trim($part_matches[2][$part_key]),
+                            'vehicle' => trim($part_matches[3][$part_key]),
+                            'laps'    => array(),
+                        );
+                    }
+
             }
 
             // Store participants to all participants array
@@ -393,6 +415,11 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 // Loop each lap and add lap to belonging participant
                 foreach ($lap_matches[0] as $lap_key => $lap_data)
                 {
+                    // Add name just to be sure
+                    $participants_copy[$lap_matches[1][$lap_key]]['name'] =
+                        $lap_matches[1][$lap_key];
+
+                    // Add lap
                     $participants_copy[$lap_matches[1][$lap_key]]['laps'][] = array(
                         'time' => Helper::secondsFromFormattedTime(
                                       $lap_matches[2][$lap_key], true),
@@ -436,8 +463,9 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             foreach ($session_data['participants'] as $part_name => &$part_data)
             {
                 // No name or vehicle
-                if ( ! isset($part_data['name']) OR
-                     ! isset($part_data['vehicle']))
+                if ( (! isset($part_data['name']) OR
+                     ! isset($part_data['vehicle'])) AND
+                    isset($all_participants_by_connect[$part_name]))
                 {
                     // Get participant from all connect info
                     $part_connect = $all_participants_by_connect[$part_name];

@@ -8,7 +8,7 @@ use Simresults\Participant;
  * Tests for the Assetto Corsa Server reader
  *
  * TODO:
- * - Chats
+ * - Date and time?
  *
  * @author     Maurice van der Star <mauserrifle@gmail.com>
  * @copyright  (c) 2013 Maurice van der Star
@@ -35,6 +35,22 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
     public function testCreatingNewAssettoCorsaServerReaderWithInvalidData()
     {
         $reader = new Data_Reader_AssettoCorsaServer('Unknown data for reader');
+    }
+
+    /**
+     * Test reading that failed due to different connect format of drivers.
+     *
+     * TODO: Make better test, test vehicle of participants
+     *
+     * @return [type] [description]
+     */
+    public function testReadingSessionWithoutException()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.'/logs/assettocorsa-server/race1.log');
+
+        // Get the data reader for the given data source
+        Data_Reader::factory($file_path)->getSessions();
     }
 
 
