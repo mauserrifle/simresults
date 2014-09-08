@@ -361,45 +361,57 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             $all_participants_by_connect = array_merge(
                 $all_participants_by_connect, $participants);
 
-            // TODO: No connect info? No participant but we have lap data!
-            // Check on lap data for previous found participants and use
-            // that name and vehicle info
 
-            // No laps found
-            if ( ! preg_match_all('/LAP (.*?) ([0-9:]+)/i',
-                       $data_session, $lap_matches))
+            // Split session on any possible restarting
+            $data_sessions2 = explode('RESTARTING SESSION', $data_session);
+
+            // Process session or multiple sessions from restart
+            foreach ($data_sessions2 as $data_session2)
             {
-                continue;
+                // Make copy of initial session data
+                $session2 = $session;
+
+                // Make copy of initial participants that were collected so we
+                // can  re-use this data for any other restart
+                $participants_copy = $participants;
+
+                // No laps found
+                if ( ! preg_match_all('/LAP (.*?) ([0-9:]+)/i',
+                           $data_session2, $lap_matches))
+                {
+                    continue;
+                }
+
+                // Loop each lap and add lap to belonging participant
+                foreach ($lap_matches[0] as $lap_key => $lap_data)
+                {
+                    $participants_copy[$lap_matches[1][$lap_key]]['laps'][] = array(
+                        'time' => Helper::secondsFromFormattedTime(
+                                      $lap_matches[2][$lap_key], true),
+                    );
+                    $no_laps = false;
+                }
+
+                // Get total times
+                // MATCH: 0) Rodrigo  Sanchez Paz BEST: 16666:39:999 TOTAL:
+                //        0:00:000 Laps:0 SesID:4"
+                preg_match_all('/[0-9]+\).*? (.*?) BEST:.*?TOTAL: ([1-9]+.*?) Laps.*?/i',
+                    $data_session2, $time_matches);
+                foreach ($time_matches[0] as $time_key => $time_data)
+                {
+                    $participants_copy[$time_matches[1][$time_key]]['total_time'] =
+                        Helper::secondsFromFormattedTime(
+                              $time_matches[2][$time_key], true);
+                }
+
+                // // Set participants_copy to session, preserving name key values
+                // for later usage to fix missing data
+                $session2['participants'] = $participants_copy;
+
+                // Add session
+                $return_array[] = $session2;
             }
 
-            // Loop each lap and add lap to belonging participant
-            foreach ($lap_matches[0] as $lap_key => $lap_data)
-            {
-                $participants[$lap_matches[1][$lap_key]]['laps'][] = array(
-                    'time' => Helper::secondsFromFormattedTime(
-                                  $lap_matches[2][$lap_key], true),
-                );
-                $no_laps = false;
-            }
-
-            // Get total times
-            // MATCH: 0) Rodrigo  Sanchez Paz BEST: 16666:39:999 TOTAL:
-            //        0:00:000 Laps:0 SesID:4"
-            preg_match_all('/[0-9]+\).*? (.*?) BEST:.*?TOTAL: ([1-9]+.*?) Laps.*?/i',
-                $data_session, $time_matches);
-            foreach ($time_matches[0] as $time_key => $time_data)
-            {
-                // var_dump($time_matches[1][$time_key]);
-                $participants[$time_matches[1][$time_key]]['total_time'] =
-                    Helper::secondsFromFormattedTime(
-                          $time_matches[2][$time_key], true);
-            }
-
-            // // Set participants to session, preserving name key values
-            // for later usage to fix missing data
-            $session['participants'] = $participants;
-
-            $return_array[] = $session;
         }
 
 

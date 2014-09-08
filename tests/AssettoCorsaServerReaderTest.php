@@ -9,8 +9,6 @@ use Simresults\Participant;
  *
  * TODO:
  * - Chats
- * - Looped sessions??
- * -
  *
  * @author     Maurice van der Star <mauserrifle@gmail.com>
  * @copyright  (c) 2013 Maurice van der Star
@@ -59,7 +57,7 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
 
         // Validate the number of sessions. All sessions without data are
         // filtered out
-        $this->assertSame(5, sizeof($sessions));
+        $this->assertSame(10, sizeof($sessions));
 
         // Get first session
         $session = $sessions[0];
@@ -91,6 +89,12 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertSame('Carrera', $session->getName());
         $this->assertSame(6, $session->getMaxLaps());
         $this->assertSame(0, $session->getMaxMinutes());
+        $this->assertSame(6, $session->getLastedLaps());
+
+        // Get tith session
+        $session = $sessions[4];
+
+        //-- Validate
         $this->assertSame(6, $session->getLastedLaps());
     }
 
