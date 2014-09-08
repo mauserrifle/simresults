@@ -96,6 +96,14 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 $session->addAllowedVehicle($vehicle);
             }
 
+            // Set chats
+            foreach ($session_data['chats'] as $chat_message)
+            {
+                $chat = new Chat;
+                $chat->setMessage($chat_message);
+                $session->addChat($chat);
+            }
+
             // Set participants
             $participants = array();
             foreach ($session_data['participants'] as $part_data)
@@ -407,6 +415,10 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 // // Set participants_copy to session, preserving name key values
                 // for later usage to fix missing data
                 $session2['participants'] = $participants_copy;
+
+                // Get chats
+                preg_match_all('/CHAT (.*)?/i', $data_session2, $chat_matches);
+                $session2['chats'] = $chat_matches[1];
 
                 // Add session
                 $return_array[] = $session2;

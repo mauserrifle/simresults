@@ -220,6 +220,34 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
 
 
     /**
+     * Test reading the chat messages
+     */
+    public function testReadingSessionChat()
+    {
+
+        // Get third session
+        $session = $this->getWorkingReader()->getSession(3);
+
+        // Get chats
+        $chats = $session->getChats();
+
+        // Validate
+        $this->assertSame(
+            '[Leanlp Tava]: aca trantado de aprender la pista...jaja!',
+            $chats[0]->getMessage());
+        $this->assertSame(
+            '[Leonardo Ratafia]: bien',
+            $chats[1]->getMessage());
+        $this->assertSame(
+            '[Edu-Uruguay]: buenas noches',
+            $chats[2]->getMessage());
+        $this->assertSame(
+            '[Leonardo Ratafia]: ahora',
+            $chats[3]->getMessage());
+    }
+
+
+    /**
      * Get a working reader
      */
     protected function getWorkingReader()
