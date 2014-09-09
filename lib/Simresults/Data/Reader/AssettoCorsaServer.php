@@ -76,17 +76,18 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             $session->setGame($game);
 
             // Set track
-            // TODO: Dynamic
             $track = new Track;
-            $track->setVenue('doningtonpark');
+            $track->setVenue($session_data['track']);
             $session->setTrack($track);
 
             // Set server
-            // TODO: Dynamic
-            $server = new Server;
-            $server->setName('AssettoCorsa.ForoArgentina.Net #2 Test')
-                   ->setDedicated(true);
-            $session->setServer($server);
+            if (isset($session_data['server']))
+            {
+                $server = new Server;
+                $server->setName($session_data['server'])
+                       ->setDedicated(true);
+                $session->setServer($server);
+            }
 
             // Add allowed vehicles
             foreach ($session_data['car_list'] as $vehicle_name)
@@ -313,27 +314,59 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
         // Remember last car list of server
         $last_car_list = array();
 
+        // Rmember previous session
+        $prev_session_meta = array();
+
         // Loop each session data
         foreach ($data_sessions as $data_session)
         {
             // Init session data
-            $session = array();
+            $session = $prev_session_meta;
 
             // Get session type
             preg_match('/TYPE=(.*)/i', $data_session, $matches);
-            $session['type'] = strtolower($matches[1]);
+            if (isset($matches[1]))
+            {
+                $session['type'] = strtolower($matches[1]);
+            }
 
             // Get session name
             preg_match('/Session: (.*)/i', $data_session, $matches);
-            $session['name'] = $matches[1];
+            if (isset($matches[1]))
+            {
+                $session['name'] = $matches[1];
+            }
+
+            // Get track (from server register info)
+            preg_match('/TRACK=(.*)&/i', $data_session, $matches);
+            if (isset($matches[1]))
+            {
+                $session['track'] = $matches[1];
+            }
 
             // Get max time
             preg_match('/TIME=(.*)/i', $data_session, $matches);
-            $session['time'] = (int) strtolower($matches[1]);
+            if (isset($matches[1]))
+            {
+                $session['time'] = (int) $matches[1];
+            }
 
             // Get max laps
             preg_match('/LAPS=(.*)/i', $data_session, $matches);
-            $session['laps'] = (int) strtolower($matches[1]);
+            if (isset($matches[1]))
+            {
+                $session['laps'] = (int) $matches[1];
+            }
+
+            // Get server name (from server register info)
+            preg_match('/register\?name=(.*?)&/i', $data_session, $matches);
+            if (isset($matches[1]))
+            {
+                $session['server'] = urldecode($matches[1]);
+            }
+
+            // Remember this basic info
+            $prev_session_meta = $session;
 
             // Get allowed cars
             // preg_match_all('/\_(.*?)\_/i',
