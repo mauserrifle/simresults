@@ -21,7 +21,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
      */
     public static function canRead($data)
     {
-        return (bool) self::parse_data($data);
+        return (strpos($data, 'Server CFG Path') !== false);
     }
 
     /**
