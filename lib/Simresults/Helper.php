@@ -72,7 +72,6 @@ class Helper {
         $formatted_time,
         $colon_micro_separator=false)
     {
-
         // Always micro seconds using a colon separator
         if ($colon_micro_separator)
         {

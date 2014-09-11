@@ -297,6 +297,9 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
         // No server log
         if (strpos($data, 'Server CFG Path') === false) return false;
 
+        // Make utf8
+        $data = utf8_encode($data);
+
         // Split data by sessions
         $data_sessions = explode('NextSession', $data);
 
@@ -441,7 +444,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 $participants_copy = $participants;
 
                 // No laps found
-                if ( ! preg_match_all('/LAP (.*?) ([0-9:]+)/i',
+                if ( ! preg_match_all('/LAP (.*?) ([0-9:]+[0-9]+)/i', // LAP Zimtpatrone :] 8:51:564
                            $data_session2, $lap_matches))
                 {
                     continue;

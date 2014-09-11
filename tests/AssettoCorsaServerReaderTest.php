@@ -41,16 +41,53 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
      * Test reading that failed due to different connect format of drivers.
      *
      * TODO: Make better test, test vehicle of participants
-     *
-     * @return [type] [description]
      */
-    public function testReadingSessionWithoutException()
+    public function testReadingAlternativeParticipantFormat()
     {
         // The path to the data source
         $file_path = realpath(__DIR__.'/logs/assettocorsa-server/race1.log');
 
         // Get the data reader for the given data source
         Data_Reader::factory($file_path)->getSessions();
+    }
+
+    /**
+     * Test reading laps data with different format regarding the ":]" chars:
+     *
+     *     1) Zimtpatrone :] BEST: 7:00:688 TOTAL: 21:20:237 Laps:2 SesID:3
+     */
+    public function testReadingAlternativeLapFormat()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.'/logs/assettocorsa-server/output4.txt');
+
+        // Get the data reader for the given data source
+        $session = Data_Reader::factory($file_path)->getSession();
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Validate first lap (2:49:921)
+        $this->assertSame(563.884, $participants[0]->getLap(1)->getTime());
+    }
+
+    /**
+     * Test reading participants with special chars
+     */
+    public function testReadingParticipantsWithSpecialChars()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.'/logs/assettocorsa-server/output4.txt');
+
+        // Get the data reader for the given data source
+        $session = Data_Reader::factory($file_path)->getSession();
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Validate name
+        $this->assertSame('GummiGeschoß',
+            $participants[0]->getDriver()->getName());
     }
 
 
