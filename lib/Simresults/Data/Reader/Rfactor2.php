@@ -988,9 +988,25 @@ class Data_Reader_Rfactor2 extends Data_Reader {
         // No incidents by default
         $incidents = array();
 
+        // Get incidents from XML
+        $incidents_dom = $this->dom->getElementsByTagName('Incident');
+
+        // Way to many incidents!
+        if ($incidents_dom->length > 2000)
+        {
+             // Create new dummy incident
+            $incident = new Incident;
+
+            $session->setIncidents(array(
+                $incident->setMessage('Sorry, way too many incidents to show!')
+                         ->setDate(clone $session->getDate()),
+            ));
+            return;
+        }
+
         // Loop each incident (if any)
         /* @var $incident_xml \DOMNode */
-        foreach ($this->dom->getElementsByTagName('Incident') as $incident_xml)
+        foreach ($incidents_dom as $incident_xml)
         {
             // Create new incident
             $incident = new Incident;

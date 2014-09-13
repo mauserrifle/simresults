@@ -57,6 +57,50 @@ class RfactorReaderTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
+     * Test reading too many incidents
+     */
+    public function testReadingTooManyIncidenrs()
+    {
+        // Get data as raw text
+        $data = file_get_contents(realpath(__DIR__.'/logs/rfactor1/race.xml'));
+
+        // Make sure there are exactly 2000 incidents
+        $extra_incidents = '';
+        for ($i=1; $i<=2001-63; $i++) // 2001 because we replace last incident
+        {                             // lateron
+            $extra_incidents .= "<Incident et=\"1769.1\">...</Incident>\n";
+        }
+
+        // Replace incidents
+        $data_replaced = str_replace(
+            '<Incident et="1768.1">Lead(7) reported contact (0.13) with Track</Incident>',
+            $extra_incidents,
+            $data);
+
+        // Get session
+        $session =  $reader = Data_Reader::factory($data_replaced)->getSession();
+
+        // Validate number of incidents
+        $this->assertSame(2000, count($session->getIncidents()));
+
+
+        // Add 1 more incident
+        $extra_incidents .= "<Incident et=\"1769.1\">...</Incident>\n";
+        $data_replaced = str_replace(
+            '<Incident et="1768.1">Lead(7) reported contact (0.13) with Track</Incident>',
+            $extra_incidents,
+            $data);
+
+        // Get session
+        $session =  $reader = Data_Reader::factory($data_replaced)->getSession();
+
+        // Validate number of incidents and incident itself
+        $this->assertSame(1, count($incidents = $session->getIncidents()));
+        $this->assertSame('Sorry, way too many incidents to show!',
+            $incidents[0]->getMessage());
+    }
+
+    /**
      * Test reading the game of a session
      */
     public function testReadingSessionGame()
