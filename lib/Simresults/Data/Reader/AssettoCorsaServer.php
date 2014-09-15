@@ -109,15 +109,27 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             $participants = array();
             foreach ($session_data['participants'] as $part_data)
             {
+                // No name
+                if ( ! $this->get($part_data, 'name'))
+                {
+                    continue;
+                }
+
                 // Create driver
                 $driver = new Driver;
                 $driver->setName($part_data['name']);
 
+                // Total time not greater than 0
+                if (0 >= $total_time=$this->get($part_data, 'total_time'))
+                {
+                    // Total time is null
+                    $total_time = null;
+                }
+
                 // Create participant and add driver
                 $participant = new Participant;
                 $participant->setDrivers(array($driver))
-                            ->setTotalTime($total_time=
-                                $this->get($part_data, 'total_time'));
+                            ->setTotalTime($total_time);
 
                 // Has total time parsed data
                 if ($total_time)
@@ -139,7 +151,8 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 }
 
                 // Collect laps
-                foreach ($part_data['laps'] as $lap_i => $lap_data)
+                foreach ($this->get($part_data, 'laps', array()) as
+                    $lap_i => $lap_data)
                 {
                     // Init new lap
                     $lap = new Lap;
@@ -469,16 +482,42 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                     $no_laps = false;
                 }
 
+                // Explode data on race end detection
+                $race_end = explode('RACE OVER', $data_session2);
+
+                // 3 or more parts. Last is probably from  "RACE OVER PACKET,
+                // FINAL RANK". We should ignore that as it included alot of
+                // 0:00:000 times..
+                if (count($race_end) >= 3)
+                {
+                    // Get second part after RACE OVER
+                    $race_end = $race_end[1];
+                }
+                else
+                {
+                    // Use last part by default
+                    $race_end = array_pop($race_end);
+                }
+
+
                 // Get total times
                 // MATCH: 0) Rodrigo  Sanchez Paz BEST: 16666:39:999 TOTAL:
                 //        0:00:000 Laps:0 SesID:4"
-                preg_match_all('/[0-9]+\).*? (.*?) BEST:.*?TOTAL: ([1-9]+.*?) Laps.*?/i',
-                    $data_session2, $time_matches);
+                preg_match_all('/[0-9]+\).*? (.*?) BEST:.*?TOTAL: ([0-9]+.*?) Laps.*?/i',
+                    $race_end, $time_matches);
                 foreach ($time_matches[0] as $time_key => $time_data)
                 {
-                    $participants_copy[$time_matches[1][$time_key]]['total_time'] =
-                        Helper::secondsFromFormattedTime(
-                              $time_matches[2][$time_key], true);
+                    // Add name and laps just to be sure
+                    $participants_copy[$time_matches[1][$time_key]]['name'] =
+                        $time_matches[1][$time_key];
+
+                    // Not 0
+                    if ($time_matches[2][$time_key] !== '0:00:000')
+                    {
+                        $participants_copy[$time_matches[1][$time_key]]['total_time'] =
+                            Helper::secondsFromFormattedTime(
+                                  $time_matches[2][$time_key], true);
+                    }
                 }
 
                 // // Set participants_copy to session, preserving name key values

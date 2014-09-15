@@ -108,6 +108,29 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertSame(30, count($participants[0]->getLaps()));
     }
 
+    /**
+     * Test DNF for no total time in log
+     */
+    public function testDnfForNoTotalTimeInLog()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.'/logs/assettocorsa-server/discarded.laps.txt');
+
+        // Get the last race session
+        $session = Data_Reader::factory($file_path)->getSession(3);
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Get last participant
+        $participant = $participants[sizeof($participants)-1];
+
+        // Test DNF
+        $this->assertSame('Thiago Almeida', $participant->getDriver()->getName());
+        $this->assertSame(Participant::FINISH_DNF,
+            $participant->getFinishStatus());
+    }
+
 
 
     /***
