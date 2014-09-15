@@ -443,8 +443,12 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 // can  re-use this data for any other restart
                 $participants_copy = $participants;
 
-                // No laps found
-                if ( ! preg_match_all('/LAP (.*?) ([0-9:]+[0-9]+)/i', // LAP Zimtpatrone :] 8:51:564
+                // Find all laps, ignoring any discarded. If none found,
+                // continue to next session
+                // MATCH: LAP Zimtpatrone :] 8:51:564
+                if ( ! preg_match_all(
+                           '/LAP (.*?) ([0-9:]+[0-9]+)'
+                           .'\n(?!WARNING: LAPTIME DISCARDED)/i',
                            $data_session2, $lap_matches))
                 {
                     continue;

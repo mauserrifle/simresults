@@ -79,7 +79,7 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
         // The path to the data source
         $file_path = realpath(__DIR__.'/logs/assettocorsa-server/output4.txt');
 
-        // Get the data reader for the given data source
+        // Get the session
         $session = Data_Reader::factory($file_path)->getSession();
 
         // Get participants
@@ -89,6 +89,25 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertSame('GummiGeschoß',
             $participants[0]->getDriver()->getName());
     }
+
+    /**
+     * Test that discarded laps are not included in the parsing
+     */
+    public function testExcludingDiscardedLaps()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.'/logs/assettocorsa-server/discarded.laps.txt');
+
+        // Get the last race session
+        $session = Data_Reader::factory($file_path)->getSession(3);
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Validate numer of laps of winner
+        $this->assertSame(30, count($participants[0]->getLaps()));
+    }
+
 
 
     /***
