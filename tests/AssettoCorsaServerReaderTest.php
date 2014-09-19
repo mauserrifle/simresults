@@ -131,6 +131,25 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
             $participant->getFinishStatus());
     }
 
+    /**
+     * Test reading GUIDs (steam ids)
+     */
+    public function testReadingGuidAndTeam()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.'/logs/assettocorsa-server/log.with.guids.txt');
+
+        // Get the last race session
+        $session = Data_Reader::factory($file_path)->getSession();
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Validate guid and team
+        $this->assertSame('76561198023156518', $participants[0]->getDriver()->getDriverId());
+        $this->assertSame('Ma team', $participants[0]->getTeam());
+    }
+
 
 
     /***

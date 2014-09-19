@@ -150,6 +150,19 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                     $participant->setVehicle($vehicle);
                 }
 
+                // Has team
+                if (isset($part_data['team']))
+                {
+                    $participant->setTeam($part_data['team']);
+                }
+
+
+                // Has guid
+                if (isset($part_data['guid']))
+                {
+                    $driver->setDriverId($part_data['guid']);
+                }
+
                 // Collect laps
                 foreach ($this->get($part_data, 'laps', array()) as
                     $lap_i => $lap_data)
@@ -405,14 +418,11 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 '/REQUESTED CAR: (.*?)PASSWORD.*?DRIVER: (.*?) '
                 .'(?:\[\]).*?OK/si', $data_session, $part_matches);
 
-            // No participants, ignore this session
-            // if ( ! $part_matches OR ! $part_matches[0]) continue;
-
             // Loop each match and collect participants
             $participants = array();
             foreach ($part_matches[0] as $part_key => $part_data)
             {
-                $participants[$part_matches[2][$part_key]] = array(
+                $participants[trim($part_matches[2][$part_key])] = array(
                     'name'    => trim($part_matches[2][$part_key]),
                     'vehicle' => trim($part_matches[1][$part_key]),
                     'laps'    => array(),
@@ -429,19 +439,41 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                     // Loop each match and collect participants
                     foreach ($part_matches[0] as $part_key => $part_data)
                     {
-                        $participants[$part_matches[2][$part_key]] = array(
+                        $participants[trim($part_matches[2][$part_key])] = array(
                             'name'    => trim($part_matches[2][$part_key]),
                             'vehicle' => trim($part_matches[3][$part_key]),
                             'laps'    => array(),
                         );
                     }
+            }
 
+            // No participants found, try another different method....
+            if ( ! $participants)
+            {
+                // MODEL: fc2_2014_season (0) [JC [Ma team]]
+                // DRIVERNAME: JC
+                // GUID:76561198023156518
+                preg_match_all(
+                    '/MODEL: (.*?) .*? \[.*? \[(.*?)\]\].*?DRIVERNAME: (.*?)'
+                    .'GUID:([0-9]+)/si', $data_session, $part_matches);
+
+                // Loop each match and collect participants
+                $participants = array();
+                foreach ($part_matches[0] as $part_key => $part_data)
+                {
+                    $participants[trim($part_matches[3][$part_key])] = array(
+                        'name'    => trim($part_matches[3][$part_key]),
+                        'vehicle' => trim($part_matches[1][$part_key]),
+                        'team'    => trim($part_matches[2][$part_key]),
+                        'guid'    => trim($part_matches[4][$part_key]),
+                        'laps'    => array(),
+                    );
+                }
             }
 
             // Store participants to all participants array
             $all_participants_by_connect = array_merge(
                 $all_participants_by_connect, $participants);
-
 
             // Split session on any possible restarting
             $data_sessions2 = explode('RESTARTING SESSION', $data_session);
@@ -543,17 +575,14 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
         {
             foreach ($session_data['participants'] as $part_name => &$part_data)
             {
-                // No name or vehicle
-                if ( (! isset($part_data['name']) OR
-                     ! isset($part_data['vehicle'])) AND
-                    isset($all_participants_by_connect[$part_name]))
+                // Participant was known by connect info
+                if (isset($all_participants_by_connect[$part_name]))
                 {
                     // Get participant from all connect info
                     $part_connect = $all_participants_by_connect[$part_name];
 
-                    // Fix name and vehicle
-                    $part_data['name'] = $part_connect['name'];
-                    $part_data['vehicle'] = $part_connect['vehicle'];
+                    // Merge data to fix missing data
+                    $part_data = array_merge($part_connect, $part_data);
                 }
             }
             unset($part_data);
