@@ -45,7 +45,8 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
     public function testReadingAlternativeParticipantFormat()
     {
         // The path to the data source
-        $file_path = realpath(__DIR__.'/logs/assettocorsa-server/race1.log');
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-server/different.connecting.format.log');
 
         // Get the data reader for the given data source
         Data_Reader::factory($file_path)->getSessions();
@@ -59,7 +60,8 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
     public function testReadingAlternativeLapFormat()
     {
         // The path to the data source
-        $file_path = realpath(__DIR__.'/logs/assettocorsa-server/output4.txt');
+        $file_path = realpath(__DIR__.'/logs/assettocorsa-server/'
+            .'alternative.lap.format.and.special.chars.txt');
 
         // Get the data reader for the given data source
         $session = Data_Reader::factory($file_path)->getSession();
@@ -77,7 +79,8 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
     public function testReadingParticipantsWithSpecialChars()
     {
         // The path to the data source
-        $file_path = realpath(__DIR__.'/logs/assettocorsa-server/output4.txt');
+        $file_path = realpath(__DIR__.'/logs/assettocorsa-server/'
+            .'alternative.lap.format.and.special.chars.txt');
 
         // Get the session
         $session = Data_Reader::factory($file_path)->getSession();
