@@ -39,8 +39,6 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
 
     /**
      * Test reading that failed due to different connect format of drivers.
-     *
-     * TODO: Make better test, test vehicle of participants
      */
     public function testReadingAlternativeParticipantFormat()
     {
@@ -50,6 +48,16 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
 
         // Get the data reader for the given data source
         Data_Reader::factory($file_path)->getSessions();
+
+        // Get the data reader for the given data source
+        $session = Data_Reader::factory($file_path)->getSession();
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Validate vehicle
+        $this->assertSame('abarth500',
+            $participants[0]->getVehicle()->getName());
     }
 
     /**
@@ -142,7 +150,7 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
         // The path to the data source
         $file_path = realpath(__DIR__.'/logs/assettocorsa-server/log.with.guids.txt');
 
-        // Get the last race session
+        // Get the session
         $session = Data_Reader::factory($file_path)->getSession();
 
         // Get participants
@@ -151,6 +159,26 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
         // Validate guid and team
         $this->assertSame('76561198023156518', $participants[0]->getDriver()->getDriverId());
         $this->assertSame('Ma team', $participants[0]->getTeam());
+    }
+
+    /**
+     * Test reading allowed car list not containing other log info (bugfix)
+     */
+    public function testReadingAllowedVehicles()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.'/logs/assettocorsa-server/'
+            .'extra.car.list.txt');
+
+        // Get the session
+        $session = Data_Reader::factory($file_path)->getSession();
+
+        // Validate allowed vehicles
+        $allowed_vehicles = $session->getAllowedVehicles();
+        $this->assertSame('bmw_m3_gt2', $allowed_vehicles[0]->getName());
+        $this->assertSame('bmw_m3_gtr', $allowed_vehicles[1]->getName());
+        $this->assertSame('bmw_m3_gt1', $allowed_vehicles[2]->getName());
+        $this->assertFalse(isset($allowed_vehicles[3]));
     }
 
 
@@ -186,8 +214,7 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertSame(15, $session->getMaxMinutes());
         $this->assertSame(4, $session->getLastedLaps());
         $allowed_vehicles = $session->getAllowedVehicles();
-        // TODO: fix
-        // $this->assertSame('tatuusfa1', $allowed_vehicles[0]->getName());
+        $this->assertSame('tatuusfa1', $allowed_vehicles[0]->getName());
 
         // Get second session
         $session = $sessions[1];

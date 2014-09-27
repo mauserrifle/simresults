@@ -398,16 +398,24 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             $prev_session_meta = $session;
 
             // Get allowed cars
-            // preg_match_all('/\_(.*?)\_/i',
-            //     $data_session, $car_matches);
+            preg_match('/Car list:.*?(\_(.*)\_).*?Client interval/si',
+                $data_session, $car_matches);
 
-            // // Set car matches and if not found, set from previous session
-            // if ( ! $session['car_list'] = $car_matches[1])
-            // {
-            //     $session['car_list'] = $last_car_list;
-            //
-            // TODO: Fix me
-            $session['car_list'] = array();
+            // Has car matches
+            if (isset($car_matches[1]))
+            {
+                // Explode on new line and add to car list
+                $session['car_list'] = explode("\n", $car_matches[1]);
+                array_walk($session['car_list'], function(&$value) {
+                     $value = trim($value, '_');
+                });
+            }
+            // No car matches
+            else
+            {
+                // Use last known list
+                $session['car_list'] = $last_car_list;
+            }
 
             // Set last car list
             $last_car_list = $session['car_list'];
