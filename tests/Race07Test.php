@@ -177,13 +177,14 @@ class Race07Test extends PHPUnit_Framework_TestCase {
     }
 
     /**
-     * Test there is no error on parsing a GTR2 files with no spaces after
+     * Test there is no error on parsing a GTR2 file with no spaces after
      * lap data commas (e.g. Lap=(1,180.671,1:46.557))
      */
     public function testNoErrorsOnGTR2Log()
     {
         // The path to the data source
-        $file_path = realpath(__DIR__.'/logs/gtr2/GTRSpain_2011_04_27_20_11_02_UNIDO.txt');
+        $file_path = realpath(__DIR__
+            .'/logs/gtr2/GTRSpain_2011_04_27_20_11_02_UNIDO.txt');
 
         // Get the data reader for the given data source
         $reader = Data_Reader::factory($file_path);
@@ -280,7 +281,8 @@ class Race07Test extends PHPUnit_Framework_TestCase {
         $this->assertSame(21, $participant->getPosition());
         $this->assertSame(Participant::FINISH_DNF,
             $participant->getFinishStatus());
-        $this->assertSame('DNF (reason 0)', $participant->getFinishStatusComment());
+        $this->assertSame('DNF (reason 0)',
+            $participant->getFinishStatusComment());
     }
 
     /**
@@ -351,7 +353,8 @@ class Race07Test extends PHPUnit_Framework_TestCase {
         }
 
         // The path to the data source
-        $file_path = realpath(__DIR__.'/logs/race07/prosracing Clio Cup_2013_02_12_22_06_19_Race2.txt');
+        $file_path = realpath(__DIR__
+            .'/logs/race07/prosracing Clio Cup_2013_02_12_22_06_19_Race2.txt');
 
         // Get the data reader for the given data source
         $reader = Data_Reader::factory($file_path);

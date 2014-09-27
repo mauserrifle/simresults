@@ -11,9 +11,6 @@ use Simresults\Helper;
  * * GTR 2
  * * F1 challenge 99-02
  *
- *  TODO:
- *  * Somehow include qualify times in a (race) result too?
- *
  * @author     Maurice van der Star <mauserrifle@gmail.com>
  * @copyright  (c) 2013 Maurice van der Star
  * @license    http://opensource.org/licenses/ISC
@@ -180,7 +177,8 @@ class Data_Reader_Race07 extends Data_Reader {
             });
 
             // Set grid positions
-            foreach ($driver_data_array as $driver_key => &$driver_data_array_item)
+            foreach ($driver_data_array as
+                $driver_key => &$driver_data_array_item)
             {
                 $driver_data_array_item['grid_position'] = $driver_key+1;
             }
@@ -417,14 +415,16 @@ class Data_Reader_Race07 extends Data_Reader {
             if ($key === 'lap')
             {
                 // Laps array does not exist yet
-                if ( ! array_key_exists('laps_collection', $array_data[$section]))
+                if ( ! array_key_exists(
+                    'laps_collection', $array_data[$section]))
                 {
                     // Init laps array
                     $array_data[$section]['laps_collection'] = array();
                 }
 
                 // Match lap information. e.g. (0, -1.000, 2:20.923)
-                preg_match('/^\((.*), ?(.*), ?(.*)\)$/i', $split[1], $lap_matches);
+                preg_match('/^\((.*), ?(.*), ?(.*)\)$/i',
+                    $split[1], $lap_matches);
 
                 // Zero based laps
                 if ($laps_zero_based)
