@@ -80,6 +80,13 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             $track->setVenue($session_data['track']);
             $session->setTrack($track);
 
+            // Has date
+            if (isset($session_data['date']))
+            {
+                // Set it
+                $session->setDate(new \DateTime($session_data['date']));
+            }
+
             // Set server
             if (isset($session_data['server']))
             {
@@ -392,6 +399,13 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             if (isset($matches[1]))
             {
                 $session['server'] = urldecode($matches[1]);
+            }
+
+            // Get date
+            preg_match('/[0-9]{4}-[0-9]{2}-[0-9]{2}.*/i', $data_session, $matches);
+            if (isset($matches[0]))
+            {
+                $session['date'] = $matches[0];
             }
 
             // Remember this basic info

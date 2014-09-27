@@ -7,9 +7,6 @@ use Simresults\Participant;
 /**
  * Tests for the Assetto Corsa Server reader
  *
- * TODO:
- * - Date and time?
- *
  * @author     Maurice van der Star <mauserrifle@gmail.com>
  * @copyright  (c) 2013 Maurice van der Star
  * @license    http://opensource.org/licenses/ISC
@@ -207,6 +204,7 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
         // Get first session
         $session = $sessions[0];
 
+
         //-- Validate
         $this->assertSame(Session::TYPE_QUALIFY, $session->getType());
         $this->assertSame('Clasificacion', $session->getName());
@@ -215,6 +213,15 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertSame(4, $session->getLastedLaps());
         $allowed_vehicles = $session->getAllowedVehicles();
         $this->assertSame('tatuusfa1', $allowed_vehicles[0]->getName());
+
+        // Get session date
+        $date = $session->getDate();
+
+        // Validate date
+        $this->assertSame(1409514659, $date->getTimestamp());
+        $this->assertSame('2014-08-31 16:50:59', $date->format('Y-m-d H:i:s'));
+        $this->assertSame('-03:00', $date->getTimezone()->getName());
+
 
         // Get second session
         $session = $sessions[1];
@@ -225,6 +232,8 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertSame(0, $session->getMaxLaps());
         $this->assertSame(15, $session->getMaxMinutes());
         $this->assertSame(4, $session->getLastedLaps());
+
+
 
         // Get third session
         $session = $sessions[2];
