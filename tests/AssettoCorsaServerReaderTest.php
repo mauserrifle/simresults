@@ -178,6 +178,35 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertFalse(isset($allowed_vehicles[3]));
     }
 
+    /**
+     * Test reading DNF status for a driver that quited but not disconnected.
+     * By not disconnecting the driver maintained a total time after race was
+     * over, which causes a FINISH status. To fix this, we search lines like:
+     *
+     *     Angelo Lima BEST: 1:48:483 TOTAL: 46:03:213 Laps:22 SesID:4
+     *
+     * When the last 3 matches have the same laps. This means this driver has
+     * not made any progress. We mark this driver as DNF.
+     */
+    public function testDnfForQuitingDriver()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__
+            .'/logs/assettocorsa-server/driver.angelo.quiting.race.txt');
+
+        // Get the session
+        $session = Data_Reader::factory($file_path)->getSession();
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Validate finish status of Angelo
+        $this->assertSame('Angelo Lima',
+            $participants[12]->getDriver()->getName());
+        $this->assertSame(Participant::FINISH_DNF,
+            $participants[12]->getFinishStatus());
+    }
+
 
 
     /***

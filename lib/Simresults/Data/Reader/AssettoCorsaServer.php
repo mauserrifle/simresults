@@ -138,8 +138,8 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 $participant->setDrivers(array($driver))
                             ->setTotalTime($total_time);
 
-                // Has total time parsed data
-                if ($total_time)
+                // Has total time parsed data and should not be a forced DNF
+                if ($total_time AND ! $this->get($part_data, 'force_dnf'))
                 {
                     $participant->setFinishStatus(Participant::FINISH_NORMAL);
                 }
@@ -574,6 +574,71 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                     }
                 }
 
+                // Is race session
+                if ($session2['type'] === 'race')
+                {
+                    // Loop each participant and find the max laps ran for this
+                    // session
+                    $max_laps = 0;
+                    foreach ($participants_copy as &$part)
+                    {
+                        // Participant has more laps than current max laps
+                        if (isset($part['laps']) AND count($part['laps']) > $max_laps)
+                        {
+                            $max_laps = count($part['laps']);
+                        }
+                    }
+
+                    // Loop each participant to check for lapped driver that
+                    // might have not finished but has a total time from logs
+                    foreach ($participants_copy as &$part)
+                    {
+                        // Participant has no total time. No need to process
+                        // to speed up parsing
+                        if ( ! isset($part['total_time']) OR
+                             ! $part['total_time'])
+                        {
+                            continue;
+                        }
+
+                        // Total laps is 3+ less of the max laps (what leader
+                        // ran)
+                        if (isset($part['laps']) AND
+                            (count($part['laps'])+3) <= $max_laps)
+                        {
+                            // Find all BEST TOTAL lines of this driver.
+                            // But only those with actual lap data (1+)
+                            if ( ! preg_match_all(
+                                '/[0-9]+\).*? '.$part['name'].' BEST:.*?'
+                                .'TOTAL: [0-9]+.*? Laps:([1-9]+).*?/i',
+                                $data_session2,
+                                $time_matches))
+                            {
+                                // No best times, continue to next
+                                continue;
+                            }
+
+                            // Get last 3 best lines data
+                            $last_3_best = array_slice($time_matches[1], -3, 3);
+
+                            // Not 3 best lines found
+                            if ( ! $last_3_best OR count($last_3_best) < 3)
+                            {
+                                continue;
+                            }
+
+                            // All laps found are the same This should be DNF
+                            if ($last_3_best[0] === $last_3_best[1] AND
+                                $last_3_best[1] === $last_3_best[2])
+                            {
+                                // Force participant dnf
+                                $part['force_dnf'] = true;
+                            }
+
+                        }
+                    }
+                }
+
                 // // Set participants_copy to session, preserving name key values
                 // for later usage to fix missing data
                 $session2['participants'] = $participants_copy;
@@ -589,15 +654,15 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
         }
 
 
-
-        /// Loop each session from return array and fix any participants without
-        //  name and vehicle info. These participants were collected by laps
-        //  and were not known by connect
+        /// Loop each session from return array
         foreach ($return_array as &$session_data)
         {
+            // Loop each participant
             foreach ($session_data['participants'] as $part_name => &$part_data)
             {
-                // Participant was known by connect info
+                // Participant was known by connect info, fix name and vehicle
+                // info. Some participants miss them because were collected by
+                // laps and were not known by current session connect info
                 if (isset($all_participants_by_connect[$part_name]))
                 {
                     // Get participant from all connect info
