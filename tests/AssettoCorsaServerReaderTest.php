@@ -211,16 +211,10 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertSame(0, $session->getMaxLaps());
         $this->assertSame(15, $session->getMaxMinutes());
         $this->assertSame(4, $session->getLastedLaps());
+        $this->assertSame('2014-08-31 16:50:59.575808 -0300 UYT',
+            $session->getDateString());
         $allowed_vehicles = $session->getAllowedVehicles();
         $this->assertSame('tatuusfa1', $allowed_vehicles[0]->getName());
-
-        // Get session date
-        $date = $session->getDate();
-
-        // Validate date
-        $this->assertSame(1409514659, $date->getTimestamp());
-        $this->assertSame('2014-08-31 16:50:59', $date->format('Y-m-d H:i:s'));
-        $this->assertSame('-03:00', $date->getTimezone()->getName());
 
 
         // Get second session
@@ -232,6 +226,8 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertSame(0, $session->getMaxLaps());
         $this->assertSame(15, $session->getMaxMinutes());
         $this->assertSame(4, $session->getLastedLaps());
+        $this->assertSame('2014-08-31 16:50:59.575808 -0300 UYT',
+            $session->getDateString());
 
 
 
@@ -244,6 +240,8 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertSame(6, $session->getMaxLaps());
         $this->assertSame(0, $session->getMaxMinutes());
         $this->assertSame(6, $session->getLastedLaps());
+        $this->assertSame('2014-08-31 16:50:59.575808 -0300 UYT',
+            $session->getDateString());
 
         // Get tith session
         $session = $sessions[4];

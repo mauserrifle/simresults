@@ -84,7 +84,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             if (isset($session_data['date']))
             {
                 // Set it
-                $session->setDate(new \DateTime($session_data['date']));
+                $session->setDateString($session_data['date']);
             }
 
             // Set server

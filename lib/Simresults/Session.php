@@ -130,6 +130,11 @@ class Session {
     protected $date;
 
     /**
+     * @var  string  The date string originally parsed
+     */
+    protected $date_string;
+
+    /**
      * @var  int  The max number of laps this session could of lasted
      */
     protected $max_laps;
@@ -340,6 +345,28 @@ class Session {
     public function getDate()
     {
         return $this->date;
+    }
+
+    /**
+     * Set the date string originally parsed
+     *
+     * @param   string  $date_string
+     * @return  Session
+     */
+    public function setDateString($date_string)
+    {
+        $this->date_string = $date_string;
+        return $this;
+    }
+
+    /**
+     * Get the date string originally parsed
+     *
+     * @return  string
+     */
+    public function getDateString()
+    {
+        return $this->date_string;
     }
 
     /**
