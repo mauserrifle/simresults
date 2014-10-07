@@ -526,7 +526,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 {
                     // Add name just to be sure
                     $participants_copy[$lap_matches[1][$lap_key]]['name'] =
-                        $lap_matches[1][$lap_key];
+                        trim($lap_matches[1][$lap_key]);
 
                     // Add lap
                     $participants_copy[$lap_matches[1][$lap_key]]['laps'][] = array(
@@ -563,7 +563,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 {
                     // Add name and laps just to be sure
                     $participants_copy[$time_matches[1][$time_key]]['name'] =
-                        $time_matches[1][$time_key];
+                        trim($time_matches[1][$time_key]);
 
                     // Not 0
                     if ($time_matches[2][$time_key] !== '0:00:000')
