@@ -444,8 +444,9 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             $participants = array();
             foreach ($part_matches[0] as $part_key => $part_data)
             {
-                $participants[trim($part_matches[2][$part_key])] = array(
-                    'name'    => trim($part_matches[2][$part_key]),
+                $name = trim($part_matches[2][$part_key]);
+                $participants[$name] = array(
+                    'name'    => $name,
                     'vehicle' => trim($part_matches[1][$part_key]),
                     'laps'    => array(),
                 );
@@ -461,8 +462,9 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                     // Loop each match and collect participants
                     foreach ($part_matches[0] as $part_key => $part_data)
                     {
-                        $participants[trim($part_matches[2][$part_key])] = array(
-                            'name'    => trim($part_matches[2][$part_key]),
+                        $name = trim($part_matches[2][$part_key]);
+                        $participants[$name] = array(
+                            'name'    => $name,
                             'vehicle' => trim($part_matches[3][$part_key]),
                             'laps'    => array(),
                         );
@@ -483,8 +485,9 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 $participants = array();
                 foreach ($part_matches[0] as $part_key => $part_data)
                 {
-                    $participants[trim($part_matches[3][$part_key])] = array(
-                        'name'    => trim($part_matches[3][$part_key]),
+                    $name = trim($part_matches[3][$part_key]);
+                    $participants[$name] = array(
+                        'name'    => $name,
                         'vehicle' => trim($part_matches[1][$part_key]),
                         'team'    => trim($part_matches[2][$part_key]),
                         'guid'    => trim($part_matches[4][$part_key]),
@@ -525,11 +528,11 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 foreach ($lap_matches[0] as $lap_key => $lap_data)
                 {
                     // Add name just to be sure
-                    $participants_copy[$lap_matches[1][$lap_key]]['name'] =
-                        trim($lap_matches[1][$lap_key]);
+                    $name = trim($lap_matches[1][$lap_key]);
+                    $participants_copy[$name]['name'] = $name;
 
                     // Add lap
-                    $participants_copy[$lap_matches[1][$lap_key]]['laps'][] = array(
+                    $participants_copy[$name]['laps'][] = array(
                         'time' => Helper::secondsFromFormattedTime(
                                       $lap_matches[2][$lap_key], true),
                     );
@@ -562,13 +565,13 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 foreach ($time_matches[0] as $time_key => $time_data)
                 {
                     // Add name and laps just to be sure
-                    $participants_copy[$time_matches[1][$time_key]]['name'] =
-                        trim($time_matches[1][$time_key]);
+                    $name = trim($time_matches[1][$time_key]);
+                    $participants_copy[$name]['name'] = $name;
 
                     // Not 0
                     if ($time_matches[2][$time_key] !== '0:00:000')
                     {
-                        $participants_copy[$time_matches[1][$time_key]]['total_time'] =
+                        $participants_copy[$name]['total_time'] =
                             Helper::secondsFromFormattedTime(
                                   $time_matches[2][$time_key], true);
                     }

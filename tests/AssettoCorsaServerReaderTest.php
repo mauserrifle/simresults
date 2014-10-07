@@ -247,6 +247,7 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertSame(Session::TYPE_RACE, $session->getType());
 
         // Validate driver
+        $this->assertSame(1, count($participants));
         $this->assertSame('Test',
             $participants[0]->getDriver()->getName());
         $this->assertSame(2, $participants[0]->getNumberOfLaps());
