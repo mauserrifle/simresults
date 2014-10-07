@@ -117,6 +117,27 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
+     * Test that refused laps are not included in the parsing
+     */
+    public function testExcludingRefusedLaps()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.'/logs/assettocorsa-server/refused.laps.txt');
+
+        // Get the last race session
+        $session = Data_Reader::factory($file_path)->getSession();
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Validate numer of laps of remy
+        $this->assertSame('remy vanlierde',
+            $participants[4]->getDriver()->getName());
+        $this->assertSame(5, count($participants[0]->getLaps()));
+    }
+
+
+    /**
      * Test DNF for no total time in log
      */
     public function testDnfForNoTotalTimeInLog()
