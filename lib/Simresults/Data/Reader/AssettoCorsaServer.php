@@ -363,7 +363,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             preg_match('/TYPE=(.*)/i', $data_session, $matches);
             if (isset($matches[1]))
             {
-                $session['type'] = strtolower($matches[1]);
+                $session['type'] = strtolower(trim($matches[1]));
             }
 
             // Get session name
@@ -515,7 +515,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 // MATCH: LAP Zimtpatrone :] 8:51:564
                 if ( ! preg_match_all(
                            '/LAP (.*?) ([0-9:]+[0-9]+)'
-                           .'\n(?!WARNING: LAPTIME DISCARDED|LAP REFUSED)/i',
+                           .'(\n|\r)(?!WARNING: LAPTIME DISCARDED|LAP REFUSED)/i',
                            $data_session2, $lap_matches))
                 {
                     continue;

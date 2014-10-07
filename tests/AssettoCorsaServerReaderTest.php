@@ -228,6 +228,30 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
             $participants[12]->getFinishStatus());
     }
 
+    /**
+     * Test reading log with windows lines. Matching for laps went wrong.
+     */
+    public function testLogWithWindowsLines()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__
+            .'/logs/assettocorsa-server/log.with.windows.lines.txt');
+
+        // Get the session
+        $session = Data_Reader::factory($file_path)->getSession();
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Validate session type (was containing new lines..)
+        $this->assertSame(Session::TYPE_RACE, $session->getType());
+
+        // Validate driver
+        $this->assertSame('Test',
+            $participants[0]->getDriver()->getName());
+        $this->assertSame(2, $participants[0]->getNumberOfLaps());
+    }
+
 
 
     /***
