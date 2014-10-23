@@ -104,6 +104,7 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
             switch(strtolower($name = $this->get($session_data, 'name')))
             {
                 case 'qualify session':
+                case 'qualify':
                     $type = Session::TYPE_QUALIFY;
                     break;
                 case 'warmup session':
@@ -111,6 +112,7 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
                     break;
                 case 'race session':
                 case 'quick race':
+                case 'race':
                     $type = Session::TYPE_RACE;
                     break;
             }

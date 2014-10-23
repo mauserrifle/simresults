@@ -31,6 +31,7 @@ Simresults supports a wide range of games:
 * rFactor 2
 * Game Stock Car 2012
 * Game Stock Car 2013
+* Game Stock Car Extreme
 * Formula Truck 2013
 * Assetto Corsa
 * RACE
