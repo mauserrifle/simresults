@@ -1,4 +1,4 @@
-<?php
+    <?php
 use Simresults\Data_Reader_AssettoCorsa;
 use Simresults\Data_Reader;
 use Simresults\Session;
@@ -89,6 +89,35 @@ class AssettoCorsaReaderTest extends PHPUnit_Framework_TestCase {
             $session->getOtherSettings()
         );
     }
+
+    /**
+     * Test reading qualify and race sessions from the AC 1.0 release. Session
+     * names are changed.
+     */
+    public function testReadingAlternativeSessionTypeNames()
+    {
+        // The path to the data source
+        $file_path = realpath(
+            __DIR__.'/logs/assettocorsa/qualify.and.race.json');
+
+        // Get the data reader for the given data source
+        $reader = Data_Reader::factory($file_path);
+
+        // Get first session
+        $session = $reader->getSession(1);
+
+        //-- Validate
+        $this->assertSame(Session::TYPE_QUALIFY, $session->getType());
+        $this->assertSame('Qualify', $session->getName());
+
+        // Get second session
+        $session = $reader->getSession(2);
+
+        //-- Validate
+        $this->assertSame(Session::TYPE_RACE, $session->getType());
+        $this->assertSame('Race', $session->getName());
+    }
+
 
 
 
