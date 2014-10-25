@@ -57,13 +57,60 @@ class Helper {
     /**
      * Get seconds from time format: (h:)i:s.u.
      *
+     * Set param `$same_micro_separator` to force micro parsing using colon
+     * format: (h:)i:s:u
+     *
      * @param   string    $formatted_time
+     * @param   boolean   $colon_micro_separator Whether the micro seconds are
+     *                                           separated using the regular
+     *                                           colon. If true, the last
+     *                                           digits will allways be parsed
+     *                                           as micro. Format: (h:)i:s:u
      * @return  string
      */
-    public static function secondsFromFormattedTime($formatted_time)
+    public static function secondsFromFormattedTime(
+        $formatted_time,
+        $colon_micro_separator=false)
     {
+        // Always micro seconds using a colon separator
+        if ($colon_micro_separator)
+        {
+            // Matched h:i:s:u
+            if (preg_match (
+                '/(.*):(.*):(.*):(.*)/i',
+                $formatted_time, $time_matches))
+            {
+                // Get seconds
+                $seconds = ($time_matches[1] * 3600) +
+                           ($time_matches[2] * 60) +
+                           $time_matches[3];
+
+                // Add microseconds to seconds using string functions and convert back
+                // to float
+                $seconds = (float) ($seconds.'.'.$time_matches[4]);
+
+                return $seconds;
+            }
+
+            // Matched i:s:u
+            if (preg_match (
+                '/(.*):(.*):(.*)/i',
+                $formatted_time, $time_matches))
+            {
+                // Get seconds
+                $seconds = ($time_matches[1] * 60) +
+                           $time_matches[2];
+
+                // Add microseconds to seconds using string functions and convert back
+                // to float
+                $seconds = (float) ($seconds.'.'.$time_matches[3]);
+
+                return $seconds;
+            }
+
+        }
         // Matched h:i:s.u
-        if (preg_match (
+        else if (preg_match (
             '/(.*):(.*):(.*)\.(.*)/i',
             $formatted_time, $time_matches))
         {

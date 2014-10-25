@@ -20,6 +20,11 @@ class Driver {
      */
     protected $human = true;
 
+    /**
+     * @var  string  The driver id (for example Steam ID)
+     */
+    protected $driver_id;
+
 
     /**
      * Set the name of the driver
@@ -84,5 +89,27 @@ class Driver {
     public function isHuman()
     {
         return $this->human;
+    }
+
+    /**
+     * Set the driver id (for example Steam ID)
+     *
+     * @param   string  $driver_id
+     * @return  Driver
+     */
+    public function setDriverId($driver_id)
+    {
+        $this->driver_id = $driver_id;
+        return $this;
+    }
+
+    /**
+     * Get the driver id (for example Steam ID)
+     *
+     * @return  string
+     */
+    public function getDriverId()
+    {
+        return $this->driver_id;
     }
 }

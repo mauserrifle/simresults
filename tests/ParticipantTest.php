@@ -231,6 +231,13 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
 
         // Validate no position difference
         $this->assertSame(0, $participant->getPositionDifference());
+
+        // Set grid position to null
+        $participant->setPosition(4);
+        $participant->setGridPosition(null);
+
+        // Validate no position difference
+        $this->assertNull($participant->getPositionDifference());
     }
 
     /**

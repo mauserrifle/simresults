@@ -1,0 +1,100 @@
+Server CFG Path :  cfg/server_cfg.ini
+Entry List Path :  cfg/entry_list.ini
+Assetto Corsa Dedicated Server v0.10.1
+Protocol version: 10
+2014-09-19 07:32:31.4134791 +0100 CET
+LOCAL IP 0: fe80::35f1:e7f6:bfff:1882
+LOCAL IP 1: fe80::287b:2f20:fad8:aa1e
+LOCAL IP 2: 5.39.85.225
+LOCAL IP 3: 2002:527:55e1::527:55e1
+LOCAL IP 4: 2001:0:9d38:6abd:287b:2f20:fad8:aa1e
+Using cfg path:  cfg/server_cfg.ini
+Car list:
+_fc2_2014_season_
+Client interval HZ: 25 , MS=40
+TRACK=imola
+CARS=["fc2_2014_season"]
+Loading PRACTICE sessionSESSION: Practice
+TYPE=PRACTICE
+TIME=60
+LAPS=0
+
+Loading QUALIFY sessionSESSION: Qualify
+TYPE=QUALIFY
+TIME=15
+LAPS=0
+
+SESSION: Race
+TYPE=RACE
+TIME=0
+LAPS=7
+
+DynamicTrack: first session, resetting grip
+CHECKSUM: system/data/surfaces.ini=41949b9f7045cad2af3f5eb951d170a9
+CHECKSUM: content/tracks/imola/data/surfaces.ini=d2ee644621d0b35bb848b02e8c863eb5
+Loading blacklist
+open blacklist.txt: Le fichier spécifié est introuvable.
+Opening entry list:  cfg/entry_list.ini
+Found car  CAR_0
+SESSION_ID:0
+MODEL: fc2_2014_season (0) [JC [Ma team]]
+DRIVERNAME: JC
+GUID:76561198023156518
+Initialising plugins
+NextSession
+SESSION: Practice
+TYPE=PRACTICE
+TIME=60
+LAPS=0
+
+DynamicTrack: first session, resetting grip
+SENDING session name : Practice
+SENDING session index : 0
+SENDING session type : 1
+SENDING session time : 60
+SENDING session laps : 0
+Server started
+Starting HTTP server on port  8081
+Registering to AC central server
+CALLING http://93.57.10.21/lobby.ashx/register?name=+ESRA-LEAGUE.COM+%7C+GP+SERIES+%7C+PRESEASON&port=9605&max_clients=1&track=imola&cars=fc2_2014_season&timeofday=24&sessions=1,2,3&durations=3600,900,7&password=1&version=10&pickup=0
+RESPONSE: OK,366044,8081
+CONNECTED TO LOBBY
+RESTARTING FROM SESSION 0
+NextSession
+SESSION: Practice
+TYPE=PRACTICE
+TIME=60
+LAPS=0
+
+DynamicTrack: first session, resetting grip
+SENDING session name : Practice
+SENDING session index : 0
+SENDING session type : 1
+SENDING session time : 60
+SENDING session laps : 0
+SENDING http://93.57.10.21/lobby.ashx/ping?session=1&timeleft=3660&port=9605&clients=1&track=imola&pickup=0
+OK
+PAGE: /JSON|76561198023156518
+Serve JSON took 1 ms
+PAGE: /CANJOIN|76561198023156518
+/CANJOIN|76561198023156518
+
+NEW CONNECTION from 82.65.158.119:58702
+VERSION 10
+GUID: 76561198023156518*
+LOOKING INTO DRIVERS
+DRIVER ACCEPTED FOR CAR 0
+DRIVER ACCEPTED FOR CAR JC
+Sending SESSION ID : 0
+Sending ID : 0
+Sending type 1
+FIND AND SEND PLAYER'S POSITION
+ELAPSED=30062
+DRIVER: JC [Ma team]
+Sending car list from index:0
+Checksums received from  JC [Ma team]
+system/data/surfaces.ini  ok
+content/tracks/imola/data/surfaces.ini  ok
+LAP JC 2:09:916
+1) JC BEST: 2:09:916 TOTAL: 3:07:311 Laps:1 SesID:0
+Clean exit, driver disconnected:  JC [Ma team]

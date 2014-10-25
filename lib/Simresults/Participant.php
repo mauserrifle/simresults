@@ -652,12 +652,18 @@ class Participant {
     }
 
     /**
-     * Returns the difference in starting and ending position
+     * Returns the difference in starting and ending position. Returns null
+     * when unknown
      *
-     * @return  int
+     * @return  int|nuill
      */
     public function getPositionDifference()
     {
+        // No grid position
+        if ( ! $this->getGridPosition()) {
+            return null;
+        }
+
         return (int) ($this->getGridPosition() - $this->getPosition());
     }
 
