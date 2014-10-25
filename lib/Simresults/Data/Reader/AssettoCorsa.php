@@ -38,33 +38,6 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
         // Init sessions array
         $sessions = array();
 
-        // Init participants array
-        $participants = array();
-
-        // Get participants
-        $players_data = $this->get($data, 'players', array());
-        foreach ($players_data as $player_index => $player_data)
-        {
-            // Create driver
-            $driver = new Driver;
-            $driver->setName($this->get($player_data, 'name'));
-
-            // Create participant and add driver
-            $participant = new Participant;
-            $participant->setDrivers(array($driver))
-                        // No grid position yet. Can't figure out in AC log
-                        // files
-                        // ->setGridPosition($player_index+1)
-                        ->setFinishStatus(Participant::FINISH_NORMAL);
-
-            // Create vehicle and add to participant
-            $vehicle = new Vehicle;
-            $vehicle->setName($this->get($player_data, 'car'));
-            $participant->setVehicle($vehicle);
-
-            // Add participant to collection
-            $participants[] = $participant;
-        }
 
         // Get extra data for all sessions
         $extras = array();
@@ -94,6 +67,33 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
         {
             // Init session
             $session = new Session;
+
+            // Get participants (do for each session to prevent re-used objects
+            // between sessions)
+            $participants = array();
+            $players_data = $this->get($data, 'players', array());
+            foreach ($players_data as $player_index => $player_data)
+            {
+                // Create driver
+                $driver = new Driver;
+                $driver->setName($this->get($player_data, 'name'));
+
+                // Create participant and add driver
+                $participant = new Participant;
+                $participant->setDrivers(array($driver))
+                            // No grid position yet. Can't figure out in AC log
+                            // files
+                            // ->setGridPosition($player_index+1)
+                            ->setFinishStatus(Participant::FINISH_NORMAL);
+
+                // Create vehicle and add to participant
+                $vehicle = new Vehicle;
+                $vehicle->setName($this->get($player_data, 'car'));
+                $participant->setVehicle($vehicle);
+
+                // Add participant to collection
+                $participants[] = $participant;
+            }
 
             // Practice session by default
             $type = Session::TYPE_PRACTICE;
@@ -134,27 +134,19 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
             $track->setVenue($this->get($data, 'track'));
             $session->setTrack($track);
 
-            // Participants are sorted as result order by default
-            $participants_sorted = $participants;
-
-            // Session has race result
-            if ($race_result = $this->get($session_data, 'raceResult'))
-            {
-                // Create new participants order
-                $participants_sorted = array();
-                foreach ($race_result as $race_position => $race_position_driver)
-                {
-                    $participants_sorted[] =
-                        $participants[$race_position_driver]
-                            ->setPosition($race_position+1);
-                }
-            }
-
-            // Set participants (sorted)
-            $session->setParticipants($participants_sorted);
 
             // Get the laps
-            foreach ($this->get($session_data, 'laps', array()) as $lap_data)
+            $laps_data = $this->get($session_data, 'laps', array());
+
+            // No laps data
+            if ( ! $laps_data)
+            {
+                // Use best laps if possible
+                $laps_data = $this->get($session_data, 'bestLaps', array());
+            }
+
+            // Process laps
+            foreach ($laps_data as $lap_data)
             {
                 // Init new lap
                 $lap = new Lap;
@@ -184,8 +176,46 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
                 $lap_participant->addLap($lap);
             }
 
+            // Session has predefined race result positions
+            if ($race_result = $this->get($session_data, 'raceResult'))
+            {
+                // Create new participants order
+                $participants_sorted = array();
+                foreach ($race_result as $race_position => $race_position_driver)
+                {
+                    $participants_sorted[] =
+                        $participants[$race_position_driver];
+                }
+
+                $participants = $participants_sorted;
+            }
+            // Is race result
+            elseif ($session->getType() === Session::TYPE_RACE)
+            {
+                // Sort participants by total time
+                $participants =
+                    Helper::sortParticipantsByTotalTime($participants);
+            }
+            // Is practice or qualify
+            else
+            {
+                // Sort by best lap
+                $participants =
+                    Helper::sortParticipantsByBestLap($participants);
+            }
+
+            // Fix participant positions
+            foreach ($participants as $key => $part)
+            {
+                $part->setPosition($key+1);
+            }
+
+            // Set participants (sorted)
+            $session->setParticipants($participants);
+
+
             // Fix elapsed seconds for all participant laps
-            foreach ($session->getParticipants() as $participant)
+            foreach ($participants as $participant)
             {
                $elapsed_time = 0;
                foreach ($participant->getLaps() as $lap)
@@ -195,6 +225,7 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
                     $elapsed_time += $lap->getTime();
                }
             }
+
 
             // Fix driver positions for laps
             $session_lasted_laps = $session->getLastedLaps();

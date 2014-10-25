@@ -118,6 +118,35 @@ class AssettoCorsaReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertSame('Race', $session->getName());
     }
 
+     /**
+     * Test reading qualify positions. This als covers proper laps. Laps are
+     * missing for qualify and we need to parse best laps, which results in
+     * proper positions
+     */
+    public function testReadingQualifyPositions()
+    {
+        // The path to the data source
+        $file_path = realpath(
+            __DIR__.'/logs/assettocorsa/qualify.and.race.json');
+
+        // Get the data reader for the given data source
+        $reader = Data_Reader::factory($file_path);
+
+        // Get first session
+        $session = $reader->getSession(1);
+
+        // Get first participant
+        $participants = $session->getParticipants();
+        $participant = $participants[0];
+
+        $this->assertSame('Petr Dolezal',
+                          $participant->getDriver()->getName());
+
+        // Get last participant
+        $participant = $participants[count($participants)-1];
+        $this->assertSame('Tomas Ledenyi',
+                          $participant->getDriver()->getName());
+    }
 
 
 
