@@ -253,6 +253,25 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertSame(2, $participants[0]->getNumberOfLaps());
     }
 
+    /**
+     * Test reading log without track. Should not throw an exception
+     */
+    public function testLogWithoutTrack()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__
+            .'/logs/assettocorsa-server/no.track.info.txt');
+
+        // Get the session
+        $session = Data_Reader::factory($file_path)->getSession();
+
+        // Get the track
+        $track = $session->getTrack();
+
+        // Validate track
+        $this->assertNull($track);
+    }
+
 
 
     /***

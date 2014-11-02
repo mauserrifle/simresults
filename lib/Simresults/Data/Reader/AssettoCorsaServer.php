@@ -75,10 +75,13 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             $game = new Game; $game->setName('Assetto Corsa');
             $session->setGame($game);
 
-            // Set track
-            $track = new Track;
-            $track->setVenue($session_data['track']);
-            $session->setTrack($track);
+            // Has track
+            if (isset($session_data['track']))
+            {
+                $track = new Track;
+                $track->setVenue($session_data['track']);
+                $session->setTrack($track);
+            }
 
             // Has date
             if (isset($session_data['date']))
