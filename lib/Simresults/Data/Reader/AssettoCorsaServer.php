@@ -541,9 +541,10 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 }
             }
 
-            // Store participants to all participants array
-            $all_participants_by_connect = array_merge(
-                $all_participants_by_connect, $participants);
+            // Store participants to all participants array. Using union method
+            // to prevent any data losing that happens using array_merge
+            $all_participants_by_connect =
+                $all_participants_by_connect + $participants;
 
             // Split session on any possible restarting
             $data_sessions2 = explode('RESTARTING SESSION', $data_session);

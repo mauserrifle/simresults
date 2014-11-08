@@ -161,12 +161,13 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
-     * Test reading GUIDs (steam ids)
+     * Test reading GUIDs (steam ids) and Teams
      */
     public function testReadingGuidAndTeam()
     {
         // The path to the data source
-        $file_path = realpath(__DIR__.'/logs/assettocorsa-server/log.with.guids.txt');
+        $file_path = realpath(
+            __DIR__.'/logs/assettocorsa-server/log.with.guids.txt');
 
         // Get the session
         $session = Data_Reader::factory($file_path)->getSession();
@@ -175,8 +176,29 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
         $participants = $session->getParticipants();
 
         // Validate guid and team
-        $this->assertSame('76561198023156518', $participants[0]->getDriver()->getDriverId());
+        $this->assertSame('76561198023156518',
+            $participants[0]->getDriver()->getDriverId());
         $this->assertSame('Ma team', $participants[0]->getTeam());
+
+
+        //-- Test another source that was missing guids due to overwriting
+        //   empty guids data from next sessions (bug)
+
+        // The path to the data source
+        $file_path = realpath(
+            __DIR__.'/logs/assettocorsa-server/log.with.guids2.txt');
+
+        // Get the session
+        $session = Data_Reader::factory($file_path)->getSession();
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Validate guids
+        $this->assertSame('76561198059896913',
+            $participants[0]->getDriver()->getDriverId());
+        $this->assertSame('76561197986209847',
+            $participants[1]->getDriver()->getDriverId());
     }
 
     /**
