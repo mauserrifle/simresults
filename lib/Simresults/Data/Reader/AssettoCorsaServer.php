@@ -447,12 +447,54 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             $participants = array();
             foreach ($part_matches[0] as $part_key => $part_data)
             {
-                $name = trim($part_matches[2][$part_key]);
-                $participants[$name] = array(
-                    'name'    => $name,
-                    'vehicle' => trim($part_matches[1][$part_key]),
-                    'laps'    => array(),
-                );
+                // Explode data by REQUESTED CAR again
+                // WARNING: We test this because sometimes the regular
+                //          expression fails due to a missing `DRIVER` part.
+                //          On fail the match includes a invalid connect and
+                //          valid one in one. This mixes up car selection etc
+                //          due to matches to the invalid connect (first
+                //          instance)
+                $part_data_exploded = preg_split(
+                    '/REQUESTED CAR: .*?/', $part_data);
+
+                // Filter any empty value
+                $part_data_exploded = array_filter($part_data_exploded);
+
+                // Has multiple parts
+                if (count($part_data_exploded) > 1)
+                {
+                    // Get last match as its the proper one
+                    $part_data_tmp = array_pop($part_data_exploded);
+
+                    // Do another match similar to above
+                    preg_match(
+                        '/(.*?)PASSWORD.*?DRIVER: (.*?) \['
+                        .'/si', $part_data_tmp, $part_tmp_matches);
+
+                    // Name contains new lines, something went wrong in
+                    // matching. Probably a last failed connect without the
+                    // "DRIVER" part. We ignore this match!
+                    $name = trim($part_tmp_matches[2]);
+                    if (strstr($name, PHP_EOL)) continue;
+
+                    $participants[$name] = array(
+                        'name'    => $name,
+                        'vehicle' => trim($part_tmp_matches[1]),
+                        'laps'    => array(),
+                    );
+
+                }
+                // No multiple parts, proper match
+                else
+                {
+                    $name = trim($part_matches[2][$part_key]);
+                    $participants[$name] = array(
+                        'name'    => $name,
+                        'vehicle' => trim($part_matches[1][$part_key]),
+                        'laps'    => array(),
+                    );
+                }
+
             }
 
             // No participants found, try different method

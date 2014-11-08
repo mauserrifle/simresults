@@ -273,10 +273,10 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
-     * Test fix for a bug that car names were missing because drivers were
-     * not properly parsed from connect info
+     * Test fix for a bug that car names were missing or incorrect because
+     * drivers were not properly parsed from connect info
      */
-    public function testFixedMissingCars()
+    public function testFixedMissingAndWrongCars()
     {
         // The path to the data source
         $file_path = realpath(__DIR__
@@ -297,6 +297,11 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
             $participants[16]->getDriver()->getName());
         $this->assertSame('bmw_z4_gt3*',
             $participants[16]->getVehicle()->getName());
+
+        $this->assertSame('Miha Lencek',
+            $participants[19]->getDriver()->getName());
+        $this->assertSame('mclaren_mp412c_gt3*',
+            $participants[19]->getVehicle()->getName());
     }
 
 
