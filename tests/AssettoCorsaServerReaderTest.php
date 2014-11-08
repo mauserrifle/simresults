@@ -272,6 +272,33 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertNull($track);
     }
 
+    /**
+     * Test fix for a bug that car names were missing because drivers were
+     * not properly parsed from connect info
+     */
+    public function testFixedMissingCars()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__
+            .'/logs/assettocorsa-server/messy.driver.connect.info.txt');
+
+        // Get the session
+        $session = Data_Reader::factory($file_path)->getSession();
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        $this->assertSame('Andrej Trost',
+            $participants[0]->getDriver()->getName());
+        $this->assertSame('mclaren_mp412c_gt3*',
+            $participants[0]->getVehicle()->getName());
+
+        $this->assertSame('Benjamin Kronaveter',
+            $participants[16]->getDriver()->getName());
+        $this->assertSame('bmw_z4_gt3*',
+            $participants[16]->getVehicle()->getName());
+    }
+
 
 
     /***

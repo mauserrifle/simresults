@@ -440,8 +440,8 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             // Collect participants by connect information so we know which
             // car they run
             preg_match_all(
-                '/REQUESTED CAR: (.*?)PASSWORD.*?DRIVER: (.*?) '
-                .'(?:\[\]).*?OK/si', $data_session, $part_matches);
+                '/REQUESTED CAR: (.*?)PASSWORD.*?DRIVER: (.*?) \['
+                .'/si', $data_session, $part_matches);
 
             // Loop each match and collect participants
             $participants = array();
