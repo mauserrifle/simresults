@@ -129,6 +129,10 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
             $game = new Game; $game->setName('Assetto Corsa');
             $session->setGame($game);
 
+            // Set server (we do not know...)
+            $server = new Server; $server->setName('Unknown or offline');
+            $session->setServer($server);
+
             // Set track
             $track = new Track;
             $track->setVenue($this->get($data, 'track'));

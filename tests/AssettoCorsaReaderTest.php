@@ -171,6 +171,18 @@ class AssettoCorsaReaderTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
+     * Test reading the server of a session
+     */
+    public function testReadingSessionServer()
+    {
+        // Get the server
+        $server = $this->getWorkingReader()->getSession()->getServer();
+
+        // Validate server
+        $this->assertSame('Unknown or offline', $server->getName());
+    }
+
+    /**
      * Test reading the game of a session
      */
     public function testReadingSessionGame()
