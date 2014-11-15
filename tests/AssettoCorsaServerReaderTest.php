@@ -122,18 +122,46 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
     public function testExcludingRefusedLaps()
     {
         // The path to the data source
-        $file_path = realpath(__DIR__.'/logs/assettocorsa-server/refused.laps.txt');
+        $file_path = realpath(
+            __DIR__.'/logs/assettocorsa-server/refused.laps.txt');
 
-        // Get the last race session
+        // Get the race session
         $session = Data_Reader::factory($file_path)->getSession();
 
         // Get participants
         $participants = $session->getParticipants();
 
+        // Validate winner
+        $this->assertSame('Francis Savere',
+            $participants[0]->getDriver()->getName());
+
         // Validate numer of laps of remy
         $this->assertSame('remy vanlierde',
             $participants[4]->getDriver()->getName());
         $this->assertSame(5, count($participants[0]->getLaps()));
+
+
+        //--- Test another log that had refused lap line not on next line of
+        //    lap. TODO: Cut this log so it's smaller?
+
+        // The path to the data source
+        $file_path = realpath(__DIR__
+            .'/logs/assettocorsa-server/different.refused.laps.format.txt');
+
+        // Get the last race session
+        $session = Data_Reader::factory($file_path)->getSession(4);
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Validate winner
+        $this->assertSame('seruno',
+            $participants[0]->getDriver()->getName());
+
+        // Validate numer of laps of ShijouR26B
+        $this->assertSame('ShijouR26B',
+            $participants[4]->getDriver()->getName());
+        $this->assertSame(18, count($participants[4]->getLaps()));
     }
 
 

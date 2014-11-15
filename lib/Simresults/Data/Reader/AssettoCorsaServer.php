@@ -559,12 +559,15 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 // can  re-use this data for any other restart
                 $participants_copy = $participants;
 
-                // Find all laps, ignoring any discarded. If none found,
-                // continue to next session
-                // MATCH: LAP Zimtpatrone :] 8:51:564
+                // Find all laps. Include lines below the lap in the matching
+                // too, so we can later find whether it was discarded.
+                // The use of (?!WORD) negative word expressions in this regex
+                // produced too many difficulties and bugs, that's the reason
+                // we match discarded too at this point and filter them later
                 if ( ! preg_match_all(
-                           '/LAP (.*?) ([0-9:]+[0-9]+)'
-                           .'(\n|\r)(?!WARNING: LAPTIME DISCARDED|LAP REFUSED)/i',
+                           '/LAP (.*?) ([0-9:]+[0-9]+).*?'
+                           .'(1\)|SendLapCompletedMessage|'
+                           .'WARNING: LAPTIME DISCARDED| LAP REFUSED)/s',
                            $data_session2, $lap_matches))
                 {
                     continue;
@@ -573,6 +576,14 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 // Loop each lap and add lap to belonging participant
                 foreach ($lap_matches[0] as $lap_key => $lap_data)
                 {
+                    // Lap is refused or discarded? Ignore this lap!
+                    if (preg_match(
+                        '/(WARNING: LAPTIME DISCARDED|LAP REFUSED)/',
+                        $lap_data))
+                    {
+                       continue;
+                    }
+
                     // Add name just to be sure
                     $name = trim($lap_matches[1][$lap_key]);
                     $participants_copy[$name]['name'] = $name;
@@ -606,7 +617,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 // Get total times
                 // MATCH: 0) Rodrigo  Sanchez Paz BEST: 16666:39:999 TOTAL:
                 //        0:00:000 Laps:0 SesID:4"
-                preg_match_all('/[0-9]+\).*? (.*?) BEST:.*?TOTAL: ([0-9]+.*?) Laps.*?/i',
+                preg_match_all('/[0-9]+\).*? (.*?) BEST:.*?TOTAL: ([0-9]+.*?) Laps.*?/',
                     $race_end, $time_matches);
                 foreach ($time_matches[0] as $time_key => $time_data)
                 {
@@ -659,7 +670,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                             // But only those with actual lap data (1+)
                             if ( ! preg_match_all(
                                 '/[0-9]+\).*? '.$part['name'].' BEST:.*?'
-                                .'TOTAL: [0-9]+.*? Laps:([1-9]+).*?/i',
+                                .'TOTAL: [0-9]+.*? Laps:([1-9]+).*?/',
                                 $data_session2,
                                 $time_matches))
                             {
@@ -693,7 +704,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 $session2['participants'] = $participants_copy;
 
                 // Get chats
-                preg_match_all('/CHAT (.*)?/i', $data_session2, $chat_matches);
+                preg_match_all('/CHAT (.*)?/', $data_session2, $chat_matches);
                 $session2['chats'] = $chat_matches[1];
 
                 // Add session
