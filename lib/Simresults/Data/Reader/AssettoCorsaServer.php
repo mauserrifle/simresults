@@ -565,7 +565,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 // produced too many difficulties and bugs, that's the reason
                 // we match discarded too at this point and filter them later
                 if ( ! preg_match_all(
-                           '/LAP (.*?) ([0-9:]+[0-9]+).*?'
+                           '/LAP (.*?) ([0-9]+:[0-9:]+).*?'
                            .'(1\)|SendLapCompletedMessage|'
                            .'WARNING: LAPTIME DISCARDED| LAP REFUSED)/s',
                            $data_session2, $lap_matches))
