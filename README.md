@@ -39,6 +39,7 @@ Simresults supports a wide range of games:
 * GTR
 * GTR2
 * GT Legends
+* RaceRoom Racing Experience
 * BMW M3 Challenge
 * F1 challenge 99-02
 
@@ -63,9 +64,11 @@ The following expansions of RACE (07) should work too:
 Please note that Game Stock Car and Formula Truck will be reported as as a
 rFactor game.
 
-Assetto Corsa support is very limited due to simple log files.
-
 Results from F1 challenge and GTR might miss laps.
+
+Results from Assetto Corsa (race_out.json) and Raceroom might only contain 1
+lap.
+
 
 ## Features
 
@@ -96,7 +99,11 @@ Results from F1 challenge and GTR might miss laps.
 
 `lib/Data/Reader/AssettoCorsa.php`
 
-* Supports practice sessions. Very limited support due to simple log files.
+* Limited data. Use server logs if possible.
+
+### Assetto Corsa Server reader
+
+`lib/Data/Reader/AssettoCorsaServer.php`
 
 ### RACE 07 reader
 
