@@ -79,6 +79,22 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
+     * Test reading lap lines with a number in the end of driver names.
+     * This caused an exception due to bad regex matching. Example line:
+     *
+     *     LAP Sven RS 201 2:03:643
+     */
+    public function testReadingLapsWithNumericDriverName()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__
+            .'/logs/assettocorsa-server/number.in.end.driver.name.txt');
+
+        // Just get the session (without exception)
+        $session = Data_Reader::factory($file_path)->getSession();
+    }
+
+    /**
      * Test reading participants with special chars
      */
     public function testReadingParticipantsWithSpecialChars()
