@@ -193,6 +193,34 @@ class Race07Test extends PHPUnit_Framework_TestCase {
         $session = $reader->getSession();
     }
 
+    /**
+     * Test race room log differences
+     */
+    public function testRaceroomLogDifferences()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__
+            .'/logs/raceroom/race.txt');
+
+        // Get the data reader for the given data source
+        $reader = Data_Reader::factory($file_path);
+
+        // Get sessions
+        $sessions = $reader->getSessions();
+
+        // Get the track of the first session
+        $track = $sessions[0]->getTrack();
+
+        // Validate track
+        $this->assertSame('Grand Prix', $track->getVenue());
+
+        // Participants best laps are parsed
+        $this->assertNotNull($sessions[0]->getBestLap());
+
+        // TODO: Fix multiple sessions by reading duplicate slot entries
+        // $this->assertSame(2, count($sessions));
+    }
+
 
 
     /***
@@ -221,6 +249,7 @@ class Race07Test extends PHPUnit_Framework_TestCase {
         //-- Validate other
         $this->assertSame(Session::TYPE_RACE, $session->getType());
         $this->assertSame(12, $session->getLastedLaps());
+        $this->assertSame('Unknown or offline', $session->getServer()->getName());
     }
 
     /**

@@ -61,18 +61,31 @@ class Data_Reader_Race07 extends Data_Reader {
              -> setVersion($data['header']['version']);
         $session->setGame($game);
 
+        //--- Set server (we do not know...)
+        $server = new Server; $server->setName('Unknown or offline');
+        $session->setServer($server);
+
         //--- Set track
 
-        // Match track data
-        // (e.g. Scene=GameData\Locations\Monza_2007\2007_Monza.TRK)
-        preg_match('/^.*\\\\(.*)\\\\(.*)\..*$/i',
-            $data['race']['scene'], $track_matches);
-
-        // Set track values and set to session
         $track = new Track;
-        $track->setVenue($track_matches[1])
-              ->setCourse($track_matches[2])
-              ->setLength( (float) $data['race']['track length']);
+
+        // Matches track data with file based name
+        // (e.g. Scene=GameData\Locations\Monza_2007\2007_Monza.TRK)
+        if (preg_match('/^.*\\\\(.*)\\\\(.*)\..*$/i',
+            $data['race']['scene'], $track_matches))
+        {
+
+            // Set track values and set to session
+            $track->setVenue($track_matches[1])
+                  ->setCourse($track_matches[2]);
+        }
+        // Track data not file based, probably just a string
+        else
+        {
+            $track->setVenue($data['race']['scene']);
+        }
+
+        $track->setLength( (float) $data['race']['track length']);
         $session->setTrack($track);
 
         // Get participants
@@ -312,7 +325,8 @@ class Data_Reader_Race07 extends Data_Reader {
 
                 // All laps missing but has best lap
                 if (sizeof($laps_collection) === 0 AND
-                    $racebestlap = $this->get($driver_data, 'racebestlap'))
+                    ($racebestlap = $this->get($driver_data, 'racebestlap') OR
+                    $racebestlap = $this->get($driver_data, 'bestlap')))
                 {
                     // Get first lap and change time
                     $participant->getLap(1)->setTime(
@@ -457,7 +471,14 @@ class Data_Reader_Race07 extends Data_Reader {
             // Is normal value
             else
             {
-                $array_data[$section][$key] = $split[1];
+                // Value does not exist yet
+                // WARNING: Quick fix for duplicate slots (which indicate
+                //          multiple sessions?)
+                if ( ! isset($array_data[$section][$key]))
+                {
+                    // Set value
+                    $array_data[$section][$key] = $split[1];
+                }
             }
         }
 

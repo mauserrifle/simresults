@@ -1,0 +1,973 @@
+[Header]
+Game=RaceRoom Racing Experience
+Version=0.3.0.4157
+TimeString=2014/12/18 17:09:04
+
+[Race]
+RaceMode=1
+Scene=Grand Prix
+AIDB=Grand Prix.AIW
+Track Length=3663.8020
+
+[Slot000]
+Driver=Frank Berndt
+Vehicle=DTM Mercedes AMG C Coupe 14
+Team=Petronas Mercedes AMG
+Penalty=5
+QualTime=1:25.047
+Laps=11
+LapDistanceTravelled=882.465027
+BestLap=1:24.053
+RaceTime=0:16:16.136
+
+[Slot001]
+Driver=Timo Scheider
+Vehicle=Audi RS 5 DTM 2014
+Team=Audi Sport Team Phoenix
+Penalty=0
+QualTime=1:27.105
+Laps=11
+LapDistanceTravelled=1388.782959
+BestLap=1:30.589
+RaceTime=0:17:32.049
+
+[Slot002]
+Driver=Maxime Martin
+Vehicle=BMW M4 DTM
+Team=BMW Team RMG
+Penalty=0
+Laps=11
+LapDistanceTravelled=1268.765991
+BestLap=1:30.472
+RaceTime=0:17:34.290
+
+[Slot003]
+Driver=Edoardo Mortara
+Vehicle=Audi RS 5 DTM 2014
+Team=Audi Sport Team Abt
+Penalty=0
+QualTime=1:27.727
+Laps=11
+LapDistanceTravelled=1232.278198
+BestLap=1:30.873
+RaceTime=0:17:33.349
+
+[Slot004]
+Driver=Adrien Tambay
+Vehicle=Audi RS 5 DTM 2014
+Team=Audi Sport Team Abt
+Penalty=0
+Laps=11
+LapDistanceTravelled=1534.315674
+BestLap=1:29.937
+RaceTime=0:17:29.708
+
+[Slot005]
+Driver=Gary Paffett
+Vehicle=DTM Mercedes AMG C Coupe 14
+Team=Euronics Mercedes AMG
+Penalty=0
+Laps=11
+LapDistanceTravelled=694.979126
+BestLap=1:32.520
+RaceTime=0:17:52.427
+
+[Slot006]
+Driver=Joey Hand
+Vehicle=BMW M4 DTM
+Team=BMW Team RBM
+Penalty=0
+Laps=11
+LapDistanceTravelled=663.202698
+BestLap=1:32.609
+RaceTime=0:17:53.920
+
+[Slot007]
+Driver=Marco Wittmann
+Vehicle=BMW M4 DTM
+Team=BMW Team RMG
+Penalty=0
+Laps=11
+LapDistanceTravelled=2219.488037
+BestLap=1:28.740
+RaceTime=0:17:13.929
+
+[Slot008]
+Driver=Augusto Farfus
+Vehicle=BMW M4 DTM
+Team=BMW Team RBM
+Penalty=0
+QualTime=1:28.246
+Laps=11
+LapDistanceTravelled=1900.071899
+BestLap=1:29.859
+RaceTime=0:17:19.922
+
+[Slot009]
+Driver=Christian Vietoris
+Vehicle=DTM Mercedes AMG C Coupe 14
+Team=Original-Teile Mercedes AMG
+Penalty=0
+QualTime=1:26.855
+Laps=11
+LapDistanceTravelled=2079.446533
+BestLap=1:30.160
+RaceTime=0:17:17.235
+
+[Slot010]
+Driver=Pascal Wehrlein
+Vehicle=DTM Mercedes AMG C Coupe 14
+Team=Gooix Mercedes AMG
+Penalty=0
+Laps=11
+LapDistanceTravelled=1212.668457
+BestLap=1:30.486
+RaceTime=0:17:34.455
+
+[Slot011]
+Driver=Miguel Molina
+Vehicle=Audi RS 5 DTM 2014
+Team=Audi Sport Team Abt Sportsline
+Penalty=0
+Laps=11
+LapDistanceTravelled=1415.529785
+BestLap=1:30.425
+RaceTime=0:17:32.171
+
+[Slot012]
+Driver=Nico Müller
+Vehicle=Audi RS 5 DTM 2014
+Team=Audi Sport Team Rosberg
+Penalty=0
+Laps=11
+LapDistanceTravelled=1025.205566
+BestLap=1:31.376
+RaceTime=0:17:40.528
+
+[Slot013]
+Driver=Vitaly Petrov
+Vehicle=DTM Mercedes AMG C Coupe 14
+Team=Mercedes AMG
+Penalty=0
+QualTime=1:26.667
+Laps=11
+LapDistanceTravelled=731.282532
+BestLap=1:32.677
+RaceTime=0:17:51.282
+
+[Slot014]
+Driver=Bruno Spengler
+Vehicle=BMW M4 DTM
+Team=BMW Team Schnitzer
+Penalty=0
+Laps=11
+LapDistanceTravelled=1862.250977
+BestLap=1:29.138
+RaceTime=0:17:21.410
+
+[Slot015]
+Driver=Jamie Green
+Vehicle=Audi RS 5 DTM 2014
+Team=Audi Sport Team Rosberg
+Penalty=0
+QualTime=1:26.455
+Laps=11
+LapDistanceTravelled=2105.316895
+BestLap=1:30.110
+RaceTime=0:17:16.775
+
+[Slot016]
+Driver=Robert Wickens
+Vehicle=DTM Mercedes AMG C Coupe 14
+Team=Free Man's World Mercedes AMG
+Penalty=0
+Laps=11
+LapDistanceTravelled=1245.751343
+BestLap=1:30.716
+RaceTime=0:17:33.452
+
+[Slot017]
+Driver=Timo Glock
+Vehicle=BMW M4 DTM
+Team=BMW Team MTEK
+Penalty=0
+QualTime=1:27.717
+Laps=11
+LapDistanceTravelled=1287.834839
+BestLap=1:30.928
+RaceTime=0:17:33.438
+
+[Slot018]
+Driver=Mike Rockenfeller
+Vehicle=Audi RS 5 DTM 2014
+Team=Audi Sport Team Phoenix
+Penalty=0
+Laps=11
+LapDistanceTravelled=1879.821289
+BestLap=1:28.842
+RaceTime=0:17:20.644
+
+[Slot019]
+Driver=Paul Di Resta
+Vehicle=DTM Mercedes AMG C Coupe 14
+Team=Mercedes AMG
+Penalty=0
+Laps=11
+LapDistanceTravelled=942.362061
+BestLap=1:31.822
+RaceTime=0:17:45.547
+
+[Slot020]
+Driver=António Félix da Costa
+Vehicle=BMW M4 DTM
+Team=BMW Team MTEK
+Penalty=0
+Laps=11
+LapDistanceTravelled=675.026978
+BestLap=1:32.835
+RaceTime=0:17:52.750
+
+[Slot021]
+Driver=Martin Tomczyk
+Vehicle=BMW M4 DTM
+Team=BMW Team Schnitzer
+Penalty=0
+Laps=11
+LapDistanceTravelled=917.863159
+BestLap=1:31.920
+RaceTime=0:17:46.201
+
+[Slot022]
+Driver=Mattias Ekström
+Vehicle=Audi RS 5 DTM 2014
+Team=Audi Sport Team Abt Sportsline
+Penalty=0
+Laps=11
+LapDistanceTravelled=900.235535
+BestLap=1:31.920
+RaceTime=0:17:47.364
+
+[Slot000]
+Driver=Frank Berndt
+Vehicle=DTM Mercedes AMG C Coupe 14
+Team=Petronas Mercedes AMG
+Penalty=5
+QualTime=1:25.047
+Laps=11
+LapDistanceTravelled=882.465027
+BestLap=1:24.053
+RaceTime=0:16:16.136
+
+[Slot001]
+Driver=Timo Scheider
+Vehicle=Audi RS 5 DTM 2014
+Team=Audi Sport Team Phoenix
+Penalty=0
+QualTime=1:27.105
+Laps=11
+LapDistanceTravelled=1388.782959
+BestLap=1:30.589
+RaceTime=0:17:32.049
+
+[Slot002]
+Driver=Maxime Martin
+Vehicle=BMW M4 DTM
+Team=BMW Team RMG
+Penalty=0
+Laps=11
+LapDistanceTravelled=1268.765991
+BestLap=1:30.472
+RaceTime=0:17:34.290
+
+[Slot003]
+Driver=Edoardo Mortara
+Vehicle=Audi RS 5 DTM 2014
+Team=Audi Sport Team Abt
+Penalty=0
+QualTime=1:27.727
+Laps=11
+LapDistanceTravelled=1232.278198
+BestLap=1:30.873
+RaceTime=0:17:33.349
+
+[Slot004]
+Driver=Adrien Tambay
+Vehicle=Audi RS 5 DTM 2014
+Team=Audi Sport Team Abt
+Penalty=0
+Laps=11
+LapDistanceTravelled=1534.315674
+BestLap=1:29.937
+RaceTime=0:17:29.708
+
+[Slot005]
+Driver=Gary Paffett
+Vehicle=DTM Mercedes AMG C Coupe 14
+Team=Euronics Mercedes AMG
+Penalty=0
+Laps=11
+LapDistanceTravelled=694.979126
+BestLap=1:32.520
+RaceTime=0:17:52.427
+
+[Slot006]
+Driver=Joey Hand
+Vehicle=BMW M4 DTM
+Team=BMW Team RBM
+Penalty=0
+Laps=11
+LapDistanceTravelled=663.202698
+BestLap=1:32.609
+RaceTime=0:17:53.920
+
+[Slot007]
+Driver=Marco Wittmann
+Vehicle=BMW M4 DTM
+Team=BMW Team RMG
+Penalty=0
+Laps=11
+LapDistanceTravelled=2219.488037
+BestLap=1:28.740
+RaceTime=0:17:13.929
+
+[Slot008]
+Driver=Augusto Farfus
+Vehicle=BMW M4 DTM
+Team=BMW Team RBM
+Penalty=0
+QualTime=1:28.246
+Laps=11
+LapDistanceTravelled=1900.071899
+BestLap=1:29.859
+RaceTime=0:17:19.922
+
+[Slot009]
+Driver=Christian Vietoris
+Vehicle=DTM Mercedes AMG C Coupe 14
+Team=Original-Teile Mercedes AMG
+Penalty=0
+QualTime=1:26.855
+Laps=11
+LapDistanceTravelled=2079.446533
+BestLap=1:30.160
+RaceTime=0:17:17.235
+
+[Slot010]
+Driver=Pascal Wehrlein
+Vehicle=DTM Mercedes AMG C Coupe 14
+Team=Gooix Mercedes AMG
+Penalty=0
+Laps=11
+LapDistanceTravelled=1212.668457
+BestLap=1:30.486
+RaceTime=0:17:34.455
+
+[Slot011]
+Driver=Miguel Molina
+Vehicle=Audi RS 5 DTM 2014
+Team=Audi Sport Team Abt Sportsline
+Penalty=0
+Laps=11
+LapDistanceTravelled=1415.529785
+BestLap=1:30.425
+RaceTime=0:17:32.171
+
+[Slot012]
+Driver=Nico Müller
+Vehicle=Audi RS 5 DTM 2014
+Team=Audi Sport Team Rosberg
+Penalty=0
+Laps=11
+LapDistanceTravelled=1025.205566
+BestLap=1:31.376
+RaceTime=0:17:40.528
+
+[Slot013]
+Driver=Vitaly Petrov
+Vehicle=DTM Mercedes AMG C Coupe 14
+Team=Mercedes AMG
+Penalty=0
+QualTime=1:26.667
+Laps=11
+LapDistanceTravelled=731.282532
+BestLap=1:32.677
+RaceTime=0:17:51.282
+
+[Slot014]
+Driver=Bruno Spengler
+Vehicle=BMW M4 DTM
+Team=BMW Team Schnitzer
+Penalty=0
+Laps=11
+LapDistanceTravelled=1862.250977
+BestLap=1:29.138
+RaceTime=0:17:21.410
+
+[Slot015]
+Driver=Jamie Green
+Vehicle=Audi RS 5 DTM 2014
+Team=Audi Sport Team Rosberg
+Penalty=0
+QualTime=1:26.455
+Laps=11
+LapDistanceTravelled=2105.316895
+BestLap=1:30.110
+RaceTime=0:17:16.775
+
+[Slot016]
+Driver=Robert Wickens
+Vehicle=DTM Mercedes AMG C Coupe 14
+Team=Free Man's World Mercedes AMG
+Penalty=0
+Laps=11
+LapDistanceTravelled=1245.751343
+BestLap=1:30.716
+RaceTime=0:17:33.452
+
+[Slot017]
+Driver=Timo Glock
+Vehicle=BMW M4 DTM
+Team=BMW Team MTEK
+Penalty=0
+QualTime=1:27.717
+Laps=11
+LapDistanceTravelled=1287.834839
+BestLap=1:30.928
+RaceTime=0:17:33.438
+
+[Slot018]
+Driver=Mike Rockenfeller
+Vehicle=Audi RS 5 DTM 2014
+Team=Audi Sport Team Phoenix
+Penalty=0
+Laps=11
+LapDistanceTravelled=1879.821289
+BestLap=1:28.842
+RaceTime=0:17:20.644
+
+[Slot019]
+Driver=Paul Di Resta
+Vehicle=DTM Mercedes AMG C Coupe 14
+Team=Mercedes AMG
+Penalty=0
+Laps=11
+LapDistanceTravelled=942.362061
+BestLap=1:31.822
+RaceTime=0:17:45.547
+
+[Slot020]
+Driver=António Félix da Costa
+Vehicle=BMW M4 DTM
+Team=BMW Team MTEK
+Penalty=0
+Laps=11
+LapDistanceTravelled=675.026978
+BestLap=1:32.835
+RaceTime=0:17:52.750
+
+[Slot021]
+Driver=Martin Tomczyk
+Vehicle=BMW M4 DTM
+Team=BMW Team Schnitzer
+Penalty=0
+Laps=11
+LapDistanceTravelled=917.863159
+BestLap=1:31.920
+RaceTime=0:17:46.201
+
+[Slot022]
+Driver=Mattias Ekström
+Vehicle=Audi RS 5 DTM 2014
+Team=Audi Sport Team Abt Sportsline
+Penalty=0
+Laps=11
+LapDistanceTravelled=900.235535
+BestLap=1:31.920
+RaceTime=0:17:47.364
+
+[END]
+[Slot001]
+Driver=Timo Scheider
+Vehicle=Audi RS 5 DTM 2014
+Team=Audi Sport Team Phoenix
+Penalty=0
+QualTime=1:40.529
+Laps=8
+LapDistanceTravelled=30.393213
+BestLap=1:40.529
+RaceTime=0:02:08.029
+
+[Slot002]
+Driver=Maxime Martin
+Vehicle=BMW M4 DTM
+Team=BMW Team RMG
+Penalty=0
+QualTime=1:39.558
+Laps=8
+LapDistanceTravelled=87.310539
+BestLap=1:39.558
+RaceTime=0:02:06.423
+
+[Slot003]
+Driver=Edoardo Mortara
+Vehicle=Audi RS 5 DTM 2014
+Team=Audi Sport Team Abt
+Penalty=0
+QualTime=1:40.965
+Laps=8
+LapDistanceTravelled=68.650452
+BestLap=1:40.965
+RaceTime=0:02:10.669
+
+[Slot004]
+Driver=Adrien Tambay
+Vehicle=Audi RS 5 DTM 2014
+Team=Audi Sport Team Abt
+Penalty=0
+QualTime=1:41.113
+Laps=8
+LapDistanceTravelled=75.689972
+BestLap=1:41.113
+RaceTime=0:02:10.704
+
+[Slot005]
+Driver=Gary Paffett
+Vehicle=DTM Mercedes AMG C Coupe 14
+Team=Euronics Mercedes AMG
+Penalty=0
+QualTime=1:40.095
+Laps=8
+LapDistanceTravelled=194.242310
+BestLap=1:40.095
+RaceTime=0:02:08.714
+
+[Slot006]
+Driver=Joey Hand
+Vehicle=BMW M4 DTM
+Team=BMW Team RBM
+Penalty=0
+QualTime=1:40.214
+Laps=8
+LapDistanceTravelled=143.761734
+BestLap=1:40.214
+RaceTime=0:02:08.345
+
+[Slot007]
+Driver=Marco Wittmann
+Vehicle=BMW M4 DTM
+Team=BMW Team RMG
+Penalty=0
+QualTime=1:41.102
+Laps=8
+LapDistanceTravelled=94.647263
+BestLap=1:41.102
+RaceTime=0:02:11.415
+
+[Slot008]
+Driver=Augusto Farfus
+Vehicle=BMW M4 DTM
+Team=BMW Team RBM
+Penalty=0
+QualTime=1:39.966
+Laps=8
+LapDistanceTravelled=151.054703
+BestLap=1:39.966
+RaceTime=0:02:06.394
+
+[Slot009]
+Driver=Christian Vietoris
+Vehicle=DTM Mercedes AMG C Coupe 14
+Team=Original-Teile Mercedes AMG
+Penalty=0
+QualTime=1:39.823
+Laps=8
+LapDistanceTravelled=4357.574707
+BestLap=1:39.823
+RaceTime=0:02:10.428
+
+[Slot010]
+Driver=Pascal Wehrlein
+Vehicle=DTM Mercedes AMG C Coupe 14
+Team=Gooix Mercedes AMG
+Penalty=0
+QualTime=1:41.038
+Laps=8
+LapDistanceTravelled=162.639511
+BestLap=1:41.038
+RaceTime=0:02:10.372
+
+[Slot011]
+Driver=Miguel Molina
+Vehicle=Audi RS 5 DTM 2014
+Team=Audi Sport Team Abt Sportsline
+Penalty=0
+QualTime=1:40.090
+Laps=8
+LapDistanceTravelled=49.292118
+BestLap=1:40.090
+RaceTime=0:02:07.772
+
+[Slot012]
+Driver=Nico Müller
+Vehicle=Audi RS 5 DTM 2014
+Team=Audi Sport Team Rosberg
+Penalty=0
+QualTime=1:39.543
+Laps=8
+LapDistanceTravelled=11.700586
+BestLap=1:39.543
+RaceTime=0:02:07.290
+
+[Slot013]
+Driver=Vitaly Petrov
+Vehicle=DTM Mercedes AMG C Coupe 14
+Team=Mercedes AMG
+Penalty=0
+QualTime=1:41.124
+Laps=8
+LapDistanceTravelled=199.534210
+BestLap=1:41.124
+RaceTime=0:02:10.506
+
+[Slot014]
+Driver=Bruno Spengler
+Vehicle=BMW M4 DTM
+Team=BMW Team Schnitzer
+Penalty=0
+QualTime=1:39.677
+Laps=8
+LapDistanceTravelled=132.296539
+BestLap=1:39.677
+RaceTime=0:02:08.141
+
+[Slot015]
+Driver=Jamie Green
+Vehicle=Audi RS 5 DTM 2014
+Team=Audi Sport Team Rosberg
+Penalty=0
+QualTime=1:39.365
+Laps=8
+LapDistanceTravelled=19.048632
+BestLap=1:39.365
+RaceTime=0:02:03.553
+
+[Slot016]
+Driver=Robert Wickens
+Vehicle=DTM Mercedes AMG C Coupe 14
+Team=Free Man's World Mercedes AMG
+Penalty=0
+QualTime=1:39.787
+Laps=8
+LapDistanceTravelled=181.521881
+BestLap=1:39.787
+RaceTime=0:02:06.006
+
+[Slot017]
+Driver=Timo Glock
+Vehicle=BMW M4 DTM
+Team=BMW Team MTEK
+Penalty=0
+QualTime=1:40.814
+Laps=8
+LapDistanceTravelled=113.492729
+BestLap=1:40.814
+RaceTime=0:02:09.283
+
+[Slot018]
+Driver=Mike Rockenfeller
+Vehicle=Audi RS 5 DTM 2014
+Team=Audi Sport Team Phoenix
+Penalty=0
+QualTime=1:40.189
+Laps=8
+LapDistanceTravelled=37.795036
+BestLap=1:40.189
+RaceTime=0:02:08.244
+
+[Slot019]
+Driver=Paul Di Resta
+Vehicle=DTM Mercedes AMG C Coupe 14
+Team=Mercedes AMG
+Penalty=0
+QualTime=1:39.283
+Laps=8
+LapDistanceTravelled=206.991165
+BestLap=1:39.283
+RaceTime=0:02:07.782
+
+[Slot020]
+Driver=António Félix da Costa
+Vehicle=BMW M4 DTM
+Team=BMW Team MTEK
+Penalty=0
+QualTime=1:39.971
+Laps=8
+LapDistanceTravelled=106.238831
+BestLap=1:39.971
+RaceTime=0:02:05.527
+
+[Slot021]
+Driver=Martin Tomczyk
+Vehicle=BMW M4 DTM
+Team=BMW Team Schnitzer
+Penalty=0
+QualTime=1:39.510
+Laps=8
+LapDistanceTravelled=124.992729
+BestLap=1:39.510
+RaceTime=0:02:09.321
+
+[Slot022]
+Driver=Mattias Ekström
+Vehicle=Audi RS 5 DTM 2014
+Team=Audi Sport Team Abt Sportsline
+Penalty=0
+QualTime=1:39.531
+Laps=8
+LapDistanceTravelled=56.475090
+BestLap=1:39.531
+RaceTime=0:02:05.734
+
+[Slot001]
+Driver=Timo Scheider
+Vehicle=Audi RS 5 DTM 2014
+Team=Audi Sport Team Phoenix
+Penalty=0
+QualTime=1:40.529
+Laps=8
+LapDistanceTravelled=30.393213
+BestLap=1:40.529
+RaceTime=0:02:08.029
+
+[Slot002]
+Driver=Maxime Martin
+Vehicle=BMW M4 DTM
+Team=BMW Team RMG
+Penalty=0
+QualTime=1:39.558
+Laps=8
+LapDistanceTravelled=87.310539
+BestLap=1:39.558
+RaceTime=0:02:06.423
+
+[Slot003]
+Driver=Edoardo Mortara
+Vehicle=Audi RS 5 DTM 2014
+Team=Audi Sport Team Abt
+Penalty=0
+QualTime=1:40.965
+Laps=8
+LapDistanceTravelled=68.650452
+BestLap=1:40.965
+RaceTime=0:02:10.669
+
+[Slot004]
+Driver=Adrien Tambay
+Vehicle=Audi RS 5 DTM 2014
+Team=Audi Sport Team Abt
+Penalty=0
+QualTime=1:41.113
+Laps=8
+LapDistanceTravelled=75.689972
+BestLap=1:41.113
+RaceTime=0:02:10.704
+
+[Slot005]
+Driver=Gary Paffett
+Vehicle=DTM Mercedes AMG C Coupe 14
+Team=Euronics Mercedes AMG
+Penalty=0
+QualTime=1:40.095
+Laps=8
+LapDistanceTravelled=194.242310
+BestLap=1:40.095
+RaceTime=0:02:08.714
+
+[Slot006]
+Driver=Joey Hand
+Vehicle=BMW M4 DTM
+Team=BMW Team RBM
+Penalty=0
+QualTime=1:40.214
+Laps=8
+LapDistanceTravelled=143.761734
+BestLap=1:40.214
+RaceTime=0:02:08.345
+
+[Slot007]
+Driver=Marco Wittmann
+Vehicle=BMW M4 DTM
+Team=BMW Team RMG
+Penalty=0
+QualTime=1:41.102
+Laps=8
+LapDistanceTravelled=94.647263
+BestLap=1:41.102
+RaceTime=0:02:11.415
+
+[Slot008]
+Driver=Augusto Farfus
+Vehicle=BMW M4 DTM
+Team=BMW Team RBM
+Penalty=0
+QualTime=1:39.966
+Laps=8
+LapDistanceTravelled=151.054703
+BestLap=1:39.966
+RaceTime=0:02:06.394
+
+[Slot009]
+Driver=Christian Vietoris
+Vehicle=DTM Mercedes AMG C Coupe 14
+Team=Original-Teile Mercedes AMG
+Penalty=0
+QualTime=1:39.823
+Laps=8
+LapDistanceTravelled=4357.574707
+BestLap=1:39.823
+RaceTime=0:02:10.428
+
+[Slot010]
+Driver=Pascal Wehrlein
+Vehicle=DTM Mercedes AMG C Coupe 14
+Team=Gooix Mercedes AMG
+Penalty=0
+QualTime=1:41.038
+Laps=8
+LapDistanceTravelled=162.639511
+BestLap=1:41.038
+RaceTime=0:02:10.372
+
+[Slot011]
+Driver=Miguel Molina
+Vehicle=Audi RS 5 DTM 2014
+Team=Audi Sport Team Abt Sportsline
+Penalty=0
+QualTime=1:40.090
+Laps=8
+LapDistanceTravelled=49.292118
+BestLap=1:40.090
+RaceTime=0:02:07.772
+
+[Slot012]
+Driver=Nico Müller
+Vehicle=Audi RS 5 DTM 2014
+Team=Audi Sport Team Rosberg
+Penalty=0
+QualTime=1:39.543
+Laps=8
+LapDistanceTravelled=11.700586
+BestLap=1:39.543
+RaceTime=0:02:07.290
+
+[Slot013]
+Driver=Vitaly Petrov
+Vehicle=DTM Mercedes AMG C Coupe 14
+Team=Mercedes AMG
+Penalty=0
+QualTime=1:41.124
+Laps=8
+LapDistanceTravelled=199.534210
+BestLap=1:41.124
+RaceTime=0:02:10.506
+
+[Slot014]
+Driver=Bruno Spengler
+Vehicle=BMW M4 DTM
+Team=BMW Team Schnitzer
+Penalty=0
+QualTime=1:39.677
+Laps=8
+LapDistanceTravelled=132.296539
+BestLap=1:39.677
+RaceTime=0:02:08.141
+
+[Slot015]
+Driver=Jamie Green
+Vehicle=Audi RS 5 DTM 2014
+Team=Audi Sport Team Rosberg
+Penalty=0
+QualTime=1:39.365
+Laps=8
+LapDistanceTravelled=19.048632
+BestLap=1:39.365
+RaceTime=0:02:03.553
+
+[Slot016]
+Driver=Robert Wickens
+Vehicle=DTM Mercedes AMG C Coupe 14
+Team=Free Man's World Mercedes AMG
+Penalty=0
+QualTime=1:39.787
+Laps=8
+LapDistanceTravelled=181.521881
+BestLap=1:39.787
+RaceTime=0:02:06.006
+
+[Slot017]
+Driver=Timo Glock
+Vehicle=BMW M4 DTM
+Team=BMW Team MTEK
+Penalty=0
+QualTime=1:40.814
+Laps=8
+LapDistanceTravelled=113.492729
+BestLap=1:40.814
+RaceTime=0:02:09.283
+
+[Slot018]
+Driver=Mike Rockenfeller
+Vehicle=Audi RS 5 DTM 2014
+Team=Audi Sport Team Phoenix
+Penalty=0
+QualTime=1:40.189
+Laps=8
+LapDistanceTravelled=37.795036
+BestLap=1:40.189
+RaceTime=0:02:08.244
+
+[Slot019]
+Driver=Paul Di Resta
+Vehicle=DTM Mercedes AMG C Coupe 14
+Team=Mercedes AMG
+Penalty=0
+QualTime=1:39.283
+Laps=8
+LapDistanceTravelled=206.991165
+BestLap=1:39.283
+RaceTime=0:02:07.782
+
+[Slot020]
+Driver=António Félix da Costa
+Vehicle=BMW M4 DTM
+Team=BMW Team MTEK
+Penalty=0
+QualTime=1:39.971
+Laps=8
+LapDistanceTravelled=106.238831
+BestLap=1:39.971
+RaceTime=0:02:05.527
+
+[Slot021]
+Driver=Martin Tomczyk
+Vehicle=BMW M4 DTM
+Team=BMW Team Schnitzer
+Penalty=0
+QualTime=1:39.510
+Laps=8
+LapDistanceTravelled=124.992729
+BestLap=1:39.510
+RaceTime=0:02:09.321
+
+[Slot022]
+Driver=Mattias Ekström
+Vehicle=Audi RS 5 DTM 2014
+Team=Audi Sport Team Abt Sportsline
+Penalty=0
+QualTime=1:39.531
+Laps=8
+LapDistanceTravelled=56.475090
+BestLap=1:39.531
+RaceTime=0:02:05.734
+
+[END]
