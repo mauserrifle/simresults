@@ -25,25 +25,49 @@ This project is created and maintained by
 
 ## Supported games
 
-### rFactor
+Simresults supports a wide range of games:
 
-Both rFactor and rFactor 2 are supported, or anything based on these engines.
-
-#### rFactor powered games
-
-Because the rFactor engine is used within other games, those below are
-confirmed to be working too:
-
+* rFactor
+* rFactor 2
 * Game Stock Car 2012
 * Game Stock Car 2013
+* Game Stock Car Extreme
 * Formula Truck 2013
+* Assetto Corsa
+* RACE
+* RACE 07
+* GTR
+* GTR2
+* GT Legends
+* RaceRoom Racing Experience
+* BMW M3 Challenge
+* F1 challenge 99-02
 
-Please note that anything other than rFactor or rFactor 2 is reported as a
+The following expansions of RACE (07) should work too:
+
+* Race: Caterham expansion
+* GTR Evolution
+* Crowne Plaza
+* STCC - The Game
+* STCC 2 - The Game
+* RACE On
+* Raceroom - The Game
+* Raceroom - The Game 2
+* Formula Raceroom
+* GT Power
+* WTCC 2010
+* Retro
+* Race Injection
+* Volvo - The Game
+
+
+Please note that Game Stock Car and Formula Truck will be reported as as a
 rFactor game.
 
-### Assetto Corsa
+Results from F1 challenge and GTR might miss laps.
 
-Very limited support due to BETA state. Only laps and drifting points are read.
+Results from Assetto Corsa (race_out.json) and Raceroom might only contain 1
+lap.
 
 
 ## Features
@@ -62,12 +86,32 @@ Very limited support due to BETA state. Only laps and drifting points are read.
 
 ### rFactor reader
 
+`lib/Data/Reader/Rfactor2.php`
+
 * Supports rFactor and rFactor 2. Also works for other rFactor powered games:
   Game Stock Car 2012, Game Stock Car 2013 and Formula Truck 2013
 * Detects and fixes position data (sometimes log files report complete wrong
   positions due to lag/bugs)
 * Detects human and AI players using their aids (sometimes log files report
   wrong player state)
+
+### Assetto Corsa reader
+
+`lib/Data/Reader/AssettoCorsa.php`
+
+* Limited data. Use server logs if possible.
+
+### Assetto Corsa Server reader
+
+`lib/Data/Reader/AssettoCorsaServer.php`
+
+### RACE 07 reader
+
+`lib/Data/Reader/Race07.php`
+
+* Also works for the following games: RACE, GTR, GTR2, GT Legends,
+  BMW M3 Challenge, F1 challenge 99-02 and all expansions of these games
+* Checks and fixes log variations like non-zero based laps and missing lap data
 
 ## Requirements
 
@@ -150,10 +194,26 @@ Have a bug or a feature request?
 
 ## Known issues
 
+### Caching
+
 Some classes like `Participant` do heavy caching. So changing any value after
 calling sorting methods will be pointless. There are no cache invalidate
 methods (yet). Most likely they will never be needed as there's no use case you
 actually would want to change values after reading out all data.
+
+### Laps missing
+
+Logs tend to miss lap data on all games. Check the logs.
+
+### Marked as RACE session while it's not
+
+The Race 07 reader detects qualify if all drivers are DNF. There's no session
+type in these log files. This detection might be false in some cases.
+
+### Date is not right of session
+
+GTR, GTL, F1 challenge don't have a timestamp or timezone information. So
+dates are created using the default timezone.
 
 ## Contributing
 

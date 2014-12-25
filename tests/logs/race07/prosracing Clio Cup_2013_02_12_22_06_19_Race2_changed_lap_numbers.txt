@@ -1,0 +1,66 @@
+//[[gMa1.000f (c)2004    ]] [[            ]]
+//RANDOM.COMMENT.TO.TEST.FOR.NO.FAILURE
+[Header]
+Game=RACE 07
+Version=1.2.1.10
+TimeString=2013/02/12 22:06:19
+Aids=0,0,0,0,0,1,0,0,0
+
+[Race]
+RaceMode=5
+Scene=GameData\Locations\Monza_2007\2007_Monza.TRK
+AIDB=GameData\Locations\Monza_2007\2007_Monza.AIW
+Race Length=0.100
+Track Length=5782.6406
+
+[Slot019]
+Driver=Seb63
+SteamUser=Unknown
+SteamId=Unknown
+Vehicle=Renault Sport Clio CUP France 2008
+Team=Team Speed Car
+QualTime=2:14.387
+Laps=0
+LapDistanceTravelled=5693.156738
+RaceTime=DNF
+Reason=0
+
+[Slot005]
+Driver=[PRG]flashdepau
+SteamUser=Unknown
+SteamId=Unknown
+Vehicle=Renault Sport Clio CUP France 2008
+Team=flash racing
+QualTime=2:08.149
+Laps=3
+Lap=(1, -1.000, 2:27.888)
+Lap=(3, 276.292, 2:22.652)
+LapDistanceTravelled=2461.032715
+BestLap=2:22.652
+RaceTime=DNF
+Reason=1
+
+[Slot000]
+Driver=lemans
+SteamUser=dicetheone
+SteamId=35780368
+Vehicle=Renault Sport Clio CUP France 2008
+Team=New Deal Racing
+QualTime=2:07.772
+Laps=12
+Lap=(2, 128.404, 2:17.831)
+Lap=(3, 270.670, 2:07.945)
+Lap=(4, 408.501, 2:09.949)
+Lap=(5, 536.446, 2:08.445)
+Lap=(6, 666.395, 2:09.773)
+Lap=(7, 794.840, 2:08.119)
+Lap=(8, 924.613, 2:09.082)
+Lap=(9, 1052.733, 2:08.313)
+Lap=(10, 1181.814, 2:08.522)
+Lap=(11, 1310.127, 2:08.347)
+Lap=(12, 1438.650, 2:09.051)
+LapDistanceTravelled=5714.981445
+BestLap=2:07.945
+RaceTime=0:26:07.644
+
+[END]

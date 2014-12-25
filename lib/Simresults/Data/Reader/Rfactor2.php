@@ -201,50 +201,8 @@ class Data_Reader_Rfactor2 extends Data_Reader {
             // We have position corruption
             if ($position_corruption)
             {
-                // Sort by total time instead of position
-                usort($participants, function($a, $b) use ($dnf_statusses) {
-
-                    // Participant a has less laps than b. He is lapped
-                    if ($a->getNumberOfLaps() < $b->getNumberOfLaps())
-                    {
-                        return 1;
-                    }
-
-                    // Participant b has less laps than a. He is lapped
-                    if ($b->getNumberOfLaps() < $a->getNumberOfLaps())
-                    {
-                        return -1;
-                    }
-
-                    // Both not finished
-                    if (in_array($a->getFinishStatus(), $dnf_statusses) AND
-                        in_array($b->getFinishStatus(), $dnf_statusses))
-                    {
-                        // Same
-                        return 0;
-                    }
-
-                    // a not finished
-                    if (in_array($a->getFinishStatus(), $dnf_statusses))
-                    {
-
-                        return 1;
-                    }
-
-                    // b not finished
-                    if (in_array($b->getFinishStatus(), $dnf_statusses))
-                    {
-                        return -1;
-                    }
-
-                    // Same time
-                     if ($a->getTotalTime() === $b->getTotalTime()) {
-                        return 0;
-                    }
-
-                    // Return normal comparison
-                    return (($a->getTotalTime() < $b->getTotalTime()) ? -1 : 1);
-                });
+                // Sort participants by total time
+                $participants = Helper::sortParticipantsByTotalTime($participants);
             }
         }
         // Other session
@@ -282,42 +240,8 @@ class Data_Reader_Rfactor2 extends Data_Reader {
             if ($position_corruption)
             {
                 // Sort by best lap instead of position
-                usort($participants, function($a, $b) {
-
-                    // Get best laps
-                    $a_best_lap = $a->getBestLap();
-                    $b_best_lap = $b->getBestLap();
-
-                    // Both participants have no best lap
-                    if ( ! $a_best_lap AND ! $b_best_lap)
-                    {
-                        // Same
-                        return 0;
-                    }
-
-                    // a has no best lap
-                    if ( ! $a_best_lap)
-                    {
-                        return 1;
-                    }
-
-                    // b has no best lap
-                    if ( ! $b_best_lap)
-                    {
-                        return -1;
-                    }
-
-                    // Same time
-                     if ($a_best_lap->getTime() === $b_best_lap->getTime()) {
-                        return 0;
-                    }
-
-                    // Return normal comparison
-                    return ((
-                        $a_best_lap->getTime() <
-                            $b_best_lap->getTime())
-                        ? -1 : 1);
-                });
+                $participants =
+                    Helper::sortParticipantsByBestLap($participants);
             }
         }
 
@@ -986,47 +910,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                 }
 
                 // Sort the laps by elapsed time
-                usort($laps, function($a,$b) {
-                    // Same time
-                     if ($a->getElapsedSeconds() === $b->getElapsedSeconds()) {
-                        return 0;
-                    }
-
-                    // a has no elapsed seconds
-                    if ( ! $a->getElapsedSeconds())
-                    {
-                        // $b is the faster
-                           return 1;
-                    }
-
-                    // b has no elapsed seconds
-                    if ( ! $b->getElapsedSeconds())
-                    {
-                        // $a is faster
-                           return -1;
-                    }
-
-                    // a lap is not completed
-                    if ( ! $a->isCompleted())
-                    {
-                        // $b is faster
-                        return 1;
-                    }
-
-                    // b lap is not completed
-                    if ( ! $b->isCompleted())
-                    {
-                        // $a is faster
-                        return -1;
-                    }
-
-                    // Return normal comparison
-                    return ($a->getElapsedSeconds() < $b->getElapsedSeconds())
-                              ? -1 : 1;
-                });
-
-                // Make 100% sure we have proper array keys
-                $laps = array_values($laps);
+                $laps = Helper::sortLapsByElapsedTime($laps);
 
                 // Fix the positions
                 foreach ($laps as $lap_key => $lap)
@@ -1104,9 +988,25 @@ class Data_Reader_Rfactor2 extends Data_Reader {
         // No incidents by default
         $incidents = array();
 
+        // Get incidents from XML
+        $incidents_dom = $this->dom->getElementsByTagName('Incident');
+
+        // Way to many incidents!
+        if ($incidents_dom->length > 2000)
+        {
+             // Create new dummy incident
+            $incident = new Incident;
+
+            $session->setIncidents(array(
+                $incident->setMessage('Sorry, way too many incidents to show!')
+                         ->setDate(clone $session->getDate()),
+            ));
+            return;
+        }
+
         // Loop each incident (if any)
         /* @var $incident_xml \DOMNode */
-        foreach ($this->dom->getElementsByTagName('Incident') as $incident_xml)
+        foreach ($incidents_dom as $incident_xml)
         {
             // Create new incident
             $incident = new Incident;

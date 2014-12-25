@@ -55,6 +55,98 @@ class Helper {
     }
 
     /**
+     * Get seconds from time format: (h:)i:s.u.
+     *
+     * Set param `$same_micro_separator` to force micro parsing using colon
+     * format: (h:)i:s:u
+     *
+     * @param   string    $formatted_time
+     * @param   boolean   $colon_micro_separator Whether the micro seconds are
+     *                                           separated using the regular
+     *                                           colon. If true, the last
+     *                                           digits will allways be parsed
+     *                                           as micro. Format: (h:)i:s:u
+     * @return  string
+     */
+    public static function secondsFromFormattedTime(
+        $formatted_time,
+        $colon_micro_separator=false)
+    {
+        // Always micro seconds using a colon separator
+        if ($colon_micro_separator)
+        {
+            // Matched h:i:s:u
+            if (preg_match (
+                '/(.*):(.*):(.*):(.*)/i',
+                $formatted_time, $time_matches))
+            {
+                // Get seconds
+                $seconds = ($time_matches[1] * 3600) +
+                           ($time_matches[2] * 60) +
+                           $time_matches[3];
+
+                // Add microseconds to seconds using string functions and convert back
+                // to float
+                $seconds = (float) ($seconds.'.'.$time_matches[4]);
+
+                return $seconds;
+            }
+
+            // Matched i:s:u
+            if (preg_match (
+                '/(.*):(.*):(.*)/i',
+                $formatted_time, $time_matches))
+            {
+                // Get seconds
+                $seconds = ($time_matches[1] * 60) +
+                           $time_matches[2];
+
+                // Add microseconds to seconds using string functions and convert back
+                // to float
+                $seconds = (float) ($seconds.'.'.$time_matches[3]);
+
+                return $seconds;
+            }
+
+        }
+        // Matched h:i:s.u
+        else if (preg_match (
+            '/(.*):(.*):(.*)\.(.*)/i',
+            $formatted_time, $time_matches))
+        {
+            // Get seconds
+            $seconds = ($time_matches[1] * 3600) +
+                       ($time_matches[2] * 60) +
+                       $time_matches[3];
+
+            // Add microseconds to seconds using string functions and convert back
+            // to float
+            $seconds = (float) ($seconds.'.'.$time_matches[4]);
+
+            return $seconds;
+        }
+
+        // Matched i:s.u
+        if (preg_match (
+            '/(.*):(.*)\.(.*)/i',
+            $formatted_time, $time_matches))
+        {
+            // Get seconds
+            $seconds = ($time_matches[1] * 60) +
+                       $time_matches[2];
+
+            // Add microseconds to seconds using string functions and convert back
+            // to float
+            $seconds = (float) ($seconds.'.'.$time_matches[3]);
+
+            return $seconds;
+        }
+
+        // Throw invalid argument by default
+        throw new \InvalidArgumentException;
+    }
+
+    /**
      * Returns the given laps sorted by a sector (ASC)
      *
      * @return  array  the laps
@@ -141,5 +233,181 @@ class Helper {
         // Return laps
         return $laps;
     }
+
+    /**
+     * Returns the given laps sorted by elapsed time (ASC)
+     *
+     * TODO: Unittest
+     *
+     * @return  array  the laps
+     */
+    public static function sortLapsByElapsedTime(array $laps)
+    {
+        usort($laps, function($a,$b) {
+            // Same elapsed seconds
+             if ($a->getElapsedSeconds() === $b->getElapsedSeconds()) {
+
+                 // Same time
+                 if ($a->getTime() === $b->getTime())
+                 {
+                     return 0;
+                 }
+
+                // Return time comparison as fallback
+                return ($a->getTime() < $b->getTime()) ? -1 : 1;
+            }
+
+            // a has no elapsed seconds
+            if ( ! $a->getElapsedSeconds())
+            {
+                // $b is the faster
+                   return 1;
+            }
+
+            // b has no elapsed seconds
+            if ( ! $b->getElapsedSeconds())
+            {
+                // $a is faster
+                   return -1;
+            }
+
+            // a lap is not completed
+            if ( ! $a->isCompleted())
+            {
+                // $b is faster
+                return 1;
+            }
+
+            // b lap is not completed
+            if ( ! $b->isCompleted())
+            {
+                // $a is faster
+                return -1;
+            }
+
+            // Return normal comparison
+            return ($a->getElapsedSeconds() < $b->getElapsedSeconds())
+                      ? -1 : 1;
+        });
+
+        // Return laps
+        return $laps;
+    }
+
+
+    /**
+     * Sort participants by total time, also checks finish statusses
+     *
+     * TODO: Unittest
+     *
+     * @param   array   $participants
+     * @return  array   The sorted participants
+     */
+    public static function sortParticipantsByTotalTime(array $participants)
+    {
+        // DNF statusses
+        $dnf_statusses = array(
+            Participant::FINISH_DNF,
+            Participant::FINISH_DQ,
+            Participant::FINISH_NONE,
+        );
+
+        usort($participants, function($a, $b) use ($dnf_statusses) {
+
+            // Participant a has less laps than b. He is lapped
+            if ($a->getNumberOfLaps() < $b->getNumberOfLaps())
+            {
+                return 1;
+            }
+
+            // Participant b has less laps than a. He is lapped
+            if ($b->getNumberOfLaps() < $a->getNumberOfLaps())
+            {
+                return -1;
+            }
+
+            // Both not finished
+            if (in_array($a->getFinishStatus(), $dnf_statusses) AND
+                in_array($b->getFinishStatus(), $dnf_statusses))
+            {
+                // Same
+                return 0;
+            }
+
+            // a not finished
+            if (in_array($a->getFinishStatus(), $dnf_statusses))
+            {
+
+                return 1;
+            }
+
+            // b not finished
+            if (in_array($b->getFinishStatus(), $dnf_statusses))
+            {
+                return -1;
+            }
+
+            // Same time
+             if ($a->getTotalTime() === $b->getTotalTime()) {
+                return 0;
+            }
+
+            // Return normal comparison
+            return (($a->getTotalTime() < $b->getTotalTime()) ? -1 : 1);
+        });
+
+        return $participants;
+    }
+
+    /**
+     * Sort participants by best lap
+     *
+     * TODO: Unittest
+     *
+     * @param   array   $participants
+     * @return  array   The sorted participants
+     */
+    public static function sortParticipantsByBestLap(array $participants)
+    {
+        usort($participants, function($a, $b) {
+
+            // Get best laps
+            $a_best_lap = $a->getBestLap();
+            $b_best_lap = $b->getBestLap();
+
+            // Both participants have no best lap
+            if ( ! $a_best_lap AND ! $b_best_lap)
+            {
+                // Same
+                return 0;
+            }
+
+            // a has no best lap
+            if ( ! $a_best_lap)
+            {
+                return 1;
+            }
+
+            // b has no best lap
+            if ( ! $b_best_lap)
+            {
+                return -1;
+            }
+
+            // Same time
+             if ($a_best_lap->getTime() === $b_best_lap->getTime()) {
+                return 0;
+            }
+
+            // Return normal comparison
+            return ((
+                $a_best_lap->getTime() <
+                    $b_best_lap->getTime())
+                ? -1 : 1);
+        });
+
+        return $participants;
+    }
+
 
 }

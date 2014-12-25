@@ -40,6 +40,11 @@ class Participant {
     protected $cache_laps_sorted_by_sector = array();
 
     /**
+     * @var  array  The cache for best lap by sector
+     */
+    protected $cache_best_lap_by_sector = array();
+
+    /**
      * @var  array  The cache for average lap, with or without pit sectors
      */
     protected $cache_average_lap = array();
@@ -48,6 +53,11 @@ class Participant {
      * @var  Lap|null  The cache for best possible lap
      */
     protected $cache_best_possible_lap;
+
+    /**
+     * @var  Lap|null  The cache for best lap
+     */
+    protected $cache_best_lap;
 
 
 
@@ -536,6 +546,12 @@ class Participant {
      */
     public function getBestLap()
     {
+        // There is cache
+        if ($this->cache_best_lap !== null)
+        {
+            return $this->cache_best_lap;
+        }
+
         // Get laps
         $laps = $this->getLapsSortedByTime();
 
@@ -544,7 +560,7 @@ class Participant {
         {
             if ($lap->isCompleted())
             {
-                return $lap;
+                return $this->cache_best_lap = $lap;
             }
         }
 
@@ -625,17 +641,29 @@ class Participant {
      */
     public function getBestLapBySector($sector)
     {
+        // There is cache
+        if (array_key_exists($sector, $this->cache_best_lap_by_sector))
+        {
+            return $this->cache_best_lap_by_sector[$sector];
+        }
+
         $laps = $this->getLapsSortedBySector($sector);
-        return array_shift($laps);
+        return $this->cache_best_lap_by_sector[$sector] = array_shift($laps);
     }
 
     /**
-     * Returns the difference in starting and ending position
+     * Returns the difference in starting and ending position. Returns null
+     * when unknown
      *
-     * @return  int
+     * @return  int|nuill
      */
     public function getPositionDifference()
     {
+        // No grid position
+        if ( ! $this->getGridPosition()) {
+            return null;
+        }
+
         return (int) ($this->getGridPosition() - $this->getPosition());
     }
 

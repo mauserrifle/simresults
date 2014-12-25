@@ -1,0 +1,121 @@
+Server CFG Path :  cfg/server_cfg.ini
+Entry List Path :  cfg/entry_list.ini
+Assetto Corsa Dedicated Server v0.10.1
+Protocol version: 10
+2014-10-06 23:31:46.3756273 +0200 CEST
+LOCAL IP 0: fe80::245c:39c8:3f57:fff5
+LOCAL IP 1: 192.168.0.10
+LOCAL IP 2: 192.168.42.173
+LOCAL IP 3: 2001:0:5ef5:79fd:245c:39c8:3f57:fff5
+Using cfg path:  cfg/server_cfg.ini
+Car list:
+_bmw_m3_gt2_
+_bmw_z4_gt3_
+_ferrari_599xxevo_
+_lotus_evora_gtc_
+_lotus_evora_gte_
+_mclaren_mp412c_gt3_
+_p4-5_2011_
+Client interval HZ: 15 , MS=64
+TRACK=magione
+CARS=["bmw_m3_gt2" "bmw_z4_gt3" "ferrari_599xxevo" "lotus_evora_gtc" "lotus_evora_gte" "mclaren_mp412c_gt3" "p4-5_2011"]
+SESSION: Race
+TYPE=RACE
+TIME=0
+LAPS=2
+
+DynamicTrack: first session, resetting grip
+CHECKSUM: system/data/surfaces.ini=41949b9f7045cad2af3f5eb951d170a9
+CHECKSUM: content/tracks/magione/data/surfaces.ini=5e787123e39928abf3b45ed188c21968
+Loading blacklist
+Opening entry list:  cfg/entry_list.ini
+Found car  CAR_0
+SESSION_ID:0
+MODEL: bmw_m3_gt2 (0) [ []]
+DRIVERNAME:
+GUID:
+Found car  CAR_1
+WARNING: Entry list has more clients than allowed by the MAX_CLIENT value in server_cfg.ini
+Initialising Flow Control: 0 packets/s 15.625 Hz
+Flow control @ 1 pak/ms
+Initialising plugins
+NextSession
+SESSION: Race
+TYPE=RACE
+TIME=0
+LAPS=2
+
+DynamicTrack: first session, resetting grip
+SENDING session name : Race
+SENDING session index : 0
+SENDING session type : 3
+SENDING session time : 0
+SENDING session laps : 2
+Server started
+Starting HTTP server on port  8081
+Registering to AC central server
+CALLING http://93.57.10.21/lobby.ashx/register?name=test&port=9600&max_clients=1&track=magione&cars=bmw_m3_gt2%2Cbmw_z4_gt3%2Cferrari_599xxevo%2Clotus_evora_gtc%2Clotus_evora_gte%2Cmclaren_mp412c_gt3%2Cp4-5_2011&timeofday=-8&sessions=3&durations=2&password=0&version=10&pickup=1
+RESPONSE: OK,386734,8081
+CONNECTED TO LOBBY
+RESTARTING FROM SESSION 0
+NextSession
+SESSION: Race
+TYPE=RACE
+TIME=0
+LAPS=2
+
+DynamicTrack: first session, resetting grip
+SENDING session name : Race
+SENDING session index : 0
+SENDING session type : 3
+SENDING session time : 0
+SENDING session laps : 2
+SENDING http://93.57.10.21/lobby.ashx/ping?session=3&timeleft=2&port=9600&clients=0&track=magione&pickup=1
+OK
+PAGE: /JSON|76561197992781026
+Serve JSON took 0 ms
+
+NEW CONNECTION from 192.168.0.254:60843
+VERSION 10
+REQUESTED CAR: bmw_m3_gt2*
+PASSWORD:
+Looking for available slot
+Slot found at index 0
+DRIVER ACCEPTED FOR CAR 0
+DRIVER ACCEPTED FOR CAR  Test
+Sending SESSION ID : 0
+Sending ID : 0
+Sending type 3
+FIND AND SEND PLAYER'S POSITION
+ELAPSED=-21408
+DRIVER:  Test []
+OK
+Sending car list from index:0
+Checksums received from   Test []
+system/data/surfaces.ini  ok
+content/tracks/magione/data/surfaces.ini  ok
+LAP  Test 1:38:697
+1)  Test BEST: 1:38:697 TOTAL: 1:38:707 Laps:1 SesID:0
+LAP  Test 1:14:465
+RACE OVER DETECTED!
+1)  Test BEST: 1:14:465 TOTAL: 2:53:166 Laps:2 SesID:0
+Clean exit, driver disconnected:   Test []
+ResetCarResults, index: 0
+No cars connected, move to next session
+Server looping
+NextSession
+SESSION: Race
+TYPE=RACE
+TIME=0
+LAPS=2
+
+Changed track:  magione
+DynamicTrack: first session, resetting grip
+SENDING session name : Race
+SENDING session index : 0
+SENDING session type : 3
+SENDING session time : 0
+SENDING session laps : 2
+SENDING http://93.57.10.21/lobby.ashx/ping?session=3&timeleft=2&port=9600&clients=0&track=magione&pickup=1
+OK
+OK

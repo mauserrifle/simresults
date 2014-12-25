@@ -464,6 +464,11 @@ class SessionTest extends PHPUnit_Framework_TestCase {
         // (abc sort)
         $class_participants = $sessions_by_class[1]->getParticipants();
         $this->assertSame($participants[2], $class_participants[0]);
+
+        // Add participant with no vehicle and make sure we get no
+        // exception on splitting
+        $session->addParticipant(new Participant());
+        $sessions_by_class = $session->splitByVehicleClass();
     }
 
     /*

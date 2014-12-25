@@ -50,6 +50,33 @@ class HelperTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
+     * Test converting formatted time to seconds
+     */
+    public function testSecondsFromFormattedTime()
+    {
+        // validate
+        $this->assertsame(
+            100.5279, helper::secondsfromformattedtime('01:40.5279'));
+        $this->assertsame(
+            5516.5879, helper::secondsfromformattedtime('01:31:56.5879'));
+        $this->assertsame(
+            123.506, helper::secondsfromformattedtime('02:03:506', true));
+        $this->assertsame(
+            3723.506, helper::secondsfromformattedtime('01:02:03:506', true));
+    }
+
+    /**
+     * Test exception when wrong time format is used on converting format to
+     * seconds
+     *
+     * @expectedException InvalidArgumentException
+     */
+    public function testSecondsFromFormattedTimeWithInvalidFormat()
+    {
+       Helper::secondsFromFormattedTime('40.5279');
+    }
+
+    /**
      * Test sorting laps by time
      */
     public function testSortingLapsByTime()

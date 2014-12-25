@@ -1,4 +1,4 @@
-<?php
+    <?php
 use Simresults\Data_Reader_AssettoCorsa;
 use Simresults\Data_Reader;
 use Simresults\Session;
@@ -90,6 +90,64 @@ class AssettoCorsaReaderTest extends PHPUnit_Framework_TestCase {
         );
     }
 
+    /**
+     * Test reading qualify and race sessions from the AC 1.0 release. Session
+     * names are changed.
+     */
+    public function testReadingAlternativeSessionTypeNames()
+    {
+        // The path to the data source
+        $file_path = realpath(
+            __DIR__.'/logs/assettocorsa/qualify.and.race.json');
+
+        // Get the data reader for the given data source
+        $reader = Data_Reader::factory($file_path);
+
+        // Get first session
+        $session = $reader->getSession(1);
+
+        //-- Validate
+        $this->assertSame(Session::TYPE_QUALIFY, $session->getType());
+        $this->assertSame('Qualify', $session->getName());
+
+        // Get second session
+        $session = $reader->getSession(2);
+
+        //-- Validate
+        $this->assertSame(Session::TYPE_RACE, $session->getType());
+        $this->assertSame('Race', $session->getName());
+    }
+
+     /**
+     * Test reading qualify positions. This als covers proper laps. Laps are
+     * missing for qualify and we need to parse best laps, which results in
+     * proper positions
+     */
+    public function testReadingQualifyPositions()
+    {
+        // The path to the data source
+        $file_path = realpath(
+            __DIR__.'/logs/assettocorsa/qualify.and.race.json');
+
+        // Get the data reader for the given data source
+        $reader = Data_Reader::factory($file_path);
+
+        // Get first session
+        $session = $reader->getSession(1);
+
+        // Get first participant
+        $participants = $session->getParticipants();
+        $participant = $participants[0];
+
+        $this->assertSame('Petr Dolezal',
+                          $participant->getDriver()->getName());
+
+        // Get last participant
+        $participant = $participants[count($participants)-1];
+        $this->assertSame('Tomas Ledenyi',
+                          $participant->getDriver()->getName());
+    }
+
 
 
     /***
@@ -110,6 +168,18 @@ class AssettoCorsaReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertSame(5, $session->getMaxLaps());
         $this->assertSame(30, $session->getMaxMinutes());
         $this->assertSame(5, $session->getLastedLaps());
+    }
+
+    /**
+     * Test reading the server of a session
+     */
+    public function testReadingSessionServer()
+    {
+        // Get the server
+        $server = $this->getWorkingReader()->getSession()->getServer();
+
+        // Validate server
+        $this->assertSame('Unknown or offline', $server->getName());
     }
 
     /**

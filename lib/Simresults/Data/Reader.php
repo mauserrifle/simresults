@@ -37,6 +37,8 @@ abstract class Data_Reader {
         $known_readers = array(
             'Simresults\Data_Reader_Rfactor2',
             'Simresults\Data_Reader_AssettoCorsa',
+            'Simresults\Data_Reader_AssettoCorsaServer',
+            'Simresults\Data_Reader_Race07',
         );
 
         // Data is a file
