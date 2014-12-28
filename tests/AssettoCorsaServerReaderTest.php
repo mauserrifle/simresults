@@ -370,6 +370,19 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
             $participants[19]->getVehicle()->getName());
     }
 
+    /**
+     * Test reading times without regex errors
+     */
+    public function testReadingTimesWithoutRegexErrors()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__
+            .'/logs/assettocorsa-server/forward.slash.in.name.txt');
+
+        // Get the session without exception
+        $session = Data_Reader::factory($file_path)->getSession();
+    }
+
 
 
     /***

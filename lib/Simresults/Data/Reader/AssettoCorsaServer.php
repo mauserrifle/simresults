@@ -669,7 +669,8 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                             // Find all BEST TOTAL lines of this driver.
                             // But only those with actual lap data (1+)
                             if ( ! preg_match_all(
-                                '/[0-9]+\).*? '.$part['name'].' BEST:.*?'
+                                '/[0-9]+\).*? '.preg_quote($part['name'], '/')
+                                .' BEST:.*?'
                                 .'TOTAL: [0-9]+.*? Laps:([1-9]+).*?/',
                                 $data_session2,
                                 $time_matches))
