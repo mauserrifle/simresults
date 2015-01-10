@@ -59,6 +59,11 @@ class Participant {
      */
     protected $cache_best_lap;
 
+    /**
+     * @var  array|null  The cache for vehicles
+     */
+    protected $cache_vehicles;
+
 
 
     //------ Participant values
@@ -74,9 +79,9 @@ class Participant {
     protected $team;
 
     /**
-     * @var  array  The vehicles (multiple due to reconnecting with other)
+     * @var  Vehicle  The vehicle
      */
-    protected $vehicles;
+    protected $vehicle;
 
     /**
      * @var  int  The final position for this participant
@@ -185,48 +190,64 @@ class Participant {
     }
 
     /**
-     * Set a vehicle. Default to the first vehicle
+     * Set the vehicle. Use this when a participant has one main vehicle he
+     * drives for all laps or the reader just supports one vehicle parsing
      *
      * @param   Vehicle      $vehicle
      * @return  Participant
      */
-    public function setVehicle(Vehicle $vehicle, $vehicle_number=1)
+    public function setVehicle(Vehicle $vehicle)
     {
-        $this->vehicles[$vehicle_number-1] = $vehicle;
+        $this->vehicle = $vehicle;
         return $this;
     }
 
     /**
-     * Add vehicle to this participant
+     * Get the vehicle.
      *
-     * @param   Vehicle  $vehicle
-     * @return  Participant
-     */
-    public function addVehicle(Vehicle $vehicle)
-    {
-        $this->vehicles[] = $vehicle;
-        return $this;
-    }
-
-    /**
-     * Get one vehicle. Default to first vehicle
-     *
-     * @param   int       $vehicle_number
+     * @deprecated  Please use `getVehicles()`! A participant might ran
+     *              multiple cars on different laps.
      * @return  Vehicle
      */
-    public function getVehicle($vehicle_number = 1)
+    public function getVehicle()
     {
-        return $this->vehicles[$vehicle_number-1];
+        return $this->vehicle;
     }
 
     /**
-     * Get the vehicles
+     * Get the vehicles. This gets all the vehicles from the participant
+     * laps. If the laps do not have vehicles set, the main vehicle will be
+     * read
+     *
+     * TODO: Unit test this
      *
      * @return  array
      */
     public function getVehicles()
     {
-        return $this->vehicles;
+        // There is cache
+        if ($this->cache_vehicles !== null)
+        {
+            return $this->cache_vehicles;
+        }
+
+        // Get vehicles from laps
+        $vehicles = array();
+        foreach ($this->laps as $lap)
+        {
+            if ( ! in_array($vehicle=$lap->getVehicle(), $vehicles))
+            {
+                $vehicles[] = $vehicle;
+            }
+        }
+
+        // No vehicles found by laps, but this participant has a main vehicle
+        if ( ! $vehicles AND $this->vehicle)
+        {
+            $vehicles[] = $this->vehicle;
+        }
+
+        return $this->cache_vehicles = $vehicles;
     }
 
     /**

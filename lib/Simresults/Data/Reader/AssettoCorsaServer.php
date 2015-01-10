@@ -225,9 +225,6 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
 
                         // Remember vehicle
                         $vehicles[$lap_data['vehicle']] = $vehicle;
-
-                        // Add vehicle to main participant too
-                        $participant->addVehicle($vehicle);
                     }
 
                     // Add lap to participant
