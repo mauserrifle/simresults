@@ -74,9 +74,9 @@ class Participant {
     protected $team;
 
     /**
-     * @var  Vehicle  The vehicle
+     * @var  array  The vehicles (multiple due to reconnecting with other)
      */
-    protected $vehicle;
+    protected $vehicles;
 
     /**
      * @var  int  The final position for this participant
@@ -185,25 +185,48 @@ class Participant {
     }
 
     /**
-     * Set the vehicle
+     * Set a vehicle. Default to the first vehicle
      *
      * @param   Vehicle      $vehicle
      * @return  Participant
      */
-    public function setVehicle(Vehicle $vehicle)
+    public function setVehicle(Vehicle $vehicle, $vehicle_number=1)
     {
-        $this->vehicle = $vehicle;
+        $this->vehicles[$vehicle_number-1] = $vehicle;
         return $this;
     }
 
     /**
-     * Get the vehicle
+     * Add vehicle to this participant
      *
+     * @param   Vehicle  $vehicle
+     * @return  Participant
+     */
+    public function addVehicle(Vehicle $vehicle)
+    {
+        $this->vehicles[] = $vehicle;
+        return $this;
+    }
+
+    /**
+     * Get one vehicle. Default to first vehicle
+     *
+     * @param   int       $vehicle_number
      * @return  Vehicle
      */
-    public function getVehicle()
+    public function getVehicle($vehicle_number = 1)
     {
-        return $this->vehicle;
+        return $this->vehicles[$vehicle_number-1];
+    }
+
+    /**
+     * Get the vehicles
+     *
+     * @return  array
+     */
+    public function getVehicles()
+    {
+        return $this->vehicles;
     }
 
     /**

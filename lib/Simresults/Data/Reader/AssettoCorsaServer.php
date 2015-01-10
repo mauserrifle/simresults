@@ -152,12 +152,19 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                     $participant->setFinishStatus(Participant::FINISH_DNF);
                 }
 
+                // Remember vehicle instances by vehicle name
+                $vehicles = array();
+
                 // Create vehicle and add to participant
                 if (isset($part_data['vehicle']))
                 {
+                    // Init vehicle
                     $vehicle = new Vehicle;
                     $vehicle->setName($part_data['vehicle']);
                     $participant->setVehicle($vehicle);
+
+                    // Remember vehicle instance
+                    $vehicles[$part_data['vehicle']] = $vehicle;
                 }
 
                 // Has team
@@ -192,6 +199,36 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
 
                     // Set lap times
                     $lap->setTime($lap_data['time']);
+
+                    // No lap vehicle
+                    if ( ! $lap_data['vehicle'])
+                    {
+                        // Just use participant vehicle if it is available
+                        if ($participant->getVehicle())
+                        {
+                            $lap->setVehicle($participant->getVehicle());
+                        }
+                    }
+                    // Has lap vehicle and vehicle instance of lap already known
+                    elseif (isset($vehicles[$v=$lap_data['vehicle']]))
+                    {
+                        // Set vehicle instance
+                        $lap->setVehicle($vehicles[$v]);
+                    }
+                    // Vehicle instance not known. Set new
+                    else
+                    {
+                        // Init vehicle
+                        $vehicle = new Vehicle;
+                        $vehicle->setName($lap_data['vehicle']);
+                        $lap->setVehicle($vehicle);
+
+                        // Remember vehicle
+                        $vehicles[$lap_data['vehicle']] = $vehicle;
+
+                        // Add vehicle to main participant too
+                        $participant->addVehicle($vehicle);
+                    }
 
                     // Add lap to participant
                     $participant->addLap($lap);
@@ -437,11 +474,20 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             // Set last car list
             $last_car_list = $session['car_list'];
 
+            // Remember which participant regex was used so we can re-use
+            // these regex at lap matching
+            $participant_regex = null;
+            $participant_regex_vehicle_match_key = null;
+
             // Collect participants by connect information so we know which
             // car they run
             preg_match_all(
+                $participant_regex =
                 '/REQUESTED CAR: (.*?)PASSWORD.*?DRIVER: (.*?) \['
                 .'/si', $data_session, $part_matches);
+
+            // First value match is for vehicle
+            $participant_regex_vehicle_match_key = 1;
 
             // Loop each match and collect participants
             $participants = array();
@@ -460,6 +506,10 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 // Filter any empty value
                 $part_data_exploded = array_filter($part_data_exploded);
 
+                // Init participant values
+                $vehicle = null;
+                $name = null;
+
                 // Has multiple parts
                 if (count($part_data_exploded) > 1)
                 {
@@ -477,30 +527,44 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                     $name = trim($part_tmp_matches[2]);
                     if (strstr($name, PHP_EOL)) continue;
 
-                    $participants[$name] = array(
-                        'name'    => $name,
-                        'vehicle' => trim($part_tmp_matches[1]),
-                        'laps'    => array(),
-                    );
-
+                    $vehicle = trim($part_tmp_matches[1]);
                 }
                 // No multiple parts, proper match
                 else
                 {
                     $name = trim($part_matches[2][$part_key]);
-                    $participants[$name] = array(
-                        'name'    => $name,
-                        'vehicle' => trim($part_matches[1][$part_key]),
-                        'laps'    => array(),
-                    );
+                    $vehicle =  trim($part_matches[1][$part_key]);
                 }
 
+                // Participant already exists
+                if (isset($participants[$name]))
+                {
+                    // Vehicle is different
+                    if ($participants[$name]['vehicle'] !== $vehicle)
+                    {
+                        // Mark participant to have multiple cars
+                        $participants[$name]['has_multiple_cars'] = true;
+                    }
+                    // Vehcle not different, just ignore
+                }
+                // Participant is new
+                else
+                {
+                    // Add participant
+                    $participants[$name] = array(
+                        'name'               => $name,
+                        'vehicle'            => $vehicle,
+                        'laps'               => array(),
+                        'has_multiple_cars'  => false,
+                    );
+                }
             }
 
             // No participants found, try different method
             if ( ! $participants)
             {
                 preg_match_all(
+                    $participant_regex =
                     '/Adding car: (.*?) name=(.*?) model=(.*?) skin=(.*?)/si',
                     $data_session, $part_matches);
 
@@ -508,6 +572,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                     foreach ($part_matches[0] as $part_key => $part_data)
                     {
                         $name = trim($part_matches[2][$part_key]);
+                        // TODO: add has_multiple_cars
                         $participants[$name] = array(
                             'name'    => $name,
                             'vehicle' => trim($part_matches[3][$part_key]),
@@ -523,6 +588,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 // DRIVERNAME: JC
                 // GUID:76561198023156518
                 preg_match_all(
+                    $participant_regex =
                     '/MODEL: (.*?) .*? \[.*? \[(.*?)\]\].*?DRIVERNAME: (.*?)'
                     .'GUID:([0-9]+)/si', $data_session, $part_matches);
 
@@ -531,6 +597,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 foreach ($part_matches[0] as $part_key => $part_data)
                 {
                     $name = trim($part_matches[3][$part_key]);
+                    // TODO: add has_multiple_cars
                     $participants[$name] = array(
                         'name'    => $name,
                         'vehicle' => trim($part_matches[1][$part_key]),
@@ -584,17 +651,62 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                        continue;
                     }
 
-                    // Add name just to be sure
+                    // Driver name
                     $name = trim($lap_matches[1][$lap_key]);
+
+                    // Add name just to be sure
                     $participants_copy[$name]['name'] = $name;
+
+                    // Lap vehicle not known by default (assume participant
+                    // has one vehicle)
+                    $lap_vehicle = null;
+
+                    // Participant has multiple cars in use
+                    if (isset($participants_copy[$name]['has_multiple_cars']) AND
+                        $participants_copy[$name]['has_multiple_cars'])
+                    {
+                        // Split data with lap data as delimiter
+                        $data_session2_split = explode($lap_data, $data_session2);
+
+                        // Get first part
+                        $data_session2_split = $data_session2_split[0];
+
+                        // Lap car regex
+                        // TODO: Make work for all other participant regexes
+                        // too......
+                        $lap_car_regex =
+                            '/REQUESTED CAR: (.*?)PASSWORD.*?DRIVER: (.*?) \['
+                            .'/si';
+
+                        // Car could not be found for for this lap
+                        if ( ! preg_match_all($lap_car_regex,
+                                   $data_session2_split,
+                                   $lap_car_matches))
+                        {
+                            // Fail
+                            throw new \Exception(
+                                'Bug! Please report. Could not find a car for '
+                                .'lap data: '.$lap_data);
+                        }
+
+                        // Get last vehicle matched
+                        $lap_vehicle = trim(array_pop($lap_car_matches[1]));
+                    }
+
 
                     // Add lap
                     $participants_copy[$name]['laps'][] = array(
-                        'time' => Helper::secondsFromFormattedTime(
-                                      $lap_matches[2][$lap_key], true),
+                        'time'    => Helper::secondsFromFormattedTime(
+                                         $lap_matches[2][$lap_key], true),
+                        'vehicle' => $lap_vehicle
+                                         ? $lap_vehicle
+                                         : (isset($participants_copy[$name]['vehicle'])
+                                             ? $participants_copy[$name]['vehicle']
+                                             : null)
                     );
                     $no_laps = false;
                 }
+
 
                 // Explode data on race end detection
                 $race_end = explode('RACE OVER', $data_session2);

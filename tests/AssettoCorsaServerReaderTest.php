@@ -380,6 +380,50 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
         $session = Data_Reader::factory($file_path)->getSession();
     }
 
+    /**
+     * Test reading multiple cars per participant that will be stored per lap
+     *
+     * Reading Nakuni which should have these laps:
+     *
+     *     ferrari
+     *     LAP1: 1:52
+     *     LAP2: 1:13
+     *
+     *     lotus
+     *     LAP3: 1:42
+     *     LAP4: 1:24
+     */
+    public function testReadingMultipleCarsPerParticipant()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-server/reconnect.with.different.car.txt');
+
+        // Get the data reader for the given data source
+        $session = Data_Reader::factory($file_path)->getSession();
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Get first participant
+        $participant = $participants[0];
+
+        // Validate vehicles
+        $vehicles = $participant->getVehicles();
+
+        $this->assertSame(2, count($vehicles));
+        $this->assertSame('ferrari_599xxevo*', $vehicles[0]->getName());
+        $this->assertSame('lotus_evora_gte*', $vehicles[1]->getName());
+
+        // Validate vehicle for each lap
+        $laps = $participant->getLaps();
+
+        $this->assertSame($laps[0]->getVehicle(), $vehicles[0]);
+        $this->assertSame($laps[1]->getVehicle(), $vehicles[0]);
+        $this->assertSame($laps[2]->getVehicle(), $vehicles[1]);
+        $this->assertSame($laps[3]->getVehicle(), $vehicles[1]);
+    }
+
 
 
     /***
