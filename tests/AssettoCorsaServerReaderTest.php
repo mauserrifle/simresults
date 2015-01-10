@@ -44,9 +44,6 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
             '/logs/assettocorsa-server/different.connecting.format.log');
 
         // Get the data reader for the given data source
-        Data_Reader::factory($file_path)->getSessions();
-
-        // Get the data reader for the given data source
         $session = Data_Reader::factory($file_path)->getSession();
 
         // Get participants
