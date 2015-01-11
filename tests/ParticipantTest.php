@@ -59,15 +59,16 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
         // Test getting one vehicle
         $this->assertSame($vehicle1, $participant->getVehicle());
 
-        // Test that `getVehicle()` returns the best lap vehicle
-        $lap2->setTime(10);
-        $this->assertSame($vehicle2, $participant->getVehicle());
-
         // Set new main vehicle on participant
         $participant->setVehicle($vehicle3 = new Vehicle);
 
         // Test getting the main set vehicle
         $this->assertSame($vehicle3, $participant->getVehicle());
+
+        // Test that `getVehicle()` always returns the best lap vehicle
+        $lap2->setTime(10);
+        $this->assertSame($vehicle2, $participant->getVehicle());
+
     }
 
     /***

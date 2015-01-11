@@ -208,8 +208,8 @@ class Participant {
     /**
      * Get the vehicle. Returns a vehicle in this order:
      *
-     *     * The main vehicle (if any)
      *     * The best lap vehicle (if any)
+     *     * The main vehicle set on participant (if any)
      *     * The first found vehicle on laps (if any)
      *
      * Considering using `getVehicles()` especially for non-race sessions!
@@ -220,12 +220,6 @@ class Participant {
      */
     public function getVehicle()
     {
-        // Has main vehicle forced already, return it
-        if($this->vehicle)
-        {
-            return $this->vehicle;
-        }
-
         // Has multiple vehicles from laps
         if ($vehicles = $this->getVehicles())
         {
@@ -236,8 +230,18 @@ class Participant {
                 return $vehicle;
             }
 
-            // No best lap vehicle, just return the first found
-            return $vehicles[0];
+            // No best lap vehicle, just return the first found if our main
+            // vehicle has not been set
+            if ( ! $this->vehicle)
+            {
+                return $vehicles[0];
+            }
+        }
+
+        // Has main vehicle, return it
+        if($this->vehicle)
+        {
+            return $this->vehicle;
         }
 
         return NULL;
