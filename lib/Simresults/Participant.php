@@ -206,25 +206,37 @@ class Participant {
     }
 
     /**
-     * Get the vehicle.
+     * Get the vehicle. Returns a vehicle in this order:
      *
-     * @deprecated  Please use `getVehicles()` especially for non-race sessions!
-     *              A participant might ran  multiple cars on different laps
-     *              due to reconnecting
+     *     * The main vehicle (if any)
+     *     * The best lap vehicle (if any)
+     *     * The first found vehicle on laps (if any)
+     *
+     * Considering using `getVehicles()` especially for non-race sessions!
+     * A participant might ran  multiple cars on different laps due to
+     * reconnecting
+     *
      * @return  Vehicle
      */
     public function getVehicle()
     {
-        // Has main vehicle
+        // Has main vehicle forced already, return it
         if($this->vehicle)
         {
             return $this->vehicle;
         }
 
-        // No main vehicle, return using the first found one from the
-        // collection (if any)
-        if ($vehicles=$this->getVehicles())
+        // Has multiple vehicles from laps
+        if ($vehicles = $this->getVehicles())
         {
+            // Return best lap vehicle if any
+            if ($best_lap = $this->getBestLap() AND
+                $vehicle = $best_lap->getVehicle())
+            {
+                return $vehicle;
+            }
+
+            // No best lap vehicle, just return the first found
             return $vehicles[0];
         }
 
