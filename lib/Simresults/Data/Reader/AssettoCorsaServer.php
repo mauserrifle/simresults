@@ -715,20 +715,19 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                         // Get first part
                         $data_session2_split = $data_session2_split[0];
 
-                        // Car could not be found for for this lap
-                        if ( ! preg_match_all($participant_regex,
+                        // Car found above lap data
+                        if (preg_match_all($participant_regex,
                                    $data_session2_split,
                                    $lap_car_matches))
                         {
-                            // Fail
-                            throw new \Exception(
-                                'Bug! Please report. Could not find a car for '
-                                .'lap data: '.$lap_data);
+                            // Get last vehicle matched
+                            $lap_vehicle = trim(array_pop($lap_car_matches[
+                                $participant_regex_vehicle_match_key]));
                         }
-
-                        // Get last vehicle matched
-                        $lap_vehicle = trim(array_pop($lap_car_matches[
-                            $participant_regex_vehicle_match_key]));
+                        // Else no car found in lap data. This session probably
+                        // has no multiple connect info. This may happen because
+                        // we check the connect info for `has_multiple_cars`
+                        // on the entire log (containing all sessions).
                     }
 
 
