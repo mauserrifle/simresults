@@ -385,12 +385,15 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
         // Get participants
         $participants = $session->getParticipants();
 
-        // Get first participant
-        $participant = $participants[0];
+        // Validate all to have proper vehicle
+        foreach ($participants as $participant)
+        {
+            // Validate vehicle
+            $this->assertSame('honda_nsx_s1*',
+                               $participant->getVehicle()->getName());
+        }
 
-        // Validate vehicle
-        $this->assertSame('honda_nsx_s1*',
-                           $participant->getVehicle()->getName());
+
     }
 
 

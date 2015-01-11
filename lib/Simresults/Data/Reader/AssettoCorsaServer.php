@@ -515,7 +515,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
 
                     // Do another match similar to above
                     preg_match(
-                        '/(.*?)PASSWORD.*?DRIVER: (.*?) \['
+                        '/(.*?)\R.*?PASSWORD.*?DRIVER: (.*?) \['
                         .'/si', $part_data_tmp, $part_tmp_matches);
 
                     // Name contains new lines, something went wrong in
