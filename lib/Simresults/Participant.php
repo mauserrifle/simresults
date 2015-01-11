@@ -59,6 +59,11 @@ class Participant {
      */
     protected $cache_best_lap;
 
+    /**
+     * @var  array|null  The cache for vehicles
+     */
+    protected $cache_vehicles;
+
 
 
     //------ Participant values
@@ -185,7 +190,11 @@ class Participant {
     }
 
     /**
-     * Set the vehicle
+     * Set the vehicle. Use this when a participant has one main vehicle he
+     * drives for all laps or the reader just supports one vehicle parsing.
+     *
+     * For multiple please sonsider setting a vehicle on laps. `getVehicles()`
+     * will parse the laps to return vehicles.
      *
      * @param   Vehicle      $vehicle
      * @return  Participant
@@ -197,13 +206,75 @@ class Participant {
     }
 
     /**
-     * Get the vehicle
+     * Get the vehicle. Returns a vehicle in this order:
+     *
+     *     * The main vehicle (if any)
+     *     * The best lap vehicle (if any)
+     *     * The first found vehicle on laps (if any)
+     *
+     * Considering using `getVehicles()` especially for non-race sessions!
+     * A participant might ran  multiple cars on different laps due to
+     * reconnecting
      *
      * @return  Vehicle
      */
     public function getVehicle()
     {
-        return $this->vehicle;
+        // Has main vehicle forced already, return it
+        if($this->vehicle)
+        {
+            return $this->vehicle;
+        }
+
+        // Has multiple vehicles from laps
+        if ($vehicles = $this->getVehicles())
+        {
+            // Return best lap vehicle if any
+            if ($best_lap = $this->getBestLap() AND
+                $vehicle = $best_lap->getVehicle())
+            {
+                return $vehicle;
+            }
+
+            // No best lap vehicle, just return the first found
+            return $vehicles[0];
+        }
+
+        return NULL;
+    }
+
+    /**
+     * Get the vehicles. This gets all the vehicles from the participant
+     * laps. If the laps do not have vehicles set, the main vehicle will be
+     * read
+     *
+     * @return  array
+     */
+    public function getVehicles()
+    {
+        // There is cache
+        if ($this->cache_vehicles !== null)
+        {
+            return $this->cache_vehicles;
+        }
+
+        // Get vehicles from laps
+        $vehicles = array();
+        foreach ($this->laps as $lap)
+        {
+            if ( ! in_array($vehicle=$lap->getVehicle(), $vehicles, true))
+            {
+                $vehicles[] = $vehicle;
+            }
+        }
+
+        // No vehicles found by laps, but this participant has a main vehicle
+        if ( ! $vehicles AND $this->vehicle)
+        {
+            $vehicles[] = $this->vehicle;
+        }
+
+        return $this->cache_vehicles = $vehicles;
     }
 
     /**

@@ -1,0 +1,526 @@
+Server CFG Path :  cfg/server_cfg.ini
+Entry List Path :  cfg/entry_list.ini
+Assetto Corsa Dedicated Server v0.10.1
+Protocol version: 10
+2014-10-09 23:45:00.2966155 +0200 CEST
+LOCAL IP 0: fe80::8e3:22f0:3f57:fff5
+LOCAL IP 1: 192.168.0.10
+LOCAL IP 2: 2001:0:5ef5:79fb:8e3:22f0:3f57:fff5
+Using cfg path:  cfg/server_cfg.ini
+Car list:
+_bmw_m3_gt2_
+_bmw_z4_gt3_
+_ferrari_599xxevo_
+_lotus_evora_gtc_
+_lotus_evora_gte_
+_mclaren_mp412c_gt3_
+_p4-5_2011_
+Client interval HZ: 15 , MS=64
+TRACK=magione
+CARS=["bmw_m3_gt2" "bmw_z4_gt3" "ferrari_599xxevo" "lotus_evora_gtc" "lotus_evora_gte" "mclaren_mp412c_gt3" "p4-5_2011"]
+Loading QUALIFY sessionSESSION: Qualify
+TYPE=QUALIFY
+TIME=21
+LAPS=0
+
+DynamicTrack: first session, resetting grip
+CHECKSUM: system/data/surfaces.ini=41949b9f7045cad2af3f5eb951d170a9
+CHECKSUM: content/tracks/magione/data/surfaces.ini=5e787123e39928abf3b45ed188c21968
+Loading blacklist
+Opening entry list:  cfg/entry_list.ini
+Found car  CAR_0
+SESSION_ID:0
+MODEL: bmw_m3_gt2 (0) [ []]
+DRIVERNAME:
+GUID:
+Found car  CAR_1
+SESSION_ID:1
+MODEL: bmw_m3_gt2 (1) [ []]
+DRIVERNAME:
+GUID:
+Found car  CAR_2
+SESSION_ID:2
+MODEL: bmw_z4_gt3 (2) [ []]
+DRIVERNAME:
+GUID:
+Found car  CAR_3
+SESSION_ID:3
+MODEL: bmw_z4_gt3 (3) [ []]
+DRIVERNAME:
+GUID:
+Found car  CAR_4
+SESSION_ID:4
+MODEL: ferrari_599xxevo (4) [ []]
+DRIVERNAME:
+GUID:
+Found car  CAR_5
+SESSION_ID:5
+MODEL: ferrari_599xxevo (5) [ []]
+DRIVERNAME:
+GUID:
+Found car  CAR_6
+SESSION_ID:6
+MODEL: lotus_evora_gtc (6) [ []]
+DRIVERNAME:
+GUID:
+Found car  CAR_7
+SESSION_ID:7
+MODEL: lotus_evora_gtc (7) [ []]
+DRIVERNAME:
+GUID:
+Found car  CAR_8
+SESSION_ID:8
+MODEL: lotus_evora_gte (8) [ []]
+DRIVERNAME:
+GUID:
+Found car  CAR_9
+SESSION_ID:9
+MODEL: lotus_evora_gte (9) [ []]
+DRIVERNAME:
+GUID:
+Found car  CAR_10
+WARNING: Entry list has more clients than allowed by the MAX_CLIENT value in server_cfg.ini
+Initialising Flow Control: 1406.25 packets/s 15.625 Hz
+Flow control @ 2 pak/ms
+Initialising plugins
+NextSession
+SESSION: Qualify
+TYPE=QUALIFY
+TIME=21
+LAPS=0
+
+DynamicTrack: first session, resetting grip
+SENDING session name : Qualify
+SENDING session index : 0
+SENDING session type : 2
+SENDING session time : 21
+SENDING session laps : 0
+Server started
+Starting HTTP server on port  8081
+Registering to AC central server
+CALLING http://93.57.10.21/lobby.ashx/register?name=%21FRC+test&port=9600&max_clients=10&track=magione&cars=bmw_m3_gt2%2Cbmw_z4_gt3%2Cferrari_599xxevo%2Clotus_evora_gtc%2Clotus_evora_gte%2Cmclaren_mp412c_gt3%2Cp4-5_2011&timeofday=8&sessions=2&durations=1260&password=0&version=10&pickup=1
+RESPONSE: OK,389643,8081
+CONNECTED TO LOBBY
+RESTARTING FROM SESSION 0
+NextSession
+SESSION: Qualify
+TYPE=QUALIFY
+TIME=21
+LAPS=0
+
+DynamicTrack: first session, resetting grip
+SENDING session name : Qualify
+SENDING session index : 0
+SENDING session type : 2
+SENDING session time : 21
+SENDING session laps : 0
+SENDING http://93.57.10.21/lobby.ashx/ping?session=2&timeleft=1275&port=9600&clients=0&track=magione&pickup=1
+OK
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 68 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+PAGE: /JSON|76561197992781026
+Serve JSON took 0 ms
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+PAGE: /JSON|76561197992781026
+Serve JSON took 0 ms
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 70 discarded
+No car with address 92.91.114.39:55121, packetid 67 discarded
+
+NEW CONNECTION from 192.168.0.254:52906
+VERSION 10
+REQUESTED CAR: ferrari_599xxevo*
+PASSWORD:
+Looking for available slot
+Slot found at index 4
+DRIVER ACCEPTED FOR CAR 4
+DRIVER ACCEPTED FOR CAR FRC Nakuni
+Sending SESSION ID : 4
+Sending ID : 0
+Sending type 2
+FIND AND SEND PLAYER'S POSITION
+ELAPSED=19693
+DRIVER: FRC Nakuni []
+OK
+Sending car list from index:0
+Sending car list from index:10
+PAGE: /JSON|76561198118857403
+Serve JSON took 0 ms
+Checksums received from  FRC Nakuni []
+system/data/surfaces.ini  ok
+content/tracks/magione/data/surfaces.ini  ok
+
+NEW CONNECTION from 92.91.114.39:55126
+VERSION 10
+REQUESTED CAR: ferrari_599xxevo*
+PASSWORD:
+Looking for available slot
+Slot found at index 5
+DRIVER ACCEPTED FOR CAR 5
+DRIVER ACCEPTED FOR CAR FRC Guiom31 ACFR
+Sending SESSION ID : 5
+Sending ID : 0
+Sending type 2
+FIND AND SEND PLAYER'S POSITION
+ELAPSED=42588
+DRIVER: FRC Guiom31 ACFR []
+OK
+Sending car list from index:0
+Sending car list from index:10
+Checksums received from  FRC Guiom31 ACFR []
+system/data/surfaces.ini  ok
+content/tracks/magione/data/surfaces.ini  ok
+LAP FRC Nakuni 1:52:396
+1) FRC Nakuni BEST: 1:52:396 TOTAL: 2:27:522 Laps:1 SesID:4
+2)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:1
+3)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2
+4)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:3
+5) FRC Guiom31 ACFR BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:5
+6)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:6
+7)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7
+8)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:8
+9)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:9
+10)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0
+LAP FRC Guiom31 ACFR 2:37:052
+1) FRC Nakuni BEST: 1:52:396 TOTAL: 2:27:522 Laps:1 SesID:4
+2) FRC Guiom31 ACFR BEST: 2:37:052 TOTAL: 3:30:816 Laps:1 SesID:5
+3)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2
+4)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:3
+5)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7
+6)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:8
+7)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:9
+8)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0
+9)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:6
+10)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:1
+LAP FRC Nakuni 1:13:231
+1) FRC Nakuni BEST: 1:13:231 TOTAL: 3:40:752 Laps:2 SesID:4
+2) FRC Guiom31 ACFR BEST: 2:37:052 TOTAL: 3:30:816 Laps:1 SesID:5
+3)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2
+4)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:3
+5)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7
+6)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:8
+7)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:9
+8)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0
+9)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:6
+10)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:1
+Clean exit, driver disconnected:  FRC Nakuni []
+ResetCarResults, index: 4
+OK
+
+NEW CONNECTION from 192.168.0.254:58054
+VERSION 10
+REQUESTED CAR: lotus_evora_gte*
+PASSWORD:
+Looking for available slot
+Slot found at index 8
+DRIVER ACCEPTED FOR CAR 8
+DRIVER ACCEPTED FOR CAR FRC Nakuni
+Sending SESSION ID : 8
+Sending ID : 0
+Sending type 2
+FIND AND SEND PLAYER'S POSITION
+ELAPSED=267929
+DRIVER: FRC Nakuni []
+OK
+Sending car list from index:0
+Sending car list from index:10
+Checksums received from  FRC Nakuni []
+system/data/surfaces.ini  ok
+content/tracks/magione/data/surfaces.ini  ok
+LAP FRC Guiom31 ACFR 1:25:519
+1) FRC Guiom31 ACFR BEST: 1:25:519 TOTAL: 4:56:333 Laps:2 SesID:5
+2)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2
+3)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:3
+4)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7
+5) FRC Nakuni BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:8
+6)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:9
+7)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0
+8)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:6
+9)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:1
+10) FRC Nakuni BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:4
+PAGE: /JSON|76561198018928930
+Serve JSON took 0 ms
+LAP FRC Guiom31 ACFR 1:18:942
+1) FRC Guiom31 ACFR BEST: 1:18:942 TOTAL: 6:15:272 Laps:3 SesID:5
+2)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2
+3)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:3
+4)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7
+5) FRC Nakuni BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:8
+6)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:9
+7)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0
+8)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:6
+9)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:1
+10) FRC Nakuni BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:4
+LAP FRC Nakuni 1:42:193
+1) FRC Guiom31 ACFR BEST: 1:18:942 TOTAL: 6:15:272 Laps:3 SesID:5
+2) FRC Nakuni BEST: 1:42:193 TOTAL: 6:24:642 Laps:1 SesID:8
+3)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:3
+4)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7
+5)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0
+6)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:6
+7)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:1
+8) FRC Nakuni BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:4
+9)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:9
+10)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2
+LAP FRC Guiom31 ACFR 1:16:519
+1) FRC Guiom31 ACFR BEST: 1:16:519 TOTAL: 7:31:799 Laps:4 SesID:5
+2) FRC Nakuni BEST: 1:42:193 TOTAL: 6:24:642 Laps:1 SesID:8
+3)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:3
+4)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7
+5)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0
+6)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:6
+7)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:1
+8) FRC Nakuni BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:4
+9)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:9
+10)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2
+LAP FRC Nakuni 1:24:918
+1) FRC Guiom31 ACFR BEST: 1:16:519 TOTAL: 7:31:799 Laps:4 SesID:5
+2) FRC Nakuni BEST: 1:24:918 TOTAL: 7:49:555 Laps:2 SesID:8
+3)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:3
+4)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7
+5)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0
+6)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:6
+7)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:1
+8) FRC Nakuni BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:4
+9)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:9
+10)  BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2
+Clean exit, driver disconnected:  FRC Nakuni []
+ResetCarResults, index: 8
+OK

@@ -5,6 +5,8 @@ use Simresults\Participant;
 
 use Simresults\Lap;
 
+use Simresults\Vehicle;
+
 /**
  * Tests for the participant.
  *
@@ -23,6 +25,54 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
     {
         error_reporting(E_ALL);
     }
+
+    /***
+    **** Tests using simple data
+    ***/
+
+    /**
+     * Test getting the vehicles from the participant using the laps
+     * collection too
+     */
+    public function testGettingVehicles()
+    {
+        // Init participant
+        $participant = new Participant;
+
+        // Init two vehicles
+        $vehicle1 = new Vehicle;
+        $vehicle2 = new Vehicle;
+
+        // Init laps with the vehicles
+        $lap1 = new Lap; $lap1->setVehicle($vehicle1);
+        $lap2 = new Lap; $lap2->setVehicle($vehicle2);
+
+        // Set laps to participant
+        $participant->setLaps(array($lap1, $lap2));
+
+        // Test getting vehicles
+        $this->assertSame(
+            array($vehicle1, $vehicle2),
+            $participant->getVehicles()
+        );
+
+        // Test getting one vehicle
+        $this->assertSame($vehicle1, $participant->getVehicle());
+
+        // Test that `getVehicle()` returns the best lap vehicle
+        $lap2->setTime(10);
+        $this->assertSame($vehicle2, $participant->getVehicle());
+
+        // Set new main vehicle on participant
+        $participant->setVehicle($vehicle3 = new Vehicle);
+
+        // Test getting the main set vehicle
+        $this->assertSame($vehicle3, $participant->getVehicle());
+    }
+
+    /***
+    **** Tests using the predefined test data
+    ***/
 
     /**
      * Test getting the lap by lap number
