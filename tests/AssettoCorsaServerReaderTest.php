@@ -368,6 +368,33 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
+     * Test reading the cars from a log that contains date prefixes
+     *
+     * Unrelated idea: Maybe use these prefixes to add a date to chats in the
+     *                 future?
+     */
+    public function testReadingCarsFromLogWithDatePrefixes()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-server/log.with.date.prefixes.txt');
+
+        // Get the data reader for the given data source
+        $session = Data_Reader::factory($file_path)->getSession();
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Get first participant
+        $participant = $participants[0];
+
+        // Validate vehicle
+        $this->assertSame('honda_nsx_s1*',
+                           $participant->getVehicle()->getName());
+    }
+
+
+    /**
      * Test reading times without regex errors
      */
     public function testReadingTimesWithoutRegexErrors()

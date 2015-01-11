@@ -480,7 +480,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             // car they run
             preg_match_all(
                 $participant_regex =
-                '/REQUESTED CAR: (.*?)PASSWORD.*?DRIVER: (.*?) \['
+                '/REQUESTED CAR: (.*?)\R.*?PASSWORD.*?DRIVER: (.*?) \['
                 .'/si', $data_session, $part_matches);
 
             // First value match is for vehicle
