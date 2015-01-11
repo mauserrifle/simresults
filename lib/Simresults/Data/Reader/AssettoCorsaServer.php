@@ -530,7 +530,9 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 else
                 {
                     $name = trim($part_matches[2][$part_key]);
-                    $vehicle =  trim($part_matches[1][$part_key]);
+                    $vehicle =  trim($part_matches
+                        [$participant_regex_vehicle_match_key]
+                        [$part_key]);
                 }
 
                 // Participant already exists
@@ -565,16 +567,38 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                     '/Adding car: (.*?) name=(.*?) model=(.*?) skin=(.*?)/si',
                     $data_session, $part_matches);
 
+                    // Third value match is for vehicle
+                    $participant_regex_vehicle_match_key = 3;
+
                     // Loop each match and collect participants
                     foreach ($part_matches[0] as $part_key => $part_data)
                     {
                         $name = trim($part_matches[2][$part_key]);
-                        // TODO: add has_multiple_cars
-                        $participants[$name] = array(
-                            'name'    => $name,
-                            'vehicle' => trim($part_matches[3][$part_key]),
-                            'laps'    => array(),
-                        );
+                        $vehicle = trim($part_matches
+                                       [$participant_regex_vehicle_match_key]
+                                       [$part_key]);
+
+                        // Participant already exists
+                        if (isset($participants[$name]))
+                        {
+                            // Vehicle is different
+                            if ($participants[$name]['vehicle'] !== $vehicle)
+                            {
+                                // Mark participant to have multiple cars
+                                $participants[$name]['has_multiple_cars'] = true;
+                            }
+                            // Vehcle not different, just ignore
+                        }
+                        // Participant is new
+                        else
+                        {
+                            $participants[$name] = array(
+                                'name'               => $name,
+                                'vehicle'            => $vehicle,
+                                'laps'               => array(),
+                                'has_multiple_cars'  => false,
+                            );
+                        }
                     }
             }
 
@@ -589,19 +613,42 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                     '/MODEL: (.*?) .*? \[.*? \[(.*?)\]\].*?DRIVERNAME: (.*?)'
                     .'GUID:([0-9]+)/si', $data_session, $part_matches);
 
+                // First value match is for vehicle
+                $participant_regex_vehicle_match_key = 1;
+
                 // Loop each match and collect participants
                 $participants = array();
                 foreach ($part_matches[0] as $part_key => $part_data)
                 {
                     $name = trim($part_matches[3][$part_key]);
-                    // TODO: add has_multiple_cars
-                    $participants[$name] = array(
-                        'name'    => $name,
-                        'vehicle' => trim($part_matches[1][$part_key]),
-                        'team'    => trim($part_matches[2][$part_key]),
-                        'guid'    => trim($part_matches[4][$part_key]),
-                        'laps'    => array(),
-                    );
+                    $vehicle = trim($part_matches
+                                [$participant_regex_vehicle_match_key]
+                                [$part_key]);
+
+                    // Participant already exists
+                    if (isset($participants[$name]))
+                    {
+                        // Vehicle is different
+                        if ($participants[$name]['vehicle'] !== $vehicle)
+                        {
+                            // Mark participant to have multiple cars
+                            $participants[$name]['has_multiple_cars'] = true;
+                        }
+                        // Vehcle not different, just ignore
+                    }
+                    // Participant is new
+                    else
+                    {
+                        $participants[$name] = array(
+                            'name'    => $name,
+                            'vehicle' => $vehicle,
+                            'team'    => trim($part_matches[2][$part_key]),
+                            'guid'    => trim($part_matches[4][$part_key]),
+                            'laps'    => array(),
+                            'has_multiple_cars'
+                                      => false,
+                        );
+                    }
                 }
             }
 
@@ -668,15 +715,8 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                         // Get first part
                         $data_session2_split = $data_session2_split[0];
 
-                        // Lap car regex
-                        // TODO: Make work for all other participant regexes
-                        // too......
-                        $lap_car_regex =
-                            '/REQUESTED CAR: (.*?)PASSWORD.*?DRIVER: (.*?) \['
-                            .'/si';
-
                         // Car could not be found for for this lap
-                        if ( ! preg_match_all($lap_car_regex,
+                        if ( ! preg_match_all($participant_regex,
                                    $data_session2_split,
                                    $lap_car_matches))
                         {
@@ -687,7 +727,8 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                         }
 
                         // Get last vehicle matched
-                        $lap_vehicle = trim(array_pop($lap_car_matches[1]));
+                        $lap_vehicle = trim(array_pop($lap_car_matches[
+                            $participant_regex_vehicle_match_key]));
                     }
 
 
