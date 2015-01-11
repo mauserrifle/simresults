@@ -191,7 +191,10 @@ class Participant {
 
     /**
      * Set the vehicle. Use this when a participant has one main vehicle he
-     * drives for all laps or the reader just supports one vehicle parsing
+     * drives for all laps or the reader just supports one vehicle parsing.
+     *
+     * For multiple please sonsider setting a vehicle on laps. `getVehicles()`
+     * will parse the laps to return vehicles.
      *
      * @param   Vehicle      $vehicle
      * @return  Participant
@@ -205,21 +208,33 @@ class Participant {
     /**
      * Get the vehicle.
      *
-     * @deprecated  Please use `getVehicles()`! A participant might ran
-     *              multiple cars on different laps.
+     * @deprecated  Please use `getVehicles()` especially for non-race sessions!
+     *              A participant might ran  multiple cars on different laps
+     *              due to reconnecting
      * @return  Vehicle
      */
     public function getVehicle()
     {
-        return $this->vehicle;
+        // Has main vehicle
+        if($this->vehicle)
+        {
+            return $this->vehicle;
+        }
+
+        // No main vehicle, return using the first found one from the
+        // collection (if any)
+        if ($vehicles=$this->getVehicles())
+        {
+            return $vehicles[0];
+        }
+
+        return NULL;
     }
 
     /**
      * Get the vehicles. This gets all the vehicles from the participant
      * laps. If the laps do not have vehicles set, the main vehicle will be
      * read
-     *
-     * TODO: Unit test this
      *
      * @return  array
      */
@@ -235,7 +250,7 @@ class Participant {
         $vehicles = array();
         foreach ($this->laps as $lap)
         {
-            if ( ! in_array($vehicle=$lap->getVehicle(), $vehicles))
+            if ( ! in_array($vehicle=$lap->getVehicle(), $vehicles, true))
             {
                 $vehicles[] = $vehicle;
             }
