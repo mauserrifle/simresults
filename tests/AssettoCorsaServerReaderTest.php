@@ -455,6 +455,31 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
     }
 
 
+    /**
+     * Fix a bug where best laps were cached in the reader because of calling
+     * `getVehicle()`
+     *
+     */
+    public function testFixForBestLapCacheBug()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-server/log.to.fix.best.lap.cache.txt');
+
+        // Get the data reader for the given data source
+        $session = Data_Reader::factory($file_path)->getSession();
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Get first participant
+        $participant = $participants[0];
+
+        // Validate best lap
+        $this->assertNotNull($participant->getBestLap());
+    }
+
+
 
     /***
     **** Below tests use 1 big server log file. There are total of 43 sessions

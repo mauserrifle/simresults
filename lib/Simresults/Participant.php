@@ -627,7 +627,13 @@ class Participant {
             return $this->cache_best_lap;
         }
 
-        // Get laps
+        // No laps
+        if ( ! $this->laps)
+        {
+            return NULL;
+        }
+
+        // Get laps sorted by time
         $laps = $this->getLapsSortedByTime();
 
         // Only return a completed lap

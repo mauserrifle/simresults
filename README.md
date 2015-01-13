@@ -201,6 +201,11 @@ calling sorting methods will be pointless. There are no cache invalidate
 methods (yet). Most likely they will never be needed as there's no use case you
 actually would want to change values after reading out all data.
 
+When writing a reader. NEVER call methods like `getVehicle()` on Participant
+(which uses cached methods). Re-use your own created objects (like `$vehicle`)
+within the reading to prevent any early invalid cache. Do this for all type of
+objects.
+
 ### Laps missing
 
 Logs tend to miss lap data on all games. Check the logs.

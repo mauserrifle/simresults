@@ -156,6 +156,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 $vehicles = array();
 
                 // Create vehicle and add to participant
+                $vehicle = null;
                 if (isset($part_data['vehicle']))
                 {
                     // Init vehicle
@@ -204,9 +205,9 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                     if ( ! $lap_data['vehicle'])
                     {
                         // Just use participant vehicle if it is available
-                        if ($participant->getVehicle())
+                        if ($vehicle)
                         {
-                            $lap->setVehicle($participant->getVehicle());
+                            $lap->setVehicle($vehicle);
                         }
                     }
                     // Has lap vehicle and vehicle instance of lap already known
