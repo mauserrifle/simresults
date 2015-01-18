@@ -64,6 +64,11 @@ class Participant {
      */
     protected $cache_vehicles;
 
+    /**
+     * @var  float|null  The cache for consistency
+     */
+    protected $cache_consistency;
+
 
 
     //------ Participant values
@@ -918,5 +923,64 @@ class Participant {
 
         // Return best possible lap and cache it
         return $this->cache_best_possible_lap = $best_possible_lap;
+    }
+
+    /**
+     * Get the consistency of the driver. Based on best lap - average non-best
+     *
+     * @return float
+     */
+    public function getConsistency()
+    {
+        // There is cache
+        if ($this->cache_consistency !== null)
+        {
+            return $this->cache_consistency;
+        }
+
+        // Not enough laps
+        if ( $this->getNumberOfCompletedLaps() <= 1)
+        {
+            return 0;
+        }
+
+        // Get best lap
+        $best_lap = $this->getBestLap();
+
+        // Get total time of all non-best
+        $total_time = 0;
+        foreach ($this->getLaps() as $lap)
+        {
+            // Is best lap or not completed, continue to next lap
+            if ($lap === $best_lap OR ! $lap->isCompleted()) continue;
+
+            // Add lap time to total time
+            $total_time += $lap->getTime();
+        }
+
+        // Get average of total time (devide by total laps without best lap)
+        $average = $total_time / ($this->getNumberOfCompletedLaps()-1);
+
+        // Return consistency
+        return $this->cache_consistency = round(
+            $average - $best_lap->getTime(), 4);
+    }
+
+    /**
+     * Get the consistency as percentage
+     *
+     * @return  float
+     */
+    public function getConsistencyPercentage()
+    {
+        // No consistency
+        if ( ! $consistency = $this->getConsistency())
+        {
+            return 100;
+        }
+
+        return round(
+            100 - ($consistency / ($this->getBestLap()->getTime() / 100)),
+            2);
     }
 }

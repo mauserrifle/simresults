@@ -423,6 +423,32 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
             ->setSectorTimes(array(14)))->getBestPossibleLap());
     }
 
+    /**
+     * Test the consistency of a participant
+     */
+    public function testConsistency()
+    {
+        // Get populated participant
+        $participant = $this->getParticipantWithLaps();
+
+        //-- Run twice to test cache
+        for($i=0; $i<2; $i++)
+        {
+            // Test
+            $this->assertSame(16.2405, $participant->getConsistency());
+            $this->assertSame(87.08, $participant->getConsistencyPercentage());
+        }
+
+        // Validate empty participant
+        $participant = new Participant;
+        $this->assertSame(0, $participant->getConsistency());
+        $this->assertSame(100, $participant->getConsistencyPercentage());
+
+        // Validate one lap participant
+        $lap = new Lap; $participant->addLap($lap->setTime(128.211));
+        $this->assertSame(0, $participant->getConsistency());
+    }
+
 
     /**
      * Returns a populated participant with laps
