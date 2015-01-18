@@ -500,6 +500,19 @@ class SessionTest extends PHPUnit_Framework_TestCase {
             $class_session->getLapsSortedByTime());
     }
 
+    public function testGettingParticipantsSortedByConsistency()
+    {
+        // Get session
+        $session = $this->getSessionWithData();
+
+        // Get participants sorted by consistency
+        $participants = $session->getParticipantsSortedByConsistency();
+
+        // Array not the same as normal participants order. We do not test the
+        // actual sorting, the tested Helper is used for this
+        $this->assertNotSame($participants, $session->getParticipants());
+    }
+
 
     /**
      * Get a Session instance populated with test data.

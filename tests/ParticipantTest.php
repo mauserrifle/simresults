@@ -90,7 +90,7 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
         $this->assertSame($laps[1], $participant->getLap(2));
 
         // Validate non existing lap
-        $this->assertNull($participant->getLap(5));
+        $this->assertNull($participant->getLap(7));
     }
 
     /**
@@ -132,13 +132,13 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
         $this->assertSame(125.730, $best_lap->getTime());
 
         // Test number of laps
-        $this->assertSame(4, $participant->getNumberOfLaps());
+        $this->assertSame(6, $participant->getNumberOfLaps());
 
         //-- Run twice to test cache
         for($i=0; $i<2; $i++)
         {
             // Test number of completed laps
-            $this->assertSame(3, $participant->getNumberOfCompletedLaps());
+            $this->assertSame(5, $participant->getNumberOfCompletedLaps());
         }
 
 
@@ -161,10 +161,7 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
         $participant = $this->getParticipantWithLaps();
 
         // Validate total time
-        $this->assertSame(409.671, $participant->getTotalTime());
-
-        // Validate total time
-        $this->assertSame(409.671, $participant->getTotalTime());
+        $this->assertSame(670.131, $participant->getTotalTime());
 
         // Force a new total time that overwrite lap calculation
         $participant->setTotalTime(409.678);
@@ -249,8 +246,10 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
 
             // Validate the laps
             $this->assertSame($participant->getLap(2), $laps[0]);
-            $this->assertSame($participant->getLap(1), $laps[1]);
-            $this->assertSame($participant->getLap(3), $laps[2]);
+            $this->assertSame($participant->getLap(3), $laps[1]);
+            $this->assertSame($participant->getLap(4), $laps[2]);
+            $this->assertSame($participant->getLap(1), $laps[3]);
+            $this->assertSame($participant->getLap(5), $laps[4]);
         }
     }
 
@@ -358,9 +357,9 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
             $average_lap = $participant->getAverageLap();
 
             // Validate
-            $this->assertSame(136.557, $average_lap->getTime());
+            $this->assertSame(134.0262, $average_lap->getTime());
             $this->assertSame(
-                array(43.1343, 39.9667, 53.456),
+                array(42.321, 39.86, 51.8452),
                 $average_lap->getSectorTimes()
             );
             $this->assertSame($participant, $average_lap->getParticipant());
@@ -371,7 +370,7 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
 
             // Get average lap excluding pitstop sectors and validate it
             $average_lap = $participant->getAverageLap(true);
-            $this->assertSame(136.0872, $average_lap->getTime());
+            $this->assertSame(132.6853, $average_lap->getTime());
         }
 
         // Validate empty participant
@@ -431,22 +430,46 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
         // Get populated participant
         $participant = $this->getParticipantWithLaps();
 
+        // Add slow lap (exactly +21s of best lap)
+        // This lap should be ignored in calculating
+        //
+        // NOTE: The lap 155.730 will also be ignored from populated test data
+        $lap = new Lap;
+        $participant->addLap(
+            $lap->setTime($participant->getBestLap()->getTime()+21)
+                 ->setSectorTimes(array(
+                     $participant->getBestLap()->getSectorTime(1)+7,
+                     $participant->getBestLap()->getSectorTime(2)+7,
+                     $participant->getBestLap()->getSectorTime(3)+7,
+                 ))
+        );
+
         //-- Run twice to test cache
         for($i=0; $i<2; $i++)
         {
             // Test
-            $this->assertSame(16.2405, $participant->getConsistency());
-            $this->assertSame(87.08, $participant->getConsistencyPercentage());
+            $this->assertSame(2.7405, $participant->getConsistency());
+            $this->assertSame(97.82, $participant->getConsistencyPercentage());
         }
 
         // Validate empty participant
-        $participant = new Participant;
-        $this->assertSame(0, $participant->getConsistency());
-        $this->assertSame(100, $participant->getConsistencyPercentage());
+        $participant = new Participant; // Prevent cache
+        $this->assertNull($participant->getConsistency());
+        $this->assertNull($participant->getConsistencyPercentage());
 
         // Validate one lap participant
+        $participant = new Participant; // Prevent cache
         $lap = new Lap; $participant->addLap($lap->setTime(128.211));
-        $this->assertSame(0, $participant->getConsistency());
+        $this->assertNull($participant->getConsistency());
+
+        // Validate extra pit stop lap not causing devise by zero error
+        $participant = new Participant; // Prevent cache
+        $lap = new Lap; $participant->addLap(
+            $lap->setTime(125.211));
+        $lap = new Lap; $participant->addLap(
+            $lap->setTime(128.211)->setPitLap(true));
+        $this->assertNull($participant->getConsistency());
+
     }
 
 
@@ -484,6 +507,36 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
                      39.601,
                      38.200,
                      47.929,
+                 ))
+                ->setPosition(2)
+                ->setNumber(2)
+                ->setAids(array(
+                    'AutoShift'      => 3,
+                ))
+        );
+
+        $lap = new Lap;
+        $participant->addLap(
+            $lap->setTime(128.730)
+                 ->setSectorTimes(array(
+                     40.601,
+                     39.200,
+                     48.929,
+                 ))
+                ->setPosition(2)
+                ->setNumber(2)
+                ->setAids(array(
+                    'AutoShift'      => 3,
+                ))
+        );
+
+        $lap = new Lap;
+        $participant->addLap(
+            $lap->setTime(131.730)
+                 ->setSectorTimes(array(
+                     41.601,
+                     40.200,
+                     49.929,
                  ))
                 ->setPosition(2)
                 ->setNumber(2)

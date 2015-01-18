@@ -926,7 +926,10 @@ class Participant {
     }
 
     /**
-     * Get the consistency of the driver. Based on best lap - average non-best
+     * Get the consistency of the driver. Based on:
+     * best lap MINUS average non-best.
+     *
+     * Pit or laps slower than 21s are ignored.
      *
      * @return float
      */
@@ -941,7 +944,7 @@ class Participant {
         // Not enough laps
         if ( $this->getNumberOfCompletedLaps() <= 1)
         {
-            return 0;
+            return null;
         }
 
         // Get best lap
@@ -949,17 +952,32 @@ class Participant {
 
         // Get total time of all non-best
         $total_time = 0;
+        $total_time_laps_num = 0;
         foreach ($this->getLaps() as $lap)
         {
-            // Is best lap or not completed, continue to next lap
-            if ($lap === $best_lap OR ! $lap->isCompleted()) continue;
+            // Is best lap, not completed, pit lap or just too slow compared to
+            // the best lap (+21s)
+            if ($lap === $best_lap OR ! $lap->isCompleted() OR
+                $lap->isPitLap() OR
+                $lap->getTime() >= ($best_lap->getTime()+21))
+            {
+                continue;
+            }
 
             // Add lap time to total time
             $total_time += $lap->getTime();
+
+            $total_time_laps_num++;
         }
 
-        // Get average of total time (devide by total laps without best lap)
-        $average = $total_time / ($this->getNumberOfCompletedLaps()-1);
+        // No total time
+        if ( ! $total_time)
+        {
+            return null;
+        }
+
+        // Get average of total time
+        $average = $total_time / $total_time_laps_num;
 
         // Return consistency
         return $this->cache_consistency = round(
@@ -976,7 +994,7 @@ class Participant {
         // No consistency
         if ( ! $consistency = $this->getConsistency())
         {
-            return 100;
+            return null;
         }
 
         return round(

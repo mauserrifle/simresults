@@ -106,7 +106,7 @@ class HelperTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
-     * Test soting laps by sector
+     * Test sorting laps by sector
      */
     public function testSortingLapsBySector()
     {
@@ -138,6 +138,46 @@ class HelperTest extends PHPUnit_Framework_TestCase {
         $this->assertSame(100.10, $sectors1[0]);
         $this->assertSame(100.20, $sectors2[0]);
         $this->assertSame(103.50, $sectors3[0]);
+    }
+
+    /**
+     * Test sorting participants by concistency
+     */
+    public function testSortingParticipantsByConsistency()
+    {
+        // Mock participants
+        $participant1 = $this->getMockBuilder('\Simresults\Participant')
+                             ->getMock();
+        $participant1->method('getConsistency')
+                     ->willReturn(1.8);
+
+        $participant2 = $this->getMockBuilder('\Simresults\Participant')
+                             ->getMock();
+        $participant2->method('getConsistency')
+                     ->willReturn(1.3);
+
+        $participant3 = $this->getMockBuilder('\Simresults\Participant')
+                             ->getMock();
+        $participant3->method('getConsistency')
+                     ->willReturn(1.79);
+
+        $participant4 = $this->getMockBuilder('\Simresults\Participant')
+                             ->getMock();
+        $participant4->method('getConsistency')
+                     ->willReturn(null);
+
+        // Participants array
+        $participants = array(
+            $participant1, $participant2, $participant3, $participant4);
+
+        // Sort participants
+        $participants = Helper::sortParticipantsByConsistency($participants);
+
+        // Validate participants
+        $this->assertSame($participant2, $participants[0]);
+        $this->assertSame($participant3, $participants[1]);
+        $this->assertSame($participant1, $participants[2]);
+        $this->assertSame($participant4, $participants[3]);
     }
 
 }
