@@ -479,6 +479,29 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertNotNull($participant->getBestLap());
     }
 
+    /**
+     * Test log with missing session type and driver vehicles. The session type
+     * should default to practice
+     */
+    public function testMissingSessionTypeAndDriverVehicles()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-server/rename.me.txt');
+
+        // Get the data reader for the given data source
+        $session = Data_Reader::factory($file_path)->getSession();
+
+        // Validate session type that defaulted to practice
+        $this->assertSame(Session::TYPE_PRACTICE, $session->getType());
+
+        // Validate server that defaulted to unknown
+        $this->assertSame('Unknown', $session->getServer()->getName());
+
+        // TODO: Validate vehicle using "Dispatching TCP message" lines
+    }
+
+
 
 
     /***

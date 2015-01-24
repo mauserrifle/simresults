@@ -65,11 +65,22 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             $session->setType($type);
 
             // Set session name
-            $session->setName($session_data['name']);
+            if (isset($session_data['name']))
+            {
+                $session->setName($session_data['name']);
+            }
 
-            // Set max time and laps
-            $session->setMaxMinutes($session_data['time']);
-            $session->setMaxLaps($session_data['laps']);
+            // Set max time
+            if (isset($session_data['time']))
+            {
+                $session->setMaxMinutes($session_data['time']);
+            }
+
+            // Set max laps
+            if (isset($session_data['laps']))
+            {
+                $session->setMaxLaps($session_data['laps']);
+            }
 
             // Set game
             $game = new Game; $game->setName('Assetto Corsa');
@@ -91,13 +102,17 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             }
 
             // Set server
+            $server = new Server;
+            $server->setDedicated(true);
             if (isset($session_data['server']))
             {
-                $server = new Server;
-                $server->setName($session_data['server'])
-                       ->setDedicated(true);
-                $session->setServer($server);
+                $server->setName($session_data['server']);
             }
+            else
+            {
+                $server->setName('Unknown');
+            }
+            $session->setServer($server);
 
             // Add allowed vehicles
             foreach ($session_data['car_list'] as $vehicle_name)
@@ -398,6 +413,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             $session = $prev_session_meta;
 
             // Get session type
+            $session['type'] = 'practice'; // defaults to practice
             preg_match('/TYPE=(.*)/i', $data_session, $matches);
             if (isset($matches[1]))
             {
