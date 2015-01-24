@@ -524,6 +524,26 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
     }
 
 
+    /**
+     * Test additional fix for missing vehicles
+     */
+    public function testFixForMissingVehicles()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-server/3Up.txt');
+
+        // Get the data reader for the given data source
+        $session = Data_Reader::factory($file_path)->getSession();
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Validate vehicle that was missing
+        $this->assertSame('ferrari_458_gt2',
+                          $participants[8]->getVehicle()->getName());
+    }
+
 
 
 

@@ -553,13 +553,13 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 }
 
                 // Participant already exists
-                if (isset($participants[$name]))
+                if (isset($participants[strtolower($name)]))
                 {
                     // Vehicle is different
-                    if ($participants[$name]['vehicle'] !== $vehicle)
+                    if ($participants[strtolower($name)]['vehicle'] !== $vehicle)
                     {
                         // Mark participant to have multiple cars
-                        $participants[$name]['has_multiple_cars'] = true;
+                        $participants[strtolower($name)]['has_multiple_cars'] = true;
                     }
                     // Vehcle not different, just ignore
                 }
@@ -567,7 +567,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 else
                 {
                     // Add participant
-                    $participants[$name] = array(
+                    $participants[strtolower($name)] = array(
                         'name'               => $name,
                         'vehicle'            => $vehicle,
                         'laps'               => array(),
@@ -597,20 +597,20 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                         $guid = trim($part_matches[5][$part_key]);
 
                         // Participant already exists
-                        if (isset($participants[$name]))
+                        if (isset($participants[strtolower($name)]))
                         {
                             // Vehicle is different
-                            if ($participants[$name]['vehicle'] !== $vehicle)
+                            if ($participants[strtolower($name)]['vehicle'] !== $vehicle)
                             {
                                 // Mark participant to have multiple cars
-                                $participants[$name]['has_multiple_cars'] = true;
+                                $participants[strtolower($name)]['has_multiple_cars'] = true;
                             }
                             // Vehcle not different, just ignore
                         }
                         // Participant is new
                         else
                         {
-                            $participants[$name] = array(
+                            $participants[strtolower($name)] = array(
                                 'name'               => $name,
                                 'vehicle'            => $vehicle,
                                 'guid'               => $guid,
@@ -645,20 +645,20 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                                 [$part_key]);
 
                     // Participant already exists
-                    if (isset($participants[$name]))
+                    if (isset($participants[strtolower($name)]))
                     {
                         // Vehicle is different
-                        if ($participants[$name]['vehicle'] !== $vehicle)
+                        if ($participants[strtolower($name)]['vehicle'] !== $vehicle)
                         {
                             // Mark participant to have multiple cars
-                            $participants[$name]['has_multiple_cars'] = true;
+                            $participants[strtolower($name)]['has_multiple_cars'] = true;
                         }
                         // Vehcle not different, just ignore
                     }
                     // Participant is new
                     else
                     {
-                        $participants[$name] = array(
+                        $participants[strtolower($name)] = array(
                             'name'    => $name,
                             'vehicle' => $vehicle,
                             'team'    => trim($part_matches[2][$part_key]),
@@ -718,15 +718,15 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                     $name = trim($lap_matches[1][$lap_key]);
 
                     // Add name just to be sure
-                    $participants_copy[$name]['name'] = $name;
+                    $participants_copy[strtolower($name)]['name'] = $name;
 
                     // Lap vehicle not known by default (assume participant
                     // has one vehicle)
                     $lap_vehicle = null;
 
                     // Participant has multiple cars in use
-                    if (isset($participants_copy[$name]['has_multiple_cars']) AND
-                        $participants_copy[$name]['has_multiple_cars'])
+                    if (isset($participants_copy[strtolower($name)]['has_multiple_cars']) AND
+                        $participants_copy[strtolower($name)]['has_multiple_cars'])
                     {
                         // Split data with lap data as delimiter
                         $data_session2_split = explode($lap_data, $data_session2);
@@ -751,13 +751,13 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
 
 
                     // Add lap
-                    $participants_copy[$name]['laps'][] = array(
+                    $participants_copy[strtolower($name)]['laps'][] = array(
                         'time'    => Helper::secondsFromFormattedTime(
                                          $lap_matches[2][$lap_key], true),
                         'vehicle' => $lap_vehicle
                                          ? $lap_vehicle
-                                         : (isset($participants_copy[$name]['vehicle'])
-                                             ? $participants_copy[$name]['vehicle']
+                                         : (isset($participants_copy[strtolower($name)]['vehicle'])
+                                             ? $participants_copy[strtolower($name)]['vehicle']
                                              : null)
                     );
                     $no_laps = false;
@@ -791,12 +791,12 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 {
                     // Add name and laps just to be sure
                     $name = trim($time_matches[1][$time_key]);
-                    $participants_copy[$name]['name'] = $name;
+                    $participants_copy[strtolower($name)]['name'] = $name;
 
                     // Not 0
                     if ($time_matches[2][$time_key] !== '0:00:000')
                     {
-                        $participants_copy[$name]['total_time'] =
+                        $participants_copy[strtolower($name)]['total_time'] =
                             Helper::secondsFromFormattedTime(
                                   $time_matches[2][$time_key], true);
                     }
