@@ -544,7 +544,30 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
                           $participants[8]->getVehicle()->getName());
     }
 
+    /**
+     * Test additional fix for missing vehicles. This tests succesful parsing
+     * of log lines:
+     *  /SUB|tatuusfa1|tatuus_honda_b|Aaron Wilson||76561198021449105|piratella
+     */
+    public function testFixForMissingVehicles2()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-server/'.
+            'different.connecting.format.with.some.missing.data.txt');
 
+        // Get the data reader for the given data source
+        $session = Data_Reader::factory($file_path)->getSession();
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Validate vehicle and guid that was missing of Aaron Wilson
+        $this->assertSame('tatuusfa1',
+                          $participants[13]->getVehicle()->getName());
+        $this->assertSame('76561198021449105',
+                          $participants[13]->getDriver()->getDriverId());
+    }
 
 
 

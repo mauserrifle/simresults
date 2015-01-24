@@ -581,6 +581,51 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             {
                 preg_match_all(
                     $participant_regex =
+                    '/SUB\|(.*?)\|(.*?)\|(.*?)\|\|(.*?)\|(.*?)/i',
+                    $data_session, $part_matches);
+
+                    // First value match is for vehicle
+                    $participant_regex_vehicle_match_key = 1;
+
+                    // Loop each match and collect participants
+                    foreach ($part_matches[0] as $part_key => $part_data)
+                    {
+                        $name = trim($part_matches[3][$part_key]);
+                        $vehicle = trim($part_matches
+                                       [$participant_regex_vehicle_match_key]
+                                       [$part_key]);
+                        $guid = trim($part_matches[4][$part_key]);
+
+                        // Participant already exists
+                        if (isset($participants[strtolower($name)]))
+                        {
+                            // Vehicle is different
+                            if ($participants[strtolower($name)]['vehicle'] !== $vehicle)
+                            {
+                                // Mark participant to have multiple cars
+                                $participants[strtolower($name)]['has_multiple_cars'] = true;
+                            }
+                            // Vehcle not different, just ignore
+                        }
+                        // Participant is new
+                        else
+                        {
+                            $participants[strtolower($name)] = array(
+                                'name'               => $name,
+                                'vehicle'            => $vehicle,
+                                'guid'               => $guid,
+                                'laps'               => array(),
+                                'has_multiple_cars'  => false,
+                            );
+                        }
+                    }
+            }
+
+            // No participants found, try different method
+            if ( ! $participants)
+            {
+                preg_match_all(
+                    $participant_regex =
                     '/Adding car: (.*?) name=(.*?) model=(.*?) skin=(.*?) guid=(.*)/i',
                     $data_session, $part_matches);
 
