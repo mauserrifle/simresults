@@ -581,7 +581,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             {
                 preg_match_all(
                     $participant_regex =
-                    '/Adding car: (.*?) name=(.*?) model=(.*?) skin=(.*?)/si',
+                    '/Adding car: (.*?) name=(.*?) model=(.*?) skin=(.*?) guid=(.*)/i',
                     $data_session, $part_matches);
 
                     // Third value match is for vehicle
@@ -594,6 +594,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                         $vehicle = trim($part_matches
                                        [$participant_regex_vehicle_match_key]
                                        [$part_key]);
+                        $guid = trim($part_matches[5][$part_key]);
 
                         // Participant already exists
                         if (isset($participants[$name]))
@@ -612,6 +613,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                             $participants[$name] = array(
                                 'name'               => $name,
                                 'vehicle'            => $vehicle,
+                                'guid'               => $guid,
                                 'laps'               => array(),
                                 'has_multiple_cars'  => false,
                             );

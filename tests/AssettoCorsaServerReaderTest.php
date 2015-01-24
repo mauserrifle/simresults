@@ -243,6 +243,28 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
+     * Test reading the guids from a other connect format (Adding car: ...)
+     */
+    public function testReadingOtherGuidsFormat()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-server/different.connecting.format.log');
+
+        // Get the first session
+        $session = Data_Reader::factory($file_path)->getSession();
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Validate some guids
+        $this->assertSame('76561198153260382',
+                          $participants[0]->getDriver()->getDriverId());
+        $this->assertSame('76561197991946485',
+                          $participants[5]->getDriver()->getDriverId());
+    }
+
+    /**
      * Test reading allowed car list not containing other log info (bugfix)
      */
     public function testReadingAllowedVehicles()
@@ -500,6 +522,8 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
 
         // TODO: Validate vehicle using "Dispatching TCP message" lines
     }
+
+
 
 
 
