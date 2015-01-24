@@ -41,7 +41,10 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
         // Loop each session from data
         foreach ($data as $session_data)
         {
-            // loop sessions
+            // Remember which vehicles are parsed
+            $vehicle_names = array();
+
+            // Init session
             $session = new Session;
 
             // Set session type
@@ -181,6 +184,9 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
 
                     // Remember vehicle instance
                     $vehicles[$part_data['vehicle']] = $vehicle;
+
+                    // Remember vehicle names for this entire session
+                    $vehicle_names[$part_data['vehicle']] = 1;
                 }
 
                 // Has team
@@ -350,6 +356,23 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                     {
                         $lap->setPosition($lap_key+1);
                     }
+                }
+            }
+
+
+            // Only one vehicle type in this session
+            if (count($vehicle_names) === 1)
+            {
+                // Find any participant without vehicle and fix missing.
+                // This is an easy last resort fix when parsing was bugged
+                // We assume everybody has this vehicle
+                foreach ($session->getParticipants() as $participant)
+                if ( ! $participant->getVehicle())
+                {
+                    // Init vehicle
+                    $vehicle = new Vehicle;
+                    $vehicle->setName(key($vehicle_names));
+                    $participant->setVehicle($vehicle);
                 }
             }
 

@@ -503,13 +503,15 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
 
     /**
      * Test log with missing session type and driver vehicles. The session type
-     * should default to practice
+     * should default to practice and alot of vehicles are defaulted to the
+     * only vehicle used by other participants
      */
     public function testMissingSessionTypeAndDriverVehicles()
     {
         // The path to the data source
         $file_path = realpath(__DIR__.
-            '/logs/assettocorsa-server/rename.me.txt');
+            '/logs/assettocorsa-server/'.
+            'missing.session.info.and.alot.of.connect.info.txt');
 
         // Get the data reader for the given data source
         $session = Data_Reader::factory($file_path)->getSession();
@@ -520,7 +522,14 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
         // Validate server that defaulted to unknown
         $this->assertSame('Unknown', $session->getServer()->getName());
 
-        // TODO: Validate vehicle using "Dispatching TCP message" lines
+        // Validate all vehicles. Alot are missing due to bad connect info.
+        // This tests that the parser defaults to the only car everybody else
+        // uses. We assume this is the only one allowed
+        foreach ($session->getParticipants() as $part)
+        {
+            $this->AssertSame('ferrari_458_gt2*',
+                              $part->getVehicle()->getName());
+        }
     }
 
 
