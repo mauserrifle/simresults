@@ -265,6 +265,27 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
+     * Test additional fix for missing guid
+     */
+    public function testFixForMissingGuid()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-server/'.
+            'driver.antoine.with.two.spaces.in.name.txt');
+
+        // Get the data reader for the given data source
+        $session = Data_Reader::factory($file_path)->getSession();
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Validate guid that was missing
+        $this->assertSame('76561198018799568',
+                          $participants[12]->getDriver()->getDriverId());
+    }
+
+    /**
      * Test reading allowed car list not containing other log info (bugfix)
      */
     public function testReadingAllowedVehicles()

@@ -401,7 +401,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
      * @return   array
      *
      */
-    protected static function parse_data($data)
+    protected function parse_data($data)
     {
         // No server log
         if (strpos($data, 'Server CFG Path') === false) return false;
@@ -576,13 +576,13 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 }
 
                 // Participant already exists
-                if (isset($participants[strtolower($name)]))
+                if (isset($participants[$this->getDriverKey($name)]))
                 {
                     // Vehicle is different
-                    if ($participants[strtolower($name)]['vehicle'] !== $vehicle)
+                    if ($participants[$this->getDriverKey($name)]['vehicle'] !== $vehicle)
                     {
                         // Mark participant to have multiple cars
-                        $participants[strtolower($name)]['has_multiple_cars'] = true;
+                        $participants[$this->getDriverKey($name)]['has_multiple_cars'] = true;
                     }
                     // Vehcle not different, just ignore
                 }
@@ -590,7 +590,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 else
                 {
                     // Add participant
-                    $participants[strtolower($name)] = array(
+                    $participants[$this->getDriverKey($name)] = array(
                         'name'               => $name,
                         'vehicle'            => $vehicle,
                         'laps'               => array(),
@@ -620,20 +620,20 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                         $guid = trim($part_matches[4][$part_key]);
 
                         // Participant already exists
-                        if (isset($participants[strtolower($name)]))
+                        if (isset($participants[$this->getDriverKey($name)]))
                         {
                             // Vehicle is different
-                            if ($participants[strtolower($name)]['vehicle'] !== $vehicle)
+                            if ($participants[$this->getDriverKey($name)]['vehicle'] !== $vehicle)
                             {
                                 // Mark participant to have multiple cars
-                                $participants[strtolower($name)]['has_multiple_cars'] = true;
+                                $participants[$this->getDriverKey($name)]['has_multiple_cars'] = true;
                             }
                             // Vehcle not different, just ignore
                         }
                         // Participant is new
                         else
                         {
-                            $participants[strtolower($name)] = array(
+                            $participants[$this->getDriverKey($name)] = array(
                                 'name'               => $name,
                                 'vehicle'            => $vehicle,
                                 'guid'               => $guid,
@@ -665,20 +665,20 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                         $guid = trim($part_matches[5][$part_key]);
 
                         // Participant already exists
-                        if (isset($participants[strtolower($name)]))
+                        if (isset($participants[$this->getDriverKey($name)]))
                         {
                             // Vehicle is different
-                            if ($participants[strtolower($name)]['vehicle'] !== $vehicle)
+                            if ($participants[$this->getDriverKey($name)]['vehicle'] !== $vehicle)
                             {
                                 // Mark participant to have multiple cars
-                                $participants[strtolower($name)]['has_multiple_cars'] = true;
+                                $participants[$this->getDriverKey($name)]['has_multiple_cars'] = true;
                             }
                             // Vehcle not different, just ignore
                         }
                         // Participant is new
                         else
                         {
-                            $participants[strtolower($name)] = array(
+                            $participants[$this->getDriverKey($name)] = array(
                                 'name'               => $name,
                                 'vehicle'            => $vehicle,
                                 'guid'               => $guid,
@@ -713,20 +713,20 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                                 [$part_key]);
 
                     // Participant already exists
-                    if (isset($participants[strtolower($name)]))
+                    if (isset($participants[$this->getDriverKey($name)]))
                     {
                         // Vehicle is different
-                        if ($participants[strtolower($name)]['vehicle'] !== $vehicle)
+                        if ($participants[$this->getDriverKey($name)]['vehicle'] !== $vehicle)
                         {
                             // Mark participant to have multiple cars
-                            $participants[strtolower($name)]['has_multiple_cars'] = true;
+                            $participants[$this->getDriverKey($name)]['has_multiple_cars'] = true;
                         }
                         // Vehcle not different, just ignore
                     }
                     // Participant is new
                     else
                     {
-                        $participants[strtolower($name)] = array(
+                        $participants[$this->getDriverKey($name)] = array(
                             'name'    => $name,
                             'vehicle' => $vehicle,
                             'team'    => trim($part_matches[2][$part_key]),
@@ -738,6 +738,8 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                     }
                 }
             }
+
+
 
             // Store participants to all participants array. Using union method
             // to prevent any data losing that happens using array_merge
@@ -786,15 +788,15 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                     $name = trim($lap_matches[1][$lap_key]);
 
                     // Add name just to be sure
-                    $participants_copy[strtolower($name)]['name'] = $name;
+                    $participants_copy[$this->getDriverKey($name)]['name'] = $name;
 
                     // Lap vehicle not known by default (assume participant
                     // has one vehicle)
                     $lap_vehicle = null;
 
                     // Participant has multiple cars in use
-                    if (isset($participants_copy[strtolower($name)]['has_multiple_cars']) AND
-                        $participants_copy[strtolower($name)]['has_multiple_cars'])
+                    if (isset($participants_copy[$this->getDriverKey($name)]['has_multiple_cars']) AND
+                        $participants_copy[$this->getDriverKey($name)]['has_multiple_cars'])
                     {
                         // Split data with lap data as delimiter
                         $data_session2_split = explode($lap_data, $data_session2);
@@ -819,13 +821,13 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
 
 
                     // Add lap
-                    $participants_copy[strtolower($name)]['laps'][] = array(
+                    $participants_copy[$this->getDriverKey($name)]['laps'][] = array(
                         'time'    => Helper::secondsFromFormattedTime(
                                          $lap_matches[2][$lap_key], true),
                         'vehicle' => $lap_vehicle
                                          ? $lap_vehicle
-                                         : (isset($participants_copy[strtolower($name)]['vehicle'])
-                                             ? $participants_copy[strtolower($name)]['vehicle']
+                                         : (isset($participants_copy[$this->getDriverKey($name)]['vehicle'])
+                                             ? $participants_copy[$this->getDriverKey($name)]['vehicle']
                                              : null)
                     );
                     $no_laps = false;
@@ -859,12 +861,12 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 {
                     // Add name and laps just to be sure
                     $name = trim($time_matches[1][$time_key]);
-                    $participants_copy[strtolower($name)]['name'] = $name;
+                    $participants_copy[$this->getDriverKey($name)]['name'] = $name;
 
                     // Not 0
                     if ($time_matches[2][$time_key] !== '0:00:000')
                     {
-                        $participants_copy[strtolower($name)]['total_time'] =
+                        $participants_copy[$this->getDriverKey($name)]['total_time'] =
                             Helper::secondsFromFormattedTime(
                                   $time_matches[2][$time_key], true);
                     }
@@ -999,5 +1001,16 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
     protected function get($array, $key, $default = NULL)
     {
         return isset($array[$key]) ? $array[$key] : $default;
+    }
+
+    /**
+     * Get the driver names key for storing in the participants array
+     *
+     * @param  string $name
+     * @return string
+     */
+    protected function getDriverKey($name)
+    {
+        return strtolower(str_replace(' ', '', $name));
     }
 }
