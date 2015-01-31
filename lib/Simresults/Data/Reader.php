@@ -41,12 +41,18 @@ abstract class Data_Reader {
             'Simresults\Data_Reader_Race07',
         );
 
-        // Data is a file
-        if (is_file($data))
+        // File checking
+        try
         {
-            // Read contents of file
-            $data = file_get_contents($data);
+            // Data is a file
+            if (is_file($data))
+            {
+                // Read contents of file
+                $data = file_get_contents($data);
+            }
         }
+        // Ignore any errors (TODO: Unitest this somehow?)
+        catch (\Exception $ex) {}
 
         // No data
         if ( ! $data)
