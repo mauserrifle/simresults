@@ -447,20 +447,24 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
         //-- Run twice to test cache
         for($i=0; $i<2; $i++)
         {
-            // Test
-            $this->assertSame(2.7405, $participant->getConsistency());
-            $this->assertSame(97.82, $participant->getConsistencyPercentage());
+            // Test without ignoring first lap
+            $this->assertSame(2.7405, $participant->getConsistency(false));
+            $this->assertSame(97.82, $participant->getConsistencyPercentage(false));
+
+            // Test with ignoring first lap
+            $this->assertSame(3.0, $participant->getConsistency());
+            $this->assertSame(97.61, $participant->getConsistencyPercentage());
         }
 
         // Validate empty participant
         $participant = new Participant; // Prevent cache
-        $this->assertNull($participant->getConsistency());
-        $this->assertNull($participant->getConsistencyPercentage());
+        $this->assertNull($participant->getConsistency(false));
+        $this->assertNull($participant->getConsistencyPercentage(false));
 
         // Validate one lap participant
         $participant = new Participant; // Prevent cache
         $lap = new Lap; $participant->addLap($lap->setTime(128.211));
-        $this->assertNull($participant->getConsistency());
+        $this->assertNull($participant->getConsistency(false));
 
         // Validate extra pit stop lap not causing devise by zero error
         $participant = new Participant; // Prevent cache
@@ -468,8 +472,7 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
             $lap->setTime(125.211));
         $lap = new Lap; $participant->addLap(
             $lap->setTime(128.211)->setPitLap(true));
-        $this->assertNull($participant->getConsistency());
-
+        $this->assertNull($participant->getConsistency(false));
     }
 
 

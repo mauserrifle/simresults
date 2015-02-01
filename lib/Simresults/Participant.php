@@ -65,9 +65,12 @@ class Participant {
     protected $cache_vehicles;
 
     /**
-     * @var  float|null  The cache for consistency
+     * @var  array  The cache for consistency ignore first lap or not
      */
-    protected $cache_consistency;
+    protected $cache_consistency = array(
+        true   => null,
+        false  => null,
+    );
 
 
 
@@ -929,16 +932,18 @@ class Participant {
      * Get the consistency of the driver. Based on:
      * best lap MINUS average non-best.
      *
-     * Pit or laps slower than 21s are ignored.
+     * Pit or laps slower than 21s are ignored. First lap is also ignored by
+     * default but may be changed by arguments.
      *
-     * @return float
+     * @param   boolean  $ignore_first_lap
+     * @return  float
      */
-    public function getConsistency()
+    public function getConsistency($ignore_first_lap = true)
     {
         // There is cache
-        if ($this->cache_consistency !== null)
+        if ($this->cache_consistency[$ignore_first_lap] !== null)
         {
-            return $this->cache_consistency;
+            return $this->cache_consistency[$ignore_first_lap];
         }
 
         // Not enough laps
@@ -953,13 +958,14 @@ class Participant {
         // Get total time of all non-best
         $total_time = 0;
         $total_time_laps_num = 0;
-        foreach ($this->getLaps() as $lap)
+        foreach ($this->getLaps() as $key => $lap)
         {
-            // Is best lap, not completed, pit lap or just too slow compared to
-            // the best lap (+21s)
+            // Is best lap, not completed, pit lap, just too slow compared to
+            // the best lap (+21s) or first lap that should be ignored
             if ($lap === $best_lap OR ! $lap->isCompleted() OR
                 $lap->isPitLap() OR
-                $lap->getTime() >= ($best_lap->getTime()+21))
+                $lap->getTime() >= ($best_lap->getTime()+21) OR
+                ($ignore_first_lap AND $key === 0))
             {
                 continue;
             }
@@ -980,7 +986,7 @@ class Participant {
         $average = $total_time / $total_time_laps_num;
 
         // Return consistency
-        return $this->cache_consistency = round(
+        return $this->cache_consistency[$ignore_first_lap] = round(
             $average - $best_lap->getTime(), 4);
     }
 
@@ -989,10 +995,10 @@ class Participant {
      *
      * @return  float
      */
-    public function getConsistencyPercentage()
+    public function getConsistencyPercentage($ignore_first_lap = true)
     {
         // No consistency
-        if ( ! $consistency = $this->getConsistency())
+        if ( ! $consistency = $this->getConsistency($ignore_first_lap))
         {
             return null;
         }
