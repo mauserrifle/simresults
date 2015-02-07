@@ -409,6 +409,14 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
         // Make utf8
         $data = utf8_encode($data);
 
+        // Contains windows new lines as text (so not real ones). User might
+        // edited the file in a very wrong way
+        if (strpos($data, '\r'))
+        {
+            // Replace them with real unix new lines
+            $data = str_replace('\r', "\n", $data);
+        }
+
         // Split data by sessions
         $data_sessions = explode('NextSession', $data);
 

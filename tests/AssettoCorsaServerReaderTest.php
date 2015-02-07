@@ -599,6 +599,24 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
                           $participants[13]->getDriver()->getDriverId());
     }
 
+    /**
+     * Test fixing bad new lines
+     */
+    public function testFixingBadNewLines()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-server/'.
+            'bad.new.lines.txt');
+
+        // Get the data reader for the given data source
+        $session = Data_Reader::factory($file_path)->getSession();
+
+        // Test that is practice session. We assume the rest is correct too
+        // when this is positive
+        $this->assertSame(Session::TYPE_PRACTICE, $session->getType());
+    }
+
 
 
     /***
