@@ -1094,6 +1094,16 @@ class Session {
     }
 
     /**
+     * Get the participants sorted by consistency
+     *
+     * @return  array
+     */
+    public function getParticipantsSortedByConsistency()
+    {
+        return Helper::sortParticipantsByConsistency($this->getParticipants());
+    }
+
+    /**
      * Get number of laps this session lasted
      *
      * @return  int

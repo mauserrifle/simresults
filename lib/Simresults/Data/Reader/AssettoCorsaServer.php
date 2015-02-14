@@ -41,7 +41,10 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
         // Loop each session from data
         foreach ($data as $session_data)
         {
-            // loop sessions
+            // Remember which vehicles are parsed
+            $vehicle_names = array();
+
+            // Init session
             $session = new Session;
 
             // Set session type
@@ -65,11 +68,22 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             $session->setType($type);
 
             // Set session name
-            $session->setName($session_data['name']);
+            if (isset($session_data['name']))
+            {
+                $session->setName($session_data['name']);
+            }
 
-            // Set max time and laps
-            $session->setMaxMinutes($session_data['time']);
-            $session->setMaxLaps($session_data['laps']);
+            // Set max time
+            if (isset($session_data['time']))
+            {
+                $session->setMaxMinutes($session_data['time']);
+            }
+
+            // Set max laps
+            if (isset($session_data['laps']))
+            {
+                $session->setMaxLaps($session_data['laps']);
+            }
 
             // Set game
             $game = new Game; $game->setName('Assetto Corsa');
@@ -91,13 +105,17 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             }
 
             // Set server
+            $server = new Server;
+            $server->setDedicated(true);
             if (isset($session_data['server']))
             {
-                $server = new Server;
-                $server->setName($session_data['server'])
-                       ->setDedicated(true);
-                $session->setServer($server);
+                $server->setName($session_data['server']);
             }
+            else
+            {
+                $server->setName('Unknown');
+            }
+            $session->setServer($server);
 
             // Add allowed vehicles
             foreach ($session_data['car_list'] as $vehicle_name)
@@ -152,12 +170,23 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                     $participant->setFinishStatus(Participant::FINISH_DNF);
                 }
 
+                // Remember vehicle instances by vehicle name
+                $vehicles = array();
+
                 // Create vehicle and add to participant
+                $vehicle = null;
                 if (isset($part_data['vehicle']))
                 {
+                    // Init vehicle
                     $vehicle = new Vehicle;
                     $vehicle->setName($part_data['vehicle']);
                     $participant->setVehicle($vehicle);
+
+                    // Remember vehicle instance
+                    $vehicles[$part_data['vehicle']] = $vehicle;
+
+                    // Remember vehicle names for this entire session
+                    $vehicle_names[$part_data['vehicle']] = 1;
                 }
 
                 // Has team
@@ -192,6 +221,33 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
 
                     // Set lap times
                     $lap->setTime($lap_data['time']);
+
+                    // No lap vehicle
+                    if ( ! $lap_data['vehicle'])
+                    {
+                        // Just use participant vehicle if it is available
+                        if ($vehicle)
+                        {
+                            $lap->setVehicle($vehicle);
+                        }
+                    }
+                    // Has lap vehicle and vehicle instance of lap already known
+                    elseif (isset($vehicles[$v=$lap_data['vehicle']]))
+                    {
+                        // Set vehicle instance
+                        $lap->setVehicle($vehicles[$v]);
+                    }
+                    // Vehicle instance not known. Set new
+                    else
+                    {
+                        // Init vehicle
+                        $vehicle = new Vehicle;
+                        $vehicle->setName($lap_data['vehicle']);
+                        $lap->setVehicle($vehicle);
+
+                        // Remember vehicle
+                        $vehicles[$lap_data['vehicle']] = $vehicle;
+                    }
 
                     // Add lap to participant
                     $participant->addLap($lap);
@@ -304,6 +360,23 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             }
 
 
+            // Only one vehicle type in this session
+            if (count($vehicle_names) === 1)
+            {
+                // Find any participant without vehicle and fix missing.
+                // This is an easy last resort fix when parsing was bugged
+                // We assume everybody has this vehicle
+                foreach ($session->getParticipants() as $participant)
+                if ( ! $participant->getVehicle())
+                {
+                    // Init vehicle
+                    $vehicle = new Vehicle;
+                    $vehicle->setName(key($vehicle_names));
+                    $participant->setVehicle($vehicle);
+                }
+            }
+
+
             // Add session to collection
             $sessions[] = $session;
         }
@@ -328,13 +401,21 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
      * @return   array
      *
      */
-    protected static function parse_data($data)
+    protected function parse_data($data)
     {
         // No server log
         if (strpos($data, 'Server CFG Path') === false) return false;
 
         // Make utf8
         $data = utf8_encode($data);
+
+        // Contains windows new lines as text (so not real ones). User might
+        // edited the file in a very wrong way
+        if (strpos($data, '\r'))
+        {
+            // Replace them with real unix new lines
+            $data = str_replace('\r', "\n", $data);
+        }
 
         // Split data by sessions
         $data_sessions = explode('NextSession', $data);
@@ -363,6 +444,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             $session = $prev_session_meta;
 
             // Get session type
+            $session['type'] = 'practice'; // defaults to practice
             preg_match('/TYPE=(.*)/i', $data_session, $matches);
             if (isset($matches[1]))
             {
@@ -437,11 +519,20 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             // Set last car list
             $last_car_list = $session['car_list'];
 
+            // Remember which participant regex was used so we can re-use
+            // these regex at lap matching
+            $participant_regex = null;
+            $participant_regex_vehicle_match_key = null;
+
             // Collect participants by connect information so we know which
             // car they run
             preg_match_all(
-                '/REQUESTED CAR: (.*?)PASSWORD.*?DRIVER: (.*?) \['
+                $participant_regex =
+                '/REQUESTED CAR: (.*?)\R.*?PASSWORD.*?DRIVER: (.*?) \['
                 .'/si', $data_session, $part_matches);
+
+            // First value match is for vehicle
+            $participant_regex_vehicle_match_key = 1;
 
             // Loop each match and collect participants
             $participants = array();
@@ -460,6 +551,10 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 // Filter any empty value
                 $part_data_exploded = array_filter($part_data_exploded);
 
+                // Init participant values
+                $vehicle = null;
+                $name = null;
+
                 // Has multiple parts
                 if (count($part_data_exploded) > 1)
                 {
@@ -468,7 +563,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
 
                     // Do another match similar to above
                     preg_match(
-                        '/(.*?)PASSWORD.*?DRIVER: (.*?) \['
+                        '/(.*?)\R.*?PASSWORD.*?DRIVER: (.*?) \['
                         .'/si', $part_data_tmp, $part_tmp_matches);
 
                     // Name contains new lines, something went wrong in
@@ -477,42 +572,128 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                     $name = trim($part_tmp_matches[2]);
                     if (strstr($name, PHP_EOL)) continue;
 
-                    $participants[$name] = array(
-                        'name'    => $name,
-                        'vehicle' => trim($part_tmp_matches[1]),
-                        'laps'    => array(),
-                    );
-
+                    $vehicle = trim($part_tmp_matches[1]);
                 }
                 // No multiple parts, proper match
                 else
                 {
                     $name = trim($part_matches[2][$part_key]);
-                    $participants[$name] = array(
-                        'name'    => $name,
-                        'vehicle' => trim($part_matches[1][$part_key]),
-                        'laps'    => array(),
-                    );
+                    $vehicle =  trim($part_matches
+                        [$participant_regex_vehicle_match_key]
+                        [$part_key]);
                 }
 
+                // Participant already exists
+                if (isset($participants[$this->getDriverKey($name)]))
+                {
+                    // Vehicle is different
+                    if ($participants[$this->getDriverKey($name)]['vehicle'] !== $vehicle)
+                    {
+                        // Mark participant to have multiple cars
+                        $participants[$this->getDriverKey($name)]['has_multiple_cars'] = true;
+                    }
+                    // Vehcle not different, just ignore
+                }
+                // Participant is new
+                else
+                {
+                    // Add participant
+                    $participants[$this->getDriverKey($name)] = array(
+                        'name'               => $name,
+                        'vehicle'            => $vehicle,
+                        'laps'               => array(),
+                        'has_multiple_cars'  => false,
+                    );
+                }
             }
 
             // No participants found, try different method
             if ( ! $participants)
             {
                 preg_match_all(
-                    '/Adding car: (.*?) name=(.*?) model=(.*?) skin=(.*?)/si',
+                    $participant_regex =
+                    '/SUB\|(.*?)\|(.*?)\|(.*?)\|\|(.*?)\|(.*?)/i',
                     $data_session, $part_matches);
+
+                    // First value match is for vehicle
+                    $participant_regex_vehicle_match_key = 1;
+
+                    // Loop each match and collect participants
+                    foreach ($part_matches[0] as $part_key => $part_data)
+                    {
+                        $name = trim($part_matches[3][$part_key]);
+                        $vehicle = trim($part_matches
+                                       [$participant_regex_vehicle_match_key]
+                                       [$part_key]);
+                        $guid = trim($part_matches[4][$part_key]);
+
+                        // Participant already exists
+                        if (isset($participants[$this->getDriverKey($name)]))
+                        {
+                            // Vehicle is different
+                            if ($participants[$this->getDriverKey($name)]['vehicle'] !== $vehicle)
+                            {
+                                // Mark participant to have multiple cars
+                                $participants[$this->getDriverKey($name)]['has_multiple_cars'] = true;
+                            }
+                            // Vehcle not different, just ignore
+                        }
+                        // Participant is new
+                        else
+                        {
+                            $participants[$this->getDriverKey($name)] = array(
+                                'name'               => $name,
+                                'vehicle'            => $vehicle,
+                                'guid'               => $guid,
+                                'laps'               => array(),
+                                'has_multiple_cars'  => false,
+                            );
+                        }
+                    }
+            }
+
+            // No participants found, try different method
+            if ( ! $participants)
+            {
+                preg_match_all(
+                    $participant_regex =
+                    '/Adding car: (.*?) name=(.*?) model=(.*?) skin=(.*?) guid=(.*)/i',
+                    $data_session, $part_matches);
+
+                    // Third value match is for vehicle
+                    $participant_regex_vehicle_match_key = 3;
 
                     // Loop each match and collect participants
                     foreach ($part_matches[0] as $part_key => $part_data)
                     {
                         $name = trim($part_matches[2][$part_key]);
-                        $participants[$name] = array(
-                            'name'    => $name,
-                            'vehicle' => trim($part_matches[3][$part_key]),
-                            'laps'    => array(),
-                        );
+                        $vehicle = trim($part_matches
+                                       [$participant_regex_vehicle_match_key]
+                                       [$part_key]);
+                        $guid = trim($part_matches[5][$part_key]);
+
+                        // Participant already exists
+                        if (isset($participants[$this->getDriverKey($name)]))
+                        {
+                            // Vehicle is different
+                            if ($participants[$this->getDriverKey($name)]['vehicle'] !== $vehicle)
+                            {
+                                // Mark participant to have multiple cars
+                                $participants[$this->getDriverKey($name)]['has_multiple_cars'] = true;
+                            }
+                            // Vehcle not different, just ignore
+                        }
+                        // Participant is new
+                        else
+                        {
+                            $participants[$this->getDriverKey($name)] = array(
+                                'name'               => $name,
+                                'vehicle'            => $vehicle,
+                                'guid'               => $guid,
+                                'laps'               => array(),
+                                'has_multiple_cars'  => false,
+                            );
+                        }
                     }
             }
 
@@ -523,23 +704,50 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 // DRIVERNAME: JC
                 // GUID:76561198023156518
                 preg_match_all(
+                    $participant_regex =
                     '/MODEL: (.*?) .*? \[.*? \[(.*?)\]\].*?DRIVERNAME: (.*?)'
                     .'GUID:([0-9]+)/si', $data_session, $part_matches);
+
+                // First value match is for vehicle
+                $participant_regex_vehicle_match_key = 1;
 
                 // Loop each match and collect participants
                 $participants = array();
                 foreach ($part_matches[0] as $part_key => $part_data)
                 {
                     $name = trim($part_matches[3][$part_key]);
-                    $participants[$name] = array(
-                        'name'    => $name,
-                        'vehicle' => trim($part_matches[1][$part_key]),
-                        'team'    => trim($part_matches[2][$part_key]),
-                        'guid'    => trim($part_matches[4][$part_key]),
-                        'laps'    => array(),
-                    );
+                    $vehicle = trim($part_matches
+                                [$participant_regex_vehicle_match_key]
+                                [$part_key]);
+
+                    // Participant already exists
+                    if (isset($participants[$this->getDriverKey($name)]))
+                    {
+                        // Vehicle is different
+                        if ($participants[$this->getDriverKey($name)]['vehicle'] !== $vehicle)
+                        {
+                            // Mark participant to have multiple cars
+                            $participants[$this->getDriverKey($name)]['has_multiple_cars'] = true;
+                        }
+                        // Vehcle not different, just ignore
+                    }
+                    // Participant is new
+                    else
+                    {
+                        $participants[$this->getDriverKey($name)] = array(
+                            'name'    => $name,
+                            'vehicle' => $vehicle,
+                            'team'    => trim($part_matches[2][$part_key]),
+                            'guid'    => trim($part_matches[4][$part_key]),
+                            'laps'    => array(),
+                            'has_multiple_cars'
+                                      => false,
+                        );
+                    }
                 }
             }
+
+
 
             // Store participants to all participants array. Using union method
             // to prevent any data losing that happens using array_merge
@@ -584,17 +792,55 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                        continue;
                     }
 
-                    // Add name just to be sure
+                    // Driver name
                     $name = trim($lap_matches[1][$lap_key]);
-                    $participants_copy[$name]['name'] = $name;
+
+                    // Add name just to be sure
+                    $participants_copy[$this->getDriverKey($name)]['name'] = $name;
+
+                    // Lap vehicle not known by default (assume participant
+                    // has one vehicle)
+                    $lap_vehicle = null;
+
+                    // Participant has multiple cars in use
+                    if (isset($participants_copy[$this->getDriverKey($name)]['has_multiple_cars']) AND
+                        $participants_copy[$this->getDriverKey($name)]['has_multiple_cars'])
+                    {
+                        // Split data with lap data as delimiter
+                        $data_session2_split = explode($lap_data, $data_session2);
+
+                        // Get first part
+                        $data_session2_split = $data_session2_split[0];
+
+                        // Car found above lap data
+                        if (preg_match_all($participant_regex,
+                                   $data_session2_split,
+                                   $lap_car_matches))
+                        {
+                            // Get last vehicle matched
+                            $lap_vehicle = trim(array_pop($lap_car_matches[
+                                $participant_regex_vehicle_match_key]));
+                        }
+                        // Else no car found in lap data. This session probably
+                        // has no multiple connect info. This may happen because
+                        // we check the connect info for `has_multiple_cars`
+                        // on the entire log (containing all sessions).
+                    }
+
 
                     // Add lap
-                    $participants_copy[$name]['laps'][] = array(
-                        'time' => Helper::secondsFromFormattedTime(
-                                      $lap_matches[2][$lap_key], true),
+                    $participants_copy[$this->getDriverKey($name)]['laps'][] = array(
+                        'time'    => Helper::secondsFromFormattedTime(
+                                         $lap_matches[2][$lap_key], true),
+                        'vehicle' => $lap_vehicle
+                                         ? $lap_vehicle
+                                         : (isset($participants_copy[$this->getDriverKey($name)]['vehicle'])
+                                             ? $participants_copy[$this->getDriverKey($name)]['vehicle']
+                                             : null)
                     );
                     $no_laps = false;
                 }
+
 
                 // Explode data on race end detection
                 $race_end = explode('RACE OVER', $data_session2);
@@ -623,12 +869,12 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 {
                     // Add name and laps just to be sure
                     $name = trim($time_matches[1][$time_key]);
-                    $participants_copy[$name]['name'] = $name;
+                    $participants_copy[$this->getDriverKey($name)]['name'] = $name;
 
                     // Not 0
                     if ($time_matches[2][$time_key] !== '0:00:000')
                     {
-                        $participants_copy[$name]['total_time'] =
+                        $participants_copy[$this->getDriverKey($name)]['total_time'] =
                             Helper::secondsFromFormattedTime(
                                   $time_matches[2][$time_key], true);
                     }
@@ -763,5 +1009,16 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
     protected function get($array, $key, $default = NULL)
     {
         return isset($array[$key]) ? $array[$key] : $default;
+    }
+
+    /**
+     * Get the driver names key for storing in the participants array
+     *
+     * @param  string $name
+     * @return string
+     */
+    protected function getDriverKey($name)
+    {
+        return strtolower(str_replace(' ', '', $name));
     }
 }

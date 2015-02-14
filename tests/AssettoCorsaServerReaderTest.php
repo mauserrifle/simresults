@@ -44,9 +44,6 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
             '/logs/assettocorsa-server/different.connecting.format.log');
 
         // Get the data reader for the given data source
-        Data_Reader::factory($file_path)->getSessions();
-
-        // Get the data reader for the given data source
         $session = Data_Reader::factory($file_path)->getSession();
 
         // Get participants
@@ -246,6 +243,49 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
+     * Test reading the guids from a other connect format (Adding car: ...)
+     */
+    public function testReadingOtherGuidsFormat()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-server/different.connecting.format.log');
+
+        // Get the first session
+        $session = Data_Reader::factory($file_path)->getSession();
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Validate some guids
+        $this->assertSame('76561198153260382',
+                          $participants[0]->getDriver()->getDriverId());
+        $this->assertSame('76561197991946485',
+                          $participants[5]->getDriver()->getDriverId());
+    }
+
+    /**
+     * Test additional fix for missing guid
+     */
+    public function testFixForMissingGuid()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-server/'.
+            'driver.antoine.with.two.spaces.in.name.txt');
+
+        // Get the data reader for the given data source
+        $session = Data_Reader::factory($file_path)->getSession();
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Validate guid that was missing
+        $this->assertSame('76561198018799568',
+                          $participants[12]->getDriver()->getDriverId());
+    }
+
+    /**
      * Test reading allowed car list not containing other log info (bugfix)
      */
     public function testReadingAllowedVehicles()
@@ -371,6 +411,36 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
+     * Test reading the cars from a log that contains date prefixes
+     *
+     * Unrelated idea: Maybe use these prefixes to add a date to chats in the
+     *                 future?
+     */
+    public function testReadingCarsFromLogWithDatePrefixes()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-server/log.with.date.prefixes.txt');
+
+        // Get the data reader for the given data source
+        $session = Data_Reader::factory($file_path)->getSession();
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Validate all to have proper vehicle
+        foreach ($participants as $participant)
+        {
+            // Validate vehicle
+            $this->assertSame('honda_nsx_s1*',
+                               $participant->getVehicle()->getName());
+        }
+
+
+    }
+
+
+    /**
      * Test reading times without regex errors
      */
     public function testReadingTimesWithoutRegexErrors()
@@ -381,6 +451,170 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
 
         // Get the session without exception
         $session = Data_Reader::factory($file_path)->getSession();
+    }
+
+    /**
+     * Test reading multiple cars per participant that will be stored per lap
+     *
+     * Reading Nakuni which should have these laps:
+     *
+     *     ferrari
+     *     LAP1: 1:52
+     *     LAP2: 1:13
+     *
+     *     lotus
+     *     LAP3: 1:42
+     *     LAP4: 1:24
+     */
+    public function testReadingMultipleCarsPerParticipant()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-server/reconnect.with.different.car.txt');
+
+        // Get the data reader for the given data source
+        $session = Data_Reader::factory($file_path)->getSession();
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Get first participant
+        $participant = $participants[0];
+
+        // Validate vehicles
+        $vehicles = $participant->getVehicles();
+
+        $this->assertSame(2, count($vehicles));
+        $this->assertSame('ferrari_599xxevo*', $vehicles[0]->getName());
+        $this->assertSame('lotus_evora_gte*', $vehicles[1]->getName());
+
+        // Validate vehicle for each lap
+        $laps = $participant->getLaps();
+
+        $this->assertSame($laps[0]->getVehicle(), $vehicles[0]);
+        $this->assertSame($laps[1]->getVehicle(), $vehicles[0]);
+        $this->assertSame($laps[2]->getVehicle(), $vehicles[1]);
+        $this->assertSame($laps[3]->getVehicle(), $vehicles[1]);
+    }
+
+
+    /**
+     * Fix a bug where best laps were cached in the reader because of calling
+     * `getVehicle()`
+     *
+     */
+    public function testFixForBestLapCacheBug()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-server/log.to.fix.best.lap.cache.txt');
+
+        // Get the data reader for the given data source
+        $session = Data_Reader::factory($file_path)->getSession();
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Get first participant
+        $participant = $participants[0];
+
+        // Validate best lap
+        $this->assertNotNull($participant->getBestLap());
+    }
+
+    /**
+     * Test log with missing session type and driver vehicles. The session type
+     * should default to practice and alot of vehicles are defaulted to the
+     * only vehicle used by other participants
+     */
+    public function testMissingSessionTypeAndDriverVehicles()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-server/'.
+            'missing.session.info.and.alot.of.connect.info.txt');
+
+        // Get the data reader for the given data source
+        $session = Data_Reader::factory($file_path)->getSession();
+
+        // Validate session type that defaulted to practice
+        $this->assertSame(Session::TYPE_PRACTICE, $session->getType());
+
+        // Validate server that defaulted to unknown
+        $this->assertSame('Unknown', $session->getServer()->getName());
+
+        // Validate all vehicles. Alot are missing due to bad connect info.
+        // This tests that the parser defaults to the only car everybody else
+        // uses. We assume this is the only one allowed
+        foreach ($session->getParticipants() as $part)
+        {
+            $this->AssertSame('ferrari_458_gt2*',
+                              $part->getVehicle()->getName());
+        }
+    }
+
+
+    /**
+     * Test additional fix for missing vehicles
+     */
+    public function testFixForMissingVehicles()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-server/3Up.txt');
+
+        // Get the data reader for the given data source
+        $session = Data_Reader::factory($file_path)->getSession();
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Validate vehicle that was missing
+        $this->assertSame('ferrari_458_gt2',
+                          $participants[8]->getVehicle()->getName());
+    }
+
+    /**
+     * Test additional fix for missing vehicles. This tests succesful parsing
+     * of log lines:
+     *  /SUB|tatuusfa1|tatuus_honda_b|Aaron Wilson||76561198021449105|piratella
+     */
+    public function testFixForMissingVehicles2()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-server/'.
+            'different.connecting.format.with.some.missing.data.txt');
+
+        // Get the data reader for the given data source
+        $session = Data_Reader::factory($file_path)->getSession();
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Validate vehicle and guid that was missing of Aaron Wilson
+        $this->assertSame('tatuusfa1',
+                          $participants[13]->getVehicle()->getName());
+        $this->assertSame('76561198021449105',
+                          $participants[13]->getDriver()->getDriverId());
+    }
+
+    /**
+     * Test fixing bad new lines
+     */
+    public function testFixingBadNewLines()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-server/'.
+            'bad.new.lines.txt');
+
+        // Get the data reader for the given data source
+        $session = Data_Reader::factory($file_path)->getSession();
+
+        // Test that is practice session. We assume the rest is correct too
+        // when this is positive
+        $this->assertSame(Session::TYPE_PRACTICE, $session->getType());
     }
 
 

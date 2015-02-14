@@ -409,5 +409,48 @@ class Helper {
         return $participants;
     }
 
+    /**
+     * Sort participants by consistency
+     *
+     * @param   array   $participants
+     * @return  array   The sorted participants
+     */
+    public static function sortParticipantsByConsistency(array $participants)
+    {
+        usort($participants, function($a, $b) {
 
+            // Get consistencies
+            $a_consistency = $a->getConsistency();
+            $b_consistency = $b->getConsistency();
+
+            // Both participants have no consistency
+            if ($a_consistency === null AND $b_consistency === null)
+            {
+                // Same
+                return 0;
+            }
+
+            // a has no consistency
+            if ( $a_consistency === null)
+            {
+                return 1;
+            }
+
+            // b has no consistency
+            if ( $b_consistency === null)
+            {
+                return -1;
+            }
+
+            // Same consistency
+             if ($a_consistency === $b_consistency) {
+                return 0;
+            }
+
+            // Return normal comparison
+            return (($a_consistency < $b_consistency) ? -1 : 1);
+        });
+
+        return $participants;
+    }
 }

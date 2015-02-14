@@ -5,6 +5,8 @@ use Simresults\Participant;
 
 use Simresults\Lap;
 
+use Simresults\Vehicle;
+
 /**
  * Tests for the participant.
  *
@@ -24,6 +26,55 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
         error_reporting(E_ALL);
     }
 
+    /***
+    **** Tests using simple data
+    ***/
+
+    /**
+     * Test getting the vehicles from the participant using the laps
+     * collection too
+     */
+    public function testGettingVehicles()
+    {
+        // Init participant
+        $participant = new Participant;
+
+        // Init two vehicles
+        $vehicle1 = new Vehicle;
+        $vehicle2 = new Vehicle;
+
+        // Init laps with the vehicles
+        $lap1 = new Lap; $lap1->setVehicle($vehicle1);
+        $lap2 = new Lap; $lap2->setVehicle($vehicle2);
+
+        // Set laps to participant
+        $participant->setLaps(array($lap1, $lap2));
+
+        // Test getting vehicles
+        $this->assertSame(
+            array($vehicle1, $vehicle2),
+            $participant->getVehicles()
+        );
+
+        // Test getting one vehicle
+        $this->assertSame($vehicle1, $participant->getVehicle());
+
+        // Set new main vehicle on participant
+        $participant->setVehicle($vehicle3 = new Vehicle);
+
+        // Test getting the main set vehicle
+        $this->assertSame($vehicle3, $participant->getVehicle());
+
+        // Test that `getVehicle()` always returns the best lap vehicle
+        $lap2->setTime(10);
+        $this->assertSame($vehicle2, $participant->getVehicle());
+
+    }
+
+    /***
+    **** Tests using the predefined test data
+    ***/
+
     /**
      * Test getting the lap by lap number
      */
@@ -39,7 +90,7 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
         $this->assertSame($laps[1], $participant->getLap(2));
 
         // Validate non existing lap
-        $this->assertNull($participant->getLap(5));
+        $this->assertNull($participant->getLap(7));
     }
 
     /**
@@ -81,13 +132,13 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
         $this->assertSame(125.730, $best_lap->getTime());
 
         // Test number of laps
-        $this->assertSame(4, $participant->getNumberOfLaps());
+        $this->assertSame(6, $participant->getNumberOfLaps());
 
         //-- Run twice to test cache
         for($i=0; $i<2; $i++)
         {
             // Test number of completed laps
-            $this->assertSame(3, $participant->getNumberOfCompletedLaps());
+            $this->assertSame(5, $participant->getNumberOfCompletedLaps());
         }
 
 
@@ -110,10 +161,7 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
         $participant = $this->getParticipantWithLaps();
 
         // Validate total time
-        $this->assertSame(409.671, $participant->getTotalTime());
-
-        // Validate total time
-        $this->assertSame(409.671, $participant->getTotalTime());
+        $this->assertSame(670.131, $participant->getTotalTime());
 
         // Force a new total time that overwrite lap calculation
         $participant->setTotalTime(409.678);
@@ -198,8 +246,10 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
 
             // Validate the laps
             $this->assertSame($participant->getLap(2), $laps[0]);
-            $this->assertSame($participant->getLap(1), $laps[1]);
-            $this->assertSame($participant->getLap(3), $laps[2]);
+            $this->assertSame($participant->getLap(3), $laps[1]);
+            $this->assertSame($participant->getLap(4), $laps[2]);
+            $this->assertSame($participant->getLap(1), $laps[3]);
+            $this->assertSame($participant->getLap(5), $laps[4]);
         }
     }
 
@@ -307,9 +357,9 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
             $average_lap = $participant->getAverageLap();
 
             // Validate
-            $this->assertSame(136.557, $average_lap->getTime());
+            $this->assertSame(134.0262, $average_lap->getTime());
             $this->assertSame(
-                array(43.1343, 39.9667, 53.456),
+                array(42.321, 39.86, 51.8452),
                 $average_lap->getSectorTimes()
             );
             $this->assertSame($participant, $average_lap->getParticipant());
@@ -320,7 +370,7 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
 
             // Get average lap excluding pitstop sectors and validate it
             $average_lap = $participant->getAverageLap(true);
-            $this->assertSame(136.0872, $average_lap->getTime());
+            $this->assertSame(132.6853, $average_lap->getTime());
         }
 
         // Validate empty participant
@@ -372,6 +422,59 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
             ->setSectorTimes(array(14)))->getBestPossibleLap());
     }
 
+    /**
+     * Test the consistency of a participant
+     */
+    public function testConsistency()
+    {
+        // Get populated participant
+        $participant = $this->getParticipantWithLaps();
+
+        // Add slow lap (exactly +21s of best lap)
+        // This lap should be ignored in calculating
+        //
+        // NOTE: The lap 155.730 will also be ignored from populated test data
+        $lap = new Lap;
+        $participant->addLap(
+            $lap->setTime($participant->getBestLap()->getTime()+21)
+                 ->setSectorTimes(array(
+                     $participant->getBestLap()->getSectorTime(1)+7,
+                     $participant->getBestLap()->getSectorTime(2)+7,
+                     $participant->getBestLap()->getSectorTime(3)+7,
+                 ))
+        );
+
+        //-- Run twice to test cache
+        for($i=0; $i<2; $i++)
+        {
+            // Test without ignoring first lap
+            $this->assertSame(2.7405, $participant->getConsistency(false));
+            $this->assertSame(97.82, $participant->getConsistencyPercentage(false));
+
+            // Test with ignoring first lap
+            $this->assertSame(3.0, $participant->getConsistency());
+            $this->assertSame(97.61, $participant->getConsistencyPercentage());
+        }
+
+        // Validate empty participant
+        $participant = new Participant; // Prevent cache
+        $this->assertNull($participant->getConsistency(false));
+        $this->assertNull($participant->getConsistencyPercentage(false));
+
+        // Validate one lap participant
+        $participant = new Participant; // Prevent cache
+        $lap = new Lap; $participant->addLap($lap->setTime(128.211));
+        $this->assertNull($participant->getConsistency(false));
+
+        // Validate extra pit stop lap not causing devise by zero error
+        $participant = new Participant; // Prevent cache
+        $lap = new Lap; $participant->addLap(
+            $lap->setTime(125.211));
+        $lap = new Lap; $participant->addLap(
+            $lap->setTime(128.211)->setPitLap(true));
+        $this->assertNull($participant->getConsistency(false));
+    }
+
 
     /**
      * Returns a populated participant with laps
@@ -407,6 +510,36 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
                      39.601,
                      38.200,
                      47.929,
+                 ))
+                ->setPosition(2)
+                ->setNumber(2)
+                ->setAids(array(
+                    'AutoShift'      => 3,
+                ))
+        );
+
+        $lap = new Lap;
+        $participant->addLap(
+            $lap->setTime(128.730)
+                 ->setSectorTimes(array(
+                     40.601,
+                     39.200,
+                     48.929,
+                 ))
+                ->setPosition(2)
+                ->setNumber(2)
+                ->setAids(array(
+                    'AutoShift'      => 3,
+                ))
+        );
+
+        $lap = new Lap;
+        $participant->addLap(
+            $lap->setTime(131.730)
+                 ->setSectorTimes(array(
+                     41.601,
+                     40.200,
+                     49.929,
                  ))
                 ->setPosition(2)
                 ->setNumber(2)

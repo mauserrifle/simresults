@@ -27,6 +27,11 @@ class Lap {
     protected $driver;
 
     /**
+     * @var  Vehicle  The vehicle ran this lap
+     */
+    protected $vehicle;
+
+    /**
      * @var  int  The position the participant was in
      */
     protected $position;
@@ -143,6 +148,29 @@ class Lap {
     public function getDriver()
     {
         return $this->driver;
+    }
+
+    /**
+     * Set the vehicle
+     *
+     * @param   Vehicle      $vehicle
+     * @return  Lap
+     */
+    public function setVehicle(Vehicle $vehicle)
+    {
+        $this->vehicle = $vehicle;
+        return $this;
+    }
+
+    /**
+     * Get the vehicle
+     *
+     * @param   int       $vehicle_number
+     * @return  Vehicle
+     */
+    public function getVehicle()
+    {
+        return $this->vehicle;
     }
 
     /**

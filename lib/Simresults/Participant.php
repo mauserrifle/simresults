@@ -59,6 +59,19 @@ class Participant {
      */
     protected $cache_best_lap;
 
+    /**
+     * @var  array|null  The cache for vehicles
+     */
+    protected $cache_vehicles;
+
+    /**
+     * @var  array  The cache for consistency ignore first lap or not
+     */
+    protected $cache_consistency = array(
+        true   => null,
+        false  => null,
+    );
+
 
 
     //------ Participant values
@@ -185,7 +198,11 @@ class Participant {
     }
 
     /**
-     * Set the vehicle
+     * Set the vehicle. Use this when a participant has one main vehicle he
+     * drives for all laps or the reader just supports one vehicle parsing.
+     *
+     * For multiple please sonsider setting a vehicle on laps. `getVehicles()`
+     * will parse the laps to return vehicles.
      *
      * @param   Vehicle      $vehicle
      * @return  Participant
@@ -197,13 +214,79 @@ class Participant {
     }
 
     /**
-     * Get the vehicle
+     * Get the vehicle. Returns a vehicle in this order:
+     *
+     *     * The best lap vehicle (if any)
+     *     * The main vehicle set on participant (if any)
+     *     * The first found vehicle on laps (if any)
+     *
+     * Considering using `getVehicles()` especially for non-race sessions!
+     * A participant might ran  multiple cars on different laps due to
+     * reconnecting
      *
      * @return  Vehicle
      */
     public function getVehicle()
     {
-        return $this->vehicle;
+        // Has multiple vehicles from laps
+        if ($vehicles = $this->getVehicles())
+        {
+            // Return best lap vehicle if any
+            if ($best_lap = $this->getBestLap() AND
+                $vehicle = $best_lap->getVehicle())
+            {
+                return $vehicle;
+            }
+
+            // No best lap vehicle, just return the first found if our main
+            // vehicle has not been set
+            if ( ! $this->vehicle)
+            {
+                return $vehicles[0];
+            }
+        }
+
+        // Has main vehicle, return it
+        if($this->vehicle)
+        {
+            return $this->vehicle;
+        }
+
+        return NULL;
+    }
+
+    /**
+     * Get the vehicles. This gets all the vehicles from the participant
+     * laps. If the laps do not have vehicles set, the main vehicle will be
+     * read
+     *
+     * @return  array
+     */
+    public function getVehicles()
+    {
+        // There is cache
+        if ($this->cache_vehicles !== null)
+        {
+            return $this->cache_vehicles;
+        }
+
+        // Get vehicles from laps
+        $vehicles = array();
+        foreach ($this->laps as $lap)
+        {
+            if ( ! in_array($vehicle=$lap->getVehicle(), $vehicles, true))
+            {
+                $vehicles[] = $vehicle;
+            }
+        }
+
+        // No vehicles found by laps, but this participant has a main vehicle
+        if ( ! $vehicles AND $this->vehicle)
+        {
+            $vehicles[] = $this->vehicle;
+        }
+
+        return $this->cache_vehicles = $vehicles;
     }
 
     /**
@@ -552,7 +635,13 @@ class Participant {
             return $this->cache_best_lap;
         }
 
-        // Get laps
+        // No laps
+        if ( ! $this->laps)
+        {
+            return NULL;
+        }
+
+        // Get laps sorted by time
         $laps = $this->getLapsSortedByTime();
 
         // Only return a completed lap
@@ -837,5 +926,85 @@ class Participant {
 
         // Return best possible lap and cache it
         return $this->cache_best_possible_lap = $best_possible_lap;
+    }
+
+    /**
+     * Get the consistency of the driver. Based on:
+     * best lap MINUS average non-best.
+     *
+     * Pit or laps slower than 21s are ignored. First lap is also ignored by
+     * default but may be changed by arguments.
+     *
+     * @param   boolean  $ignore_first_lap
+     * @return  float
+     */
+    public function getConsistency($ignore_first_lap = true)
+    {
+        // There is cache
+        if ($this->cache_consistency[$ignore_first_lap] !== null)
+        {
+            return $this->cache_consistency[$ignore_first_lap];
+        }
+
+        // Not enough laps
+        if ( $this->getNumberOfCompletedLaps() <= 1)
+        {
+            return null;
+        }
+
+        // Get best lap
+        $best_lap = $this->getBestLap();
+
+        // Get total time of all non-best
+        $total_time = 0;
+        $total_time_laps_num = 0;
+        foreach ($this->getLaps() as $key => $lap)
+        {
+            // Is best lap, not completed, pit lap, just too slow compared to
+            // the best lap (+21s) or first lap that should be ignored
+            if ($lap === $best_lap OR ! $lap->isCompleted() OR
+                $lap->isPitLap() OR
+                $lap->getTime() >= ($best_lap->getTime()+21) OR
+                ($ignore_first_lap AND $key === 0))
+            {
+                continue;
+            }
+
+            // Add lap time to total time
+            $total_time += $lap->getTime();
+
+            $total_time_laps_num++;
+        }
+
+        // No total time
+        if ( ! $total_time)
+        {
+            return null;
+        }
+
+        // Get average of total time
+        $average = $total_time / $total_time_laps_num;
+
+        // Return consistency
+        return $this->cache_consistency[$ignore_first_lap] = round(
+            $average - $best_lap->getTime(), 4);
+    }
+
+    /**
+     * Get the consistency as percentage
+     *
+     * @return  float
+     */
+    public function getConsistencyPercentage($ignore_first_lap = true)
+    {
+        // No consistency
+        if ( ! $consistency = $this->getConsistency($ignore_first_lap))
+        {
+            return null;
+        }
+
+        return round(
+            100 - ($consistency / ($this->getBestLap()->getTime() / 100)),
+            2);
     }
 }
