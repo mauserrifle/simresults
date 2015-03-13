@@ -528,7 +528,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             // car they run
             preg_match_all(
                 $participant_regex =
-                '/REQUESTED CAR: (.*?)\R.*?PASSWORD.*?DRIVER: (.*?) \['
+                '/REQUESTED CAR: (.*?)\R.*?DRIVER ACCEPTED.*?DRIVER: (.*?) \['
                 .'/si', $data_session, $part_matches);
 
             // First value match is for vehicle
@@ -563,7 +563,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
 
                     // Do another match similar to above
                     preg_match(
-                        '/(.*?)\R.*?PASSWORD.*?DRIVER: (.*?) \['
+                        '/(.*?)\R.*?DRIVER ACCEPTED.*?DRIVER: (.*?) \['
                         .'/si', $part_data_tmp, $part_tmp_matches);
 
                     // Name contains new lines, something went wrong in

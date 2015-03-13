@@ -617,6 +617,21 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertSame(Session::TYPE_PRACTICE, $session->getType());
     }
 
+    /**
+     * Test new AC log format where PASSWORD line was removed. Should not
+     * generate any error
+     */
+    public function testNoErrorsOnNewLogFormat()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-server/'.
+            'new.format.txt');
+
+        // Get the session without errors
+        $session = Data_Reader::factory($file_path)->getSession();
+    }
+
 
 
     /***
