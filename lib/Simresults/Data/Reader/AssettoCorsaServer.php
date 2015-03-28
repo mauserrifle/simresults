@@ -838,32 +838,30 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                                              ? $participants_copy[$this->getDriverKey($name)]['vehicle']
                                              : null)
                     );
-                    $no_laps = false;
                 }
-
-
-                // Explode data on race end detection
-                $race_end = explode('RACE OVER', $data_session2);
-
-                // 3 or more parts. Last is probably from  "RACE OVER PACKET,
-                // FINAL RANK". We should ignore that as it included alot of
-                // 0:00:000 times..
-                if (count($race_end) >= 3)
-                {
-                    // Get second part after RACE OVER
-                    $race_end = $race_end[1];
-                }
-                else
-                {
-                    // Use last part by default
-                    $race_end = array_pop($race_end);
-                }
-
 
 
                 // Is race session
                 if ($session2['type'] === 'race')
                 {
+
+                    // Explode data on race end detection
+                    $race_end = explode('RACE OVER', $data_session2);
+
+                    // 3 or more parts. Last is probably from  "RACE OVER PACKET,
+                    // FINAL RANK". We should ignore that as it included alot of
+                    // 0:00:000 times..
+                    if (count($race_end) >= 3)
+                    {
+                        // Get second part after RACE OVER
+                        $race_end = $race_end[1];
+                    }
+                    else
+                    {
+                        // Use last part by default
+                        $race_end = array_pop($race_end);
+                    }
+
                     // Get total times
                     // MATCH: 0) Rodrigo  Sanchez Paz BEST: 16666:39:999 TOTAL:
                     //        0:00:000 Laps:0 SesID:4"
