@@ -860,29 +860,30 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 }
 
 
-                // Get total times
-                // MATCH: 0) Rodrigo  Sanchez Paz BEST: 16666:39:999 TOTAL:
-                //        0:00:000 Laps:0 SesID:4"
-                preg_match_all('/[0-9]+\).*? (.*?) BEST:.*?TOTAL: ([0-9]+.*?) Laps.*?/',
-                    $race_end, $time_matches);
-                foreach ($time_matches[0] as $time_key => $time_data)
-                {
-                    // Add name and laps just to be sure
-                    $name = trim($time_matches[1][$time_key]);
-                    $participants_copy[$this->getDriverKey($name)]['name'] = $name;
-
-                    // Not 0
-                    if ($time_matches[2][$time_key] !== '0:00:000')
-                    {
-                        $participants_copy[$this->getDriverKey($name)]['total_time'] =
-                            Helper::secondsFromFormattedTime(
-                                  $time_matches[2][$time_key], true);
-                    }
-                }
 
                 // Is race session
                 if ($session2['type'] === 'race')
                 {
+                    // Get total times
+                    // MATCH: 0) Rodrigo  Sanchez Paz BEST: 16666:39:999 TOTAL:
+                    //        0:00:000 Laps:0 SesID:4"
+                    preg_match_all('/[0-9]+\).*? (.*?) BEST:.*?TOTAL: ([0-9]+.*?) Laps.*?/',
+                        $race_end, $time_matches);
+                    foreach ($time_matches[0] as $time_key => $time_data)
+                    {
+                        // Add name and laps just to be sure
+                        $name = trim($time_matches[1][$time_key]);
+                        $participants_copy[$this->getDriverKey($name)]['name'] = $name;
+
+                        // Not 0
+                        if ($time_matches[2][$time_key] !== '0:00:000')
+                        {
+                            $participants_copy[$this->getDriverKey($name)]['total_time'] =
+                                Helper::secondsFromFormattedTime(
+                                      $time_matches[2][$time_key], true);
+                        }
+                    }
+
                     // Loop each participant and find the max laps ran for this
                     // session
                     $max_laps = 0;
