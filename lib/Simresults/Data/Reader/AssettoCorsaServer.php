@@ -767,116 +767,87 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 // can  re-use this data for any other restart
                 $participants_copy = $participants;
 
-                // Find all laps. Include lines below the lap in the matching
-                // too, so we can later find whether it was discarded.
-                // The use of (?!WORD) negative word expressions in this regex
-                // produced too many difficulties and bugs, that's the reason
-                // we match discarded too at this point and filter them later
-                if ( ! preg_match_all(
-                           '/LAP (.*?) ([0-9]+:[0-9:]+).*?'
-                           .'(1\)|SendLapCompletedMessage|'
-                           .'WARNING: LAPTIME DISCARDED| LAP REFUSED)/s',
-                           $data_session2, $lap_matches))
-                {
-                    continue;
-                }
-
-                // Loop each lap and add lap to belonging participant
-                foreach ($lap_matches[0] as $lap_key => $lap_data)
-                {
-                    // Lap is refused or discarded? Ignore this lap!
-                    if (preg_match(
-                        '/(WARNING: LAPTIME DISCARDED|LAP REFUSED)/',
-                        $lap_data))
-                    {
-                       continue;
-                    }
-
-                    // Driver name
-                    $name = trim($lap_matches[1][$lap_key]);
-
-                    // Add name just to be sure
-                    $participants_copy[$this->getDriverKey($name)]['name'] = $name;
-
-                    // Lap vehicle not known by default (assume participant
-                    // has one vehicle)
-                    $lap_vehicle = null;
-
-                    // Participant has multiple cars in use
-                    if (isset($participants_copy[$this->getDriverKey($name)]['has_multiple_cars']) AND
-                        $participants_copy[$this->getDriverKey($name)]['has_multiple_cars'])
-                    {
-                        // Split data with lap data as delimiter
-                        $data_session2_split = explode($lap_data, $data_session2);
-
-                        // Get first part
-                        $data_session2_split = $data_session2_split[0];
-
-                        // Car found above lap data
-                        if (preg_match_all($participant_regex,
-                                   $data_session2_split,
-                                   $lap_car_matches))
-                        {
-                            // Get last vehicle matched
-                            $lap_vehicle = trim(array_pop($lap_car_matches[
-                                $participant_regex_vehicle_match_key]));
-                        }
-                        // Else no car found in lap data. This session probably
-                        // has no multiple connect info. This may happen because
-                        // we check the connect info for `has_multiple_cars`
-                        // on the entire log (containing all sessions).
-                    }
-
-
-                    // Add lap
-                    $participants_copy[$this->getDriverKey($name)]['laps'][] = array(
-                        'time'    => Helper::secondsFromFormattedTime(
-                                         $lap_matches[2][$lap_key], true),
-                        'vehicle' => $lap_vehicle
-                                         ? $lap_vehicle
-                                         : (isset($participants_copy[$this->getDriverKey($name)]['vehicle'])
-                                             ? $participants_copy[$this->getDriverKey($name)]['vehicle']
-                                             : null)
-                    );
-                }
-
-
                 // Is race session
                 if ($session2['type'] === 'race')
                 {
+                    // Explode data on race over line
+                    $race_end = explode('RACE OVER DETECTED!', $data_session2);
 
-                    // Explode data on race end detection
-                    $race_end = explode('RACE OVER', $data_session2);
-
-                    // 3 or more parts. Last is probably from  "RACE OVER PACKET,
-                    // FINAL RANK". We should ignore that as it included alot of
-                    // 0:00:000 times..
-                    if (count($race_end) >= 3)
+                    // Just one result. Probably a race session that is not
+                    // finished
+                    if (count($race_end) === 1)
                     {
-                        // Get second part after RACE OVER
-                        $race_end = $race_end[1];
+                        $before_race_over = $race_end[0];
+                        $after_race_over = null;
                     }
+                    // More results. Ignore anything above 2 parts by just
+                    // reading the first and second part. For example:
+                    // when we would had 3 or more parts. Last is probably from
+                    // "RACE OVER PACKET, FINAL RANK". We should ignore that
+                    // as it included alot of 0:00:000 times..
                     else
                     {
-                        // Use last part by default
-                        $race_end = array_pop($race_end);
+                        $before_race_over = $race_end[0];
+                        $after_race_over = $race_end[1];
                     }
+
+
+                    // Parse lap data before race over, continue to next
+                    // session data if failed
+                    if ( ! $this->parseLapData(
+                            $before_race_over, $data_session2,
+                            $participants_copy, $participant_regex,
+                            $participant_regex_vehicle_match_key))
+                    {
+                        continue;
+                    }
+
+                    // Has data after race over
+                    if ($after_race_over)
+                    {
+                        // Parse lap data from after race over. Make sure we
+                        // only parse one lap per driver to prevent any extra
+                        // laps by drivers running victory laps after finish
+                        $this->parseLapData(
+                            $after_race_over, $data_session2,
+                            $participants_copy, $participant_regex,
+                            $participant_regex_vehicle_match_key, true);
+                    }
+
 
                     // Get total times
                     // MATCH: 0) Rodrigo  Sanchez Paz BEST: 16666:39:999 TOTAL:
                     //        0:00:000 Laps:0 SesID:4"
-                    preg_match_all('/[0-9]+\).*? (.*?) BEST:.*?TOTAL: ([0-9]+.*?) Laps.*?/',
-                        $race_end, $time_matches);
+                    preg_match_all(
+                        '/[0-9]+\).*? (.*?) BEST:.*?TOTAL: ([0-9]+.*?) '
+                        .'Laps:(.*?) SesID.*?/',
+                        $after_race_over, $time_matches);
                     foreach ($time_matches[0] as $time_key => $time_data)
                     {
                         // Add name and laps just to be sure
                         $name = trim($time_matches[1][$time_key]);
-                        $participants_copy[$this->getDriverKey($name)]['name'] = $name;
+                        $name_key = $this->getDriverKey($name);
+                        $participants_copy[$name_key]['name'] = $name;
+
+                        // Has laps
+                        if (isset($participants_copy[$name_key]['laps']))
+                        {
+                            // Laps count of BEST is higher than the laps we
+                            // actually found to parse
+                            if ($time_matches[3][$time_key] > count(
+                                    $participants_copy[$name_key]['laps']) )
+                            {
+                                // Ignore this total time. It's not right.
+                                // Probably includes extra victory laps after
+                                // finishing
+                                continue;
+                            }
+                        }
 
                         // Not 0
                         if ($time_matches[2][$time_key] !== '0:00:000')
                         {
-                            $participants_copy[$this->getDriverKey($name)]['total_time'] =
+                            $participants_copy[$name_key]['total_time'] =
                                 Helper::secondsFromFormattedTime(
                                       $time_matches[2][$time_key], true);
                         }
@@ -943,7 +914,18 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
 
                         }
                     }
-                }
+                } // End race session
+                // Not a race session
+                else
+                {
+                    // Parse lap data, continue to next session data if failed
+                    if ( ! $this->parseLapData(
+                        $data_session2, $data_session2, $participants_copy,
+                        $participant_regex, $participant_regex_vehicle_match_key))
+                    {
+                        continue;
+                    }
+                } // End not race session
 
                 // // Set participants_copy to session, preserving name key values
                 // for later usage to fix missing data
@@ -986,6 +968,113 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
         unset($session_data);
 
         return $return_array;
+    }
+
+    /**
+     * Parses the lap data and manipulates the `participants_copy` array
+     *
+     * @param   array     $data                  Data that may be splitted
+     * @param   array     $all_data              All data (not splitted)
+     * @param   array     $participants_copy     Participants (by reference!)
+     * @param   array     $participants_regex    Regex to match participants
+     * @param   array     $participant_regex_vehicle_match_key
+     * @param   boolean   $only_one_lap_per_driver
+     *
+     * @return  boolean  success or not
+     */
+    protected function parseLapData($data, $all_data, &$participants_copy,
+        $participant_regex, $participant_regex_vehicle_match_key,
+        $only_one_lap_per_driver=false)
+    {
+        // Find all laps. Include lines below the lap in the matching
+        // too, so we can later find whether it was discarded.
+        // The use of (?!WORD) negative word expressions in this regex
+        // produced too many difficulties and bugs, that's the reason
+        // we match discarded too at this point and filter them later
+        if ( ! preg_match_all(
+                   '/LAP (.*?) ([0-9]+:[0-9:]+).*?'
+                   .'(1\)|SendLapCompletedMessage|'
+                   .'WARNING: LAPTIME DISCARDED| LAP REFUSED|$)/s',
+                   $data, $lap_matches))
+        {
+            return false;
+        }
+
+        // Remember drivers that had a lap
+        $parsed_driver = array();
+
+        // Loop each lap and add lap to belonging participant
+        foreach ($lap_matches[0] as $lap_key => $lap_data)
+        {
+            // Lap is refused or discarded? Ignore this lap!
+            if (preg_match(
+                '/(WARNING: LAPTIME DISCARDED|LAP REFUSED)/',
+                $lap_data))
+            {
+               continue;
+            }
+
+            // Driver name
+            $name = trim($lap_matches[1][$lap_key]);
+            $name_key = $this->getDriverKey($name);
+
+            // Should only parse one lap per driver and this driver has been
+            // parsed already
+            if ($only_one_lap_per_driver AND isset($parsed_driver[$name_key]))
+            {
+                // Continue to next
+                continue;
+            }
+
+            // Remember we parsed this driver
+            $parsed_driver[$name_key] = true;
+
+            // Add name just to be sure
+            $participants_copy[$name_key]['name'] = $name;
+
+            // Lap vehicle not known by default (assume participant
+            // has one vehicle)
+            $lap_vehicle = null;
+
+            // Participant has multiple cars in use
+            if (isset($participants_copy[$name_key]['has_multiple_cars']) AND
+                $participants_copy[$name_key]['has_multiple_cars'])
+            {
+                // Split data with lap data as delimiter
+                $data_session2_split = explode($lap_data, $all_data);
+
+                // Get first part
+                $data_session2_split = $data_session2_split[0];
+
+                // Car found above lap data
+                if (preg_match_all($participant_regex,
+                           $data_session2_split,
+                           $lap_car_matches))
+                {
+                    // Get last vehicle matched
+                    $lap_vehicle = trim(array_pop($lap_car_matches[
+                        $participant_regex_vehicle_match_key]));
+                }
+                // Else no car found in lap data. This session probably
+                // has no multiple connect info. This may happen because
+                // we check the connect info for `has_multiple_cars`
+                // on the entire log (containing all sessions).
+            }
+
+
+            // Add lap
+            $participants_copy[$name_key]['laps'][] = array(
+                'time'    => Helper::secondsFromFormattedTime(
+                                 $lap_matches[2][$lap_key], true),
+                'vehicle' => $lap_vehicle
+                                 ? $lap_vehicle
+                                 : (isset($participants_copy[$name_key]['vehicle'])
+                                     ? $participants_copy[$name_key]['vehicle']
+                                     : null)
+            );
+        }
+
+        return true;
     }
 
     /**

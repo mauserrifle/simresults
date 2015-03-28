@@ -632,6 +632,27 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
         $session = Data_Reader::factory($file_path)->getSession();
     }
 
+    /*
+     * Test that we do not parse any extra laps after finishing
+     */
+    public function testNotParsingExtraLapsAfterFinish()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-server/'.
+            'driver.rafael.crossed.finish.twice.after.RACE.OVER.DETECTED.txt');
+
+        // Get the race session
+        $session = Data_Reader::factory($file_path)->getSession(3);
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Assert driver on position 10
+        $this->assertSame('Rafael Nogueira',
+            $participants[9]->getDriver()->getName());
+    }
+
 
 
     /***
