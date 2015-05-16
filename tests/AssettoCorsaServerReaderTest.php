@@ -653,6 +653,26 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
             $participants[9]->getDriver()->getName());
     }
 
+    /**
+     * Test exception when no session has been found
+     *
+     * TODO: This should be in ReaderTest. But we used static methods within
+     * the Reader so testing was bit of a pain.
+     *
+     * @expectedException Simresults\Exception\NoSession
+     */
+    public function testNoSessionException()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-server/'.
+            'no.session.data.txt');
+
+        // Get the race session
+        $session = Data_Reader::factory($file_path)->getSession(1);
+    }
+
+
 
 
     /***

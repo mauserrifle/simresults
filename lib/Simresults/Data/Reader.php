@@ -115,6 +115,7 @@ abstract class Data_Reader {
     /**
      * Returns one session
      *
+     * @throws  Exception\NoData    when session is not found
      * @return  Session
      */
     public function getSession($session_number=1)
@@ -122,8 +123,16 @@ abstract class Data_Reader {
         // Get sessions
         $sessions = $this->getSessions();
 
+        // Session not found
+        if ( ! isset($sessions[$session_number-1]) OR
+             ! $session = $sessions[$session_number-1])
+        {
+            throw new Exception\NoSession(
+                'Cannot find a session for session number '.$session_number);
+        }
+
         // Return
-        return $sessions[$session_number-1];
+        return $session;
     }
 
     /**
