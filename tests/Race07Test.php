@@ -221,6 +221,23 @@ class Race07Test extends PHPUnit_Framework_TestCase {
         // $this->assertSame(2, count($sessions));
     }
 
+    /**
+     * Test whether there are no errors when the TimeString is missing from
+     * the file
+     */
+    public function testNoErrorsOnMissingTimeString()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__
+            .'/logs/race07/no.time.string.txt');
+
+        // Get the data reader for the given data source
+        $reader = Data_Reader::factory($file_path);
+
+        // Get sessions
+        $sessions = $reader->getSessions();
+    }
+
 
 
     /***

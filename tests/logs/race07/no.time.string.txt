@@ -1,0 +1,265 @@
+[Header]
+Game=RACE 07
+Version=1.2.1.2
+Aids=0,0,0,0,0,1,0,0,0
+
+[Race]
+RaceMode=5
+Scene=GameData\LOCATIONS\Sepang\Sepang.TRK
+AIDB=GameData\LOCATIONS\Sepang\Sepang.AIW
+Race Length=0.100
+Track Length=5534.2847
+
+[Slot000]
+Driver=oron
+SteamUser=oron_yas
+SteamId=20893584
+Vehicle=SEAT Leon 2.0 TDI
+Team=Consadole Racing
+QualTime=2:15.308
+Laps=9
+Lap=(0, -1.000, 2:36.853)
+Lap=(1, 88.546, 2:15.883)
+Lap=(2, 245.399, 2:15.932)
+Lap=(3, 381.283, 2:16.378)
+Lap=(4, 517.214, 2:18.094)
+Lap=(5, 653.592, 2:25.121)
+Lap=(6, 791.687, 2:16.325)
+Lap=(7, 936.807, 2:17.980)
+Lap=(8, 1073.132, 2:17.363)
+LapDistanceTravelled=52.764290
+BestLap=2:15.883
+RaceTime=0:20:59.929
+
+[Slot001]
+Driver=ebitorium
+SteamUser=ebitorium
+SteamId=27473078
+Vehicle=Chevrolet Lacetti 2007
+Team=Chevrolet
+QualTime=2:16.225
+Laps=9
+Lap=(0, -1.000, 2:33.610)
+Lap=(1, 88.546, 2:17.334)
+Lap=(2, 242.156, 2:17.301)
+Lap=(3, 379.490, 2:16.642)
+Lap=(4, 516.791, 2:20.907)
+Lap=(5, 653.433, 2:17.055)
+Lap=(6, 794.340, 2:19.120)
+Lap=(7, 931.395, 2:31.868)
+Lap=(8, 1070.515, 2:17.989)
+LapDistanceTravelled=67.107597
+BestLap=2:16.642
+RaceTime=0:21:11.826
+
+[Slot002]
+Driver=DANKE
+SteamUser=dankesj30
+SteamId=21087355
+Vehicle=BMW 320si E90 Seq STCC
+Team=Elgh Motorsport
+QualTime=2:15.086
+Laps=9
+Lap=(0, -1.000, 2:31.040)
+Lap=(1, 88.546, 2:24.549)
+Lap=(2, 239.587, 2:18.338)
+Lap=(3, 384.136, 2:22.073)
+Lap=(4, 522.474, 2:22.164)
+Lap=(5, 664.546, 2:18.042)
+Lap=(6, 806.710, 2:17.615)
+Lap=(7, 944.752, 2:17.764)
+Lap=(8, 1082.366, 2:20.166)
+LapDistanceTravelled=74.741577
+BestLap=2:17.615
+RaceTime=0:21:11.750
+
+[Slot003]
+Driver=sato
+SteamUser=r32r33r34
+SteamId=29784141
+Vehicle=Honda Accord R 2007
+Team=TEMPLATE_TEAM
+QualTime=2:14.617
+Laps=9
+Lap=(0, -1.000, 2:28.874)
+Lap=(1, 88.546, 2:14.728)
+Lap=(2, 237.420, 2:15.573)
+Lap=(3, 372.148, 2:16.531)
+Lap=(4, 507.722, 2:16.954)
+Lap=(5, 644.253, 2:18.774)
+Lap=(6, 781.206, 2:17.870)
+Lap=(7, 919.981, 2:19.873)
+Lap=(8, 1057.851, 2:19.760)
+LapDistanceTravelled=89.299385
+BestLap=2:14.728
+RaceTime=0:20:48.937
+
+[Slot004]
+Driver=satopon
+SteamUser=sattopon
+SteamId=25319637
+Vehicle=Honda Accord R 2007
+Team=Golden Motors
+QualTime=2:22.664
+Laps=9
+Lap=(0, -1.000, 2:43.541)
+Lap=(1, 88.546, 2:25.305)
+Lap=(2, 252.088, 2:19.870)
+Lap=(3, 397.392, 2:20.030)
+Lap=(4, 537.262, 2:21.083)
+Lap=(5, 677.292, 2:20.388)
+Lap=(6, 818.375, 2:21.275)
+Lap=(7, 958.762, 2:20.054)
+Lap=(8, 1100.037, 2:23.563)
+LapDistanceTravelled=110.938728
+BestLap=2:19.870
+RaceTime=0:21:35.108
+
+[Slot005]
+Driver=jetro
+SteamUser=cobain6339
+SteamId=20133237
+Vehicle=Honda Accord R 2007
+Team=StudieGladRacing
+QualTime=2:16.356
+Laps=9
+Lap=(0, -1.000, 2:38.791)
+Lap=(1, 88.546, 2:17.237)
+Lap=(2, 247.337, 2:19.258)
+Lap=(3, 384.574, 2:16.313)
+Lap=(4, 523.832, 2:17.652)
+Lap=(5, 660.145, 2:17.398)
+Lap=(6, 797.797, 2:20.717)
+Lap=(7, 935.195, 2:18.797)
+Lap=(8, 1075.911, 2:23.914)
+LapDistanceTravelled=125.703568
+BestLap=2:16.313
+RaceTime=0:21:10.077
+
+[Slot006]
+Driver=Applemint
+SteamUser=_applemint_
+SteamId=18575917
+Vehicle=Honda Accord R 2007
+Team=TEMPLATE_TEAM
+QualTime=2:14.497
+Laps=9
+Lap=(0, -1.000, 2:24.562)
+Lap=(1, 88.546, 2:17.394)
+Lap=(2, 233.108, 2:16.507)
+Lap=(3, 370.503, 2:15.793)
+Lap=(4, 507.009, 2:15.964)
+Lap=(5, 642.802, 2:23.087)
+Lap=(6, 778.766, 2:17.147)
+Lap=(7, 921.853, 2:18.331)
+Lap=(8, 1059.000, 2:18.187)
+LapDistanceTravelled=133.233856
+BestLap=2:15.793
+RaceTime=0:20:46.971
+
+[Slot007]
+Driver=nawo
+SteamUser=yuichi74
+SteamId=26279866
+Vehicle=AUDI A4
+Team=Audi Nagatanien Racing
+QualTime=2:14.738
+Laps=9
+Lap=(0, -1.000, 2:30.267)
+Lap=(1, 88.546, 2:16.108)
+Lap=(2, 238.813, 2:15.453)
+Lap=(3, 374.921, 2:15.670)
+Lap=(4, 510.374, 2:15.351)
+Lap=(5, 646.044, 2:18.983)
+Lap=(6, 781.395, 2:21.260)
+Lap=(7, 920.378, 2:16.691)
+Lap=(8, 1061.637, 2:17.039)
+LapDistanceTravelled=154.784546
+BestLap=2:15.351
+RaceTime=0:20:46.821
+
+[Slot008]
+Driver=Ozzy-JPN-
+SteamUser=ozzy5963
+SteamId=27146024
+Vehicle=Volvo C30 2008
+Team=Volvo Olsbergs Green Racing
+QualTime=2:16.739
+Laps=9
+Lap=(0, -1.000, 2:29.700)
+Lap=(1, 88.546, 2:17.138)
+Lap=(2, 238.247, 2:19.684)
+Lap=(3, 375.385, 2:16.914)
+Lap=(4, 515.068, 2:19.286)
+Lap=(5, 651.982, 2:18.395)
+Lap=(6, 791.268, 2:16.637)
+Lap=(7, 929.663, 2:18.357)
+Lap=(8, 1066.300, 2:18.388)
+LapDistanceTravelled=169.394196
+BestLap=2:16.637
+RaceTime=0:20:54.498
+
+[Slot009]
+Driver=buriburi
+SteamUser=buriburi1129
+SteamId=20361835
+Vehicle=Volvo C30 2008
+Team=Volvo Olsbergs Green Racing
+QualTime=2:17.077
+Laps=9
+Lap=(0, -1.000, 2:31.650)
+Lap=(1, 88.546, 2:17.542)
+Lap=(2, 240.197, 2:23.096)
+Lap=(3, 377.739, 2:16.889)
+Lap=(4, 520.835, 2:23.783)
+Lap=(5, 657.725, 2:18.821)
+Lap=(6, 801.507, 2:18.185)
+Lap=(7, 940.328, 2:25.288)
+Lap=(8, 1078.513, 2:17.814)
+LapDistanceTravelled=184.184174
+BestLap=2:16.889
+RaceTime=0:21:13.069
+
+[Slot010]
+Driver=taka&tomo
+SteamUser=tarbow
+SteamId=18613188
+Vehicle=Chevrolet Lacetti
+Team=Maurer Motorsport
+QualTime=2:15.900
+Laps=9
+Lap=(0, -1.000, 2:25.224)
+Lap=(1, 88.546, 2:19.059)
+Lap=(2, 233.770, 2:16.268)
+Lap=(3, 372.829, 2:19.061)
+Lap=(4, 509.098, 2:23.441)
+Lap=(5, 648.159, 2:18.898)
+Lap=(6, 791.600, 2:20.275)
+Lap=(7, 930.498, 2:18.779)
+Lap=(8, 1070.773, 2:24.573)
+LapDistanceTravelled=191.596817
+BestLap=2:16.268
+RaceTime=0:21:05.578
+
+[Slot011]
+Driver=zaurus_jr
+SteamUser=zaurus_jr
+SteamId=20502959
+Vehicle=Honda Accord R 2008
+Team=N. Technology
+QualTime=2:14.348
+Laps=9
+Lap=(0, -1.000, 2:24.054)
+Lap=(1, 88.546, 2:16.429)
+Lap=(2, 232.600, 2:14.990)
+Lap=(3, 369.029, 2:15.407)
+Lap=(4, 504.018, 2:15.864)
+Lap=(5, 639.425, 2:16.028)
+Lap=(6, 775.289, 2:16.521)
+Lap=(7, 911.317, 2:17.178)
+Lap=(8, 1047.837, 2:17.402)
+LapDistanceTravelled=213.179535
+BestLap=2:14.990
+RaceTime=0:20:33.872
+
+[END]

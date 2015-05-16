@@ -42,18 +42,21 @@ class Data_Reader_Race07 extends Data_Reader {
         // Create new session instance
         $session = new Session;
 
-        // Get date from human string.
-        // WARNING: Default timezone used. Please note that this is not correct.
-        // The date is the date of the server, but we will never know the
-        // timezone because the data does not provide a timestamp or timezone
-        // information
-        $date = \DateTime::createFromFormat(
-            'Y/m/d H:i:s',
-            $data['header']['timestring'],
-            new \DateTimeZone(self::$default_timezone)
-        );
-        $date->setTimezone(new \DateTimeZone(self::$default_timezone));
-        $session->setDate($date);
+        // Get date from human string when available
+        if (isset($data['header']['timestring']))
+        {
+            // WARNING: Default timezone used. Please note that this is not correct.
+            // The date is the date of the server, but we will never know the
+            // timezone because the data does not provide a timestamp or timezone
+            // information
+            $date = \DateTime::createFromFormat(
+                'Y/m/d H:i:s',
+                $data['header']['timestring'],
+                new \DateTimeZone(self::$default_timezone)
+            );
+            $date->setTimezone(new \DateTimeZone(self::$default_timezone));
+            $session->setDate($date);
+        }
 
         //--- Set game
         $game = new Game;
