@@ -703,10 +703,13 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 // MODEL: fc2_2014_season (0) [JC [Ma team]]
                 // DRIVERNAME: JC
                 // GUID:76561198023156518
+                //
+                // WARNING: Not using new line modifier (/s) because this causes
+                // bad matching when DRIVERNAME has an empty value
                 preg_match_all(
                     $participant_regex =
-                    '/MODEL: (.*?) .*? \[.*? \[(.*?)\]\].*?DRIVERNAME: (.*?)'
-                    .'GUID:([0-9]+)/si', $data_session, $part_matches);
+                    '/MODEL: (.*?) .*? \[.*? \[(.*?)\]\].*?\RDRIVERNAME: (.{1,}?)\R'
+                    .'GUID:([0-9]+)/i', $data_session, $part_matches);
 
                 // First value match is for vehicle
                 $participant_regex_vehicle_match_key = 1;

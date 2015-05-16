@@ -672,6 +672,36 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
         $session = Data_Reader::factory($file_path)->getSession(1);
     }
 
+    /*
+     * Test whether empty driver names are not matched in a bad way.
+     *
+     * WRONG:
+     *     GUID: Found car CAR_1 SESSION_ID:1 MODEL: tatuusfa1 (1) [ []]
+     *     DRIVERNAME: GUID: Found car CAR_2 SESSION_ID:2 MODEL: tatuusfa1 (2)
+     *     [Chindog [Team ASR]] DRIVERNAME: Chindog
+     *
+     * GOOD:
+     *     Chindog
+     */
+    public function testEmptyDriverNames()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-server/'.
+            'empty.driver.names.txt');
+
+        // Get the race session
+        $session = Data_Reader::factory($file_path)->getSession(3);
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Assert driver name on position 14
+        $this->assertSame('Chindog',
+            $participants[11]->getDriver()->getName());
+    }
+
+
 
 
 
