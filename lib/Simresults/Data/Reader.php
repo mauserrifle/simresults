@@ -115,7 +115,7 @@ abstract class Data_Reader {
     /**
      * Returns one session
      *
-     * @throws  Exception\NoData    when session is not found
+     * @throws  Exception\NoSession    when session is not found
      * @return  Session
      */
     public function getSession($session_number=1)
