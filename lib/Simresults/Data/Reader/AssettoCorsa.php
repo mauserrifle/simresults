@@ -17,7 +17,11 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
      */
     public static function canRead($data)
     {
-       return (bool) json_decode($data, TRUE);
+        if ($data = json_decode($data, TRUE)) {
+            return isset($data['players']);
+        }
+
+        return false;
     }
 
     /**
@@ -167,13 +171,13 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
                 $lap->setNumber($lap_data['lap']+1);
 
                 // Set lap time in seconds
-                $lap->setTime($lap_data['time'] / 1000);
+                $lap->setTime(round($lap_data['time'] / 1000, 4));
 
                 // Set sector times in seconds
                 foreach ($this->get($lap_data, 'sectors', array())
                              as $sector_time)
                 {
-                    $lap->addSectorTime($sector_time / 1000);
+                    $lap->addSectorTime(round($sector_time / 1000, 4));
                 }
 
                 // Add lap to participant
