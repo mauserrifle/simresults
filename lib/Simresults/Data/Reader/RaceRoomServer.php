@@ -51,7 +51,7 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
         );
         foreach ($known_setting_keys as $setting)
         {
-            if ($setting_value = $this->get($data, $setting)) {
+            if ($setting_value = Helper::arrayGet($data, $setting)) {
                 $other_settings[$setting] = $setting_value;
             }
         }
@@ -92,38 +92,38 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
             $session->setGame($game);
 
             // Set server
-            $server = new Server; $server->setName($this->get($data, 'Server'));
+            $server = new Server; $server->setName(Helper::arrayGet($data, 'Server'));
             $session->setServer($server);
 
             // Set track
             $track = new Track;
-            $track->setVenue($this->get($data, 'Track'));
+            $track->setVenue(Helper::arrayGet($data, 'Track'));
             $session->setTrack($track);
 
             // Get participants and their best lap (only lap)
             $participants = array();
-            $players_data = $this->get($session_data, 'Players', array());
+            $players_data = Helper::arrayGet($session_data, 'Players', array());
             foreach ($players_data as $player_index => $player_data)
             {
                 // Create driver
                 $driver = new Driver;
-                $driver->setName($this->get($player_data, 'Username',
+                $driver->setName(Helper::arrayGet($player_data, 'Username',
                                             'unknown'));
 
                 // Create participant and add driver
                 $participant = new Participant;
                 $participant->setDrivers(array($driver))
-                            ->setPosition($this->get($player_data, 'Position',
+                            ->setPosition(Helper::arrayGet($player_data, 'Position',
                                                      null))
                             ->setFinishStatus(Participant::FINISH_NORMAL);
 
                 // Create vehicle and add to participant
                 $vehicle = new Vehicle;
-                $vehicle->setName($this->get($player_data, 'Car'));
+                $vehicle->setName(Helper::arrayGet($player_data, 'Car'));
                 $participant->setVehicle($vehicle);
 
                 // Has best lap
-                if (0 < $best_lap = $this->get($player_data, 'BestLapTime'))
+                if (0 < $best_lap = Helper::arrayGet($player_data, 'BestLapTime'))
                 {
                     // Init new lap
                     $lap = new Lap;
@@ -159,29 +159,4 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
         // Return all sessions
         return $sessions;
     }
-
-
-
-    /**
-     * Retrieve a single key from an array. If the key does not exist in the
-     * array, the default value will be returned instead.
-     *
-     *     // Get the value "username" from $_POST, if it exists
-     *     $username = Arr::get($_POST, 'username');
-     *
-     *     // Get the value "sorting" from $_GET, if it exists
-     *     $sorting = Arr::get($_GET, 'sorting');
-     *
-     * This function is from the Kohana project (http://kohanaframework.org/).
-     *
-     * @param   array   $array      array to extract from
-     * @param   string  $key        key name
-     * @param   mixed   $default    default value
-     * @return  mixed
-     */
-    protected function get($array, $key, $default = NULL)
-    {
-        return isset($array[$key]) ? $array[$key] : $default;
-    }
-
 }

@@ -219,12 +219,12 @@ class Data_Reader_Race07 extends Data_Reader {
             // Create participant and add driver
             $participant = new Participant;
             $participant->setDrivers(array($driver))
-                        ->setTeam($this->get($driver_data, 'team'));
+                        ->setTeam(Helper::arrayGet($driver_data, 'team'));
                         // Finish position will be set later using an special
                         // sort
 
             // We have laps and must set grid positions
-            if($this->get($driver_data, 'laps_collection') AND
+            if(Helper::arrayGet($driver_data, 'laps_collection') AND
                 $set_grid_position)
             {
                 $participant->setGridPosition($driver_data['grid_position']);
@@ -232,11 +232,11 @@ class Data_Reader_Race07 extends Data_Reader {
 
             // Create vehicle and add to participant
             $vehicle = new Vehicle;
-            $vehicle->setName($this->get($driver_data, 'vehicle'));
+            $vehicle->setName(Helper::arrayGet($driver_data, 'vehicle'));
             $participant->setVehicle($vehicle);
 
             // Has race time information
-            if ($race_time = $this->get($driver_data, 'racetime'))
+            if ($race_time = Helper::arrayGet($driver_data, 'racetime'))
             {
                 // Not dnf by default if it's not 0:00:00.000
                 $set_dnf = ($race_time === '0:00:00.000');
@@ -269,7 +269,7 @@ class Data_Reader_Race07 extends Data_Reader {
                     $participant->setFinishStatus(Participant::FINISH_DNF);
 
                     // Has reason
-                    if (null !== $reason = $this->get($driver_data, 'reason'))
+                    if (null !== $reason = Helper::arrayGet($driver_data, 'reason'))
                     {
                         $participant->setFinishComment("DNF (reason $reason)");
                     }
@@ -277,17 +277,17 @@ class Data_Reader_Race07 extends Data_Reader {
             }
 
             // Laps count not found
-            if (null === $laps_count = $this->get($driver_data, 'laps'))
+            if (null === $laps_count = Helper::arrayGet($driver_data, 'laps'))
             {
                 // Try racelaps key
-                $laps_count = $this->get($driver_data, 'racelaps');
+                $laps_count = Helper::arrayGet($driver_data, 'racelaps');
             }
 
             // Has run laps
             if ($laps_count !== null AND $laps_count > 0)
             {
                 // Get laps collection
-                $laps_collection = $this->get($driver_data, 'laps_collection');
+                $laps_collection = Helper::arrayGet($driver_data, 'laps_collection');
 
                 // Loop laps by lap count due to missing laps in results
                 // so we can fill up the gaps
@@ -310,7 +310,7 @@ class Data_Reader_Race07 extends Data_Reader {
                     if ($lap->getNumber() === 1)
                     {
                         // Set grid position as lap position
-                        $lap->setPosition($this->get(
+                        $lap->setPosition(Helper::arrayGet(
                             $driver_data, 'grid_position'));
                     }
 
@@ -333,8 +333,8 @@ class Data_Reader_Race07 extends Data_Reader {
 
                 // All laps missing but has best lap
                 if (sizeof($laps_collection) === 0 AND
-                    ($racebestlap = $this->get($driver_data, 'racebestlap') OR
-                    $racebestlap = $this->get($driver_data, 'bestlap')))
+                    ($racebestlap = Helper::arrayGet($driver_data, 'racebestlap') OR
+                    $racebestlap = Helper::arrayGet($driver_data, 'bestlap')))
                 {
                     // Get first lap and change time
                     $participant->getLap(1)->setTime(
@@ -492,27 +492,4 @@ class Data_Reader_Race07 extends Data_Reader {
 
         return $array_data;
     }
-
-    /**
-     * Retrieve a single key from an array. If the key does not exist in the
-     * array, the default value will be returned instead.
-     *
-     *     // Get the value "username" from $_POST, if it exists
-     *     $username = Arr::get($_POST, 'username');
-     *
-     *     // Get the value "sorting" from $_GET, if it exists
-     *     $sorting = Arr::get($_GET, 'sorting');
-     *
-     * This function is from the Kohana project (http://kohanaframework.org/).
-     *
-     * @param   array   $array      array to extract from
-     * @param   string  $key        key name
-     * @param   mixed   $default    default value
-     * @return  mixed
-     */
-    protected function get($array, $key, $default = NULL)
-    {
-        return isset($array[$key]) ? $array[$key] : $default;
-    }
-
 }

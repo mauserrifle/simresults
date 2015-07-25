@@ -180,4 +180,17 @@ class HelperTest extends PHPUnit_Framework_TestCase {
         $this->assertSame($participant4, $participants[3]);
     }
 
+    /**
+     * Test getting a value using a key from an array
+     */
+    public function testArrayGet()
+    {
+        $array = array('key' => 'value');
+
+        $this->assertSame('value', Helper::arrayGet($array, 'key'));
+        $this->assertNull(Helper::arrayGet($array, 'nothing'));
+        $this->assertSame('default value', Helper::arrayGet(
+            $array, 'nothing', 'default value'));
+    }
+
 }

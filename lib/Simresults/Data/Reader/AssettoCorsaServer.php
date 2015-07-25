@@ -138,7 +138,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             foreach ($session_data['participants'] as $part_data)
             {
                 // No name
-                if ( ! $this->get($part_data, 'name'))
+                if ( ! Helper::arrayGet($part_data, 'name'))
                 {
                     continue;
                 }
@@ -148,7 +148,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 $driver->setName($part_data['name']);
 
                 // Total time not greater than 0
-                if (0 >= $total_time=$this->get($part_data, 'total_time'))
+                if (0 >= $total_time=Helper::arrayGet($part_data, 'total_time'))
                 {
                     // Total time is null
                     $total_time = null;
@@ -160,7 +160,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                             ->setTotalTime($total_time);
 
                 // Has total time parsed data and should not be a forced DNF
-                if ($total_time AND ! $this->get($part_data, 'force_dnf'))
+                if ($total_time AND ! Helper::arrayGet($part_data, 'force_dnf'))
                 {
                     $participant->setFinishStatus(Participant::FINISH_NORMAL);
                 }
@@ -203,7 +203,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 }
 
                 // Collect laps
-                foreach ($this->get($part_data, 'laps', array()) as
+                foreach (Helper::arrayGet($part_data, 'laps', array()) as
                     $lap_i => $lap_data)
                 {
                     // Init new lap
@@ -1078,28 +1078,6 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
         }
 
         return true;
-    }
-
-    /**
-     * Retrieve a single key from an array. If the key does not exist in the
-     * array, the default value will be returned instead.
-     *
-     *     // Get the value "username" from $_POST, if it exists
-     *     $username = Arr::get($_POST, 'username');
-     *
-     *     // Get the value "sorting" from $_GET, if it exists
-     *     $sorting = Arr::get($_GET, 'sorting');
-     *
-     * This function is from the Kohana project (http://kohanaframework.org/).
-     *
-     * @param   array   $array      array to extract from
-     * @param   string  $key        key name
-     * @param   mixed   $default    default value
-     * @return  mixed
-     */
-    protected function get($array, $key, $default = NULL)
-    {
-        return isset($array[$key]) ? $array[$key] : $default;
     }
 
     /**
