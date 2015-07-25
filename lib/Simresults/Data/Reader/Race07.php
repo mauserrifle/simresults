@@ -72,24 +72,29 @@ class Data_Reader_Race07 extends Data_Reader {
 
         $track = new Track;
 
-        // Matches track data with file based name
-        // (e.g. Scene=GameData\Locations\Monza_2007\2007_Monza.TRK)
-        if (preg_match('/^.*\\\\(.*)\\\\(.*)\..*$/i',
-            $data['race']['scene'], $track_matches))
-        {
 
-            // Set track values and set to session
-            $track->setVenue($track_matches[1])
-                  ->setCourse($track_matches[2]);
-        }
-        // Track data not file based, probably just a string
-        else
+        // Has race data
+        if (isset($data['race']))
         {
-            $track->setVenue($data['race']['scene']);
-        }
+            // Matches track data with file based name
+            // (e.g. Scene=GameData\Locations\Monza_2007\2007_Monza.TRK)
+            if (preg_match('/^.*\\\\(.*)\\\\(.*)\..*$/i',
+                $data['race']['scene'], $track_matches))
+            {
 
-        $track->setLength( (float) $data['race']['track length']);
-        $session->setTrack($track);
+                // Set track values and set to session
+                $track->setVenue($track_matches[1])
+                      ->setCourse($track_matches[2]);
+            }
+            // Track data not file based, probably just a string
+            else
+            {
+                $track->setVenue($data['race']['scene']);
+            }
+
+            $track->setLength( (float) $data['race']['track length']);
+            $session->setTrack($track);
+        }
 
         // Get participants
         $this->setParticipantsAndSessionType($session);
