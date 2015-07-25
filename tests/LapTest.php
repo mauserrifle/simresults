@@ -22,6 +22,16 @@ class LapTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
+     * Test the toString method of a Lap
+     */
+    public function testToString()
+    {
+        $lap = new Lap;
+        $lap->setTime(130.7517);
+        $this->assertEquals('02:10.7517',  $lap);
+    }
+
+    /**
      * Test getting a sector time by sector number
      */
     public function testSectorTimeByNumber()

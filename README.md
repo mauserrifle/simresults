@@ -193,6 +193,9 @@ Create index.php:
 
 Open <http://localhost:8000> and all should work!
 
+For further usage please read the classes code within the `lib` folder. They
+are carefully documented.
+
 ## Bugs
 
 Have a bug or a feature request?
