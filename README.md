@@ -105,6 +105,12 @@ lap.
 
 `lib/Data/Reader/AssettoCorsaServer.php`
 
+### RaceRoom Server reader
+
+`lib/Data/Reader/RaceRoomServer.php`
+
+* Limited data. Only contains the best lap of drivers.
+
 ### RACE 07 reader
 
 `lib/Data/Reader/Race07.php`
