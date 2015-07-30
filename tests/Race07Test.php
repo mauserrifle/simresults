@@ -264,6 +264,25 @@ class Race07Test extends PHPUnit_Framework_TestCase {
         $sessions = $reader->getSessions();
     }
 
+    /**
+     * Test whether there are no errors when the date is not properly
+     * formatted. Test for null date too.
+     */
+    public function testNoErrorsAndNullValueOnIncorrectDate()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__
+            .'/logs/race07/incorrect.date.txt');
+
+        // Get the data reader for the given data source
+        $reader = Data_Reader::factory($file_path);
+
+        // Get session
+        $session = $reader->getSession();
+
+        // Validate null date
+        $this->assertNull($session->getDate());
+    }
 
 
     /***

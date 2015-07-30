@@ -63,13 +63,15 @@ class Data_Reader_Race07 extends Data_Reader {
                     // The date is the date of the server, but we will never know the
                     // timezone because the data does not provide a timestamp or timezone
                     // information
-                    $date = \DateTime::createFromFormat(
+                    if ($date = \DateTime::createFromFormat(
                         'Y/m/d H:i:s',
                         $data['header']['timestring'],
                         new \DateTimeZone(self::$default_timezone)
-                    );
-                    $date->setTimezone(new \DateTimeZone(self::$default_timezone));
-                    $session->setDate($date);
+                    ))
+                    {
+                        $date->setTimezone(new \DateTimeZone(self::$default_timezone));
+                        $session->setDate($date);
+                    }
                 }
 
                 //--- Set game
