@@ -750,6 +750,50 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 }
             }
 
+            // No participants found, try another different method....
+            if ( ! $participants)
+            {
+                // CAR: 0 ks_bmw_m235i_racing (0) [Daniel Wolf [iSimRace.de]]
+                // Daniel Wolf [iSimRace.de] 76561198000275466 0 kg
+                preg_match_all(
+                    $participant_regex =
+                    '/CAR: [0-9]+ (.*?) .*? \[(.*?) \[(.*?)\]\].*? ([0-9]{10,})'
+                    .'/i', $data_session, $part_matches);
+
+                // Loop each match and collect participants
+                $participants = array();
+                foreach ($part_matches[0] as $part_key => $part_data)
+                {
+                    $name = trim($part_matches[2][$part_key]);
+                    $vehicle = trim($part_matches[1][$part_key]);
+
+                    // Participant already exists
+                    if (isset($participants[$this->getDriverKey($name)]))
+                    {
+                        // Vehicle is different
+                        if ($participants[$this->getDriverKey($name)]['vehicle'] !== $vehicle)
+                        {
+                            // Mark participant to have multiple cars
+                            $participants[$this->getDriverKey($name)]['has_multiple_cars'] = true;
+                        }
+                        // Vehcle not different, just ignore
+                    }
+                    // Participant is new
+                    else
+                    {
+                        $participants[$this->getDriverKey($name)] = array(
+                            'name'    => $name,
+                            'vehicle' => $vehicle,
+                            'team'    => trim($part_matches[3][$part_key]),
+                            'guid'    => trim($part_matches[4][$part_key]),
+                            'laps'    => array(),
+                            'has_multiple_cars'
+                                      => false,
+                        );
+                    }
+                }
+            }
+
 
 
             // Store participants to all participants array. Using union method
