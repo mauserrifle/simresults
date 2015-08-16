@@ -138,7 +138,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             foreach ($session_data['participants'] as $part_data)
             {
                 // No name
-                if ( ! $this->get($part_data, 'name'))
+                if ( ! Helper::arrayGet($part_data, 'name'))
                 {
                     continue;
                 }
@@ -148,7 +148,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 $driver->setName($part_data['name']);
 
                 // Total time not greater than 0
-                if (0 >= $total_time=$this->get($part_data, 'total_time'))
+                if (0 >= $total_time=Helper::arrayGet($part_data, 'total_time'))
                 {
                     // Total time is null
                     $total_time = null;
@@ -160,7 +160,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                             ->setTotalTime($total_time);
 
                 // Has total time parsed data and should not be a forced DNF
-                if ($total_time AND ! $this->get($part_data, 'force_dnf'))
+                if ($total_time AND ! Helper::arrayGet($part_data, 'force_dnf'))
                 {
                     $participant->setFinishStatus(Participant::FINISH_NORMAL);
                 }
@@ -203,7 +203,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 }
 
                 // Collect laps
-                foreach ($this->get($part_data, 'laps', array()) as
+                foreach (Helper::arrayGet($part_data, 'laps', array()) as
                     $lap_i => $lap_data)
                 {
                     // Init new lap
@@ -703,10 +703,13 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 // MODEL: fc2_2014_season (0) [JC [Ma team]]
                 // DRIVERNAME: JC
                 // GUID:76561198023156518
+                //
+                // WARNING: Not using new line modifier (/s) because this causes
+                // bad matching when DRIVERNAME has an empty value
                 preg_match_all(
                     $participant_regex =
-                    '/MODEL: (.*?) .*? \[.*? \[(.*?)\]\].*?DRIVERNAME: (.*?)'
-                    .'GUID:([0-9]+)/si', $data_session, $part_matches);
+                    '/MODEL: (.*?) .*? \[.*? \[(.*?)\]\].*?\RDRIVERNAME: (.{1,}?)\R'
+                    .'GUID:([0-9]+)/i', $data_session, $part_matches);
 
                 // First value match is for vehicle
                 $participant_regex_vehicle_match_key = 1;
@@ -738,6 +741,50 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                             'name'    => $name,
                             'vehicle' => $vehicle,
                             'team'    => trim($part_matches[2][$part_key]),
+                            'guid'    => trim($part_matches[4][$part_key]),
+                            'laps'    => array(),
+                            'has_multiple_cars'
+                                      => false,
+                        );
+                    }
+                }
+            }
+
+            // No participants found, try another different method....
+            if ( ! $participants)
+            {
+                // CAR: 0 ks_bmw_m235i_racing (0) [Daniel Wolf [iSimRace.de]]
+                // Daniel Wolf [iSimRace.de] 76561198000275466 0 kg
+                preg_match_all(
+                    $participant_regex =
+                    '/CAR: [0-9]+ (.*?) .*? \[(.*?) \[(.*?)\]\].*? ([0-9]{10,})'
+                    .'/i', $data_session, $part_matches);
+
+                // Loop each match and collect participants
+                $participants = array();
+                foreach ($part_matches[0] as $part_key => $part_data)
+                {
+                    $name = trim($part_matches[2][$part_key]);
+                    $vehicle = trim($part_matches[1][$part_key]);
+
+                    // Participant already exists
+                    if (isset($participants[$this->getDriverKey($name)]))
+                    {
+                        // Vehicle is different
+                        if ($participants[$this->getDriverKey($name)]['vehicle'] !== $vehicle)
+                        {
+                            // Mark participant to have multiple cars
+                            $participants[$this->getDriverKey($name)]['has_multiple_cars'] = true;
+                        }
+                        // Vehcle not different, just ignore
+                    }
+                    // Participant is new
+                    else
+                    {
+                        $participants[$this->getDriverKey($name)] = array(
+                            'name'    => $name,
+                            'vehicle' => $vehicle,
+                            'team'    => trim($part_matches[3][$part_key]),
                             'guid'    => trim($part_matches[4][$part_key]),
                             'laps'    => array(),
                             'has_multiple_cars'
@@ -1075,28 +1122,6 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
         }
 
         return true;
-    }
-
-    /**
-     * Retrieve a single key from an array. If the key does not exist in the
-     * array, the default value will be returned instead.
-     *
-     *     // Get the value "username" from $_POST, if it exists
-     *     $username = Arr::get($_POST, 'username');
-     *
-     *     // Get the value "sorting" from $_GET, if it exists
-     *     $sorting = Arr::get($_GET, 'sorting');
-     *
-     * This function is from the Kohana project (http://kohanaframework.org/).
-     *
-     * @param   array   $array      array to extract from
-     * @param   string  $key        key name
-     * @param   mixed   $default    default value
-     * @return  mixed
-     */
-    protected function get($array, $key, $default = NULL)
-    {
-        return isset($array[$key]) ? $array[$key] : $default;
     }
 
     /**

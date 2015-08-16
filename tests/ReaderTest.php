@@ -47,4 +47,12 @@ class ReaderTest extends PHPUnit_Framework_TestCase {
     {
         $this->assertSame('UTC', Data_Reader::$default_timezone);
     }
+
+    /**
+     * TODO: Test exception when no session has been found.
+     *
+     * Please see AssettoCorsaServerReaderTest::testNoSessionException. This
+     * should be removed and replaced with the test below
+     */
+    // public function testNoSessionException() {}
 }

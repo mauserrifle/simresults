@@ -30,6 +30,8 @@ class Data_Reader_Rfactor2 extends Data_Reader {
      */
     public static function canRead($data)
     {
+        // Try to parse file with DomDocument if it begins with a XML open tag
+        if (strpos($data, '<') === 0)
         try
         {
             // Create new dom document

@@ -55,6 +55,35 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
+     * Test reading new connect format since 1.2 update:
+     *
+     *      CAR: 0 ks_bmw_m235i_racing (0) [Daniel Wolf [iSimRace.de]] Daniel
+     *      Wolf [iSimRace.de] 76561198000275466 0 kg
+     *
+     */
+    public function testReadingAlternativeParticipantFormat2()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__. '/logs/assettocorsa-server/'.
+            'different.connecting.format.update.1.2.txt');
+
+        // Get the data reader for the given data source
+        $session = Data_Reader::factory($file_path)->getSession();
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Validate vehicle, name, guid and team
+        $this->assertSame('ks_bmw_m235i_racing',
+            $participants[0]->getVehicle()->getName());
+        $this->assertSame('Ronny-Stoepsel',
+            $participants[0]->getDriver()->getName());
+        $this->assertSame('76561198001923656',
+            $participants[0]->getDriver()->getDriverId());
+        $this->assertSame('iSimRace.de', $participants[0]->getTeam());
+    }
+
+    /**
      * Test reading laps data with different format regarding the ":]" chars:
      *
      *     1) Zimtpatrone :] BEST: 7:00:688 TOTAL: 21:20:237 Laps:2 SesID:3
@@ -652,6 +681,56 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertSame('Rafael Nogueira',
             $participants[9]->getDriver()->getName());
     }
+
+    /**
+     * Test exception when no session has been found
+     *
+     * TODO: This should be in ReaderTest. But we used static methods within
+     * the Reader so testing was bit of a pain.
+     *
+     * @expectedException Simresults\Exception\NoSession
+     */
+    public function testNoSessionException()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-server/'.
+            'no.session.data.txt');
+
+        // Get the race session
+        $session = Data_Reader::factory($file_path)->getSession(1);
+    }
+
+    /*
+     * Test whether empty driver names are not matched in a bad way.
+     *
+     * WRONG:
+     *     GUID: Found car CAR_1 SESSION_ID:1 MODEL: tatuusfa1 (1) [ []]
+     *     DRIVERNAME: GUID: Found car CAR_2 SESSION_ID:2 MODEL: tatuusfa1 (2)
+     *     [Chindog [Team ASR]] DRIVERNAME: Chindog
+     *
+     * GOOD:
+     *     Chindog
+     */
+    public function testEmptyDriverNames()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-server/'.
+            'empty.driver.names.txt');
+
+        // Get the race session
+        $session = Data_Reader::factory($file_path)->getSession(3);
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Assert driver name on position 14
+        $this->assertSame('Chindog',
+            $participants[11]->getDriver()->getName());
+    }
+
+
 
 
 

@@ -1,0 +1,18 @@
+Server CFG Path :  cfg/server_cfg.ini
+Entry List Path :  cfg/entry_list.ini
+Assetto Corsa Dedicated Server v1.1.0
+Protocol version: 101
+2015-03-13 22:02:53.5436 +1100 EST
+LOCAL IP 0: fe80::24da:1385:53e0:e117
+LOCAL IP 1: 172.31.30.232
+LOCAL IP 2: 2001:0:9d38:90d7:24da:1385:53e0:e117
+Using cfg path:  cfg/server_cfg.ini
+Car list:
+_ks_alfa_romeo_gta_
+Client interval HZ: 20 , MS=48
+TRACK=albertpark
+CARS=["ks_alfa_romeo_gta"]
+Loading PRACTICE sessionSESSION: Free Practice
+TYPE=PRACTICE
+TIME=60
+LAPS=0

@@ -105,6 +105,12 @@ lap.
 
 `lib/Data/Reader/AssettoCorsaServer.php`
 
+### RaceRoom Server reader
+
+`lib/Data/Reader/RaceRoomServer.php`
+
+* Limited data. Only contains the best lap of drivers.
+
 ### RACE 07 reader
 
 `lib/Data/Reader/Race07.php`
@@ -186,6 +192,9 @@ Create index.php:
 
 
 Open <http://localhost:8000> and all should work!
+
+For further usage please read the classes code within the `lib` folder. They
+are carefully documented.
 
 ## Bugs
 

@@ -574,4 +574,14 @@ class Lap {
             4
         );
     }
+
+    /**
+     * Output formatted time on string casting
+     *
+     * @return string
+     */
+    public function __toString()
+    {
+        return Helper::formatTime($this->time);
+    }
 }

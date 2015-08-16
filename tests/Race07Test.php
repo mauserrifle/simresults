@@ -194,7 +194,8 @@ class Race07Test extends PHPUnit_Framework_TestCase {
     }
 
     /**
-     * Test race room log differences
+     * Test race room log differences. It includes multiple sessions and only
+     * best lap of drivers
      */
     public function testRaceroomLogDifferences()
     {
@@ -208,19 +209,80 @@ class Race07Test extends PHPUnit_Framework_TestCase {
         // Get sessions
         $sessions = $reader->getSessions();
 
-        // Get the track of the first session
-        $track = $sessions[0]->getTrack();
+        // Validate number of sessions
+        $this->assertSame(2, count($sessions));
 
-        // Validate track
-        $this->assertSame('Grand Prix', $track->getVenue());
+        // Validate tracks
+        $this->assertSame('Grand Prix', $sessions[0]->getTrack()->getVenue());
+        $this->assertSame('Grand Prix', $sessions[1]->getTrack()->getVenue());
 
         // Participants best laps are parsed
         $this->assertNotNull($sessions[0]->getBestLap());
+        $this->assertNotNull($sessions[1]->getBestLap());
 
-        // TODO: Fix multiple sessions by reading duplicate slot entries
-        // $this->assertSame(2, count($sessions));
+        // Validate winners to test proper participant parsing between the
+        // two sessions
+        $participants = $sessions[0]->getParticipants();
+        $this->assertSame('Frank Berndt',
+            $participants[0]->getDriver()->getName());
+        $participants = $sessions[1]->getParticipants();
+        $this->assertSame('Jamie Green',
+            $participants[0]->getDriver()->getName());
     }
 
+    /**
+     * Test whether there are no errors when the TimeString is missing from
+     * the file
+     */
+    public function testNoErrorsOnMissingTimeString()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__
+            .'/logs/race07/no.time.string.txt');
+
+        // Get the data reader for the given data source
+        $reader = Data_Reader::factory($file_path);
+
+        // Get sessions
+        $sessions = $reader->getSessions();
+    }
+
+    /**
+     * Test whether there are no errors when the race data is missing from
+     * the file
+     */
+    public function testNoErrorsOnMissingRaceData()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__
+            .'/logs/race07/no.race.data.txt');
+
+        // Get the data reader for the given data source
+        $reader = Data_Reader::factory($file_path);
+
+        // Get sessions
+        $sessions = $reader->getSessions();
+    }
+
+    /**
+     * Test whether there are no errors when the date is not properly
+     * formatted. Test for null date too.
+     */
+    public function testNoErrorsAndNullValueOnIncorrectDate()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__
+            .'/logs/race07/incorrect.date.txt');
+
+        // Get the data reader for the given data source
+        $reader = Data_Reader::factory($file_path);
+
+        // Get session
+        $session = $reader->getSession();
+
+        // Validate null date
+        $this->assertNull($session->getDate());
+    }
 
 
     /***

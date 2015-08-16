@@ -36,89 +36,126 @@ class Data_Reader_Race07 extends Data_Reader {
      */
     public function getSessions()
     {
-        // Get array data
-        $data = $this->array_data;
+        $sessions = array();
 
-        // Create new session instance
-        $session = new Session;
+        // Session data to re-use on next sessions. Must be collected in the
+        // first raw session data (header sections)
+        $initial_session = null;
 
-        // Get date from human string.
-        // WARNING: Default timezone used. Please note that this is not correct.
-        // The date is the date of the server, but we will never know the
-        // timezone because the data does not provide a timestamp or timezone
-        // information
-        $date = \DateTime::createFromFormat(
-            'Y/m/d H:i:s',
-            $data['header']['timestring'],
-            new \DateTimeZone(self::$default_timezone)
-        );
-        $date->setTimezone(new \DateTimeZone(self::$default_timezone));
-        $session->setDate($date);
-
-        //--- Set game
-        $game = new Game;
-        $game->setName($data['header']['game'])
-             -> setVersion($data['header']['version']);
-        $session->setGame($game);
-
-        //--- Set server (we do not know...)
-        $server = new Server; $server->setName('Unknown or offline');
-        $session->setServer($server);
-
-        //--- Set track
-
-        $track = new Track;
-
-        // Matches track data with file based name
-        // (e.g. Scene=GameData\Locations\Monza_2007\2007_Monza.TRK)
-        if (preg_match('/^.*\\\\(.*)\\\\(.*)\..*$/i',
-            $data['race']['scene'], $track_matches))
+        // Loop each session
+        foreach ($this->array_data as $data)
         {
-
-            // Set track values and set to session
-            $track->setVenue($track_matches[1])
-                  ->setCourse($track_matches[2]);
-        }
-        // Track data not file based, probably just a string
-        else
-        {
-            $track->setVenue($data['race']['scene']);
-        }
-
-        $track->setLength( (float) $data['race']['track length']);
-        $session->setTrack($track);
-
-        // Get participants
-        $this->setParticipantsAndSessionType($session);
-
-
-        // Fix driver positions for laps
-        $session_lasted_laps = $session->getLastedLaps();
-
-        // Loop each lap number, beginning from 2 because lap 1 has grid
-        // position
-        for($i=2; $i <= $session_lasted_laps; $i++)
-        {
-            // Get laps sorted by elapsed time
-            $laps_sorted = $session->getLapsByLapNumberSortedByTime($i);
-
-            // Sort laps by elapsed time
-            $laps_sorted = Helper::sortLapsByElapsedTime($laps_sorted);
-
-            // Loop each lap and fix position data
-            foreach ($laps_sorted as $lap_key => $lap)
+            // Has initial session state
+            $session = null;
+            if ($initial_session)
             {
-                // Only fix position if lap has a time, this way users of this
-                // library can easier detect whether it's a dummy lap and
-                // decide how to show them
-                if ($lap->getTime() OR $lap->getElapsedSeconds())
+                $session = clone $initial_session;
+            }
+            else
+            {
+                // Create new session instance
+                $session = new Session;
+
+                // Get date from human string when available
+                if (isset($data['header']['timestring']))
                 {
-                    $lap->setPosition($lap_key+1);
+                    // WARNING: Default timezone used. Please note that this is not correct.
+                    // The date is the date of the server, but we will never know the
+                    // timezone because the data does not provide a timestamp or timezone
+                    // information
+                    if ($date = \DateTime::createFromFormat(
+                        'Y/m/d H:i:s',
+                        $data['header']['timestring'],
+                        new \DateTimeZone(self::$default_timezone)
+                    ))
+                    {
+                        $date->setTimezone(new \DateTimeZone(self::$default_timezone));
+                        $session->setDate($date);
+                    }
+                }
+
+                //--- Set game
+                $game = new Game;
+                $game->setName($data['header']['game'])
+                     -> setVersion($data['header']['version']);
+                $session->setGame($game);
+
+                //--- Set server (we do not know...)
+                $server = new Server; $server->setName('Unknown or offline');
+                $session->setServer($server);
+
+                //--- Set track
+
+                $track = new Track;
+
+
+                // Has race data
+                if (isset($data['race']))
+                {
+                    // Matches track data with file based name
+                    // (e.g. Scene=GameData\Locations\Monza_2007\2007_Monza.TRK)
+                    if (preg_match('/^.*\\\\(.*)\\\\(.*)\..*$/i',
+                        $data['race']['scene'], $track_matches))
+                    {
+
+                        // Set track values and set to session
+                        $track->setVenue($track_matches[1])
+                              ->setCourse($track_matches[2]);
+                    }
+                    // Track data not file based, probably just a string
+                    else
+                    {
+                        $track->setVenue($data['race']['scene']);
+                    }
+
+                    $track->setLength( (float) $data['race']['track length']);
+                    $session->setTrack($track);
+                }
+
+                // Remember this initial session state for all coming next
+                // sessions
+                $initial_session = clone $session;
+            }
+
+            // Get participants
+            $this->setParticipantsAndSessionType($session, $data);
+
+            // No participants, skip this session
+            if ( ! $session->getParticipants())
+            {
+                continue;
+            }
+
+            // Fix driver positions for laps
+            $session_lasted_laps = $session->getLastedLaps();
+
+            // Loop each lap number, beginning from 2 because lap 1 has grid
+            // position
+            for($i=2; $i <= $session_lasted_laps; $i++)
+            {
+                // Get laps sorted by elapsed time
+                $laps_sorted = $session->getLapsByLapNumberSortedByTime($i);
+
+                // Sort laps by elapsed time
+                $laps_sorted = Helper::sortLapsByElapsedTime($laps_sorted);
+
+                // Loop each lap and fix position data
+                foreach ($laps_sorted as $lap_key => $lap)
+                {
+                    // Only fix position if lap has a time, this way users of this
+                    // library can easier detect whether it's a dummy lap and
+                    // decide how to show them
+                    if ($lap->getTime() OR $lap->getElapsedSeconds())
+                    {
+                        $lap->setPosition($lap_key+1);
+                    }
                 }
             }
+
+            $sessions[] = $session;
         }
 
-        return array($session);
+        return $sessions;
     }
 
 
@@ -126,11 +163,10 @@ class Data_Reader_Race07 extends Data_Reader {
      * Set participants and session type on a session instance
      *
      * @param  Session  $session
+     * @param  array    $data
      */
-    protected function setParticipantsAndSessionType(Session $session)
+    protected function setParticipantsAndSessionType(Session $session, array $data)
     {
-        $data = $this->array_data;
-
         // Init participants array
         $participants = array();
 
@@ -211,12 +247,12 @@ class Data_Reader_Race07 extends Data_Reader {
             // Create participant and add driver
             $participant = new Participant;
             $participant->setDrivers(array($driver))
-                        ->setTeam($this->get($driver_data, 'team'));
+                        ->setTeam(Helper::arrayGet($driver_data, 'team'));
                         // Finish position will be set later using an special
                         // sort
 
             // We have laps and must set grid positions
-            if($this->get($driver_data, 'laps_collection') AND
+            if(Helper::arrayGet($driver_data, 'laps_collection') AND
                 $set_grid_position)
             {
                 $participant->setGridPosition($driver_data['grid_position']);
@@ -224,11 +260,11 @@ class Data_Reader_Race07 extends Data_Reader {
 
             // Create vehicle and add to participant
             $vehicle = new Vehicle;
-            $vehicle->setName($this->get($driver_data, 'vehicle'));
+            $vehicle->setName(Helper::arrayGet($driver_data, 'vehicle'));
             $participant->setVehicle($vehicle);
 
             // Has race time information
-            if ($race_time = $this->get($driver_data, 'racetime'))
+            if ($race_time = Helper::arrayGet($driver_data, 'racetime'))
             {
                 // Not dnf by default if it's not 0:00:00.000
                 $set_dnf = ($race_time === '0:00:00.000');
@@ -261,7 +297,7 @@ class Data_Reader_Race07 extends Data_Reader {
                     $participant->setFinishStatus(Participant::FINISH_DNF);
 
                     // Has reason
-                    if (null !== $reason = $this->get($driver_data, 'reason'))
+                    if (null !== $reason = Helper::arrayGet($driver_data, 'reason'))
                     {
                         $participant->setFinishComment("DNF (reason $reason)");
                     }
@@ -269,17 +305,17 @@ class Data_Reader_Race07 extends Data_Reader {
             }
 
             // Laps count not found
-            if (null === $laps_count = $this->get($driver_data, 'laps'))
+            if (null === $laps_count = Helper::arrayGet($driver_data, 'laps'))
             {
                 // Try racelaps key
-                $laps_count = $this->get($driver_data, 'racelaps');
+                $laps_count = Helper::arrayGet($driver_data, 'racelaps');
             }
 
             // Has run laps
             if ($laps_count !== null AND $laps_count > 0)
             {
                 // Get laps collection
-                $laps_collection = $this->get($driver_data, 'laps_collection');
+                $laps_collection = Helper::arrayGet($driver_data, 'laps_collection');
 
                 // Loop laps by lap count due to missing laps in results
                 // so we can fill up the gaps
@@ -302,7 +338,7 @@ class Data_Reader_Race07 extends Data_Reader {
                     if ($lap->getNumber() === 1)
                     {
                         // Set grid position as lap position
-                        $lap->setPosition($this->get(
+                        $lap->setPosition(Helper::arrayGet(
                             $driver_data, 'grid_position'));
                     }
 
@@ -325,8 +361,8 @@ class Data_Reader_Race07 extends Data_Reader {
 
                 // All laps missing but has best lap
                 if (sizeof($laps_collection) === 0 AND
-                    ($racebestlap = $this->get($driver_data, 'racebestlap') OR
-                    $racebestlap = $this->get($driver_data, 'bestlap')))
+                    ($racebestlap = Helper::arrayGet($driver_data, 'racebestlap') OR
+                    $racebestlap = Helper::arrayGet($driver_data, 'bestlap')))
                 {
                     // Get first lap and change time
                     $participant->getLap(1)->setTime(
@@ -387,124 +423,117 @@ class Data_Reader_Race07 extends Data_Reader {
     }
 
     /**
-     * Parses and converts the data to an array. Keys will be converted to
-     * lowercase names
+     * Parses and converts the data to an array of multiple sessions. Keys will
+     * be converted to lowercase names. Note that any second session will
+     * miss header data!
      *
      * @return   array
      *
      */
-    protected static function parse_data($data)
+    protected static function parse_data($full_data)
     {
-        // Prepare array data
-        $array_data = array();
+        // Split data by sessions
+        $data_sessions = explode('[END]', $full_data);
 
-        // Are laps zero based?
-        $laps_zero_based = (bool) strpos($data, 'Lap=(0,');
+        // Prepare array data collection
+        $array_data_collection = array();
 
-        //----  Loop each line
-        // Remember section
-        $section = null;
-        foreach(preg_split("/((\r?\n)|(\r\n?))/", $data) as $line){
-            // Empty line or META info, ignore this
-            if ( ! $line OR strpos($line, '//') !== false ) continue;
+        // Loop each part
+        foreach ($data_sessions as $data)
+        {
+            // Empty data, ignore
+            if ( ! trim($data)) continue;
 
-            // Is header
-            if (preg_match('/^\[(.*)\]$/i', $line, $matches))
-            {
-                // Set section and continue to next line
-                $section = strtolower($matches[1]);
-                continue;
-            }
+            // Prepare array data
+            $array_data = array();
 
-            // No section, we failed
-            if ( ! $section) return FALSE;
+            // Are laps zero based?
+            $laps_zero_based = (bool) strpos($data, 'Lap=(0,');
 
-            // Get key and value
-            $split = explode('=', $line, 2);
+            //----  Loop each line
+            // Remember section
+            $section = null;
+            foreach(preg_split("/((\r?\n)|(\r\n?))/", $data) as $line){
+                // Empty line or META info, ignore this
+                if ( ! $line OR strpos($line, '//') !== false ) continue;
 
-            // Get key value for array
-            $key = strtolower($split[0]);
-
-            // Is lap value
-            if ($key === 'lap')
-            {
-                // Laps array does not exist yet
-                if ( ! array_key_exists(
-                    'laps_collection', $array_data[$section]))
+                // Is header
+                if (preg_match('/^\[(.*)\]$/i', $line, $matches))
                 {
-                    // Init laps array
-                    $array_data[$section]['laps_collection'] = array();
+                    // Set section and continue to next line
+                    $section = strtolower($matches[1]);
+                    continue;
                 }
 
-                // Match lap information. e.g. (0, -1.000, 2:20.923)
-                preg_match('/^\((.*), ?(.*), ?(.*)\)$/i',
-                    $split[1], $lap_matches);
+                // No section, we failed
+                if ( ! $section) return FALSE;
 
-                // Zero based laps
-                if ($laps_zero_based)
+                // Get key and value
+                $split = explode('=', $line, 2);
+
+                // Get key value for array
+                $key = strtolower($split[0]);
+
+                // Is lap value
+                if ($key === 'lap')
                 {
-                    // Increment lap number by 1
-                    $lap_number = $lap_matches[1]+1;
+                    // Laps array does not exist yet
+                    if ( ! array_key_exists(
+                        'laps_collection', $array_data[$section]))
+                    {
+                        // Init laps array
+                        $array_data[$section]['laps_collection'] = array();
+                    }
+
+                    // Match lap information. e.g. (0, -1.000, 2:20.923)
+                    preg_match('/^\((.*), ?(.*), ?(.*)\)$/i',
+                        $split[1], $lap_matches);
+
+                    // Zero based laps
+                    if ($laps_zero_based)
+                    {
+                        // Increment lap number by 1
+                        $lap_number = $lap_matches[1]+1;
+                    }
+                    // No zero based laps
+                    else
+                    {
+                        // Use lap numbers defined in file
+                        $lap_number = $lap_matches[1];
+                    }
+
+                    // Elapsed time negative, make sure it's positive
+                    if ( 0 > ($elapsed_time = (float) $lap_matches[2]))
+                    {
+                        $elapsed_time = 0;
+                    }
+
+                    // Set lap data
+                    $array_data[$section]['laps_collection'][$lap_number] = array (
+                        'lap_number'     => (int) $lap_number,
+                        'elapsed_time'   => $elapsed_time,
+                        'time'           =>
+                            Helper::secondsFromFormattedTime($lap_matches[3]),
+                    );
+
                 }
-                // No zero based laps
+                // Is normal value
                 else
                 {
-                    // Use lap numbers defined in file
-                    $lap_number = $lap_matches[1];
-                }
-
-                // Elapsed time negative, make sure it's positive
-                if ( 0 > ($elapsed_time = (float) $lap_matches[2]))
-                {
-                    $elapsed_time = 0;
-                }
-
-                // Set lap data
-                $array_data[$section]['laps_collection'][$lap_number] = array (
-                    'lap_number'     => (int) $lap_number,
-                    'elapsed_time'   => $elapsed_time,
-                    'time'           =>
-                        Helper::secondsFromFormattedTime($lap_matches[3]),
-                );
-
-            }
-            // Is normal value
-            else
-            {
-                // Value does not exist yet
-                // WARNING: Quick fix for duplicate slots (which indicate
-                //          multiple sessions?)
-                if ( ! isset($array_data[$section][$key]))
-                {
-                    // Set value
-                    $array_data[$section][$key] = $split[1];
+                    // Value does not exist yet
+                    // WARNING: Quick fix for duplicate slots (which indicate
+                    //          multiple sessions?)
+                    if ( ! isset($array_data[$section][$key]))
+                    {
+                        // Set value
+                        $array_data[$section][$key] = $split[1];
+                    }
                 }
             }
+
+            $array_data_collection[] = $array_data;
         }
 
-        return $array_data;
+        return $array_data_collection;
     }
-
-    /**
-     * Retrieve a single key from an array. If the key does not exist in the
-     * array, the default value will be returned instead.
-     *
-     *     // Get the value "username" from $_POST, if it exists
-     *     $username = Arr::get($_POST, 'username');
-     *
-     *     // Get the value "sorting" from $_GET, if it exists
-     *     $sorting = Arr::get($_GET, 'sorting');
-     *
-     * This function is from the Kohana project (http://kohanaframework.org/).
-     *
-     * @param   array   $array      array to extract from
-     * @param   string  $key        key name
-     * @param   mixed   $default    default value
-     * @return  mixed
-     */
-    protected function get($array, $key, $default = NULL)
-    {
-        return isset($array[$key]) ? $array[$key] : $default;
-    }
-
 }
