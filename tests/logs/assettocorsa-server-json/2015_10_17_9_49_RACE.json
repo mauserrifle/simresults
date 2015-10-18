@@ -1,0 +1,4939 @@
+{
+	"TrackName": "monza",
+	"TrackConfig": "",
+	"Type": "RACE",
+	"DurationSecs": 0,
+	"RaceLaps": 10,
+	"Cars": [
+		{
+			"CarId": 0,
+			"Driver": {
+				"Name": "Lwi",
+				"Team": "",
+				"Guid": "76561198078712985"
+			},
+			"Model": "lotus_exos_125",
+			"Skin": "carbon",
+			"BallastKG": 0
+		},
+		{
+			"CarId": 1,
+			"Driver": {
+				"Name": "YoloAtGames",
+				"Team": "",
+				"Guid": "76561198156462312"
+			},
+			"Model": "lotus_exos_125",
+			"Skin": "0_Lotus",
+			"BallastKG": 0
+		},
+		{
+			"CarId": 2,
+			"Driver": {
+				"Name": "blackbird0011",
+				"Team": "",
+				"Guid": "76561198082218037"
+			},
+			"Model": "lotus_exos_125",
+			"Skin": "Lotus_Legends",
+			"BallastKG": 0
+		},
+		{
+			"CarId": 3,
+			"Driver": {
+				"Name": "paperofolle",
+				"Team": "",
+				"Guid": "76561198019959369"
+			},
+			"Model": "lotus_exos_125",
+			"Skin": "Premiere",
+			"BallastKG": 0
+		},
+		{
+			"CarId": 4,
+			"Driver": {
+				"Name": "Timo Haapala",
+				"Team": "",
+				"Guid": "76561198058894972"
+			},
+			"Model": "lotus_exos_125",
+			"Skin": "carbon",
+			"BallastKG": 0
+		},
+		{
+			"CarId": 5,
+			"Driver": {
+				"Name": "fabi",
+				"Team": "",
+				"Guid": "76561198146893693"
+			},
+			"Model": "lotus_exos_125",
+			"Skin": "0_Lotus",
+			"BallastKG": 0
+		},
+		{
+			"CarId": 6,
+			"Driver": {
+				"Name": "Lucas Canalda Sorribas",
+				"Team": "",
+				"Guid": "76561198128959212"
+			},
+			"Model": "lotus_exos_125",
+			"Skin": "Lotus_Legends",
+			"BallastKG": 0
+		},
+		{
+			"CarId": 7,
+			"Driver": {
+				"Name": "End 222",
+				"Team": "",
+				"Guid": "76561198054038946"
+			},
+			"Model": "lotus_exos_125",
+			"Skin": "Premiere",
+			"BallastKG": 0
+		},
+		{
+			"CarId": 8,
+			"Driver": {
+				"Name": "Adriano",
+				"Team": "",
+				"Guid": "76561198014424034"
+			},
+			"Model": "lotus_exos_125",
+			"Skin": "carbon",
+			"BallastKG": 0
+		},
+		{
+			"CarId": 9,
+			"Driver": {
+				"Name": "Andrea Sorlini",
+				"Team": "TEST TEAM",
+				"Guid": "76561198213775428"
+			},
+			"Model": "lotus_exos_125",
+			"Skin": "0_Lotus",
+			"BallastKG": 0
+		},
+		{
+			"CarId": 10,
+			"Driver": {
+				"Name": "Rad Rides",
+				"Team": "",
+				"Guid": "76561197994297759"
+			},
+			"Model": "lotus_exos_125",
+			"Skin": "Lotus_Legends",
+			"BallastKG": 0
+		},
+		{
+			"CarId": 11,
+			"Driver": {
+				"Name": "jmalonda",
+				"Team": "",
+				"Guid": "76561198041531726"
+			},
+			"Model": "lotus_exos_125",
+			"Skin": "Premiere",
+			"BallastKG": 0
+		},
+		{
+			"CarId": 12,
+			"Driver": {
+				"Name": "-V!0C- TheDoctorMay",
+				"Team": "",
+				"Guid": "76561197981493293"
+			},
+			"Model": "lotus_exos_125",
+			"Skin": "carbon",
+			"BallastKG": 0
+		},
+		{
+			"CarId": 13,
+			"Driver": {
+				"Name": "Balazs Nemeth",
+				"Team": "",
+				"Guid": "76561198077772378"
+			},
+			"Model": "lotus_exos_125",
+			"Skin": "0_Lotus",
+			"BallastKG": 0
+		},
+		{
+			"CarId": 14,
+			"Driver": {
+				"Name": "Ric",
+				"Team": "",
+				"Guid": "76561197962401923"
+			},
+			"Model": "lotus_exos_125",
+			"Skin": "Lotus_Legends",
+			"BallastKG": 0
+		},
+		{
+			"CarId": 15,
+			"Driver": {
+				"Name": "PPolaina",
+				"Team": "",
+				"Guid": "76561198073627782"
+			},
+			"Model": "lotus_exos_125",
+			"Skin": "Lotus_Legends",
+			"BallastKG": 0
+		},
+		{
+			"CarId": 16,
+			"Driver": {
+				"Name": "Thomas Boissel",
+				"Team": "",
+				"Guid": "76561198066283907"
+			},
+			"Model": "lotus_exos_125",
+			"Skin": "Premiere",
+			"BallastKG": 0
+		}
+	],
+	"Result": [
+		{
+			"DriverName": "Andrea Sorlini",
+			"DriverGuid": "76561198213775428",
+			"CarId": 9,
+			"CarModel": "lotus_exos_125",
+			"BestLap": 98907,
+			"TotalTime": 1003035,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "End 222",
+			"DriverGuid": "76561198054038946",
+			"CarId": 7,
+			"CarModel": "lotus_exos_125",
+			"BestLap": 100687,
+			"TotalTime": 972763,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Timo Haapala",
+			"DriverGuid": "76561198058894972",
+			"CarId": 4,
+			"CarModel": "lotus_exos_125",
+			"BestLap": 99369,
+			"TotalTime": 823824,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "blackbird0011",
+			"DriverGuid": "76561198082218037",
+			"CarId": 2,
+			"CarModel": "lotus_exos_125",
+			"BestLap": 100594,
+			"TotalTime": 965975,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Lwi",
+			"DriverGuid": "76561198078712985",
+			"CarId": 0,
+			"CarModel": "lotus_exos_125",
+			"BestLap": 100607,
+			"TotalTime": 1002096,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "paperofolle",
+			"DriverGuid": "76561198019959369",
+			"CarId": 3,
+			"CarModel": "lotus_exos_125",
+			"BestLap": 105360,
+			"TotalTime": 1017644,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "fabi",
+			"DriverGuid": "76561198146893693",
+			"CarId": 5,
+			"CarModel": "lotus_exos_125",
+			"BestLap": 101385,
+			"TotalTime": 1030512,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "PPolaina",
+			"DriverGuid": "76561198073627782",
+			"CarId": 15,
+			"CarModel": "lotus_exos_125",
+			"BestLap": 133463,
+			"TotalTime": 1023011,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Thomas Boissel",
+			"DriverGuid": "76561198066283907",
+			"CarId": 16,
+			"CarModel": "lotus_exos_125",
+			"BestLap": 257378,
+			"TotalTime": 629283,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "-V!0C- TheDoctorMay",
+			"DriverGuid": "76561197981493293",
+			"CarId": 12,
+			"CarModel": "lotus_exos_125",
+			"BestLap": 138768,
+			"TotalTime": 1046174,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Balazs Nemeth",
+			"DriverGuid": "76561198077772378",
+			"CarId": 13,
+			"CarModel": "lotus_exos_125",
+			"BestLap": 999999999,
+			"TotalTime": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "jmalonda",
+			"DriverGuid": "76561198041531726",
+			"CarId": 11,
+			"CarModel": "lotus_exos_125",
+			"BestLap": 999999999,
+			"TotalTime": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Adriano",
+			"DriverGuid": "76561198014424034",
+			"CarId": 8,
+			"CarModel": "lotus_exos_125",
+			"BestLap": 999999999,
+			"TotalTime": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Rad Rides",
+			"DriverGuid": "76561197994297759",
+			"CarId": 10,
+			"CarModel": "lotus_exos_125",
+			"BestLap": 999999999,
+			"TotalTime": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Lucas Canalda Sorribas",
+			"DriverGuid": "76561198128959212",
+			"CarId": 6,
+			"CarModel": "lotus_exos_125",
+			"BestLap": 999999999,
+			"TotalTime": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "YoloAtGames",
+			"DriverGuid": "76561198156462312",
+			"CarId": 1,
+			"CarModel": "lotus_exos_125",
+			"BestLap": 999999999,
+			"TotalTime": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Ric",
+			"DriverGuid": "76561197962401923",
+			"CarId": 14,
+			"CarModel": "lotus_exos_125",
+			"BestLap": 999999999,
+			"TotalTime": 0,
+			"BallastKG": 0
+		}
+	],
+	"Laps": [
+		{
+			"DriverName": "Andrea Sorlini",
+			"DriverGuid": "76561198213775428",
+			"CarId": 9,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 12934204,
+			"LapTime": 104357,
+			"Sectors": [
+				38437,
+				34564,
+				31356
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Manolo Polonioli",
+			"DriverGuid": "76561198043611338",
+			"CarId": 10,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 12935777,
+			"LapTime": 105967,
+			"Sectors": [
+				39520,
+				32999,
+				33448
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Tabak",
+			"DriverGuid": "76561197995596796",
+			"CarId": 12,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 12937870,
+			"LapTime": 108041,
+			"Sectors": [
+				40649,
+				34484,
+				32908
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Timo Haapala",
+			"DriverGuid": "76561198058894972",
+			"CarId": 4,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 12950602,
+			"LapTime": 120773,
+			"Sectors": [
+				38298,
+				38079,
+				44396
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "blackbird0011",
+			"DriverGuid": "76561198082218037",
+			"CarId": 2,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 12952834,
+			"LapTime": 123012,
+			"Sectors": [
+				39870,
+				49252,
+				33890
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Sam Jones",
+			"DriverGuid": "76561198168087892",
+			"CarId": 8,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 12970293,
+			"LapTime": 140507,
+			"Sectors": [
+				76018,
+				32625,
+				31864
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "End 222",
+			"DriverGuid": "76561198054038946",
+			"CarId": 7,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 12991613,
+			"LapTime": 161793,
+			"Sectors": [
+				93244,
+				35622,
+				32927
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Peter Mac",
+			"DriverGuid": "76561198016578481",
+			"CarId": 3,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13018072,
+			"LapTime": 188254,
+			"Sectors": [
+				105913,
+				34110,
+				48231
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Andrea Sorlini",
+			"DriverGuid": "76561198213775428",
+			"CarId": 9,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13034935,
+			"LapTime": 100735,
+			"Sectors": [
+				35876,
+				33165,
+				31694
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Tabak",
+			"DriverGuid": "76561197995596796",
+			"CarId": 12,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13039242,
+			"LapTime": 101374,
+			"Sectors": [
+				36619,
+				33197,
+				31558
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Manolo Polonioli",
+			"DriverGuid": "76561198043611338",
+			"CarId": 10,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13040807,
+			"LapTime": 105027,
+			"Sectors": [
+				40802,
+				32284,
+				31941
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Timo Haapala",
+			"DriverGuid": "76561198058894972",
+			"CarId": 4,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13051027,
+			"LapTime": 100416,
+			"Sectors": [
+				35886,
+				32602,
+				31928
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "PPolaina",
+			"DriverGuid": "76561198073627782",
+			"CarId": 15,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13068611,
+			"LapTime": 238706,
+			"Sectors": [
+				160137,
+				45859,
+				32710
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Sam Jones",
+			"DriverGuid": "76561198168087892",
+			"CarId": 8,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13070228,
+			"LapTime": 99695,
+			"Sectors": [
+				35647,
+				32508,
+				31540
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "End 222",
+			"DriverGuid": "76561198054038946",
+			"CarId": 7,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13093633,
+			"LapTime": 102001,
+			"Sectors": [
+				37277,
+				33004,
+				31720
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Lwi",
+			"DriverGuid": "76561198078712985",
+			"CarId": 0,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13115686,
+			"LapTime": 134492,
+			"Sectors": [
+				61723,
+				35275,
+				37494
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Hille1980",
+			"DriverGuid": "76561197970405503",
+			"CarId": 5,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13117693,
+			"LapTime": 132710,
+			"Sectors": [
+				67924,
+				32927,
+				31859
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Andrea Sorlini",
+			"DriverGuid": "76561198213775428",
+			"CarId": 9,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13134458,
+			"LapTime": 99501,
+			"Sectors": [
+				35794,
+				32485,
+				31222
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "blackbird0011",
+			"DriverGuid": "76561198082218037",
+			"CarId": 2,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13136770,
+			"LapTime": 183910,
+			"Sectors": [
+				119834,
+				32693,
+				31383
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Manolo Polonioli",
+			"DriverGuid": "76561198043611338",
+			"CarId": 10,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13141747,
+			"LapTime": 100935,
+			"Sectors": [
+				37151,
+				32302,
+				31482
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Tabak",
+			"DriverGuid": "76561197995596796",
+			"CarId": 12,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13143675,
+			"LapTime": 104428,
+			"Sectors": [
+				36636,
+				35694,
+				32098
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Timo Haapala",
+			"DriverGuid": "76561198058894972",
+			"CarId": 4,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13151000,
+			"LapTime": 99999,
+			"Sectors": [
+				35855,
+				33071,
+				31073
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Sam Jones",
+			"DriverGuid": "76561198168087892",
+			"CarId": 8,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13174334,
+			"LapTime": 104340,
+			"Sectors": [
+				35890,
+				36464,
+				31986
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Dansav1746",
+			"DriverGuid": "76561198117348944",
+			"CarId": 14,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13184870,
+			"LapTime": 355060,
+			"Sectors": [
+				290899,
+				32594,
+				31567
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "End 222",
+			"DriverGuid": "76561198054038946",
+			"CarId": 7,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13195317,
+			"LapTime": 101683,
+			"Sectors": [
+				37500,
+				32561,
+				31622
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Thomas Boissel",
+			"DriverGuid": "76561198066283907",
+			"CarId": 16,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13201688,
+			"LapTime": 371884,
+			"Sectors": [
+				276623,
+				42228,
+				53033
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "PPolaina",
+			"DriverGuid": "76561198073627782",
+			"CarId": 15,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13202068,
+			"LapTime": 133463,
+			"Sectors": [
+				37546,
+				42201,
+				53716
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Lwi",
+			"DriverGuid": "76561198078712985",
+			"CarId": 0,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13220081,
+			"LapTime": 104389,
+			"Sectors": [
+				37289,
+				35263,
+				31837
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Andrea Sorlini",
+			"DriverGuid": "76561198213775428",
+			"CarId": 9,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13234943,
+			"LapTime": 100511,
+			"Sectors": [
+				36305,
+				32594,
+				31612
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "blackbird0011",
+			"DriverGuid": "76561198082218037",
+			"CarId": 2,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13237363,
+			"LapTime": 100594,
+			"Sectors": [
+				36366,
+				32543,
+				31685
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Tabak",
+			"DriverGuid": "76561197995596796",
+			"CarId": 12,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13246149,
+			"LapTime": 102484,
+			"Sectors": [
+				37198,
+				33304,
+				31982
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Manolo Polonioli",
+			"DriverGuid": "76561198043611338",
+			"CarId": 10,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13248454,
+			"LapTime": 106708,
+			"Sectors": [
+				43415,
+				32257,
+				31036
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Timo Haapala",
+			"DriverGuid": "76561198058894972",
+			"CarId": 4,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13252277,
+			"LapTime": 101263,
+			"Sectors": [
+				36085,
+				32522,
+				32656
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Sam Jones",
+			"DriverGuid": "76561198168087892",
+			"CarId": 8,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13274859,
+			"LapTime": 100521,
+			"Sectors": [
+				35649,
+				33043,
+				31829
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "paperofolle",
+			"DriverGuid": "76561198019959369",
+			"CarId": 3,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13288700,
+			"LapTime": 132692,
+			"Sectors": [
+				65615,
+				35118,
+				31959
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Dansav1746",
+			"DriverGuid": "76561198117348944",
+			"CarId": 14,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13292254,
+			"LapTime": 107371,
+			"Sectors": [
+				36609,
+				32706,
+				38056
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "End 222",
+			"DriverGuid": "76561198054038946",
+			"CarId": 7,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13296851,
+			"LapTime": 101552,
+			"Sectors": [
+				36910,
+				33048,
+				31594
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Lwi",
+			"DriverGuid": "76561198078712985",
+			"CarId": 0,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13321694,
+			"LapTime": 101620,
+			"Sectors": [
+				37216,
+				33080,
+				31324
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Andrea Sorlini",
+			"DriverGuid": "76561198213775428",
+			"CarId": 9,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13334469,
+			"LapTime": 99506,
+			"Sectors": [
+				35597,
+				32698,
+				31211
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "blackbird0011",
+			"DriverGuid": "76561198082218037",
+			"CarId": 2,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13341327,
+			"LapTime": 103951,
+			"Sectors": [
+				36483,
+				36292,
+				31176
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Tabak",
+			"DriverGuid": "76561197995596796",
+			"CarId": 12,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13348252,
+			"LapTime": 102097,
+			"Sectors": [
+				36995,
+				33139,
+				31963
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Manolo Polonioli",
+			"DriverGuid": "76561198043611338",
+			"CarId": 10,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13348647,
+			"LapTime": 100189,
+			"Sectors": [
+				36374,
+				32778,
+				31037
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Timo Haapala",
+			"DriverGuid": "76561198058894972",
+			"CarId": 4,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13352531,
+			"LapTime": 100261,
+			"Sectors": [
+				35898,
+				32561,
+				31802
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "paperofolle",
+			"DriverGuid": "76561198019959369",
+			"CarId": 3,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13396624,
+			"LapTime": 107917,
+			"Sectors": [
+				36210,
+				39302,
+				32405
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "End 222",
+			"DriverGuid": "76561198054038946",
+			"CarId": 7,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13398179,
+			"LapTime": 101315,
+			"Sectors": [
+				37182,
+				32436,
+				31697
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Lwi",
+			"DriverGuid": "76561198078712985",
+			"CarId": 0,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13425964,
+			"LapTime": 104266,
+			"Sectors": [
+				36815,
+				33472,
+				33979
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Sam Jones",
+			"DriverGuid": "76561198168087892",
+			"CarId": 8,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13427853,
+			"LapTime": 152990,
+			"Sectors": [
+				88762,
+				32234,
+				31994
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Andrea Sorlini",
+			"DriverGuid": "76561198213775428",
+			"CarId": 9,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13434937,
+			"LapTime": 100488,
+			"Sectors": [
+				36295,
+				31986,
+				32207
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "blackbird0011",
+			"DriverGuid": "76561198082218037",
+			"CarId": 2,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13442868,
+			"LapTime": 101539,
+			"Sectors": [
+				36455,
+				32446,
+				32638
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "fabi",
+			"DriverGuid": "76561198146893693",
+			"CarId": 5,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13449234,
+			"LapTime": 167869,
+			"Sectors": [
+				102381,
+				32854,
+				32634
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Manolo Polonioli",
+			"DriverGuid": "76561198043611338",
+			"CarId": 10,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13450972,
+			"LapTime": 102326,
+			"Sectors": [
+				37770,
+				32755,
+				31801
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Tabak",
+			"DriverGuid": "76561197995596796",
+			"CarId": 12,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13451030,
+			"LapTime": 102781,
+			"Sectors": [
+				37139,
+				33098,
+				32544
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Timo Haapala",
+			"DriverGuid": "76561198058894972",
+			"CarId": 4,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13452405,
+			"LapTime": 99869,
+			"Sectors": [
+				36051,
+				32130,
+				31688
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Thomas Boissel",
+			"DriverGuid": "76561198066283907",
+			"CarId": 16,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13459071,
+			"LapTime": 257378,
+			"Sectors": [
+				195243,
+				31491,
+				30644
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "End 222",
+			"DriverGuid": "76561198054038946",
+			"CarId": 7,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13500027,
+			"LapTime": 101838,
+			"Sectors": [
+				36749,
+				32270,
+				32819
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "paperofolle",
+			"DriverGuid": "76561198019959369",
+			"CarId": 3,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13508734,
+			"LapTime": 112105,
+			"Sectors": [
+				41513,
+				34525,
+				36067
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Lwi",
+			"DriverGuid": "76561198078712985",
+			"CarId": 0,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13527495,
+			"LapTime": 101530,
+			"Sectors": [
+				37140,
+				33277,
+				31113
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Sam Jones",
+			"DriverGuid": "76561198168087892",
+			"CarId": 8,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13529120,
+			"LapTime": 101266,
+			"Sectors": [
+				36093,
+				33542,
+				31631
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Andrea Sorlini",
+			"DriverGuid": "76561198213775428",
+			"CarId": 9,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13534354,
+			"LapTime": 99409,
+			"Sectors": [
+				35986,
+				32360,
+				31063
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "blackbird0011",
+			"DriverGuid": "76561198082218037",
+			"CarId": 2,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13545034,
+			"LapTime": 102169,
+			"Sectors": [
+				36869,
+				32999,
+				32301
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "fabi",
+			"DriverGuid": "76561198146893693",
+			"CarId": 5,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13551169,
+			"LapTime": 101931,
+			"Sectors": [
+				36573,
+				33646,
+				31712
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Timo Haapala",
+			"DriverGuid": "76561198058894972",
+			"CarId": 4,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13554254,
+			"LapTime": 101856,
+			"Sectors": [
+				37087,
+				33332,
+				31437
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "End 222",
+			"DriverGuid": "76561198054038946",
+			"CarId": 7,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13601100,
+			"LapTime": 101088,
+			"Sectors": [
+				36715,
+				32656,
+				31717
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Lwi",
+			"DriverGuid": "76561198078712985",
+			"CarId": 0,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13628098,
+			"LapTime": 100607,
+			"Sectors": [
+				36316,
+				32701,
+				31590
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Sam Jones",
+			"DriverGuid": "76561198168087892",
+			"CarId": 8,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13629048,
+			"LapTime": 99924,
+			"Sectors": [
+				35335,
+				33183,
+				31406
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Andrea Sorlini",
+			"DriverGuid": "76561198213775428",
+			"CarId": 9,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13633261,
+			"LapTime": 98907,
+			"Sectors": [
+				35506,
+				32324,
+				31077
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Timo Haapala",
+			"DriverGuid": "76561198058894972",
+			"CarId": 4,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13653623,
+			"LapTime": 99369,
+			"Sectors": [
+				35640,
+				32661,
+				31068
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "fabi",
+			"DriverGuid": "76561198146893693",
+			"CarId": 5,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13656220,
+			"LapTime": 105048,
+			"Sectors": [
+				37318,
+				35789,
+				31941
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "blackbird0011",
+			"DriverGuid": "76561198082218037",
+			"CarId": 2,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13680611,
+			"LapTime": 135564,
+			"Sectors": [
+				69720,
+				34033,
+				31811
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "End 222",
+			"DriverGuid": "76561198054038946",
+			"CarId": 7,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13701849,
+			"LapTime": 100746,
+			"Sectors": [
+				36701,
+				32536,
+				31509
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Lwi",
+			"DriverGuid": "76561198078712985",
+			"CarId": 0,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13730526,
+			"LapTime": 102431,
+			"Sectors": [
+				37582,
+				33799,
+				31050
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Andrea Sorlini",
+			"DriverGuid": "76561198213775428",
+			"CarId": 9,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13733210,
+			"LapTime": 99940,
+			"Sectors": [
+				35860,
+				31986,
+				32094
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "paperofolle",
+			"DriverGuid": "76561198019959369",
+			"CarId": 3,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13742084,
+			"LapTime": 233371,
+			"Sectors": [
+				165484,
+				34816,
+				33071
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "fabi",
+			"DriverGuid": "76561198146893693",
+			"CarId": 5,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13757606,
+			"LapTime": 101385,
+			"Sectors": [
+				36800,
+				32679,
+				31906
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "blackbird0011",
+			"DriverGuid": "76561198082218037",
+			"CarId": 2,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13795780,
+			"LapTime": 115163,
+			"Sectors": [
+				36846,
+				46120,
+				32197
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "End 222",
+			"DriverGuid": "76561198054038946",
+			"CarId": 7,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13802565,
+			"LapTime": 100687,
+			"Sectors": [
+				37359,
+				32332,
+				30996
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Lwi",
+			"DriverGuid": "76561198078712985",
+			"CarId": 0,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13831884,
+			"LapTime": 101360,
+			"Sectors": [
+				37271,
+				32000,
+				32089
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Andrea Sorlini",
+			"DriverGuid": "76561198213775428",
+			"CarId": 9,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13832859,
+			"LapTime": 99618,
+			"Sectors": [
+				36397,
+				32188,
+				31033
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "paperofolle",
+			"DriverGuid": "76561198019959369",
+			"CarId": 3,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13847457,
+			"LapTime": 105360,
+			"Sectors": [
+				36766,
+				34897,
+				33697
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "PPolaina",
+			"DriverGuid": "76561198073627782",
+			"CarId": 15,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13852896,
+			"LapTime": 377051,
+			"Sectors": [
+				303782,
+				35515,
+				37754
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "fabi",
+			"DriverGuid": "76561198146893693",
+			"CarId": 5,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13860307,
+			"LapTime": 102694,
+			"Sectors": [
+				38393,
+				32527,
+				31774
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "-V!0C- TheDoctorMay",
+			"DriverGuid": "76561197981493293",
+			"CarId": 12,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13875974,
+			"LapTime": 138768,
+			"Sectors": [
+				60522,
+				32850,
+				45396
+			],
+			"Cuts": 0,
+			"BallastKG": 0
+		}
+	],
+	"Events": [
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 13,
+			"Driver": {
+				"Name": "SuperTeam",
+				"Team": "",
+				"Guid": "76561197960967627"
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": ""
+			},
+			"ImpactSpeed": 27.313541,
+			"WorldPosition": {
+				"X": -132.59132,
+				"Y": -11.34964,
+				"Z": 849.26135
+			},
+			"RelPosition": {
+				"X": -0.91047305,
+				"Y": -0.043808036,
+				"Z": 2.7532854
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 15,
+			"Driver": {
+				"Name": "PPolaina",
+				"Team": "",
+				"Guid": "76561198073627782"
+			},
+			"OtherCarId": 12,
+			"OtherDriver": {
+				"Name": "Tabak",
+				"Team": "",
+				"Guid": "76561197995596796"
+			},
+			"ImpactSpeed": 7.37918,
+			"WorldPosition": {
+				"X": -172.37044,
+				"Y": -6.721242,
+				"Z": 100.06442
+			},
+			"RelPosition": {
+				"X": -0.4266743,
+				"Y": -0.057853088,
+				"Z": -2.0247514
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 0,
+			"Driver": {
+				"Name": "Kimi Raikkonen",
+				"Team": "",
+				"Guid": "76561198071650295"
+			},
+			"OtherCarId": 6,
+			"OtherDriver": {
+				"Name": "Trackboss",
+				"Team": "",
+				"Guid": "76561198147278792"
+			},
+			"ImpactSpeed": 37.82506,
+			"WorldPosition": {
+				"X": -121.95781,
+				"Y": -3.4708934,
+				"Z": -505.10123
+			},
+			"RelPosition": {
+				"X": -0.4030787,
+				"Y": -0.06797313,
+				"Z": -2.165437
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 3,
+			"Driver": {
+				"Name": "Peter Mac",
+				"Team": "",
+				"Guid": "76561198016578481"
+			},
+			"OtherCarId": 7,
+			"OtherDriver": {
+				"Name": "End 222",
+				"Team": "",
+				"Guid": "76561198054038946"
+			},
+			"ImpactSpeed": 6.7231755,
+			"WorldPosition": {
+				"X": -125.85885,
+				"Y": -3.8035166,
+				"Z": -462.49805
+			},
+			"RelPosition": {
+				"X": -0.91047883,
+				"Y": -0.07754872,
+				"Z": 2.7592716
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 6,
+			"Driver": {
+				"Name": "Trackboss",
+				"Team": "",
+				"Guid": "76561198147278792"
+			},
+			"OtherCarId": 0,
+			"OtherDriver": {
+				"Name": "Kimi Raikkonen",
+				"Team": "",
+				"Guid": "76561198071650295"
+			},
+			"ImpactSpeed": 25.10704,
+			"WorldPosition": {
+				"X": -121.66423,
+				"Y": -3.6376836,
+				"Z": -505.34436
+			},
+			"RelPosition": {
+				"X": 0.8950883,
+				"Y": -0.20881736,
+				"Z": 2.7732558
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 6,
+			"Driver": {
+				"Name": "Trackboss",
+				"Team": "",
+				"Guid": "76561198147278792"
+			},
+			"OtherCarId": 8,
+			"OtherDriver": {
+				"Name": "Sam Jones",
+				"Team": "",
+				"Guid": "76561198168087892"
+			},
+			"ImpactSpeed": 13.862154,
+			"WorldPosition": {
+				"X": -120.12415,
+				"Y": -3.0550148,
+				"Z": -507.96173
+			},
+			"RelPosition": {
+				"X": 0.93488836,
+				"Y": 0.30298305,
+				"Z": -1.6801741
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 6,
+			"Driver": {
+				"Name": "Trackboss",
+				"Team": "",
+				"Guid": "76561198147278792"
+			},
+			"OtherCarId": 2,
+			"OtherDriver": {
+				"Name": "blackbird0011",
+				"Team": "",
+				"Guid": "76561198082218037"
+			},
+			"ImpactSpeed": 15.366475,
+			"WorldPosition": {
+				"X": -114.79478,
+				"Y": -3.446795,
+				"Z": -512.39087
+			},
+			"RelPosition": {
+				"X": -0.93938655,
+				"Y": -0.100018114,
+				"Z": -1.3774452
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 7,
+			"Driver": {
+				"Name": "End 222",
+				"Team": "",
+				"Guid": "76561198054038946"
+			},
+			"OtherCarId": 3,
+			"OtherDriver": {
+				"Name": "Peter Mac",
+				"Team": "",
+				"Guid": "76561198016578481"
+			},
+			"ImpactSpeed": 13.330837,
+			"WorldPosition": {
+				"X": -125.89315,
+				"Y": -3.8168383,
+				"Z": -461.22415
+			},
+			"RelPosition": {
+				"X": 0.8877441,
+				"Y": -0.12503229,
+				"Z": -1.7109625
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 7,
+			"Driver": {
+				"Name": "End 222",
+				"Team": "",
+				"Guid": "76561198054038946"
+			},
+			"OtherCarId": 15,
+			"OtherDriver": {
+				"Name": "PPolaina",
+				"Team": "",
+				"Guid": "76561198073627782"
+			},
+			"ImpactSpeed": 36.229683,
+			"WorldPosition": {
+				"X": -123.12425,
+				"Y": -3.4165916,
+				"Z": -495.90494
+			},
+			"RelPosition": {
+				"X": 0.0653536,
+				"Y": 0.064421356,
+				"Z": 2.7454984
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 7,
+			"Driver": {
+				"Name": "End 222",
+				"Team": "",
+				"Guid": "76561198054038946"
+			},
+			"OtherCarId": 13,
+			"OtherDriver": {
+				"Name": "SuperTeam",
+				"Team": "",
+				"Guid": "76561197960967627"
+			},
+			"ImpactSpeed": 31.660126,
+			"WorldPosition": {
+				"X": -117.51571,
+				"Y": -3.569088,
+				"Z": -509.8286
+			},
+			"RelPosition": {
+				"X": -0.91047263,
+				"Y": -0.17080405,
+				"Z": 2.7757654
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 13,
+			"Driver": {
+				"Name": "SuperTeam",
+				"Team": "",
+				"Guid": "76561197960967627"
+			},
+			"OtherCarId": 7,
+			"OtherDriver": {
+				"Name": "End 222",
+				"Team": "",
+				"Guid": "76561198054038946"
+			},
+			"ImpactSpeed": 21.938068,
+			"WorldPosition": {
+				"X": -116.95408,
+				"Y": -3.5801127,
+				"Z": -509.89377
+			},
+			"RelPosition": {
+				"X": -0.7916929,
+				"Y": -0.15553774,
+				"Z": 2.7559514
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 8,
+			"Driver": {
+				"Name": "Sam Jones",
+				"Team": "",
+				"Guid": "76561198168087892"
+			},
+			"OtherCarId": 6,
+			"OtherDriver": {
+				"Name": "Trackboss",
+				"Team": "",
+				"Guid": "76561198147278792"
+			},
+			"ImpactSpeed": 17.11322,
+			"WorldPosition": {
+				"X": -119.80375,
+				"Y": -3.5912237,
+				"Z": -508.25922
+			},
+			"RelPosition": {
+				"X": -0.9104864,
+				"Y": -0.20838767,
+				"Z": 2.7824278
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 8,
+			"Driver": {
+				"Name": "Sam Jones",
+				"Team": "",
+				"Guid": "76561198168087892"
+			},
+			"OtherCarId": 15,
+			"OtherDriver": {
+				"Name": "PPolaina",
+				"Team": "",
+				"Guid": "76561198073627782"
+			},
+			"ImpactSpeed": 43.87214,
+			"WorldPosition": {
+				"X": -117.016594,
+				"Y": -3.566141,
+				"Z": -516.0345
+			},
+			"RelPosition": {
+				"X": 0.4570493,
+				"Y": -0.2622697,
+				"Z": -1.9140701
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 8,
+			"Driver": {
+				"Name": "Sam Jones",
+				"Team": "",
+				"Guid": "76561198168087892"
+			},
+			"OtherCarId": 3,
+			"OtherDriver": {
+				"Name": "Peter Mac",
+				"Team": "",
+				"Guid": "76561198016578481"
+			},
+			"ImpactSpeed": 42.71688,
+			"WorldPosition": {
+				"X": -105.794304,
+				"Y": -3.1375422,
+				"Z": -529.31757
+			},
+			"RelPosition": {
+				"X": -0.8897003,
+				"Y": -0.20830071,
+				"Z": 2.736196
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 15,
+			"Driver": {
+				"Name": "PPolaina",
+				"Team": "",
+				"Guid": "76561198073627782"
+			},
+			"OtherCarId": 7,
+			"OtherDriver": {
+				"Name": "End 222",
+				"Team": "",
+				"Guid": "76561198054038946"
+			},
+			"ImpactSpeed": 53.14873,
+			"WorldPosition": {
+				"X": -123.17087,
+				"Y": -3.4480863,
+				"Z": -495.99973
+			},
+			"RelPosition": {
+				"X": 0.39320898,
+				"Y": -0.014506606,
+				"Z": -2.2269785
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 15,
+			"Driver": {
+				"Name": "PPolaina",
+				"Team": "",
+				"Guid": "76561198073627782"
+			},
+			"OtherCarId": 8,
+			"OtherDriver": {
+				"Name": "Sam Jones",
+				"Team": "",
+				"Guid": "76561198168087892"
+			},
+			"ImpactSpeed": 31.381504,
+			"WorldPosition": {
+				"X": -116.87742,
+				"Y": -3.2607543,
+				"Z": -515.72296
+			},
+			"RelPosition": {
+				"X": 0.88213366,
+				"Y": 0.14259778,
+				"Z": 2.2602959
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 3,
+			"Driver": {
+				"Name": "Peter Mac",
+				"Team": "",
+				"Guid": "76561198016578481"
+			},
+			"OtherCarId": 8,
+			"OtherDriver": {
+				"Name": "Sam Jones",
+				"Team": "",
+				"Guid": "76561198168087892"
+			},
+			"ImpactSpeed": 32.21152,
+			"WorldPosition": {
+				"X": -103.04027,
+				"Y": -2.993464,
+				"Z": -531.54663
+			},
+			"RelPosition": {
+				"X": -0.8615948,
+				"Y": -0.20907895,
+				"Z": 2.7785554
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 9,
+			"Driver": {
+				"Name": "Andrea Sorlini",
+				"Team": "",
+				"Guid": "76561198213775428"
+			},
+			"OtherCarId": 4,
+			"OtherDriver": {
+				"Name": "Timo Haapala",
+				"Team": "",
+				"Guid": "76561198058894972"
+			},
+			"ImpactSpeed": 13.533552,
+			"WorldPosition": {
+				"X": 609.6964,
+				"Y": 1.0754231,
+				"Z": -1147.1508
+			},
+			"RelPosition": {
+				"X": -0.90852237,
+				"Y": -0.06255782,
+				"Z": 2.7566848
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 6,
+			"Driver": {
+				"Name": "Trackboss",
+				"Team": "",
+				"Guid": "76561198147278792"
+			},
+			"OtherCarId": 14,
+			"OtherDriver": {
+				"Name": "Dansav1746",
+				"Team": "",
+				"Guid": "76561198117348944"
+			},
+			"ImpactSpeed": 14.791077,
+			"WorldPosition": {
+				"X": 576.9517,
+				"Y": 1.2660983,
+				"Z": -1141.9916
+			},
+			"RelPosition": {
+				"X": -0.9408999,
+				"Y": -0.09710312,
+				"Z": -1.4654765
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 10,
+			"Driver": {
+				"Name": "Manolo Polonioli",
+				"Team": "",
+				"Guid": "76561198043611338"
+			},
+			"OtherCarId": 14,
+			"OtherDriver": {
+				"Name": "Dansav1746",
+				"Team": "",
+				"Guid": "76561198117348944"
+			},
+			"ImpactSpeed": 12.6741295,
+			"WorldPosition": {
+				"X": 587.0208,
+				"Y": 1.1472912,
+				"Z": -1140.4448
+			},
+			"RelPosition": {
+				"X": 0.90604115,
+				"Y": -0.19117157,
+				"Z": 2.779403
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 4,
+			"Driver": {
+				"Name": "Timo Haapala",
+				"Team": "",
+				"Guid": "76561198058894972"
+			},
+			"OtherCarId": 9,
+			"OtherDriver": {
+				"Name": "Andrea Sorlini",
+				"Team": "",
+				"Guid": "76561198213775428"
+			},
+			"ImpactSpeed": 13.711668,
+			"WorldPosition": {
+				"X": 610.36633,
+				"Y": 0.9237491,
+				"Z": -1147.3724
+			},
+			"RelPosition": {
+				"X": 0.66496307,
+				"Y": -0.23728116,
+				"Z": -0.513631
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 4,
+			"Driver": {
+				"Name": "Timo Haapala",
+				"Team": "",
+				"Guid": "76561198058894972"
+			},
+			"OtherCarId": 6,
+			"OtherDriver": {
+				"Name": "Trackboss",
+				"Team": "",
+				"Guid": "76561198147278792"
+			},
+			"ImpactSpeed": 63.53528,
+			"WorldPosition": {
+				"X": 624.56683,
+				"Y": 0.95210993,
+				"Z": -1151.5948
+			},
+			"RelPosition": {
+				"X": -0.00033521652,
+				"Y": -0.1933516,
+				"Z": 2.7603886
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 14,
+			"Driver": {
+				"Name": "Dansav1746",
+				"Team": "",
+				"Guid": "76561198117348944"
+			},
+			"OtherCarId": 10,
+			"OtherDriver": {
+				"Name": "Manolo Polonioli",
+				"Team": "",
+				"Guid": "76561198043611338"
+			},
+			"ImpactSpeed": 41.690163,
+			"WorldPosition": {
+				"X": 620.5883,
+				"Y": 1.0184691,
+				"Z": -1145.0146
+			},
+			"RelPosition": {
+				"X": -0.9104585,
+				"Y": -0.20828737,
+				"Z": 2.7305264
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 14,
+			"Driver": {
+				"Name": "Dansav1746",
+				"Team": "",
+				"Guid": "76561198117348944"
+			},
+			"OtherCarId": 6,
+			"OtherDriver": {
+				"Name": "Trackboss",
+				"Team": "",
+				"Guid": "76561198147278792"
+			},
+			"ImpactSpeed": 22.691156,
+			"WorldPosition": {
+				"X": 609.2019,
+				"Y": 1.1025443,
+				"Z": -1147.1964
+			},
+			"RelPosition": {
+				"X": 0.91043127,
+				"Y": -0.04380864,
+				"Z": 2.7532976
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 3,
+			"Driver": {
+				"Name": "Peter Mac",
+				"Team": "",
+				"Guid": "76561198016578481"
+			},
+			"OtherCarId": 13,
+			"OtherDriver": {
+				"Name": "SuperTeam",
+				"Team": "",
+				"Guid": "76561197960967627"
+			},
+			"ImpactSpeed": 32.091938,
+			"WorldPosition": {
+				"X": 556.9634,
+				"Y": 1.430665,
+				"Z": -1137.8126
+			},
+			"RelPosition": {
+				"X": -0.43752557,
+				"Y": 0.014706374,
+				"Z": 2.7295482
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 2,
+			"Driver": {
+				"Name": "blackbird0011",
+				"Team": "",
+				"Guid": "76561198082218037"
+			},
+			"OtherCarId": 6,
+			"OtherDriver": {
+				"Name": "Trackboss",
+				"Team": "",
+				"Guid": "76561198147278792"
+			},
+			"ImpactSpeed": 64.64453,
+			"WorldPosition": {
+				"X": 626.9173,
+				"Y": 1.0263603,
+				"Z": -1155.8822
+			},
+			"RelPosition": {
+				"X": -0.9104801,
+				"Y": -0.08254905,
+				"Z": 2.7602024
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 6,
+			"Driver": {
+				"Name": "Trackboss",
+				"Team": "",
+				"Guid": "76561198147278792"
+			},
+			"OtherCarId": 14,
+			"OtherDriver": {
+				"Name": "Dansav1746",
+				"Team": "",
+				"Guid": "76561198117348944"
+			},
+			"ImpactSpeed": 23.004578,
+			"WorldPosition": {
+				"X": 609.5621,
+				"Y": 0.9407548,
+				"Z": -1147.2273
+			},
+			"RelPosition": {
+				"X": -0.6534091,
+				"Y": -0.23544322,
+				"Z": 0.06360164
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 6,
+			"Driver": {
+				"Name": "Trackboss",
+				"Team": "",
+				"Guid": "76561198147278792"
+			},
+			"OtherCarId": 4,
+			"OtherDriver": {
+				"Name": "Timo Haapala",
+				"Team": "",
+				"Guid": "76561198058894972"
+			},
+			"ImpactSpeed": 60.001507,
+			"WorldPosition": {
+				"X": 624.07025,
+				"Y": 0.9470595,
+				"Z": -1150.8881
+			},
+			"RelPosition": {
+				"X": 0.7771035,
+				"Y": -0.20842394,
+				"Z": 2.7792869
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 6,
+			"Driver": {
+				"Name": "Trackboss",
+				"Team": "",
+				"Guid": "76561198147278792"
+			},
+			"OtherCarId": 2,
+			"OtherDriver": {
+				"Name": "blackbird0011",
+				"Team": "",
+				"Guid": "76561198082218037"
+			},
+			"ImpactSpeed": 84.46048,
+			"WorldPosition": {
+				"X": 625.7931,
+				"Y": 1.1588151,
+				"Z": -1155.4889
+			},
+			"RelPosition": {
+				"X": 0.87573147,
+				"Y": -0.0023714607,
+				"Z": -1.6872193
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 7,
+			"Driver": {
+				"Name": "End 222",
+				"Team": "",
+				"Guid": "76561198054038946"
+			},
+			"OtherCarId": 15,
+			"OtherDriver": {
+				"Name": "PPolaina",
+				"Team": "",
+				"Guid": "76561198073627782"
+			},
+			"ImpactSpeed": 11.233697,
+			"WorldPosition": {
+				"X": 398.36716,
+				"Y": 1.3165779,
+				"Z": -1127.7579
+			},
+			"RelPosition": {
+				"X": 0.7576853,
+				"Y": -0.024374733,
+				"Z": 2.7506537
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 7,
+			"Driver": {
+				"Name": "End 222",
+				"Team": "",
+				"Guid": "76561198054038946"
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": ""
+			},
+			"ImpactSpeed": 77.08348,
+			"WorldPosition": {
+				"X": 463.277,
+				"Y": 1.4860523,
+				"Z": -1143.5099
+			},
+			"RelPosition": {
+				"X": 0.9406179,
+				"Y": -0.10683816,
+				"Z": -1.6872455
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 13,
+			"Driver": {
+				"Name": "SuperTeam",
+				"Team": "",
+				"Guid": "76561197960967627"
+			},
+			"OtherCarId": 3,
+			"OtherDriver": {
+				"Name": "Peter Mac",
+				"Team": "",
+				"Guid": "76561198016578481"
+			},
+			"ImpactSpeed": 41.20625,
+			"WorldPosition": {
+				"X": 556.64276,
+				"Y": 1.4230134,
+				"Z": -1137.79
+			},
+			"RelPosition": {
+				"X": 0.400477,
+				"Y": -0.053753942,
+				"Z": -2.1818326
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 15,
+			"Driver": {
+				"Name": "PPolaina",
+				"Team": "",
+				"Guid": "76561198073627782"
+			},
+			"OtherCarId": 7,
+			"OtherDriver": {
+				"Name": "End 222",
+				"Team": "",
+				"Guid": "76561198054038946"
+			},
+			"ImpactSpeed": 10.122331,
+			"WorldPosition": {
+				"X": 396.92285,
+				"Y": 1.2869551,
+				"Z": -1127.6556
+			},
+			"RelPosition": {
+				"X": -0.4000966,
+				"Y": -0.052060787,
+				"Z": -2.1837566
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 15,
+			"Driver": {
+				"Name": "PPolaina",
+				"Team": "",
+				"Guid": "76561198073627782"
+			},
+			"OtherCarId": 0,
+			"OtherDriver": {
+				"Name": "Kimi Raikkonen",
+				"Team": "",
+				"Guid": "76561198071650295"
+			},
+			"ImpactSpeed": 29.274326,
+			"WorldPosition": {
+				"X": 612.94135,
+				"Y": 1.4351567,
+				"Z": -1145.912
+			},
+			"RelPosition": {
+				"X": -0.056373894,
+				"Y": 0.16567211,
+				"Z": 0.69428813
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 0,
+			"Driver": {
+				"Name": "Kimi Raikkonen",
+				"Team": "",
+				"Guid": "76561198071650295"
+			},
+			"OtherCarId": 15,
+			"OtherDriver": {
+				"Name": "PPolaina",
+				"Team": "",
+				"Guid": "76561198073627782"
+			},
+			"ImpactSpeed": 16.176037,
+			"WorldPosition": {
+				"X": 613.60406,
+				"Y": 1.4057839,
+				"Z": -1145.7953
+			},
+			"RelPosition": {
+				"X": -0.9306023,
+				"Y": 0.28690687,
+				"Z": 1.8044883
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 0,
+			"Driver": {
+				"Name": "Kimi Raikkonen",
+				"Team": "",
+				"Guid": "76561198071650295"
+			},
+			"OtherCarId": 7,
+			"OtherDriver": {
+				"Name": "End 222",
+				"Team": "",
+				"Guid": "76561198054038946"
+			},
+			"ImpactSpeed": 56.89808,
+			"WorldPosition": {
+				"X": 599.7517,
+				"Y": 1.0653723,
+				"Z": -1145.6433
+			},
+			"RelPosition": {
+				"X": 0.8232449,
+				"Y": -0.14754593,
+				"Z": -1.7424239
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 3,
+			"Driver": {
+				"Name": "Peter Mac",
+				"Team": "",
+				"Guid": "76561198016578481"
+			},
+			"OtherCarId": 15,
+			"OtherDriver": {
+				"Name": "PPolaina",
+				"Team": "",
+				"Guid": "76561198073627782"
+			},
+			"ImpactSpeed": 97.2602,
+			"WorldPosition": {
+				"X": 628.85876,
+				"Y": 1.5184721,
+				"Z": -1144.7202
+			},
+			"RelPosition": {
+				"X": -0.3828816,
+				"Y": 0.18664137,
+				"Z": -2.2351081
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 6,
+			"Driver": {
+				"Name": "Trackboss",
+				"Team": "",
+				"Guid": "76561198147278792"
+			},
+			"OtherCarId": 15,
+			"OtherDriver": {
+				"Name": "PPolaina",
+				"Team": "",
+				"Guid": "76561198073627782"
+			},
+			"ImpactSpeed": 32.284348,
+			"WorldPosition": {
+				"X": 652.93665,
+				"Y": 0.91705745,
+				"Z": -1159.3739
+			},
+			"RelPosition": {
+				"X": 0.91045487,
+				"Y": -0.20604284,
+				"Z": 2.7767818
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 7,
+			"Driver": {
+				"Name": "End 222",
+				"Team": "",
+				"Guid": "76561198054038946"
+			},
+			"OtherCarId": 0,
+			"OtherDriver": {
+				"Name": "Kimi Raikkonen",
+				"Team": "",
+				"Guid": "76561198071650295"
+			},
+			"ImpactSpeed": 45.441124,
+			"WorldPosition": {
+				"X": 599.82465,
+				"Y": 1.0111365,
+				"Z": -1145.6337
+			},
+			"RelPosition": {
+				"X": -0.91051626,
+				"Y": -0.1782762,
+				"Z": 2.764917
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 15,
+			"Driver": {
+				"Name": "PPolaina",
+				"Team": "",
+				"Guid": "76561198073627782"
+			},
+			"OtherCarId": 6,
+			"OtherDriver": {
+				"Name": "Trackboss",
+				"Team": "",
+				"Guid": "76561198147278792"
+			},
+			"ImpactSpeed": 44.307484,
+			"WorldPosition": {
+				"X": 652.3596,
+				"Y": 0.9229398,
+				"Z": -1158.9713
+			},
+			"RelPosition": {
+				"X": 0.91048366,
+				"Y": -0.20771553,
+				"Z": 2.4330924
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 15,
+			"Driver": {
+				"Name": "PPolaina",
+				"Team": "",
+				"Guid": "76561198073627782"
+			},
+			"OtherCarId": 3,
+			"OtherDriver": {
+				"Name": "Peter Mac",
+				"Team": "",
+				"Guid": "76561198016578481"
+			},
+			"ImpactSpeed": 39.737812,
+			"WorldPosition": {
+				"X": 662.9166,
+				"Y": 1.148275,
+				"Z": -1155.6744
+			},
+			"RelPosition": {
+				"X": -0.6599879,
+				"Y": -0.05124668,
+				"Z": 0.25311866
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 3,
+			"Driver": {
+				"Name": "Peter Mac",
+				"Team": "",
+				"Guid": "76561198016578481"
+			},
+			"OtherCarId": 15,
+			"OtherDriver": {
+				"Name": "PPolaina",
+				"Team": "",
+				"Guid": "76561198073627782"
+			},
+			"ImpactSpeed": 48.71119,
+			"WorldPosition": {
+				"X": 662.8295,
+				"Y": 1.038764,
+				"Z": -1155.348
+			},
+			"RelPosition": {
+				"X": 0.9103654,
+				"Y": -0.14526643,
+				"Z": 2.7301445
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 14,
+			"Driver": {
+				"Name": "Dansav1746",
+				"Team": "",
+				"Guid": "76561198117348944"
+			},
+			"OtherCarId": 2,
+			"OtherDriver": {
+				"Name": "blackbird0011",
+				"Team": "",
+				"Guid": "76561198082218037"
+			},
+			"ImpactSpeed": 28.07573,
+			"WorldPosition": {
+				"X": 1027.065,
+				"Y": -1.612802,
+				"Z": -1213.4474
+			},
+			"RelPosition": {
+				"X": 0.9105951,
+				"Y": -0.20765942,
+				"Z": 2.4040866
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 2,
+			"Driver": {
+				"Name": "blackbird0011",
+				"Team": "",
+				"Guid": "76561198082218037"
+			},
+			"OtherCarId": 14,
+			"OtherDriver": {
+				"Name": "Dansav1746",
+				"Team": "",
+				"Guid": "76561198117348944"
+			},
+			"ImpactSpeed": 28.715021,
+			"WorldPosition": {
+				"X": 1017.4499,
+				"Y": -1.6281456,
+				"Z": -1231.2916
+			},
+			"RelPosition": {
+				"X": -0.88996446,
+				"Y": -0.09641006,
+				"Z": 2.317833
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 14,
+			"Driver": {
+				"Name": "Dansav1746",
+				"Team": "",
+				"Guid": "76561198117348944"
+			},
+			"OtherCarId": 2,
+			"OtherDriver": {
+				"Name": "blackbird0011",
+				"Team": "",
+				"Guid": "76561198082218037"
+			},
+			"ImpactSpeed": 8.320309,
+			"WorldPosition": {
+				"X": 1045.2976,
+				"Y": -1.0315505,
+				"Z": -1177.259
+			},
+			"RelPosition": {
+				"X": 0.91054595,
+				"Y": -0.20838368,
+				"Z": 2.782402
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 13,
+			"Driver": {
+				"Name": "SuperTeam",
+				"Team": "",
+				"Guid": "76561197960967627"
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": ""
+			},
+			"ImpactSpeed": 33.540195,
+			"WorldPosition": {
+				"X": 922.40656,
+				"Y": -2.4054103,
+				"Z": -892.5248
+			},
+			"RelPosition": {
+				"X": -0.92124593,
+				"Y": 0.30815208,
+				"Z": -1.6871663
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 2,
+			"Driver": {
+				"Name": "blackbird0011",
+				"Team": "",
+				"Guid": "76561198082218037"
+			},
+			"OtherCarId": 15,
+			"OtherDriver": {
+				"Name": "PPolaina",
+				"Team": "",
+				"Guid": "76561198073627782"
+			},
+			"ImpactSpeed": 25.706528,
+			"WorldPosition": {
+				"X": 898.1489,
+				"Y": -2.766753,
+				"Z": -868.5959
+			},
+			"RelPosition": {
+				"X": -0.9104928,
+				"Y": -0.097269714,
+				"Z": 2.7628052
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 13,
+			"Driver": {
+				"Name": "SuperTeam",
+				"Team": "",
+				"Guid": "76561197960967627"
+			},
+			"OtherCarId": 14,
+			"OtherDriver": {
+				"Name": "Dansav1746",
+				"Team": "",
+				"Guid": "76561198117348944"
+			},
+			"ImpactSpeed": 37.422546,
+			"WorldPosition": {
+				"X": 690.69025,
+				"Y": -2.4998794,
+				"Z": -747.4872
+			},
+			"RelPosition": {
+				"X": -0.8908583,
+				"Y": -0.037023924,
+				"Z": 2.7425225
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 15,
+			"Driver": {
+				"Name": "PPolaina",
+				"Team": "",
+				"Guid": "76561198073627782"
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": ""
+			},
+			"ImpactSpeed": 21.958822,
+			"WorldPosition": {
+				"X": 947.424,
+				"Y": -2.853356,
+				"Z": -906.9806
+			},
+			"RelPosition": {
+				"X": -0.9373925,
+				"Y": -0.10687932,
+				"Z": -1.6870669
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 15,
+			"Driver": {
+				"Name": "PPolaina",
+				"Team": "",
+				"Guid": "76561198073627782"
+			},
+			"OtherCarId": 2,
+			"OtherDriver": {
+				"Name": "blackbird0011",
+				"Team": "",
+				"Guid": "76561198082218037"
+			},
+			"ImpactSpeed": 25.19479,
+			"WorldPosition": {
+				"X": 897.9161,
+				"Y": -2.814892,
+				"Z": -868.51135
+			},
+			"RelPosition": {
+				"X": 0.74279714,
+				"Y": -0.17416464,
+				"Z": -1.7701769
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 14,
+			"Driver": {
+				"Name": "Dansav1746",
+				"Team": "",
+				"Guid": "76561198117348944"
+			},
+			"OtherCarId": 13,
+			"OtherDriver": {
+				"Name": "SuperTeam",
+				"Team": "",
+				"Guid": "76561197960967627"
+			},
+			"ImpactSpeed": 107.44774,
+			"WorldPosition": {
+				"X": 648.83234,
+				"Y": -3.012548,
+				"Z": -709.1771
+			},
+			"RelPosition": {
+				"X": 0.86255574,
+				"Y": -0.16230282,
+				"Z": 2.7742815
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 14,
+			"Driver": {
+				"Name": "Dansav1746",
+				"Team": "",
+				"Guid": "76561198117348944"
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": ""
+			},
+			"ImpactSpeed": 172.9045,
+			"WorldPosition": {
+				"X": 656.49115,
+				"Y": -2.797003,
+				"Z": -714.3227
+			},
+			"RelPosition": {
+				"X": 0.76739556,
+				"Y": -0.029299647,
+				"Z": 2.7156026
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 13,
+			"Driver": {
+				"Name": "SuperTeam",
+				"Team": "",
+				"Guid": "76561197960967627"
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": ""
+			},
+			"ImpactSpeed": 44.805824,
+			"WorldPosition": {
+				"X": 580.6427,
+				"Y": -4.3836412,
+				"Z": -664.05756
+			},
+			"RelPosition": {
+				"X": 0.8881141,
+				"Y": -0.048766173,
+				"Z": 2.7369256
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 13,
+			"Driver": {
+				"Name": "SuperTeam",
+				"Team": "",
+				"Guid": "76561197960967627"
+			},
+			"OtherCarId": 14,
+			"OtherDriver": {
+				"Name": "Dansav1746",
+				"Team": "",
+				"Guid": "76561198117348944"
+			},
+			"ImpactSpeed": 45.601604,
+			"WorldPosition": {
+				"X": 646.43665,
+				"Y": -2.9446707,
+				"Z": -707.27783
+			},
+			"RelPosition": {
+				"X": -3.9100647e-05,
+				"Y": -0.107365996,
+				"Z": 2.7720175
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 14,
+			"Driver": {
+				"Name": "Dansav1746",
+				"Team": "",
+				"Guid": "76561198117348944"
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": ""
+			},
+			"ImpactSpeed": 84.78176,
+			"WorldPosition": {
+				"X": 574.82434,
+				"Y": -4.072146,
+				"Z": -643.4232
+			},
+			"RelPosition": {
+				"X": -0.3800037,
+				"Y": 0.020571738,
+				"Z": -2.2653491
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 14,
+			"Driver": {
+				"Name": "Dansav1746",
+				"Team": "",
+				"Guid": "76561198117348944"
+			},
+			"OtherCarId": 13,
+			"OtherDriver": {
+				"Name": "SuperTeam",
+				"Team": "",
+				"Guid": "76561197960967627"
+			},
+			"ImpactSpeed": 43.757713,
+			"WorldPosition": {
+				"X": 597.37823,
+				"Y": -3.580131,
+				"Z": -672.2727
+			},
+			"RelPosition": {
+				"X": -0.05057609,
+				"Y": 0.19354266,
+				"Z": -2.2516134
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 13,
+			"Driver": {
+				"Name": "SuperTeam",
+				"Team": "",
+				"Guid": "76561197960967627"
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": ""
+			},
+			"ImpactSpeed": 81.31985,
+			"WorldPosition": {
+				"X": 535.5674,
+				"Y": -6.0732727,
+				"Z": -624.4874
+			},
+			"RelPosition": {
+				"X": 0.8831186,
+				"Y": -0.20379812,
+				"Z": 2.2185354
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 13,
+			"Driver": {
+				"Name": "SuperTeam",
+				"Team": "",
+				"Guid": "76561197960967627"
+			},
+			"OtherCarId": 15,
+			"OtherDriver": {
+				"Name": "PPolaina",
+				"Team": "",
+				"Guid": "76561198073627782"
+			},
+			"ImpactSpeed": 226.01346,
+			"WorldPosition": {
+				"X": 542.28046,
+				"Y": -5.8269114,
+				"Z": -628.574
+			},
+			"RelPosition": {
+				"X": -0.46560323,
+				"Y": -0.124228515,
+				"Z": 2.7675169
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 15,
+			"Driver": {
+				"Name": "PPolaina",
+				"Team": "",
+				"Guid": "76561198073627782"
+			},
+			"OtherCarId": 13,
+			"OtherDriver": {
+				"Name": "SuperTeam",
+				"Team": "",
+				"Guid": "76561197960967627"
+			},
+			"ImpactSpeed": 226.80655,
+			"WorldPosition": {
+				"X": 541.9173,
+				"Y": -5.705137,
+				"Z": -628.86835
+			},
+			"RelPosition": {
+				"X": -0.81967765,
+				"Y": -0.01236731,
+				"Z": 2.7035923
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 15,
+			"Driver": {
+				"Name": "PPolaina",
+				"Team": "",
+				"Guid": "76561198073627782"
+			},
+			"OtherCarId": 2,
+			"OtherDriver": {
+				"Name": "blackbird0011",
+				"Team": "",
+				"Guid": "76561198082218037"
+			},
+			"ImpactSpeed": 224.59512,
+			"WorldPosition": {
+				"X": 544.802,
+				"Y": -5.8806725,
+				"Z": -625.2828
+			},
+			"RelPosition": {
+				"X": -0.91047686,
+				"Y": -0.20838779,
+				"Z": 2.7824688
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 15,
+			"Driver": {
+				"Name": "PPolaina",
+				"Team": "",
+				"Guid": "76561198073627782"
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": ""
+			},
+			"ImpactSpeed": 131.22974,
+			"WorldPosition": {
+				"X": 543.54926,
+				"Y": -5.7882805,
+				"Z": -615.7202
+			},
+			"RelPosition": {
+				"X": 0.9104515,
+				"Y": -0.2083845,
+				"Z": 2.7824762
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 2,
+			"Driver": {
+				"Name": "blackbird0011",
+				"Team": "",
+				"Guid": "76561198082218037"
+			},
+			"OtherCarId": 13,
+			"OtherDriver": {
+				"Name": "SuperTeam",
+				"Team": "",
+				"Guid": "76561197960967627"
+			},
+			"ImpactSpeed": 177.29497,
+			"WorldPosition": {
+				"X": 397.26022,
+				"Y": -6.9698544,
+				"Z": -495.71246
+			},
+			"RelPosition": {
+				"X": -0.9104891,
+				"Y": -0.07899524,
+				"Z": 2.7528446
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 13,
+			"Driver": {
+				"Name": "SuperTeam",
+				"Team": "",
+				"Guid": "76561197960967627"
+			},
+			"OtherCarId": 2,
+			"OtherDriver": {
+				"Name": "blackbird0011",
+				"Team": "",
+				"Guid": "76561198082218037"
+			},
+			"ImpactSpeed": 67.2022,
+			"WorldPosition": {
+				"X": 397.66916,
+				"Y": -6.955576,
+				"Z": -496.11115
+			},
+			"RelPosition": {
+				"X": -0.9412298,
+				"Y": -0.09769985,
+				"Z": -1.2736036
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 15,
+			"Driver": {
+				"Name": "PPolaina",
+				"Team": "",
+				"Guid": "76561198073627782"
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": ""
+			},
+			"ImpactSpeed": 0.6485236,
+			"WorldPosition": {
+				"X": 526.19525,
+				"Y": -6.3366637,
+				"Z": -616.2006
+			},
+			"RelPosition": {
+				"X": -0.91052485,
+				"Y": -0.2083897,
+				"Z": 2.78241
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 15,
+			"Driver": {
+				"Name": "PPolaina",
+				"Team": "",
+				"Guid": "76561198073627782"
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": ""
+			},
+			"ImpactSpeed": 7.7557845,
+			"WorldPosition": {
+				"X": 521.8099,
+				"Y": -6.4445252,
+				"Z": -612.32227
+			},
+			"RelPosition": {
+				"X": -0.90678704,
+				"Y": -0.20849238,
+				"Z": 2.781867
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 15,
+			"Driver": {
+				"Name": "PPolaina",
+				"Team": "",
+				"Guid": "76561198073627782"
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": ""
+			},
+			"ImpactSpeed": 18.987148,
+			"WorldPosition": {
+				"X": 514.70764,
+				"Y": -6.58997,
+				"Z": -611.3344
+			},
+			"RelPosition": {
+				"X": -0.91050303,
+				"Y": -0.20838793,
+				"Z": 2.7824538
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 15,
+			"Driver": {
+				"Name": "PPolaina",
+				"Team": "",
+				"Guid": "76561198073627782"
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": ""
+			},
+			"ImpactSpeed": 17.449793,
+			"WorldPosition": {
+				"X": 521.4553,
+				"Y": -6.2992196,
+				"Z": -612.30426
+			},
+			"RelPosition": {
+				"X": -0.8793543,
+				"Y": -0.12809846,
+				"Z": -1.716116
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 15,
+			"Driver": {
+				"Name": "PPolaina",
+				"Team": "",
+				"Guid": "76561198073627782"
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": ""
+			},
+			"ImpactSpeed": 0.026053978,
+			"WorldPosition": {
+				"X": 509.09122,
+				"Y": -6.78975,
+				"Z": -605.2655
+			},
+			"RelPosition": {
+				"X": -0.91050225,
+				"Y": -0.20838828,
+				"Z": 2.7824306
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 3,
+			"Driver": {
+				"Name": "Peter Mac",
+				"Team": "",
+				"Guid": "76561198016578481"
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": ""
+			},
+			"ImpactSpeed": 40.542236,
+			"WorldPosition": {
+				"X": 130.45773,
+				"Y": -6.0183544,
+				"Z": -84.85725
+			},
+			"RelPosition": {
+				"X": 0.9104848,
+				"Y": -0.20838769,
+				"Z": 2.782452
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 3,
+			"Driver": {
+				"Name": "Peter Mac",
+				"Team": "",
+				"Guid": "76561198016578481"
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": ""
+			},
+			"ImpactSpeed": 3.0439308,
+			"WorldPosition": {
+				"X": 129.94032,
+				"Y": -6.0341916,
+				"Z": -60.22127
+			},
+			"RelPosition": {
+				"X": -0.38289666,
+				"Y": 0.04125277,
+				"Z": -2.2911348
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 16,
+			"Driver": {
+				"Name": "Thomas Boissel",
+				"Team": "",
+				"Guid": "76561198066283907"
+			},
+			"OtherCarId": 15,
+			"OtherDriver": {
+				"Name": "PPolaina",
+				"Team": "",
+				"Guid": "76561198073627782"
+			},
+			"ImpactSpeed": 44.803112,
+			"WorldPosition": {
+				"X": 1042.7438,
+				"Y": -2.2010612,
+				"Z": -987.4798
+			},
+			"RelPosition": {
+				"X": 0.4020826,
+				"Y": -0.062219698,
+				"Z": -2.1720502
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 15,
+			"Driver": {
+				"Name": "PPolaina",
+				"Team": "",
+				"Guid": "76561198073627782"
+			},
+			"OtherCarId": 16,
+			"OtherDriver": {
+				"Name": "Thomas Boissel",
+				"Team": "",
+				"Guid": "76561198066283907"
+			},
+			"ImpactSpeed": 26.79787,
+			"WorldPosition": {
+				"X": 1042.8186,
+				"Y": -2.3360581,
+				"Z": -985.95
+			},
+			"RelPosition": {
+				"X": -0.81102055,
+				"Y": -0.061790623,
+				"Z": 2.7564764
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 15,
+			"Driver": {
+				"Name": "PPolaina",
+				"Team": "",
+				"Guid": "76561198073627782"
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": ""
+			},
+			"ImpactSpeed": 51.423176,
+			"WorldPosition": {
+				"X": 607.49866,
+				"Y": -3.3525453,
+				"Z": -689.698
+			},
+			"RelPosition": {
+				"X": -0.9402298,
+				"Y": -0.10684061,
+				"Z": -1.687203
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 16,
+			"Driver": {
+				"Name": "Thomas Boissel",
+				"Team": "",
+				"Guid": "76561198066283907"
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": ""
+			},
+			"ImpactSpeed": 76.394,
+			"WorldPosition": {
+				"X": 91.0451,
+				"Y": -5.9982224,
+				"Z": -35.207394
+			},
+			"RelPosition": {
+				"X": -0.9104829,
+				"Y": -0.043808438,
+				"Z": 2.7532923
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 16,
+			"Driver": {
+				"Name": "Thomas Boissel",
+				"Team": "",
+				"Guid": "76561198066283907"
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": ""
+			},
+			"ImpactSpeed": 9.782769,
+			"WorldPosition": {
+				"X": 91.764145,
+				"Y": -6.267207,
+				"Z": -14.256799
+			},
+			"RelPosition": {
+				"X": 0.9104793,
+				"Y": -0.20838746,
+				"Z": 2.7824469
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 12,
+			"Driver": {
+				"Name": "Tabak",
+				"Team": "",
+				"Guid": "76561197995596796"
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": ""
+			},
+			"ImpactSpeed": 135.03604,
+			"WorldPosition": {
+				"X": 1024.9489,
+				"Y": -2.2078784,
+				"Z": -1117.1132
+			},
+			"RelPosition": {
+				"X": -0.7388482,
+				"Y": -0.2101941,
+				"Z": 2.7722645
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 16,
+			"Driver": {
+				"Name": "Thomas Boissel",
+				"Team": "",
+				"Guid": "76561198066283907"
+			},
+			"OtherCarId": 15,
+			"OtherDriver": {
+				"Name": "PPolaina",
+				"Team": "",
+				"Guid": "76561198073627782"
+			},
+			"ImpactSpeed": 59.371723,
+			"WorldPosition": {
+				"X": 631.4376,
+				"Y": 0.99171555,
+				"Z": -1162.6885
+			},
+			"RelPosition": {
+				"X": 0.4221816,
+				"Y": -0.058671355,
+				"Z": 2.712165
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 8,
+			"Driver": {
+				"Name": "Sam Jones",
+				"Team": "",
+				"Guid": "76561198168087892"
+			},
+			"OtherCarId": 15,
+			"OtherDriver": {
+				"Name": "PPolaina",
+				"Team": "",
+				"Guid": "76561198073627782"
+			},
+			"ImpactSpeed": 34.075714,
+			"WorldPosition": {
+				"X": 619.03894,
+				"Y": 0.95576686,
+				"Z": -1150.0516
+			},
+			"RelPosition": {
+				"X": 0.8978051,
+				"Y": -0.20763513,
+				"Z": 2.3933337
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 15,
+			"Driver": {
+				"Name": "PPolaina",
+				"Team": "",
+				"Guid": "76561198073627782"
+			},
+			"OtherCarId": 8,
+			"OtherDriver": {
+				"Name": "Sam Jones",
+				"Team": "",
+				"Guid": "76561198168087892"
+			},
+			"ImpactSpeed": 9.330739,
+			"WorldPosition": {
+				"X": 619.7468,
+				"Y": 1.4695716,
+				"Z": -1150.4796
+			},
+			"RelPosition": {
+				"X": -0.9544358,
+				"Y": 0.32755303,
+				"Z": 1.5776211
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 15,
+			"Driver": {
+				"Name": "PPolaina",
+				"Team": "",
+				"Guid": "76561198073627782"
+			},
+			"OtherCarId": 16,
+			"OtherDriver": {
+				"Name": "Thomas Boissel",
+				"Team": "",
+				"Guid": "76561198066283907"
+			},
+			"ImpactSpeed": 51.71118,
+			"WorldPosition": {
+				"X": 631.72955,
+				"Y": 0.9847963,
+				"Z": -1162.5896
+			},
+			"RelPosition": {
+				"X": 0.94059044,
+				"Y": -0.106838286,
+				"Z": -1.687263
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 15,
+			"Driver": {
+				"Name": "PPolaina",
+				"Team": "",
+				"Guid": "76561198073627782"
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": ""
+			},
+			"ImpactSpeed": 20.47554,
+			"WorldPosition": {
+				"X": 130.30405,
+				"Y": -6.0207148,
+				"Z": -84.18619
+			},
+			"RelPosition": {
+				"X": 0.9104784,
+				"Y": -0.20838784,
+				"Z": 2.782451
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 15,
+			"Driver": {
+				"Name": "PPolaina",
+				"Team": "",
+				"Guid": "76561198073627782"
+			},
+			"OtherCarId": 16,
+			"OtherDriver": {
+				"Name": "Thomas Boissel",
+				"Team": "",
+				"Guid": "76561198066283907"
+			},
+			"ImpactSpeed": 20.92215,
+			"WorldPosition": {
+				"X": -119.999565,
+				"Y": -3.642851,
+				"Z": -500.41794
+			},
+			"RelPosition": {
+				"X": -0.9104801,
+				"Y": -0.20762089,
+				"Z": 2.3836777
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 16,
+			"Driver": {
+				"Name": "Thomas Boissel",
+				"Team": "",
+				"Guid": "76561198066283907"
+			},
+			"OtherCarId": 15,
+			"OtherDriver": {
+				"Name": "PPolaina",
+				"Team": "",
+				"Guid": "76561198073627782"
+			},
+			"ImpactSpeed": 5.022295,
+			"WorldPosition": {
+				"X": -119.58732,
+				"Y": -3.6006951,
+				"Z": -501.88672
+			},
+			"RelPosition": {
+				"X": 0.90759957,
+				"Y": -0.1380976,
+				"Z": 2.7699978
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 16,
+			"Driver": {
+				"Name": "Thomas Boissel",
+				"Team": "",
+				"Guid": "76561198066283907"
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": ""
+			},
+			"ImpactSpeed": 20.60171,
+			"WorldPosition": {
+				"X": -130.11134,
+				"Y": -3.5365534,
+				"Z": -513.67194
+			},
+			"RelPosition": {
+				"X": 0.9104593,
+				"Y": -0.20838803,
+				"Z": 2.7824616
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 16,
+			"Driver": {
+				"Name": "Thomas Boissel",
+				"Team": "",
+				"Guid": "76561198066283907"
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": ""
+			},
+			"ImpactSpeed": 8.354831,
+			"WorldPosition": {
+				"X": -129.57944,
+				"Y": -3.521516,
+				"Z": -520.84595
+			},
+			"RelPosition": {
+				"X": 0.910503,
+				"Y": -0.20838788,
+				"Z": 2.7824106
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 14,
+			"Driver": {
+				"Name": "Dansav1746",
+				"Team": "",
+				"Guid": "76561198117348944"
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": ""
+			},
+			"ImpactSpeed": 74.77523,
+			"WorldPosition": {
+				"X": 99.642136,
+				"Y": -5.2437596,
+				"Z": -84.90344
+			},
+			"RelPosition": {
+				"X": -0.94059956,
+				"Y": -0.10683807,
+				"Z": -1.6872352
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 16,
+			"Driver": {
+				"Name": "Thomas Boissel",
+				"Team": "",
+				"Guid": "76561198066283907"
+			},
+			"OtherCarId": 15,
+			"OtherDriver": {
+				"Name": "PPolaina",
+				"Team": "",
+				"Guid": "76561198073627782"
+			},
+			"ImpactSpeed": 53.53854,
+			"WorldPosition": {
+				"X": 106.09516,
+				"Y": -5.8196325,
+				"Z": -28.605995
+			},
+			"RelPosition": {
+				"X": 0.9146545,
+				"Y": 0.13850428,
+				"Z": -1.6871935
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 16,
+			"Driver": {
+				"Name": "Thomas Boissel",
+				"Team": "",
+				"Guid": "76561198066283907"
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": ""
+			},
+			"ImpactSpeed": 81.089005,
+			"WorldPosition": {
+				"X": 92.16805,
+				"Y": -5.8341227,
+				"Z": 1.1210598
+			},
+			"RelPosition": {
+				"X": -0.934804,
+				"Y": 0.30835128,
+				"Z": -1.6872368
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 15,
+			"Driver": {
+				"Name": "PPolaina",
+				"Team": "",
+				"Guid": "76561198073627782"
+			},
+			"OtherCarId": 16,
+			"OtherDriver": {
+				"Name": "Thomas Boissel",
+				"Team": "",
+				"Guid": "76561198066283907"
+			},
+			"ImpactSpeed": 45.925133,
+			"WorldPosition": {
+				"X": 105.343666,
+				"Y": -6.0997434,
+				"Z": -22.040768
+			},
+			"RelPosition": {
+				"X": -0.85945976,
+				"Y": -0.099744886,
+				"Z": 1.4408239
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 15,
+			"Driver": {
+				"Name": "PPolaina",
+				"Team": "",
+				"Guid": "76561198073627782"
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": ""
+			},
+			"ImpactSpeed": 43.023907,
+			"WorldPosition": {
+				"X": 91.49478,
+				"Y": -6.237369,
+				"Z": 35.806553
+			},
+			"RelPosition": {
+				"X": -0.3828956,
+				"Y": 0.041252792,
+				"Z": -2.2911317
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 3,
+			"Driver": {
+				"Name": "paperofolle",
+				"Team": "",
+				"Guid": "76561198019959369"
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": ""
+			},
+			"ImpactSpeed": 16.553501,
+			"WorldPosition": {
+				"X": 960.1007,
+				"Y": -2.419892,
+				"Z": -914.1987
+			},
+			"RelPosition": {
+				"X": -0.9740016,
+				"Y": 0.34217182,
+				"Z": 1.4966301
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 2,
+			"Driver": {
+				"Name": "blackbird0011",
+				"Team": "",
+				"Guid": "76561198082218037"
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": ""
+			},
+			"ImpactSpeed": 22.869606,
+			"WorldPosition": {
+				"X": -134.33073,
+				"Y": -11.093956,
+				"Z": 847.66376
+			},
+			"RelPosition": {
+				"X": -0.9233086,
+				"Y": 0.3081818,
+				"Z": -1.6871955
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 12,
+			"Driver": {
+				"Name": "Tabak",
+				"Team": "",
+				"Guid": "76561197995596796"
+			},
+			"OtherCarId": 10,
+			"OtherDriver": {
+				"Name": "Manolo Polonioli",
+				"Team": "",
+				"Guid": "76561198043611338"
+			},
+			"ImpactSpeed": 6.837493,
+			"WorldPosition": {
+				"X": -205.82233,
+				"Y": -10.139976,
+				"Z": 710.43964
+			},
+			"RelPosition": {
+				"X": -0.91016614,
+				"Y": -0.072087325,
+				"Z": 2.4906964
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 10,
+			"Driver": {
+				"Name": "Manolo Polonioli",
+				"Team": "",
+				"Guid": "76561198043611338"
+			},
+			"OtherCarId": 12,
+			"OtherDriver": {
+				"Name": "Tabak",
+				"Team": "",
+				"Guid": "76561197995596796"
+			},
+			"ImpactSpeed": 4.7708135,
+			"WorldPosition": {
+				"X": -205.12978,
+				"Y": -10.028346,
+				"Z": 714.79535
+			},
+			"RelPosition": {
+				"X": 0.9726705,
+				"Y": 0.07509669,
+				"Z": 1.4712054
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 12,
+			"Driver": {
+				"Name": "Tabak",
+				"Team": "",
+				"Guid": "76561197995596796"
+			},
+			"OtherCarId": 10,
+			"OtherDriver": {
+				"Name": "Manolo Polonioli",
+				"Team": "",
+				"Guid": "76561198043611338"
+			},
+			"ImpactSpeed": 15.4888525,
+			"WorldPosition": {
+				"X": -90.184105,
+				"Y": -2.8021357,
+				"Z": -598.6711
+			},
+			"RelPosition": {
+				"X": -0.6658237,
+				"Y": -0.21006337,
+				"Z": 0.61132836
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 10,
+			"Driver": {
+				"Name": "Manolo Polonioli",
+				"Team": "",
+				"Guid": "76561198043611338"
+			},
+			"OtherCarId": 12,
+			"OtherDriver": {
+				"Name": "Tabak",
+				"Team": "",
+				"Guid": "76561197995596796"
+			},
+			"ImpactSpeed": 15.916662,
+			"WorldPosition": {
+				"X": -90.12634,
+				"Y": -2.8024836,
+				"Z": -598.5236
+			},
+			"RelPosition": {
+				"X": 0.9074816,
+				"Y": -0.2081225,
+				"Z": 2.6444337
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 3,
+			"Driver": {
+				"Name": "paperofolle",
+				"Team": "",
+				"Guid": "76561198019959369"
+			},
+			"OtherCarId": 14,
+			"OtherDriver": {
+				"Name": "Dansav1746",
+				"Team": "",
+				"Guid": "76561198117348944"
+			},
+			"ImpactSpeed": 16.01598,
+			"WorldPosition": {
+				"X": 124.58057,
+				"Y": -5.643956,
+				"Z": -122.3408
+			},
+			"RelPosition": {
+				"X": 0.7215704,
+				"Y": -0.18149583,
+				"Z": -1.7799985
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 14,
+			"Driver": {
+				"Name": "Dansav1746",
+				"Team": "",
+				"Guid": "76561198117348944"
+			},
+			"OtherCarId": 3,
+			"OtherDriver": {
+				"Name": "paperofolle",
+				"Team": "",
+				"Guid": "76561198019959369"
+			},
+			"ImpactSpeed": 12.855024,
+			"WorldPosition": {
+				"X": 124.04233,
+				"Y": -5.614949,
+				"Z": -120.417625
+			},
+			"RelPosition": {
+				"X": -0.91046566,
+				"Y": -0.09956563,
+				"Z": 2.757505
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 3,
+			"Driver": {
+				"Name": "paperofolle",
+				"Team": "",
+				"Guid": "76561198019959369"
+			},
+			"OtherCarId": 14,
+			"OtherDriver": {
+				"Name": "Dansav1746",
+				"Team": "",
+				"Guid": "76561198117348944"
+			},
+			"ImpactSpeed": 27.224907,
+			"WorldPosition": {
+				"X": 68.51916,
+				"Y": -8.5750265,
+				"Z": 372.88306
+			},
+			"RelPosition": {
+				"X": -0.90865606,
+				"Y": -0.19590469,
+				"Z": 2.1507132
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 3,
+			"Driver": {
+				"Name": "paperofolle",
+				"Team": "",
+				"Guid": "76561198019959369"
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": ""
+			},
+			"ImpactSpeed": 32.88428,
+			"WorldPosition": {
+				"X": 72.50158,
+				"Y": -8.859868,
+				"Z": 447.48053
+			},
+			"RelPosition": {
+				"X": 0.9406016,
+				"Y": -0.10683826,
+				"Z": -1.6872182
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 14,
+			"Driver": {
+				"Name": "Dansav1746",
+				"Team": "",
+				"Guid": "76561198117348944"
+			},
+			"OtherCarId": 3,
+			"OtherDriver": {
+				"Name": "paperofolle",
+				"Team": "",
+				"Guid": "76561198019959369"
+			},
+			"ImpactSpeed": 24.006178,
+			"WorldPosition": {
+				"X": 68.59087,
+				"Y": -8.542488,
+				"Z": 372.2112
+			},
+			"RelPosition": {
+				"X": 0.67074966,
+				"Y": -0.16343148,
+				"Z": 0.6486026
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 14,
+			"Driver": {
+				"Name": "Dansav1746",
+				"Team": "",
+				"Guid": "76561198117348944"
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": ""
+			},
+			"ImpactSpeed": 79.77669,
+			"WorldPosition": {
+				"X": 58.18239,
+				"Y": -8.887287,
+				"Z": 408.0041
+			},
+			"RelPosition": {
+				"X": -0.9104787,
+				"Y": -0.20838705,
+				"Z": 2.7824667
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 14,
+			"Driver": {
+				"Name": "Dansav1746",
+				"Team": "",
+				"Guid": "76561198117348944"
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": ""
+			},
+			"ImpactSpeed": 4.192606,
+			"WorldPosition": {
+				"X": 68.36105,
+				"Y": -8.674818,
+				"Z": 487.2877
+			},
+			"RelPosition": {
+				"X": 0.97447765,
+				"Y": 0.3421771,
+				"Z": 1.4966941
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 10,
+			"Driver": {
+				"Name": "Manolo Polonioli",
+				"Team": "",
+				"Guid": "76561198043611338"
+			},
+			"OtherCarId": 12,
+			"OtherDriver": {
+				"Name": "Tabak",
+				"Team": "",
+				"Guid": "76561197995596796"
+			},
+			"ImpactSpeed": 10.86523,
+			"WorldPosition": {
+				"X": 1035.6885,
+				"Y": -1.9082391,
+				"Z": -1093.9604
+			},
+			"RelPosition": {
+				"X": 0.57382804,
+				"Y": -0.0008819457,
+				"Z": 2.7484539
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 12,
+			"Driver": {
+				"Name": "Tabak",
+				"Team": "",
+				"Guid": "76561197995596796"
+			},
+			"OtherCarId": 10,
+			"OtherDriver": {
+				"Name": "Manolo Polonioli",
+				"Team": "",
+				"Guid": "76561198043611338"
+			},
+			"ImpactSpeed": 10.992465,
+			"WorldPosition": {
+				"X": 1035.7073,
+				"Y": -1.910153,
+				"Z": -1095.141
+			},
+			"RelPosition": {
+				"X": -0.39423716,
+				"Y": -0.02045746,
+				"Z": -2.22019
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 10,
+			"Driver": {
+				"Name": "Manolo Polonioli",
+				"Team": "",
+				"Guid": "76561198043611338"
+			},
+			"OtherCarId": 12,
+			"OtherDriver": {
+				"Name": "Tabak",
+				"Team": "",
+				"Guid": "76561197995596796"
+			},
+			"ImpactSpeed": 36.35848,
+			"WorldPosition": {
+				"X": 935.0704,
+				"Y": -2.8471382,
+				"Z": -889.2713
+			},
+			"RelPosition": {
+				"X": 0.91045487,
+				"Y": -0.20838724,
+				"Z": 2.782452
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 10,
+			"Driver": {
+				"Name": "Manolo Polonioli",
+				"Team": "",
+				"Guid": "76561198043611338"
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": ""
+			},
+			"ImpactSpeed": 65.302216,
+			"WorldPosition": {
+				"X": 913.5866,
+				"Y": -2.6717029,
+				"Z": -887.3908
+			},
+			"RelPosition": {
+				"X": -0.5138089,
+				"Y": 0.006886257,
+				"Z": 2.748804
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 12,
+			"Driver": {
+				"Name": "Tabak",
+				"Team": "",
+				"Guid": "76561197995596796"
+			},
+			"OtherCarId": 10,
+			"OtherDriver": {
+				"Name": "Manolo Polonioli",
+				"Team": "",
+				"Guid": "76561198043611338"
+			},
+			"ImpactSpeed": 45.21882,
+			"WorldPosition": {
+				"X": 935.04535,
+				"Y": -2.8424625,
+				"Z": -889.34375
+			},
+			"RelPosition": {
+				"X": -0.63430333,
+				"Y": -0.2291894,
+				"Z": 0.22822802
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 12,
+			"Driver": {
+				"Name": "Tabak",
+				"Team": "",
+				"Guid": "76561197995596796"
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": ""
+			},
+			"ImpactSpeed": 52.214226,
+			"WorldPosition": {
+				"X": 885.0823,
+				"Y": -2.6238728,
+				"Z": -870.8633
+			},
+			"RelPosition": {
+				"X": 0.06825173,
+				"Y": 0.039066706,
+				"Z": -2.2820156
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 10,
+			"Driver": {
+				"Name": "Manolo Polonioli",
+				"Team": "",
+				"Guid": "76561198043611338"
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": ""
+			},
+			"ImpactSpeed": 21.978426,
+			"WorldPosition": {
+				"X": 756.2345,
+				"Y": -2.4528172,
+				"Z": -798.37054
+			},
+			"RelPosition": {
+				"X": -0.939029,
+				"Y": -0.10686022,
+				"Z": -1.6872096
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 16,
+			"Driver": {
+				"Name": "Thomas Boissel",
+				"Team": "",
+				"Guid": "76561198066283907"
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": ""
+			},
+			"ImpactSpeed": 69.679115,
+			"WorldPosition": {
+				"X": 91.362755,
+				"Y": -5.670224,
+				"Z": -26.183847
+			},
+			"RelPosition": {
+				"X": 0.93479496,
+				"Y": 0.30835074,
+				"Z": -1.6872374
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 3,
+			"Driver": {
+				"Name": "paperofolle",
+				"Team": "",
+				"Guid": "76561198019959369"
+			},
+			"OtherCarId": 14,
+			"OtherDriver": {
+				"Name": "Dansav1746",
+				"Team": "",
+				"Guid": "76561198117348944"
+			},
+			"ImpactSpeed": 171.80418,
+			"WorldPosition": {
+				"X": 13.083855,
+				"Y": -1.4572912,
+				"Z": -1032.958
+			},
+			"RelPosition": {
+				"X": -0.91046315,
+				"Y": -0.1481426,
+				"Z": 2.7717857
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 3,
+			"Driver": {
+				"Name": "paperofolle",
+				"Team": "",
+				"Guid": "76561198019959369"
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": ""
+			},
+			"ImpactSpeed": 16.37895,
+			"WorldPosition": {
+				"X": 23.398493,
+				"Y": 1.338046,
+				"Z": -1082.3818
+			},
+			"RelPosition": {
+				"X": -0.910555,
+				"Y": -0.2083956,
+				"Z": 2.7824929
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 14,
+			"Driver": {
+				"Name": "Dansav1746",
+				"Team": "",
+				"Guid": "76561198117348944"
+			},
+			"OtherCarId": 3,
+			"OtherDriver": {
+				"Name": "paperofolle",
+				"Team": "",
+				"Guid": "76561198019959369"
+			},
+			"ImpactSpeed": 172.98698,
+			"WorldPosition": {
+				"X": 13.212354,
+				"Y": -1.3205569,
+				"Z": -1033.5748
+			},
+			"RelPosition": {
+				"X": 0.94138664,
+				"Y": -0.09511683,
+				"Z": -1.1569815
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 14,
+			"Driver": {
+				"Name": "Dansav1746",
+				"Team": "",
+				"Guid": "76561198117348944"
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": ""
+			},
+			"ImpactSpeed": 47.193928,
+			"WorldPosition": {
+				"X": 123.72694,
+				"Y": -1.3279324,
+				"Z": -1086.3206
+			},
+			"RelPosition": {
+				"X": -0.91050684,
+				"Y": -0.20838648,
+				"Z": 2.7824621
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 3,
+			"Driver": {
+				"Name": "paperofolle",
+				"Team": "",
+				"Guid": "76561198019959369"
+			},
+			"OtherCarId": 6,
+			"OtherDriver": {
+				"Name": "Lucas Canalda Sorribas",
+				"Team": "",
+				"Guid": "76561198128959212"
+			},
+			"ImpactSpeed": 36.302475,
+			"WorldPosition": {
+				"X": -130.96968,
+				"Y": -4.1486406,
+				"Z": -376.1939
+			},
+			"RelPosition": {
+				"X": -0.28125685,
+				"Y": 0.03637059,
+				"Z": 2.7436638
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 6,
+			"Driver": {
+				"Name": "Lucas Canalda Sorribas",
+				"Team": "",
+				"Guid": "76561198128959212"
+			},
+			"OtherCarId": 3,
+			"OtherDriver": {
+				"Name": "paperofolle",
+				"Team": "",
+				"Guid": "76561198019959369"
+			},
+			"ImpactSpeed": 47.66125,
+			"WorldPosition": {
+				"X": -131.78435,
+				"Y": -4.186586,
+				"Z": -376.28888
+			},
+			"RelPosition": {
+				"X": 0.40375814,
+				"Y": -0.071629286,
+				"Z": -2.1612353
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 6,
+			"Driver": {
+				"Name": "Lucas Canalda Sorribas",
+				"Team": "",
+				"Guid": "76561198128959212"
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": ""
+			},
+			"ImpactSpeed": 26.279867,
+			"WorldPosition": {
+				"X": -135.33867,
+				"Y": -3.844318,
+				"Z": -447.86987
+			},
+			"RelPosition": {
+				"X": -0.9405949,
+				"Y": -0.10683842,
+				"Z": -1.6872597
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 6,
+			"Driver": {
+				"Name": "Lucas Canalda Sorribas",
+				"Team": "",
+				"Guid": "76561198128959212"
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": ""
+			},
+			"ImpactSpeed": 1.4610438,
+			"WorldPosition": {
+				"X": -130.41304,
+				"Y": -3.4620125,
+				"Z": -509.45
+			},
+			"RelPosition": {
+				"X": -0.9744701,
+				"Y": -0.07091248,
+				"Z": 1.4575552
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 6,
+			"Driver": {
+				"Name": "Lucas Canalda Sorribas",
+				"Team": "",
+				"Guid": "76561198128959212"
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": ""
+			},
+			"ImpactSpeed": 46.008213,
+			"WorldPosition": {
+				"X": -122.02133,
+				"Y": -2.6913958,
+				"Z": -609.01526
+			},
+			"RelPosition": {
+				"X": -0.9399933,
+				"Y": -0.10701973,
+				"Z": -1.6872786
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 6,
+			"Driver": {
+				"Name": "Lucas Canalda Sorribas",
+				"Team": "",
+				"Guid": "76561198128959212"
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": ""
+			},
+			"ImpactSpeed": 15.505336,
+			"WorldPosition": {
+				"X": -118.57492,
+				"Y": -1.6915567,
+				"Z": -692.179
+			},
+			"RelPosition": {
+				"X": -0.38287544,
+				"Y": 0.04125244,
+				"Z": -2.2911487
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 2,
+			"Driver": {
+				"Name": "blackbird0011",
+				"Team": "",
+				"Guid": "76561198082218037"
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": ""
+			},
+			"ImpactSpeed": 79.769844,
+			"WorldPosition": {
+				"X": 1026.8555,
+				"Y": -2.2523406,
+				"Z": -1103.7744
+			},
+			"RelPosition": {
+				"X": -0.6690501,
+				"Y": -0.2092126,
+				"Z": 2.7778864
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 4,
+			"Driver": {
+				"Name": "Timo Haapala",
+				"Team": "",
+				"Guid": "76561198058894972"
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": ""
+			},
+			"ImpactSpeed": 26.297382,
+			"WorldPosition": {
+				"X": 88.92167,
+				"Y": -6.8795137,
+				"Z": 102.83805
+			},
+			"RelPosition": {
+				"X": -0.9405983,
+				"Y": -0.10683829,
+				"Z": -1.6872382
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 15,
+			"Driver": {
+				"Name": "PPolaina",
+				"Team": "",
+				"Guid": "76561198073627782"
+			},
+			"OtherCarId": 6,
+			"OtherDriver": {
+				"Name": "Lucas Canalda Sorribas",
+				"Team": "",
+				"Guid": "76561198128959212"
+			},
+			"ImpactSpeed": 24.661562,
+			"WorldPosition": {
+				"X": -108.82573,
+				"Y": -3.2510478,
+				"Z": -524.72485
+			},
+			"RelPosition": {
+				"X": -0.3859347,
+				"Y": 0.024663977,
+				"Z": -2.2720273
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 6,
+			"Driver": {
+				"Name": "Lucas Canalda Sorribas",
+				"Team": "",
+				"Guid": "76561198128959212"
+			},
+			"OtherCarId": 15,
+			"OtherDriver": {
+				"Name": "PPolaina",
+				"Team": "",
+				"Guid": "76561198073627782"
+			},
+			"ImpactSpeed": 18.397707,
+			"WorldPosition": {
+				"X": -108.69106,
+				"Y": -3.2456837,
+				"Z": -524.52545
+			},
+			"RelPosition": {
+				"X": 0.21141326,
+				"Y": 0.04512063,
+				"Z": 2.741171
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 2,
+			"Driver": {
+				"Name": "blackbird0011",
+				"Team": "",
+				"Guid": "76561198082218037"
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": ""
+			},
+			"ImpactSpeed": 4.268996,
+			"WorldPosition": {
+				"X": 1031.5686,
+				"Y": -2.0789092,
+				"Z": -1047.1206
+			},
+			"RelPosition": {
+				"X": 0.38283992,
+				"Y": 0.04125402,
+				"Z": -2.291189
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 8,
+			"Driver": {
+				"Name": "Adriano",
+				"Team": "",
+				"Guid": "76561198014424034"
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": ""
+			},
+			"ImpactSpeed": 12.335499,
+			"WorldPosition": {
+				"X": -150.75359,
+				"Y": -6.197603,
+				"Z": 44.43552
+			},
+			"RelPosition": {
+				"X": -0.97251827,
+				"Y": 0.3422011,
+				"Z": 1.4964279
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 12,
+			"Driver": {
+				"Name": "-V!0C- TheDoctorMay",
+				"Team": "",
+				"Guid": "76561197981493293"
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": ""
+			},
+			"ImpactSpeed": 30.844837,
+			"WorldPosition": {
+				"X": 90.62941,
+				"Y": -6.114106,
+				"Z": -48.200623
+			},
+			"RelPosition": {
+				"X": -0.8503912,
+				"Y": -0.2096174,
+				"Z": 2.7755048
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 2,
+			"Driver": {
+				"Name": "blackbird0011",
+				"Team": "",
+				"Guid": "76561198082218037"
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": ""
+			},
+			"ImpactSpeed": 26.71506,
+			"WorldPosition": {
+				"X": 91.383995,
+				"Y": -6.495461,
+				"Z": 43.28668
+			},
+			"RelPosition": {
+				"X": -0.9104792,
+				"Y": -0.20838727,
+				"Z": 2.782449
+			}
+		}
+	]
+}
