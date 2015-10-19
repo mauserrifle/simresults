@@ -134,7 +134,7 @@ class SessionTest extends PHPUnit_Framework_TestCase {
             new Lap,
             new Lap,
         ));
-        $session = new Session;
+        $session = Session::createInstance();
         $session->setParticipants(array($participant));
 
         // No best lap
@@ -413,7 +413,7 @@ class SessionTest extends PHPUnit_Framework_TestCase {
     public function testIncidentsForReview()
     {
         // Create session
-        $session = new Session;
+        $session = Session::createInstance();
 
         // Create some incidents
         $incident1 = new Incident;
@@ -525,7 +525,7 @@ class SessionTest extends PHPUnit_Framework_TestCase {
     protected function getSessionWithData()
     {
         // Create new session
-        $session = new Session;
+        $session = Session::createInstance();
 
         // Participants testdata array
         $participants_data = array(

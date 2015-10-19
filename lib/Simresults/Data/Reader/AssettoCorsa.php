@@ -70,7 +70,7 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
         foreach ($sessions_data as $session_data)
         {
             // Init session
-            $session = new Session;
+            $session = Session::createInstance();
 
             // Get participants (do for each session to prevent re-used objects
             // between sessions)

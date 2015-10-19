@@ -66,7 +66,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
     public function getSessions()
     {
         // Create new session instance
-        $session = new Session;
+        $session = Session::createInstance();
 
         // Is race session
         if ($xml_session = $this->dom->getElementsByTagName('Race')->item(0))

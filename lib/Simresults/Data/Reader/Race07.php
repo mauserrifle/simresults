@@ -54,7 +54,7 @@ class Data_Reader_Race07 extends Data_Reader {
             else
             {
                 // Create new session instance
-                $session = new Session;
+                $session = Session::createInstance();
 
                 // Get date from human string when available
                 if (isset($data['header']['timestring']))

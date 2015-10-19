@@ -35,7 +35,7 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
         $data = json_decode($this->data, TRUE);
 
         // Init session
-        $session = new Session;
+        $session = Session::createInstance();
 
         // Practice session by default
         $type = Session::TYPE_PRACTICE;
