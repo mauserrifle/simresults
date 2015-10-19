@@ -183,7 +183,9 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
             $lap->setDriver($lap_participant->getDriver());
 
             // Set lap time in seconds
-            $lap->setTime(round($lap_data['LapTime'] / 1000, 4));
+            if ($lap_data['LapTime'] !== 99999) {
+                $lap->setTime(round($lap_data['LapTime'] / 1000, 4));
+            }
 
             // Set sector times in seconds
             foreach (Helper::arrayGet($lap_data, 'Sectors', array())
@@ -261,6 +263,7 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
         {
             // Mark no finish status when participant has not completed atleast
             // 50% of total laps
+            // TODO: Also do this for other AC readers?
             foreach ($participants as $participant)
             {
                 // Finished normally and matches 50% rule
