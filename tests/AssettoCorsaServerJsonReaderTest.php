@@ -159,6 +159,12 @@ class AssettoCorsaServerJsonReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertSame(Participant::FINISH_DNF,
             $participant->getFinishStatus());
         $this->assertSame(0, $participant->getTotalTime());
+
+
+        // Test participants to have a no finish status when they did not
+        // succeed in 50% laps
+        $this->assertSame(Participant::FINISH_NONE,
+            $participants[10]->getFinishStatus());
     }
 
     /**

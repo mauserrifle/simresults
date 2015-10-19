@@ -255,6 +255,28 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
         $session->setParticipants($participants);
 
 
+
+        // Is race result
+        if ($session->getType() === Session::TYPE_RACE)
+        {
+            // Mark no finish status when participant has not completed atleast
+            // 50% of total laps
+            foreach ($participants as $participant)
+            {
+                // Finished normally and matches 50% rule
+                if ($participant->getFinishStatus()
+                        === Participant::FINISH_NORMAL
+                    AND
+                    (! $participant->getNumberOfCompletedLaps() OR
+                     50 > ($participant->getNumberOfCompletedLaps() /
+                    ($session->getLastedLaps() / 100))))
+                {
+                    $participant->setFinishStatus(Participant::FINISH_NONE);
+                }
+            }
+        }
+
+
         // Fix elapsed seconds for all participant laps
         foreach ($participants as $participant)
         {
