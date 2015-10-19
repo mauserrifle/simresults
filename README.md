@@ -105,6 +105,10 @@ lap.
 
 `lib/Data/Reader/AssettoCorsaServer.php`
 
+### Assetto Corsa Server reader JSON
+
+`lib/Data/Reader/AssettoCorsaServerJson.php`
+
 ### RaceRoom Server reader
 
 `lib/Data/Reader/RaceRoomServer.php`
