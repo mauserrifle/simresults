@@ -45,7 +45,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             $vehicle_names = array();
 
             // Init session
-            $session = new Session;
+            $session = Session::createInstance();
 
             // Set session type
             $type = null;
@@ -155,7 +155,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 }
 
                 // Create participant and add driver
-                $participant = new Participant;
+                $participant = Participant::createInstance();
                 $participant->setDrivers(array($driver))
                             ->setTotalTime($total_time);
 

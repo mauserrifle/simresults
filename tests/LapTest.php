@@ -1,6 +1,7 @@
 <?php
 use Simresults\Lap;
 use Simresults\Participant;
+use Simresults\CachedParticipant;
 
 /**
  * Tests for the lap.
@@ -145,7 +146,8 @@ class LapTest extends PHPUnit_Framework_TestCase {
     public function testCalculatingPitTimes()
     {
         // Init participant
-        $participant = new Participant;
+        $participant = Participant::createInstance();
+        $invalidate_cache = ($participant instanceof CachedParticipant);
 
         // Init new laps
         $laps = array();
@@ -187,7 +189,7 @@ class LapTest extends PHPUnit_Framework_TestCase {
         //---- Validate special cases
 
         // Invalidate participant cache
-        $participant->invalidateAverageLapCache();
+        if ($invalidate_cache) $participant->invalidateCache();
 
         // Validate that when sector 3 is missing no calculation is done on that
         $lap2->setSectorTimes(array(41.9237, 42.9237, null));
@@ -206,13 +208,13 @@ class LapTest extends PHPUnit_Framework_TestCase {
         // second lap as pit lap
 
         // Invalidate participant cache
-        $participant->invalidateAverageLapCache();
+        if ($invalidate_cache) $participant->invalidateCache();
 
         // Set lap3 as pit lap
         $lap3->setPitLap(true);
 
         // Invalidate participant cache
-        $participant->invalidateAverageLapCache();
+        if ($invalidate_cache) $participant->invalidateCache();
 
         // Check time
         $this->assertSame(

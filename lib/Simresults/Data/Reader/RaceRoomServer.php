@@ -63,7 +63,7 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
         foreach ($data['Sessions'] as $session_data)
         {
             // Init session
-            $session = new Session;
+            $session = Session::createInstance();
 
             // Practice session by default
             $type = Session::TYPE_PRACTICE;
@@ -111,7 +111,7 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
                                             'unknown'));
 
                 // Create participant and add driver
-                $participant = new Participant;
+                $participant = Participant::createInstance();
                 $participant->setDrivers(array($driver))
                             ->setPosition(Helper::arrayGet($player_data, 'Position',
                                                      null))

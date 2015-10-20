@@ -54,7 +54,7 @@ class Data_Reader_Race07 extends Data_Reader {
             else
             {
                 // Create new session instance
-                $session = new Session;
+                $session = Session::createInstance();
 
                 // Get date from human string when available
                 if (isset($data['header']['timestring']))
@@ -245,7 +245,7 @@ class Data_Reader_Race07 extends Data_Reader {
             $driver->setName($driver_data['driver']);
 
             // Create participant and add driver
-            $participant = new Participant;
+            $participant = Participant::createInstance();
             $participant->setDrivers(array($driver))
                         ->setTeam(Helper::arrayGet($driver_data, 'team'));
                         // Finish position will be set later using an special
