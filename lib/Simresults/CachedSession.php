@@ -316,10 +316,10 @@ class CachedSession extends Session {
     }
 
 
-	/**
-	 * {@inheritdoc}
-	 */
-    public function __clone()
+    /**
+     * Invalidate the cache
+     */
+    public function invalidateCache()
     {
         $this->cache_laps_sorted_by_time = NULL;
         $this->cache_laps_by_lap_number_sorted_by_time = array();
@@ -333,6 +333,15 @@ class CachedSession extends Session {
         $this->cache_leading_participant_by_elapsed_time = array();
         $this->cache_lasted_laps = NULL;
         $this->cache_max_position = NULL;
+    }
+
+
+    /**
+     * Invalidate cache on cloning
+     */
+    public function __clone()
+    {
+        $this->invalidateCache();
     }
 
 }

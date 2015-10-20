@@ -430,7 +430,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                 ->setNumber( (int) $this->dom_value('CarNumber', $driver_xml));
 
             // Create participant
-            $participant = new Participant;
+            $participant = Participant::createInstance();
 
             // Set participant values
             $participant

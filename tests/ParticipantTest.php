@@ -37,7 +37,7 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
     public function testGettingVehicles()
     {
         // Init participant
-        $participant = new Participant;
+        $participant = Participant::createInstance();
 
         // Init two vehicles
         $vehicle1 = new Vehicle;
@@ -143,7 +143,7 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
 
 
         //-- Create participant with 2 uncompleted laps and test NULL best lap
-        $participant = new Participant;
+        $participant = Participant::createInstance();
         $participant->setLaps(array(
             new Lap,
             new Lap,
@@ -176,7 +176,7 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
     public function testTotalTimeGap()
     {
         // Create 2 participants with 2 simple (long) lap times
-        $participant = new Participant;
+        $participant = Participant::createInstance();
 
         $lap = new Lap;
         $lap->setTime(624.1161);
@@ -186,7 +186,7 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
         $lap->setTime(626.1161);
         $participant->addLap($lap);
 
-        $participant2 = new Participant;
+        $participant2 = Participant::createInstance();
 
         $lap = new Lap;
         $lap->setTime(625.3156);
@@ -197,7 +197,7 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
         $participant2->addLap($lap);
 
         // Create participant that has been lapped
-        $participant3 = new Participant;
+        $participant3 = Participant::createInstance();
         $lap = new Lap;
         $lap->setTime(1563.289);
         $participant3->addLap($lap);
@@ -259,7 +259,7 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
     public function testPositionDifference()
     {
         // Create new participant
-        $participant = new Participant;
+        $participant = Participant::createInstance();
 
         // Set position data
         $participant->setPosition(1);
@@ -296,7 +296,7 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
     public function testDriverByNumber()
     {
         // Create new participant
-        $participant = new Participant;
+        $participant = Participant::createInstance();
 
         // Add drivers
         $participant->setDrivers(array(
@@ -374,11 +374,11 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
         }
 
         // Validate empty participant
-        $participant = new Participant;
+        $participant = Participant::createInstance();
         $this->assertNull($participant->getAverageLap());
 
         // Validate participant with one partial lap
-        $participant = new Participant;
+        $participant = Participant::createInstance();
         $lap = new Lap;
         $this->assertNull($participant->addLap($lap
             ->setSectorTimes(array(14)))->getAverageLap());
@@ -412,11 +412,11 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
         }
 
         // Validate empty participant
-        $participant = new Participant;
+        $participant = Participant::createInstance();
         $this->assertNull($participant->getBestPossibleLap());
 
         // Validate participant with one partial lap
-        $participant = new Participant;
+        $participant = Participant::createInstance();
         $lap = new Lap;
         $this->assertNull($participant->addLap($lap
             ->setSectorTimes(array(14)))->getBestPossibleLap());
@@ -457,17 +457,17 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
         }
 
         // Validate empty participant
-        $participant = new Participant; // Prevent cache
+        $participant = Participant::createInstance(); // Prevent cache
         $this->assertNull($participant->getConsistency(false));
         $this->assertNull($participant->getConsistencyPercentage(false));
 
         // Validate one lap participant
-        $participant = new Participant; // Prevent cache
+        $participant = Participant::createInstance(); // Prevent cache
         $lap = new Lap; $participant->addLap($lap->setTime(128.211));
         $this->assertNull($participant->getConsistency(false));
 
         // Validate extra pit stop lap not causing devise by zero error
-        $participant = new Participant; // Prevent cache
+        $participant = Participant::createInstance(); // Prevent cache
         $lap = new Lap; $participant->addLap(
             $lap->setTime(125.211));
         $lap = new Lap; $participant->addLap(
@@ -484,7 +484,7 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
     protected function getParticipantWithLaps()
     {
         // Create new participant
-        $participant = new Participant;
+        $participant = Participant::createInstance();
 
         // Add some laps
         $lap = new Lap;

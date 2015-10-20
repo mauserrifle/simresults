@@ -129,7 +129,7 @@ class SessionTest extends PHPUnit_Framework_TestCase {
 
         //-- Create participant with 2 uncompleted laps and test NULL best lap
         //   from the session
-        $participant = new Participant;
+        $participant = Participant::createInstance();
         $participant->setLaps(array(
             new Lap,
             new Lap,
@@ -649,7 +649,7 @@ class SessionTest extends PHPUnit_Framework_TestCase {
         foreach ($participants_data as $participant_data)
         {
             // Create the new participant and populate
-            $participant = new Participant;
+            $participant = Participant::createInstance();
             $participant->setPosition($participant_data['position']);
 
             $vehicle = new Vehicle;

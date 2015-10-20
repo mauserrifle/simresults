@@ -17,65 +17,6 @@ class Participant {
     const FINISH_NONE   = 'none';     // no finish status
 
 
-    //------ Cache values
-
-    /**
-     * @var  array|null  The cache for laps sorted by time
-     */
-    protected $cache_laps_sorted_by_time;
-
-    /**
-     * @var  int|null  The cache for the number of completed laps
-     */
-    protected $cache_number_of_completed_laps;
-
-    /**
-     * @var int|null  The cache for number of led laps
-     */
-    protected $cache_number_of_laps_led;
-
-    /**
-     * @var  array  The cache for laps sorted by sector
-     */
-    protected $cache_laps_sorted_by_sector = array();
-
-    /**
-     * @var  array  The cache for best lap by sector
-     */
-    protected $cache_best_lap_by_sector = array();
-
-    /**
-     * @var  array  The cache for average lap, with or without pit sectors
-     */
-    protected $cache_average_lap = array();
-
-    /**
-     * @var  Lap|null  The cache for best possible lap
-     */
-    protected $cache_best_possible_lap;
-
-    /**
-     * @var  Lap|null  The cache for best lap
-     */
-    protected $cache_best_lap;
-
-    /**
-     * @var  array|null  The cache for vehicles
-     */
-    protected $cache_vehicles;
-
-    /**
-     * @var  array  The cache for consistency ignore first lap or not
-     */
-    protected $cache_consistency = array(
-        true   => null,
-        false  => null,
-    );
-
-
-
-    //------ Participant values
-
     /**
      * @var  array  The drivers
      */
@@ -142,6 +83,16 @@ class Participant {
      * @var  string  Comment on finish status. Mainly used when not finished.
      */
     protected $finish_status_comment;
+
+    /**
+     * Create a participant instance. Returns cached version.
+     *
+     * @return Participant
+     */
+    public static function createInstance()
+    {
+        return new CachedParticipant;
+    }
 
     /**
      * Set the drivers
@@ -264,12 +215,6 @@ class Participant {
      */
     public function getVehicles()
     {
-        // There is cache
-        if ($this->cache_vehicles !== null)
-        {
-            return $this->cache_vehicles;
-        }
-
         // Get vehicles from laps
         $vehicles = array();
         foreach ($this->laps as $lap)
@@ -286,7 +231,7 @@ class Participant {
             $vehicles[] = $this->vehicle;
         }
 
-        return $this->cache_vehicles = $vehicles;
+        return $vehicles;
     }
 
     /**
@@ -611,15 +556,8 @@ class Participant {
      */
     public function getLapsSortedByTime()
     {
-        // There is cache
-        if ($this->cache_laps_sorted_by_time !== null)
-        {
-            return $this->cache_laps_sorted_by_time;
-        }
-
-        // Return laps sorted by time and cache it
-        return $this->cache_laps_sorted_by_time =
-            Helper::sortLapsByTime($this->getLaps());
+        // Return laps sorted by time
+        return Helper::sortLapsByTime($this->getLaps());
     }
 
     /**
@@ -629,12 +567,6 @@ class Participant {
      */
     public function getBestLap()
     {
-        // There is cache
-        if ($this->cache_best_lap !== null)
-        {
-            return $this->cache_best_lap;
-        }
-
         // No laps
         if ( ! $this->laps)
         {
@@ -649,7 +581,7 @@ class Participant {
         {
             if ($lap->isCompleted())
             {
-                return $this->cache_best_lap = $lap;
+                return $lap;
             }
         }
 
@@ -673,17 +605,10 @@ class Participant {
      */
     public function getNumberOfCompletedLaps()
     {
-        // There is cache
-        if ($this->cache_number_of_completed_laps !== null)
-        {
-            return $this->cache_number_of_completed_laps;
-        }
-
-        // Return number of completed laps and cache it
-        return $this->cache_number_of_completed_laps =
-            count(array_filter($this->getLaps(), function($lap) {
-                return $lap->isCompleted();
-            }));
+        // Return number of completed laps
+        return count(array_filter($this->getLaps(), function($lap) {
+            return $lap->isCompleted();
+        }));
     }
 
     /**
@@ -693,15 +618,8 @@ class Participant {
      */
     public function getNumberOfLapsLed()
     {
-        // There is cache
-        if ($this->cache_number_of_laps_led !== null)
-        {
-            return $this->cache_number_of_laps_led;
-        }
-
-        // Return number of led laps and cache it
-        return $this->cache_number_of_laps_led =
-            count(array_filter($this->getLaps(), function($lap) {
+        // Return number of led laps
+        return count(array_filter($this->getLaps(), function($lap) {
                 return ($lap->getPosition() === 1);
             }));
     }
@@ -711,15 +629,8 @@ class Participant {
      */
     public function getLapsSortedBySector($sector)
     {
-        // There is cache
-        if (array_key_exists($sector, $this->cache_laps_sorted_by_sector))
-        {
-            return $this->cache_laps_sorted_by_sector[$sector];
-        }
-
-        // Return laps sorted by sector and cache it
-        return $this->cache_laps_sorted_by_sector[$sector] =
-            Helper::sortLapsBySector($this->getLaps(), $sector);
+        // Return laps sorted by sector
+        return Helper::sortLapsBySector($this->getLaps(), $sector);
     }
 
     /**
@@ -730,14 +641,8 @@ class Participant {
      */
     public function getBestLapBySector($sector)
     {
-        // There is cache
-        if (array_key_exists($sector, $this->cache_best_lap_by_sector))
-        {
-            return $this->cache_best_lap_by_sector[$sector];
-        }
-
         $laps = $this->getLapsSortedBySector($sector);
-        return $this->cache_best_lap_by_sector[$sector] = array_shift($laps);
+        return array_shift($laps);
     }
 
     /**
@@ -790,13 +695,6 @@ class Participant {
      */
     public function getAverageLap($exclude_pitstop_sectors=false)
     {
-        // There is cache
-        if (array_key_exists( (int) $exclude_pitstop_sectors,
-            $this->cache_average_lap))
-        {
-            return $this->cache_average_lap[ (int) $exclude_pitstop_sectors];
-        }
-
         // No completed laps
         if ( $this->getNumberOfCompletedLaps() === 0)
         {
@@ -867,19 +765,12 @@ class Participant {
             ->setTime($total_time)
             ->setParticipant($this);
 
-        // Return average lap and cache it
-        return $this->cache_average_lap[ (int) $exclude_pitstop_sectors] =
-            $average_lap;
+        // Return average lap
+        return $average_lap;
 
     }
 
-    /**
-     * Invalidate the average lap cache
-     */
-    public function invalidateAverageLapCache()
-    {
-        $this->cache_average_lap = array();
-    }
+
 
     /**
      * Get the best possible lap. Based on sectors. Also includes non-completed
@@ -889,12 +780,6 @@ class Participant {
      */
     public function getBestPossibleLap()
     {
-        // There is cache
-        if ($this->cache_best_possible_lap !== null)
-        {
-            return $this->cache_best_possible_lap;
-        }
-
         // No best lap of one of the sectors
         if ( ! $sector1_lap = $this->getBestLapBySector(1) OR
              ! $sector2_lap = $this->getBestLapBySector(2) OR
@@ -924,8 +809,8 @@ class Participant {
             ->setTime(round(round($sector_1+$sector_2,4)+$sector_3,4))
             ->setParticipant($this);
 
-        // Return best possible lap and cache it
-        return $this->cache_best_possible_lap = $best_possible_lap;
+        // Return best possible lap
+        return $best_possible_lap;
     }
 
     /**
@@ -940,12 +825,6 @@ class Participant {
      */
     public function getConsistency($ignore_first_lap = true)
     {
-        // There is cache
-        if ($this->cache_consistency[$ignore_first_lap] !== null)
-        {
-            return $this->cache_consistency[$ignore_first_lap];
-        }
-
         // Not enough laps
         if ( $this->getNumberOfCompletedLaps() <= 1)
         {
@@ -986,8 +865,7 @@ class Participant {
         $average = $total_time / $total_time_laps_num;
 
         // Return consistency
-        return $this->cache_consistency[$ignore_first_lap] = round(
-            $average - $best_lap->getTime(), 4);
+        return round($average - $best_lap->getTime(), 4);
     }
 
     /**

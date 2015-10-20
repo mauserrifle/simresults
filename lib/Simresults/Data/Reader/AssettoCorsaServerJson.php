@@ -342,7 +342,7 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
                ->setDriverId($guid);
 
         // Create participant and add driver
-        $participant = new Participant;
+        $participant = Participant::createInstance();
         $participant->setDrivers(array($driver))
                     // No grid position yet. Can't figure out in AC log
                     // files

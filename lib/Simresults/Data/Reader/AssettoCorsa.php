@@ -83,7 +83,7 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
                 $driver->setName(Helper::arrayGet($player_data, 'name'));
 
                 // Create participant and add driver
-                $participant = new Participant;
+                $participant = Participant::createInstance();
                 $participant->setDrivers(array($driver))
                             // No grid position yet. Can't figure out in AC log
                             // files

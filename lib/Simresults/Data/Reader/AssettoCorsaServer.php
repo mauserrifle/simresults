@@ -155,7 +155,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 }
 
                 // Create participant and add driver
-                $participant = new Participant;
+                $participant = Participant::createInstance();
                 $participant->setDrivers(array($driver))
                             ->setTotalTime($total_time);
 
