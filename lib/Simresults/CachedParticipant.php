@@ -67,9 +67,9 @@ class CachedParticipant extends Participant {
     );
 
 
-	/**
-	 * {@inheritdoc}
-	 */
+    /**
+     * {@inheritdoc}
+     */
     public function getVehicles()
     {
         // There is cache
@@ -81,9 +81,9 @@ class CachedParticipant extends Participant {
         return $this->cache_vehicles = parent::getVehicles();
     }
 
-	/**
-	 * {@inheritdoc}
-	 */
+    /**
+     * {@inheritdoc}
+     */
     public function getLapsSortedByTime()
     {
         // There is cache
@@ -97,9 +97,9 @@ class CachedParticipant extends Participant {
             parent::getLapsSortedByTime();
     }
 
-	/**
-	 * {@inheritdoc}
-	 */
+    /**
+     * {@inheritdoc}
+     */
     public function getBestLap()
     {
         // There is cache
@@ -111,9 +111,9 @@ class CachedParticipant extends Participant {
         return $this->cache_best_lap = parent::getBestLap();
     }
 
-	/**
-	 * {@inheritdoc}
-	 */
+    /**
+     * {@inheritdoc}
+     */
     public function getNumberOfCompletedLaps()
     {
         // There is cache
@@ -127,9 +127,9 @@ class CachedParticipant extends Participant {
            parent::getNumberOfCompletedLaps();
     }
 
-	/**
-	 * {@inheritdoc}
-	 */
+    /**
+     * {@inheritdoc}
+     */
     public function getNumberOfLapsLed()
     {
         // There is cache
@@ -142,9 +142,9 @@ class CachedParticipant extends Participant {
         return $this->cache_number_of_laps_led = parent::getNumberOfLapsLed();
     }
 
-	/**
-	 * {@inheritdoc}
-	 */
+    /**
+     * {@inheritdoc}
+     */
     public function getLapsSortedBySector($sector)
     {
         // There is cache
@@ -158,9 +158,9 @@ class CachedParticipant extends Participant {
             parent::getLapsSortedBySector($sector);
     }
 
-	/**
-	 * {@inheritdoc}
-	 */
+    /**
+     * {@inheritdoc}
+     */
     public function getBestLapBySector($sector)
     {
         // There is cache
@@ -173,9 +173,9 @@ class CachedParticipant extends Participant {
             parent::getBestLapBySector($sector);
     }
 
-	/**
-	 * {@inheritdoc}
-	 */
+    /**
+     * {@inheritdoc}
+     */
     public function getAverageLap($exclude_pitstop_sectors=false)
     {
         // There is cache
@@ -190,9 +190,9 @@ class CachedParticipant extends Participant {
             parent::getAverageLap($exclude_pitstop_sectors);
     }
 
-	/**
-	 * {@inheritdoc}
-	 */
+    /**
+     * {@inheritdoc}
+     */
     public function getBestPossibleLap()
     {
         // There is cache
@@ -206,9 +206,9 @@ class CachedParticipant extends Participant {
     }
 
 
-	/**
-	 * {@inheritdoc}
-	 */
+    /**
+     * {@inheritdoc}
+     */
     public function getConsistency($ignore_first_lap = true)
     {
         // There is cache

@@ -85,9 +85,9 @@ class CachedSession extends Session {
     protected $cache_max_position;
 
 
-	/**
-	 * {@inheritdoc}
-	 */
+    /**
+     * {@inheritdoc}
+     */
     public function getLapsSortedByTime()
     {
         // There is cache
@@ -98,12 +98,12 @@ class CachedSession extends Session {
 
         // Return sorted laps and cache it
         return $this->cache_laps_sorted_by_time =
-        	parent::getLapsSortedByTime();
+            parent::getLapsSortedByTime();
     }
 
-	/**
-	 * {@inheritdoc}
-	 */
+    /**
+     * {@inheritdoc}
+     */
     public function getLapsByLapNumberSortedByTime($lap_number)
     {
         // There is cache
@@ -118,9 +118,9 @@ class CachedSession extends Session {
             parent::getLapsByLapNumberSortedByTime($lap_number);
     }
 
-	/**
-	 * {@inheritdoc}
-	 */
+    /**
+     * {@inheritdoc}
+     */
     public function getBestLapByLapNumber($lap_number)
     {
         // There is cache
@@ -131,12 +131,12 @@ class CachedSession extends Session {
         }
 
         return $this->cache_best_lap_by_lap_number[$lap_number] =
-        	parent::getBestLapByLapNumber($lap_number);
+            parent::getBestLapByLapNumber($lap_number);
     }
 
-	/**
-	 * {@inheritdoc}
-	 */
+    /**
+     * {@inheritdoc}
+     */
     public function getBestLapsGroupedByParticipant()
     {
         // There is cache
@@ -150,9 +150,9 @@ class CachedSession extends Session {
             parent::getBestLapsGroupedByParticipant();
     }
 
-	/**
-	 * {@inheritdoc}
-	 */
+    /**
+     * {@inheritdoc}
+     */
     public function getLapsSortedBySector($sector)
     {
         // There is cache
@@ -166,9 +166,9 @@ class CachedSession extends Session {
             parent::getLapsSortedBySector($sector);
     }
 
-	/**
-	 * {@inheritdoc}
-	 */
+    /**
+     * {@inheritdoc}
+     */
     public function getBestLapsBySectorGroupedByParticipant($sector)
     {
         // There is cache
@@ -184,9 +184,9 @@ class CachedSession extends Session {
             = parent::getBestLapsBySectorGroupedByParticipant($sector);
     }
 
-	/**
-	 * {@inheritdoc}
-	 */
+    /**
+     * {@inheritdoc}
+     */
     public function getLapsSortedBySectorByLapNumber($sector, $lap_number)
     {
         // There is cache
@@ -200,12 +200,12 @@ class CachedSession extends Session {
         // Return sorted laps and cache it
         return $this->cache_laps_sorted_by_sector_by_lap_number[
             "$sector-$lap_number"] = parent::getLapsSortedBySectorByLapNumber(
-            	$sector, $lap_number);
+                $sector, $lap_number);
     }
 
-	/**
-	 * {@inheritdoc}
-	 */
+    /**
+     * {@inheritdoc}
+     */
     public function getBestLapBySectorByLapNumber($sector, $lap_number)
     {
         // There is cache
@@ -218,12 +218,12 @@ class CachedSession extends Session {
 
         return $this->cache_best_lap_by_sector_by_lap_number[
            "$sector-$lap_number"] = parent::getBestLapBySectorByLapNumber(
-           		$sector, $lap_number);
+                   $sector, $lap_number);
     }
 
-	/**
-	 * {@inheritdoc}
-	 */
+    /**
+     * {@inheritdoc}
+     */
     public function getBadLaps($above_percent = 107)
     {
         // There is cache
@@ -236,9 +236,9 @@ class CachedSession extends Session {
         return $this->cache_bad_laps = parent::getBadLaps($above_percent);
     }
 
-	/**
-	 * {@inheritdoc}
-	 */
+    /**
+     * {@inheritdoc}
+     */
     public function getLedMostParticipant()
     {
         // There is cache
@@ -249,12 +249,12 @@ class CachedSession extends Session {
 
         // Return and cache
         return $this->cache_led_most_participant =
-        	parent::getLedMostParticipant();
+            parent::getLedMostParticipant();
     }
 
-	/**
-	 * {@inheritdoc}
-	 */
+    /**
+     * {@inheritdoc}
+     */
     public function getLeadingParticipant($lap_number)
     {
         // There is cache
@@ -266,9 +266,9 @@ class CachedSession extends Session {
         return parent::getLeadingParticipant($lap_number);
     }
 
-	/**
-	 * {@inheritdoc}
-	 */
+    /**
+     * {@inheritdoc}
+     */
     public function getLeadingParticipantByElapsedTime($lap_number)
     {
         // There is cache
@@ -285,9 +285,9 @@ class CachedSession extends Session {
     }
 
 
-	/**
-	 * {@inheritdoc}
-	 */
+    /**
+     * {@inheritdoc}
+     */
     public function getLastedLaps()
     {
         // There is cache
@@ -300,9 +300,9 @@ class CachedSession extends Session {
         return $this->cache_lasted_laps = parent::getLastedLaps();
     }
 
-	/**
-	 * {@inheritdoc}
-	 */
+    /**
+     * {@inheritdoc}
+     */
     public function getMaxPosition()
     {
         // There is cache
