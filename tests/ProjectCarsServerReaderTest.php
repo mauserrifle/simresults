@@ -234,6 +234,7 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
     /**
      * Test reading laps of participants
      * TODO: Read cuts
+     *       Elapsed seconds based on session start and lap time?
      */
     public function testReadingLapsOfParticipants()
     {
@@ -262,6 +263,7 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertSame(0, $lap->getElapsedSeconds());
         $this->assertSame($participant, $lap->getParticipant());
         $this->assertSame($driver, $lap->getDriver());
+        $this->assertSame(0, $lap->getNumberOfCuts());
 
         // Get sector times
         $sectors = $lap->getSectorTimes();
@@ -277,6 +279,7 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertSame(3, $lap->getPosition());
         $this->assertSame(84.2240, $lap->getTime());
         $this->assertSame(90.0300, $lap->getElapsedSeconds());
+        $this->assertSame(3, $lap->getNumberOfCuts());
 
         // Validate extra positions
         $laps = $participants[3]->getLaps();

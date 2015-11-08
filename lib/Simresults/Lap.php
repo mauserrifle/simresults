@@ -81,6 +81,11 @@ class Lap {
      */
     protected $pit_time;
 
+    /**
+     * @var  int  The number of cuts
+     */
+    protected $number_of_cuts = 0;
+
 
     /**
      * Set the lap number
@@ -445,6 +450,36 @@ class Lap {
     {
         $this->pit_time = $pit_time;
         return $this;
+    }
+
+    /**
+     * Set the number of cuts
+     *
+     * @param   int  $number_of_cuts
+     * @return  Lap
+     */
+    public function setNumberOfCuts($number_of_cuts)
+    {
+        $this->number_of_cuts = $number_of_cuts;
+        return $this;
+    }
+
+    /**
+     * Get the number of cuts
+     *
+     * @return  int
+     */
+    public function getNumberOfCuts()
+    {
+        return $this->number_of_cuts;
+    }
+
+    /**
+     * Add a cut to this lap
+     */
+    public function addCut()
+    {
+        $this->number_of_cuts++;
     }
 
     /**

@@ -173,6 +173,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 $participants_with_events = array();
 
                 // Parse event data such as laps
+                $cut_data = array();
                 foreach ($session_data['events'] as $event)
                 {
                     // Get participant
@@ -249,8 +250,36 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
 
                         $session->addIncident($incident);
                     }
+                    elseif ($event['event_name'] === 'CutTrackStart')
+                    {
+                        $cut_data[] = $event;
+                    }
 
                 }
+
+
+                /**
+                 * Process cut info
+                 */
+
+                foreach ($cut_data as $event)
+                {
+                    // Get participant
+                    $part = $participants_by_ref[$event['refid']];
+
+                    // Lap actually exists....
+                    if ($lap = $part->getLap($event['attributes']['Lap']+1))
+                    {
+                        // Add cut
+                        $lap->addCut();
+                    }
+
+                }
+
+
+                /**
+                 * Cleanup
+                 */
 
 
                 $participants = $participants_by_ref;
