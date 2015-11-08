@@ -266,6 +266,12 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                                     ->getDriver()->getName();
 
                         }
+                        // Participant not known
+                        else
+                        {
+                            // Skip for now until we know what -1 means
+                            continue;
+                        }
 
                         $incident = new Incident;
                         $incident->setMessage(sprintf(

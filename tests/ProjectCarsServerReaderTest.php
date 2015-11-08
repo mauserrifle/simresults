@@ -306,12 +306,13 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertSame(1446150056,
             $incidents[0]->getDate()->getTimestamp());
 
-        // Validate unkown other participant
+        // Validate incident that would have a unknown participant. But now
+        // it should not because we ignore these
         $this->assertSame(
-            'Tazio Nuvolari reported contact with another vehicle '
-           .'unknown. CollisionMagnitude: 1000',
+            'JarZon reported contact with another vehicle '
+           .'Trey. CollisionMagnitude: 327',
             $incidents[5]->getMessage());
-        $this->assertSame(1446150118,
+        $this->assertSame(1446150147,
             $incidents[5]->getDate()->getTimestamp());
     }
 
