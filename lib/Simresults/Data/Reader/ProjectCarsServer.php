@@ -231,7 +231,12 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
 
 
                 // Session has predefined race result positions
-                if ($results = $session_data['results'])
+
+                // WARNING: We only do this for race sessions because for
+                // qualify and practice some drivers are missing from the
+                // result
+                if ($results = $session_data['results'] AND
+                    $session->getType() === Session::TYPE_RACE)
                 {
                     // Create new participants order
                     $participants_resultsorted = array();
@@ -264,6 +269,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                     // array. Merge them and remove any duplicates
                     $participants = array_unique(array_merge(
                         $participants_resultsorted, $participants), SORT_REGULAR);
+
                 }
                 // Is race result but without results array
                 elseif ($session->getType() === Session::TYPE_RACE)
@@ -287,11 +293,6 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 }
 
 
-                // if ($type_key === 'qualifying')
-                // {
-                //     print_r($participants);
-                //     die();
-                // }
 
                 // Fix all participant positions
                 foreach ($participants as $key => $part)

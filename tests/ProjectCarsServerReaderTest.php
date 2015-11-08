@@ -59,27 +59,41 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
-     * Test participant proper positions for qualify
+     * Test  proper positions for qualify and practice. Drivers were not
+     * properly positioned because we ordered mainly on 'results' data.
+     * But apperently some drivers are missing so this tests that we do
+     * not rely on this info any more for practice and qualify sessions
      */
-    // public function testReadingProperQualifyPosition()
-    // {
-    //     // The path to the data source
-    //     $file_path = realpath(__DIR__.
-    //         '/logs/projectcars-server/race.without.finish.json');
+    public function testReadingProperPositionsForNonRace()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/projectcars-server/race.without.finish.json');
 
-    //     // Get the data reader for the given data source
-    //     $session = Data_Reader::factory($file_path)->getSession(3);
+        // Get the data reader for the given data source
+        $sessions = Data_Reader::factory($file_path)->getSessions();
 
-    //     // Get participants
-    //     $participants = $session->getParticipants();
+        // Get participants for practice 2
+        $participants = $sessions[1]->getParticipants();
 
-    //     $this->assertSame('ivanmille',
-    //         $participants[0]->getDriver()->getName());
+        $this->assertSame('ivanmille',
+            $participants[0]->getDriver()->getName());
 
-    //     // Validate patrok to be on 10th place
-    //     $this->assertSame('patrok1207³',
-    //         $participants[9]->getDriver()->getName());
-    // }
+        // Validate Zockerbursche
+        $this->assertSame('Zockerbursche',
+            $participants[9]->getDriver()->getName());
+
+
+        // Get participants for qualify
+        $participants = $sessions[2]->getParticipants();
+
+        $this->assertSame('ivanmille',
+            $participants[0]->getDriver()->getName());
+
+        // Validate patrok
+        $this->assertSame('patrok1207³',
+            $participants[9]->getDriver()->getName());
+    }
 
 
 
