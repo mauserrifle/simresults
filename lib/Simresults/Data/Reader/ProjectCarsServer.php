@@ -47,6 +47,9 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
         });
 
 
+        // Get attribute info of project cars to figure out vehicle names etc
+        $attribute_names = $this->getAttributeNames();
+
         // Init sessions array
         $sessions = array();
 
@@ -78,8 +81,24 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
 
                 // Create vehicle and add to participant
                 $vehicle = new Vehicle;
-                $vehicle->setName( (string) $part_data['setup']['VehicleId']);
-                $vehicle->setType( (string) $part_data['setup']['LiveryId']);
+
+                // TODO: Parse livery too?
+                // $vehicle->setType( (string) $part_data['setup']['LiveryId']);
+
+                // Have friendly vehicle name
+                if (isset($attribute_names['vehicles'][$part_data['setup']
+                    ['VehicleId']]))
+                {
+                    $vehicle->setName($attribute_names['vehicles']
+                        [$part_data['setup']['VehicleId']]['name']);
+                    $vehicle->setClass($attribute_names['vehicles']
+                        [$part_data['setup']['VehicleId']]['class']);
+                }
+                else
+                {
+                    $vehicle->setName( (string) $part_data['setup']['VehicleId']);
+                }
+
                 $participant->setVehicle($vehicle);
 
                 // Add participant to collection
@@ -165,7 +184,21 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
 
                 // Set track
                 $track = new Track;
-                $track->setVenue( (string) $history['setup']['TrackId']);
+
+                // Have friendly track name
+                if (isset($attribute_names['tracks'][$history
+                    ['setup']['TrackId']]))
+                {
+                    $track->setVenue($attribute_names['tracks'][$history
+                        ['setup']['TrackId']]['name']);
+                }
+                else
+                {
+                    // TODO: We should test this works too? Same for vehicles
+                    // when our json attribute config is missing items
+                    $track->setVenue( (string) $history['setup']['TrackId']);
+                }
+
                 $session->setTrack($track);
 
 
@@ -442,5 +475,40 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
         return preg_replace('#//.*#', '', $json);
     }
 
+
+    /**
+     * Get the attribute names of the project cars attributes json
+     *
+     * @return array
+     */
+    protected function getAttributeNames()
+    {
+        // Get attribute info of project cars to figure out vehicle names etc
+        $attributes = json_decode(file_get_contents(
+            realpath(__DIR__.'/ProjectCarsAttributes.json')), true);
+
+        // Attributes we would like to have from config
+        $attribute_names = array(
+            'vehicles'        => array(),
+            'liveries'        => array(),
+            'tracks'          => array(),
+        );
+
+        // Make easy readable array
+        foreach ($attribute_names as $cat => &$values)
+        {
+            foreach($attributes['response'][$cat]['list'] as $item)
+            {
+                $values[$item['id']]['name'] = $item['name'];
+
+                if (isset($item['class']))
+                {
+                    $values[$item['id']]['class'] = $item['class'];
+                }
+            }
+        }
+
+        return $attribute_names;
+    }
 
 }

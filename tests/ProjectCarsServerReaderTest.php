@@ -191,7 +191,7 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
         $track = $this->getWorkingReader()->getSession()->getTrack();
 
         // Validate track
-        $this->assertSame('-1612023328', $track->getVenue());
+        $this->assertSame('Mazda Raceway Laguna Seca', $track->getVenue());
     }
 
     /**
@@ -215,8 +215,10 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
 
         $this->assertSame('ItchyTrigaFinga',
                           $participant->getDriver()->getName());
-        $this->assertSame('-11335215',
+        $this->assertSame('Ford Mustang Cobra TransAm',
                           $participant->getVehicle()->getName());
+        $this->assertSame('Trans-Am',
+                          $participant->getVehicle()->getClass());
         $this->assertSame('76561198015591839',
                           $participant->getDriver()->getDriverId());
         $this->assertTrue($participant->getDriver()->isHuman());
@@ -233,7 +235,6 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
 
     /**
      * Test reading laps of participants
-     * TODO: Read cuts
      *       Elapsed seconds based on session start and lap time?
      */
     public function testReadingLapsOfParticipants()
