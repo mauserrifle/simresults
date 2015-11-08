@@ -108,29 +108,33 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
      */
     public function testReadingMultipleSessions()
     {
-        // TODO: dates
         $tests = array(
             array(
                 'type'     => Session::TYPE_PRACTICE,
                 'max_laps' => 15,
+                'time'     => 1446146942,
             ),
             array(
                 'type'     => Session::TYPE_PRACTICE,
                 'max_laps' => 15,
+                'time'     => 1446147862,
             ),
             array(
                 'type'     => Session::TYPE_QUALIFY,
                 'max_laps' => 15,
+                'time'     => 1446148782,
             ),
             array(
                 'type'     => Session::TYPE_RACE,
                 'max_laps' => 7,
+                'time'     => 1446150022,
             ),
 
             // TODO: Warmup should be before race!
             array(
                 'type'     => Session::TYPE_WARMUP,
                 'max_laps' => 5,
+                'time'     => 1446149702,
             ),
         );
 
@@ -144,9 +148,10 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
             //-- Validate
             $this->assertSame($test['type'], $session->getType());
             $this->assertSame($test['max_laps'], $session->getMaxLaps());
-
-            // TODO ...
-            // $this->assertSame(10, $session->getLastedLaps());
+            $this->assertSame($test['time'],
+                $session->getDate()->getTimestamp());
+            $this->assertSame('UTC',
+                $session->getDate()->getTimezone()->getName());
         }
 
 
@@ -228,6 +233,7 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
 
     /**
      * Test reading laps of participants
+     * TODO: Read cuts
      */
     public function testReadingLapsOfParticipants()
     {

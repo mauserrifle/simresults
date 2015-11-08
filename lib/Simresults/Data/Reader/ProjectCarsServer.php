@@ -142,13 +142,16 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 }
 
 
+                // Date of this session
+                $date = new \DateTime;
+                $date->setTimestamp($session_data['start_time']);
+                $date->setTimezone(new \DateTimeZone(self::$default_timezone));
 
                 // Set session values
                 $session->setType($type)
                         ->setName($type_key)
-                        ->setMaxLaps($history['setup'][$type_setup_name.'Length']);
-
-                // TODO: Read laps length etc
+                        ->setMaxLaps($history['setup'][$type_setup_name.'Length'])
+                        ->setDate($date);
 
 
                 // Set game
