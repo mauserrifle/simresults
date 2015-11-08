@@ -108,6 +108,7 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
      */
     public function testReadingMultipleSessions()
     {
+        // TODO: dates
         $tests = array(
             array(
                 'type'     => Session::TYPE_PRACTICE,
@@ -278,21 +279,31 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
     }
 
 
-    // /**
-    //  * Test reading incidents between cars
-    //  */
-    // public function testIncidents()
-    // {
-    //     // Get participants
-    //     $incidents = $this->getWorkingReader()->getSession()
-    //         ->getIncidents();
+    /**
+     * Test reading incidents between cars
+     */
+    public function testIncidents()
+    {
+        // Get participants
+        $incidents = $this->getWorkingReader()->getSession(4)
+            ->getIncidents();
 
-    //     // Validate first incident
-    //     $this->assertSame(
-    //         'PPolaina reported contact with another vehicle '
-    //        .'Tabak. Impact speed: 7.37918',
-    //         $incidents[0]->getMessage());
-    // }
+        // Validate first incident
+        $this->assertSame(
+            'Seb Solo reported contact with another vehicle '
+           .'Trey. CollisionMagnitude: 1000',
+            $incidents[0]->getMessage());
+        $this->assertSame(1446150056,
+            $incidents[0]->getDate()->getTimestamp());
+
+        // Validate unkown other participant
+        $this->assertSame(
+            'Tazio Nuvolari reported contact with another vehicle '
+           .'unknown. CollisionMagnitude: 1000',
+            $incidents[5]->getMessage());
+        $this->assertSame(1446150118,
+            $incidents[5]->getDate()->getTimestamp());
+    }
 
 
 

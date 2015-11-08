@@ -59,6 +59,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
              */
 
             $initial_participants_by_ref = array();
+            $initial_participants_by_id = array();
 
             // Loop all member entries and create participants
             foreach ($history['members'] as $part_ref => $part_data)
@@ -83,6 +84,8 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
 
                 // Add participant to collection
                 $initial_participants_by_ref[$part_ref] = $participant;
+                $initial_participants_by_id[$part_data['participantid']] =
+                    $participant;
             }
 
 
@@ -103,9 +106,14 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 // Make new unique array of participants to prevent reference
                 // issues across multiple sessions
                 $participants_by_ref = array();
+                $participants_by_id = array();
                 foreach ($initial_participants_by_ref as $part_key => $part )
                 {
                     $participants_by_ref[$part_key] = clone $part;
+                }
+                foreach ($initial_participants_by_id as $part_key => $part )
+                {
+                    $participants_by_id[$part_key] = clone $part;
                 }
 
                 // Init session
@@ -162,7 +170,6 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 $participants_with_events = array();
 
                 // Parse event data such as laps
-                // TODO: Incidents
                 foreach ($session_data['events'] as $event)
                 {
                     // Get participant
@@ -204,6 +211,42 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                         // Add lap to participant
                         $part->addLap($lap);
                     }
+                    elseif ($event['event_name'] === 'Impact')
+                    {
+                        $participant = $participants_by_id
+                            [$event['participantid']];
+
+                        // Other participant is unknown by default
+                        $other_participant_name = 'unknown';
+
+                        // Other participant known
+                        if (-1 != $other_id =
+                                $event['attributes']['OtherParticipantId'])
+                        {
+                            // Set other name
+                            $other_participant_name =
+                                $participants_by_id[$other_id]
+                                    ->getDriver()->getName();
+
+                        }
+
+                        $incident = new Incident;
+                        $incident->setMessage(sprintf(
+                           '%s reported contact with another vehicle '.
+                            '%s. CollisionMagnitude: %s' ,
+                            $participant->getDriver()->getName(),
+                            $other_participant_name,
+                            $event['attributes']['CollisionMagnitude']
+                        ));
+
+                        // TODO: Add elapsed time
+                        $date = new \DateTime;
+                        $date->setTimestamp($event['time']);
+                        $incident->setDate($date);
+
+                        $session->addIncident($incident);
+                    }
+
                 }
 
 
