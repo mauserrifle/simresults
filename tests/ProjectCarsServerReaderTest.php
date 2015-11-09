@@ -37,9 +37,10 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
 
 
     /**
-     * Test reading finish statusses of race that was not finished
+     * Test reading finish statusses and positions of race that was not
+     * finished
      */
-    public function testReadingFinishStatussesOfRaceWithoutFinish()
+    public function testReadingStatussesAndPositionsOfRaceWithoutFinish()
     {
         // The path to the data source
         $file_path = realpath(__DIR__.
@@ -51,11 +52,19 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
         // Get participants
         $participants = $session->getParticipants();
 
+        // Validate statusses
         foreach ($participants as $part)
         {
             $this->assertSame(Participant::FINISH_NONE,
                 $part->getFinishStatus());
         }
+
+        // Validation positions
+        $this->assertSame('I am Reginald',
+            $participants[0]->getDriver()->getName());
+        $this->assertSame('xCrazydogx',
+            $participants[4]->getDriver()->getName());
+
     }
 
     /**

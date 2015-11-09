@@ -394,9 +394,9 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                         $part->setFinishStatus(Participant::FINISH_NONE);
                     }
 
-                    // Sort participants by total time
+                    // Sort participants by last lap positions
                     $participants =
-                        Helper::sortParticipantsByTotalTime($participants);
+                        Helper::sortParticipantsByLastLapPosition($participants);
                 }
                 // Is practice or qualify
                 else
