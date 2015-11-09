@@ -245,6 +245,10 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
     /**
      * Test reading laps of participants
      *       Elapsed seconds based on session start and lap time?
+     *
+     * TODO: Double check gaps calculation. See gaps Race 1 @
+     *       http://simresults.net/151107-1jd
+     *       First driver should be second
      */
     public function testReadingLapsOfParticipants()
     {
