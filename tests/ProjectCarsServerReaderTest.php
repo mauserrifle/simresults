@@ -104,6 +104,27 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
             $participants[9]->getDriver()->getName());
     }
 
+    /**
+     * Test reading the best laps from a log that has no events (thus no laps).
+     * We fallback to "FastestLapTime" within the results data.
+     */
+    public function testReadingBestLapFromLogWithoutEvents()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/projectcars-server/stages.without.events.json');
+
+        // Get the data reader for the given data source
+        $sessions = Data_Reader::factory($file_path)->getSessions();
+
+        // Get participants
+        $participants = $sessions[0]->getParticipants();
+
+        // Test the best lap
+        $this->assertSame(119.417, $participants[0]->getBestLap()->getTime());
+    }
+
+    // TODO: Test reading DNF from above log!!!
 
 
 

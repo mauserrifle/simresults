@@ -297,6 +297,49 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 }
 
 
+                // We did not have any events data to process but we have
+                // final results. Let's use this data to atleast get 1 best
+                // lap of these participants
+                if ( ! $session_data['events'] AND
+                     $results = $session_data['results'])
+                {
+                    // Loop each result and process the lap
+                    foreach ($results as $result)
+                    {
+                        // Get participant
+                        $part = $participants_by_ref[$result['refid']];
+
+                        // Remember this participant (fake it had events)
+                        $participants_with_events[] = $part;
+
+                        // Has best lap
+                        if ($result['attributes']['FastestLapTime'])
+                        {
+                            // Init new lap
+                            $lap = new Lap;
+
+                            // Set participant
+                            $lap->setParticipant($part);
+
+                            // Set first driver of participant as lap driver. PJ
+                            // does not support swapping
+                            $lap->setDriver($part->getDriver());
+
+                            // Set total time
+                            $lap->setTime(round($result['attributes']
+                                ['FastestLapTime'] / 1000, 4));
+
+                            // Set number
+                            $lap->setNumber(1);
+
+                            // Add lap to participant
+                            $part->addLap($lap);
+                        }
+
+                    }
+                }
+
+
                 /**
                  * Process cut info
                  */
