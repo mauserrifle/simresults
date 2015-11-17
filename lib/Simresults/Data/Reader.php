@@ -22,6 +22,7 @@ abstract class Data_Reader {
     protected $data;
 
 
+
     /**
      * Create a new data reader for the given file or string.
      *
@@ -226,16 +227,49 @@ abstract class Data_Reader {
      *
      * @param  array   $participants
      * @param  Session $session
+     * @param  boolean $sort_by_last_lap_position_on_missing_finish_statusses
+     *
      * @return array
      */
-    protected function sortParticipants(array &$participants, Session $session)
+    protected function sortParticipants(
+        array &$participants,
+        Session $session,
+        $sort_by_last_lap_position_on_missing_finish_statusses=false)
     {
         // Is race result
         if ($session->getType() === Session::TYPE_RACE)
         {
-            // Sort participants by total time
-            $participants =
-                Helper::sortParticipantsByTotalTime($participants);
+            // Never sort by last lap by default
+            $sort_by_last_lap = false;
+
+            // We should sort by last lap if all finish statusses are missing
+            if ($sort_by_last_lap_position_on_missing_finish_statusses)
+            {
+                $sort_by_last_lap = true;
+                foreach ($session->getParticipants() as $part)
+                {
+                    if ($part->getFinishStatus() !== Participant::FINISH_NONE)
+                    {
+                        $sort_by_last_lap = false;
+                    }
+                }
+            }
+
+            // Sort by last lap
+            if ($sort_by_last_lap)
+            {
+                // Sort participants by last lap positions
+                $participants =
+                    Helper::sortParticipantsByLastLapPosition($participants);
+            }
+            // We have a normal race result
+            else
+            {
+                // Sort participants by total time
+                $participants =
+                    Helper::sortParticipantsByTotalTime($participants);
+            }
+
         }
         // Is practice or qualify
         else

@@ -402,19 +402,13 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                     }
                 }
 
-                /**
-                 * Data fixing
-                 *
-                 * TODO: Should not be duplicate code (other readers have this code
-                 *       as well)
-                 */
+
 
                 // Get participant with normal array keys
                 $participants = array_values($participants);
 
 
                 // Session has predefined race result positions
-
                 // WARNING: We only do this for race sessions because for
                 // qualify and practice some drivers are missing from the
                 // result
@@ -453,40 +447,36 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                     $participants = array_unique(array_merge(
                         $participants_resultsorted, $participants), SORT_REGULAR);
 
-                }
-                // Is race result but without results array
-                elseif ($session->getType() === Session::TYPE_RACE)
-                {
-                    // Set all participants on unknown finish status
-                    foreach ($participants_by_ref as $part)
-                    {
-                        $part->setFinishStatus(Participant::FINISH_NONE);
-                    }
+                    // Fix participant positions
+                    $this->fixParticipantPositions($participants);
 
-                    // Sort participants by last lap positions
-                    $participants =
-                        Helper::sortParticipantsByLastLapPosition($participants);
                 }
-                // Is practice or qualify
+                // No predefined result
                 else
                 {
-                    // Sort by best lap
-                    $participants =
-                        Helper::sortParticipantsByBestLap($participants);
+                    // Is race
+                    if ($session->getType() === Session::TYPE_RACE)
+                    {
+                        // Set all participants on unknown finish status
+                        // We should of had a result for proper statusses
+                        foreach ($participants as $part)
+                        {
+                            $part->setFinishStatus(Participant::FINISH_NONE);
+                        }
+                    }
+
+                    // Sort participants
+                    $this->sortParticipants($participants, $session, TRUE);
                 }
 
-
-
-                // Fix all participant positions
-                // TODO: Get rid of this?
-                foreach ($participants as $key => $part)
-                {
-                    $part->setPosition($key+1);
-                }
 
                 // Set participants (sorted)
                 $session->setParticipants($participants);
 
+
+                /**
+                 * Data fixing
+                 */
 
                 // Fix finish statusses based on number of laps
                 // TODO: Other readers too?
