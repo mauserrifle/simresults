@@ -455,6 +455,99 @@ class Helper {
     }
 
     /**
+     * Sort participants by last lap position
+     *
+     * TODO: Unittest
+     *
+     * @param   array   $participants
+     * @return  array   The sorted participants
+     */
+    public static function sortParticipantsByLastLapPosition(
+        array $participants)
+    {
+        usort($participants, function($a, $b) {
+
+            /**
+             * Criteria 1: Number of laps
+             */
+
+            // Get the number of laps
+            $a_number_of_laps = $a->getNumberOfLaps();
+            $b_number_of_laps = $b->getNumberOfLaps();
+
+            // Both participants have no laps
+            if ( ! $a_number_of_laps AND ! $b_number_of_laps)
+            {
+                // Same
+                return 0;
+            }
+
+            // a has no laps
+            if ( ! $a_number_of_laps)
+            {
+                return 1;
+            }
+
+            // b has no laps
+            if ( ! $b_number_of_laps)
+            {
+                return -1;
+            }
+
+            // Not same number of laps
+             if ($a_number_of_laps !== $b_number_of_laps)
+             {
+                // Return number of laps comparison
+                return (($a_number_of_laps < $b_number_of_laps) ? 1 : -1);
+            }
+
+
+
+            /**
+             * Criteria 2: Last lap position
+             */
+
+
+            // Get last lap
+            $a_last_lap = $a->getLastLap();
+            $b_last_lap = $b->getLastLap();
+
+
+            // Both participants have no last lap
+            if ( ! $a_last_lap AND ! $b_last_lap)
+            {
+                // Same
+                return 0;
+            }
+
+            // a has no last lap
+            if ( ! $a_last_lap)
+            {
+                return 1;
+            }
+
+            // b has no last lap
+            if ( ! $b_last_lap)
+            {
+                return -1;
+            }
+
+            // Same position
+            //  if ($a_last_lap->getPosition() === $b_last_lap->getPosition()) {
+            //     return 0;
+            // }
+
+            // Return normal comparison
+            return ((
+                $a_last_lap->getPosition() <
+                    $b_last_lap->getPosition())
+                ? -1 : 1);
+        });
+
+        return $participants;
+    }
+
+    /**
      * Retrieve a single key from an array. If the key does not exist in the
      * array, the default value will be returned instead.
      *

@@ -35,9 +35,6 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
         // Init sessions array
         $sessions = array();
 
-        // Remember last qualify session to make up grid positions
-        $last_qualify_session = null;
-
         // Loop each session from data
         foreach ($data as $session_data)
         {
@@ -300,37 +297,6 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                }
             }
 
-            // Is qualify
-            if ($session->getType() === Session::TYPE_QUALIFY)
-            {
-                // Remember last qualify session
-                $last_qualify_session = $session;
-            }
-            // Is race and has last qualify session
-            else if ($session->getType() === Session::TYPE_RACE AND
-                     $last_qualify_session)
-            {
-                // Get pairticpants of last qualify session and store names
-                $last_qualify_session_participants = array();
-                foreach ($last_qualify_session->getParticipants() as $part)
-                {
-                    $last_qualify_session_participants[] =
-                        $part->getDriver()->getName();
-                }
-
-                // Loop this session participants
-                foreach ($participants as $part)
-                {
-                    // Found participant in qualify array
-                    if (false !== $key =
-                        array_search($part->getDriver()->getName(),
-                            $last_qualify_session_participants))
-                    {
-                        $part->setGridPosition($key+1);
-                    }
-                }
-
-            }
 
             // Fix driver positions for laps
             $session_lasted_laps = $session->getLastedLaps();
@@ -380,6 +346,10 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             // Add session to collection
             $sessions[] = $session;
         }
+
+
+        // Fix grid positions
+        $this->fixGridPositions($sessions);
 
 
         // Return all sessions

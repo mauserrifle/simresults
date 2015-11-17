@@ -375,6 +375,19 @@ class Participant {
     }
 
     /**
+     * Get the last lap
+     *
+     * @return  Lap|null
+     */
+    public function getLastLap()
+    {
+        if ($laps = $this->laps)
+        {
+            return array_pop($laps);
+        }
+    }
+
+    /**
      * Set the number of pitstops this participant had
      *
      * @param   int          $pitstops
