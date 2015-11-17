@@ -29,11 +29,12 @@ Simresults supports a wide range of games:
 
 * rFactor
 * rFactor 2
+* Project Cars
+* Assetto Corsa
 * Game Stock Car 2012
 * Game Stock Car 2013
 * Game Stock Car Extreme
 * Formula Truck 2013
-* Assetto Corsa
 * RACE
 * RACE 07
 * GTR
@@ -94,6 +95,10 @@ lap.
   positions due to lag/bugs)
 * Detects human and AI players using their aids (sometimes log files report
   wrong player state)
+
+### Project Cars Server reader
+
+`lib/Data/Reader/ProjectCarsServer.php`
 
 ### Assetto Corsa reader
 
