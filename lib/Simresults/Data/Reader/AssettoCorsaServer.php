@@ -284,46 +284,9 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             // Set participants to session
             $session->setParticipants($participants);
 
+            // Fix laps data
+            $this->fixLapsData($participants, $session);
 
-            // Fix elapsed seconds for all participant laps
-            foreach ($session->getParticipants() as $participant)
-            {
-               $elapsed_time = 0;
-               foreach ($participant->getLaps() as $lap)
-               {
-                    // Set elapsed seconds and increment it
-                    $lap->setElapsedSeconds($elapsed_time);
-                    $elapsed_time += $lap->getTime();
-               }
-            }
-
-
-            // Fix driver positions for laps
-            $session_lasted_laps = $session->getLastedLaps();
-
-            // Loop each lap number, beginning from 2, because we can't
-            // figure out positions for lap 1 in AC
-            // TODO: Duplicate code with RACE07 and AC normal reader
-            for($i=2; $i <= $session_lasted_laps; $i++)
-            {
-                // Get laps sorted by elapsed time
-                $laps_sorted = $session->getLapsByLapNumberSortedByTime($i);
-
-                // Sort laps by elapsed time
-                $laps_sorted = Helper::sortLapsByElapsedTime($laps_sorted);
-
-                // Loop each lap and fix position data
-                foreach ($laps_sorted as $lap_key => $lap)
-                {
-                    // Only fix position if lap has a time, this way users of this
-                    // library can easier detect whether it's a dummy lap and
-                    // decide how to show them
-                    if ($lap->getTime() OR $lap->getElapsedSeconds())
-                    {
-                        $lap->setPosition($lap_key+1);
-                    }
-                }
-            }
 
 
             // Only one vehicle type in this session

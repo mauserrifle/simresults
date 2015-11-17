@@ -223,101 +223,23 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
 
         /**
          * Data fixing
-         *
-         * TODO: Should not be duplicate code (other readers have this code
-         *       as well)
          */
 
         // Get participant with normal array keys
         $participants = array_values($participants_by_name);
 
-
-        // Is race result
-        if ($session->getType() === Session::TYPE_RACE)
-        {
-            // Sort participants by total time
-            $participants =
-                Helper::sortParticipantsByTotalTime($participants);
-        }
-        // Is practice or qualify
-        else
-        {
-            // Sort by best lap
-            $participants =
-                Helper::sortParticipantsByBestLap($participants);
-        }
-
-        // Fix participant positions
-        foreach ($participants as $key => $part)
-        {
-            $part->setPosition($key+1);
-        }
+        // Sort participants
+        $this->sortParticipants($participants, $session);
 
         // Set participants (sorted)
         $session->setParticipants($participants);
 
+        // Fix finish statusses based on number of laps
+        // TODO: Other readers too?
+        $this->fixFinishStatusBasedOnLaps($participants, $session);
 
-
-        // Is race result
-        if ($session->getType() === Session::TYPE_RACE)
-        {
-            // Mark no finish status when participant has not completed atleast
-            // 50% of total laps
-            // TODO: Also do this for other AC readers?
-            foreach ($participants as $participant)
-            {
-                // Finished normally and matches 50% rule
-                if ($participant->getFinishStatus()
-                        === Participant::FINISH_NORMAL
-                    AND
-                    (! $participant->getNumberOfCompletedLaps() OR
-                     50 > ($participant->getNumberOfCompletedLaps() /
-                    ($session->getLastedLaps() / 100))))
-                {
-                    $participant->setFinishStatus(Participant::FINISH_NONE);
-                }
-            }
-        }
-
-
-        // Fix elapsed seconds for all participant laps
-        foreach ($participants as $participant)
-        {
-           $elapsed_time = 0;
-           foreach ($participant->getLaps() as $lap_key => $lap)
-           {
-                // Set elapsed seconds and increment it
-                $lap->setElapsedSeconds($elapsed_time);
-                $elapsed_time += $lap->getTime();
-
-                // Set lap number
-                $lap->setNumber($lap_key+1);
-           }
-        }
-
-
-        // Fix driver positions for laps
-        $session_lasted_laps = $session->getLastedLaps();
-
-        // Loop each lap number, beginning from 2, because we can't
-        // figure out positions for lap 1 in AC
-        for($i=2; $i <= $session_lasted_laps; $i++)
-        {
-            // Get laps by lap number from session
-            $laps_sorted = $session->getLapsByLapNumberSortedByTime($i);
-
-            // Sort the laps by elapsed time
-            $laps_sorted = Helper::sortLapsByElapsedTime($laps_sorted);
-
-            // Loop each lap and fix position data
-            foreach ($laps_sorted as $lap_key => $lap)
-            {
-                // Fix lap position
-                $lap->setPosition($lap_key+1);
-            }
-        }
-
-
+        // Fix laps data
+        $this->fixLapsData($participants, $session);
 
         // Return session
         return array($session);

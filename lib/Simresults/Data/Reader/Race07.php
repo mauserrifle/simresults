@@ -126,32 +126,6 @@ class Data_Reader_Race07 extends Data_Reader {
                 continue;
             }
 
-            // Fix driver positions for laps
-            $session_lasted_laps = $session->getLastedLaps();
-
-            // Loop each lap number, beginning from 2 because lap 1 has grid
-            // position
-            for($i=2; $i <= $session_lasted_laps; $i++)
-            {
-                // Get laps sorted by elapsed time
-                $laps_sorted = $session->getLapsByLapNumberSortedByTime($i);
-
-                // Sort laps by elapsed time
-                $laps_sorted = Helper::sortLapsByElapsedTime($laps_sorted);
-
-                // Loop each lap and fix position data
-                foreach ($laps_sorted as $lap_key => $lap)
-                {
-                    // Only fix position if lap has a time, this way users of this
-                    // library can easier detect whether it's a dummy lap and
-                    // decide how to show them
-                    if ($lap->getTime() OR $lap->getElapsedSeconds())
-                    {
-                        $lap->setPosition($lap_key+1);
-                    }
-                }
-            }
-
             $sessions[] = $session;
         }
 
@@ -412,6 +386,14 @@ class Data_Reader_Race07 extends Data_Reader {
 
         // Set participants on session
         $session->setParticipants($participants);
+
+
+        /**
+         * Data fixing
+         */
+
+        // Fix laps data
+        $this->fixLapsData($participants, $session);
     }
 
     /**

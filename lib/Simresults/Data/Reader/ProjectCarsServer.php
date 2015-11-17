@@ -478,6 +478,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
 
 
                 // Fix all participant positions
+                // TODO: Get rid of this?
                 foreach ($participants as $key => $part)
                 {
                     $part->setPosition($key+1);
