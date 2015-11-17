@@ -150,4 +150,58 @@ abstract class Data_Reader {
      */
     protected function init() { }
 
+
+
+
+
+    /**
+     * Below are data fixes that can be used by all readers
+     */
+
+    /**
+     * Fix grid positions on race session by using previous qualify data
+     *
+     * @param  array  $sessions
+     */
+    protected function fixGridPositions(array $sessions)
+    {
+        $last_qualify_parts = array();
+
+        foreach ($sessions as $session)
+        {
+            // Is qualify
+            if ($session->getType() === Session::TYPE_QUALIFY)
+            {
+                // Reset last qualify participants
+                $last_qualify_parts = array();
+
+                // Loop each participant and remember its position
+                foreach ($session->getParticipants() as $part)
+                {
+                    $last_qualify_parts[$part->getDriver()->getName()]
+                        = $part->getPosition();
+                }
+            }
+            // Is race
+            elseif ($session->getType() === Session::TYPE_RACE)
+            {
+                // Fix positions
+                foreach ($session->getParticipants() as $part)
+                {
+                    // Qualify position known
+                    if (isset($last_qualify_parts[
+                        $part->getDriver()->getName()]))
+                    {
+                        // Set grid position
+                        $part->setGridPosition($last_qualify_parts[
+                            $part->getDriver()->getName()]);
+                    }
+                }
+            }
+
+        }
+    }
+
+
+
 }

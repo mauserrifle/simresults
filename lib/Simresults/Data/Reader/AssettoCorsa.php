@@ -85,9 +85,6 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
                 // Create participant and add driver
                 $participant = Participant::createInstance();
                 $participant->setDrivers(array($driver))
-                            // No grid position yet. Can't figure out in AC log
-                            // files
-                            // ->setGridPosition($player_index+1)
                             ->setFinishStatus(Participant::FINISH_NORMAL);
 
                 // Create vehicle and add to participant
@@ -262,6 +259,11 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
             // Add session to collection
             $sessions[] = $session;
         }
+
+
+        // Fix grid positions
+        $this->fixGridPositions($sessions);
+
 
         // Return all sessions
         return $sessions;

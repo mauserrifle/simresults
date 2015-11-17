@@ -271,6 +271,7 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
                           $participant->getDriver()->getDriverId());
         $this->assertTrue($participant->getDriver()->isHuman());
         $this->assertSame(1, $participant->getPosition());
+        $this->assertSame(12, $participant->getGridPosition());
         $this->assertSame(Participant::FINISH_NORMAL,
             $participant->getFinishStatus());
         $this->assertSame(516.67499999999995, $participant->getTotalTime());

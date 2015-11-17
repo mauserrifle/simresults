@@ -79,8 +79,6 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 // Create participant and add driver
                 $participant = Participant::createInstance();
                 $participant->setDrivers(array($driver))
-                            // No grid position yet. Can't figure out in log
-                            // ->setGridPosition($player_index+1)
                             ->setFinishStatus(Participant::FINISH_NORMAL);
 
                 // Create vehicle and add to participant
@@ -532,6 +530,10 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
 
         }
 
+
+
+        // Fix grid positions
+        $this->fixGridPositions($sessions);
 
 
         // Return sessions
