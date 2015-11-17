@@ -488,42 +488,12 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 $session->setParticipants($participants);
 
 
+                // Fix finish statusses based on number of laps
+                // TODO: Other readers too?
+                $this->fixFinishStatusBasedOnLaps($participants, $session);
 
-                // Is race result
-                // WARNING: THIS CODE RELIES ON PARTICIPANTS BEING SET ON
-                //          SESSION ABOVE
-                if ($session->getType() === Session::TYPE_RACE)
-                {
-                    // Mark no finish status when participant has not completed atleast
-                    // 50% of total laps
-                    // TODO: Duplicate code!!!!
-                    foreach ($participants as $participant)
-                    {
-                        // Finished normally and matches 50% rule
-                        if ($participant->getFinishStatus()
-                                === Participant::FINISH_NORMAL
-                            AND
-                            (! $participant->getNumberOfCompletedLaps() OR
-                             50 > ($participant->getNumberOfCompletedLaps() /
-                            ($session->getLastedLaps() / 100))))
-                        {
-                            $participant->setFinishStatus(Participant::FINISH_NONE);
-                        }
-                    }
-                }
-
-
-                // Fix elapsed seconds for all participant laps
-                foreach ($participants as $participant)
-                {
-                   $elapsed_time = 0;
-                   foreach ($participant->getLaps() as $lap_key => $lap)
-                   {
-                        // Set elapsed seconds and increment it
-                        $lap->setElapsedSeconds($elapsed_time);
-                        $elapsed_time += $lap->getTime();
-                   }
-                }
+                // Fix laps data
+                $this->fixLapsData($participants, $session);
 
 
                 $sessions[] = $session;

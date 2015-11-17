@@ -364,25 +364,8 @@ class Data_Reader_Race07 extends Data_Reader {
             $session->setType(Session::TYPE_RACE);
         }
 
-
-        // Is race result
-        if ($session->getType() === Session::TYPE_RACE)
-        {
-            // Sort participants by total time
-            $participants = Helper::sortParticipantsByTotalTime($participants);
-        }
-        // Is practice of qualify
-        else
-        {
-            // Sort by best lap
-            $participants = Helper::sortParticipantsByBestLap($participants);
-        }
-
-        // Fix participant positions
-        foreach ($participants as $key => $part)
-        {
-            $part->setPosition($key+1);
-        }
+        // Sort participants
+        $this->sortParticipants($participants, $session);
 
         // Set participants on session
         $session->setParticipants($participants);

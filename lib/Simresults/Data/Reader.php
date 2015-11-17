@@ -315,30 +315,37 @@ abstract class Data_Reader {
         }
 
 
-        // Fix driver positions for laps
-        $session_lasted_laps = $session->getLastedLaps();
 
-        // Loop each lap number, beginning from 2, because we can't
-        // figure out positions for lap 1 if this data is missing
-        // TODO: Check whether we actually have to run this code!!!
-        // TODO: Check for grid position and use that to set position of lap 1!
-        for($i=2; $i <= $session_lasted_laps; $i++)
+
+        // Find whether we should fix lap positions by checking whether the
+        // second lap of the first participant is missing position data. Not
+        // checking the first lap because the it might have grid position
+        if ($parts = $session->getParticipants() AND
+            $lap = $parts[0]->getLap(2) AND ! $lap->getPosition())
         {
-            // Get laps by lap number from session
-            $laps_sorted = $session->getLapsByLapNumberSortedByTime($i);
+            $session_lasted_laps = $session->getLastedLaps();
 
-            // Sort the laps by elapsed time
-            $laps_sorted = Helper::sortLapsByElapsedTime($laps_sorted);
-
-            // Loop each lap and fix position data
-            foreach ($laps_sorted as $lap_key => $lap)
+            // Loop each lap number, beginning from 2, because we can't
+            // figure out positions for lap 1 if this data is missing
+            for($i=2; $i <= $session_lasted_laps; $i++)
             {
-                // Only fix position if lap has a time, this way users of this
-                // library can easier detect whether it's a dummy lap and
-                // decide how to show them
-                if ($lap->getTime() OR $lap->getElapsedSeconds())
+                // Get laps by lap number from session
+                $laps_sorted = $session->getLapsByLapNumberSortedByTime($i);
+
+                // Sort the laps by elapsed time
+                $laps_sorted = Helper::sortLapsByElapsedTime($laps_sorted);
+
+                // Loop each lap and fix position data
+                foreach ($laps_sorted as $lap_key => $lap)
                 {
-                    $lap->setPosition($lap_key+1);
+                    // Only fix position if lap has a time, this way users of this
+                    // library can easier detect whether it's a dummy lap and
+                    // decide how to show them
+                    if ( ! $lap->getPosition() AND
+                         ($lap->getTime() OR $lap->getElapsedSeconds()))
+                    {
+                        $lap->setPosition($lap_key+1);
+                    }
                 }
             }
         }
