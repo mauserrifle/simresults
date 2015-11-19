@@ -396,7 +396,9 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 foreach ($participants as $part_ref => $part)
                 {
                     // No laps and not marked as participated
-                    if ( ! in_array($part, $participants_with_events))
+                    // TODO: Make test for strict comparison (true arg), log
+                    // is on Project Cars forum for test
+                    if ( ! in_array($part, $participants_with_events, true))
                     {
                         unset($participants[$part_ref]);
                     }
