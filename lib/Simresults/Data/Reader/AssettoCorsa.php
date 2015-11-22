@@ -205,14 +205,6 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
             $session->setOtherSettings($extras);
 
 
-
-            /**
-             * Data fixing
-             */
-
-            // Fix participant positions
-            $this->fixParticipantPositions($participants);
-
             // Set participants (sorted)
             $session->setParticipants($participants);
 

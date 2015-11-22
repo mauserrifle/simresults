@@ -444,10 +444,6 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                     // array. Merge them and remove any duplicates
                     $participants = array_unique(array_merge(
                         $participants_resultsorted, $participants), SORT_REGULAR);
-
-                    // Fix participant positions
-                    $this->fixParticipantPositions($participants);
-
                 }
                 // No predefined result
                 else

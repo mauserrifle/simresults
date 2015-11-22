@@ -183,6 +183,12 @@ abstract class Data_Reader {
         // Fix laps data
         $this->fixLapsData($sessions);
 
+        // Fix position numbers of participants
+        foreach ($sessions as $session)
+        {
+            $this->fixParticipantPositions($session->getParticipants());
+        }
+
         return $sessions;
     }
 
