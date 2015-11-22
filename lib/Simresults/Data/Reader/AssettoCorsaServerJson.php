@@ -234,8 +234,8 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
         // Set participants (sorted)
         $session->setParticipants($participants);
 
-        // Fix finish statusses based on number of laps
-        // TODO: Other readers too?
+        // Fix finish statusses based on number of laps because we
+        // are missing finish statusses alot
         $this->fixFinishStatusBasedOnLaps($participants, $session);
 
         // Fix laps data

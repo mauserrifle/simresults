@@ -425,10 +425,6 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                         // Get participant
                         $participant = $participants_by_ref[$result['refid']];
 
-                        // Set position
-                        $participant->setPosition(
-                            $result['attributes']['RacePosition']);
-
                         // Set total time
                         $participant->setTotalTime(round(
                             $result['attributes']['TotalTime'] / 1000, 4));
@@ -468,7 +464,8 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                     }
 
                     // Sort participants
-                    $this->sortParticipantsAndFixPositions($participants, $session, TRUE);
+                    $this->sortParticipantsAndFixPositions(
+                        $participants, $session, TRUE);
                 }
 
 
@@ -480,8 +477,8 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                  * Data fixing
                  */
 
-                // Fix finish statusses based on number of laps
-                // TODO: Other readers too?
+                // Fix finish statusses based on number of laps because we
+                // are missing finish statusses alot
                 $this->fixFinishStatusBasedOnLaps($participants, $session);
 
                 // Fix laps data

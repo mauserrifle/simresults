@@ -156,11 +156,15 @@ abstract class Data_Reader {
 
 
     /**
-     * Below are data fixes that can be used by all readers
+     * Below are data fixes that can be used by all readers. All methods are
+     * designed to be safe and will ignore setting any data when specific
+     * reader has already set the data
      */
 
     /**
-     * Fix grid positions on race session by using previous qualify data
+     * Fix grid positions on race session by using previous qualify data.
+     * Only sets the grid position when its not already set on the driver.
+     *
      *
      * @param  array  $sessions
      */
@@ -189,9 +193,10 @@ abstract class Data_Reader {
                 // Fix positions
                 foreach ($session->getParticipants() as $part)
                 {
-                    // Qualify position known
+                    // Qualify position known and no grid has been set yet
                     if (isset($last_qualify_parts[
-                        $part->getDriver()->getName()]))
+                        $part->getDriver()->getName()]) AND
+                        ! $part->getGridPosition())
                     {
                         // Set grid position
                         $part->setGridPosition($last_qualify_parts[
@@ -286,7 +291,8 @@ abstract class Data_Reader {
     }
 
     /**
-     * Fix participants finish statusses based on the number of laps rule
+     * Fix participants finish statusses based on the number of laps rule. Use
+     * this when log files do not always provide proper finish statusses.
      *
      * @param  array   $participants
      * @param  Session $session
@@ -301,8 +307,14 @@ abstract class Data_Reader {
             // 50% of total laps
             foreach ($participants as $participant)
             {
+                // Has no laps
+                if ($participant->getNumberOfCompletedLaps() === 0)
+                {
+                    // Always set DNF
+                    $participant->setFinishStatus(Participant::FINISH_DNF);
+                }
                 // Finished normally and matches 50% rule
-                if ($participant->getFinishStatus()
+                elseif ($participant->getFinishStatus()
                         === Participant::FINISH_NORMAL
                     AND
                     (! $participant->getNumberOfCompletedLaps() OR
