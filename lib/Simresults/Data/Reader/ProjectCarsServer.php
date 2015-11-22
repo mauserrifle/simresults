@@ -30,9 +30,9 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
     }
 
     /**
-     * @see \Simresults\Data_Reader::getSessions()
+     * @see \Simresults\Data_Reader::readSessions()
      */
-    public function getSessions()
+    protected function readSessions()
     {
         // Get data
         $data = json_decode(self::cleanJSON($this->data), TRUE);
@@ -472,29 +472,10 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 // Set participants (sorted)
                 $session->setParticipants($participants);
 
-
-                /**
-                 * Data fixing
-                 */
-
-                // Fix finish statusses based on number of laps because we
-                // are missing finish statusses alot
-                $this->fixFinishStatusBasedOnLaps($participants, $session);
-
-                // Fix laps data
-                $this->fixLapsData($participants, $session);
-
-
                 $sessions[] = $session;
             }
 
         }
-
-
-
-        // Fix grid positions
-        $this->fixGridPositions($sessions);
-
 
         // Return sessions
         return $sessions;

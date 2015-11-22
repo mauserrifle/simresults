@@ -25,9 +25,9 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
     }
 
     /**
-     * @see \Simresults\Data_Reader::getSessions()
+     * @see \Simresults\Data_Reader::readSessions()
      */
-    public function getSessions()
+    protected function readSessions()
     {
         // Get array data
         $data = $this->array_data;
@@ -268,9 +268,6 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             // Set participants to session
             $session->setParticipants($participants);
 
-            // Fix laps data
-            $this->fixLapsData($participants, $session);
-
 
 
             // Only one vehicle type in this session
@@ -293,10 +290,6 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             // Add session to collection
             $sessions[] = $session;
         }
-
-
-        // Fix grid positions
-        $this->fixGridPositions($sessions);
 
 
         // Return all sessions

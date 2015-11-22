@@ -142,9 +142,20 @@ abstract class Data_Reader {
     /**
      * Returns all sessions
      *
-     * @return  Session
+     * @return  array
      */
-    abstract public function getSessions();
+    public function getSessions()
+    {
+        // Return the sessions with fixed data when required
+        return $this->fixSessions($this->readSessions());
+    }
+
+    /**
+     * Reads all sessions from the logs. Implement this in each reader
+     *
+     * @return array
+     */
+    abstract protected function readSessions();
 
     /**
      * Optional init method
@@ -152,6 +163,28 @@ abstract class Data_Reader {
     protected function init() { }
 
 
+
+    /**
+     * Reads all sessions and fixes any data that has not been set by the
+     * reader
+     *
+     * @param  array  $sessions
+     * @return array
+     */
+    protected function fixSessions(array $sessions)
+    {
+        // Fix grid positions
+        $this->fixGridPositions($sessions);
+
+        // Fix finish statusses based on number of laps because we
+        // are missing finish statusses alot
+        $this->fixFinishStatusBasedOnLaps($sessions);
+
+        // Fix laps data
+        $this->fixLapsData($sessions);
+
+        return $sessions;
+    }
 
 
 
@@ -207,6 +240,125 @@ abstract class Data_Reader {
 
         }
     }
+
+
+    /**
+     * Fix participants finish statusses based on the number of laps rule. Use
+     * this when log files do not always provide proper finish statusses.
+     *
+     * @param  array   $sessions
+     */
+    protected function fixFinishStatusBasedOnLaps(array $sessions)
+    {
+        foreach ($sessions as $session)
+        {
+            // Is race result
+            if ($session->getType() === Session::TYPE_RACE)
+            {
+                // Mark no finish status when participant has not completed atleast
+                // 50% of total laps
+                foreach ($session->getParticipants() as $participant)
+                {
+                    // Has no laps
+                    if ($participant->getNumberOfCompletedLaps() === 0)
+                    {
+                        // Always set DNF
+                        $participant->setFinishStatus(Participant::FINISH_DNF);
+                    }
+                    // Finished normally and matches 50% rule
+                    elseif ($participant->getFinishStatus()
+                            === Participant::FINISH_NORMAL
+                        AND
+                        (! $participant->getNumberOfCompletedLaps() OR
+                         50 > ($participant->getNumberOfCompletedLaps() /
+                        ($session->getLastedLaps() / 100))))
+                    {
+                        $participant->setFinishStatus(Participant::FINISH_NONE);
+                    }
+                }
+            }
+        }
+    }
+
+
+    /**
+     * Fixes laps data regarding lap numbers and elapsed time. It does not
+     * change this data when it's already set using the specific result files!
+     *
+     * @param  array   $sessions
+     */
+    protected function fixLapsData(array $sessions)
+    {
+        foreach ($sessions as $session)
+        {
+            // Fix elapsed seconds and positions for all participant laps if
+            // it's missing
+            foreach ($session->getParticipants() as $participant)
+            {
+               $elapsed_time = 0;
+               foreach ($participant->getLaps() as $lap_key => $lap)
+               {
+                    // No elapsed seconds
+                    if ($lap->getElapsedSeconds() === NULL)
+                    {
+                        // Set elapsed seconds if we actualy have a time on this
+                        // lap. We keep it NULL to be consistant in knowing when
+                        // data is really missing
+                        if ($lap->getTime() !== NULL)
+                        {
+                            $lap->setElapsedSeconds($elapsed_time);
+                        }
+
+                        // Increase elapsed time
+                        $elapsed_time += $lap->getTime();
+                    }
+
+                    // Set lap number if not available
+                    if ( ! $lap->getNumber())
+                    {
+                        $lap->setNumber($lap_key+1);
+                    }
+               }
+            }
+
+
+            // Find whether we should fix lap positions by checking whether the
+            // second lap of the first participant is missing position data. Not
+            // checking the first lap because the it might have grid position
+            if ($parts = $session->getParticipants() AND
+                $lap = $parts[0]->getLap(2) AND ! $lap->getPosition())
+            {
+                $session_lasted_laps = $session->getLastedLaps();
+
+                // Loop each lap number, beginning from 2, because we can't
+                // figure out positions for lap 1 if this data is missing
+                for($i=2; $i <= $session_lasted_laps; $i++)
+                {
+                    // Get laps by lap number from session
+                    $laps_sorted = $session->getLapsByLapNumberSortedByTime($i);
+
+                    // Sort the laps by elapsed time
+                    $laps_sorted = Helper::sortLapsByElapsedTime($laps_sorted);
+
+                    // Loop each lap and fix position data
+                    foreach ($laps_sorted as $lap_key => $lap)
+                    {
+                        // Only fix position if lap has a time, this way users of this
+                        // library can easier detect whether it's a dummy lap and
+                        // decide how to show them
+                        if ( ! $lap->getPosition() AND
+                             ($lap->getTime() OR $lap->getElapsedSeconds()))
+                        {
+                            $lap->setPosition($lap_key+1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
 
 
     /**
@@ -288,113 +440,6 @@ abstract class Data_Reader {
         $this->fixParticipantPositions($participants);
 
         return $participants;
-    }
-
-    /**
-     * Fix participants finish statusses based on the number of laps rule. Use
-     * this when log files do not always provide proper finish statusses.
-     *
-     * @param  array   $participants
-     * @param  Session $session
-     */
-    protected function fixFinishStatusBasedOnLaps(array $participants,
-                                                  Session $session)
-    {
-        // Is race result
-        if ($session->getType() === Session::TYPE_RACE)
-        {
-            // Mark no finish status when participant has not completed atleast
-            // 50% of total laps
-            foreach ($participants as $participant)
-            {
-                // Has no laps
-                if ($participant->getNumberOfCompletedLaps() === 0)
-                {
-                    // Always set DNF
-                    $participant->setFinishStatus(Participant::FINISH_DNF);
-                }
-                // Finished normally and matches 50% rule
-                elseif ($participant->getFinishStatus()
-                        === Participant::FINISH_NORMAL
-                    AND
-                    (! $participant->getNumberOfCompletedLaps() OR
-                     50 > ($participant->getNumberOfCompletedLaps() /
-                    ($session->getLastedLaps() / 100))))
-                {
-                    $participant->setFinishStatus(Participant::FINISH_NONE);
-                }
-            }
-        }
-    }
-
-
-    /**
-     * Fixes laps data regarding lap numbers and elapsed time. It does not
-     * change this data when it's already set using the specific result files!
-     *
-     * @param  array   $participants
-     * @param  Session $session
-     */
-    protected function fixLapsData(array $participants, Session $session)
-    {
-        // Fix elapsed seconds and positions for all participant laps if
-        // it's missing
-        foreach ($participants as $participant)
-        {
-           $elapsed_time = 0;
-           foreach ($participant->getLaps() as $lap_key => $lap)
-           {
-                // No elapsed seconds
-                if ($lap->getElapsedSeconds() === NULL)
-                {
-                    // Set elapsed seconds and increment it
-                    $lap->setElapsedSeconds($elapsed_time);
-                    $elapsed_time += $lap->getTime();
-                }
-
-                // Set lap number if not available
-                if ( ! $lap->getNumber())
-                {
-                    $lap->setNumber($lap_key+1);
-                }
-           }
-        }
-
-
-
-
-        // Find whether we should fix lap positions by checking whether the
-        // second lap of the first participant is missing position data. Not
-        // checking the first lap because the it might have grid position
-        if ($parts = $session->getParticipants() AND
-            $lap = $parts[0]->getLap(2) AND ! $lap->getPosition())
-        {
-            $session_lasted_laps = $session->getLastedLaps();
-
-            // Loop each lap number, beginning from 2, because we can't
-            // figure out positions for lap 1 if this data is missing
-            for($i=2; $i <= $session_lasted_laps; $i++)
-            {
-                // Get laps by lap number from session
-                $laps_sorted = $session->getLapsByLapNumberSortedByTime($i);
-
-                // Sort the laps by elapsed time
-                $laps_sorted = Helper::sortLapsByElapsedTime($laps_sorted);
-
-                // Loop each lap and fix position data
-                foreach ($laps_sorted as $lap_key => $lap)
-                {
-                    // Only fix position if lap has a time, this way users of this
-                    // library can easier detect whether it's a dummy lap and
-                    // decide how to show them
-                    if ( ! $lap->getPosition() AND
-                         ($lap->getTime() OR $lap->getElapsedSeconds()))
-                    {
-                        $lap->setPosition($lap_key+1);
-                    }
-                }
-            }
-        }
     }
 
 

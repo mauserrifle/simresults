@@ -61,9 +61,9 @@ class Data_Reader_Rfactor2 extends Data_Reader {
     }
 
     /**
-     * @see \Simresults\Data_Reader::getSessions()
+     * @see \Simresults\Data_Reader::readSessions()
      */
-    public function getSessions()
+    protected function readSessions()
     {
         // Create new session instance
         $session = Session::createInstance();

@@ -23,9 +23,9 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
     }
 
     /**
-     * @see \Simresults\Data_Reader::getSessions()
+     * @see \Simresults\Data_Reader::readSessions()
      */
-    public function getSessions()
+    protected function readSessions()
     {
         // Get data
         $data = json_decode($this->data, TRUE);

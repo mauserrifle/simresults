@@ -32,9 +32,9 @@ class Data_Reader_Race07 extends Data_Reader {
     }
 
     /**
-     * @see \Simresults\Data_Reader::getSessions()
+     * @see \Simresults\Data_Reader::readSessions()
      */
-    public function getSessions()
+    protected function readSessions()
     {
         $sessions = array();
 
@@ -369,14 +369,6 @@ class Data_Reader_Race07 extends Data_Reader {
 
         // Set participants on session
         $session->setParticipants($participants);
-
-
-        /**
-         * Data fixing
-         */
-
-        // Fix laps data
-        $this->fixLapsData($participants, $session);
     }
 
     /**

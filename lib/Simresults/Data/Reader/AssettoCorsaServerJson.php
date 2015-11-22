@@ -27,9 +27,9 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
     }
 
     /**
-     * @see \Simresults\Data_Reader::getSessions()
+     * @see \Simresults\Data_Reader::readSessions()
      */
-    public function getSessions()
+    protected function readSessions()
     {
         // Get data
         $data = json_decode($this->data, TRUE);
@@ -233,13 +233,6 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
 
         // Set participants (sorted)
         $session->setParticipants($participants);
-
-        // Fix finish statusses based on number of laps because we
-        // are missing finish statusses alot
-        $this->fixFinishStatusBasedOnLaps($participants, $session);
-
-        // Fix laps data
-        $this->fixLapsData($participants, $session);
 
         // Return session
         return array($session);
