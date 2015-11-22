@@ -229,7 +229,7 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
         $participants = array_values($participants_by_name);
 
         // Sort participants
-        $this->sortParticipants($participants, $session);
+        $this->sortParticipantsAndFixPositions($participants, $session);
 
         // Set participants (sorted)
         $session->setParticipants($participants);

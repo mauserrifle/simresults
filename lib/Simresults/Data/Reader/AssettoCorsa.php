@@ -198,7 +198,7 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
             else
             {
                 // Sort participants
-                $this->sortParticipants($participants, $session);
+                $this->sortParticipantsAndFixPositions($participants, $session);
             }
 
             // Add extras to session

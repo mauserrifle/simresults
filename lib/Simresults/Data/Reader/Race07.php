@@ -365,7 +365,7 @@ class Data_Reader_Race07 extends Data_Reader {
         }
 
         // Sort participants
-        $this->sortParticipants($participants, $session);
+        $this->sortParticipantsAndFixPositions($participants, $session);
 
         // Set participants on session
         $session->setParticipants($participants);

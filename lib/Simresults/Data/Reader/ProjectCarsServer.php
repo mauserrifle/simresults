@@ -468,7 +468,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                     }
 
                     // Sort participants
-                    $this->sortParticipants($participants, $session, TRUE);
+                    $this->sortParticipantsAndFixPositions($participants, $session, TRUE);
                 }
 
 

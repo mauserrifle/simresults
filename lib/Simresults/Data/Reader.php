@@ -231,7 +231,7 @@ abstract class Data_Reader {
      *
      * @return array
      */
-    protected function sortParticipants(
+    protected function sortParticipantsAndFixPositions(
         array &$participants,
         Session $session,
         $sort_by_last_lap_position_on_missing_finish_statusses=false)

@@ -263,7 +263,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             }
 
             // Sort participants
-            $this->sortParticipants($participants, $session);
+            $this->sortParticipantsAndFixPositions($participants, $session);
 
             // Set participants to session
             $session->setParticipants($participants);
