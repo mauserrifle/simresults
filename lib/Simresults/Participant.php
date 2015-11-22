@@ -16,6 +16,16 @@ class Participant {
     const FINISH_DQ     = 'dq';       // disqualified
     const FINISH_NONE   = 'none';     // no finish status
 
+    /**
+     * @var  array  The sort order of finish statusses
+     */
+    public static $finish_sort_order = array(
+        Participant::FINISH_NORMAL,
+        Participant::FINISH_DNF,
+        Participant::FINISH_DQ,
+        Participant::FINISH_NONE,
+    );
+
 
     /**
      * @var  array  The drivers
