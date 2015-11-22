@@ -145,17 +145,20 @@ class AssettoCorsaServerJsonReaderTest extends PHPUnit_Framework_TestCase {
             $participant->getFinishStatus());
         $this->assertSame(1003.035, $participant->getTotalTime());
 
-        // Get last participant
-        $participant = $participants[count($participants)-1];
-        $this->assertSame('Ric',
+        // Get one of last participants. Not the most last because they
+        // vary in order because of different usort behavior due pivots
+        // in PHP 5.6 vs HHVM/PHP7. But thats ok, those are all meaningless
+        // DNF anyway
+        $participant = $participants[count($participants)-5];
+        $this->assertSame('YoloAtGames',
                           $participant->getDriver()->getName());
         $this->assertSame('lotus_exos_125',
                           $participant->getVehicle()->getName());
         $this->assertSame('',
                           $participant->getTeam());
-        $this->assertSame('76561197962401923',
+        $this->assertSame('76561198156462312',
                           $participant->getDriver()->getDriverId());
-        $this->assertSame(23, $participant->getPosition());
+        $this->assertSame(19, $participant->getPosition());
         $this->assertSame(Participant::FINISH_DNF,
             $participant->getFinishStatus());
         $this->assertSame(0, $participant->getTotalTime());
