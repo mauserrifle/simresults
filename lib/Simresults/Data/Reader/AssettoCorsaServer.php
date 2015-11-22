@@ -446,6 +446,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
 
             // Loop each match and collect participants
             $participants = array();
+            if (isset($part_matches[0]))
             foreach ($part_matches[0] as $part_key => $part_data)
             {
                 // Explode data by REQUESTED CAR again
@@ -529,6 +530,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                     $participant_regex_vehicle_match_key = 1;
 
                     // Loop each match and collect participants
+                    if (isset($part_matches[0]))
                     foreach ($part_matches[0] as $part_key => $part_data)
                     {
                         $name = trim($part_matches[3][$part_key]);
@@ -574,6 +576,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                     $participant_regex_vehicle_match_key = 3;
 
                     // Loop each match and collect participants
+                    if (isset($part_matches[0]))
                     foreach ($part_matches[0] as $part_key => $part_data)
                     {
                         $name = trim($part_matches[2][$part_key]);
@@ -626,6 +629,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
 
                 // Loop each match and collect participants
                 $participants = array();
+                if (isset($part_matches[0]))
                 foreach ($part_matches[0] as $part_key => $part_data)
                 {
                     $name = trim($part_matches[3][$part_key]);
@@ -672,6 +676,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
 
                 // Loop each match and collect participants
                 $participants = array();
+                if (isset($part_matches[0]))
                 foreach ($part_matches[0] as $part_key => $part_data)
                 {
                     $name = trim($part_matches[2][$part_key]);
