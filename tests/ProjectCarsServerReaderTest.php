@@ -198,6 +198,18 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
                 $session->getDate()->getTimestamp());
             $this->assertSame('UTC',
                 $session->getDate()->getTimezone()->getName());
+
+            $this->assertSame(array(
+                'DamageType'                  => 3,
+                'FuelUsageType'               => 0,
+                'PenaltiesType'               => 0,
+                'ServerControlsSetup'         => 1,
+                'ServerControlsTrack'         => 1,
+                'ServerControlsVehicle'       => 0,
+                'ServerControlsVehicleClass'  => 1,
+                'TireWearType'                => 6,
+                ),
+                $session->getOtherSettings());
         }
 
 

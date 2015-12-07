@@ -121,6 +121,21 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
             }
 
 
+            // Get server configuration
+            $read_settings = array(
+                'DamageType', 'FuelUsageType', 'PenaltiesType',
+                'ServerControlsSetup', 'ServerControlsTrack',
+                'ServerControlsVehicle', 'ServerControlsVehicleClass',
+                'TireWearType',
+             );
+            $session_settings = array();
+            foreach ($history['setup'] as $setup_key => $setup_value) {
+                if (in_array($setup_key, $read_settings)) {
+                    $session_settings[$setup_key] = $setup_value;
+                }
+            }
+
+
             // Loop all stages data
             foreach ($history['stages'] as $type_key => $session_data)
             {
@@ -172,7 +187,8 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 $session->setType($type)
                         ->setName($type_key)
                         ->setMaxLaps($history['setup'][$type_setup_name.'Length'])
-                        ->setDate($date);
+                        ->setDate($date)
+                        ->setOtherSettings($session_settings);
 
 
                 // Set game
