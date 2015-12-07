@@ -470,8 +470,27 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
 
                 $sessions[] = $session;
             }
-
         }
+
+
+        // Swap warmup and race positions if wrong
+        $prevous_session = null;
+        foreach ($sessions as $key => $session)
+        {
+            // Found warmup after race session
+            if ($prevous_session AND
+                $prevous_session->getType() === Session::TYPE_RACE AND
+                $session->getType() === Session::TYPE_WARMUP)
+            {
+                // Swap them
+                $sessions[$key] = $prevous_session;
+                $sessions[$key-1] = $session;
+            }
+
+            // Remember previous session
+            $prevous_session = $session;
+        }
+
 
         // Return sessions
         return $sessions;

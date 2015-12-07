@@ -47,7 +47,7 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
             '/logs/projectcars-server/race.without.finish.json');
 
         // Get the data reader for the given data source
-        $session = Data_Reader::factory($file_path)->getSession(4);
+        $session = Data_Reader::factory($file_path)->getSession(5);
 
         // Get participants
         $participants = $session->getParticipants();
@@ -138,7 +138,7 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
         $sessions = Data_Reader::factory($file_path)->getSessions();
 
         // Get participants
-        $participants = $sessions[8]->getParticipants();
+        $participants = $sessions[9]->getParticipants();
 
         // Test DNF status
         $this->assertSame(Participant::FINISH_DNF,
@@ -173,16 +173,14 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
                 'time'     => 1446148782,
             ),
             array(
-                'type'     => Session::TYPE_RACE,
-                'max_laps' => 7,
-                'time'     => 1446150022,
-            ),
-
-            // TODO: Warmup should be before race!
-            array(
                 'type'     => Session::TYPE_WARMUP,
                 'max_laps' => 5,
                 'time'     => 1446149702,
+            ),
+            array(
+                'type'     => Session::TYPE_RACE,
+                'max_laps' => 7,
+                'time'     => 1446150022,
             ),
         );
 
@@ -248,7 +246,7 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
     public function testReadingSessionParticipants()
     {
         // Get participants
-        $participants = $this->getWorkingReader()->getSession(4)
+        $participants = $this->getWorkingReader()->getSession(5)
             ->getParticipants();
 
 
@@ -293,7 +291,7 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
     public function testReadingLapsOfParticipants()
     {
         // Get participants
-        $participants = $this->getWorkingReader()->getSession(4)
+        $participants = $this->getWorkingReader()->getSession(5)
             ->getParticipants();
 
 
@@ -348,7 +346,7 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
     public function testIncidents()
     {
         // Get participants
-        $incidents = $this->getWorkingReader()->getSession(4)
+        $incidents = $this->getWorkingReader()->getSession(5)
             ->getIncidents();
 
         // Validate first incident
