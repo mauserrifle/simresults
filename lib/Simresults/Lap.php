@@ -108,6 +108,15 @@ class Lap {
      */
     protected $number_of_cuts = 0;
 
+    /**
+     * @var  float  The total time in seconds of cuts
+     */
+    protected $cuts_time = 0;
+
+    /**
+     * @var  float  The total time skipped in seconds of cuts
+     */
+    protected $cuts_time_skipped = 0;
 
     /**
      * Set the lap number
@@ -604,6 +613,48 @@ class Lap {
     {
         $this->number_of_cuts++;
     }
+
+
+
+
+    /**
+     * Get the total time in seconds of cuts
+     *
+     * @return  int
+     */
+    public function getCutsTime()
+    {
+        return $this->cuts_time;
+    }
+
+    /**
+     * Add time in seconds to the total cut time
+     */
+    public function addCutsTime($seconds)
+    {
+        $this->cuts_time = round($this->cuts_time + $seconds, 4);
+    }
+
+    /**
+     * Get the total time skipped in seconds of cuts
+     *
+     * @return  int
+     */
+    public function getCutsTimeSkipped()
+    {
+        return $this->cuts_time_skipped;
+    }
+
+    /**
+     * Add time skipped in seconds to the total cut time skipped
+     */
+    public function addCutsTimeSkipped($seconds_skipped)
+    {
+        $this->cuts_time_skipped =
+            round($this->cuts_time_skipped + $seconds_skipped, 4);
+    }
+
+
 
     /**
      * Get the time spend on pitting

@@ -332,6 +332,8 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertSame(84.2240, $lap->getTime());
         $this->assertSame(90.0300, $lap->getElapsedSeconds());
         $this->assertSame(3, $lap->getNumberOfCuts());
+        $this->assertSame(3.106, $lap->getCutsTimeSkipped());
+        $this->assertSame(3.293, $lap->getCutsTime());
 
         // Validate extra positions
         $laps = $participants[3]->getLaps();

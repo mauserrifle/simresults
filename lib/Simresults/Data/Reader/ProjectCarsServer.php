@@ -291,7 +291,8 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
 
                         $session->addIncident($incident);
                     }
-                    elseif ($event['event_name'] === 'CutTrackStart')
+                    elseif (in_array($event['event_name'],
+                                array('CutTrackStart', 'CutTrackEnd')))
                     {
                         $cut_data[] = $event;
                     }
@@ -370,16 +371,35 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                  * Process cut info
                  */
 
-                foreach ($cut_data as $event)
+                foreach ($cut_data as $key => $event)
                 {
                     // Get participant
                     $part = $participants_by_ref[$event['refid']];
 
-                    // Lap actually exists....
-                    if ($lap = $part->getLap($event['attributes']['Lap']+1))
+                    // Start of cut and lap actually exists
+                    if ($event['event_name'] === 'CutTrackStart' AND
+                        $lap = $part->getLap($event['attributes']['Lap']+1))
                     {
                         // Add cut
                         $lap->addCut();
+
+                        // Find the end of cutting by looping following events
+                        for ($end_key=$key+1; $end_key < count($cut_data);
+                                 $end_key++)
+                        {
+                            // Next event is end of current cut
+                            $next_event = $cut_data[$end_key];
+                            if ($next_event['event_name'] === 'CutTrackEnd' AND
+                                $next_event['refid'] == $event['refid'])
+                            {
+                                $lap->addCutsTime(round(
+                                    $next_event['attributes']['ElapsedTime']
+                                    / 1000, 4));
+                                $lap->addCutsTimeSkipped(round(
+                                    $next_event['attributes']['SkippedTime']
+                                    / 1000, 4));
+                            }
+                        }
                     }
 
                 }
