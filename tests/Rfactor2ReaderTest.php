@@ -268,6 +268,34 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
+     * Test reading the tire wear
+     */
+    public function testReadingTireWear()
+    {
+        // Get the data reader for the given data source
+        $reader = Data_Reader::factory(
+            realpath(__DIR__.'/logs/rfactor2/race_with_tire_wear.xml'));
+
+        // Get participants
+        $participants = $reader->getSession()->getParticipants();
+
+        // Get the first participant laps
+        $laps = $participants[0]->getLaps();
+
+        // Validate ear percentage on first lap
+        $this->assertSame(93.3, $laps[0]->getFrontCompoundLeftWear());
+        $this->assertSame(94.9, $laps[0]->getFrontCompoundRightWear());
+        $this->assertSame(94.1, $laps[0]->getRearCompoundLeftWear());
+        $this->assertSame(95.3, $laps[0]->getRearCompoundRightWear());
+
+        // Validate ear percentage on last lap
+        $this->assertSame(62.7, $laps[34]->getFrontCompoundLeftWear());
+        $this->assertSame(75.3, $laps[34]->getFrontCompoundRightWear());
+        $this->assertSame(82.0, $laps[34]->getRearCompoundLeftWear());
+        $this->assertSame(82.4, $laps[34]->getRearCompoundRightWear());
+    }
+
+    /**
      * Test reading pitstop laps
      */
     public function testReadingPitLaps()

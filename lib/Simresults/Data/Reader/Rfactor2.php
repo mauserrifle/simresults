@@ -713,6 +713,42 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                     $fuel = $fuel_data*100;
                 }
 
+
+
+
+                $front_compound_left_wear = NULL;
+                if (($wear_data = (float) $lap_xml->getAttribute('twfl')) AND
+                    $wear_data > 0 )
+                {
+                    // Get proper percentage
+                    $front_compound_left_wear = $wear_data*100;
+                }
+
+                $front_compound_right_wear = NULL;
+                if (($wear_data = (float) $lap_xml->getAttribute('twfr')) AND
+                    $wear_data > 0 )
+                {
+                    // Get proper percentage
+                    $front_compound_right_wear = $wear_data*100;
+                }
+
+                $rear_compound_left_wear = NULL;
+                if (($wear_data = (float) $lap_xml->getAttribute('twrl')) AND
+                    $wear_data > 0 )
+                {
+                    // Get proper percentage
+                    $rear_compound_left_wear = $wear_data*100;
+                }
+
+                $rear_compound_right_wear = NULL;
+                if (($wear_data = (float) $lap_xml->getAttribute('twrr')) AND
+                    $wear_data > 0 )
+                {
+                    // Get proper percentage
+                    $rear_compound_right_wear = $wear_data*100;
+                }
+
+
                 // Set lap values
                 $lap
                     ->setTime($lap_time)
@@ -722,6 +758,10 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                     ->setElapsedSeconds($elapsed_seconds)
                     ->setFrontCompound($front_compound)
                     ->setRearCompound($rear_compound)
+                    ->setFrontCompoundLeftWear($front_compound_left_wear)
+                    ->setFrontCompoundRightWear($front_compound_right_wear)
+                    ->setRearCompoundLeftWear($rear_compound_left_wear)
+                    ->setRearCompoundRightWear($rear_compound_right_wear)
                     ->setFuel($fuel)
                     ->setPitLap((boolean) $lap_xml->getAttribute('pit'));
 
