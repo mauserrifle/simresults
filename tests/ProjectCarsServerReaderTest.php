@@ -147,6 +147,36 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
 
 
 
+    /**
+     * Test no exceptions and proper participants on unknown/bad participant
+     * ids. Participants will be collected using events as a fallback
+     */
+    public function testDataOnUnknownOrBadParticipantIds()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/projectcars-server/unknown.participant.ids.json');
+
+        // Get the data reader for the given data source
+        $sessions = Data_Reader::factory($file_path)->getSessions();
+
+        // Get participants
+        $participants = $sessions[0]->getParticipants();
+
+        // Validate number of participants
+        $this->assertSame(17, count($participants));
+
+        // Validate human state
+        $this->assertTrue($participants[0]->getDriver()->isHuman());
+        $this->assertTrue($participants[1]->getDriver()->isHuman());
+        $this->assertFalse($participants[2]->getDriver()->isHuman());
+    }
+
+
+
+
+
+
     /***
     **** Below tests use 1 race log file
     ***/

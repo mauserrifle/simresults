@@ -14,6 +14,13 @@ namespace Simresults;
  */
 class Data_Reader_ProjectCarsServer extends Data_Reader {
 
+
+    /**
+     * @var  array  The attribute names
+     */
+    protected $attribute_names;
+
+
     /**
      * @see Simresults\Data_Reader::canRead()
      */
@@ -52,7 +59,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
 
 
         // Get attribute info of project cars to figure out vehicle names etc
-        $attribute_names = $this->getAttributeNames();
+        $this->attribute_names = $this->getAttributeNames();
 
         // Init sessions array
         $sessions = array();
@@ -65,60 +72,34 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
              * Collect all participants
              */
 
-            $initial_participants_by_ref = array();
+            $initial_participants_by_ref = array(); // Depricated! TODO: Remove
             $initial_participants_by_id = array();
 
             // Loop all member entries and create participants
             foreach ($history['members'] as $part_ref => $part_data)
             {
-                // Create driver
-                $driver = new Driver;
-                $driver->setName($part_data['name'])
-                       ->setDriverId($part_data['steamid']);
-
-                // Create participant and add driver
-                $participant = Participant::createInstance();
-                $participant->setDrivers(array($driver))
-                            ->setFinishStatus(Participant::FINISH_NORMAL);
-
-                // Create vehicle and add to participant
-                $vehicle = new Vehicle;
-
-                // TODO: Parse livery too?
-                // $vehicle->setType( (string) $part_data['setup']['LiveryId']);
-
-                // Have friendly vehicle name
-                if (isset($attribute_names['vehicles'][$part_data['setup']
-                    ['VehicleId']]))
-                {
-                    $vehicle->setName($attribute_names['vehicles']
-                        [$part_data['setup']['VehicleId']]['name']);
-                    $vehicle->setClass($attribute_names['vehicles']
-                        [$part_data['setup']['VehicleId']]['class']);
-                }
-                else
-                {
-                    $vehicle->setName( (string) $part_data['setup']['VehicleId']);
-                }
-
-                $participant->setVehicle($vehicle);
+                // Get participant
+                $participant = $this->getParticipant($part_data);
 
                 // Add participant to collection
-                $initial_participants_by_ref[$part_ref] = $participant;
+                // $initial_participants_by_ref[$part_ref] = $participant;
                 $initial_participants_by_id[$part_data['participantid']] =
                     $participant;
             }
 
 
             // Get additional info from participants entries
-            foreach ($history['participants'] as $part_data)
-            {
-                // Get previously parsed participant
-                $participant = $initial_participants_by_ref[$part_data['RefId']];
+            // Disabled due to duplicate refids bugs 2015-12-14
+            // foreach ($history['participants'] as $part_data)
+            // {
+            //     // Get previously parsed participant
+            //     $participant = $initial_participants_by_ref[
+            //         $part_data['RefId']];
 
-                // Set whether participant is human
-                $participant->getDriver()->setHuman((bool) $part_data['IsPlayer']);
-            }
+            //     // Set whether participant is human
+            //     $participant->getDriver()->setHuman(
+            //         (bool) $part_data['IsPlayer']);
+            // }
 
 
             // Get server configuration
@@ -204,10 +185,10 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 $track = new Track;
 
                 // Have friendly track name
-                if (isset($attribute_names['tracks'][$history
+                if (isset($this->attribute_names['tracks'][$history
                     ['setup']['TrackId']]))
                 {
-                    $track->setVenue($attribute_names['tracks'][$history
+                    $track->setVenue($this->attribute_names['tracks'][$history
                         ['setup']['TrackId']]['name']);
                 }
                 else
@@ -223,12 +204,24 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 // Remember participants with actual events
                 $participants_with_events = array();
 
+                // Parse events first only to collect missing participants
+                foreach ($session_data['events'] as $event)
+                {
+                    // Participant unknown
+                    if ( ! isset($participants_by_id[
+                        $event['participantid']])) {
+                        // Build it and fallback to less info
+                        $part = $this->getParticipant($event);
+                        $participants_by_id[$event['participantid']] = $part;
+                    }
+                }
+
                 // Parse event data such as laps
                 $cut_data = array();
                 foreach ($session_data['events'] as $event)
                 {
                     // Get participant
-                    $part = $participants_by_ref[$event['refid']];
+                    $part = $participants_by_id[$event['participantid']];
 
                     // Remember this participant
                     $participants_with_events[] = $part;
@@ -268,15 +261,13 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                     }
                     elseif ($event['event_name'] === 'Impact')
                     {
-                        $participant = $participants_by_id
-                            [$event['participantid']];
-
                         // Other participant is unknown by default
                         $other_participant_name = 'unknown';
 
                         // Other participant known
-                        if (-1 != $other_id =
-                                $event['attributes']['OtherParticipantId'])
+                        if ((-1 != $other_id =
+                                $event['attributes']['OtherParticipantId']
+                             ) AND isset($participants_by_id[$other_id]))
                         {
                             // Set other name
                             $other_participant_name =
@@ -295,7 +286,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                         $incident->setMessage(sprintf(
                            '%s reported contact with another vehicle '.
                             '%s. CollisionMagnitude: %s' ,
-                            $participant->getDriver()->getName(),
+                            $part->getDriver()->getName(),
                             $other_participant_name,
                             $event['attributes']['CollisionMagnitude']
                         ));
@@ -331,7 +322,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                         if ($result['attributes']['State'] === 'DNF')
                         {
                             // Get participant
-                            $part = $participants_by_ref[$result['refid']];
+                            $part = $participants_by_id[$result['participantid']];
 
                             // Set DNF
                             $part->setFinishStatus(Participant::FINISH_DNF);
@@ -350,7 +341,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                     foreach ($results as $result)
                     {
                         // Get participant
-                        $part = $participants_by_ref[$result['refid']];
+                        $part = $participants_by_id[$result['participantid']];
 
                         // Remember this participant (fake it had events)
                         $participants_with_events[] = $part;
@@ -390,7 +381,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 foreach ($cut_data as $key => $event)
                 {
                     // Get participant
-                    $part = $participants_by_ref[$event['refid']];
+                    $part = $participants_by_id[$event['participantid']];
 
                     // Start of cut and lap actually exists
                     if ($event['event_name'] === 'CutTrackStart' AND
@@ -426,17 +417,17 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                  */
 
 
-                $participants = $participants_by_ref;
+                $participants = $participants_by_id;
 
                 // Remove any participant who did not participate
-                foreach ($participants as $part_ref => $part)
+                foreach ($participants as $part_id => $part)
                 {
                     // No laps and not marked as participated
                     // TODO: Make test for strict comparison (true arg), log
                     // is on Project Cars forum for test
                     if ( ! in_array($part, $participants_with_events, true))
                     {
-                        unset($participants[$part_ref]);
+                        unset($participants[$part_id]);
                     }
                 }
 
@@ -459,7 +450,8 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                     foreach ($results as $result)
                     {
                         // Get participant
-                        $participant = $participants_by_ref[$result['refid']];
+                        $participant = $participants_by_id[
+                            $result['participantid']];
 
                         // Set total time
                         $participant->setTotalTime(round(
@@ -530,6 +522,68 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
 
         // Return sessions
         return $sessions;
+    }
+
+
+    /**
+     * Helper to get new participant instance
+     *
+     * @param  array        $part_data
+     * @return Participant
+     */
+    protected function getParticipant($part_data)
+    {
+        // Create driver
+        $driver = new Driver;
+        $driver->setName($part_data['name'])
+               ->setHuman(false);
+
+        // Has steam id
+        if (isset($part_data['steamid'])) {
+            $driver->setDriverId($part_data['steamid']);
+            $driver->setHuman(true);
+        }
+
+        // Create participant and add driver
+        $participant = Participant::createInstance();
+        $participant->setDrivers(array($driver))
+                    ->setFinishStatus(Participant::FINISH_NORMAL);
+
+        // Create vehicle and add to participant
+        $vehicle = new Vehicle;
+
+        // TODO: Parse livery too?
+        // $vehicle->setType( (string) $part_data['setup']['LiveryId']);
+
+        // Has vehicle in root
+        $vehicle_id = null;
+        if (isset($part_data['VehicleId']))
+        {
+            $vehicle_id = $part_data['VehicleId'];
+        }
+        // Has vehicle in setup data
+        elseif (isset($part_data['setup']) AND
+            isset($part_data['setup']['VehicleId'])) {
+            $vehicle_id = $part_data['setup']['VehicleId'];
+        }
+
+
+        // Have friendly vehicle name
+        if (isset($this->attribute_names['vehicles'][$vehicle_id]))
+        {
+            $vehicle->setName($this->attribute_names['vehicles']
+                [$part_data['setup']['VehicleId']]['name']);
+            $vehicle->setClass($this->attribute_names['vehicles']
+                [$part_data['setup']['VehicleId']]['class']);
+        }
+        else
+        {
+            $vehicle->setName( (string) $vehicle_id);
+        }
+
+        $participant->setVehicle($vehicle);
+
+        return $participant;
     }
 
 
