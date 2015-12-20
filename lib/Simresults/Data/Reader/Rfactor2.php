@@ -1209,6 +1209,9 @@ class Data_Reader_Rfactor2 extends Data_Reader {
         // XML closing tag)
         $xml = substr($xml, 0, 1+strrpos($xml, '>'));
 
+        // Fix unescaped amp characters
+        $xml = preg_replace('/&(?!amp;)/', '&amp;$1', $xml);
+
         return $xml;
     }
 

@@ -713,6 +713,20 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
     }
 
 
+    /**
+     * Test reading that there are no exceptions on a file that contains
+     * unescaped amp (&) characters. These characters are now escaped before
+     * parsing. The log in this test also contains one escaped amp sign so
+     * we also test that there are uneffected
+     */
+    public function testReadingFileWithUnescapedAmpCharacters()
+    {
+        // Get the data reader for the given data source
+        $reader = Data_Reader::factory(realpath(
+            __DIR__.'/logs/rfactor2/race_with_amp_chars_in_vehicle.xml'));
+    }
+
+
 
     //---------------------------------------------------------------
 
