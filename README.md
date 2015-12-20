@@ -21,7 +21,7 @@ This project is created and maintained by
 [Maurice van der Star](http://twitter.com/mauserrifleNL)
 
 * Website: <http://simresults.net>
-* Twitter: [@mauserrifleNL](http://twitter.com/mauserrifleNL)
+* Twitter: [@simresults](http://twitter.com/simresults)
 
 ## Supported games
 
