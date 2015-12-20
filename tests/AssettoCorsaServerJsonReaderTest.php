@@ -63,6 +63,20 @@ class AssettoCorsaServerJsonReaderTest extends PHPUnit_Framework_TestCase {
             $participants[8]->getDriver()->getName());
     }
 
+    /**
+     * Test reading a log with null events (not array) without errors
+     */
+    public function testReadingNullEventsWithoutExceptions()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-server-json/'.
+            'race.changed.with.null.events.json');
+
+        // Get the race session
+        $session = Data_Reader::factory($file_path)->getSession();
+    }
+
 
 
 

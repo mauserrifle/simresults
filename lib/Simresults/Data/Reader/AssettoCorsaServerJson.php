@@ -201,6 +201,7 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
 
 
         // Get car incidents from events
+        if ($data['Events'])
         foreach ($data['Events'] as $event)
         {
             // Not car collision. continue to next
