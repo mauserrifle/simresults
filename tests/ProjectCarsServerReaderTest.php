@@ -172,6 +172,18 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertFalse($participants[2]->getDriver()->isHuman());
     }
 
+    /**
+     * Test no exceptions on another log missing participant ids
+     */
+    public function testDataOnUnknownOrBadParticipantIds2()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/projectcars-server/unknown.participant.ids2.json');
+
+        // Get the data reader for the given data source
+        $sessions = Data_Reader::factory($file_path)->getSessions();
+    }
 
 
 

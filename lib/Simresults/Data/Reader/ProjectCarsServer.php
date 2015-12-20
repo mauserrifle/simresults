@@ -318,6 +318,13 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                     // Loop each result and process the lap
                     foreach ($results as $result)
                     {
+                        // Participant not found, continue to next
+                        if ( ! isset($participants_by_id[
+                                         $result['participantid']]))
+                        {
+                            continue;
+                        }
+
                         // Has DNF state
                         if ($result['attributes']['State'] === 'DNF')
                         {
@@ -340,6 +347,13 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                     // Loop each result and process the lap
                     foreach ($results as $result)
                     {
+                        // Participant not found, continue to next
+                        if ( ! isset($participants_by_id[
+                                         $result['participantid']]))
+                        {
+                            continue;
+                        }
+
                         // Get participant
                         $part = $participants_by_id[$result['participantid']];
 
@@ -449,6 +463,13 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
 
                     foreach ($results as $result)
                     {
+                        // Participant not found, continue to next
+                        if ( ! isset($participants_by_id[
+                                         $result['participantid']]))
+                        {
+                            continue;
+                        }
+
                         // Get participant
                         $participant = $participants_by_id[
                             $result['participantid']];
