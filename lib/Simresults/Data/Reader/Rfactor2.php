@@ -335,9 +335,14 @@ class Data_Reader_Rfactor2 extends Data_Reader {
         // Default game name
         $game_name = 'rFactor 2';
 
+        // Mod is from gamestockcar
+        if (preg_match('/reiza[0-9]+\.rfm/i', $this->dom_value('Mod')))
+        {
+            $game_name = 'Game Stock Car Extreme';
+        }
         // Game version matches rfactor 1 version. Let's hope rfactor 2 will
         // never use this version :)
-        if ($game_version === '1.255')
+        elseif ($game_version === '1.255')
         {
             // It's rfactor 1
             $game_name = 'rFactor';

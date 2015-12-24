@@ -1,0 +1,2588 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE rF [
+<!ENTITY rFEnt "rFactor Entity">
+]>
+<rFactorXML version="1.0">
+<RaceResults>
+<Setting>Multiplayer</Setting>
+<ServerName>GBR - V8 Supercars</ServerName>
+<PlayerFile>Dale Green</PlayerFile>
+<DateTime>1449116405</DateTime>
+<TimeString>2015/12/02 20:20:05</TimeString>
+<Mod>reiza16.rfm</Mod>
+<Season></Season>
+<TrackVenue>Adelaide Street Circuit</TrackVenue>
+<TrackCourse>Adelaide 2011</TrackCourse>
+<TrackEvent>Adelaide 2011</TrackEvent>
+<TrackLength>3207.2</TrackLength>
+<GameVersion>1.700</GameVersion>
+<Dedicated>0</Dedicated>
+<ConnectionType upload="64" download="64">ISDN</ConnectionType>
+<RaceLaps>30</RaceLaps>
+<RaceTime>0</RaceTime>
+<MechFailRate>1</MechFailRate>
+<DamageMult>50</DamageMult>
+<FuelMult>1</FuelMult>
+<TireMult>1</TireMult>
+<VehiclesAllowed>|superV8|SuperV8</VehiclesAllowed>
+<ParcFerme>0</ParcFerme>
+<FixedSetups>0</FixedSetups>
+<FreeSettings>2147483647</FreeSettings>
+<FixedUpgrades>0</FixedUpgrades>
+<Race>
+<DateTime>1449116441</DateTime>
+<TimeString>2015/12/02 20:20:41</TimeString>
+<Laps>30</Laps>
+<Minutes>0</Minutes>
+<Stream>
+<Penalty et="41.3">T Alan received Drive Thru penalty, 0s, 0laps. Result: penalties=1, 1st=Drive Thru,0s</Penalty>
+<Incident et="47.9">T Alan(19) reported contact (0.16) with another vehicle Tony Diamond(5)</Incident>
+<Incident et="48.0">T Alan(19) reported contact (0.06) with another vehicle Tony Diamond(5)</Incident>
+<Incident et="53.6">Scott Beck(3) reported contact (0.39) with another vehicle robbmc(14)</Incident>
+<Incident et="53.6">robbmc(14) reported contact (0.32) with another vehicle Scott Beck(3)</Incident>
+<Incident et="54.0">Scott Beck(3) reported contact (0.13) with another vehicle JImmy Regan(17)</Incident>
+<Incident et="54.1">JImmy Regan(17) reported contact (0.16) with another vehicle Scott Beck(3)</Incident>
+<Incident et="54.1">Scott Beck(3) reported contact (0.03) with another vehicle JImmy Regan(17)</Incident>
+<Incident et="54.3">Angelo dos Santos(12) reported contact (0.10) with Immovable</Incident>
+<Incident et="54.5">Dan Wheat(18) reported contact (0.45) with another vehicle robbmc(14)</Incident>
+<Incident et="54.5">Dan Wheat(18) reported contact (0.03) with another vehicle robbmc(14)</Incident>
+<Incident et="54.5">robbmc(14) reported contact (0.68) with another vehicle Dan Wheat(18)</Incident>
+<Incident et="54.5">robbmc(14) reported contact (0.10) with another vehicle Dan Wheat(18)</Incident>
+<Incident et="54.6">robbmc(14) reported contact (0.19) with another vehicle Dan Wheat(18)</Incident>
+<Incident et="55.1">Dan Wheat(18) reported contact (0.03) with Immovable</Incident>
+<Incident et="66.6">Scott Beck(3) reported contact (0.32) with another vehicle robbmc(14)</Incident>
+<Incident et="66.6">robbmc(14) reported contact (0.29) with another vehicle Scott Beck(3)</Incident>
+<Incident et="66.6">robbmc(14) reported contact (0.16) with another vehicle Scott Beck(3)</Incident>
+<Incident et="66.6">Scott Beck(3) reported contact (0.03) with another vehicle robbmc(14)</Incident>
+<Incident et="67.5">robbmc(14) reported contact (0.39) with another vehicle T Alan(19)</Incident>
+<Incident et="67.6">robbmc(14) reported contact (0.13) with another vehicle T Alan(19)</Incident>
+<Incident et="67.6">Scott Beck(3) reported contact (1.00) with Immovable</Incident>
+<Incident et="67.9">Scott Beck(3) reported contact (0.16) with Immovable</Incident>
+<Incident et="67.9">Scott Beck(3) reported contact (0.32) with Immovable</Incident>
+<Incident et="68.3">Scott Beck(3) reported contact (0.39) with another vehicle robbmc(14)</Incident>
+<Incident et="68.3">robbmc(14) reported contact (0.39) with another vehicle Scott Beck(3)</Incident>
+<Incident et="68.4">robbmc(14) reported contact (0.29) with another vehicle Scott Beck(3)</Incident>
+<Incident et="68.4">Scott Beck(3) reported contact (0.16) with another vehicle robbmc(14)</Incident>
+<Incident et="68.5">robbmc(14) reported contact (0.16) with another vehicle Scott Beck(3)</Incident>
+<Incident et="68.8">Scott Beck(3) reported contact (1.00) with another vehicle T Alan(19)</Incident>
+<Incident et="68.8">Scott Beck(3) reported contact (0.06) with another vehicle T Alan(19)</Incident>
+<Incident et="68.8">T Alan(19) reported contact (0.48) with another vehicle Scott Beck(3)</Incident>
+<Incident et="68.8">T Alan(19) reported contact (0.26) with another vehicle Scott Beck(3)</Incident>
+<Incident et="68.8">T Alan(19) reported contact (0.10) with another vehicle Scott Beck(3)</Incident>
+<Incident et="68.9">T Alan(19) reported contact (0.23) with another vehicle Scott Beck(3)</Incident>
+<Incident et="71.1">Dale Green(21) reported contact (0.55) with another vehicle Rich Mink(1)</Incident>
+<Incident et="71.1">Dale Green(21) reported contact (0.23) with another vehicle Rich Mink(1)</Incident>
+<Incident et="71.2">T Alan(19) reported contact (0.03) with another vehicle Scott Beck(3)</Incident>
+<Incident et="71.3">Rich Mink(1) reported contact (0.48) with another vehicle Dale Green(21)</Incident>
+<Incident et="71.3">Rich Mink(1) reported contact (0.23) with another vehicle Dale Green(21)</Incident>
+<Score et="71.4">Ricardo Campos(8) lap=0 point=1 t=30.029 et=71.183</Score>
+<Score et="72.4">Angelo dos Santos(12) lap=0 point=1 t=31.077 et=72.230</Score>
+<Incident et="72.6">JImmy Regan(17) reported contact (0.23) with another vehicle Dale Green(21)</Incident>
+<Score et="72.8">RSM_Stenny(6) lap=0 point=1 t=31.394 et=72.548</Score>
+<Score et="73.1">Jeff Hooper(4) lap=0 point=1 t=31.802 et=72.955</Score>
+<Score et="73.6">David Fernandes(13) lap=0 point=1 t=32.324 et=73.478</Score>
+<Score et="74.1">Chris Sherburn(16) lap=0 point=1 t=32.776 et=73.930</Score>
+<Score et="74.5">David Slute(11) lap=0 point=1 t=33.265 et=74.418</Score>
+<Score et="75.2">Rich Mink(1) lap=0 point=1 t=33.928 et=75.081</Score>
+<Score et="75.7">Dale Green(21) lap=0 point=1 t=34.574 et=75.728</Score>
+<Score et="76.5">JImmy Regan(17) lap=0 point=1 t=35.258 et=76.411</Score>
+<Score et="79.2">Scott Beck(3) lap=0 point=1 t=37.900 et=79.054</Score>
+<Score et="79.9">T Alan(19) lap=0 point=1 t=38.632 et=79.786</Score>
+<Score et="80.4">robbmc(14) lap=0 point=1 t=39.043 et=80.197</Score>
+<Score et="80.9">Dan Wheat(18) lap=0 point=1 t=39.588 et=80.741</Score>
+<Score et="81.4">Tony Diamond(5) lap=0 point=1 t=40.084 et=81.238</Score>
+<Score et="81.8">brian potvin(2) lap=0 point=1 t=40.461 et=81.615</Score>
+<Incident et="81.9">Chris Sherburn(16) reported contact (0.06) with another vehicle David Fernandes(13)</Incident>
+<Incident et="82.0">David Fernandes(13) reported contact (0.03) with another vehicle Chris Sherburn(16)</Incident>
+<Score et="82.6">Ed Durbin(9) lap=0 point=1 t=41.299 et=82.453</Score>
+<Incident et="95.6">Jeff Hooper(4) reported contact (0.35) with Immovable</Incident>
+<Incident et="95.6">Jeff Hooper(4) reported contact (1.00) with Immovable</Incident>
+<Score et="97.5">Ricardo Campos(8) lap=0 point=2 t=56.068 et=97.221</Score>
+<Incident et="98.0">Rich Mink(1) reported contact (0.48) with Immovable</Incident>
+<Incident et="98.0">Rich Mink(1) reported contact (1.00) with Immovable</Incident>
+<Incident et="98.0">Rich Mink(1) reported contact (0.03) with Immovable</Incident>
+<Score et="98.3">Angelo dos Santos(12) lap=0 point=2 t=56.955 et=98.108</Score>
+<Score et="98.6">RSM_Stenny(6) lap=0 point=2 t=57.068 et=98.222</Score>
+<Score et="98.9">Jeff Hooper(4) lap=0 point=2 t=57.577 et=98.731</Score>
+<Incident et="99.6">JImmy Regan(17) reported contact (0.13) with Immovable</Incident>
+<Incident et="99.9">JImmy Regan(17) reported contact (0.10) with Immovable</Incident>
+<Score et="100.0">David Fernandes(13) lap=0 point=2 t=58.649 et=99.803</Score>
+<Incident et="100.2">T Alan(19) reported contact (0.03) with Immovable</Incident>
+<Score et="100.8">Chris Sherburn(16) lap=0 point=2 t=59.410 et=100.564</Score>
+<Score et="101.1">David Slute(11) lap=0 point=2 t=59.682 et=100.836</Score>
+<Score et="101.9">Dale Green(21) lap=0 point=2 t=60.767 et=101.920</Score>
+<Score et="102.0">Rich Mink(1) lap=0 point=2 t=60.690 et=101.843</Score>
+<Score et="102.9">JImmy Regan(17) lap=0 point=2 t=61.572 et=102.725</Score>
+<Incident et="103.1">robbmc(14) reported contact (0.68) with Immovable</Incident>
+<Incident et="103.2">robbmc(14) reported contact (0.32) with Immovable</Incident>
+<Incident et="103.2">robbmc(14) reported contact (0.94) with Immovable</Incident>
+<Incident et="105.1">brian potvin(2) reported contact (0.45) with Immovable</Incident>
+<Incident et="105.2">brian potvin(2) reported contact (1.00) with Immovable</Incident>
+<Score et="106.1">Scott Beck(3) lap=0 point=2 t=64.707 et=105.860</Score>
+<Score et="106.7">T Alan(19) lap=0 point=2 t=65.411 et=106.565</Score>
+<Incident et="107.1">brian potvin(2) reported contact (1.00) with Immovable</Incident>
+<Incident et="107.2">brian potvin(2) reported contact (1.00) with Immovable</Incident>
+<Score et="107.4">robbmc(14) lap=0 point=2 t=66.018 et=107.172</Score>
+<Score et="107.6">Dan Wheat(18) lap=0 point=2 t=66.231 et=107.385</Score>
+<Score et="107.7">Tony Diamond(5) lap=0 point=2 t=66.399 et=107.553</Score>
+<Incident et="108.9">brian potvin(2) reported contact (0.65) with Immovable</Incident>
+<Incident et="108.9">brian potvin(2) reported contact (0.61) with Immovable</Incident>
+<Incident et="109.0">brian potvin(2) reported contact (0.77) with Immovable</Incident>
+<Incident et="110.0">brian potvin(2) reported contact (0.90) with Immovable</Incident>
+<Incident et="110.1">brian potvin(2) reported contact (0.42) with Immovable</Incident>
+<Score et="110.6">Ed Durbin(9) lap=0 point=2 t=69.228 et=110.382</Score>
+<Score et="114.6">brian potvin(2) lap=0 point=2 t=73.174 et=114.328</Score>
+<Incident et="124.9">Ed Durbin(9) reported contact (0.74) with Immovable</Incident>
+<Incident et="125.1">Ed Durbin(9) reported contact (0.23) with Immovable</Incident>
+<Incident et="125.1">Ed Durbin(9) reported contact (0.39) with Immovable</Incident>
+<Score et="129.8">Ricardo Campos(8) lap=1 point=0 t=88.469 et=129.622</Score>
+<Score et="130.5">Angelo dos Santos(12) lap=1 point=0 t=89.139 et=130.293</Score>
+<Score et="130.9">RSM_Stenny(6) lap=1 point=0 t=89.525 et=130.679</Score>
+<Score et="131.9">Jeff Hooper(4) lap=1 point=0 t=90.577 et=131.731</Score>
+<Score et="132.8">David Fernandes(13) lap=1 point=0 t=91.530 et=132.684</Score>
+<Score et="133.2">Chris Sherburn(16) lap=1 point=0 t=91.879 et=133.033</Score>
+<Score et="133.6">David Slute(11) lap=1 point=0 t=92.281 et=133.435</Score>
+<Score et="135.1">Rich Mink(1) lap=1 point=0 t=93.891 et=135.045</Score>
+<Score et="135.7">Dale Green(21) lap=1 point=0 t=94.513 et=135.667</Score>
+<Score et="136.3">JImmy Regan(17) lap=1 point=0 t=95.021 et=136.175</Score>
+<Score et="139.4">Scott Beck(3) lap=1 point=0 t=98.049 et=139.203</Score>
+<Score et="140.5">T Alan(19) lap=1 point=0 t=99.210 et=140.364</Score>
+<Score et="141.1">Dan Wheat(18) lap=1 point=0 t=99.763 et=140.916</Score>
+<Score et="141.4">Tony Diamond(5) lap=1 point=0 t=100.089 et=141.243</Score>
+<Score et="141.6">robbmc(14) lap=1 point=0 t=100.325 et=141.479</Score>
+<Score et="146.2">Ed Durbin(9) lap=1 point=0 t=104.855 et=146.009</Score>
+<Incident et="150.9">robbmc(14) reported contact (0.84) with Immovable</Incident>
+<Incident et="151.1">robbmc(14) reported contact (0.68) with Immovable</Incident>
+<Incident et="151.1">robbmc(14) reported contact (0.81) with Immovable</Incident>
+<Incident et="151.1">robbmc(14) reported contact (0.52) with Immovable</Incident>
+<Score et="151.8">brian potvin(2) lap=1 point=0 t=110.551 et=151.705</Score>
+<Incident et="153.6">robbmc(14) reported contact (0.61) with Immovable</Incident>
+<Incident et="153.6">robbmc(14) reported contact (0.00) with Immovable</Incident>
+<Score et="154.3">Ricardo Campos(8) lap=1 point=1 t=24.427 et=154.049</Score>
+<Score et="155.1">Angelo dos Santos(12) lap=1 point=1 t=24.522 et=154.815</Score>
+<Score et="155.3">RSM_Stenny(6) lap=1 point=1 t=24.358 et=155.037</Score>
+<Score et="156.4">Jeff Hooper(4) lap=1 point=1 t=24.473 et=156.204</Score>
+<Incident et="156.6">robbmc(14) reported contact (1.00) with Immovable</Incident>
+<Incident et="156.6">robbmc(14) reported contact (0.77) with Immovable</Incident>
+<Incident et="156.6">robbmc(14) reported contact (1.00) with Immovable</Incident>
+<Score et="157.6">David Fernandes(13) lap=1 point=1 t=24.754 et=157.438</Score>
+<Score et="157.9">Chris Sherburn(16) lap=1 point=1 t=24.691 et=157.724</Score>
+<Score et="158.3">David Slute(11) lap=1 point=1 t=24.690 et=158.125</Score>
+<Score et="160.1">Rich Mink(1) lap=1 point=1 t=24.783 et=159.828</Score>
+<Score et="160.8">Dale Green(21) lap=1 point=1 t=25.154 et=160.820</Score>
+<Score et="161.5">JImmy Regan(17) lap=1 point=1 t=25.106 et=161.281</Score>
+<Incident et="161.6">RSM_Stenny(6) reported contact (0.13) with Immovable</Incident>
+<Incident et="162.1">robbmc(14) reported contact (1.00) with another vehicle brian potvin(2)</Incident>
+<Incident et="162.1">robbmc(14) reported contact (1.00) with another vehicle brian potvin(2)</Incident>
+<Incident et="162.1">brian potvin(2) reported contact (1.00) with another vehicle robbmc(14)</Incident>
+<Incident et="162.1">robbmc(14) reported contact (0.13) with another vehicle brian potvin(2)</Incident>
+<Incident et="162.4">brian potvin(2) reported contact (0.55) with Immovable</Incident>
+<Incident et="162.6">brian potvin(2) reported contact (0.68) with Immovable</Incident>
+<Score et="164.8">Scott Beck(3) lap=1 point=1 t=25.425 et=164.628</Score>
+<Score et="166.0">T Alan(19) lap=1 point=1 t=25.464 et=165.828</Score>
+<Score et="167.3">Dan Wheat(18) lap=1 point=1 t=26.195 et=167.112</Score>
+<Score et="167.7">Tony Diamond(5) lap=1 point=1 t=26.314 et=167.557</Score>
+<Incident et="172.0">robbmc(14) reported contact (1.00) with Immovable</Incident>
+<Incident et="172.1">robbmc(14) reported contact (1.00) with Immovable</Incident>
+<Score et="175.3">Ed Durbin(9) lap=1 point=1 t=29.094 et=175.103</Score>
+<Incident et="178.4">Jeff Hooper(4) reported contact (0.35) with Immovable</Incident>
+<Incident et="178.4">Jeff Hooper(4) reported contact (1.00) with Immovable</Incident>
+<Incident et="178.9">Jeff Hooper(4) reported contact (0.13) with Immovable</Incident>
+<Score et="180.2">Ricardo Campos(8) lap=1 point=2 t=50.363 et=179.986</Score>
+<Score et="180.6">Angelo dos Santos(12) lap=1 point=2 t=50.116 et=180.409</Score>
+<Score et="180.8">RSM_Stenny(6) lap=1 point=2 t=49.833 et=180.511</Score>
+<Score et="181.1">brian potvin(2) lap=1 point=1 t=29.201 et=180.907</Score>
+<Score et="181.7">Jeff Hooper(4) lap=1 point=2 t=49.852 et=181.583</Score>
+<Incident et="182.4">Rich Mink(1) reported contact (0.58) with Immovable</Incident>
+<Score et="183.3">David Fernandes(13) lap=1 point=2 t=50.469 et=183.153</Score>
+<Score et="183.8">Chris Sherburn(16) lap=1 point=2 t=50.586 et=183.619</Score>
+<Score et="184.1">David Slute(11) lap=1 point=2 t=50.420 et=183.855</Score>
+<Score et="185.6">Rich Mink(1) lap=1 point=2 t=50.393 et=185.438</Score>
+<Score et="186.5">Dale Green(21) lap=1 point=2 t=50.776 et=186.442</Score>
+<Score et="187.3">JImmy Regan(17) lap=1 point=2 t=50.905 et=187.080</Score>
+<Incident et="189.8">Dan Wheat(18) reported contact (0.03) with Immovable</Incident>
+<Incident et="189.8">Dan Wheat(18) reported contact (1.00) with Immovable</Incident>
+<Score et="191.0">Scott Beck(3) lap=1 point=2 t=51.609 et=190.812</Score>
+<Score et="192.6">T Alan(19) lap=1 point=2 t=52.101 et=192.466</Score>
+<Score et="193.2">Dan Wheat(18) lap=1 point=2 t=52.145 et=193.061</Score>
+<Score et="193.6">Tony Diamond(5) lap=1 point=2 t=52.160 et=193.403</Score>
+<Score et="201.7">Ed Durbin(9) lap=1 point=2 t=55.505 et=201.515</Score>
+<Score et="208.2">brian potvin(2) lap=1 point=2 t=56.348 et=208.053</Score>
+<Score et="212.6">Angelo dos Santos(12) lap=2 point=0 t=82.156 et=212.449</Score>
+<Score et="213.1">RSM_Stenny(6) lap=2 point=0 t=82.213 et=212.892</Score>
+<Score et="214.0">Jeff Hooper(4) lap=2 point=0 t=82.154 et=213.885</Score>
+<Score et="214.2">Ricardo Campos(8) lap=2 point=0 t=84.401 et=214.024</Score>
+<Score et="215.5">David Fernandes(13) lap=2 point=0 t=82.683 et=215.367</Score>
+<Score et="216.0">Chris Sherburn(16) lap=2 point=0 t=82.843 et=215.876</Score>
+<Score et="216.6">David Slute(11) lap=2 point=0 t=82.982 et=216.418</Score>
+<Score et="217.8">Rich Mink(1) lap=2 point=0 t=82.608 et=217.653</Score>
+<Incident et="218.3">T Alan(19) reported contact (0.06) with another vehicle Dan Wheat(18)</Incident>
+<Score et="219.0">Dale Green(21) lap=2 point=0 t=83.353 et=219.019</Score>
+<Score et="220.5">JImmy Regan(17) lap=2 point=0 t=84.213 et=220.388</Score>
+<Score et="224.0">Scott Beck(3) lap=2 point=0 t=84.625 et=223.828</Score>
+<Score et="227.3">Dan Wheat(18) lap=2 point=0 t=86.228 et=227.145</Score>
+<Score et="227.5">Tony Diamond(5) lap=2 point=0 t=86.180 et=227.422</Score>
+<Score et="227.7">T Alan(19) lap=2 point=0 t=87.204 et=227.569</Score>
+<Incident et="231.5">Tony Diamond(5) reported contact (0.06) with another vehicle Dan Wheat(18)</Incident>
+<Incident et="231.5">Tony Diamond(5) reported contact (0.06) with another vehicle Dan Wheat(18)</Incident>
+<Incident et="231.5">Dan Wheat(18) reported contact (0.26) with another vehicle Tony Diamond(5)</Incident>
+<Incident et="232.6">Tony Diamond(5) reported contact (0.52) with Immovable</Incident>
+<Incident et="232.8">Tony Diamond(5) reported contact (0.03) with Immovable</Incident>
+<Incident et="232.8">Tony Diamond(5) reported contact (0.39) with Immovable</Incident>
+<Incident et="233.0">Dan Wheat(18) reported contact (0.61) with Immovable</Incident>
+<Incident et="233.1">Dan Wheat(18) reported contact (0.42) with Immovable</Incident>
+<Incident et="233.1">Dan Wheat(18) reported contact (1.00) with Immovable</Incident>
+<Score et="235.7">Ed Durbin(9) lap=2 point=0 t=89.520 et=235.529</Score>
+<Incident et="236.1">Rich Mink(1) reported contact (1.00) with Immovable</Incident>
+<Incident et="236.1">Rich Mink(1) reported contact (0.00) with Immovable</Incident>
+<Incident et="236.3">Rich Mink(1) reported contact (0.35) with Immovable</Incident>
+<Score et="237.2">Angelo dos Santos(12) lap=2 point=1 t=24.515 et=236.964</Score>
+<Score et="237.6">RSM_Stenny(6) lap=2 point=1 t=24.419 et=237.311</Score>
+<Score et="238.3">Jeff Hooper(4) lap=2 point=1 t=24.280 et=238.165</Score>
+<Score et="239.2">Ricardo Campos(8) lap=2 point=1 t=24.997 et=239.020</Score>
+<Score et="240.2">David Fernandes(13) lap=2 point=1 t=24.753 et=240.120</Score>
+<Score et="240.9">Chris Sherburn(16) lap=2 point=1 t=24.788 et=240.664</Score>
+<Score et="241.2">David Slute(11) lap=2 point=1 t=24.597 et=241.014</Score>
+<Score et="241.7">brian potvin(2) lap=2 point=0 t=89.816 et=241.521</Score>
+<Score et="243.5">Rich Mink(1) lap=2 point=1 t=25.650 et=243.303</Score>
+<Score et="243.9">Dale Green(21) lap=2 point=1 t=24.898 et=243.917</Score>
+<Score et="245.5">JImmy Regan(17) lap=2 point=1 t=24.921 et=245.309</Score>
+<Score et="248.8">Scott Beck(3) lap=2 point=1 t=24.788 et=248.616</Score>
+<Score et="254.4">Dan Wheat(18) lap=2 point=1 t=27.062 et=254.206</Score>
+<Score et="256.5">T Alan(19) lap=2 point=1 t=28.757 et=256.326</Score>
+<Score et="256.8">Tony Diamond(5) lap=2 point=1 t=29.231 et=256.653</Score>
+<Score et="262.1">Ed Durbin(9) lap=2 point=1 t=26.365 et=261.894</Score>
+<Score et="263.5">Angelo dos Santos(12) lap=2 point=2 t=50.790 et=263.239</Score>
+<Score et="263.7">Jeff Hooper(4) lap=2 point=2 t=49.545 et=263.430</Score>
+<Score et="263.7">RSM_Stenny(6) lap=2 point=2 t=50.427 et=263.319</Score>
+<Score et="264.7">Ricardo Campos(8) lap=2 point=2 t=50.489 et=264.513</Score>
+<Score et="265.9">David Fernandes(13) lap=2 point=2 t=50.363 et=265.730</Score>
+<Score et="266.4">Chris Sherburn(16) lap=2 point=2 t=50.303 et=266.178</Score>
+<Score et="266.6">David Slute(11) lap=2 point=2 t=50.014 et=266.432</Score>
+<Score et="267.7">brian potvin(2) lap=2 point=1 t=26.061 et=267.582</Score>
+<Score et="269.1">Rich Mink(1) lap=2 point=2 t=51.285 et=268.938</Score>
+<Score et="269.3">Dale Green(21) lap=2 point=2 t=50.286 et=269.306</Score>
+<Score et="271.4">JImmy Regan(17) lap=2 point=2 t=50.823 et=271.211</Score>
+<Score et="275.1">Scott Beck(3) lap=2 point=2 t=51.104 et=274.932</Score>
+<Incident et="277.8">RSM_Stenny(6) reported contact (1.00) with Immovable</Incident>
+<Incident et="278.1">T Alan(19) reported contact (0.29) with Immovable</Incident>
+<Incident et="278.7">RSM_Stenny(6) reported contact (1.00) with Immovable</Incident>
+<Incident et="278.7">RSM_Stenny(6) reported contact (0.52) with Immovable</Incident>
+<Incident et="278.7">Jeff Hooper(4) reported contact (0.52) with another vehicle RSM_Stenny(6)</Incident>
+<Incident et="278.7">Jeff Hooper(4) reported contact (0.10) with another vehicle RSM_Stenny(6)</Incident>
+<Incident et="278.7">Jeff Hooper(4) reported contact (0.42) with another vehicle RSM_Stenny(6)</Incident>
+<Incident et="278.7">Jeff Hooper(4) reported contact (0.10) with another vehicle RSM_Stenny(6)</Incident>
+<Incident et="278.7">RSM_Stenny(6) reported contact (1.00) with another vehicle Jeff Hooper(4)</Incident>
+<Incident et="278.8">Jeff Hooper(4) reported contact (0.42) with another vehicle RSM_Stenny(6)</Incident>
+<Incident et="278.8">RSM_Stenny(6) reported contact (0.90) with another vehicle Jeff Hooper(4)</Incident>
+<Incident et="278.8">RSM_Stenny(6) reported contact (0.06) with another vehicle Jeff Hooper(4)</Incident>
+<Incident et="278.8">Jeff Hooper(4) reported contact (0.03) with another vehicle RSM_Stenny(6)</Incident>
+<Incident et="278.8">RSM_Stenny(6) reported contact (0.03) with another vehicle Jeff Hooper(4)</Incident>
+<Incident et="278.8">T Alan(19) reported contact (1.00) with Immovable</Incident>
+<Incident et="278.9">T Alan(19) reported contact (1.00) with Immovable</Incident>
+<Incident et="279.0">T Alan(19) reported contact (0.39) with Immovable</Incident>
+<Incident et="279.0">T Alan(19) reported contact (0.26) with Immovable</Incident>
+<Incident et="279.3">RSM_Stenny(6) reported contact (0.35) with Immovable</Incident>
+<Incident et="279.5">Jeff Hooper(4) reported contact (0.45) with another vehicle RSM_Stenny(6)</Incident>
+<Incident et="279.5">Jeff Hooper(4) reported contact (0.10) with another vehicle RSM_Stenny(6)</Incident>
+<Incident et="279.8">David Fernandes(13) reported contact (0.48) with Immovable</Incident>
+<Incident et="279.9">RSM_Stenny(6) reported contact (0.10) with Immovable</Incident>
+<Incident et="280.0">David Fernandes(13) reported contact (0.29) with Immovable</Incident>
+<Score et="280.4">Dan Wheat(18) lap=2 point=2 t=53.036 et=280.181</Score>
+<Incident et="280.7">T Alan(19) reported contact (1.00) with Immovable</Incident>
+<Incident et="280.7">T Alan(19) reported contact (0.06) with Immovable</Incident>
+<Score et="282.9">Tony Diamond(5) lap=2 point=2 t=55.267 et=282.689</Score>
+<Incident et="284.2">T Alan(19) reported contact (0.13) with Immovable</Incident>
+<Incident et="284.6">Ed Durbin(9) reported contact (0.42) with Immovable</Incident>
+<Incident et="284.7">Ed Durbin(9) reported contact (0.23) with Immovable</Incident>
+<Incident et="284.7">Ed Durbin(9) reported contact (0.65) with Immovable</Incident>
+<Incident et="286.1">Ed Durbin(9) reported contact (0.29) with Immovable</Incident>
+<Score et="289.2">Ed Durbin(9) lap=2 point=2 t=53.462 et=288.991</Score>
+<Score et="294.9">brian potvin(2) lap=2 point=2 t=53.181 et=294.703</Score>
+<Score et="298.1">Jeff Hooper(4) lap=3 point=0 t=84.130 et=298.015</Score>
+<Score et="298.8">Ricardo Campos(8) lap=3 point=0 t=84.646 et=298.670</Score>
+<Score et="299.0">Chris Sherburn(16) lap=3 point=0 t=82.992 et=298.868</Score>
+<Incident et="299.6">T Alan(19) reported contact (1.00) with Immovable</Incident>
+<Incident et="299.6">T Alan(19) reported contact (0.61) with Immovable</Incident>
+<Score et="300.3">David Fernandes(13) lap=3 point=0 t=84.811 et=300.178</Score>
+<Score et="300.5">David Slute(11) lap=3 point=0 t=83.969 et=300.386</Score>
+<Score et="302.7">Rich Mink(1) lap=3 point=0 t=84.932 et=302.585</Score>
+<Score et="302.8">Dale Green(21) lap=3 point=0 t=83.783 et=302.802</Score>
+<Score et="303.6">Angelo dos Santos(12) lap=3 point=0 t=91.029 et=303.478</Score>
+<Score et="304.3">JImmy Regan(17) lap=3 point=0 t=83.774 et=304.162</Score>
+<Incident et="304.5">David Fernandes(13) reported contact (0.32) with another vehicle David Slute(11)</Incident>
+<Incident et="304.5">David Slute(11) reported contact (0.45) with another vehicle David Fernandes(13)</Incident>
+<Score et="308.6">Scott Beck(3) lap=3 point=0 t=84.626 et=308.455</Score>
+<Score et="309.6">RSM_Stenny(6) lap=3 point=0 t=96.507 et=309.399</Score>
+<Score et="313.3">Dan Wheat(18) lap=3 point=0 t=85.961 et=313.106</Score>
+<Score et="315.3">Tony Diamond(5) lap=3 point=0 t=87.798 et=315.221</Score>
+<Score et="323.0">Jeff Hooper(4) lap=3 point=1 t=24.815 et=322.830</Score>
+<Score et="323.1">Ed Durbin(9) lap=3 point=0 t=87.424 et=322.953</Score>
+<Score et="323.6">Ricardo Campos(8) lap=3 point=1 t=24.664 et=323.333</Score>
+<Score et="324.1">Chris Sherburn(16) lap=3 point=1 t=25.004 et=323.871</Score>
+<Score et="325.1">David Fernandes(13) lap=3 point=1 t=24.704 et=324.882</Score>
+<Incident et="326.0">Scott Beck(3) reported contact (1.00) with Immovable</Incident>
+<Incident et="326.0">Scott Beck(3) reported contact (0.10) with Immovable</Incident>
+<Score et="326.2">David Slute(11) lap=3 point=1 t=25.589 et=325.975</Score>
+<Score et="327.6">Rich Mink(1) lap=3 point=1 t=24.899 et=327.485</Score>
+<Score et="327.9">Dale Green(21) lap=3 point=1 t=25.070 et=327.872</Score>
+<Score et="328.3">Angelo dos Santos(12) lap=3 point=1 t=24.652 et=328.130</Score>
+<Score et="328.4">brian potvin(2) lap=3 point=0 t=86.717 et=328.239</Score>
+<Score et="329.2">JImmy Regan(17) lap=3 point=1 t=24.896 et=329.059</Score>
+<Score et="334.1">RSM_Stenny(6) lap=3 point=1 t=24.429 et=333.828</Score>
+<Incident et="334.3">Ed Durbin(9) reported contact (0.19) with Immovable</Incident>
+<Incident et="334.4">Ed Durbin(9) reported contact (0.77) with Immovable</Incident>
+<Score et="335.0">Scott Beck(3) lap=3 point=1 t=26.298 et=334.753</Score>
+<Incident et="335.0">Ed Durbin(9) reported contact (0.13) with Immovable</Incident>
+<Score et="339.0">Dan Wheat(18) lap=3 point=1 t=25.691 et=338.797</Score>
+<Score et="340.2">Tony Diamond(5) lap=3 point=1 t=24.866 et=340.087</Score>
+<Incident et="345.2">Jeff Hooper(4) reported contact (0.10) with Immovable</Incident>
+<Incident et="345.2">Jeff Hooper(4) reported contact (0.74) with Immovable</Incident>
+<Score et="348.6">Jeff Hooper(4) lap=3 point=2 t=50.353 et=348.368</Score>
+<Score et="349.2">Ricardo Campos(8) lap=3 point=2 t=50.300 et=348.970</Score>
+<Score et="349.6">Chris Sherburn(16) lap=3 point=2 t=50.509 et=349.377</Score>
+<Score et="350.2">Ed Durbin(9) lap=3 point=1 t=27.061 et=350.014</Score>
+<Score et="350.6">David Fernandes(13) lap=3 point=2 t=50.318 et=350.496</Score>
+<Score et="351.9">David Slute(11) lap=3 point=2 t=51.289 et=351.675</Score>
+<Score et="353.1">Rich Mink(1) lap=3 point=2 t=50.363 et=352.948</Score>
+<Score et="353.4">Dale Green(21) lap=3 point=2 t=50.593 et=353.395</Score>
+<Score et="353.9">Angelo dos Santos(12) lap=3 point=2 t=50.147 et=353.625</Score>
+<Score et="354.2">brian potvin(2) lap=3 point=1 t=25.833 et=354.072</Score>
+<Score et="355.1">JImmy Regan(17) lap=3 point=2 t=50.694 et=354.857</Score>
+<Score et="359.2">RSM_Stenny(6) lap=3 point=2 t=49.521 et=358.920</Score>
+<Score et="361.5">Scott Beck(3) lap=3 point=2 t=52.878 et=361.332</Score>
+<Score et="365.0">Dan Wheat(18) lap=3 point=2 t=51.676 et=364.782</Score>
+<Score et="366.1">Tony Diamond(5) lap=3 point=2 t=50.747 et=365.967</Score>
+<Chat et="368.7">T Alan has left the game but vehicle has been stored in the garage</Chat>
+<Incident et="372.1">Ed Durbin(9) reported contact (0.03) with Immovable</Incident>
+<Score et="377.4">Ed Durbin(9) lap=3 point=2 t=54.204 et=377.157</Score>
+<Score et="380.5">Jeff Hooper(4) lap=4 point=0 t=82.374 et=380.389</Score>
+<Score et="380.6">brian potvin(2) lap=3 point=2 t=52.239 et=380.478</Score>
+<Score et="381.3">Ricardo Campos(8) lap=4 point=0 t=82.486 et=381.156</Score>
+<Score et="381.7">Chris Sherburn(16) lap=4 point=0 t=82.684 et=381.551</Score>
+<Score et="384.0">David Slute(11) lap=4 point=0 t=83.430 et=383.817</Score>
+<Score et="384.4">David Fernandes(13) lap=4 point=0 t=84.058 et=384.236</Score>
+<Score et="385.6">Rich Mink(1) lap=4 point=0 t=82.875 et=385.460</Score>
+<Score et="385.8">Dale Green(21) lap=4 point=0 t=82.942 et=385.744</Score>
+<Score et="386.4">Angelo dos Santos(12) lap=4 point=0 t=82.726 et=386.204</Score>
+<Score et="387.3">JImmy Regan(17) lap=4 point=0 t=83.013 et=387.175</Score>
+<Score et="390.8">RSM_Stenny(6) lap=4 point=0 t=81.187 et=390.586</Score>
+<Score et="395.0">Scott Beck(3) lap=4 point=0 t=86.403 et=394.858</Score>
+<Score et="397.3">Dan Wheat(18) lap=4 point=0 t=84.058 et=397.163</Score>
+<Score et="399.0">Tony Diamond(5) lap=4 point=0 t=83.657 et=398.878</Score>
+<Score et="404.9">Jeff Hooper(4) lap=4 point=1 t=24.305 et=404.695</Score>
+<Score et="405.8">Ricardo Campos(8) lap=4 point=1 t=24.413 et=405.569</Score>
+<Score et="406.4">Chris Sherburn(16) lap=4 point=1 t=24.652 et=406.203</Score>
+<Score et="408.6">David Slute(11) lap=4 point=1 t=24.583 et=408.400</Score>
+<Score et="409.1">David Fernandes(13) lap=4 point=1 t=24.710 et=408.945</Score>
+<Score et="410.6">Rich Mink(1) lap=4 point=1 t=24.976 et=410.435</Score>
+<Score et="410.6">Dale Green(21) lap=4 point=1 t=24.883 et=410.627</Score>
+<Score et="411.4">Angelo dos Santos(12) lap=4 point=1 t=24.954 et=411.158</Score>
+<Score et="411.6">Ed Durbin(9) lap=4 point=0 t=88.491 et=411.444</Score>
+<Score et="412.3">JImmy Regan(17) lap=4 point=1 t=24.900 et=412.075</Score>
+<Score et="413.4">brian potvin(2) lap=4 point=0 t=85.002 et=413.240</Score>
+<Score et="414.6">RSM_Stenny(6) lap=4 point=1 t=23.782 et=414.368</Score>
+<Incident et="417.3">JImmy Regan(17) reported contact (0.26) with Immovable</Incident>
+<Score et="420.1">Scott Beck(3) lap=4 point=1 t=25.138 et=419.996</Score>
+<Score et="422.4">Dan Wheat(18) lap=4 point=1 t=25.057 et=422.220</Score>
+<Incident et="423.0">Tony Diamond(5) reported contact (0.45) with Immovable</Incident>
+<Incident et="423.1">Tony Diamond(5) reported contact (0.16) with Immovable</Incident>
+<Incident et="423.1">Tony Diamond(5) reported contact (0.03) with Immovable</Incident>
+<Incident et="423.1">Tony Diamond(5) reported contact (0.23) with Immovable</Incident>
+<Score et="424.8">Tony Diamond(5) lap=4 point=1 t=25.788 et=424.666</Score>
+<Incident et="427.1">Jeff Hooper(4) reported contact (0.61) with Immovable</Incident>
+<Score et="430.1">Jeff Hooper(4) lap=4 point=2 t=49.544 et=429.933</Score>
+<Score et="431.3">Ricardo Campos(8) lap=4 point=2 t=49.946 et=431.102</Score>
+<Chat et="431.3">robbmc has left the game but vehicle has been stored in the garage</Chat>
+<Score et="431.8">Chris Sherburn(16) lap=4 point=2 t=50.044 et=431.595</Score>
+<Incident et="433.1">Rich Mink(1) reported contact (0.68) with Immovable</Incident>
+<Incident et="433.1">Dale Green(21) reported contact (0.87) with Immovable</Incident>
+<Score et="433.9">David Slute(11) lap=4 point=2 t=49.908 et=433.725</Score>
+<Score et="434.7">David Fernandes(13) lap=4 point=2 t=50.302 et=434.537</Score>
+<Score et="436.2">Rich Mink(1) lap=4 point=2 t=50.574 et=436.034</Score>
+<Score et="436.3">Dale Green(21) lap=4 point=2 t=50.529 et=436.274</Score>
+<Score et="436.9">Angelo dos Santos(12) lap=4 point=2 t=50.441 et=436.645</Score>
+<Score et="438.3">JImmy Regan(17) lap=4 point=2 t=50.978 et=438.153</Score>
+<Score et="438.6">Ed Durbin(9) lap=4 point=1 t=26.860 et=438.304</Score>
+<Score et="439.1">brian potvin(2) lap=4 point=1 t=25.680 et=438.921</Score>
+<Score et="440.0">RSM_Stenny(6) lap=4 point=2 t=49.060 et=439.646</Score>
+<Score et="447.1">Scott Beck(3) lap=4 point=2 t=52.001 et=446.858</Score>
+<Score et="448.4">Dan Wheat(18) lap=4 point=2 t=51.056 et=448.219</Score>
+<Incident et="450.7">Ed Durbin(9) reported contact (1.00) with Immovable</Incident>
+<Incident et="450.8">Ed Durbin(9) reported contact (0.84) with Immovable</Incident>
+<Score et="451.4">Tony Diamond(5) lap=4 point=2 t=52.312 et=451.190</Score>
+<Incident et="456.4">Ed Durbin(9) reported contact (0.19) with Immovable</Incident>
+<Incident et="456.4">Ed Durbin(9) reported contact (0.81) with Immovable</Incident>
+<Score et="462.3">Jeff Hooper(4) lap=5 point=0 t=81.750 et=462.140</Score>
+<Score et="463.3">Ricardo Campos(8) lap=5 point=0 t=81.993 et=463.148</Score>
+<Score et="463.8">Chris Sherburn(16) lap=5 point=0 t=82.126 et=463.678</Score>
+<Score et="465.6">David Slute(11) lap=5 point=0 t=81.603 et=465.420</Score>
+<Score et="466.0">brian potvin(2) lap=4 point=2 t=52.517 et=465.757</Score>
+<Score et="467.2">David Fernandes(13) lap=5 point=0 t=82.879 et=467.115</Score>
+<Score et="468.9">Rich Mink(1) lap=5 point=0 t=83.318 et=468.778</Score>
+<Score et="469.2">Dale Green(21) lap=5 point=0 t=83.443 et=469.187</Score>
+<Score et="469.7">Angelo dos Santos(12) lap=5 point=0 t=83.293 et=469.497</Score>
+<Score et="471.4">JImmy Regan(17) lap=5 point=0 t=84.051 et=471.226</Score>
+<Incident et="471.5">Ed Durbin(9) reported contact (0.10) with Immovable</Incident>
+<Score et="471.7">RSM_Stenny(6) lap=5 point=0 t=80.887 et=471.473</Score>
+<Score et="479.0">Ed Durbin(9) lap=4 point=2 t=67.375 et=478.819</Score>
+<Score et="480.0">Scott Beck(3) lap=5 point=0 t=84.964 et=479.822</Score>
+<Score et="481.0">Dan Wheat(18) lap=5 point=0 t=83.696 et=480.859</Score>
+<Incident et="482.1">RSM_Stenny(6) reported contact (0.10) with Immovable</Incident>
+<Incident et="482.1">RSM_Stenny(6) reported contact (1.00) with Immovable</Incident>
+<Score et="484.1">Tony Diamond(5) lap=5 point=0 t=85.075 et=483.953</Score>
+<Score et="486.8">Jeff Hooper(4) lap=5 point=1 t=24.525 et=486.664</Score>
+<Score et="487.6">Ricardo Campos(8) lap=5 point=1 t=24.157 et=487.306</Score>
+<Score et="488.5">Chris Sherburn(16) lap=5 point=1 t=24.636 et=488.314</Score>
+<Incident et="488.6">JImmy Regan(17) reported contact (1.00) with Immovable</Incident>
+<Incident et="488.9">JImmy Regan(17) reported contact (0.06) with Immovable</Incident>
+<Score et="490.4">David Slute(11) lap=5 point=1 t=24.772 et=490.192</Score>
+<Score et="491.8">David Fernandes(13) lap=5 point=1 t=24.564 et=491.678</Score>
+<Score et="493.8">Rich Mink(1) lap=5 point=1 t=24.859 et=493.637</Score>
+<Score et="494.8">Angelo dos Santos(12) lap=5 point=1 t=25.104 et=494.601</Score>
+<Score et="495.1">Dale Green(21) lap=5 point=1 t=25.930 et=495.117</Score>
+<Score et="496.6">RSM_Stenny(6) lap=5 point=1 t=24.843 et=496.316</Score>
+<Score et="497.1">JImmy Regan(17) lap=5 point=1 t=25.649 et=496.875</Score>
+<Score et="498.9">brian potvin(2) lap=5 point=0 t=85.526 et=498.766</Score>
+<Score et="505.1">Scott Beck(3) lap=5 point=1 t=25.070 et=504.892</Score>
+<Score et="506.5">Dan Wheat(18) lap=5 point=1 t=25.396 et=506.256</Score>
+<Score et="509.1">Tony Diamond(5) lap=5 point=1 t=24.926 et=508.879</Score>
+<Score et="512.1">Jeff Hooper(4) lap=5 point=2 t=49.863 et=512.003</Score>
+<Score et="513.1">Ricardo Campos(8) lap=5 point=2 t=49.670 et=512.818</Score>
+<Score et="513.8">Chris Sherburn(16) lap=5 point=2 t=49.929 et=513.607</Score>
+<Score et="514.0">Ed Durbin(9) lap=5 point=0 t=102.439 et=513.883</Score>
+<Incident et="514.7">Angelo dos Santos(12) reported contact (0.29) with Immovable</Incident>
+<Incident et="514.9">Tony Diamond(5) reported contact (1.00) with Immovable</Incident>
+<Incident et="514.9">Tony Diamond(5) reported contact (0.10) with Immovable</Incident>
+<Score et="515.7">David Slute(11) lap=5 point=2 t=50.099 et=515.519</Score>
+<Incident et="516.2">Rich Mink(1) reported contact (0.65) with Immovable</Incident>
+<Score et="517.5">David Fernandes(13) lap=5 point=2 t=50.202 et=517.317</Score>
+<Score et="519.5">Rich Mink(1) lap=5 point=2 t=50.626 et=519.404</Score>
+<Score et="520.6">Angelo dos Santos(12) lap=5 point=2 t=50.837 et=520.334</Score>
+<Score et="520.6">Dale Green(21) lap=5 point=2 t=51.405 et=520.592</Score>
+<Score et="521.9">RSM_Stenny(6) lap=5 point=2 t=50.153 et=521.625</Score>
+<Score et="523.2">JImmy Regan(17) lap=5 point=2 t=51.793 et=523.019</Score>
+<Score et="525.4">brian potvin(2) lap=5 point=1 t=26.471 et=525.237</Score>
+<Score et="531.4">Scott Beck(3) lap=5 point=2 t=51.351 et=531.173</Score>
+<Score et="532.8">Dan Wheat(18) lap=5 point=2 t=51.780 et=532.639</Score>
+<Score et="540.9">Ed Durbin(9) lap=5 point=1 t=26.745 et=540.628</Score>
+<Score et="543.2">Tony Diamond(5) lap=5 point=2 t=58.992 et=542.945</Score>
+<Score et="544.4">Jeff Hooper(4) lap=6 point=0 t=82.094 et=544.234</Score>
+<Score et="545.5">Ricardo Campos(8) lap=6 point=0 t=82.159 et=545.307</Score>
+<Score et="545.6">Chris Sherburn(16) lap=6 point=0 t=81.800 et=545.477</Score>
+<Score et="547.7">David Slute(11) lap=6 point=0 t=82.136 et=547.556</Score>
+<Score et="549.9">David Fernandes(13) lap=6 point=0 t=82.638 et=549.753</Score>
+<Score et="552.0">Rich Mink(1) lap=6 point=0 t=83.134 et=551.912</Score>
+<Score et="552.2">brian potvin(2) lap=5 point=2 t=53.238 et=552.004</Score>
+<Score et="552.4">Angelo dos Santos(12) lap=6 point=0 t=82.745 et=552.242</Score>
+<Score et="553.0">Dale Green(21) lap=6 point=0 t=83.764 et=552.951</Score>
+<Score et="553.8">RSM_Stenny(6) lap=6 point=0 t=82.055 et=553.528</Score>
+<Score et="555.6">JImmy Regan(17) lap=6 point=0 t=84.294 et=555.520</Score>
+<Score et="564.1">Scott Beck(3) lap=6 point=0 t=84.150 et=563.972</Score>
+<Score et="565.4">Dan Wheat(18) lap=6 point=0 t=84.459 et=565.319</Score>
+<Score et="567.9">Ed Durbin(9) lap=5 point=2 t=53.822 et=567.705</Score>
+<Score et="568.9">Jeff Hooper(4) lap=6 point=1 t=24.444 et=568.678</Score>
+<Score et="569.8">Ricardo Campos(8) lap=6 point=1 t=24.269 et=569.576</Score>
+<Score et="570.2">Chris Sherburn(16) lap=6 point=1 t=24.540 et=570.018</Score>
+<Score et="572.4">David Slute(11) lap=6 point=1 t=24.644 et=572.200</Score>
+<Score et="575.4">David Fernandes(13) lap=6 point=1 t=25.500 et=575.253</Score>
+<Score et="577.0">Angelo dos Santos(12) lap=6 point=1 t=24.522 et=576.764</Score>
+<Score et="577.2">Tony Diamond(5) lap=6 point=0 t=93.168 et=577.121</Score>
+<Score et="577.5">Rich Mink(1) lap=6 point=1 t=25.432 et=577.344</Score>
+<Incident et="578.1">Ed Durbin(9) reported contact (1.00) with Immovable</Incident>
+<Incident et="578.1">Ed Durbin(9) reported contact (0.71) with Immovable</Incident>
+<Score et="578.5">RSM_Stenny(6) lap=6 point=1 t=24.658 et=578.186</Score>
+<Score et="578.6">Dale Green(21) lap=6 point=1 t=25.641 et=578.592</Score>
+<Score et="580.2">JImmy Regan(17) lap=6 point=1 t=24.558 et=580.077</Score>
+<Incident et="582.5">David Slute(11) reported contact (1.00) with Immovable</Incident>
+<Incident et="582.6">David Slute(11) reported contact (0.71) with Immovable</Incident>
+<Score et="586.9">brian potvin(2) lap=6 point=0 t=87.997 et=586.763</Score>
+<Score et="588.8">Scott Beck(3) lap=6 point=1 t=24.622 et=588.594</Score>
+<Score et="590.6">Dan Wheat(18) lap=6 point=1 t=25.062 et=590.381</Score>
+<Incident et="591.0">Jeff Hooper(4) reported contact (0.03) with Immovable</Incident>
+<Incident et="591.0">Jeff Hooper(4) reported contact (0.94) with Immovable</Incident>
+<Score et="594.1">Jeff Hooper(4) lap=6 point=2 t=49.659 et=593.893</Score>
+<Score et="595.6">Ricardo Campos(8) lap=6 point=2 t=50.005 et=595.312</Score>
+<Score et="596.0">Chris Sherburn(16) lap=6 point=2 t=50.330 et=595.807</Score>
+<Incident et="600.0">Rich Mink(1) reported contact (0.16) with another vehicle RSM_Stenny(6)</Incident>
+<Incident et="600.3">Rich Mink(1) reported contact (0.03) with Immovable</Incident>
+<Incident et="600.3">Rich Mink(1) reported contact (1.00) with Immovable</Incident>
+<Score et="601.1">David Fernandes(13) lap=6 point=2 t=51.202 et=600.955</Score>
+<Score et="602.6">Angelo dos Santos(12) lap=6 point=2 t=50.113 et=602.355</Score>
+<Score et="603.7">Rich Mink(1) lap=6 point=2 t=51.620 et=603.532</Score>
+<Score et="604.1">RSM_Stenny(6) lap=6 point=2 t=50.227 et=603.755</Score>
+<Score et="604.1">Dale Green(21) lap=6 point=2 t=51.115 et=604.067</Score>
+<Score et="606.0">JImmy Regan(17) lap=6 point=2 t=50.270 et=605.790</Score>
+<Incident et="608.7">Tony Diamond(5) reported contact (0.03) with Immovable</Incident>
+<Incident et="611.6">Scott Beck(3) reported contact (0.45) with Immovable</Incident>
+<Incident et="611.6">Scott Beck(3) reported contact (0.19) with Immovable</Incident>
+<Incident et="611.6">Scott Beck(3) reported contact (0.61) with Immovable</Incident>
+<Incident et="612.1">Scott Beck(3) reported contact (0.10) with Immovable</Incident>
+<Score et="613.7">brian potvin(2) lap=6 point=1 t=26.733 et=613.496</Score>
+<Score et="616.0">Ed Durbin(9) lap=6 point=0 t=101.938 et=615.821</Score>
+<Score et="616.3">Scott Beck(3) lap=6 point=2 t=52.119 et=616.091</Score>
+<Score et="616.5">Dan Wheat(18) lap=6 point=2 t=51.002 et=616.321</Score>
+<Score et="617.7">David Slute(11) lap=6 point=2 t=70.006 et=617.562</Score>
+<Score et="626.2">Jeff Hooper(4) lap=7 point=0 t=81.853 et=626.087</Score>
+<Score et="628.0">Ricardo Campos(8) lap=7 point=0 t=82.559 et=627.865</Score>
+<Score et="628.2">Chris Sherburn(16) lap=7 point=0 t=82.589 et=628.067</Score>
+<Score et="628.2">Tony Diamond(5) lap=6 point=2 t=50.967 et=628.088</Score>
+<Score et="633.2">David Fernandes(13) lap=7 point=0 t=83.314 et=633.067</Score>
+<Score et="634.4">Angelo dos Santos(12) lap=7 point=0 t=81.950 et=634.192</Score>
+<Score et="636.2">Rich Mink(1) lap=7 point=0 t=84.180 et=636.092</Score>
+<Score et="636.6">RSM_Stenny(6) lap=7 point=0 t=82.859 et=636.387</Score>
+<Score et="636.9">Dale Green(21) lap=7 point=0 t=83.900 et=636.851</Score>
+<Score et="638.3">JImmy Regan(17) lap=7 point=0 t=82.607 et=638.126</Score>
+<Incident et="639.5">Ricardo Campos(8) reported contact (1.00) with Immovable</Incident>
+<Incident et="639.5">Ricardo Campos(8) reported contact (0.16) with Immovable</Incident>
+<Score et="640.1">brian potvin(2) lap=6 point=2 t=53.067 et=639.830</Score>
+<Incident et="640.1">Ricardo Campos(8) reported contact (0.39) with Immovable</Incident>
+<Score et="643.6">Ed Durbin(9) lap=6 point=1 t=27.548 et=643.369</Score>
+<Incident et="646.4">Chris Sherburn(16) reported contact (1.00) with Immovable</Incident>
+<Incident et="646.4">Chris Sherburn(16) reported contact (0.00) with Immovable</Incident>
+<Incident et="646.7">Chris Sherburn(16) reported contact (0.52) with Immovable</Incident>
+<Incident et="647.4">Ricardo Campos(8) reported contact (1.00) with Immovable</Incident>
+<Score et="650.0">Scott Beck(3) lap=7 point=0 t=85.888 et=649.860</Score>
+<Score et="650.3">Dan Wheat(18) lap=7 point=0 t=84.837 et=650.156</Score>
+<Score et="651.0">Jeff Hooper(4) lap=7 point=1 t=24.701 et=650.788</Score>
+<Score et="654.6">Chris Sherburn(16) lap=7 point=1 t=26.402 et=654.468</Score>
+<Incident et="656.6">JImmy Regan(17) reported contact (0.97) with Immovable</Incident>
+<Incident et="656.7">JImmy Regan(17) reported contact (0.13) with Track</Incident>
+<Incident et="656.7">JImmy Regan(17) reported contact (0.32) with Immovable</Incident>
+<Incident et="656.9">JImmy Regan(17) reported contact (0.45) with Immovable</Incident>
+<Incident et="656.9">JImmy Regan(17) reported contact (0.45) with Immovable</Incident>
+<Incident et="657.0">JImmy Regan(17) reported contact (0.71) with Immovable</Incident>
+<Incident et="657.2">Rich Mink(1) reported contact (0.77) with Immovable</Incident>
+<Incident et="657.4">JImmy Regan(17) reported contact (0.68) with another vehicle Ricardo Campos(8)</Incident>
+<Incident et="657.4">JImmy Regan(17) reported contact (0.13) with another vehicle Ricardo Campos(8)</Incident>
+<Incident et="657.5">JImmy Regan(17) reported contact (0.26) with another vehicle Ricardo Campos(8)</Incident>
+<Incident et="657.5">Ricardo Campos(8) reported contact (0.65) with another vehicle JImmy Regan(17)</Incident>
+<Incident et="657.5">Ricardo Campos(8) reported contact (0.39) with another vehicle JImmy Regan(17)</Incident>
+<Incident et="657.6">Ricardo Campos(8) reported contact (0.13) with another vehicle JImmy Regan(17)</Incident>
+<Score et="657.8">David Fernandes(13) lap=7 point=1 t=24.621 et=657.688</Score>
+<Score et="659.2">Angelo dos Santos(12) lap=7 point=1 t=24.816 et=659.007</Score>
+<Incident et="659.5">JImmy Regan(17) reported contact (1.00) with Immovable</Incident>
+<Incident et="659.5">JImmy Regan(17) reported contact (0.23) with Immovable</Incident>
+<Score et="661.3">RSM_Stenny(6) lap=7 point=1 t=24.630 et=661.017</Score>
+<Score et="661.3">Tony Diamond(5) lap=7 point=0 t=84.065 et=661.186</Score>
+<Score et="661.8">Dale Green(21) lap=7 point=1 t=24.965 et=661.817</Score>
+<Incident et="666.5">Dan Wheat(18) reported contact (0.23) with Immovable</Incident>
+<Incident et="666.6">Dan Wheat(18) reported contact (0.58) with Immovable</Incident>
+<Score et="667.4">Ricardo Campos(8) lap=7 point=1 t=39.340 et=667.206</Score>
+<Score et="668.6">Rich Mink(1) lap=7 point=1 t=32.361 et=668.453</Score>
+<Score et="671.6">Ed Durbin(9) lap=6 point=2 t=55.648 et=671.469</Score>
+<Score et="672.6">JImmy Regan(17) lap=7 point=1 t=34.289 et=672.415</Score>
+<Score et="674.4">brian potvin(2) lap=7 point=0 t=87.489 et=674.253</Score>
+<Score et="675.6">Scott Beck(3) lap=7 point=1 t=25.468 et=675.328</Score>
+<Score et="676.6">Jeff Hooper(4) lap=7 point=2 t=50.275 et=676.362</Score>
+<Score et="677.2">Dan Wheat(18) lap=7 point=1 t=26.912 et=677.068</Score>
+<Score et="680.8">Chris Sherburn(16) lap=7 point=2 t=52.523 et=680.590</Score>
+<Score et="683.5">David Fernandes(13) lap=7 point=2 t=50.295 et=683.362</Score>
+<Score et="684.7">Angelo dos Santos(12) lap=7 point=2 t=50.297 et=684.489</Score>
+<Score et="686.2">Tony Diamond(5) lap=7 point=1 t=24.881 et=686.067</Score>
+<Score et="686.6">RSM_Stenny(6) lap=7 point=2 t=49.928 et=686.315</Score>
+<Score et="687.5">Dale Green(21) lap=7 point=2 t=50.649 et=687.500</Score>
+<Incident et="695.0">Ricardo Campos(8) reported contact (1.00) with Immovable</Incident>
+<Incident et="695.1">Ricardo Campos(8) reported contact (0.52) with Immovable</Incident>
+<Incident et="695.1">Ricardo Campos(8) reported contact (1.00) with Immovable</Incident>
+<Score et="695.2">Rich Mink(1) lap=7 point=2 t=58.936 et=695.028</Score>
+<Incident et="695.2">Ricardo Campos(8) reported contact (0.45) with Immovable</Incident>
+<Incident et="695.4">Ricardo Campos(8) reported contact (0.58) with Immovable</Incident>
+<Score et="699.4">JImmy Regan(17) lap=7 point=2 t=61.074 et=699.200</Score>
+<Score et="700.5">brian potvin(2) lap=7 point=1 t=26.036 et=700.289</Score>
+<Score et="701.3">Ricardo Campos(8) lap=7 point=2 t=73.240 et=701.106</Score>
+<Score et="702.5">Scott Beck(3) lap=7 point=2 t=52.384 et=702.244</Score>
+<Score et="703.6">Dan Wheat(18) lap=7 point=2 t=53.306 et=703.461</Score>
+<Score et="705.8">Ed Durbin(9) lap=7 point=0 t=89.807 et=705.628</Score>
+<Score et="708.4">David Slute(11) lap=7 point=0 t=160.694 et=708.250</Score>
+<Score et="708.9">Jeff Hooper(4) lap=8 point=0 t=82.652 et=708.739</Score>
+<Score et="712.5">Tony Diamond(5) lap=7 point=2 t=51.092 et=712.278</Score>
+<Score et="712.8">Chris Sherburn(16) lap=8 point=0 t=84.573 et=712.640</Score>
+<Score et="715.8">David Fernandes(13) lap=8 point=0 t=82.668 et=715.735</Score>
+<Score et="716.8">Angelo dos Santos(12) lap=8 point=0 t=82.403 et=716.594</Score>
+<Score et="718.1">RSM_Stenny(6) lap=8 point=0 t=81.462 et=717.849</Score>
+<Score et="719.4">Dale Green(21) lap=8 point=0 t=82.553 et=719.405</Score>
+<Score et="727.2">brian potvin(2) lap=7 point=2 t=52.775 et=727.028</Score>
+<Score et="728.2">Rich Mink(1) lap=8 point=0 t=92.002 et=728.094</Score>
+<Score et="732.3">JImmy Regan(17) lap=8 point=0 t=94.019 et=732.145</Score>
+<Score et="732.7">Ed Durbin(9) lap=7 point=1 t=26.912 et=732.540</Score>
+<Score et="733.7">Jeff Hooper(4) lap=8 point=1 t=24.817 et=733.556</Score>
+<Score et="736.1">Scott Beck(3) lap=8 point=0 t=86.093 et=735.953</Score>
+<Score et="736.9">Dan Wheat(18) lap=8 point=0 t=86.575 et=736.731</Score>
+<Score et="738.6">Chris Sherburn(16) lap=8 point=1 t=25.818 et=738.458</Score>
+<Incident et="739.1">David Fernandes(13) reported contact (0.90) with Immovable</Incident>
+<Score et="741.6">Angelo dos Santos(12) lap=8 point=1 t=24.821 et=741.416</Score>
+<Score et="742.6">RSM_Stenny(6) lap=8 point=1 t=24.392 et=742.241</Score>
+<Score et="744.4">Dale Green(21) lap=8 point=1 t=24.996 et=744.401</Score>
+<Score et="745.4">David Slute(11) lap=7 point=1 t=36.939 et=745.189</Score>
+<Score et="746.2">Tony Diamond(5) lap=8 point=0 t=84.899 et=746.085</Score>
+<Score et="750.7">David Fernandes(13) lap=8 point=1 t=34.804 et=750.539</Score>
+<Score et="753.6">Rich Mink(1) lap=8 point=1 t=25.269 et=753.363</Score>
+<Score et="757.6">JImmy Regan(17) lap=8 point=1 t=25.198 et=757.343</Score>
+<Score et="759.6">Jeff Hooper(4) lap=8 point=2 t=50.653 et=759.392</Score>
+<Score et="761.3">Scott Beck(3) lap=8 point=1 t=25.190 et=761.143</Score>
+<Score et="761.9">Ed Durbin(9) lap=7 point=2 t=56.043 et=761.671</Score>
+<Score et="762.4">brian potvin(2) lap=8 point=0 t=87.962 et=762.215</Score>
+<Score et="762.4">Dan Wheat(18) lap=8 point=1 t=25.454 et=762.185</Score>
+<Score et="764.1">Chris Sherburn(16) lap=8 point=2 t=51.325 et=763.964</Score>
+<Incident et="764.5">RSM_Stenny(6) reported contact (0.90) with Immovable</Incident>
+<Score et="767.1">Angelo dos Santos(12) lap=8 point=2 t=50.196 et=766.790</Score>
+<Score et="767.6">RSM_Stenny(6) lap=8 point=2 t=49.431 et=767.279</Score>
+<Score et="770.0">Dale Green(21) lap=8 point=2 t=50.567 et=769.972</Score>
+<Score et="771.6">Tony Diamond(5) lap=8 point=1 t=25.278 et=771.363</Score>
+<Score et="772.6">David Slute(11) lap=7 point=2 t=64.095 et=772.345</Score>
+<Score et="776.7">David Fernandes(13) lap=8 point=2 t=60.857 et=776.591</Score>
+<Score et="779.6">Rich Mink(1) lap=8 point=2 t=51.298 et=779.391</Score>
+<Score et="783.7">JImmy Regan(17) lap=8 point=2 t=51.405 et=783.550</Score>
+<Score et="787.6">Scott Beck(3) lap=8 point=2 t=51.430 et=787.382</Score>
+<Score et="788.1">brian potvin(2) lap=8 point=1 t=25.713 et=787.928</Score>
+<Score et="788.2">Dan Wheat(18) lap=8 point=2 t=51.346 et=788.077</Score>
+<Score et="792.0">Jeff Hooper(4) lap=9 point=0 t=83.105 et=791.844</Score>
+<Score et="796.9">Chris Sherburn(16) lap=9 point=0 t=84.049 et=796.689</Score>
+<Score et="797.2">Ed Durbin(9) lap=8 point=0 t=91.375 et=797.003</Score>
+<Score et="797.8">Tony Diamond(5) lap=8 point=2 t=51.538 et=797.623</Score>
+<Score et="797.8">Ricardo Campos(8) lap=8 point=0 t=169.765 et=797.631</Score>
+<Score et="798.8">Angelo dos Santos(12) lap=9 point=0 t=82.051 et=798.645</Score>
+<Score et="799.6">RSM_Stenny(6) lap=9 point=0 t=81.488 et=799.336</Score>
+<Score et="802.3">Dale Green(21) lap=9 point=0 t=82.897 et=802.302</Score>
+<Score et="805.4">David Slute(11) lap=8 point=0 t=96.975 et=805.225</Score>
+<Score et="809.1">David Fernandes(13) lap=9 point=0 t=93.268 et=809.003</Score>
+<Score et="812.5">Rich Mink(1) lap=9 point=0 t=84.220 et=812.314</Score>
+<Score et="814.8">brian potvin(2) lap=8 point=2 t=52.375 et=814.590</Score>
+<Score et="816.3">JImmy Regan(17) lap=9 point=0 t=84.068 et=816.213</Score>
+<Score et="816.6">Jeff Hooper(4) lap=9 point=1 t=24.574 et=816.417</Score>
+<Score et="820.2">Scott Beck(3) lap=9 point=0 t=84.141 et=820.094</Score>
+<Score et="821.0">Dan Wheat(18) lap=9 point=0 t=84.132 et=820.862</Score>
+<Score et="822.0">Chris Sherburn(16) lap=9 point=1 t=25.069 et=821.758</Score>
+<Score et="823.9">Angelo dos Santos(12) lap=9 point=1 t=25.011 et=823.656</Score>
+<Score et="824.7">RSM_Stenny(6) lap=9 point=1 t=25.055 et=824.391</Score>
+<Score et="825.9">Ed Durbin(9) lap=8 point=1 t=28.710 et=825.713</Score>
+<Score et="827.3">Dale Green(21) lap=9 point=1 t=24.948 et=827.251</Score>
+<Score et="829.2">Ricardo Campos(8) lap=8 point=1 t=31.283 et=828.913</Score>
+<Score et="830.1">David Slute(11) lap=8 point=1 t=24.616 et=829.841</Score>
+<Score et="831.3">Tony Diamond(5) lap=9 point=0 t=85.088 et=831.173</Score>
+<Score et="833.6">David Fernandes(13) lap=9 point=1 t=24.502 et=833.505</Score>
+<Score et="837.5">Rich Mink(1) lap=9 point=1 t=24.981 et=837.295</Score>
+<Incident et="839.1">Jeff Hooper(4) reported contact (0.16) with Immovable</Incident>
+<Score et="841.5">JImmy Regan(17) lap=9 point=1 t=25.091 et=841.304</Score>
+<Score et="842.1">Jeff Hooper(4) lap=9 point=2 t=50.045 et=841.889</Score>
+<Score et="845.0">Scott Beck(3) lap=9 point=1 t=24.745 et=844.839</Score>
+<Score et="845.7">Dan Wheat(18) lap=9 point=1 t=24.680 et=845.542</Score>
+<Score et="847.4">Chris Sherburn(16) lap=9 point=2 t=50.478 et=847.167</Score>
+<Score et="849.1">brian potvin(2) lap=9 point=0 t=86.750 et=848.965</Score>
+<Score et="849.4">Angelo dos Santos(12) lap=9 point=2 t=50.495 et=849.140</Score>
+<Score et="849.9">RSM_Stenny(6) lap=9 point=2 t=50.280 et=849.616</Score>
+<Score et="853.0">Dale Green(21) lap=9 point=2 t=50.708 et=853.010</Score>
+<Score et="853.3">Ed Durbin(9) lap=8 point=2 t=56.116 et=853.118</Score>
+<Score et="854.9">Ricardo Campos(8) lap=8 point=2 t=57.063 et=854.694</Score>
+<Score et="855.5">David Slute(11) lap=8 point=2 t=50.089 et=855.314</Score>
+<Score et="856.7">Tony Diamond(5) lap=9 point=1 t=25.360 et=856.533</Score>
+<Score et="859.4">David Fernandes(13) lap=9 point=2 t=50.230 et=859.233</Score>
+<Score et="863.2">Rich Mink(1) lap=9 point=2 t=50.740 et=863.054</Score>
+<Score et="867.5">JImmy Regan(17) lap=9 point=2 t=51.093 et=867.306</Score>
+<Score et="871.1">Scott Beck(3) lap=9 point=2 t=50.735 et=870.829</Score>
+<Score et="871.6">Dan Wheat(18) lap=9 point=2 t=50.520 et=871.382</Score>
+<Score et="874.3">Jeff Hooper(4) lap=10 point=0 t=82.359 et=874.203</Score>
+<Score et="875.3">brian potvin(2) lap=9 point=1 t=26.138 et=875.103</Score>
+<Score et="879.2">Chris Sherburn(16) lap=10 point=0 t=82.403 et=879.091</Score>
+<Score et="881.7">Angelo dos Santos(12) lap=10 point=0 t=82.855 et=881.500</Score>
+<Score et="882.0">RSM_Stenny(6) lap=10 point=0 t=82.388 et=881.724</Score>
+<Score et="882.8">Tony Diamond(5) lap=9 point=2 t=51.465 et=882.638</Score>
+<Score et="885.5">Dale Green(21) lap=10 point=0 t=83.215 et=885.517</Score>
+<Score et="886.9">Ricardo Campos(8) lap=9 point=0 t=89.062 et=886.693</Score>
+<Score et="888.0">David Slute(11) lap=9 point=0 t=82.579 et=887.804</Score>
+<Score et="890.4">Ed Durbin(9) lap=9 point=0 t=93.267 et=890.270</Score>
+<Score et="892.3">David Fernandes(13) lap=10 point=0 t=83.220 et=892.223</Score>
+<Score et="895.9">Rich Mink(1) lap=10 point=0 t=83.464 et=895.778</Score>
+<Score et="899.0">Jeff Hooper(4) lap=10 point=1 t=24.711 et=898.914</Score>
+<Score et="900.5">JImmy Regan(17) lap=10 point=0 t=84.154 et=900.367</Score>
+<Score et="902.5">brian potvin(2) lap=9 point=2 t=53.341 et=902.305</Score>
+<Score et="904.3">Chris Sherburn(16) lap=10 point=1 t=25.018 et=904.110</Score>
+<Score et="904.6">Scott Beck(3) lap=10 point=0 t=84.312 et=904.405</Score>
+<Score et="904.9">Dan Wheat(18) lap=10 point=0 t=83.872 et=904.734</Score>
+<Score et="906.1">Angelo dos Santos(12) lap=10 point=1 t=24.352 et=905.852</Score>
+<Score et="906.5">RSM_Stenny(6) lap=10 point=1 t=24.467 et=906.191</Score>
+<Score et="910.0">Dale Green(21) lap=10 point=1 t=24.509 et=910.026</Score>
+<Score et="911.4">Ricardo Campos(8) lap=9 point=1 t=24.438 et=911.131</Score>
+<Score et="912.0">David Slute(11) lap=9 point=1 t=24.100 et=911.904</Score>
+<Score et="916.6">Ed Durbin(9) lap=9 point=1 t=26.150 et=916.420</Score>
+<Score et="917.1">David Fernandes(13) lap=10 point=1 t=24.674 et=916.896</Score>
+<Score et="917.2">Tony Diamond(5) lap=10 point=0 t=85.890 et=917.063</Score>
+<Score et="921.0">Rich Mink(1) lap=10 point=1 t=25.034 et=920.812</Score>
+<Incident et="921.5">Jeff Hooper(4) reported contact (0.35) with Immovable</Incident>
+<Score et="924.3">Jeff Hooper(4) lap=10 point=2 t=49.939 et=924.142</Score>
+<Score et="925.5">JImmy Regan(17) lap=10 point=1 t=25.019 et=925.386</Score>
+<Incident et="929.2">Tony Diamond(5) reported contact (1.00) with Immovable</Incident>
+<Incident et="929.5">Tony Diamond(5) reported contact (0.32) with Immovable</Incident>
+<Incident et="929.5">Tony Diamond(5) reported contact (0.81) with Immovable</Incident>
+<Score et="929.5">Scott Beck(3) lap=10 point=1 t=24.899 et=929.304</Score>
+<Score et="929.7">Chris Sherburn(16) lap=10 point=2 t=50.397 et=929.489</Score>
+<Score et="930.2">Dan Wheat(18) lap=10 point=1 t=25.347 et=930.082</Score>
+<Score et="931.6">Angelo dos Santos(12) lap=10 point=2 t=49.893 et=931.394</Score>
+<Score et="931.8">RSM_Stenny(6) lap=10 point=2 t=49.762 et=931.486</Score>
+<Score et="935.7">Dale Green(21) lap=10 point=2 t=50.175 et=935.692</Score>
+<Score et="936.7">Ricardo Campos(8) lap=9 point=2 t=49.813 et=936.506</Score>
+<Score et="937.6">David Slute(11) lap=9 point=2 t=49.547 et=937.351</Score>
+<Score et="937.8">brian potvin(2) lap=10 point=0 t=88.730 et=937.694</Score>
+<Score et="942.7">David Fernandes(13) lap=10 point=2 t=50.370 et=942.593</Score>
+<Incident et="943.5">Rich Mink(1) reported contact (0.06) with Immovable</Incident>
+<Incident et="943.5">Rich Mink(1) reported contact (0.74) with Immovable</Incident>
+<Score et="943.9">Tony Diamond(5) lap=10 point=1 t=26.644 et=943.707</Score>
+<Score et="944.6">Ed Durbin(9) lap=9 point=2 t=54.083 et=944.353</Score>
+<Score et="946.9">Rich Mink(1) lap=10 point=2 t=50.950 et=946.728</Score>
+<Incident et="949.7">Tony Diamond(5) reported contact (0.39) with Immovable</Incident>
+<Score et="951.7">JImmy Regan(17) lap=10 point=2 t=51.148 et=951.515</Score>
+<Score et="956.2">Scott Beck(3) lap=10 point=2 t=51.604 et=956.009</Score>
+<Incident et="956.3">brian potvin(2) reported contact (0.48) with Immovable</Incident>
+<Score et="956.4">Jeff Hooper(4) lap=11 point=0 t=82.080 et=956.283</Score>
+<Score et="956.5">Dan Wheat(18) lap=10 point=2 t=51.581 et=956.316</Score>
+<Incident et="956.6">brian potvin(2) reported contact (0.26) with Immovable</Incident>
+<Score et="961.4">Chris Sherburn(16) lap=11 point=0 t=82.180 et=961.272</Score>
+<Score et="964.4">Angelo dos Santos(12) lap=11 point=0 t=82.638 et=964.139</Score>
+<Score et="964.6">brian potvin(2) lap=10 point=1 t=26.694 et=964.388</Score>
+<Score et="964.8">RSM_Stenny(6) lap=11 point=0 t=82.869 et=964.594</Score>
+<Score et="968.4">Dale Green(21) lap=11 point=0 t=82.842 et=968.359</Score>
+<Score et="968.8">Ricardo Campos(8) lap=10 point=0 t=81.938 et=968.631</Score>
+<Score et="970.2">Tony Diamond(5) lap=10 point=2 t=53.015 et=970.078</Score>
+<Score et="970.4">David Slute(11) lap=10 point=0 t=82.431 et=970.235</Score>
+<Score et="975.4">David Fernandes(13) lap=11 point=0 t=83.110 et=975.333</Score>
+<Incident et="977.1">Chris Sherburn(16) reported contact (0.19) with Immovable</Incident>
+<Score et="979.7">Ed Durbin(9) lap=10 point=0 t=89.233 et=979.503</Score>
+<Score et="980.6">Rich Mink(1) lap=11 point=0 t=84.688 et=980.466</Score>
+<Score et="981.1">Jeff Hooper(4) lap=11 point=1 t=24.610 et=980.893</Score>
+<Score et="984.2">JImmy Regan(17) lap=11 point=0 t=83.691 et=984.058</Score>
+<Score et="988.9">Angelo dos Santos(12) lap=11 point=1 t=24.562 et=988.701</Score>
+<Score et="989.2">Scott Beck(3) lap=11 point=0 t=84.659 et=989.064</Score>
+<Score et="989.5">Dan Wheat(18) lap=11 point=0 t=84.602 et=989.337</Score>
+<Score et="989.6">RSM_Stenny(6) lap=11 point=1 t=24.668 et=989.261</Score>
+<Score et="991.8">brian potvin(2) lap=10 point=2 t=53.978 et=991.673</Score>
+<Score et="993.2">Chris Sherburn(16) lap=11 point=1 t=31.759 et=993.031</Score>
+<Score et="993.3">Dale Green(21) lap=11 point=1 t=24.958 et=993.317</Score>
+<Score et="993.9">Ricardo Campos(8) lap=10 point=1 t=25.025 et=993.656</Score>
+<Score et="995.5">David Slute(11) lap=10 point=1 t=25.065 et=995.300</Score>
+<Score et="1000.3">David Fernandes(13) lap=11 point=1 t=24.804 et=1000.137</Score>
+<Score et="1003.3">Tony Diamond(5) lap=11 point=0 t=86.065 et=1003.128</Score>
+<Incident et="1005.7">Dan Wheat(18) reported contact (1.00) with Immovable</Incident>
+<Score et="1006.0">Rich Mink(1) lap=11 point=1 t=25.372 et=1005.838</Score>
+<Incident et="1006.1">Dan Wheat(18) reported contact (0.03) with Immovable</Incident>
+<Incident et="1006.1">Dan Wheat(18) reported contact (0.23) with Immovable</Incident>
+<Score et="1006.4">Jeff Hooper(4) lap=11 point=2 t=49.990 et=1006.273</Score>
+<Score et="1007.0">Ed Durbin(9) lap=10 point=1 t=27.240 et=1006.743</Score>
+<Score et="1009.6">JImmy Regan(17) lap=11 point=1 t=25.393 et=1009.451</Score>
+<Incident et="1013.1">Ricardo Campos(8) reported contact (0.10) with Immovable</Incident>
+<Score et="1014.5">Angelo dos Santos(12) lap=11 point=2 t=50.103 et=1014.242</Score>
+<Score et="1014.6">Scott Beck(3) lap=11 point=1 t=25.299 et=1014.363</Score>
+<Score et="1014.7">RSM_Stenny(6) lap=11 point=2 t=49.843 et=1014.436</Score>
+<Incident et="1015.9">Dale Green(21) reported contact (0.03) with Immovable</Incident>
+<Incident et="1015.9">Dale Green(21) reported contact (1.00) with Immovable</Incident>
+<Score et="1018.7">Chris Sherburn(16) lap=11 point=2 t=57.308 et=1018.580</Score>
+<Score et="1019.3">Dale Green(21) lap=11 point=2 t=50.958 et=1019.317</Score>
+<Score et="1019.7">Ricardo Campos(8) lap=10 point=2 t=50.814 et=1019.445</Score>
+<Score et="1021.1">David Slute(11) lap=10 point=2 t=50.693 et=1020.929</Score>
+<Score et="1025.5">brian potvin(2) lap=11 point=0 t=87.652 et=1025.347</Score>
+<Score et="1026.1">Dan Wheat(18) lap=11 point=1 t=36.628 et=1025.965</Score>
+<Score et="1026.6">David Fernandes(13) lap=11 point=2 t=51.121 et=1026.454</Score>
+<Score et="1028.3">Tony Diamond(5) lap=11 point=1 t=24.987 et=1028.115</Score>
+<Incident et="1030.6">Dale Green(21) reported contact (0.13) with another vehicle Chris Sherburn(16)</Incident>
+<Incident et="1030.7">Chris Sherburn(16) reported contact (0.23) with another vehicle Dale Green(21)</Incident>
+<Incident et="1030.8">Chris Sherburn(16) reported contact (0.03) with another vehicle Dale Green(21)</Incident>
+<Score et="1032.0">Rich Mink(1) lap=11 point=2 t=51.320 et=1031.787</Score>
+<Score et="1034.3">Ed Durbin(9) lap=10 point=2 t=54.553 et=1034.056</Score>
+<Score et="1036.0">JImmy Regan(17) lap=11 point=2 t=51.758 et=1035.817</Score>
+<Incident et="1037.6">RSM_Stenny(6) reported contact (0.13) with another vehicle Angelo dos Santos(12)</Incident>
+<Incident et="1037.6">RSM_Stenny(6) reported contact (0.06) with another vehicle Angelo dos Santos(12)</Incident>
+<Score et="1039.0">Jeff Hooper(4) lap=12 point=0 t=82.595 et=1038.878</Score>
+<Score et="1040.8">Scott Beck(3) lap=11 point=2 t=51.603 et=1040.666</Score>
+<Score et="1047.0">Angelo dos Santos(12) lap=12 point=0 t=82.718 et=1046.857</Score>
+<Score et="1047.5">RSM_Stenny(6) lap=12 point=0 t=82.669 et=1047.262</Score>
+<Score et="1051.6">brian potvin(2) lap=11 point=1 t=26.008 et=1051.355</Score>
+<Score et="1051.7">Ricardo Campos(8) lap=11 point=0 t=82.859 et=1051.490</Score>
+<Score et="1052.4">Dan Wheat(18) lap=11 point=2 t=62.869 et=1052.206</Score>
+<Score et="1053.3">Dale Green(21) lap=12 point=0 t=84.950 et=1053.309</Score>
+<Score et="1053.8">Chris Sherburn(16) lap=12 point=0 t=92.373 et=1053.645</Score>
+<Score et="1054.0">David Slute(11) lap=11 point=0 t=83.608 et=1053.843</Score>
+<Score et="1054.6">Tony Diamond(5) lap=11 point=2 t=51.257 et=1054.385</Score>
+<Score et="1059.8">David Fernandes(13) lap=12 point=0 t=84.339 et=1059.672</Score>
+<Score et="1063.8">Jeff Hooper(4) lap=12 point=1 t=24.767 et=1063.645</Score>
+<Score et="1064.5">Rich Mink(1) lap=12 point=0 t=83.869 et=1064.335</Score>
+<Score et="1068.1">Ed Durbin(9) lap=11 point=0 t=88.444 et=1067.946</Score>
+<Score et="1068.7">JImmy Regan(17) lap=12 point=0 t=84.471 et=1068.530</Score>
+<Incident et="1071.5">Dale Green(21) reported contact (0.42) with Immovable</Incident>
+<Score et="1071.8">Angelo dos Santos(12) lap=12 point=1 t=24.707 et=1071.564</Score>
+<Score et="1072.4">RSM_Stenny(6) lap=12 point=1 t=24.787 et=1072.050</Score>
+<Incident et="1073.3">Chris Sherburn(16) reported contact (0.00) with Immovable</Incident>
+<Incident et="1073.4">Chris Sherburn(16) reported contact (0.23) with Immovable</Incident>
+<Incident et="1073.4">Chris Sherburn(16) reported contact (0.71) with Immovable</Incident>
+<Score et="1074.8">Scott Beck(3) lap=12 point=0 t=85.524 et=1074.587</Score>
+<Score et="1075.7">Ricardo Campos(8) lap=11 point=1 t=24.043 et=1075.533</Score>
+<Score et="1078.9">Dale Green(21) lap=12 point=1 t=25.587 et=1078.896</Score>
+<Score et="1079.4">brian potvin(2) lap=11 point=2 t=53.831 et=1079.178</Score>
+<Score et="1079.4">Chris Sherburn(16) lap=12 point=1 t=25.602 et=1079.247</Score>
+<Score et="1079.8">David Slute(11) lap=11 point=1 t=25.813 et=1079.656</Score>
+<Score et="1084.5">David Fernandes(13) lap=12 point=1 t=24.700 et=1084.372</Score>
+<Score et="1085.9">Dan Wheat(18) lap=12 point=0 t=96.369 et=1085.706</Score>
+<Score et="1087.3">Tony Diamond(5) lap=12 point=0 t=84.025 et=1087.153</Score>
+<Score et="1089.4">Jeff Hooper(4) lap=12 point=2 t=50.375 et=1089.253</Score>
+<Score et="1089.7">Rich Mink(1) lap=12 point=1 t=25.199 et=1089.534</Score>
+<Score et="1094.5">JImmy Regan(17) lap=12 point=1 t=25.720 et=1094.250</Score>
+<Score et="1095.2">Ed Durbin(9) lap=11 point=1 t=27.107 et=1095.053</Score>
+<Score et="1097.5">Angelo dos Santos(12) lap=12 point=2 t=50.371 et=1097.228</Score>
+<Incident et="1097.8">Ricardo Campos(8) reported contact (0.52) with Immovable</Incident>
+<Score et="1097.9">RSM_Stenny(6) lap=12 point=2 t=50.284 et=1097.546</Score>
+<Incident et="1098.2">Ricardo Campos(8) reported contact (0.13) with Immovable</Incident>
+<Score et="1100.1">Scott Beck(3) lap=12 point=1 t=25.398 et=1099.985</Score>
+<Score et="1101.1">Ricardo Campos(8) lap=11 point=2 t=49.386 et=1100.875</Score>
+<Score et="1104.9">Dale Green(21) lap=12 point=2 t=51.614 et=1104.923</Score>
+<Score et="1105.6">Chris Sherburn(16) lap=12 point=2 t=51.749 et=1105.394</Score>
+<Score et="1105.7">David Slute(11) lap=11 point=2 t=51.723 et=1105.567</Score>
+<Score et="1110.4">David Fernandes(13) lap=12 point=2 t=50.595 et=1110.267</Score>
+<Incident et="1110.6">Dan Wheat(18) reported contact (1.00) with Immovable</Incident>
+<Incident et="1110.9">Dan Wheat(18) reported contact (0.29) with Immovable</Incident>
+<Incident et="1111.0">Dan Wheat(18) reported contact (0.29) with Immovable</Incident>
+<Score et="1111.2">Dan Wheat(18) lap=12 point=1 t=25.323 et=1111.028</Score>
+<Score et="1112.4">Tony Diamond(5) lap=12 point=1 t=25.112 et=1112.265</Score>
+<Score et="1113.0">brian potvin(2) lap=12 point=0 t=87.557 et=1112.904</Score>
+<Score et="1116.4">Rich Mink(1) lap=12 point=2 t=51.874 et=1116.209</Score>
+<Score et="1120.9">JImmy Regan(17) lap=12 point=2 t=52.196 et=1120.725</Score>
+<Score et="1121.9">Jeff Hooper(4) lap=13 point=0 t=82.968 et=1121.846</Score>
+<Score et="1124.1">Ed Durbin(9) lap=11 point=2 t=55.959 et=1123.906</Score>
+<Incident et="1124.1">Dan Wheat(18) reported contact (0.42) with Immovable</Incident>
+<Incident et="1124.5">David Fernandes(13) reported contact (0.97) with Immovable</Incident>
+<Incident et="1124.5">David Fernandes(13) reported contact (1.00) with Immovable</Incident>
+<Incident et="1124.5">David Fernandes(13) reported contact (1.00) with Immovable</Incident>
+<Score et="1126.7">Scott Beck(3) lap=12 point=2 t=51.897 et=1126.484</Score>
+<Score et="1130.6">RSM_Stenny(6) lap=13 point=0 t=83.033 et=1130.295</Score>
+<Score et="1131.5">Angelo dos Santos(12) lap=13 point=0 t=84.491 et=1131.348</Score>
+<Incident et="1131.7">brian potvin(2) reported contact (1.00) with Immovable</Incident>
+<Incident et="1131.8">brian potvin(2) reported contact (0.00) with Immovable</Incident>
+<Incident et="1132.0">brian potvin(2) reported contact (0.65) with Immovable</Incident>
+<Score et="1132.8">Ricardo Campos(8) lap=12 point=0 t=81.161 et=1132.650</Score>
+<Score et="1137.5">Dale Green(21) lap=13 point=0 t=84.137 et=1137.446</Score>
+<Score et="1138.8">Tony Diamond(5) lap=12 point=2 t=51.487 et=1138.640</Score>
+<Score et="1139.0">David Slute(11) lap=12 point=0 t=85.034 et=1138.877</Score>
+<Score et="1139.6">brian potvin(2) lap=12 point=1 t=26.438 et=1139.342</Score>
+<Score et="1146.7">Jeff Hooper(4) lap=13 point=1 t=24.608 et=1146.454</Score>
+<Score et="1149.4">Rich Mink(1) lap=13 point=0 t=84.943 et=1149.278</Score>
+<Score et="1150.7">Chris Sherburn(16) lap=13 point=0 t=96.869 et=1150.514</Score>
+<Score et="1154.1">JImmy Regan(17) lap=13 point=0 t=85.448 et=1153.978</Score>
+<Score et="1155.0">RSM_Stenny(6) lap=13 point=1 t=24.416 et=1154.711</Score>
+<Incident et="1156.0">Dan Wheat(18) reported contact (0.16) with Immovable</Incident>
+<Score et="1156.1">Angelo dos Santos(12) lap=13 point=1 t=24.595 et=1155.943</Score>
+<Score et="1157.1">Ricardo Campos(8) lap=12 point=1 t=24.170 et=1156.820</Score>
+<Score et="1159.6">Ed Durbin(9) lap=12 point=0 t=91.545 et=1159.491</Score>
+<Score et="1160.5">Scott Beck(3) lap=13 point=0 t=85.770 et=1160.357</Score>
+<Score et="1162.1">Dale Green(21) lap=13 point=1 t=24.633 et=1162.079</Score>
+<Score et="1163.6">David Slute(11) lap=12 point=1 t=24.575 et=1163.452</Score>
+<Score et="1165.1">Dan Wheat(18) lap=12 point=2 t=79.215 et=1164.921</Score>
+<Score et="1166.7">brian potvin(2) lap=12 point=2 t=53.624 et=1166.528</Score>
+<Incident et="1172.0">Dan Wheat(18) reported contact (0.65) with Immovable</Incident>
+<Score et="1172.1">Jeff Hooper(4) lap=13 point=2 t=50.032 et=1171.878</Score>
+<Score et="1172.3">Tony Diamond(5) lap=13 point=0 t=85.028 et=1172.181</Score>
+<Score et="1175.0">Rich Mink(1) lap=13 point=1 t=25.500 et=1174.778</Score>
+<Incident et="1177.2">RSM_Stenny(6) reported contact (0.81) with Immovable</Incident>
+<Score et="1179.8">JImmy Regan(17) lap=13 point=1 t=25.662 et=1179.640</Score>
+<Score et="1180.2">RSM_Stenny(6) lap=13 point=2 t=49.643 et=1179.938</Score>
+<Score et="1181.8">Angelo dos Santos(12) lap=13 point=2 t=50.241 et=1181.589</Score>
+<Score et="1182.2">Ricardo Campos(8) lap=12 point=2 t=49.370 et=1182.021</Score>
+<Score et="1186.2">Scott Beck(3) lap=13 point=1 t=25.645 et=1186.003</Score>
+<Score et="1187.7">Dale Green(21) lap=13 point=2 t=50.246 et=1187.692</Score>
+<Incident et="1188.0">Ed Durbin(9) reported contact (0.90) with Immovable</Incident>
+<Score et="1189.1">David Slute(11) lap=12 point=2 t=50.098 et=1188.975</Score>
+<Incident et="1193.6">RSM_Stenny(6) reported contact (0.71) with Immovable</Incident>
+<Incident et="1193.7">RSM_Stenny(6) reported contact (1.00) with Immovable</Incident>
+<Score et="1197.6">Tony Diamond(5) lap=13 point=1 t=25.181 et=1197.362</Score>
+<Score et="1201.1">Rich Mink(1) lap=13 point=2 t=51.704 et=1200.982</Score>
+<Score et="1201.6">brian potvin(2) lap=13 point=0 t=88.611 et=1201.516</Score>
+<Score et="1204.7">Jeff Hooper(4) lap=14 point=0 t=82.740 et=1204.586</Score>
+<Score et="1205.4">Ed Durbin(9) lap=12 point=1 t=45.638 et=1205.129</Score>
+<Score et="1206.0">JImmy Regan(17) lap=13 point=2 t=51.823 et=1205.801</Score>
+<Score et="1212.9">Scott Beck(3) lap=13 point=2 t=52.320 et=1212.678</Score>
+<Score et="1213.2">RSM_Stenny(6) lap=14 point=0 t=82.666 et=1212.961</Score>
+<Score et="1214.2">Angelo dos Santos(12) lap=14 point=0 t=82.651 et=1213.999</Score>
+<Score et="1214.5">Ricardo Campos(8) lap=13 point=0 t=81.638 et=1214.288</Score>
+<Score et="1220.4">Dale Green(21) lap=14 point=0 t=82.923 et=1220.369</Score>
+<Score et="1221.2">David Slute(11) lap=13 point=0 t=82.217 et=1221.094</Score>
+<Score et="1223.6">Tony Diamond(5) lap=13 point=2 t=51.222 et=1223.403</Score>
+<Score et="1227.6">brian potvin(2) lap=13 point=1 t=25.972 et=1227.487</Score>
+<Score et="1229.9">Jeff Hooper(4) lap=14 point=1 t=25.173 et=1229.759</Score>
+<Score et="1230.9">Chris Sherburn(16) lap=13 point=1 t=80.191 et=1230.705</Score>
+<Score et="1234.0">Rich Mink(1) lap=14 point=0 t=84.586 et=1233.864</Score>
+<Score et="1236.2">Ed Durbin(9) lap=12 point=2 t=76.504 et=1235.995</Score>
+<Score et="1237.2">RSM_Stenny(6) lap=14 point=1 t=23.975 et=1236.936</Score>
+<Score et="1238.4">JImmy Regan(17) lap=14 point=0 t=84.307 et=1238.285</Score>
+<Score et="1238.7">Angelo dos Santos(12) lap=14 point=1 t=24.500 et=1238.499</Score>
+<Score et="1239.1">Ricardo Campos(8) lap=13 point=1 t=24.647 et=1238.935</Score>
+<Score et="1245.0">Dale Green(21) lap=14 point=1 t=24.599 et=1244.968</Score>
+<Score et="1245.9">David Slute(11) lap=13 point=1 t=24.587 et=1245.681</Score>
+<Score et="1246.1">Scott Beck(3) lap=14 point=0 t=85.581 et=1245.938</Score>
+<Incident et="1252.6">Jeff Hooper(4) reported contact (0.35) with Immovable</Incident>
+<Incident et="1252.7">Jeff Hooper(4) reported contact (0.10) with Immovable</Incident>
+<Score et="1254.6">brian potvin(2) lap=13 point=2 t=52.956 et=1254.472</Score>
+<Score et="1255.6">Jeff Hooper(4) lap=14 point=2 t=50.854 et=1255.440</Score>
+<Incident et="1255.9">Dale Green(21) reported contact (1.00) with Immovable</Incident>
+<Incident et="1256.1">Dale Green(21) reported contact (0.13) with Immovable</Incident>
+<Incident et="1256.1">Dale Green(21) reported contact (0.32) with Immovable</Incident>
+<Score et="1256.6">Chris Sherburn(16) lap=13 point=2 t=105.958 et=1256.472</Score>
+<Score et="1257.3">Tony Diamond(5) lap=14 point=0 t=84.980 et=1257.161</Score>
+<Incident et="1258.7">Ricardo Campos(8) reported contact (0.10) with Immovable</Incident>
+<Score et="1259.6">Rich Mink(1) lap=14 point=1 t=25.540 et=1259.404</Score>
+<Incident et="1259.6">RSM_Stenny(6) reported contact (0.71) with Immovable</Incident>
+<Score et="1262.8">RSM_Stenny(6) lap=14 point=2 t=49.575 et=1262.536</Score>
+<Score et="1263.4">JImmy Regan(17) lap=14 point=1 t=24.931 et=1263.216</Score>
+<Score et="1264.4">Angelo dos Santos(12) lap=14 point=2 t=50.141 et=1264.140</Score>
+<Score et="1264.6">Ricardo Campos(8) lap=13 point=2 t=50.125 et=1264.412</Score>
+<Score et="1271.5">Ed Durbin(9) lap=13 point=0 t=111.849 et=1271.340</Score>
+<Score et="1271.6">David Slute(11) lap=13 point=2 t=50.283 et=1271.377</Score>
+<Score et="1272.1">Scott Beck(3) lap=14 point=1 t=25.951 et=1271.889</Score>
+<Score et="1273.6">Dan Wheat(18) lap=13 point=0 t=187.700 et=1273.406</Score>
+<Score et="1273.6">Dale Green(21) lap=14 point=2 t=53.187 et=1273.557</Score>
+<Score et="1283.6">Tony Diamond(5) lap=14 point=1 t=26.330 et=1283.490</Score>
+<Score et="1286.0">Rich Mink(1) lap=14 point=2 t=51.957 et=1285.821</Score>
+<Incident et="1286.1">JImmy Regan(17) reported contact (0.03) with Immovable</Incident>
+<Incident et="1286.1">JImmy Regan(17) reported contact (1.00) with Immovable</Incident>
+<Score et="1288.4">Jeff Hooper(4) lap=15 point=0 t=83.661 et=1288.247</Score>
+<Score et="1288.4">brian potvin(2) lap=14 point=0 t=86.762 et=1288.278</Score>
+<Score et="1288.9">Chris Sherburn(16) lap=14 point=0 t=138.275 et=1288.789</Score>
+<Score et="1289.6">JImmy Regan(17) lap=14 point=2 t=51.110 et=1289.395</Score>
+<Score et="1294.7">RSM_Stenny(6) lap=15 point=0 t=81.530 et=1294.491</Score>
+<Score et="1296.4">Angelo dos Santos(12) lap=15 point=0 t=82.260 et=1296.259</Score>
+<Score et="1296.8">Ricardo Campos(8) lap=14 point=0 t=82.308 et=1296.596</Score>
+<Score et="1297.5">Ed Durbin(9) lap=13 point=1 t=25.965 et=1297.305</Score>
+<Score et="1298.9">Scott Beck(3) lap=14 point=2 t=52.741 et=1298.680</Score>
+<Score et="1303.7">David Slute(11) lap=14 point=0 t=82.451 et=1303.544</Score>
+<Score et="1305.6">Dan Wheat(18) lap=13 point=1 t=32.033 et=1305.438</Score>
+<Score et="1306.0">Dale Green(21) lap=15 point=0 t=85.623 et=1305.992</Score>
+<Score et="1311.8">Tony Diamond(5) lap=14 point=2 t=54.417 et=1311.578</Score>
+<Score et="1313.0">Jeff Hooper(4) lap=15 point=1 t=24.581 et=1312.828</Score>
+<Score et="1315.7">Chris Sherburn(16) lap=14 point=1 t=26.729 et=1315.518</Score>
+<Score et="1315.8">brian potvin(2) lap=14 point=1 t=27.325 et=1315.603</Score>
+<Score et="1318.9">Rich Mink(1) lap=15 point=0 t=84.924 et=1318.788</Score>
+<Score et="1319.2">RSM_Stenny(6) lap=15 point=1 t=24.438 et=1318.929</Score>
+<Score et="1321.1">Angelo dos Santos(12) lap=15 point=1 t=24.573 et=1320.831</Score>
+<Score et="1321.6">Ricardo Campos(8) lap=14 point=1 t=24.760 et=1321.356</Score>
+<Score et="1325.2">Ed Durbin(9) lap=13 point=2 t=53.713 et=1325.053</Score>
+<Score et="1328.2">David Slute(11) lap=14 point=1 t=24.456 et=1328.000</Score>
+<Score et="1330.8">Dale Green(21) lap=15 point=1 t=24.835 et=1330.827</Score>
+<Score et="1331.8">Dan Wheat(18) lap=13 point=2 t=58.200 et=1331.606</Score>
+<Score et="1338.6">Jeff Hooper(4) lap=15 point=2 t=50.184 et=1338.432</Score>
+<Score et="1342.1">Chris Sherburn(16) lap=14 point=2 t=53.056 et=1341.845</Score>
+<Score et="1344.1">brian potvin(2) lap=14 point=2 t=55.604 et=1343.882</Score>
+<Score et="1344.2">Rich Mink(1) lap=15 point=1 t=25.291 et=1344.079</Score>
+<Score et="1345.0">RSM_Stenny(6) lap=15 point=2 t=50.170 et=1344.661</Score>
+<Score et="1345.4">Tony Diamond(5) lap=15 point=0 t=88.104 et=1345.265</Score>
+<Score et="1346.4">Angelo dos Santos(12) lap=15 point=2 t=49.944 et=1346.203</Score>
+<Score et="1347.1">Ricardo Campos(8) lap=14 point=2 t=50.263 et=1346.859</Score>
+<Score et="1353.7">David Slute(11) lap=14 point=2 t=50.006 et=1353.550</Score>
+<Score et="1357.0">Dale Green(21) lap=15 point=2 t=50.968 et=1356.960</Score>
+<Score et="1359.1">Ed Durbin(9) lap=14 point=0 t=87.646 et=1358.986</Score>
+<Score et="1364.8">Dan Wheat(18) lap=14 point=0 t=91.252 et=1364.657</Score>
+<Score et="1370.2">JImmy Regan(17) lap=15 point=0 t=131.793 et=1370.078</Score>
+<Score et="1370.4">Tony Diamond(5) lap=15 point=1 t=24.924 et=1370.189</Score>
+<Score et="1370.4">Rich Mink(1) lap=15 point=2 t=51.404 et=1370.192</Score>
+<Score et="1370.9">Jeff Hooper(4) lap=16 point=0 t=82.541 et=1370.788</Score>
+<Incident et="1371.1">RSM_Stenny(6) reported contact (0.06) with another vehicle brian potvin(2)</Incident>
+<Score et="1373.7">Chris Sherburn(16) lap=15 point=0 t=84.753 et=1373.542</Score>
+<Chat et="1379.5">Scott Beck: Leaving pits</Chat>
+<Score et="1379.7">RSM_Stenny(6) lap=16 point=0 t=84.949 et=1379.440</Score>
+<Score et="1379.7">Angelo dos Santos(12) lap=16 point=0 t=83.259 et=1379.518</Score>
+<Score et="1379.8">Ricardo Campos(8) lap=15 point=0 t=83.052 et=1379.648</Score>
+<Score et="1381.7">brian potvin(2) lap=15 point=0 t=93.235 et=1381.513</Score>
+<Score et="1382.1">Scott Beck(3) lap=15 point=0 t=136.014 et=1381.953</Score>
+<Score et="1385.4">Ed Durbin(9) lap=14 point=1 t=26.245 et=1385.231</Score>
+<Score et="1385.9">David Slute(11) lap=15 point=0 t=82.236 et=1385.780</Score>
+<Score et="1389.4">Dale Green(21) lap=16 point=0 t=83.380 et=1389.372</Score>
+<Score et="1390.2">Dan Wheat(18) lap=14 point=1 t=25.340 et=1389.998</Score>
+<Score et="1395.5">Jeff Hooper(4) lap=16 point=1 t=24.557 et=1395.345</Score>
+<Score et="1396.6">Tony Diamond(5) lap=15 point=2 t=51.221 et=1396.485</Score>
+<Score et="1398.5">Chris Sherburn(16) lap=15 point=1 t=24.829 et=1398.372</Score>
+<Incident et="1400.1">brian potvin(2) reported contact (0.81) with Immovable</Incident>
+<Incident et="1400.3">brian potvin(2) reported contact (0.42) with Immovable</Incident>
+<Score et="1401.8">JImmy Regan(17) lap=15 point=1 t=31.499 et=1401.577</Score>
+<Score et="1403.4">Rich Mink(1) lap=16 point=0 t=84.490 et=1403.278</Score>
+<Score et="1404.1">RSM_Stenny(6) lap=16 point=1 t=24.310 et=1403.750</Score>
+<Score et="1404.7">Angelo dos Santos(12) lap=16 point=1 t=24.957 et=1404.474</Score>
+<Score et="1405.2">Ricardo Campos(8) lap=15 point=1 t=25.374 et=1405.022</Score>
+<Score et="1407.2">brian potvin(2) lap=15 point=1 t=25.522 et=1407.036</Score>
+<Score et="1410.7">David Slute(11) lap=15 point=1 t=24.747 et=1410.527</Score>
+<Score et="1412.7">Ed Durbin(9) lap=14 point=2 t=53.505 et=1412.491</Score>
+<Score et="1414.9">Dale Green(21) lap=16 point=1 t=25.473 et=1414.845</Score>
+<Score et="1416.2">Scott Beck(3) lap=15 point=1 t=34.001 et=1415.954</Score>
+<Score et="1416.3">Dan Wheat(18) lap=14 point=2 t=51.486 et=1416.144</Score>
+<Score et="1421.2">Jeff Hooper(4) lap=16 point=2 t=50.152 et=1420.940</Score>
+<Score et="1423.9">Chris Sherburn(16) lap=15 point=2 t=50.140 et=1423.682</Score>
+<Incident et="1425.0">JImmy Regan(17) reported contact (0.03) with Immovable</Incident>
+<Incident et="1426.4">RSM_Stenny(6) reported contact (0.71) with Immovable</Incident>
+<Score et="1428.2">JImmy Regan(17) lap=15 point=2 t=57.972 et=1428.050</Score>
+<Score et="1428.5">Rich Mink(1) lap=16 point=1 t=25.141 et=1428.418</Score>
+<Score et="1429.7">RSM_Stenny(6) lap=16 point=2 t=49.959 et=1429.399</Score>
+<Score et="1430.2">Angelo dos Santos(12) lap=16 point=2 t=50.415 et=1429.933</Score>
+<Score et="1430.5">Ricardo Campos(8) lap=15 point=2 t=50.647 et=1430.295</Score>
+<Score et="1434.1">brian potvin(2) lap=15 point=2 t=52.340 et=1433.853</Score>
+<Score et="1436.6">David Slute(11) lap=15 point=2 t=50.634 et=1436.414</Score>
+<Score et="1440.7">Dale Green(21) lap=16 point=2 t=51.345 et=1440.717</Score>
+<Score et="1442.5">Scott Beck(3) lap=15 point=2 t=60.332 et=1442.285</Score>
+<Score et="1446.5">Ed Durbin(9) lap=15 point=0 t=87.405 et=1446.391</Score>
+<Incident et="1447.5">brian potvin(2) reported contact (1.00) with Immovable</Incident>
+<Score et="1449.2">Dan Wheat(18) lap=15 point=0 t=84.373 et=1449.031</Score>
+<Score et="1453.8">Jeff Hooper(4) lap=17 point=0 t=82.901 et=1453.690</Score>
+<Score et="1454.4">Rich Mink(1) lap=16 point=2 t=50.979 et=1454.257</Score>
+<Score et="1456.2">Chris Sherburn(16) lap=16 point=0 t=82.497 et=1456.039</Score>
+<Score et="1460.7">JImmy Regan(17) lap=16 point=0 t=90.479 et=1460.557</Score>
+<Score et="1462.1">RSM_Stenny(6) lap=17 point=0 t=82.410 et=1461.850</Score>
+<Score et="1462.4">Angelo dos Santos(12) lap=17 point=0 t=82.713 et=1462.231</Score>
+<Score et="1462.8">Ricardo Campos(8) lap=16 point=0 t=82.976 et=1462.624</Score>
+<Score et="1469.5">David Slute(11) lap=16 point=0 t=83.597 et=1469.377</Score>
+<Chat et="1471.8">brian potvin has left the game but vehicle has been stored in the garage</Chat>
+<Score et="1473.4">Ed Durbin(9) lap=15 point=1 t=26.819 et=1473.210</Score>
+<Score et="1473.8">Dale Green(21) lap=17 point=0 t=84.395 et=1473.767</Score>
+<Score et="1474.5">Dan Wheat(18) lap=15 point=1 t=25.266 et=1474.297</Score>
+<Score et="1475.9">Scott Beck(3) lap=16 point=0 t=93.751 et=1475.704</Score>
+<Score et="1478.5">Jeff Hooper(4) lap=17 point=1 t=24.617 et=1478.306</Score>
+<Score et="1480.7">Chris Sherburn(16) lap=16 point=1 t=24.514 et=1480.554</Score>
+<Score et="1484.4">Tony Diamond(5) lap=16 point=0 t=138.988 et=1484.253</Score>
+<Score et="1485.3">JImmy Regan(17) lap=16 point=1 t=24.580 et=1485.137</Score>
+<Score et="1486.7">RSM_Stenny(6) lap=17 point=1 t=24.502 et=1486.352</Score>
+<Score et="1487.0">Angelo dos Santos(12) lap=17 point=1 t=24.536 et=1486.767</Score>
+<Score et="1487.2">Rich Mink(1) lap=17 point=0 t=83.795 et=1487.073</Score>
+<Score et="1487.5">Ricardo Campos(8) lap=16 point=1 t=24.637 et=1487.261</Score>
+<Score et="1494.5">David Slute(11) lap=16 point=1 t=24.876 et=1494.253</Score>
+<Score et="1498.6">Dale Green(21) lap=17 point=1 t=24.801 et=1498.568</Score>
+<Score et="1500.2">Ed Durbin(9) lap=15 point=2 t=53.605 et=1499.997</Score>
+<Score et="1500.4">Dan Wheat(18) lap=15 point=2 t=51.168 et=1500.199</Score>
+<Score et="1501.3">Scott Beck(3) lap=16 point=1 t=25.374 et=1501.078</Score>
+<Score et="1504.1">Jeff Hooper(4) lap=17 point=2 t=50.288 et=1503.978</Score>
+<Score et="1506.2">Chris Sherburn(16) lap=16 point=2 t=49.959 et=1505.999</Score>
+<Incident et="1506.7">Ricardo Campos(8) reported contact (0.23) with Immovable</Incident>
+<Incident et="1507.4">Ed Durbin(9) reported contact (1.00) with Immovable</Incident>
+<Score et="1511.2">JImmy Regan(17) lap=16 point=2 t=50.453 et=1511.010</Score>
+<Score et="1512.2">Rich Mink(1) lap=17 point=1 t=25.005 et=1512.078</Score>
+<Score et="1512.5">RSM_Stenny(6) lap=17 point=2 t=50.372 et=1512.222</Score>
+<Score et="1512.8">Angelo dos Santos(12) lap=17 point=2 t=50.333 et=1512.564</Score>
+<Score et="1513.2">Ricardo Campos(8) lap=16 point=2 t=50.371 et=1512.995</Score>
+<Score et="1519.2">Tony Diamond(5) lap=16 point=1 t=34.775 et=1519.028</Score>
+<Score et="1520.3">David Slute(11) lap=16 point=2 t=50.723 et=1520.100</Score>
+<Score et="1524.7">Dale Green(21) lap=17 point=2 t=50.943 et=1524.710</Score>
+<Score et="1527.4">Scott Beck(3) lap=16 point=2 t=51.515 et=1527.220</Score>
+<Score et="1534.0">Dan Wheat(18) lap=16 point=0 t=84.851 et=1533.882</Score>
+<Incident et="1536.2">Ed Durbin(9) reported contact (1.00) with Immovable</Incident>
+<Incident et="1536.3">Ed Durbin(9) reported contact (0.68) with Immovable</Incident>
+<Score et="1537.9">Jeff Hooper(4) lap=18 point=0 t=84.063 et=1537.753</Score>
+<Score et="1538.3">Chris Sherburn(16) lap=17 point=0 t=82.103 et=1538.142</Score>
+<Score et="1538.3">Rich Mink(1) lap=17 point=2 t=51.081 et=1538.154</Score>
+<Score et="1543.7">JImmy Regan(17) lap=17 point=0 t=83.021 et=1543.578</Score>
+<Score et="1544.6">RSM_Stenny(6) lap=18 point=0 t=82.361 et=1544.211</Score>
+<Score et="1545.2">Angelo dos Santos(12) lap=18 point=0 t=82.763 et=1544.995</Score>
+<Score et="1545.6">Ricardo Campos(8) lap=17 point=0 t=82.850 et=1545.474</Score>
+<Score et="1546.6">Tony Diamond(5) lap=16 point=2 t=62.090 et=1546.342</Score>
+<Score et="1552.7">David Slute(11) lap=17 point=0 t=83.148 et=1552.525</Score>
+<Score et="1557.6">Dale Green(21) lap=18 point=0 t=83.792 et=1557.558</Score>
+<Score et="1559.6">Dan Wheat(18) lap=16 point=1 t=25.474 et=1559.356</Score>
+<Score et="1559.9">Scott Beck(3) lap=17 point=0 t=84.074 et=1559.778</Score>
+<Incident et="1561.1">David Slute(11) reported contact (1.00) with Immovable</Incident>
+<Incident et="1561.4">David Slute(11) reported contact (0.16) with Immovable</Incident>
+<Score et="1562.6">Jeff Hooper(4) lap=18 point=1 t=24.734 et=1562.487</Score>
+<Score et="1563.1">Chris Sherburn(16) lap=17 point=1 t=24.864 et=1563.006</Score>
+<Score et="1569.0">RSM_Stenny(6) lap=18 point=1 t=24.394 et=1568.605</Score>
+<Score et="1569.8">Angelo dos Santos(12) lap=18 point=1 t=24.571 et=1569.565</Score>
+<Score et="1570.6">Ricardo Campos(8) lap=17 point=1 t=24.845 et=1570.318</Score>
+<Score et="1571.2">Rich Mink(1) lap=18 point=0 t=83.992 et=1571.065</Score>
+<Score et="1571.6">JImmy Regan(17) lap=17 point=1 t=27.783 et=1571.361</Score>
+<Score et="1580.0">Tony Diamond(5) lap=17 point=0 t=95.626 et=1579.879</Score>
+<Score et="1580.2">Ed Durbin(9) lap=16 point=0 t=133.587 et=1579.978</Score>
+<Score et="1583.6">Dale Green(21) lap=18 point=1 t=26.024 et=1583.583</Score>
+<Incident et="1584.1">Tony Diamond(5) reported contact (0.29) with Immovable</Incident>
+<Score et="1584.2">David Slute(11) lap=17 point=1 t=31.527 et=1584.052</Score>
+<Incident et="1584.8">Jeff Hooper(4) reported contact (0.19) with Immovable</Incident>
+<Incident et="1584.8">Jeff Hooper(4) reported contact (0.97) with Immovable</Incident>
+<Score et="1585.2">Scott Beck(3) lap=17 point=1 t=25.212 et=1584.990</Score>
+<Score et="1585.6">Dan Wheat(18) lap=16 point=2 t=51.583 et=1585.465</Score>
+<Score et="1588.5">Jeff Hooper(4) lap=18 point=2 t=50.550 et=1588.303</Score>
+<Score et="1588.7">Chris Sherburn(16) lap=17 point=2 t=50.353 et=1588.494</Score>
+<Incident et="1591.2">RSM_Stenny(6) reported contact (0.84) with Immovable</Incident>
+<Incident et="1592.5">Ricardo Campos(8) reported contact (0.06) with Immovable</Incident>
+<Incident et="1592.5">Ricardo Campos(8) reported contact (1.00) with Immovable</Incident>
+<Score et="1594.6">RSM_Stenny(6) lap=18 point=2 t=50.041 et=1594.252</Score>
+<Score et="1595.4">Angelo dos Santos(12) lap=18 point=2 t=50.208 et=1595.202</Score>
+<Score et="1596.2">Ricardo Campos(8) lap=17 point=2 t=50.573 et=1596.047</Score>
+<Score et="1597.1">Rich Mink(1) lap=18 point=1 t=25.914 et=1596.979</Score>
+<Score et="1598.3">JImmy Regan(17) lap=17 point=2 t=54.533 et=1598.111</Score>
+<Score et="1605.3">Tony Diamond(5) lap=17 point=1 t=25.241 et=1605.120</Score>
+<Score et="1606.9">Ed Durbin(9) lap=16 point=1 t=26.714 et=1606.692</Score>
+<Score et="1609.6">Dale Green(21) lap=18 point=2 t=52.051 et=1609.609</Score>
+<Score et="1610.6">David Slute(11) lap=17 point=2 t=57.807 et=1610.332</Score>
+<Score et="1611.5">Scott Beck(3) lap=17 point=2 t=51.489 et=1611.267</Score>
+<Incident et="1616.8">Rich Mink(1) reported contact (0.13) with Immovable</Incident>
+<Score et="1618.7">Dan Wheat(18) lap=17 point=0 t=84.735 et=1618.617</Score>
+<Score et="1621.4">Jeff Hooper(4) lap=19 point=0 t=83.542 et=1621.295</Score>
+<Score et="1621.8">Chris Sherburn(16) lap=18 point=0 t=83.497 et=1621.639</Score>
+<Score et="1623.1">Rich Mink(1) lap=18 point=2 t=51.831 et=1622.896</Score>
+<Score et="1626.7">RSM_Stenny(6) lap=19 point=0 t=82.266 et=1626.477</Score>
+<Score et="1628.5">Angelo dos Santos(12) lap=19 point=0 t=83.321 et=1628.316</Score>
+<Score et="1629.0">Ricardo Campos(8) lap=18 point=0 t=83.426 et=1628.900</Score>
+<Score et="1630.7">JImmy Regan(17) lap=18 point=0 t=86.998 et=1630.576</Score>
+<Score et="1631.4">Tony Diamond(5) lap=17 point=2 t=51.332 et=1631.210</Score>
+<Score et="1639.1">Ed Durbin(9) lap=16 point=2 t=58.965 et=1638.944</Score>
+<Score et="1641.9">Dale Green(21) lap=19 point=0 t=84.335 et=1641.893</Score>
+<Score et="1644.1">Dan Wheat(18) lap=17 point=1 t=25.349 et=1643.966</Score>
+<Score et="1645.4">Scott Beck(3) lap=18 point=0 t=85.458 et=1645.235</Score>
+<Score et="1645.9">Jeff Hooper(4) lap=19 point=1 t=24.413 et=1645.708</Score>
+<Score et="1646.4">Chris Sherburn(16) lap=18 point=1 t=24.550 et=1646.189</Score>
+<Score et="1650.9">RSM_Stenny(6) lap=19 point=1 t=24.049 et=1650.526</Score>
+<Score et="1652.9">Angelo dos Santos(12) lap=19 point=1 t=24.357 et=1652.673</Score>
+<Score et="1653.3">Ricardo Campos(8) lap=18 point=1 t=24.206 et=1653.106</Score>
+<Score et="1655.5">JImmy Regan(17) lap=18 point=1 t=24.769 et=1655.345</Score>
+<Score et="1656.2">Rich Mink(1) lap=19 point=0 t=84.977 et=1656.042</Score>
+<Score et="1664.7">Tony Diamond(5) lap=18 point=0 t=84.730 et=1664.609</Score>
+<Score et="1666.6">Dale Green(21) lap=19 point=1 t=24.710 et=1666.603</Score>
+<Incident et="1667.4">JImmy Regan(17) reported contact (0.03) with Immovable</Incident>
+<Score et="1670.1">Dan Wheat(18) lap=17 point=2 t=51.288 et=1669.906</Score>
+<Score et="1670.7">Scott Beck(3) lap=18 point=1 t=25.279 et=1670.514</Score>
+<Score et="1671.6">Jeff Hooper(4) lap=19 point=2 t=50.109 et=1671.403</Score>
+<Score et="1671.9">Chris Sherburn(16) lap=18 point=2 t=50.025 et=1671.664</Score>
+<Score et="1676.2">RSM_Stenny(6) lap=19 point=2 t=49.322 et=1675.799</Score>
+<Incident et="1677.0">RSM_Stenny(6) reported contact (0.16) with Immovable</Incident>
+<Score et="1678.7">Angelo dos Santos(12) lap=19 point=2 t=50.148 et=1678.464</Score>
+<Score et="1679.0">Ricardo Campos(8) lap=18 point=2 t=49.882 et=1678.782</Score>
+<Score et="1681.2">Rich Mink(1) lap=19 point=1 t=24.968 et=1681.010</Score>
+<Score et="1681.3">JImmy Regan(17) lap=18 point=2 t=50.524 et=1681.100</Score>
+<Score et="1689.4">Tony Diamond(5) lap=18 point=1 t=24.631 et=1689.240</Score>
+<Score et="1692.3">Dale Green(21) lap=19 point=2 t=50.409 et=1692.302</Score>
+<Score et="1697.1">Scott Beck(3) lap=18 point=2 t=51.623 et=1696.858</Score>
+<Score et="1702.9">Dan Wheat(18) lap=18 point=0 t=84.126 et=1702.743</Score>
+<Score et="1703.3">David Slute(11) lap=18 point=0 t=150.626 et=1703.151</Score>
+<Score et="1704.0">Jeff Hooper(4) lap=20 point=0 t=82.600 et=1703.895</Score>
+<Score et="1704.3">Chris Sherburn(16) lap=19 point=0 t=82.533 et=1704.172</Score>
+<Penalty et="1706.7">David Slute received Stop/Go penalty, 10s, 0laps. Result: penalties=1, 1st=Stop/Go,10s</Penalty>
+<Score et="1707.8">Rich Mink(1) lap=19 point=2 t=51.566 et=1707.608</Score>
+<Score et="1708.1">RSM_Stenny(6) lap=20 point=0 t=81.315 et=1707.792</Score>
+<Score et="1710.5">Angelo dos Santos(12) lap=20 point=0 t=82.009 et=1710.325</Score>
+<Score et="1711.2">Ricardo Campos(8) lap=19 point=0 t=82.159 et=1711.058</Score>
+<Score et="1713.5">JImmy Regan(17) lap=19 point=0 t=82.729 et=1713.304</Score>
+<Score et="1715.4">Tony Diamond(5) lap=18 point=2 t=50.569 et=1715.178</Score>
+<Score et="1724.9">Dale Green(21) lap=20 point=0 t=82.951 et=1724.844</Score>
+<Score et="1728.7">Jeff Hooper(4) lap=20 point=1 t=24.660 et=1728.554</Score>
+<Score et="1729.1">Chris Sherburn(16) lap=19 point=1 t=24.709 et=1728.880</Score>
+<Score et="1729.7">Scott Beck(3) lap=19 point=0 t=84.360 et=1729.596</Score>
+<Score et="1730.4">Dan Wheat(18) lap=18 point=1 t=27.437 et=1730.181</Score>
+<Score et="1730.9">Ed Durbin(9) lap=17 point=0 t=150.775 et=1730.753</Score>
+<Score et="1732.1">RSM_Stenny(6) lap=20 point=1 t=24.003 et=1731.795</Score>
+<Score et="1735.0">Angelo dos Santos(12) lap=20 point=1 t=24.370 et=1734.695</Score>
+<Score et="1735.5">Ricardo Campos(8) lap=19 point=1 t=24.211 et=1735.269</Score>
+<Incident et="1738.0">RSM_Stenny(6) reported contact (0.03) with Immovable</Incident>
+<Score et="1738.1">JImmy Regan(17) lap=19 point=1 t=24.523 et=1737.828</Score>
+<Score et="1741.1">Rich Mink(1) lap=20 point=0 t=84.910 et=1740.953</Score>
+<Score et="1742.3">David Slute(11) lap=18 point=1 t=39.004 et=1742.155</Score>
+<Score et="1747.8">Tony Diamond(5) lap=19 point=0 t=83.100 et=1747.709</Score>
+<Incident et="1748.3">Jeff Hooper(4) reported contact (0.23) with Immovable</Incident>
+<Score et="1749.7">Dale Green(21) lap=20 point=1 t=24.805 et=1749.649</Score>
+<Incident et="1751.1">Jeff Hooper(4) reported contact (0.06) with Immovable</Incident>
+<Incident et="1751.1">Jeff Hooper(4) reported contact (0.97) with Immovable</Incident>
+<Incident et="1751.5">Chris Sherburn(16) reported contact (1.00) with Immovable</Incident>
+<Score et="1754.3">Jeff Hooper(4) lap=20 point=2 t=50.219 et=1754.114</Score>
+<Incident et="1754.6">RSM_Stenny(6) reported contact (0.00) with Immovable</Incident>
+<Incident et="1754.6">RSM_Stenny(6) reported contact (0.90) with Immovable</Incident>
+<Score et="1754.8">Chris Sherburn(16) lap=19 point=2 t=50.409 et=1754.581</Score>
+<Score et="1754.8">Scott Beck(3) lap=19 point=1 t=25.009 et=1754.605</Score>
+<Score et="1756.1">Dan Wheat(18) lap=18 point=2 t=53.243 et=1755.986</Score>
+<Incident et="1757.1">Chris Sherburn(16) reported contact (0.52) with another vehicle Jeff Hooper(4)</Incident>
+<Incident et="1757.1">Jeff Hooper(4) reported contact (0.48) with another vehicle Chris Sherburn(16)</Incident>
+<Incident et="1757.1">Chris Sherburn(16) reported contact (0.03) with another vehicle Jeff Hooper(4)</Incident>
+<Score et="1757.8">RSM_Stenny(6) lap=20 point=2 t=49.652 et=1757.445</Score>
+<Incident et="1760.3">JImmy Regan(17) reported contact (0.32) with Immovable</Incident>
+<Incident et="1760.4">JImmy Regan(17) reported contact (1.00) with Immovable</Incident>
+<Score et="1760.5">Angelo dos Santos(12) lap=20 point=2 t=49.928 et=1760.253</Score>
+<Score et="1760.9">Ricardo Campos(8) lap=19 point=2 t=49.573 et=1760.631</Score>
+<Incident et="1761.6">Ricardo Campos(8) reported contact (0.23) with Immovable</Incident>
+<Incident et="1761.7">Ricardo Campos(8) reported contact (0.10) with Immovable</Incident>
+<Incident et="1761.7">Ricardo Campos(8) reported contact (0.55) with Immovable</Incident>
+<Incident et="1762.0">Ricardo Campos(8) reported contact (0.06) with Immovable</Incident>
+<Incident et="1762.1">Angelo dos Santos(12) reported contact (1.00) with another vehicle Ricardo Campos(8)</Incident>
+<Incident et="1762.1">Angelo dos Santos(12) reported contact (0.26) with another vehicle Ricardo Campos(8)</Incident>
+<Incident et="1762.3">Angelo dos Santos(12) reported contact (0.06) with another vehicle Ricardo Campos(8)</Incident>
+<Incident et="1762.3">Angelo dos Santos(12) reported contact (0.03) with another vehicle Ricardo Campos(8)</Incident>
+<Incident et="1762.4">JImmy Regan(17) reported contact (1.00) with Immovable</Incident>
+<Incident et="1762.5">JImmy Regan(17) reported contact (0.13) with Immovable</Incident>
+<Incident et="1763.1">JImmy Regan(17) reported contact (0.19) with Immovable</Incident>
+<Incident et="1763.2">JImmy Regan(17) reported contact (0.06) with Immovable</Incident>
+<Score et="1764.4">Ed Durbin(9) lap=17 point=1 t=33.404 et=1764.157</Score>
+<Score et="1766.2">Rich Mink(1) lap=20 point=1 t=25.081 et=1766.034</Score>
+<Score et="1768.5">David Slute(11) lap=18 point=2 t=65.168 et=1768.319</Score>
+<Score et="1770.0">JImmy Regan(17) lap=19 point=2 t=56.496 et=1769.800</Score>
+<Incident et="1771.6">Tony Diamond(5) reported contact (0.03) with Immovable</Incident>
+<Score et="1772.6">Tony Diamond(5) lap=19 point=1 t=24.699 et=1772.409</Score>
+<Score et="1775.7">Dale Green(21) lap=20 point=2 t=50.839 et=1775.683</Score>
+<Incident et="1777.4">Rich Mink(1) reported contact (1.00) with Immovable</Incident>
+<Incident et="1777.5">Rich Mink(1) reported contact (0.29) with Immovable</Incident>
+<Incident et="1777.5">Rich Mink(1) reported contact (0.48) with Immovable</Incident>
+<Score et="1780.7">Scott Beck(3) lap=19 point=2 t=50.965 et=1780.561</Score>
+<Score et="1787.2">Chris Sherburn(16) lap=20 point=0 t=82.880 et=1787.052</Score>
+<Score et="1787.5">Jeff Hooper(4) lap=21 point=0 t=83.458 et=1787.353</Score>
+<Score et="1788.6">Dan Wheat(18) lap=19 point=0 t=85.747 et=1788.491</Score>
+<Score et="1790.2">RSM_Stenny(6) lap=21 point=0 t=82.163 et=1789.955</Score>
+<Score et="1792.0">Ed Durbin(9) lap=17 point=2 t=61.007 et=1791.761</Score>
+<Incident et="1793.7">Rich Mink(1) reported contact (0.10) with Immovable</Incident>
+<Score et="1796.5">Angelo dos Santos(12) lap=21 point=0 t=86.023 et=1796.348</Score>
+<Score et="1799.1">Tony Diamond(5) lap=19 point=2 t=51.289 et=1798.998</Score>
+<Score et="1800.5">Rich Mink(1) lap=20 point=2 t=59.340 et=1800.293</Score>
+<Penalty et="1804.2">David Slute served 1st Stop/Go penalty, result: penalties=0, 1st=Stop/Go,10s</Penalty>
+<Incident et="1804.6">Chris Sherburn(16) reported contact (0.03) with Immovable</Incident>
+<Incident et="1804.8">Chris Sherburn(16) reported contact (0.06) with Immovable</Incident>
+<Score et="1805.2">JImmy Regan(17) lap=20 point=0 t=91.784 et=1805.089</Score>
+<Incident et="1805.5">Chris Sherburn(16) reported contact (0.81) with Immovable</Incident>
+<Score et="1808.7">Dale Green(21) lap=21 point=0 t=83.807 et=1808.652</Score>
+<Score et="1810.6">Ricardo Campos(8) lap=20 point=0 t=99.347 et=1810.406</Score>
+<Score et="1813.1">Jeff Hooper(4) lap=21 point=1 t=25.528 et=1812.881</Score>
+<Score et="1813.6">Chris Sherburn(16) lap=20 point=1 t=26.328 et=1813.380</Score>
+<Incident et="1813.6">JImmy Regan(17) reported contact (1.00) with Immovable</Incident>
+<Incident et="1813.7">JImmy Regan(17) reported contact (0.58) with Immovable</Incident>
+<Incident et="1813.7">JImmy Regan(17) reported contact (1.00) with Immovable</Incident>
+<Score et="1813.8">Scott Beck(3) lap=20 point=0 t=84.097 et=1813.693</Score>
+<Score et="1814.0">Dan Wheat(18) lap=19 point=1 t=25.369 et=1813.860</Score>
+<Score et="1815.4">RSM_Stenny(6) lap=21 point=1 t=25.122 et=1815.077</Score>
+<Score et="1821.3">Angelo dos Santos(12) lap=21 point=1 t=24.731 et=1821.079</Score>
+<Score et="1825.8">David Slute(11) lap=19 point=0 t=122.449 et=1825.600</Score>
+<Score et="1826.3">Ed Durbin(9) lap=18 point=0 t=95.349 et=1826.103</Score>
+<Penalty et="1829.1">David Slute received Drive Thru penalty, 10s, 0laps. Result: penalties=1, 1st=Drive Thru,10s</Penalty>
+<Score et="1832.2">Tony Diamond(5) lap=20 point=0 t=84.372 et=1832.081</Score>
+<Score et="1833.0">JImmy Regan(17) lap=20 point=1 t=27.724 et=1832.813</Score>
+<Score et="1833.5">Dale Green(21) lap=21 point=1 t=24.795 et=1833.447</Score>
+<Score et="1833.8">Rich Mink(1) lap=21 point=0 t=92.703 et=1833.656</Score>
+<Incident et="1835.1">RSM_Stenny(6) reported contact (0.06) with Immovable</Incident>
+<Score et="1835.2">Ricardo Campos(8) lap=20 point=1 t=24.576 et=1834.981</Score>
+<Score et="1838.9">Scott Beck(3) lap=20 point=1 t=25.001 et=1838.694</Score>
+<Score et="1839.1">Jeff Hooper(4) lap=21 point=2 t=51.632 et=1838.985</Score>
+<Score et="1840.1">Chris Sherburn(16) lap=20 point=2 t=52.832 et=1839.884</Score>
+<Score et="1840.3">Dan Wheat(18) lap=19 point=2 t=51.672 et=1840.163</Score>
+<Score et="1841.1">RSM_Stenny(6) lap=21 point=2 t=50.806 et=1840.761</Score>
+<Incident et="1846.4">Ed Durbin(9) reported contact (0.68) with Immovable</Incident>
+<Incident et="1846.8">Dan Wheat(18) reported contact (0.03) with another vehicle RSM_Stenny(6)</Incident>
+<Score et="1846.8">Angelo dos Santos(12) lap=21 point=2 t=50.273 et=1846.621</Score>
+<Score et="1856.5">David Slute(11) lap=19 point=1 t=30.678 et=1856.278</Score>
+<Score et="1857.6">Tony Diamond(5) lap=20 point=1 t=25.366 et=1857.447</Score>
+<Score et="1859.3">Rich Mink(1) lap=21 point=1 t=25.474 et=1859.130</Score>
+<Score et="1859.6">Dale Green(21) lap=21 point=2 t=50.918 et=1859.570</Score>
+<Score et="1860.9">Ricardo Campos(8) lap=20 point=2 t=50.270 et=1860.675</Score>
+<Score et="1862.9">JImmy Regan(17) lap=20 point=2 t=57.611 et=1862.700</Score>
+<Score et="1865.4">Scott Beck(3) lap=20 point=2 t=51.523 et=1865.216</Score>
+<Incident et="1865.8">Ed Durbin(9) reported contact (0.71) with Immovable</Incident>
+<Score et="1871.8">Jeff Hooper(4) lap=22 point=0 t=84.281 et=1871.633</Score>
+<Score et="1872.7">Chris Sherburn(16) lap=21 point=0 t=85.514 et=1872.566</Score>
+<Incident et="1872.8">Ed Durbin(9) reported contact (0.39) with Immovable</Incident>
+<Score et="1873.7">RSM_Stenny(6) lap=22 point=0 t=83.516 et=1873.471</Score>
+<Score et="1875.4">Dan Wheat(18) lap=20 point=0 t=86.734 et=1875.225</Score>
+<Score et="1878.9">Angelo dos Santos(12) lap=22 point=0 t=82.341 et=1878.689</Score>
+<Score et="1882.3">David Slute(11) lap=19 point=2 t=56.495 et=1882.095</Score>
+<Score et="1883.9">Tony Diamond(5) lap=20 point=2 t=51.622 et=1883.703</Score>
+<Score et="1885.7">Rich Mink(1) lap=21 point=2 t=51.909 et=1885.565</Score>
+<Incident et="1888.7">Chris Sherburn(16) reported contact (1.00) with Immovable</Incident>
+<Incident et="1888.8">Chris Sherburn(16) reported contact (0.06) with Immovable</Incident>
+<Incident et="1890.0">Chris Sherburn(16) reported contact (0.55) with another vehicle RSM_Stenny(6)</Incident>
+<Incident et="1890.0">Chris Sherburn(16) reported contact (0.13) with another vehicle RSM_Stenny(6)</Incident>
+<Incident et="1890.3">RSM_Stenny(6) reported contact (0.42) with another vehicle Chris Sherburn(16)</Incident>
+<Incident et="1890.3">RSM_Stenny(6) reported contact (0.03) with another vehicle Chris Sherburn(16)</Incident>
+<Incident et="1890.3">RSM_Stenny(6) reported contact (0.10) with another vehicle Chris Sherburn(16)</Incident>
+<Score et="1890.5">Ed Durbin(9) lap=18 point=1 t=64.150 et=1890.253</Score>
+<Score et="1892.4">Dale Green(21) lap=22 point=0 t=83.741 et=1892.393</Score>
+<Score et="1893.1">Ricardo Campos(8) lap=21 point=0 t=82.513 et=1892.918</Score>
+<Score et="1896.3">Jeff Hooper(4) lap=22 point=1 t=24.497 et=1896.130</Score>
+<Score et="1899.0">RSM_Stenny(6) lap=22 point=1 t=25.144 et=1898.616</Score>
+<Score et="1899.5">Scott Beck(3) lap=21 point=0 t=85.635 et=1899.328</Score>
+<Score et="1900.6">Dan Wheat(18) lap=20 point=1 t=25.215 et=1900.440</Score>
+<Score et="1901.5">Chris Sherburn(16) lap=21 point=1 t=28.751 et=1901.318</Score>
+<Score et="1903.4">Angelo dos Santos(12) lap=22 point=1 t=24.475 et=1903.164</Score>
+<Score et="1915.1">David Slute(11) lap=20 point=0 t=89.325 et=1914.925</Score>
+<Score et="1916.9">Tony Diamond(5) lap=21 point=0 t=84.732 et=1916.813</Score>
+<Score et="1917.3">Dale Green(21) lap=22 point=1 t=24.886 et=1917.279</Score>
+<Score et="1917.9">Ed Durbin(9) lap=18 point=2 t=91.617 et=1917.719</Score>
+<Score et="1918.4">Ricardo Campos(8) lap=21 point=1 t=25.253 et=1918.171</Score>
+<Score et="1919.7">Rich Mink(1) lap=22 point=0 t=85.858 et=1919.514</Score>
+<Score et="1921.9">Jeff Hooper(4) lap=22 point=2 t=50.109 et=1921.742</Score>
+<Score et="1924.6">RSM_Stenny(6) lap=22 point=2 t=50.715 et=1924.186</Score>
+<Score et="1925.2">Scott Beck(3) lap=21 point=1 t=25.719 et=1925.047</Score>
+<Score et="1926.8">Dan Wheat(18) lap=20 point=2 t=51.447 et=1926.672</Score>
+<Score et="1927.5">Chris Sherburn(16) lap=21 point=2 t=54.693 et=1927.259</Score>
+<Score et="1929.1">Angelo dos Santos(12) lap=22 point=2 t=50.113 et=1928.802</Score>
+<Score et="1934.0">JImmy Regan(17) lap=21 point=0 t=128.711 et=1933.800</Score>
+<Score et="1939.4">David Slute(11) lap=20 point=1 t=24.226 et=1939.151</Score>
+<Score et="1942.0">Tony Diamond(5) lap=21 point=1 t=25.007 et=1941.820</Score>
+<Score et="1943.3">Dale Green(21) lap=22 point=2 t=50.849 et=1943.242</Score>
+<Score et="1944.3">Ricardo Campos(8) lap=21 point=2 t=51.187 et=1944.106</Score>
+<Score et="1944.9">Rich Mink(1) lap=22 point=1 t=25.217 et=1944.730</Score>
+<Score et="1951.5">Scott Beck(3) lap=21 point=2 t=52.070 et=1951.398</Score>
+<Score et="1952.5">Ed Durbin(9) lap=19 point=0 t=126.250 et=1952.353</Score>
+<Score et="1954.6">Jeff Hooper(4) lap=23 point=0 t=82.835 et=1954.468</Score>
+<Score et="1957.1">RSM_Stenny(6) lap=23 point=0 t=83.283 et=1956.754</Score>
+<Score et="1960.1">Chris Sherburn(16) lap=22 point=0 t=87.336 et=1959.902</Score>
+<Incident et="1960.4">Tony Diamond(5) reported contact (0.16) with Immovable</Incident>
+<Score et="1961.2">Angelo dos Santos(12) lap=23 point=0 t=82.326 et=1961.015</Score>
+<Score et="1962.6">Dan Wheat(18) lap=21 point=0 t=87.268 et=1962.493</Score>
+<Incident et="1964.6">Tony Diamond(5) reported contact (0.42) with Immovable</Incident>
+<Incident et="1964.6">Tony Diamond(5) reported contact (1.00) with Immovable</Incident>
+<Score et="1964.9">David Slute(11) lap=20 point=2 t=49.782 et=1964.707</Score>
+<Score et="1965.4">JImmy Regan(17) lap=21 point=1 t=31.408 et=1965.208</Score>
+<Score et="1968.6">Tony Diamond(5) lap=21 point=2 t=51.565 et=1968.378</Score>
+<Score et="1971.1">Rich Mink(1) lap=22 point=2 t=51.447 et=1970.960</Score>
+<Score et="1975.8">Dale Green(21) lap=23 point=0 t=83.424 et=1975.817</Score>
+<Score et="1976.6">Ricardo Campos(8) lap=22 point=0 t=83.468 et=1976.387</Score>
+<Incident et="1979.0">Chris Sherburn(16) reported contact (1.00) with Immovable</Incident>
+<Incident et="1979.0">Chris Sherburn(16) reported contact (0.16) with Immovable</Incident>
+<Incident et="1979.6">Chris Sherburn(16) reported contact (0.61) with Immovable</Incident>
+<Score et="1979.7">Jeff Hooper(4) lap=23 point=1 t=25.047 et=1979.515</Score>
+<Score et="1980.5">Ed Durbin(9) lap=19 point=1 t=28.025 et=1980.378</Score>
+<Score et="1981.3">RSM_Stenny(6) lap=23 point=1 t=24.222 et=1980.976</Score>
+<Incident et="1984.8">Chris Sherburn(16) reported contact (1.00) with Immovable</Incident>
+<Score et="1985.0">Scott Beck(3) lap=22 point=0 t=85.489 et=1984.817</Score>
+<Incident et="1985.4">Ed Durbin(9) reported contact (0.29) with Immovable</Incident>
+<Incident et="1985.6">Ed Durbin(9) reported contact (0.48) with Immovable</Incident>
+<Score et="1986.1">Angelo dos Santos(12) lap=23 point=1 t=24.800 et=1985.815</Score>
+<Score et="1988.3">Dan Wheat(18) lap=21 point=1 t=25.660 et=1988.153</Score>
+<Incident et="1988.5">Dan Wheat(18) reported contact (0.61) with Immovable</Incident>
+<Incident et="1988.7">Dan Wheat(18) reported contact (0.42) with Immovable</Incident>
+<Incident et="1988.7">Dan Wheat(18) reported contact (0.97) with Immovable</Incident>
+<Score et="1991.8">JImmy Regan(17) lap=21 point=2 t=57.838 et=1991.638</Score>
+<Score et="1997.3">David Slute(11) lap=21 point=0 t=82.193 et=1997.118</Score>
+<Score et="2000.8">Dale Green(21) lap=23 point=1 t=24.930 et=2000.746</Score>
+<Incident et="2001.0">RSM_Stenny(6) reported contact (0.16) with Immovable</Incident>
+<Score et="2001.4">Ricardo Campos(8) lap=22 point=1 t=24.783 et=2001.170</Score>
+<Score et="2001.8">Tony Diamond(5) lap=22 point=0 t=84.839 et=2001.653</Score>
+<Score et="2004.4">Rich Mink(1) lap=23 point=0 t=84.734 et=2004.248</Score>
+<Score et="2005.1">Jeff Hooper(4) lap=23 point=2 t=50.474 et=2004.942</Score>
+<Score et="2007.2">RSM_Stenny(6) lap=23 point=2 t=50.089 et=2006.843</Score>
+<Incident et="2008.5">Dan Wheat(18) reported contact (0.03) with Immovable</Incident>
+<Score et="2008.6">Ed Durbin(9) lap=19 point=2 t=56.083 et=2008.436</Score>
+<Incident et="2008.7">RSM_Stenny(6) reported contact (0.03) with Immovable</Incident>
+<Score et="2010.3">Scott Beck(3) lap=22 point=1 t=25.261 et=2010.078</Score>
+<Score et="2011.6">Angelo dos Santos(12) lap=23 point=2 t=50.331 et=2011.346</Score>
+<Score et="2014.3">Chris Sherburn(16) lap=22 point=1 t=54.240 et=2014.142</Score>
+<Score et="2014.9">Dan Wheat(18) lap=21 point=2 t=52.193 et=2014.686</Score>
+<Score et="2021.8">David Slute(11) lap=21 point=1 t=24.490 et=2021.608</Score>
+<Score et="2024.5">JImmy Regan(17) lap=22 point=0 t=90.590 et=2024.390</Score>
+<Score et="2027.2">Dale Green(21) lap=23 point=2 t=51.400 et=2027.217</Score>
+<Score et="2027.5">Ricardo Campos(8) lap=22 point=2 t=50.844 et=2027.231</Score>
+<Score et="2027.5">Tony Diamond(5) lap=22 point=1 t=25.625 et=2027.278</Score>
+<Score et="2029.6">Rich Mink(1) lap=23 point=1 t=25.111 et=2029.358</Score>
+<Incident et="2030.2">Dan Wheat(18) reported contact (1.00) with Immovable</Incident>
+<Incident et="2030.2">Dan Wheat(18) reported contact (1.00) with Immovable</Incident>
+<Incident et="2030.3">Dan Wheat(18) reported contact (0.55) with Immovable</Incident>
+<Incident et="2031.0">Dan Wheat(18) reported contact (0.48) with Immovable</Incident>
+<Incident et="2031.6">Dan Wheat(18) reported contact (0.19) with Immovable</Incident>
+<Score et="2036.3">Scott Beck(3) lap=22 point=2 t=51.325 et=2036.142</Score>
+<Score et="2037.4">Jeff Hooper(4) lap=24 point=0 t=82.798 et=2037.266</Score>
+<Score et="2040.1">RSM_Stenny(6) lap=24 point=0 t=83.052 et=2039.806</Score>
+<Score et="2043.8">Angelo dos Santos(12) lap=24 point=0 t=82.561 et=2043.576</Score>
+<Score et="2044.0">Ed Durbin(9) lap=20 point=0 t=91.517 et=2043.870</Score>
+<Score et="2044.1">Chris Sherburn(16) lap=22 point=2 t=83.995 et=2043.897</Score>
+<Score et="2048.5">David Slute(11) lap=21 point=2 t=51.135 et=2048.253</Score>
+<Score et="2049.1">JImmy Regan(17) lap=22 point=1 t=24.599 et=2048.990</Score>
+<Incident et="2052.1">Rich Mink(1) reported contact (0.68) with Immovable</Incident>
+<Score et="2054.2">Tony Diamond(5) lap=22 point=2 t=52.434 et=2054.087</Score>
+<Score et="2055.5">Rich Mink(1) lap=23 point=2 t=51.005 et=2055.253</Score>
+<Incident et="2056.1">Chris Sherburn(16) reported contact (0.58) with Immovable</Incident>
+<Score et="2057.4">Dan Wheat(18) lap=22 point=0 t=94.738 et=2057.231</Score>
+<Score et="2059.6">Ricardo Campos(8) lap=23 point=0 t=83.069 et=2059.456</Score>
+<Score et="2060.7">Dale Green(21) lap=24 point=0 t=84.850 et=2060.667</Score>
+<Score et="2062.1">Jeff Hooper(4) lap=24 point=1 t=24.631 et=2061.897</Score>
+<Incident et="2062.3">Ed Durbin(9) reported contact (1.00) with Immovable</Incident>
+<Incident et="2062.4">Ed Durbin(9) reported contact (0.00) with Immovable</Incident>
+<Incident et="2062.7">Ed Durbin(9) reported contact (0.19) with Immovable</Incident>
+<Score et="2064.1">RSM_Stenny(6) lap=24 point=1 t=23.972 et=2063.778</Score>
+<Score et="2068.4">Angelo dos Santos(12) lap=24 point=1 t=24.601 et=2068.177</Score>
+<Score et="2069.4">Scott Beck(3) lap=23 point=0 t=84.455 et=2069.272</Score>
+<Score et="2072.7">Ed Durbin(9) lap=20 point=1 t=28.684 et=2072.554</Score>
+<Incident et="2073.6">Chris Sherburn(16) reported contact (1.00) with Immovable</Incident>
+<Score et="2075.3">JImmy Regan(17) lap=22 point=2 t=50.775 et=2075.165</Score>
+<Incident et="2077.4">Ed Durbin(9) reported contact (0.94) with Immovable</Incident>
+<Score et="2082.8">Dan Wheat(18) lap=22 point=1 t=25.380 et=2082.612</Score>
+<Score et="2084.1">Ricardo Campos(8) lap=23 point=1 t=24.450 et=2083.906</Score>
+<Incident et="2085.3">RSM_Stenny(6) reported contact (0.10) with Immovable</Incident>
+<Score et="2086.1">Dale Green(21) lap=24 point=1 t=25.425 et=2086.092</Score>
+<Incident et="2086.6">RSM_Stenny(6) reported contact (0.06) with Immovable</Incident>
+<Incident et="2086.6">RSM_Stenny(6) reported contact (0.94) with Immovable</Incident>
+<Score et="2087.2">Tony Diamond(5) lap=23 point=0 t=85.467 et=2087.120</Score>
+<Score et="2087.3">Jeff Hooper(4) lap=24 point=2 t=49.887 et=2087.153</Score>
+<Score et="2088.5">Rich Mink(1) lap=24 point=0 t=84.083 et=2088.331</Score>
+<Score et="2090.1">RSM_Stenny(6) lap=24 point=2 t=49.982 et=2089.788</Score>
+<Score et="2094.1">Angelo dos Santos(12) lap=24 point=2 t=50.256 et=2093.832</Score>
+<Score et="2094.4">Scott Beck(3) lap=23 point=1 t=24.911 et=2094.183</Score>
+<Score et="2100.6">Chris Sherburn(16) lap=23 point=0 t=140.562 et=2100.464</Score>
+<Score et="2108.5">JImmy Regan(17) lap=23 point=0 t=83.950 et=2108.340</Score>
+<Score et="2110.1">Ricardo Campos(8) lap=23 point=2 t=50.369 et=2109.825</Score>
+<Score et="2110.8">Dan Wheat(18) lap=22 point=2 t=53.428 et=2110.659</Score>
+<Score et="2112.2">Dale Green(21) lap=24 point=2 t=51.525 et=2112.192</Score>
+<Score et="2112.9">Tony Diamond(5) lap=23 point=1 t=25.608 et=2112.728</Score>
+<Score et="2114.0">Rich Mink(1) lap=24 point=1 t=25.480 et=2113.810</Score>
+<Score et="2117.1">Ed Durbin(9) lap=20 point=2 t=73.039 et=2116.909</Score>
+<Score et="2119.6">Jeff Hooper(4) lap=25 point=0 t=82.216 et=2119.483</Score>
+<Score et="2120.6">Scott Beck(3) lap=23 point=2 t=51.170 et=2120.442</Score>
+<Score et="2122.3">RSM_Stenny(6) lap=25 point=0 t=82.156 et=2121.961</Score>
+<Score et="2126.6">Angelo dos Santos(12) lap=25 point=0 t=82.801 et=2126.376</Score>
+<Score et="2133.5">JImmy Regan(17) lap=23 point=1 t=24.977 et=2133.317</Score>
+<Chat et="2135.6">David Fernandes has left the game but vehicle has been stored in the garage</Chat>
+<Score et="2138.7">David Slute(11) lap=22 point=0 t=141.382 et=2138.500</Score>
+<Score et="2139.8">Tony Diamond(5) lap=23 point=2 t=52.572 et=2139.691</Score>
+<Score et="2140.3">Rich Mink(1) lap=24 point=2 t=51.830 et=2140.161</Score>
+<Score et="2143.1">Ricardo Campos(8) lap=24 point=0 t=83.475 et=2142.931</Score>
+<Score et="2143.8">Dan Wheat(18) lap=23 point=0 t=86.460 et=2143.691</Score>
+<Score et="2144.2">Jeff Hooper(4) lap=25 point=1 t=24.545 et=2144.028</Score>
+<Score et="2144.6">Dale Green(21) lap=25 point=0 t=83.889 et=2144.556</Score>
+<Score et="2146.5">RSM_Stenny(6) lap=25 point=1 t=24.163 et=2146.125</Score>
+<Score et="2151.1">Angelo dos Santos(12) lap=25 point=1 t=24.462 et=2150.839</Score>
+<Score et="2154.0">Scott Beck(3) lap=24 point=0 t=84.558 et=2153.830</Score>
+<Score et="2159.7">JImmy Regan(17) lap=23 point=2 t=51.215 et=2159.555</Score>
+<Score et="2167.5">Ricardo Campos(8) lap=24 point=1 t=24.303 et=2167.234</Score>
+<Incident et="2168.0">Dan Wheat(18) reported contact (1.00) with Immovable</Incident>
+<Score et="2169.7">Dale Green(21) lap=25 point=1 t=25.160 et=2169.717</Score>
+<Incident et="2169.8">Dan Wheat(18) reported contact (0.23) with Immovable</Incident>
+<Score et="2169.8">Jeff Hooper(4) lap=25 point=2 t=50.120 et=2169.603</Score>
+<Score et="2170.0">Dan Wheat(18) lap=23 point=1 t=26.065 et=2169.756</Score>
+<Incident et="2170.0">Dan Wheat(18) reported contact (0.10) with Immovable</Incident>
+<Score et="2172.2">RSM_Stenny(6) lap=25 point=2 t=49.844 et=2171.805</Score>
+<Score et="2173.0">Tony Diamond(5) lap=24 point=0 t=85.751 et=2172.871</Score>
+<Score et="2173.1">David Slute(11) lap=22 point=1 t=34.450 et=2172.950</Score>
+<Score et="2173.6">Rich Mink(1) lap=25 point=0 t=85.135 et=2173.465</Score>
+<Score et="2176.8">Angelo dos Santos(12) lap=25 point=2 t=50.195 et=2176.571</Score>
+<Score et="2180.5">Scott Beck(3) lap=24 point=1 t=26.490 et=2180.320</Score>
+<Score et="2181.3">Chris Sherburn(16) lap=23 point=1 t=80.655 et=2181.119</Score>
+<Score et="2192.3">JImmy Regan(17) lap=24 point=0 t=83.840 et=2192.180</Score>
+<Score et="2193.2">Ricardo Campos(8) lap=24 point=2 t=50.003 et=2192.934</Score>
+<Score et="2195.7">Dale Green(21) lap=25 point=2 t=51.177 et=2195.733</Score>
+<Score et="2196.9">Dan Wheat(18) lap=23 point=2 t=52.990 et=2196.681</Score>
+<Score et="2198.2">Tony Diamond(5) lap=24 point=1 t=25.196 et=2198.067</Score>
+<Score et="2198.9">Rich Mink(1) lap=25 point=1 t=25.213 et=2198.678</Score>
+<Score et="2200.6">David Slute(11) lap=22 point=2 t=61.992 et=2200.492</Score>
+<Score et="2202.1">Jeff Hooper(4) lap=26 point=0 t=82.479 et=2201.962</Score>
+<Score et="2204.1">RSM_Stenny(6) lap=26 point=0 t=81.883 et=2203.844</Score>
+<Score et="2207.2">Scott Beck(3) lap=24 point=2 t=53.140 et=2206.970</Score>
+<Score et="2207.3">Chris Sherburn(16) lap=23 point=2 t=106.675 et=2207.139</Score>
+<Score et="2209.1">Angelo dos Santos(12) lap=26 point=0 t=82.521 et=2208.897</Score>
+<Score et="2217.0">JImmy Regan(17) lap=24 point=1 t=24.628 et=2216.808</Score>
+<Incident et="2218.9">Rich Mink(1) reported contact (0.03) with Immovable</Incident>
+<Incident et="2221.6">Rich Mink(1) reported contact (0.03) with Immovable</Incident>
+<Incident et="2221.6">Rich Mink(1) reported contact (0.97) with Immovable</Incident>
+<Score et="2224.2">Tony Diamond(5) lap=24 point=2 t=51.211 et=2224.082</Score>
+<Score et="2225.0">Rich Mink(1) lap=25 point=2 t=51.352 et=2224.817</Score>
+<Score et="2225.3">Ricardo Campos(8) lap=25 point=0 t=82.234 et=2225.165</Score>
+<Score et="2226.4">Jeff Hooper(4) lap=26 point=1 t=24.281 et=2226.242</Score>
+<Score et="2227.8">Ed Durbin(9) lap=21 point=0 t=183.783 et=2227.653</Score>
+<Score et="2228.1">RSM_Stenny(6) lap=26 point=1 t=23.948 et=2227.792</Score>
+<Score et="2228.7">Dale Green(21) lap=26 point=0 t=84.085 et=2228.642</Score>
+<Incident et="2229.3">Tony Diamond(5) reported contact (1.00) with Immovable</Incident>
+<Score et="2229.9">Dan Wheat(18) lap=24 point=0 t=86.052 et=2229.743</Score>
+<Score et="2233.7">Angelo dos Santos(12) lap=26 point=1 t=24.636 et=2233.533</Score>
+<Score et="2234.3">David Slute(11) lap=23 point=0 t=95.656 et=2234.156</Score>
+<Incident et="2237.9">Tony Diamond(5) reported contact (0.13) with Immovable</Incident>
+<Score et="2239.4">Chris Sherburn(16) lap=24 point=0 t=138.776 et=2239.240</Score>
+<Incident et="2239.8">JImmy Regan(17) reported contact (0.48) with Immovable</Incident>
+<Incident et="2240.1">JImmy Regan(17) reported contact (0.06) with Immovable</Incident>
+<Incident et="2240.9">Dan Wheat(18) reported contact (0.03) with Track</Incident>
+<Incident et="2240.9">Dan Wheat(18) reported contact (0.03) with Track</Incident>
+<Incident et="2241.1">Dan Wheat(18) reported contact (0.03) with Track</Incident>
+<Incident et="2241.1">Dan Wheat(18) reported contact (0.03) with Track</Incident>
+<Incident et="2241.1">Dan Wheat(18) reported contact (0.00) with Track</Incident>
+<Incident et="2241.1">Dan Wheat(18) reported contact (0.48) with Immovable</Incident>
+<Score et="2241.1">Scott Beck(3) lap=25 point=0 t=87.187 et=2241.017</Score>
+<Incident et="2241.2">Dan Wheat(18) reported contact (0.10) with Track</Incident>
+<Incident et="2241.2">Dan Wheat(18) reported contact (0.16) with Immovable</Incident>
+<Incident et="2241.5">Dan Wheat(18) reported contact (0.71) with Track</Incident>
+<Incident et="2241.8">Dan Wheat(18) reported contact (0.26) with Immovable</Incident>
+<Incident et="2242.1">Dan Wheat(18) reported contact (0.13) with Track</Incident>
+<Score et="2243.1">JImmy Regan(17) lap=24 point=2 t=50.687 et=2242.867</Score>
+<Incident et="2246.0">Dan Wheat(18) reported contact (0.06) with Immovable</Incident>
+<Incident et="2246.4">Dan Wheat(18) reported contact (0.35) with Immovable</Incident>
+<Score et="2249.3">Ricardo Campos(8) lap=25 point=1 t=23.916 et=2249.081</Score>
+<Incident et="2251.6">Dan Wheat(18) reported contact (0.29) with Track</Incident>
+<Score et="2251.8">Jeff Hooper(4) lap=26 point=2 t=49.656 et=2251.618</Score>
+<Incident et="2252.1">Dan Wheat(18) reported contact (0.03) with Track</Incident>
+<Score et="2253.5">RSM_Stenny(6) lap=26 point=2 t=49.304 et=2253.148</Score>
+<Score et="2253.5">Dale Green(21) lap=26 point=1 t=24.861 et=2253.503</Score>
+<Chat et="2257.8">David Slute has left the game but vehicle has been stored in the garage</Chat>
+<Score et="2259.3">Angelo dos Santos(12) lap=26 point=2 t=50.158 et=2259.055</Score>
+<Score et="2259.4">Rich Mink(1) lap=26 point=0 t=85.778 et=2259.243</Score>
+<Score et="2264.6">Chris Sherburn(16) lap=24 point=1 t=25.168 et=2264.407</Score>
+<Score et="2266.6">Tony Diamond(5) lap=25 point=0 t=93.644 et=2266.515</Score>
+<Score et="2267.5">Scott Beck(3) lap=25 point=1 t=26.320 et=2267.337</Score>
+<Score et="2272.1">Ed Durbin(9) lap=21 point=1 t=44.257 et=2271.910</Score>
+<Score et="2275.2">Ricardo Campos(8) lap=25 point=2 t=49.783 et=2274.948</Score>
+<Score et="2276.3">JImmy Regan(17) lap=25 point=0 t=83.983 et=2276.163</Score>
+<Score et="2279.4">Dale Green(21) lap=26 point=2 t=50.704 et=2279.345</Score>
+<Score et="2282.1">Dan Wheat(18) lap=24 point=1 t=52.162 et=2281.906</Score>
+<Score et="2284.1">Jeff Hooper(4) lap=27 point=0 t=82.060 et=2284.022</Score>
+<Score et="2285.2">Rich Mink(1) lap=26 point=1 t=25.766 et=2285.009</Score>
+<Score et="2285.7">RSM_Stenny(6) lap=27 point=0 t=81.517 et=2285.361</Score>
+<Incident et="2286.4">Tony Diamond(5) reported contact (1.00) with Immovable</Incident>
+<Incident et="2286.5">Tony Diamond(5) reported contact (0.97) with Immovable</Incident>
+<Score et="2290.6">Chris Sherburn(16) lap=24 point=2 t=51.245 et=2290.484</Score>
+<Score et="2291.4">Angelo dos Santos(12) lap=27 point=0 t=82.275 et=2291.172</Score>
+<Score et="2294.2">Scott Beck(3) lap=25 point=2 t=52.896 et=2293.913</Score>
+<Score et="2294.2">Tony Diamond(5) lap=25 point=1 t=27.555 et=2294.070</Score>
+<Incident et="2298.4">Ed Durbin(9) reported contact (0.42) with Immovable</Incident>
+<Score et="2300.0">Ed Durbin(9) lap=21 point=2 t=72.085 et=2299.738</Score>
+<Score et="2301.0">JImmy Regan(17) lap=25 point=1 t=24.616 et=2300.778</Score>
+<Incident et="2307.8">Rich Mink(1) reported contact (0.77) with Immovable</Incident>
+<Score et="2308.1">Ricardo Campos(8) lap=26 point=0 t=82.746 et=2307.911</Score>
+<Score et="2308.6">Dan Wheat(18) lap=24 point=2 t=78.681 et=2308.424</Score>
+<Score et="2308.6">Jeff Hooper(4) lap=27 point=1 t=24.480 et=2308.503</Score>
+<Score et="2310.0">RSM_Stenny(6) lap=27 point=1 t=24.256 et=2309.617</Score>
+<Score et="2311.4">Rich Mink(1) lap=26 point=2 t=51.995 et=2311.238</Score>
+<Score et="2312.0">Dale Green(21) lap=27 point=0 t=83.300 et=2311.942</Score>
+<Incident et="2315.0">Tony Diamond(5) reported contact (0.19) with Immovable</Incident>
+<Incident et="2315.7">RSM_Stenny(6) reported contact (0.26) with Immovable</Incident>
+<Score et="2315.7">Angelo dos Santos(12) lap=27 point=1 t=24.342 et=2315.514</Score>
+<Score et="2321.6">Tony Diamond(5) lap=25 point=2 t=54.952 et=2321.467</Score>
+<Score et="2322.9">Chris Sherburn(16) lap=25 point=0 t=83.449 et=2322.689</Score>
+<Score et="2327.1">JImmy Regan(17) lap=25 point=2 t=50.829 et=2326.991</Score>
+<Score et="2327.7">Scott Beck(3) lap=26 point=0 t=86.498 et=2327.515</Score>
+<Incident et="2330.8">Jeff Hooper(4) reported contact (0.13) with Immovable</Incident>
+<Incident et="2330.8">Jeff Hooper(4) reported contact (1.00) with Immovable</Incident>
+<Incident et="2332.1">RSM_Stenny(6) reported contact (0.26) with Immovable</Incident>
+<Incident et="2332.4">RSM_Stenny(6) reported contact (0.74) with Immovable</Incident>
+<Incident et="2332.7">RSM_Stenny(6) reported contact (0.19) with Immovable</Incident>
+<Score et="2333.0">Ricardo Campos(8) lap=26 point=1 t=24.850 et=2332.761</Score>
+<Incident et="2333.1">RSM_Stenny(6) reported contact (0.10) with Immovable</Incident>
+<Score et="2334.0">Jeff Hooper(4) lap=27 point=2 t=49.789 et=2333.811</Score>
+<Score et="2335.2">Ed Durbin(9) lap=22 point=0 t=107.379 et=2335.032</Score>
+<Score et="2335.6">RSM_Stenny(6) lap=27 point=2 t=49.839 et=2335.200</Score>
+<Score et="2336.5">Dale Green(21) lap=27 point=1 t=24.590 et=2336.532</Score>
+<Score et="2341.7">Dan Wheat(18) lap=25 point=0 t=111.787 et=2341.531</Score>
+<Score et="2341.9">Angelo dos Santos(12) lap=27 point=2 t=50.446 et=2341.618</Score>
+<Score et="2345.3">Rich Mink(1) lap=27 point=0 t=85.860 et=2345.103</Score>
+<Score et="2347.6">Chris Sherburn(16) lap=25 point=1 t=24.725 et=2347.414</Score>
+<Score et="2353.1">Scott Beck(3) lap=26 point=1 t=25.330 et=2352.845</Score>
+<Score et="2355.8">Tony Diamond(5) lap=26 point=0 t=89.128 et=2355.643</Score>
+<Score et="2358.7">Ricardo Campos(8) lap=26 point=2 t=50.595 et=2358.506</Score>
+<Score et="2359.8">JImmy Regan(17) lap=26 point=0 t=83.537 et=2359.700</Score>
+<Score et="2361.8">Ed Durbin(9) lap=22 point=1 t=26.571 et=2361.603</Score>
+<Score et="2362.6">Dale Green(21) lap=27 point=2 t=50.689 et=2362.631</Score>
+<Score et="2366.5">Jeff Hooper(4) lap=28 point=0 t=82.333 et=2366.356</Score>
+<Score et="2367.6">Dan Wheat(18) lap=25 point=1 t=25.825 et=2367.355</Score>
+<Score et="2368.7">RSM_Stenny(6) lap=28 point=0 t=83.000 et=2368.361</Score>
+<Score et="2370.5">Rich Mink(1) lap=27 point=1 t=25.237 et=2370.340</Score>
+<Score et="2373.2">Chris Sherburn(16) lap=25 point=2 t=50.314 et=2373.003</Score>
+<Score et="2374.2">Angelo dos Santos(12) lap=28 point=0 t=82.805 et=2373.977</Score>
+<Incident et="2378.9">RSM_Stenny(6) reported contact (0.48) with Immovable</Incident>
+<Score et="2379.7">Scott Beck(3) lap=26 point=2 t=51.988 et=2379.503</Score>
+<Score et="2381.7">Tony Diamond(5) lap=26 point=1 t=25.941 et=2381.584</Score>
+<Score et="2384.2">JImmy Regan(17) lap=26 point=1 t=24.384 et=2384.084</Score>
+<Score et="2389.0">Ed Durbin(9) lap=22 point=2 t=53.758 et=2388.790</Score>
+<Score et="2391.1">Jeff Hooper(4) lap=28 point=1 t=24.489 et=2390.844</Score>
+<Score et="2391.6">Ricardo Campos(8) lap=27 point=0 t=83.511 et=2391.422</Score>
+<Incident et="2392.1">Angelo dos Santos(12) reported contact (0.29) with Immovable</Incident>
+<Score et="2393.0">RSM_Stenny(6) lap=28 point=1 t=24.218 et=2392.579</Score>
+<Score et="2393.5">Dan Wheat(18) lap=25 point=2 t=51.740 et=2393.271</Score>
+<Score et="2395.4">Dale Green(21) lap=28 point=0 t=83.443 et=2395.384</Score>
+<Score et="2396.6">Rich Mink(1) lap=27 point=2 t=51.343 et=2396.445</Score>
+<Incident et="2398.9">RSM_Stenny(6) reported contact (0.16) with Immovable</Incident>
+<Score et="2402.1">Angelo dos Santos(12) lap=28 point=1 t=27.789 et=2401.766</Score>
+<Score et="2405.6">Chris Sherburn(16) lap=26 point=0 t=82.733 et=2405.422</Score>
+<Score et="2408.1">Tony Diamond(5) lap=26 point=2 t=52.209 et=2407.853</Score>
+<Score et="2410.3">JImmy Regan(17) lap=26 point=2 t=50.454 et=2410.154</Score>
+<Incident et="2413.2">Jeff Hooper(4) reported contact (0.06) with Immovable</Incident>
+<Incident et="2413.2">Jeff Hooper(4) reported contact (0.97) with Immovable</Incident>
+<Score et="2414.2">Scott Beck(3) lap=27 point=0 t=86.564 et=2414.079</Score>
+<Score et="2416.1">Ricardo Campos(8) lap=27 point=1 t=24.433 et=2415.855</Score>
+<Score et="2416.4">Jeff Hooper(4) lap=28 point=2 t=49.881 et=2416.236</Score>
+<Score et="2418.5">RSM_Stenny(6) lap=28 point=2 t=49.765 et=2418.126</Score>
+<Score et="2420.2">Dale Green(21) lap=28 point=1 t=24.824 et=2420.208</Score>
+<Score et="2422.8">Ed Durbin(9) lap=23 point=0 t=87.641 et=2422.673</Score>
+<Score et="2426.3">Dan Wheat(18) lap=26 point=0 t=84.630 et=2426.161</Score>
+<Score et="2428.2">Angelo dos Santos(12) lap=28 point=2 t=54.008 et=2427.985</Score>
+<Score et="2429.7">Rich Mink(1) lap=28 point=0 t=84.444 et=2429.547</Score>
+<Score et="2430.3">Chris Sherburn(16) lap=26 point=1 t=24.653 et=2430.075</Score>
+<Score et="2439.6">Scott Beck(3) lap=27 point=1 t=25.349 et=2439.428</Score>
+<Score et="2441.6">Tony Diamond(5) lap=27 point=0 t=85.810 et=2441.453</Score>
+<Score et="2442.1">Ricardo Campos(8) lap=27 point=2 t=50.409 et=2441.831</Score>
+<Score et="2442.6">JImmy Regan(17) lap=27 point=0 t=82.820 et=2442.520</Score>
+<Score et="2446.3">Dale Green(21) lap=28 point=2 t=50.883 et=2446.267</Score>
+<Score et="2448.8">Jeff Hooper(4) lap=29 point=0 t=82.367 et=2448.723</Score>
+<Score et="2449.9">Ed Durbin(9) lap=23 point=1 t=27.072 et=2449.744</Score>
+<Score et="2451.4">RSM_Stenny(6) lap=29 point=0 t=82.736 et=2451.097</Score>
+<Score et="2451.5">Dan Wheat(18) lap=26 point=1 t=25.099 et=2451.260</Score>
+<Score et="2454.9">Rich Mink(1) lap=28 point=1 t=25.131 et=2454.678</Score>
+<Score et="2455.6">Chris Sherburn(16) lap=26 point=2 t=50.012 et=2455.433</Score>
+<Score et="2460.6">Angelo dos Santos(12) lap=29 point=0 t=86.449 et=2460.426</Score>
+<Score et="2466.1">Scott Beck(3) lap=27 point=2 t=51.841 et=2465.920</Score>
+<Score et="2467.4">Tony Diamond(5) lap=27 point=1 t=25.784 et=2467.237</Score>
+<Score et="2468.3">JImmy Regan(17) lap=27 point=1 t=25.612 et=2468.132</Score>
+<Score et="2473.5">Jeff Hooper(4) lap=29 point=1 t=24.567 et=2473.290</Score>
+<Score et="2474.6">Ricardo Campos(8) lap=28 point=0 t=83.046 et=2474.468</Score>
+<Score et="2475.7">RSM_Stenny(6) lap=29 point=1 t=24.289 et=2475.386</Score>
+<Score et="2476.6">Ed Durbin(9) lap=23 point=2 t=53.825 et=2476.498</Score>
+<Score et="2477.3">Dan Wheat(18) lap=26 point=2 t=50.985 et=2477.146</Score>
+<Score et="2479.0">Dale Green(21) lap=29 point=0 t=83.602 et=2478.986</Score>
+<Score et="2481.1">Rich Mink(1) lap=28 point=2 t=51.374 et=2480.921</Score>
+<Score et="2485.6">Angelo dos Santos(12) lap=29 point=1 t=24.932 et=2485.357</Score>
+<Score et="2487.5">Chris Sherburn(16) lap=27 point=0 t=81.960 et=2487.381</Score>
+<Incident et="2488.0">Tony Diamond(5) reported contact (0.26) with Immovable</Incident>
+<Incident et="2490.7">Tony Diamond(5) reported contact (0.23) with Immovable</Incident>
+<Score et="2494.0">Tony Diamond(5) lap=27 point=2 t=52.356 et=2493.809</Score>
+<Score et="2494.6">JImmy Regan(17) lap=27 point=2 t=51.880 et=2494.400</Score>
+<Incident et="2495.7">Jeff Hooper(4) reported contact (0.19) with Immovable</Incident>
+<Incident et="2495.7">Jeff Hooper(4) reported contact (0.90) with Immovable</Incident>
+<Incident et="2497.8">RSM_Stenny(6) reported contact (0.13) with Immovable</Incident>
+<Incident et="2497.8">RSM_Stenny(6) reported contact (1.00) with Immovable</Incident>
+<Score et="2499.4">Jeff Hooper(4) lap=29 point=2 t=50.462 et=2499.185</Score>
+<Score et="2499.4">Ricardo Campos(8) lap=28 point=1 t=24.663 et=2499.131</Score>
+<Score et="2500.3">Scott Beck(3) lap=28 point=0 t=86.088 et=2500.167</Score>
+<Incident et="2500.9">Tony Diamond(5) reported contact (1.00) with Immovable</Incident>
+<Incident et="2500.9">Tony Diamond(5) reported contact (0.10) with Immovable</Incident>
+<Score et="2501.2">RSM_Stenny(6) lap=29 point=2 t=49.777 et=2500.874</Score>
+<Incident et="2501.3">Tony Diamond(5) reported contact (0.32) with Immovable</Incident>
+<Score et="2503.8">Dale Green(21) lap=29 point=1 t=24.780 et=2503.767</Score>
+<Score et="2510.1">Ed Durbin(9) lap=24 point=0 t=87.321 et=2509.994</Score>
+<Score et="2510.4">Dan Wheat(18) lap=27 point=0 t=84.095 et=2510.256</Score>
+<Score et="2511.6">Angelo dos Santos(12) lap=29 point=2 t=50.868 et=2511.294</Score>
+<Score et="2511.6">Chris Sherburn(16) lap=27 point=1 t=24.096 et=2511.478</Score>
+<Score et="2514.1">Rich Mink(1) lap=29 point=0 t=84.396 et=2513.943</Score>
+<Incident et="2520.8">Ed Durbin(9) reported contact (0.35) with Immovable</Incident>
+<Incident et="2520.8">Ed Durbin(9) reported contact (0.45) with Immovable</Incident>
+<Incident et="2520.8">Ed Durbin(9) reported contact (0.45) with Immovable</Incident>
+<Incident et="2520.9">Ed Durbin(9) reported contact (0.10) with Track</Incident>
+<Incident et="2521.0">Ed Durbin(9) reported contact (0.45) with Immovable</Incident>
+<Incident et="2521.0">Ed Durbin(9) reported contact (0.00) with Immovable</Incident>
+<Incident et="2521.0">Ed Durbin(9) reported contact (0.03) with Immovable</Incident>
+<Incident et="2521.4">Ed Durbin(9) reported contact (0.00) with Track</Incident>
+<Incident et="2521.5">Ed Durbin(9) reported contact (0.13) with Track</Incident>
+<Incident et="2522.2">Dan Wheat(18) reported contact (0.61) with another vehicle Ed Durbin(9)</Incident>
+<Incident et="2522.2">Dan Wheat(18) reported contact (0.06) with another vehicle Ed Durbin(9)</Incident>
+<Incident et="2522.2">Dan Wheat(18) reported contact (0.39) with another vehicle Ed Durbin(9)</Incident>
+<Incident et="2522.2">Ed Durbin(9) reported contact (1.00) with another vehicle Dan Wheat(18)</Incident>
+<Incident et="2522.3">Dan Wheat(18) reported contact (0.68) with another vehicle Ed Durbin(9)</Incident>
+<Incident et="2522.3">Dan Wheat(18) reported contact (0.19) with another vehicle Ed Durbin(9)</Incident>
+<Incident et="2522.3">Dan Wheat(18) reported contact (0.03) with another vehicle Ed Durbin(9)</Incident>
+<Incident et="2522.4">Ed Durbin(9) reported contact (0.16) with another vehicle Dan Wheat(18)</Incident>
+<Incident et="2522.4">Ed Durbin(9) reported contact (0.32) with another vehicle Dan Wheat(18)</Incident>
+<Incident et="2522.5">Ed Durbin(9) reported contact (0.03) with Track</Incident>
+<Incident et="2523.1">Dan Wheat(18) reported contact (0.68) with Immovable</Incident>
+<Incident et="2523.5">Dan Wheat(18) reported contact (0.45) with Immovable</Incident>
+<Incident et="2523.9">Ed Durbin(9) reported contact (0.45) with Track</Incident>
+<Score et="2525.4">Ricardo Campos(8) lap=28 point=2 t=50.688 et=2525.156</Score>
+<Score et="2526.3">Scott Beck(3) lap=28 point=1 t=25.976 et=2526.143</Score>
+<Score et="2527.0">JImmy Regan(17) lap=28 point=0 t=84.367 et=2526.887</Score>
+<Score et="2530.1">Dale Green(21) lap=29 point=2 t=51.084 et=2530.071</Score>
+<Score et="2530.2">Tony Diamond(5) lap=28 point=0 t=88.663 et=2530.115</Score>
+<Score et="2531.9">Checkered for Jeff Hooper, laps=30/30, endET=2531.821045/306254101833471170000000000000000000000.000000, crossedAfterTime=0</Score>
+<Score et="2531.9">Jeff Hooper(4) lap=30 point=0 t=83.098 et=2531.821</Score>
+<Score et="2533.6">RSM_Stenny(6) lap=30 point=0 t=82.198 et=2533.295</Score>
+<Score et="2537.4">Chris Sherburn(16) lap=27 point=2 t=49.791 et=2537.172</Score>
+<Score et="2539.5">Rich Mink(1) lap=29 point=1 t=25.346 et=2539.289</Score>
+<Score et="2542.3">Dan Wheat(18) lap=27 point=1 t=31.850 et=2542.105</Score>
+<Score et="2542.7">Ed Durbin(9) lap=24 point=1 t=32.561 et=2542.554</Score>
+<Score et="2543.9">Angelo dos Santos(12) lap=30 point=0 t=83.352 et=2543.778</Score>
+<Score et="2552.1">JImmy Regan(17) lap=28 point=1 t=25.125 et=2552.012</Score>
+<Score et="2553.2">Scott Beck(3) lap=28 point=2 t=52.841 et=2553.008</Score>
+<Score et="2557.8">Tony Diamond(5) lap=28 point=1 t=27.531 et=2557.647</Score>
+<Score et="2557.9">Ricardo Campos(8) lap=29 point=0 t=83.250 et=2557.718</Score>
+<Score et="2563.0">Dale Green(21) lap=30 point=0 t=84.024 et=2563.010</Score>
+<Score et="2565.9">Rich Mink(1) lap=29 point=2 t=51.793 et=2565.735</Score>
+<Score et="2569.2">Dan Wheat(18) lap=27 point=2 t=58.818 et=2569.073</Score>
+<Score et="2569.4">Chris Sherburn(16) lap=28 point=0 t=81.860 et=2569.241</Score>
+<Score et="2570.4">Ed Durbin(9) lap=24 point=2 t=60.135 et=2570.129</Score>
+<Incident et="2577.9">Jeff Hooper(4) reported contact (0.16) with another vehicle Ricardo Campos(8)</Incident>
+<Incident et="2577.9">Ricardo Campos(8) reported contact (0.16) with another vehicle Jeff Hooper(4)</Incident>
+<Score et="2578.4">JImmy Regan(17) lap=28 point=2 t=51.290 et=2578.177</Score>
+<Incident et="2580.2">Ricardo Campos(8) reported contact (1.00) with Immovable</Incident>
+<Incident et="2582.3">Jeff Hooper(4) reported contact (0.87) with Immovable</Incident>
+<Incident et="2582.5">Jeff Hooper(4) reported contact (0.23) with another vehicle Ricardo Campos(8)</Incident>
+<Incident et="2582.5">Ricardo Campos(8) reported contact (0.35) with another vehicle Jeff Hooper(4)</Incident>
+<Incident et="2582.5">Jeff Hooper(4) reported contact (0.13) with another vehicle Ricardo Campos(8)</Incident>
+<Incident et="2582.5">Ricardo Campos(8) reported contact (0.29) with another vehicle Jeff Hooper(4)</Incident>
+<Incident et="2582.5">Ricardo Campos(8) reported contact (0.03) with another vehicle Jeff Hooper(4)</Incident>
+<Incident et="2582.6">Jeff Hooper(4) reported contact (0.35) with Immovable</Incident>
+<Incident et="2582.6">Jeff Hooper(4) reported contact (0.16) with Immovable</Incident>
+<Incident et="2584.7">Angelo dos Santos(12) reported contact (0.81) with another vehicle Ricardo Campos(8)</Incident>
+<Incident et="2584.8">Angelo dos Santos(12) reported contact (0.13) with another vehicle Ricardo Campos(8)</Incident>
+<Incident et="2584.8">Ricardo Campos(8) reported contact (0.16) with another vehicle Angelo dos Santos(12)</Incident>
+<Incident et="2584.8">Angelo dos Santos(12) reported contact (0.23) with another vehicle Ricardo Campos(8)</Incident>
+<Incident et="2584.8">Ricardo Campos(8) reported contact (0.03) with another vehicle Angelo dos Santos(12)</Incident>
+<Incident et="2584.9">Ricardo Campos(8) reported contact (0.32) with another vehicle Angelo dos Santos(12)</Incident>
+<Incident et="2584.9">Ricardo Campos(8) reported contact (0.06) with another vehicle Angelo dos Santos(12)</Incident>
+<Incident et="2585.4">Jeff Hooper(4) reported contact (0.06) with Immovable</Incident>
+<Score et="2585.9">Tony Diamond(5) lap=28 point=2 t=55.648 et=2585.764</Score>
+<Score et="2587.6">Scott Beck(3) lap=29 point=0 t=87.265 et=2587.432</Score>
+<Incident et="2596.0">Tony Diamond(5) reported contact (1.00) with Immovable</Incident>
+<Incident et="2596.1">Tony Diamond(5) reported contact (0.48) with Immovable</Incident>
+<Incident et="2596.1">Tony Diamond(5) reported contact (1.00) with Immovable</Incident>
+<Score et="2599.7">Rich Mink(1) lap=30 point=0 t=85.627 et=2599.569</Score>
+<Score et="2602.3">Dan Wheat(18) lap=28 point=0 t=91.938 et=2602.193</Score>
+<Score et="2604.3">Ed Durbin(9) lap=25 point=0 t=94.140 et=2604.134</Score>
+<Score et="2611.6">JImmy Regan(17) lap=29 point=0 t=84.607 et=2611.494</Score>
+<Chat et="2612.7">Ricardo Campos: congrats Jeff</Chat>
+<Chat et="2616.4">Ricardo Campos: boa angelo</Chat>
+<Incident et="2617.1">JImmy Regan(17) reported contact (0.29) with another vehicle Dan Wheat(18)</Incident>
+<Incident et="2618.9">JImmy Regan(17) reported contact (0.71) with Immovable</Incident>
+<Incident et="2618.9">JImmy Regan(17) reported contact (1.00) with Immovable</Incident>
+<Incident et="2618.9">JImmy Regan(17) reported contact (1.00) with Immovable</Incident>
+<Incident et="2619.0">JImmy Regan(17) reported contact (0.61) with Immovable</Incident>
+<Incident et="2619.8">JImmy Regan(17) reported contact (0.77) with Immovable</Incident>
+<Incident et="2619.8">JImmy Regan(17) reported contact (1.00) with Immovable</Incident>
+<Incident et="2619.8">JImmy Regan(17) reported contact (0.16) with Immovable</Incident>
+<Incident et="2620.7">JImmy Regan(17) reported contact (0.65) with Immovable</Incident>
+<Incident et="2621.5">JImmy Regan(17) reported contact (0.23) with Immovable</Incident>
+<Incident et="2621.5">JImmy Regan(17) reported contact (0.68) with Immovable</Incident>
+<Score et="2621.8">Tony Diamond(5) lap=29 point=0 t=91.569 et=2621.685</Score>
+<Chat et="2623.4">Jeff Hooper: thanks!!</Chat>
+<Incident et="2623.6">JImmy Regan(17) reported contact (0.74) with Immovable</Incident>
+<Incident et="2627.3">Tony Diamond(5) reported contact (1.00) with Immovable</Incident>
+<Incident et="2627.5">Tony Diamond(5) reported contact (1.00) with Immovable</Incident>
+<Chat et="2628.8">Ricardo Campos: desculpa aq toque, perdi a freada ali</Chat>
+<Incident et="2629.6">Tony Diamond(5) reported contact (0.29) with Immovable</Incident>
+<Incident et="2629.7">Tony Diamond(5) reported contact (0.90) with Immovable</Incident>
+<Incident et="2632.1">Tony Diamond(5) reported contact (0.58) with Immovable</Incident>
+<Incident et="2632.2">Tony Diamond(5) reported contact (0.97) with Immovable</Incident>
+<Chat et="2637.7">Angelo dos Santos: carai dei sorte ali...rs</Chat>
+<Chat et="2646.3">Ricardo Campos: ainda bem,,,</Chat>
+<Chat et="2647.1">Angelo dos Santos: tava chegando nos caras...mas de boa.</Chat>
+<Chat et="2649.8">Dan Wheat has left the game but vehicle has been stored in the garage</Chat>
+<Incident et="2654.1">Tony Diamond(5) reported contact (1.00) with Immovable</Incident>
+<Chat et="2654.5">Ricardo Campos: me perdi completamente</Chat>
+<Chat et="2678.9">JImmy Regan has left the game but vehicle has been stored in the garage</Chat>
+<Chat et="2681.1">Ed Durbin has left the game but vehicle has been stored in the garage</Chat>
+<Chat et="2684.0">Ricardo Campos: eu vi, foi bem na hora q resolvi tirar o pe p nao te atrapalhar,,, afffffff</Chat>
+<Chat et="2684.8">Angelo dos Santos has left the game but vehicle has been stored in the garage</Chat>
+<Chat et="2695.3">Rich Mink has left the game but vehicle has been stored in the garage</Chat>
+</Stream>
+<MostLapsCompleted>30</MostLapsCompleted>
+<Driver>
+<Name>RSM_Stenny</Name>
+<Connected>1</Connected>
+<VehFile>DAYCOMOTORSPORT.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>SupV8: Dayco Motorsport #47</VehName>
+<CarType>SuperV8</CarType>
+<CarClass>SuperV8</CarClass>
+<CarNumber>47</CarNumber>
+<TeamName>Dayco Motorsport</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>3</GridPos>
+<Position>2</Position>
+<ClassGridPos>3</ClassGridPos>
+<ClassPosition>2</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>1</LapRankIncludingDiscos>
+<Lap num="1" p="3" et="41.1538" s1="31.3941" s2="25.6744" s3="32.4563" fuel="0.776">89.5247</Lap>
+<Lap num="2" p="2" et="130.6786" s1="24.3582" s2="25.4743" s3="32.3805" fuel="0.753">82.2131</Lap>
+<Lap num="3" p="11" et="212.8916" s1="24.4195" s2="26.0076" s3="46.0804" fuel="0.729">96.5075</Lap>
+<Lap num="4" p="10" et="309.3991" s1="24.4286" s2="25.0922" s3="31.6662" fuel="0.706">81.1870</Lap>
+<Lap num="5" p="10" et="390.5861" s1="23.7822" s2="25.2774" s3="31.8271" fuel="0.682">80.8867</Lap>
+<Lap num="6" p="9" et="471.4728" s1="24.8428" s2="25.3098" s3="31.9026" fuel="0.659">82.0552</Lap>
+<Lap num="7" p="7" et="553.5281" s1="24.6580" s2="25.5692" s3="32.6314" fuel="0.635">82.8586</Lap>
+<Lap num="8" p="5" et="636.3867" s1="24.6304" s2="25.2979" s3="31.5336" fuel="0.612">81.4619</Lap>
+<Lap num="9" p="4" et="717.8485" s1="24.3923" s2="25.0386" s3="32.0567" fuel="0.588">81.4876</Lap>
+<Lap num="10" p="4" et="799.3361" s1="25.0551" s2="25.2246" s3="32.1085" fuel="0.565">82.3881</Lap>
+<Lap num="11" p="4" et="881.7242" s1="24.4666" s2="25.2952" s3="33.1075" fuel="0.541">82.8693</Lap>
+<Lap num="12" p="3" et="964.5936" s1="24.6675" s2="25.1750" s3="32.8261" fuel="0.518">82.6686</Lap>
+<Lap num="13" p="2" et="1047.2622" s1="24.7875" s2="25.4963" s3="32.7491" fuel="0.498">83.0330</Lap>
+<Lap num="14" p="2" et="1130.2952" s1="24.4163" s2="25.2267" s3="33.0229" fuel="0.475">82.6659</Lap>
+<Lap num="15" p="2" et="1212.9611" s1="23.9751" s2="25.6000" s3="31.9550" fuel="0.451">81.5300</Lap>
+<Lap num="16" p="2" et="1294.4911" s1="24.4380" s2="25.7321" s3="34.7789" fuel="0.427">84.9490</Lap>
+<Lap num="17" p="2" et="1379.4401" s1="24.3102" s2="25.6492" s3="32.4507" fuel="0.404">82.4100</Lap>
+<Lap num="18" p="2" et="1461.8501" s1="24.5022" s2="25.8701" s3="31.9886" fuel="0.380">82.3610</Lap>
+<Lap num="19" p="2" et="1544.2111" s1="24.3944" s2="25.6461" s3="32.2253" fuel="0.357">82.2659</Lap>
+<Lap num="20" p="2" et="1626.4769" s1="24.0488" s2="25.2736" s3="31.9930" fuel="0.333">81.3154</Lap>
+<Lap num="21" p="2" et="1707.7924" s1="24.0028" s2="25.6495" s3="32.5103" fuel="0.310">82.1626</Lap>
+<Lap num="22" p="2" et="1789.9550" s1="25.1224" s2="25.6837" s3="32.7102" fuel="0.286">83.5164</Lap>
+<Lap num="23" p="2" et="1873.4713" s1="25.1443" s2="25.5706" s3="32.5680" fuel="0.267">83.2828</Lap>
+<Lap num="24" p="2" et="1956.7542" s1="24.2218" s2="25.8669" s3="32.9628" fuel="0.243">83.0515</Lap>
+<Lap num="25" p="2" et="2039.8057" s1="23.9719" s2="26.0105" s3="32.1731" fuel="0.220">82.1555</Lap>
+<Lap num="26" p="2" et="2121.9612" s1="24.1633" s2="25.6807" s3="32.0391" fuel="0.196">81.8831</Lap>
+<Lap num="27" p="2" et="2203.8442" s1="23.9482" s2="25.3557" s3="32.2129" fuel="0.173">81.5168</Lap>
+<Lap num="28" p="2" et="2285.3611" s1="24.2556" s2="25.5830" s3="33.1614" fuel="0.149">83.0000</Lap>
+<Lap num="29" p="2" et="2368.3611" s1="24.2183" s2="25.5471" s3="32.9709" fuel="0.125">82.7363</Lap>
+<Lap num="30" p="2" et="2451.0974" s1="24.2888" s2="25.4880" s3="32.4207" fuel="0.102">82.1975</Lap>
+<BestLapTime>80.8867</BestLapTime>
+<FinishTime>2492.1411</FinishTime>
+<Laps>30</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="30">PlayerControl,Clutch,AutoLift,AutoBlip</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Ricardo Campos</Name>
+<Connected>1</Connected>
+<VehFile>LOULY.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>SupV8: Team Louly #45</VehName>
+<CarType>SuperV8</CarType>
+<CarClass>SuperV8</CarClass>
+<CarNumber>45</CarNumber>
+<TeamName>Team Louly CoolDrive</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>1</GridPos>
+<Position>6</Position>
+<ClassGridPos>1</ClassGridPos>
+<ClassPosition>6</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>2</LapRankIncludingDiscos>
+<Lap num="1" p="1" et="41.1538" s1="30.0295" s2="26.0381" s3="32.4011" fuel="0.733">88.4686</Lap>
+<Lap num="2" p="4" et="129.6225" s1="24.4267" s2="25.9363" s3="34.0382" fuel="0.710">84.4013</Lap>
+<Lap num="3" p="2" et="214.0237" s1="24.9967" s2="25.4921" s3="34.1572" fuel="0.686">84.6460</Lap>
+<Lap num="4" p="2" et="298.6697" s1="24.6637" s2="25.6366" s3="32.1856" fuel="0.663">82.4858</Lap>
+<Lap num="5" p="2" et="381.1555" s1="24.4130" s2="25.5330" s3="32.0465" fuel="0.639">81.9925</Lap>
+<Lap num="6" p="2" et="463.1481" s1="24.1575" s2="25.5121" s3="32.4890" fuel="0.616">82.1586</Lap>
+<Lap num="7" p="2" et="545.3066" s1="24.2693" s2="25.7358" s3="32.5536" fuel="0.592">82.5587</Lap>
+<Lap num="8" p="14" et="627.8653" s1="39.3403" s2="33.9000" s3="96.5250" fuel="0.573" pit="1">169.7653</Lap>
+<Lap num="9" p="13" et="797.6306" s1="31.2829" s2="25.7802" s3="31.9989" fuel="0.651">89.0620</Lap>
+<Lap num="10" p="13" et="886.6926" s1="24.4380" s2="25.3750" s3="32.1250" fuel="0.627">81.9380</Lap>
+<Lap num="11" p="13" et="968.6306" s1="25.0250" s2="25.7892" s3="32.0449" fuel="0.604">82.8591</Lap>
+<Lap num="12" p="13" et="1051.4896" s1="24.0431" s2="25.3428" s3="31.7747" fuel="0.580">81.1605</Lap>
+<Lap num="13" p="11" et="1132.6501" s1="24.1699" s2="25.2004" s3="32.2672" fuel="0.557">81.6376</Lap>
+<Lap num="14" p="11" et="1214.2877" s1="24.6473" s2="25.4774" s3="32.1833" fuel="0.533">82.3081</Lap>
+<Lap num="15" p="9" et="1296.5958" s1="24.7598" s2="25.5032" s3="32.7889" fuel="0.510">83.0519</Lap>
+<Lap num="16" p="8" et="1379.6477" s1="25.3739" s2="25.2729" s3="32.3293" fuel="0.486">82.9762</Lap>
+<Lap num="17" p="8" et="1462.6239" s1="24.6375" s2="25.7334" s3="32.4788" fuel="0.459">82.8496</Lap>
+<Lap num="18" p="7" et="1545.4735" s1="24.8446" s2="25.7285" s3="32.8530" fuel="0.439">83.4261</Lap>
+<Lap num="19" p="7" et="1628.8997" s1="24.2059" s2="25.6760" s3="32.2769" fuel="0.412">82.1588</Lap>
+<Lap num="20" p="8" et="1711.0585" s1="24.2106" s2="25.3623" s3="49.7742" fuel="0.388">99.3470</Lap>
+<Lap num="21" p="7" et="1810.4055" s1="24.5758" s2="25.6937" s3="32.2434" fuel="0.365">82.5129</Lap>
+<Lap num="22" p="7" et="1892.9185" s1="25.2526" s2="25.9346" s3="32.2810" fuel="0.341">83.4681</Lap>
+<Lap num="23" p="6" et="1976.3866" s1="24.7834" s2="26.0605" s3="32.2250" fuel="0.318">83.0690</Lap>
+<Lap num="24" p="6" et="2059.4556" s1="24.4500" s2="25.9192" s3="33.1060" fuel="0.294">83.4751</Lap>
+<Lap num="25" p="6" et="2142.9307" s1="24.3035" s2="25.6997" s3="32.2307" fuel="0.271">82.2339</Lap>
+<Lap num="26" p="6" et="2225.1646" s1="23.9160" s2="25.8672" s3="32.9629" fuel="0.247">82.7461</Lap>
+<Lap num="27" p="6" et="2307.9106" s1="24.8501" s2="25.7449" s3="32.9165" fuel="0.227">83.5115</Lap>
+<Lap num="28" p="6" et="2391.4221" s1="24.4333" s2="25.9756" s3="32.6370" fuel="0.204">83.0459</Lap>
+<Lap num="29" p="6" et="2474.4680" s1="24.6626" s2="26.0249" s3="32.5620" fuel="0.180">83.2495</Lap>
+<BestLapTime>81.1605</BestLapTime>
+<FinishTime>2516.5637</FinishTime>
+<Laps>29</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="29">PlayerControl,Clutch,AutoLift,AutoBlip</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Jeff Hooper</Name>
+<Connected>1</Connected>
+<VehFile>HOOPERV8.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>SupV8: Jeff Hooper #11</VehName>
+<CarType>SuperV8</CarType>
+<CarClass>SuperV8</CarClass>
+<CarNumber>11</CarNumber>
+<TeamName>Snap-on Racing</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>4</GridPos>
+<Position>1</Position>
+<ClassGridPos>4</ClassGridPos>
+<ClassPosition>1</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>3</LapRankIncludingDiscos>
+<Lap num="1" p="4" et="41.1538" s1="31.8016" s2="25.7758" s3="32.9997" fuel="0.973">90.5771</Lap>
+<Lap num="2" p="3" et="131.7309" s1="24.4732" s2="25.3788" s3="32.3017" fuel="0.949">82.1537</Lap>
+<Lap num="3" p="1" et="213.8846" s1="24.2803" s2="25.2646" s3="34.5855" fuel="0.925">84.1305</Lap>
+<Lap num="4" p="1" et="298.0151" s1="24.8152" s2="25.5377" s3="32.0214" fuel="0.898">82.3743</Lap>
+<Lap num="5" p="1" et="380.3893" s1="24.3052" s2="25.2385" s3="32.2065" fuel="0.875">81.7502</Lap>
+<Lap num="6" p="1" et="462.1396" s1="24.5247" s2="25.3385" s3="32.2311" fuel="0.851">82.0944</Lap>
+<Lap num="7" p="1" et="544.2339" s1="24.4438" s2="25.2155" s3="32.1934" fuel="0.827">81.8527</Lap>
+<Lap num="8" p="1" et="626.0867" s1="24.7015" s2="25.5740" s3="32.3767" fuel="0.804">82.6522</Lap>
+<Lap num="9" p="1" et="708.7388" s1="24.8167" s2="25.8365" s3="32.4515" fuel="0.780">83.1048</Lap>
+<Lap num="10" p="1" et="791.8436" s1="24.5735" s2="25.4718" s3="32.3138" fuel="0.757">82.3591</Lap>
+<Lap num="11" p="1" et="874.2028" s1="24.7109" s2="25.2279" s3="32.1412" fuel="0.733">82.0800</Lap>
+<Lap num="12" p="1" et="956.2828" s1="24.6100" s2="25.3799" s3="32.6050" fuel="0.710">82.5950</Lap>
+<Lap num="13" p="1" et="1038.8778" s1="24.7670" s2="25.6080" s3="32.5928" fuel="0.686">82.9678</Lap>
+<Lap num="14" p="1" et="1121.8456" s1="24.6082" s2="25.4241" s3="32.7080" fuel="0.663">82.7402</Lap>
+<Lap num="15" p="1" et="1204.5858" s1="25.1731" s2="25.6809" s3="32.8074" fuel="0.639">83.6614</Lap>
+<Lap num="16" p="1" et="1288.2472" s1="24.5806" s2="25.6039" s3="32.3566" fuel="0.612">82.5410</Lap>
+<Lap num="17" p="1" et="1370.7882" s1="24.5568" s2="25.5951" s3="32.7495" fuel="0.588">82.9014</Lap>
+<Lap num="18" p="1" et="1453.6896" s1="24.6166" s2="25.6719" s3="33.7748" fuel="0.565">84.0632</Lap>
+<Lap num="19" p="1" et="1537.7528" s1="24.7341" s2="25.8158" s3="32.9921" fuel="0.541">83.5420</Lap>
+<Lap num="20" p="1" et="1621.2948" s1="24.4135" s2="25.6951" s3="32.4912" fuel="0.518">82.5997</Lap>
+<Lap num="21" p="1" et="1703.8945" s1="24.6597" s2="25.5596" s3="33.2390" fuel="0.494">83.4583</Lap>
+<Lap num="22" p="1" et="1787.3528" s1="25.5282" s2="26.1041" s3="32.6482" fuel="0.471">84.2805</Lap>
+<Lap num="23" p="1" et="1871.6333" s1="24.4967" s2="25.6119" s3="32.7261" fuel="0.447">82.8347</Lap>
+<Lap num="24" p="1" et="1954.4680" s1="25.0468" s2="25.4276" s3="32.3239" fuel="0.424">82.7982</Lap>
+<Lap num="25" p="1" et="2037.2662" s1="24.6312" s2="25.2554" s3="32.3298" fuel="0.400">82.2164</Lap>
+<Lap num="26" p="1" et="2119.4827" s1="24.5452" s2="25.5752" s3="32.3589" fuel="0.376">82.4792</Lap>
+<Lap num="27" p="1" et="2201.9619" s1="24.2805" s2="25.3757" s3="32.4041" fuel="0.349">82.0603</Lap>
+<Lap num="28" p="1" et="2284.0222" s1="24.4805" s2="25.3083" s3="32.5447" fuel="0.325">82.3335</Lap>
+<Lap num="29" p="1" et="2366.3557" s1="24.4888" s2="25.3918" s3="32.4866" fuel="0.302">82.3672</Lap>
+<Lap num="30" p="1" et="2448.7229" s1="24.5669" s2="25.8948" s3="32.6365" fuel="0.278">83.0981</Lap>
+<BestLapTime>81.7502</BestLapTime>
+<FinishTime>2490.6672</FinishTime>
+<Laps>30</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="30">PlayerControl,Clutch,AutoLift,AutoBlip</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Chris Sherburn</Name>
+<Connected>1</Connected>
+<VehFile>CHRISV8.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>SupV8: Chris Sherburn #135</VehName>
+<CarType>SuperV8</CarType>
+<CarClass>SuperV8</CarClass>
+<CarNumber>135</CarNumber>
+<TeamName>GBR Motorsports</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>6</GridPos>
+<Position>10</Position>
+<ClassGridPos>6</ClassGridPos>
+<ClassPosition>10</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>4</LapRankIncludingDiscos>
+<Lap num="1" p="6" et="41.1538" s1="32.7760" s2="26.6341" s3="32.4691" fuel="0.745">91.8792</Lap>
+<Lap num="2" p="6" et="133.0330" s1="24.6912" s2="25.8951" s3="32.2565" fuel="0.722">82.8428</Lap>
+<Lap num="3" p="3" et="215.8758" s1="24.7881" s2="25.5146" s3="32.6891" fuel="0.702">82.9918</Lap>
+<Lap num="4" p="3" et="298.8676" s1="25.0038" s2="25.5054" s3="32.1746" fuel="0.678">82.6838</Lap>
+<Lap num="5" p="3" et="381.5514" s1="24.6518" s2="25.3919" s3="32.0828" fuel="0.659">82.1265</Lap>
+<Lap num="6" p="3" et="463.6778" s1="24.6361" s2="25.2930" s3="31.8705" fuel="0.635">81.7996</Lap>
+<Lap num="7" p="3" et="545.4774" s1="24.5402" s2="25.7893" s3="32.2598" fuel="0.616">82.5893</Lap>
+<Lap num="8" p="2" et="628.0667" s1="26.4017" s2="26.1215" s3="32.0499" fuel="0.592">84.5731</Lap>
+<Lap num="9" p="2" et="712.6398" s1="25.8181" s2="25.5064" s3="32.7246" fuel="0.569">84.0491</Lap>
+<Lap num="10" p="2" et="796.6889" s1="25.0687" s2="25.4094" s3="31.9246" fuel="0.549">82.4026</Lap>
+<Lap num="11" p="2" et="879.0915" s1="25.0182" s2="25.3792" s3="31.7830" fuel="0.525">82.1804</Lap>
+<Lap num="12" p="5" et="961.2719" s1="31.7587" s2="25.5490" s3="35.0650" fuel="0.502">92.3727</Lap>
+<Lap num="13" p="6" et="1053.6447" s1="25.6023" s2="26.1471" s3="45.1199" fuel="0.482" pit="1">96.8693</Lap>
+<Lap num="14" p="10" et="1150.5139" s1="80.1907" s2="25.7677" s3="32.3167" fuel="0.976">138.2750</Lap>
+<Lap num="15" p="8" et="1288.7889" s1="26.7295" s2="26.3268" s3="31.6969" fuel="0.957">84.7532</Lap>
+<Lap num="16" p="6" et="1373.5421" s1="24.8295" s2="25.3103" s3="32.3573" fuel="0.933">82.4971</Lap>
+<Lap num="17" p="6" et="1456.0392" s1="24.5144" s2="25.4451" s3="32.1431" fuel="0.910">82.1025</Lap>
+<Lap num="18" p="6" et="1538.1417" s1="24.8640" s2="25.4886" s3="33.1445" fuel="0.890">83.4972</Lap>
+<Lap num="19" p="6" et="1621.6389" s1="24.5499" s2="25.4752" s3="32.5076" fuel="0.867">82.5327</Lap>
+<Lap num="20" p="6" et="1704.1716" s1="24.7086" s2="25.7003" s3="32.4716" fuel="0.843">82.8805</Lap>
+<Lap num="21" p="6" et="1787.0521" s1="26.3275" s2="26.5046" s3="32.6820" fuel="0.824">85.5142</Lap>
+<Lap num="22" p="6" et="1872.5663" s1="28.7513" s2="25.9412" s3="32.6433" fuel="0.800">87.3358</Lap>
+<Lap num="23" p="9" et="1959.9021" s1="54.2396" s2="29.7557" s3="56.5664" fuel="0.780" pit="1">140.5618</Lap>
+<Lap num="24" p="11" et="2100.4639" s1="80.6550" s2="26.0200" s3="32.1006" fuel="0.757">138.7756</Lap>
+<Lap num="25" p="10" et="2239.2395" s1="25.1677" s2="26.0771" s3="32.2046" fuel="0.733">83.4495</Lap>
+<Lap num="26" p="10" et="2322.6890" s1="24.7249" s2="25.5889" s3="32.4189" fuel="0.714">82.7327</Lap>
+<Lap num="27" p="10" et="2405.4216" s1="24.6531" s2="25.3586" s3="31.9480" fuel="0.690">81.9597</Lap>
+<Lap num="28" p="10" et="2487.3813" s1="24.0964" s2="25.6943" s3="32.0688" fuel="0.667">81.8596</Lap>
+<BestLapTime>81.7996</BestLapTime>
+<FinishTime>2528.0872</FinishTime>
+<Laps>28</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="28">PlayerControl</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Angelo dos Santos</Name>
+<Connected>1</Connected>
+<VehFile>SANTOS3.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>SupV8: A dos Santos #30</VehName>
+<CarType>SuperV8</CarType>
+<CarClass>SuperV8</CarClass>
+<CarNumber>30</CarNumber>
+<TeamName>ADS Motorsports</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>2</GridPos>
+<Position>3</Position>
+<ClassGridPos>2</ClassGridPos>
+<ClassPosition>3</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>5</LapRankIncludingDiscos>
+<Lap num="1" p="2" et="41.1538" s1="31.0766" s2="25.8779" s3="32.1846" fuel="0.706">89.1392</Lap>
+<Lap num="2" p="1" et="130.2930" s1="24.5215" s2="25.5941" s3="32.0403" fuel="0.682">82.1559</Lap>
+<Lap num="3" p="8" et="212.4489" s1="24.5150" s2="26.2750" s3="40.2391" fuel="0.659">91.0291</Lap>
+<Lap num="4" p="8" et="303.4780" s1="24.6516" s2="25.4949" s3="32.5798" fuel="0.635">82.7264</Lap>
+<Lap num="5" p="8" et="386.2044" s1="24.9539" s2="25.4870" s3="32.8518" fuel="0.616">83.2927</Lap>
+<Lap num="6" p="7" et="469.4971" s1="25.1042" s2="25.7331" s3="31.9075" fuel="0.592">82.7448</Lap>
+<Lap num="7" p="5" et="552.2419" s1="24.5220" s2="25.5912" s3="31.8367" fuel="0.569">81.9499</Lap>
+<Lap num="8" p="4" et="634.1918" s1="24.8157" s2="25.4814" s3="32.1055" fuel="0.545">82.4026</Lap>
+<Lap num="9" p="3" et="716.5944" s1="24.8214" s2="25.3743" s3="31.8549" fuel="0.522">82.0506</Lap>
+<Lap num="10" p="3" et="798.6450" s1="25.0106" s2="25.4849" s3="32.3600" fuel="0.498">82.8555</Lap>
+<Lap num="11" p="3" et="881.5004" s1="24.3516" s2="25.5416" s3="32.7453" fuel="0.475">82.6385</Lap>
+<Lap num="12" p="2" et="964.1389" s1="24.5622" s2="25.5405" s3="32.6153" fuel="0.451">82.7180</Lap>
+<Lap num="13" p="3" et="1046.8569" s1="24.7069" s2="25.6646" s3="34.1193" fuel="0.431">84.4907</Lap>
+<Lap num="14" p="3" et="1131.3477" s1="24.5950" s2="25.6462" s3="32.4102" fuel="0.408">82.6514</Lap>
+<Lap num="15" p="3" et="1213.9990" s1="24.5004" s2="25.6401" s3="32.1190" fuel="0.384">82.2595</Lap>
+<Lap num="16" p="3" et="1296.2585" s1="24.5725" s2="25.3715" s3="33.3154" fuel="0.361">83.2594</Lap>
+<Lap num="17" p="3" et="1379.5179" s1="24.9565" s2="25.4583" s3="32.2985" fuel="0.341">82.7133</Lap>
+<Lap num="18" p="3" et="1462.2312" s1="24.5358" s2="25.7969" s3="32.4307" fuel="0.318">82.7633</Lap>
+<Lap num="19" p="3" et="1544.9945" s1="24.5709" s2="25.6367" s3="33.1138" fuel="0.294">83.3214</Lap>
+<Lap num="20" p="3" et="1628.3159" s1="24.3572" s2="25.7913" s3="31.8604" fuel="0.271">82.0088</Lap>
+<Lap num="21" p="3" et="1710.3247" s1="24.3705" s2="25.5574" s3="36.0956" fuel="0.251">86.0234</Lap>
+<Lap num="22" p="3" et="1796.3481" s1="24.7313" s2="25.5417" s3="32.0676" fuel="0.227">82.3407</Lap>
+<Lap num="23" p="3" et="1878.6888" s1="24.4751" s2="25.6378" s3="32.2133" fuel="0.204">82.3262</Lap>
+<Lap num="24" p="3" et="1961.0150" s1="24.8004" s2="25.5305" s3="32.2300" fuel="0.180">82.5609</Lap>
+<Lap num="25" p="3" et="2043.5759" s1="24.6013" s2="25.6543" s3="32.5449" fuel="0.157">82.8005</Lap>
+<Lap num="26" p="3" et="2126.3765" s1="24.4624" s2="25.7324" s3="32.3257" fuel="0.137">82.5205</Lap>
+<Lap num="27" p="3" et="2208.8970" s1="24.6362" s2="25.5215" s3="32.1177" fuel="0.114">82.2754</Lap>
+<Lap num="28" p="3" et="2291.1724" s1="24.3416" s2="26.1040" s3="32.3591" fuel="0.090">82.8047</Lap>
+<Lap num="29" p="3" et="2373.9771" s1="27.7888" s2="26.2188" s3="32.4412" fuel="0.067">86.4487</Lap>
+<Lap num="30" p="3" et="2460.4258" s1="24.9316" s2="25.9368" s3="32.4834" fuel="0.043">83.3518</Lap>
+<BestLapTime>81.9499</BestLapTime>
+<FinishTime>2502.6238</FinishTime>
+<Laps>30</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="30">PlayerControl,Clutch,AutoLift,AutoBlip</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Dale Green</Name>
+<Connected>1</Connected>
+<VehFile>GBRDG.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>SupV8: Dale Green #250</VehName>
+<CarType>SuperV8</CarType>
+<CarClass>SuperV8</CarClass>
+<CarNumber>250</CarNumber>
+<TeamName>Pacific Racing</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>8</GridPos>
+<Position>4</Position>
+<ClassGridPos>7</ClassGridPos>
+<ClassPosition>4</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>6</LapRankIncludingDiscos>
+<Lap num="1" p="9" et="41.1538" s1="34.5743" s2="26.1923" s3="33.7462" fuel="0.871">94.5128</Lap>
+<Lap num="2" p="9" et="135.6667" s1="25.1538" s2="25.6219" s3="32.5771" fuel="0.847">83.3527</Lap>
+<Lap num="3" p="7" et="219.0194" s1="24.8981" s2="25.3882" s3="33.4966" fuel="0.827">83.7828</Lap>
+<Lap num="4" p="7" et="302.8022" s1="25.0695" s2="25.5230" s3="32.3495" fuel="0.804">82.9420</Lap>
+<Lap num="5" p="7" et="385.7443" s1="24.8828" s2="25.6466" s3="32.9131" fuel="0.784">83.4426</Lap>
+<Lap num="6" p="8" et="469.1869" s1="25.9298" s2="25.4750" s3="32.3595" fuel="0.761">83.7643</Lap>
+<Lap num="7" p="8" et="552.9512" s1="25.6405" s2="25.4750" s3="32.7847" fuel="0.741">83.9002</Lap>
+<Lap num="8" p="6" et="636.8514" s1="24.9653" s2="25.6834" s3="31.9048" fuel="0.718">82.5535</Lap>
+<Lap num="9" p="5" et="719.4048" s1="24.9961" s2="25.5712" s3="32.3300" fuel="0.694">82.8973</Lap>
+<Lap num="10" p="5" et="802.3021" s1="24.9485" s2="25.7595" s3="32.5066" fuel="0.675">83.2145</Lap>
+<Lap num="11" p="5" et="885.5167" s1="24.5090" s2="25.6660" s3="32.6674" fuel="0.651">82.8424</Lap>
+<Lap num="12" p="4" et="968.3591" s1="24.9576" s2="26.0000" s3="33.9923" fuel="0.631">84.9499</Lap>
+<Lap num="13" p="4" et="1053.3090" s1="25.5872" s2="26.0269" s3="32.5227" fuel="0.608">84.1367</Lap>
+<Lap num="14" p="4" et="1137.4457" s1="24.6333" s2="25.6127" s3="32.6775" fuel="0.588">82.9235</Lap>
+<Lap num="15" p="4" et="1220.3691" s1="24.5985" s2="28.5889" s3="32.4352" fuel="0.565">85.6226</Lap>
+<Lap num="16" p="4" et="1305.9917" s1="24.8353" s2="26.1331" s3="32.4120" fuel="0.545">83.3804</Lap>
+<Lap num="17" p="4" et="1389.3721" s1="25.4727" s2="25.8719" s3="33.0500" fuel="0.525">84.3947</Lap>
+<Lap num="18" p="4" et="1473.7667" s1="24.8013" s2="26.1417" s3="32.8485" fuel="0.502">83.7915</Lap>
+<Lap num="19" p="4" et="1557.5582" s1="26.0243" s2="26.0270" s3="32.2836" fuel="0.482">84.3348</Lap>
+<Lap num="20" p="4" et="1641.8931" s1="24.7100" s2="25.6992" s3="32.5419" fuel="0.459">82.9510</Lap>
+<Lap num="21" p="4" et="1724.8441" s1="24.8047" s2="26.0339" s3="32.9689" fuel="0.439">83.8075</Lap>
+<Lap num="22" p="4" et="1808.6516" s1="24.7950" s2="26.1229" s3="32.8231" fuel="0.420">83.7411</Lap>
+<Lap num="23" p="4" et="1892.3927" s1="24.8860" s2="25.9630" s3="32.5750" fuel="0.396">83.4240</Lap>
+<Lap num="24" p="4" et="1975.8167" s1="24.9296" s2="26.4705" s3="33.4501" fuel="0.376">84.8501</Lap>
+<Lap num="25" p="4" et="2060.6667" s1="25.4248" s2="26.1001" s3="32.3645" fuel="0.353">83.8894</Lap>
+<Lap num="26" p="4" et="2144.5562" s1="25.1604" s2="26.0168" s3="32.9082" fuel="0.333">84.0854</Lap>
+<Lap num="27" p="4" et="2228.6416" s1="24.8611" s2="25.8425" s3="32.5964" fuel="0.314">83.3000</Lap>
+<Lap num="28" p="4" et="2311.9417" s1="24.5901" s2="26.0994" s3="32.7532" fuel="0.290">83.4426</Lap>
+<Lap num="29" p="4" et="2395.3843" s1="24.8242" s2="26.0583" s3="32.7195" fuel="0.271">83.6021</Lap>
+<Lap num="30" p="4" et="2478.9863" s1="24.7803" s2="26.3040" s3="32.9397" fuel="0.251">84.0239</Lap>
+<BestLapTime>82.5535</BestLapTime>
+<FinishTime>2521.8564</FinishTime>
+<Laps>30</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="30">PlayerControl,Clutch,AutoLift,AutoBlip</ControlAndAids>
+</Driver>
+<Driver>
+<Name>JImmy Regan</Name>
+<Connected>1</Connected>
+<VehFile>REGAN.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>SupV8: Jimmy Regan #77</VehName>
+<CarType>SuperV8</CarType>
+<CarClass>SuperV8</CarClass>
+<CarNumber>77</CarNumber>
+<TeamName>Guinness Racing</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>12</GridPos>
+<Position>8</Position>
+<ClassGridPos>11</ClassGridPos>
+<ClassPosition>8</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>7</LapRankIncludingDiscos>
+<Lap num="1" p="10" et="41.1538" s1="35.2576" s2="26.3140" s3="33.4496" fuel="0.973">95.0212</Lap>
+<Lap num="2" p="10" et="136.1750" s1="25.1060" s2="25.7994" s3="33.3079" fuel="0.953">84.2132</Lap>
+<Lap num="3" p="9" et="220.3882" s1="24.9212" s2="25.9021" s3="32.9508" fuel="0.929">83.7741</Lap>
+<Lap num="4" p="9" et="304.1623" s1="24.8963" s2="25.7981" s3="32.3182" fuel="0.906">83.0127</Lap>
+<Lap num="5" p="9" et="387.1750" s1="24.9000" s2="26.0782" s3="33.0728" fuel="0.882">84.0511</Lap>
+<Lap num="6" p="10" et="471.2261" s1="25.6489" s2="26.1440" s3="32.5006" fuel="0.859">84.2935</Lap>
+<Lap num="7" p="9" et="555.5196" s1="24.5579" s2="25.7123" s3="32.3363" fuel="0.835">82.6065</Lap>
+<Lap num="8" p="8" et="638.1261" s1="34.2894" s2="26.7845" s3="32.9453" fuel="0.812">94.0192</Lap>
+<Lap num="9" p="8" et="732.1453" s1="25.1976" s2="26.2072" s3="32.6629" fuel="0.792">84.0676</Lap>
+<Lap num="10" p="8" et="816.2129" s1="25.0907" s2="26.0020" s3="33.0613" fuel="0.769">84.1540</Lap>
+<Lap num="11" p="8" et="900.3669" s1="25.0193" s2="26.1289" s3="32.5430" fuel="0.745">83.6912</Lap>
+<Lap num="12" p="8" et="984.0581" s1="25.3927" s2="26.3657" s3="32.7130" fuel="0.722">84.4714</Lap>
+<Lap num="13" p="7" et="1068.5295" s1="25.7205" s2="26.4755" s3="33.2522" fuel="0.698">85.4481</Lap>
+<Lap num="14" p="6" et="1153.9777" s1="25.6620" s2="26.1609" s3="32.4846" fuel="0.675">84.3075</Lap>
+<Lap num="15" p="7" et="1238.2852" s1="24.9313" s2="26.1783" s3="80.6830" fuel="0.663" pit="1">131.7926</Lap>
+<Lap num="16" p="7" et="1370.0778" s1="31.4990" s2="26.4733" s3="32.5070" fuel="0.710">90.4792</Lap>
+<Lap num="17" p="7" et="1460.5570" s1="24.5796" s2="25.8734" s3="32.5679" fuel="0.686">83.0209</Lap>
+<Lap num="18" p="8" et="1543.5779" s1="27.7832" s2="26.7495" s3="32.4650" fuel="0.667">86.9977</Lap>
+<Lap num="19" p="8" et="1630.5756" s1="24.7693" s2="25.7551" s3="32.2043" fuel="0.643">82.7288</Lap>
+<Lap num="20" p="7" et="1713.3043" s1="24.5233" s2="31.9724" s3="35.2886" fuel="0.620">91.7843</Lap>
+<Lap num="21" p="10" et="1805.0886" s1="27.7241" s2="29.8872" s3="71.1001" fuel="0.600" pit="1">128.7114</Lap>
+<Lap num="22" p="10" et="1933.8000" s1="31.4076" s2="26.4301" s3="32.7526" fuel="0.576">90.5902</Lap>
+<Lap num="23" p="10" et="2024.3903" s1="24.5995" s2="26.1753" s3="33.1750" fuel="0.553">83.9498</Lap>
+<Lap num="24" p="9" et="2108.3401" s1="24.9768" s2="26.2383" s3="32.6248" fuel="0.529">83.8398</Lap>
+<Lap num="25" p="9" et="2192.1799" s1="24.6277" s2="26.0596" s3="33.2954" fuel="0.506">83.9827</Lap>
+<Lap num="26" p="9" et="2276.1626" s1="24.6157" s2="26.2129" s3="32.7087" fuel="0.482">83.5374</Lap>
+<Lap num="27" p="9" et="2359.7000" s1="24.3840" s2="26.0701" s3="32.3662" fuel="0.459">82.8203</Lap>
+<Lap num="28" p="8" et="2442.5203" s1="25.6118" s2="26.2678" s3="32.4873" fuel="0.435">84.3669</Lap>
+<Lap num="29" p="8" et="2526.8872" s1="25.1248" s2="26.1655" s3="33.3164" fuel="0.416">84.6067</Lap>
+<BestLapTime>82.6065</BestLapTime>
+<FinishTime>2570.3401</FinishTime>
+<Laps>29</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="29">PlayerControl,Clutch,AutoLift,AutoBlip</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Rich Mink</Name>
+<Connected>1</Connected>
+<VehFile>EZARVIO.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>SupV8: Esteban Zarvio #55</VehName>
+<CarType>SuperV8</CarType>
+<CarClass>SuperV8</CarClass>
+<CarNumber>55</CarNumber>
+<TeamName>Martin Racing</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>10</GridPos>
+<Position>5</Position>
+<ClassGridPos>9</ClassGridPos>
+<ClassPosition>5</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>8</LapRankIncludingDiscos>
+<Lap num="1" p="8" et="41.1538" s1="33.9276" s2="26.7620" s3="33.2016" fuel="0.973">93.8912</Lap>
+<Lap num="2" p="8" et="135.0450" s1="24.7828" s2="25.6098" s3="32.2156" fuel="0.945">82.6082</Lap>
+<Lap num="3" p="6" et="217.6532" s1="25.6496" s2="25.6355" s3="33.6469" fuel="0.922">84.9319</Lap>
+<Lap num="4" p="6" et="302.5851" s1="24.8995" s2="25.4637" s3="32.5116" fuel="0.894">82.8747</Lap>
+<Lap num="5" p="6" et="385.4598" s1="24.9756" s2="25.5984" s3="32.7440" fuel="0.871">83.3179</Lap>
+<Lap num="6" p="6" et="468.7778" s1="24.8589" s2="25.7668" s3="32.5085" fuel="0.843">83.1342</Lap>
+<Lap num="7" p="6" et="551.9120" s1="25.4322" s2="26.1879" s3="32.5597" fuel="0.820">84.1798</Lap>
+<Lap num="8" p="7" et="636.0918" s1="32.3610" s2="26.5750" s3="33.0660" fuel="0.792">92.0020</Lap>
+<Lap num="9" p="7" et="728.0938" s1="25.2687" s2="26.0289" s3="32.9226" fuel="0.765">84.2203</Lap>
+<Lap num="10" p="7" et="812.3141" s1="24.9810" s2="25.7591" s3="32.7239" fuel="0.741">83.4640</Lap>
+<Lap num="11" p="7" et="895.7781" s1="25.0341" s2="25.9156" s3="33.7385" fuel="0.714">84.6882</Lap>
+<Lap num="12" p="7" et="980.4662" s1="25.3720" s2="25.9484" s3="32.5483" fuel="0.690">83.8687</Lap>
+<Lap num="13" p="5" et="1064.3350" s1="25.1989" s2="26.6755" s3="33.0685" fuel="0.663">84.9429</Lap>
+<Lap num="14" p="5" et="1149.2778" s1="25.5000" s2="26.2045" s3="32.8818" fuel="0.639">84.5863</Lap>
+<Lap num="15" p="5" et="1233.8641" s1="25.5400" s2="26.4165" s3="32.9675" fuel="0.612">84.9241</Lap>
+<Lap num="16" p="5" et="1318.7882" s1="25.2906" s2="26.1129" s3="33.0861" fuel="0.588">84.4896</Lap>
+<Lap num="17" p="5" et="1403.2778" s1="25.1406" s2="25.8385" s3="32.8159" fuel="0.561">83.7950</Lap>
+<Lap num="18" p="5" et="1487.0729" s1="25.0049" s2="26.0764" s3="32.9109" fuel="0.537">83.9922</Lap>
+<Lap num="19" p="5" et="1571.0651" s1="25.9139" s2="25.9175" s3="33.1459" fuel="0.510">84.9773</Lap>
+<Lap num="20" p="5" et="1656.0424" s1="24.9678" s2="26.5979" s3="33.3447" fuel="0.486">84.9104</Lap>
+<Lap num="21" p="5" et="1740.9528" s1="25.0812" s2="34.2592" s3="33.3629" fuel="0.459">92.7032</Lap>
+<Lap num="22" p="5" et="1833.6560" s1="25.4740" s2="26.4349" s3="33.9486" fuel="0.435">85.8575</Lap>
+<Lap num="23" p="5" et="1919.5135" s1="25.2169" s2="26.2300" s3="33.2871" fuel="0.408">84.7340</Lap>
+<Lap num="24" p="5" et="2004.2476" s1="25.1108" s2="25.8943" s3="33.0779" fuel="0.384">84.0830</Lap>
+<Lap num="25" p="5" et="2088.3306" s1="25.4797" s2="26.3506" s3="33.3042" fuel="0.357">85.1345</Lap>
+<Lap num="26" p="5" et="2173.4651" s1="25.2126" s2="26.1392" s3="34.4258" fuel="0.333">85.7776</Lap>
+<Lap num="27" p="5" et="2259.2427" s1="25.7659" s2="26.2290" s3="33.8652" fuel="0.310">85.8601</Lap>
+<Lap num="28" p="5" et="2345.1028" s1="25.2371" s2="26.1055" s3="33.1016" fuel="0.282">84.4441</Lap>
+<Lap num="29" p="5" et="2429.5469" s1="25.1311" s2="26.2432" s3="33.0215" fuel="0.259">84.3958</Lap>
+<Lap num="30" p="5" et="2513.9426" s1="25.3462" s2="26.4465" s3="33.8340" fuel="0.231">85.6267</Lap>
+<BestLapTime>82.6082</BestLapTime>
+<FinishTime>2558.4155</FinishTime>
+<Laps>30</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="30">PlayerControl,Clutch,AutoLift,AutoBlip</ControlAndAids>
+</Driver>
+<Driver>
+<Name>David Fernandes</Name>
+<Connected>1</Connected>
+<VehFile>BXBREWERY.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>SupV8: David Fernandes #09</VehName>
+<CarType>SuperV8</CarType>
+<CarClass>SuperV8</CarClass>
+<CarNumber>09</CarNumber>
+<TeamName>Bronx Brewery</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>5</GridPos>
+<Position>14</Position>
+<ClassGridPos>5</ClassGridPos>
+<ClassPosition>14</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>9</LapRankIncludingDiscos>
+<Lap num="1" p="5" et="41.1538" s1="32.3240" s2="26.3250" s3="32.8813" fuel="0.757">91.5303</Lap>
+<Lap num="2" p="5" et="132.6841" s1="24.7536" s2="25.7150" s3="32.2144" fuel="0.733">82.6831</Lap>
+<Lap num="3" p="4" et="215.3672" s1="24.7528" s2="25.6097" s3="34.4480" fuel="0.710">84.8105</Lap>
+<Lap num="4" p="5" et="300.1778" s1="24.7040" s2="25.6145" s3="33.7394" fuel="0.686">84.0579</Lap>
+<Lap num="5" p="5" et="384.2357" s1="24.7096" s2="25.5921" s3="32.5773" fuel="0.663">82.8790</Lap>
+<Lap num="6" p="5" et="467.1147" s1="24.5637" s2="25.6387" s3="32.4358" fuel="0.639">82.6381</Lap>
+<Lap num="7" p="4" et="549.7528" s1="25.5000" s2="25.7018" s3="32.1121" fuel="0.612">83.3140</Lap>
+<Lap num="8" p="3" et="633.0668" s1="24.6207" s2="25.6747" s3="32.3727" fuel="0.588">82.6681</Lap>
+<Lap num="9" p="6" et="715.7349" s1="34.8041" s2="26.0524" s3="32.4117" fuel="0.565">93.2682</Lap>
+<Lap num="10" p="6" et="809.0031" s1="24.5020" s2="25.7282" s3="32.9896" fuel="0.537">83.2197</Lap>
+<Lap num="11" p="6" et="892.2228" s1="24.6735" s2="25.6962" s3="32.7403" fuel="0.514">83.1100</Lap>
+<Lap num="12" p="6" et="975.3328" s1="24.8041" s2="26.3168" s3="33.2180" fuel="0.490">84.3389</Lap>
+<BestLapTime>82.6381</BestLapTime>
+<Laps>12</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>DNF</FinishStatus>
+<DNFReason>DNF</DNFReason>
+<ControlAndAids startLap="1" endLap="12">PlayerControl</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Tony Diamond</Name>
+<Connected>1</Connected>
+<VehFile>SMITH_WESSON.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>SupV8: Tony Diamond #73</VehName>
+<CarType>SuperV8</CarType>
+<CarClass>SuperV8</CarClass>
+<CarNumber>73</CarNumber>
+<TeamName>Odyssey Racing</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>17</GridPos>
+<Position>9</Position>
+<ClassGridPos>16</ClassGridPos>
+<ClassPosition>9</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>10</LapRankIncludingDiscos>
+<Lap num="1" p="14" et="41.1538" s1="40.0845" s2="26.3145" s3="33.6898" fuel="0.741">100.0888</Lap>
+<Lap num="2" p="13" et="141.2426" s1="26.3141" s2="25.8460" s3="34.0195" fuel="0.718">86.1796</Lap>
+<Lap num="3" p="13" et="227.4222" s1="29.2305" s2="26.0363" s3="32.5316" fuel="0.694">87.7984</Lap>
+<Lap num="4" p="13" et="315.2207" s1="24.8663" s2="25.8803" s3="32.9106" fuel="0.671">83.6571</Lap>
+<Lap num="5" p="13" et="398.8778" s1="25.7881" s2="26.5237" s3="32.7632" fuel="0.647">85.0750</Lap>
+<Lap num="6" p="13" et="483.9528" s1="24.9264" s2="34.0658" s3="34.1761" fuel="0.624">93.1684</Lap>
+<Lap num="7" p="12" et="577.1212" fuel="0.600">84.0648</Lap>
+<Lap num="8" p="11" et="661.1859" s1="24.8810" s2="26.2108" s3="33.8071" fuel="0.576">84.8989</Lap>
+<Lap num="9" p="11" et="746.0848" s1="25.2778" s2="26.2606" s3="33.5497" fuel="0.553">85.0881</Lap>
+<Lap num="10" p="11" et="831.1730" s1="25.3596" s2="26.1055" s3="34.4247" fuel="0.529">85.8899</Lap>
+<Lap num="11" p="11" et="917.0629" s1="26.6442" s2="26.3707" s3="33.0500" fuel="0.506">86.0649</Lap>
+<Lap num="12" p="11" et="1003.1278" s1="24.9868" s2="26.2703" s3="32.7679" fuel="0.482">84.0250</Lap>
+<Lap num="13" p="9" et="1087.1528" s1="25.1119" s2="26.3752" s3="33.5405" fuel="0.459">85.0277</Lap>
+<Lap num="14" p="8" et="1172.1805" s1="25.1810" s2="26.0413" s3="33.7579" fuel="0.435">84.9802</Lap>
+<Lap num="15" p="6" et="1257.1608" s1="26.3296" s2="28.0874" s3="33.6868" fuel="0.416">88.1038</Lap>
+<Lap num="16" p="11" et="1345.2645" s1="24.9241" s2="26.2969" s3="87.7673" fuel="0.400" pit="1">138.9883</Lap>
+<Lap num="17" p="11" et="1484.2528" s1="34.7750" s2="27.3146" s3="33.5361" fuel="0.976">95.6257</Lap>
+<Lap num="18" p="10" et="1579.8785" s1="25.2413" s2="26.0902" s3="33.3988" fuel="0.953">84.7303</Lap>
+<Lap num="19" p="10" et="1664.6089" s1="24.6312" s2="25.9376" s3="32.5316" fuel="0.929">83.1005</Lap>
+<Lap num="20" p="10" et="1747.7094" s1="24.6992" s2="26.5895" s3="33.0829" fuel="0.906">84.3716</Lap>
+<Lap num="21" p="9" et="1832.0809" s1="25.3657" s2="26.2561" s3="33.1106" fuel="0.882">84.7324</Lap>
+<Lap num="22" p="9" et="1916.8134" s1="25.0070" s2="26.5579" s3="33.2747" fuel="0.859">84.8395</Lap>
+<Lap num="23" p="8" et="2001.6528" s1="25.6250" s2="26.8093" s3="33.0325" fuel="0.835">85.4668</Lap>
+<Lap num="24" p="8" et="2087.1196" s1="25.6082" s2="26.9634" s3="33.1799" fuel="0.816">85.7515</Lap>
+<Lap num="25" p="8" et="2172.8711" s1="25.1956" s2="26.0156" s3="42.4329" fuel="0.788">93.6440</Lap>
+<Lap num="26" p="8" et="2266.5151" s1="27.5549" s2="27.3970" s3="34.1763" fuel="0.769">89.1282</Lap>
+<Lap num="27" p="8" et="2355.6433" s1="25.9409" s2="26.2686" s3="33.6001" fuel="0.745">85.8096</Lap>
+<Lap num="28" p="9" et="2441.4529" s1="25.7842" s2="26.5715" s3="36.3069" fuel="0.722">88.6626</Lap>
+<Lap num="29" p="9" et="2530.1155" s1="27.5313" s2="28.1169" s3="35.9209" fuel="0.702">91.5691</Lap>
+<BestLapTime>83.1005</BestLapTime>
+<FinishTime>2580.5308</FinishTime>
+<Laps>29</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="29">PlayerControl,Clutch,AutoLift,AutoBlip</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Dan Wheat</Name>
+<Connected>1</Connected>
+<VehFile>DANV8.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>SupV8: Dan Wheat #04</VehName>
+<CarType>SuperV8</CarType>
+<CarClass>SuperV8</CarClass>
+<CarNumber>04</CarNumber>
+<TeamName>Wolf_apos;s Paint Shop</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>14</GridPos>
+<Position>11</Position>
+<ClassGridPos>13</ClassGridPos>
+<ClassPosition>11</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>11</LapRankIncludingDiscos>
+<Lap num="1" p="13" et="41.1538" s1="39.5876" s2="26.6435" s3="33.5314" fuel="0.976">99.7625</Lap>
+<Lap num="2" p="12" et="140.9163" s1="26.1953" s2="25.9495" s3="34.0835" fuel="0.953">86.2284</Lap>
+<Lap num="3" p="12" et="227.1447" s1="27.0618" s2="25.9741" s3="32.9250" fuel="0.929">85.9609</Lap>
+<Lap num="4" p="12" et="313.1056" s1="25.6912" s2="25.9853" s3="32.3813" fuel="0.906">84.0578</Lap>
+<Lap num="5" p="12" et="397.1634" s1="25.0566" s2="25.9990" s3="32.6404" fuel="0.882">83.6960</Lap>
+<Lap num="6" p="12" et="480.8594" s1="25.3961" s2="26.3834" s3="32.6799" fuel="0.859">84.4594</Lap>
+<Lap num="7" p="11" et="565.3188" s1="25.0617" s2="25.9402" s3="33.8348" fuel="0.839">84.8367</Lap>
+<Lap num="8" p="10" et="650.1556" s1="26.9122" s2="26.3934" s3="33.2693" fuel="0.816">86.5750</Lap>
+<Lap num="9" p="10" et="736.7305" s1="25.4543" s2="25.8918" s3="32.7858" fuel="0.792">84.1318</Lap>
+<Lap num="10" p="10" et="820.8624" s1="24.6796" s2="25.8400" s3="33.3524" fuel="0.769">83.8720</Lap>
+<Lap num="11" p="10" et="904.7344" s1="25.3475" s2="26.2339" s3="33.0211" fuel="0.745">84.6024</Lap>
+<Lap num="12" p="10" et="989.3368" s1="36.6283" s2="26.2405" s3="33.5000" fuel="0.722">96.3688</Lap>
+<Lap num="13" p="14" et="1085.7056" s1="25.3229" s2="53.8922" s3="108.4849" fuel="0.706" pit="1">187.7000</Lap>
+<Lap num="14" p="14" et="1273.4055" s1="32.0330" s2="26.1675" s3="33.0514" fuel="0.976">91.2518</Lap>
+<Lap num="15" p="14" et="1364.6573" s1="25.3402" s2="26.1462" s3="32.8867" fuel="0.953">84.3732</Lap>
+<Lap num="16" p="12" et="1449.0305" s1="25.2662" s2="25.9022" s3="33.6830" fuel="0.929">84.8514</Lap>
+<Lap num="17" p="12" et="1533.8820" s1="25.4738" s2="26.1093" s3="33.1522" fuel="0.906">84.7352</Lap>
+<Lap num="18" p="11" et="1618.6172" s1="25.3486" s2="25.9397" s3="32.8376" fuel="0.886">84.1260</Lap>
+<Lap num="19" p="11" et="1702.7432" s1="27.4374" s2="25.8058" s3="32.5043" fuel="0.863">85.7474</Lap>
+<Lap num="20" p="11" et="1788.4906" s1="25.3693" s2="26.3027" s3="35.0620" fuel="0.839">86.7340</Lap>
+<Lap num="21" p="11" et="1875.2246" s1="25.2152" s2="26.2317" s3="35.8213" fuel="0.816">87.2682</Lap>
+<Lap num="22" p="11" et="1962.4928" s1="25.6603" s2="26.5331" s3="42.5450" fuel="0.792">94.7384</Lap>
+<Lap num="23" p="11" et="2057.2312" s1="25.3804" s2="28.0479" s3="33.0315" fuel="0.773">86.4597</Lap>
+<Lap num="24" p="10" et="2143.6909" s1="26.0647" s2="26.9250" s3="33.0625" fuel="0.749">86.0522</Lap>
+<Lap num="25" p="11" et="2229.7432" s1="52.1624" s2="26.5183" s3="33.1067" fuel="0.725">111.7874</Lap>
+<Lap num="26" p="11" et="2341.5305" s1="25.8250" s2="25.9155" s3="32.8896" fuel="0.702">84.6301</Lap>
+<Lap num="27" p="11" et="2426.1606" s1="25.0989" s2="25.8865" s3="33.1096" fuel="0.678">84.0950</Lap>
+<Lap num="28" p="11" et="2510.2556" s1="31.8499" s2="26.9678" s3="33.1201" fuel="0.659">91.9377</Lap>
+<BestLapTime>83.6960</BestLapTime>
+<FinishTime>2561.0396</FinishTime>
+<Laps>28</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="28">PlayerControl,Clutch,AutoLift,AutoBlip</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Scott Beck</Name>
+<Connected>1</Connected>
+<VehFile>BECKV8.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>SupV8: Scott Beck #41</VehName>
+<CarType>SuperV8</CarType>
+<CarClass>SuperV8</CarClass>
+<CarNumber>41</CarNumber>
+<TeamName>Rothmans Racing</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>11</GridPos>
+<Position>7</Position>
+<ClassGridPos>10</ClassGridPos>
+<ClassPosition>7</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>12</LapRankIncludingDiscos>
+<Lap num="1" p="11" et="41.1538" s1="37.8999" s2="26.8067" s3="33.3428" fuel="0.341">98.0494</Lap>
+<Lap num="2" p="11" et="139.2032" s1="25.4246" s2="26.1846" s3="33.0158" fuel="0.318">84.6250</Lap>
+<Lap num="3" p="10" et="223.8282" s1="24.7882" s2="26.3157" s3="33.5224" fuel="0.294">84.6263</Lap>
+<Lap num="4" p="11" et="308.4545" s1="26.2982" s2="26.5793" s3="33.5257" fuel="0.271">86.4032</Lap>
+<Lap num="5" p="11" et="394.8577" s1="25.1382" s2="26.8625" s3="32.9634" fuel="0.251">84.9641</Lap>
+<Lap num="6" p="11" et="479.8218" s1="25.0704" s2="26.2810" s3="32.7988" fuel="0.227">84.1502</Lap>
+<Lap num="7" p="10" et="563.9720" s1="24.6216" s2="27.4969" s3="33.7694" fuel="0.204">85.8879</Lap>
+<Lap num="8" p="9" et="649.8600" s1="25.4678" s2="26.9160" s3="33.7090" fuel="0.180">86.0928</Lap>
+<Lap num="9" p="9" et="735.9528" s1="25.1898" s2="26.2397" s3="32.7113" fuel="0.161">84.1408</Lap>
+<Lap num="10" p="9" et="820.0936" s1="24.7455" s2="25.9899" s3="33.5761" fuel="0.137">84.3115</Lap>
+<Lap num="11" p="9" et="904.4051" s1="24.8993" s2="26.7047" s3="33.0546" fuel="0.114">84.6586</Lap>
+<Lap num="12" p="9" et="989.0637" s1="25.2991" s2="26.3036" s3="33.9210" fuel="0.094">85.5237</Lap>
+<Lap num="13" p="8" et="1074.5874" s1="25.3978" s2="26.4989" s3="33.8733" fuel="0.071">85.7700</Lap>
+<Lap num="14" p="7" et="1160.3574" s1="25.6454" s2="26.6749" s3="33.2607" fuel="0.047">85.5811</Lap>
+<Lap num="15" p="11" et="1245.9385" s1="25.9508" s2="26.7905" s3="83.2729" fuel="0.035" pit="1">136.0143</Lap>
+<Lap num="16" p="10" et="1381.9528" s1="34.0015" s2="26.3303" s3="33.4197" fuel="0.522">93.7515</Lap>
+<Lap num="17" p="10" et="1475.7042" s1="25.3735" s2="26.1418" s3="32.5582" fuel="0.502">84.0736</Lap>
+<Lap num="18" p="9" et="1559.7778" s1="25.2122" s2="26.2771" s3="33.9683" fuel="0.478">85.4575</Lap>
+<Lap num="19" p="9" et="1645.2354" s1="25.2788" s2="26.3439" s3="32.7378" fuel="0.455">84.3605</Lap>
+<Lap num="20" p="9" et="1729.5958" s1="25.0088" s2="25.9561" s3="33.1324" fuel="0.431">84.0973</Lap>
+<Lap num="21" p="8" et="1813.6931" s1="25.0011" s2="26.5219" s3="34.1123" fuel="0.408">85.6353</Lap>
+<Lap num="22" p="8" et="1899.3284" s1="25.7191" s2="26.3508" s3="33.4187" fuel="0.388">85.4886</Lap>
+<Lap num="23" p="7" et="1984.8170" s1="25.2607" s2="26.0645" s3="33.1298" fuel="0.365">84.4550</Lap>
+<Lap num="24" p="7" et="2069.2720" s1="24.9109" s2="26.2590" s3="33.3882" fuel="0.341">84.5581</Lap>
+<Lap num="25" p="7" et="2153.8301" s1="26.4895" s2="26.6501" s3="34.0471" fuel="0.318">87.1868</Lap>
+<Lap num="26" p="7" et="2241.0168" s1="26.3201" s2="26.5764" s3="33.6018" fuel="0.298">86.4983</Lap>
+<Lap num="27" p="7" et="2327.5151" s1="25.3301" s2="26.6575" s3="34.5762" fuel="0.275">86.5637</Lap>
+<Lap num="28" p="7" et="2414.0789" s1="25.3489" s2="26.4919" s3="34.2476" fuel="0.251">86.0884</Lap>
+<Lap num="29" p="7" et="2500.1672" s1="25.9756" s2="26.8655" s3="34.4236" fuel="0.227">87.2646</Lap>
+<BestLapTime>84.0736</BestLapTime>
+<FinishTime>2546.2781</FinishTime>
+<Laps>29</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="29">PlayerControl,Clutch,AutoLift,AutoBlip</ControlAndAids>
+</Driver>
+<Driver>
+<Name>brian potvin</Name>
+<Connected>1</Connected>
+<VehFile>NMATHEAS.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>SupV8: Nilson Matheas #33</VehName>
+<CarType>SuperV8</CarType>
+<CarClass>SuperV8</CarClass>
+<CarNumber>33</CarNumber>
+<TeamName>Shelix Team</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>16</GridPos>
+<Position>13</Position>
+<ClassGridPos>15</ClassGridPos>
+<ClassPosition>13</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>13</LapRankIncludingDiscos>
+<Lap num="1" p="17" et="41.1538" s1="40.4614" s2="32.7125" s3="37.3775" fuel="0.565">110.5514</Lap>
+<Lap num="2" p="16" et="151.7052" s1="29.2015" s2="27.1462" s3="33.4685" fuel="0.545">89.8161</Lap>
+<Lap num="3" p="15" et="241.5214" s1="26.0611" s2="27.1203" s3="33.5359" fuel="0.525">86.7173</Lap>
+<Lap num="4" p="15" et="328.2387" s1="25.8329" s2="26.4063" s3="32.7626" fuel="0.502">85.0017</Lap>
+<Lap num="5" p="14" et="413.2404" s1="25.6803" s2="26.8366" s3="33.0087" fuel="0.482">85.5256</Lap>
+<Lap num="6" p="14" et="498.7660" s1="26.4712" s2="26.7672" s3="34.7590" fuel="0.463">87.9975</Lap>
+<Lap num="7" p="13" et="586.7635" s1="26.7327" s2="26.3342" s3="34.4225" fuel="0.443">87.4893</Lap>
+<Lap num="8" p="12" et="674.2528" s1="26.0362" s2="26.7388" s3="35.1871" fuel="0.424">87.9620</Lap>
+<Lap num="9" p="12" et="762.2148" s1="25.7130" s2="26.6617" s3="34.3753" fuel="0.400">86.7500</Lap>
+<Lap num="10" p="12" et="848.9648" s1="26.1379" s2="27.2026" s3="35.3890" fuel="0.384">88.7296</Lap>
+<Lap num="11" p="12" et="937.6944" s1="26.6940" s2="27.2842" s3="33.6742" fuel="0.365">87.6524</Lap>
+<Lap num="12" p="12" et="1025.3468" s1="26.0083" s2="27.8226" s3="33.7263" fuel="0.345">87.5573</Lap>
+<Lap num="13" p="10" et="1112.9041" s1="26.4380" s2="27.1858" s3="34.9877" fuel="0.322">88.6115</Lap>
+<Lap num="14" p="9" et="1201.5155" s1="25.9717" s2="26.9844" s3="33.8063" fuel="0.302">86.7623</Lap>
+<Lap num="15" p="10" et="1288.2778" s1="27.3250" s2="28.2794" s3="37.6310" fuel="0.282">93.2354</Lap>
+<BestLapTime>85.0017</BestLapTime>
+<Laps>15</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>DNF</FinishStatus>
+<DNFReason>Suspension</DNFReason>
+<ControlAndAids startLap="1" endLap="15">PlayerControl,Clutch,AutoLift,AutoBlip</ControlAndAids>
+</Driver>
+<Driver>
+<Name>T Alan</Name>
+<Connected>1</Connected>
+<VehFile>ALANV8.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>SupV8: Todd Alan #129</VehName>
+<CarType>SuperV8</CarType>
+<CarClass>SuperV8</CarClass>
+<CarNumber>129</CarNumber>
+<TeamName>Rothmans Racing</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>15</GridPos>
+<Position>15</Position>
+<ClassGridPos>14</ClassGridPos>
+<ClassPosition>15</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>14</LapRankIncludingDiscos>
+<Lap num="1" p="12" et="41.1538" s1="38.6323" s2="26.7789" s3="33.7992" fuel="0.741">99.2104</Lap>
+<Lap num="2" p="14" et="140.3643" s1="25.4636" s2="26.6377" s3="35.1032" fuel="0.718">87.2045</Lap>
+<BestLapTime>87.2045</BestLapTime>
+<Laps>2</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>DNF</FinishStatus>
+<DNFReason>Suspension</DNFReason>
+<ControlAndAids startLap="1" endLap="2">PlayerControl,Clutch,AutoLift,AutoBlip</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Ed Durbin</Name>
+<Connected>1</Connected>
+<VehFile>DURBINV8.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>SupV8: Ed Durbin #96</VehName>
+<CarType>SuperV8</CarType>
+<CarClass>SuperV8</CarClass>
+<CarNumber>96</CarNumber>
+<TeamName>Durbin Racing</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>18</GridPos>
+<Position>12</Position>
+<ClassGridPos>17</ClassGridPos>
+<ClassPosition>12</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>15</LapRankIncludingDiscos>
+<Lap num="1" p="16" et="41.1538" s1="41.2990" s2="27.9289" s3="35.6276" fuel="0.976">104.8554</Lap>
+<Lap num="2" p="15" et="146.0093" s1="29.0935" s2="26.4118" s3="34.0143" fuel="0.953">89.5196</Lap>
+<Lap num="3" p="14" et="235.5289" s1="26.3653" s2="27.0972" s3="33.9614" fuel="0.929">87.4239</Lap>
+<Lap num="4" p="14" et="322.9528" s1="27.0613" s2="27.1431" s3="34.2868" fuel="0.906">88.4912</Lap>
+<Lap num="5" p="15" et="411.4440" s1="26.8601" s2="40.5152" s3="35.0634" fuel="0.886">102.4388</Lap>
+<Lap num="6" p="15" et="513.8828" s1="26.7450" s2="27.0771" s3="48.1157" fuel="0.863">101.9378</Lap>
+<Lap num="7" p="14" et="615.8206" s1="27.5485" s2="28.0994" s3="34.1593" fuel="0.839">89.8072</Lap>
+<Lap num="8" p="13" et="705.6278" s1="26.9122" s2="29.1307" s3="35.3322" fuel="0.820">91.3750</Lap>
+<Lap num="9" p="15" et="797.0028" s1="28.7104" s2="27.4051" s3="37.1512" fuel="0.796">93.2667</Lap>
+<Lap num="10" p="15" et="890.2695" s1="26.1501" s2="27.9331" s3="35.1500" fuel="0.776">89.2333</Lap>
+<Lap num="11" p="15" et="979.5028" s1="27.2404" s2="27.3128" s3="33.8904" fuel="0.753">88.4436</Lap>
+<Lap num="12" p="15" et="1067.9464" s1="27.1069" s2="28.8523" s3="35.5853" fuel="0.733">91.5446</Lap>
+<Lap num="13" p="13" et="1159.4910" s1="45.6384" s2="30.8660" s3="35.3448" fuel="0.710">111.8492</Lap>
+<Lap num="14" p="13" et="1271.3402" s1="25.9652" s2="27.7473" s3="33.9335" fuel="0.690">87.6460</Lap>
+<Lap num="15" p="13" et="1358.9862" s1="26.2451" s2="27.2599" s3="33.9000" fuel="0.667">87.4050</Lap>
+<Lap num="16" p="13" et="1446.3912" s1="26.8191" s2="26.7863" s3="79.9818" fuel="0.643">133.5872</Lap>
+<Lap num="17" p="13" et="1579.9784" s1="26.7136" s2="32.2517" s3="91.8096" fuel="0.631" pit="1">150.7749</Lap>
+<Lap num="18" p="13" et="1730.7533" s1="33.4042" s2="27.6033" s3="34.3420" fuel="0.976">95.3495</Lap>
+<Lap num="19" p="13" et="1826.1028" s1="64.1500" s2="27.4667" s3="34.6333" fuel="0.953">126.2500</Lap>
+<Lap num="20" p="13" et="1952.3528" s1="28.0250" s2="28.0580" s3="35.4343" fuel="0.933">91.5173</Lap>
+<Lap num="21" p="13" et="2043.8701" s1="28.6841" s2="44.3550" s3="110.7437" fuel="0.922" pit="1">183.7827</Lap>
+<Lap num="22" p="12" et="2227.6528" s1="44.2571" s2="27.8276" s3="35.2942" fuel="0.976">107.3789</Lap>
+<Lap num="23" p="12" et="2335.0317" s1="26.5710" s2="27.1873" s3="33.8828" fuel="0.957">87.6411</Lap>
+<Lap num="24" p="12" et="2422.6729" s1="27.0715" s2="26.7537" s3="33.4958" fuel="0.933">87.3210</Lap>
+<Lap num="25" p="12" et="2509.9939" s1="32.5605" s2="27.5747" s3="34.0051" fuel="0.914">94.1404</Lap>
+<BestLapTime>87.3210</BestLapTime>
+<FinishTime>2562.9805</FinishTime>
+<Laps>25</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="25">PlayerControl,Clutch,AutoLift,AutoBlip</ControlAndAids>
+</Driver>
+<Driver>
+<Name>robbmc</Name>
+<Connected>1</Connected>
+<VehFile>ROBBV8.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>SupV8: Robb McDonough #69</VehName>
+<CarType>SuperV8</CarType>
+<CarClass>SuperV8</CarClass>
+<CarNumber>69</CarNumber>
+<TeamName>McDonough Racing</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>13</GridPos>
+<Position>16</Position>
+<ClassGridPos>12</ClassGridPos>
+<ClassPosition>16</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>16</LapRankIncludingDiscos>
+<Lap num="1" p="15" et="41.1538" s1="39.0434" s2="26.9750" s3="34.3068" fuel="0.973">100.3252</Lap>
+<BestLapTime>100.3252</BestLapTime>
+<Laps>1</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>DNF</FinishStatus>
+<DNFReason>Suspension</DNFReason>
+<ControlAndAids startLap="1" endLap="1">PlayerControl,Clutch,AutoLift,AutoBlip</ControlAndAids>
+</Driver>
+<Driver>
+<Name>David Slute</Name>
+<Connected>1</Connected>
+<VehFile>DS2015SW.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>SupV8: D. Slute #78</VehName>
+<CarType>SuperV8</CarType>
+<CarClass>SuperV8</CarClass>
+<CarNumber>78</CarNumber>
+<TeamName>Slute Motorsports</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>9</GridPos>
+<Position>17</Position>
+<ClassGridPos>8</ClassGridPos>
+<ClassPosition>17</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>17</LapRankIncludingDiscos>
+<Lap num="1" p="7" et="41.1538" s1="33.2646" s2="26.4179" s3="32.5988" fuel="0.831">92.2813</Lap>
+<Lap num="2" p="7" et="133.4352" s1="24.6898" s2="25.7299" s3="32.5627" fuel="0.808">82.9824</Lap>
+<Lap num="3" p="5" et="216.4176" s1="24.5966" s2="25.4178" s3="33.9541" fuel="0.784">83.9685</Lap>
+<Lap num="4" p="4" et="300.3861" s1="25.5889" s2="25.7000" s3="32.1416" fuel="0.761">83.4305</Lap>
+<Lap num="5" p="4" et="383.8166" s1="24.5834" s2="25.3250" s3="31.6950" fuel="0.733">81.6035</Lap>
+<Lap num="6" p="4" et="465.4200" s1="24.7720" s2="25.3273" s3="32.0364" fuel="0.710">82.1357</Lap>
+<Lap num="7" p="15" et="547.5557" s1="24.6443" s2="45.3617" s3="90.6883" fuel="0.694" pit="1">160.6943</Lap>
+<Lap num="8" p="15" et="708.2500" s1="36.9387" s2="27.1567" s3="32.8796" fuel="0.976">96.9750</Lap>
+<Lap num="9" p="14" et="805.2250" s1="24.6155" s2="25.4733" s3="32.4902" fuel="0.953">82.5791</Lap>
+<Lap num="10" p="14" et="887.8041" s1="24.0996" s2="25.4473" s3="32.8845" fuel="0.929">82.4314</Lap>
+<Lap num="11" p="14" et="970.2355" s1="25.0645" s2="25.6285" s3="32.9149" fuel="0.906">83.6079</Lap>
+<Lap num="12" p="14" et="1053.8434" s1="25.8126" s2="25.9108" s3="33.3103" fuel="0.882">85.0337</Lap>
+<Lap num="13" p="12" et="1138.8771" s1="24.5750" s2="25.5229" s3="32.1187" fuel="0.859">82.2166</Lap>
+<Lap num="14" p="12" et="1221.0936" s1="24.5873" s2="25.6957" s3="32.1676" fuel="0.835">82.4506</Lap>
+<Lap num="15" p="12" et="1303.5442" s1="24.4558" s2="25.5500" s3="32.2301" fuel="0.812">82.2360</Lap>
+<Lap num="16" p="9" et="1385.7802" s1="24.7472" s2="25.8866" s3="32.9631" fuel="0.788">83.5969</Lap>
+<Lap num="17" p="9" et="1469.3771" s1="24.8759" s2="25.8470" s3="32.4250" fuel="0.765">83.1479</Lap>
+<Lap num="18" p="12" et="1552.5250" s1="31.5272" s2="26.2802" s3="92.8186" fuel="0.745" pit="1">150.6260</Lap>
+<Lap num="19" p="12" et="1703.1510" s1="39.0043" s2="26.1639" s3="57.2808" fuel="0.722" pit="1">122.4490</Lap>
+<Lap num="20" p="12" et="1825.6000" s1="30.6781" s2="25.8174" s3="32.8296" fuel="0.694">89.3251</Lap>
+<Lap num="21" p="12" et="1914.9250" s1="24.2260" s2="25.5558" s3="32.4116" fuel="0.671">82.1934</Lap>
+<Lap num="22" p="12" et="1997.1184" s1="24.4897" s2="26.6450" s3="90.2468" fuel="0.655" pit="1">141.3816</Lap>
+<Lap num="23" p="12" et="2138.5000" s1="34.4500" s2="27.5420" s3="33.6641" fuel="0.976">95.6560</Lap>
+<BestLapTime>81.6035</BestLapTime>
+<Laps>23</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>DQ</FinishStatus>
+<ControlAndAids startLap="1" endLap="23">PlayerControl,Clutch,AutoLift,AutoBlip</ControlAndAids>
+</Driver>
+</Race>
+</RaceResults>
+</rFactorXML>
