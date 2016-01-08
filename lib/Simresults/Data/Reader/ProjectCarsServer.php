@@ -618,7 +618,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
     protected static function cleanJSON($json)
     {
         // Remove comments which are not supported by json syntax
-        return preg_replace('#//.*#', '', $json);
+        return preg_replace('#// .*#', '', $json);
     }
 
 

@@ -185,7 +185,19 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
         $sessions = Data_Reader::factory($file_path)->getSessions();
     }
 
+    /**
+     * Test reading a log with two forward slashes in the content that caused
+     * bad log cleaning
+     */
+    public function testReadingLogContainingContentWithForwardSlashes()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/projectcars-server/forward.slashes.in.content.json');
 
+        $sessions = Data_Reader::factory($file_path)->getSessions();
+        $this->assertSame(8, count($sessions));
+    }
 
 
 
