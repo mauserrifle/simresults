@@ -199,6 +199,32 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertSame(8, count($sessions));
     }
 
+    /**
+     * Test whether proper cut times are read. This tests a bug fix where too
+     * many cut ends were read. Fixed using break in for loop when END for cut
+     * is found.
+     */
+    public function testProperCutTimesWithAlotOfCutEvents()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/projectcars-server/race.with.alot.of.cuts.json');
+
+        // Get the data reader for the given data source
+        // TODO: Why is this 5? Can we exclude the other sessions because of
+        // having empty data?
+        $session = Data_Reader::factory($file_path)->getSession(5);
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Get laps of second participant
+        $laps = $participants[1]->getLaps();
+
+        // Validate cuts
+        $this->assertSame(1.434, $laps[1]->getCutsTime());
+    }
+
 
 
     /***
@@ -398,8 +424,8 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertSame(84.2240, $lap->getTime());
         $this->assertSame(90.0300, $lap->getElapsedSeconds());
         $this->assertSame(3, $lap->getNumberOfCuts());
-        $this->assertSame(3.106, $lap->getCutsTimeSkipped());
-        $this->assertSame(3.293, $lap->getCutsTime());
+        $this->assertSame(2.872, $lap->getCutsTimeSkipped());
+        $this->assertSame(3.023, $lap->getCutsTime());
 
         // Validate extra positions
         $laps = $participants[3]->getLaps();

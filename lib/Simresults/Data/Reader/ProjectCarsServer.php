@@ -411,7 +411,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                             // Next event is end of current cut
                             $next_event = $cut_data[$end_key];
                             if ($next_event['event_name'] === 'CutTrackEnd' AND
-                                $next_event['refid'] == $event['refid'])
+                                $next_event['participantid'] == $event['participantid'])
                             {
                                 $lap->addCutsTime(round(
                                     $next_event['attributes']['ElapsedTime']
@@ -419,6 +419,9 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                                 $lap->addCutsTimeSkipped(round(
                                     $next_event['attributes']['SkippedTime']
                                     / 1000, 4));
+
+                                // Stop searching
+                                break;
                             }
                         }
                     }
