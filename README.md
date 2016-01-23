@@ -21,7 +21,7 @@ This project is created and maintained by
 [Maurice van der Star](http://twitter.com/mauserrifleNL)
 
 * Website: <http://simresults.net>
-* Twitter: [@mauserrifleNL](http://twitter.com/mauserrifleNL)
+* Twitter: [@simresults](http://twitter.com/simresults)
 
 ## Supported games
 
@@ -29,11 +29,12 @@ Simresults supports a wide range of games:
 
 * rFactor
 * rFactor 2
+* Project Cars
+* Assetto Corsa
 * Game Stock Car 2012
 * Game Stock Car 2013
 * Game Stock Car Extreme
 * Formula Truck 2013
-* Assetto Corsa
 * RACE
 * RACE 07
 * GTR
@@ -95,6 +96,10 @@ lap.
 * Detects human and AI players using their aids (sometimes log files report
   wrong player state)
 
+### Project Cars Server reader
+
+`lib/Data/Reader/ProjectCarsServer.php`
+
 ### Assetto Corsa reader
 
 `lib/Data/Reader/AssettoCorsa.php`
@@ -104,6 +109,10 @@ lap.
 ### Assetto Corsa Server reader
 
 `lib/Data/Reader/AssettoCorsaServer.php`
+
+### Assetto Corsa Server reader JSON
+
+`lib/Data/Reader/AssettoCorsaServerJson.php`
 
 ### RaceRoom Server reader
 

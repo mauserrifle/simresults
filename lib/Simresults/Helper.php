@@ -237,7 +237,7 @@ class Helper {
     /**
      * Returns the given laps sorted by elapsed time (ASC)
      *
-     * TODO: Unittest
+     * TODO: Unittest?
      *
      * @return  array  the laps
      */
@@ -298,7 +298,7 @@ class Helper {
     /**
      * Sort participants by total time, also checks finish statusses
      *
-     * TODO: Unittest
+     * WARNING: This is not unittested and heavily relies on reader tests
      *
      * @param   array   $participants
      * @return  array   The sorted participants
@@ -314,6 +314,10 @@ class Helper {
 
         usort($participants, function($a, $b) use ($dnf_statusses) {
 
+            /**
+             * Laps
+             */
+
             // Participant a has less laps than b. He is lapped
             if ($a->getNumberOfLaps() < $b->getNumberOfLaps())
             {
@@ -326,18 +330,71 @@ class Helper {
                 return -1;
             }
 
+            /**
+             * Finish status
+             */
+
             // Both not finished
             if (in_array($a->getFinishStatus(), $dnf_statusses) AND
                 in_array($b->getFinishStatus(), $dnf_statusses))
             {
-                // Same
-                return 0;
+
+                // Both have no total time
+                if ( ! $a->getTotalTime() AND ! $b->getTotalTime())
+                {
+                    // Both same status
+                    if ($a->getFinishStatus() === $b->getFinishStatus())
+                    {
+                        // Both have a grid position
+                        if ($a->getGridPosition() AND $b->getGridPosition())
+                        {
+                            // Participant a had a better grid position
+                            if ($a->getGridPosition() < $b->getGridPosition())
+                            {
+                                return -1;
+                            }
+
+                            // Participant b had a better grid position
+                            if ($b->getGridPosition() < $a->getGridPosition())
+                            {
+                                return 1;
+                            }
+                        }
+
+                        // a has grid position
+                        if ($a->getGridPosition())
+                        {
+                            return -1;
+                        }
+
+                        // b has grid position
+                        if ($b->getGridPosition())
+                        {
+                            return 1;
+                        }
+
+                        // Same
+                        return 0;
+                    }
+
+                    // Get finish order values
+                    $a_order = array_search($a->getFinishStatus(),
+                        Participant::$finish_sort_order);
+                    $b_order = array_search($b->getFinishStatus(),
+                        Participant::$finish_sort_order);
+
+                    // Return normal comparison
+                    return (($a_order < $b_order) ? -1 : 1);
+                }
+
+                // Return normal time comparison
+                return (($a->getTotalTime() < $b->getTotalTime()) ? 1 : -1);
             }
+
 
             // a not finished
             if (in_array($a->getFinishStatus(), $dnf_statusses))
             {
-
                 return 1;
             }
 
@@ -347,8 +404,44 @@ class Helper {
                 return -1;
             }
 
+
+
+            /**
+             * Actual time
+             */
+
             // Same time
-             if ($a->getTotalTime() === $b->getTotalTime()) {
+             if ($a->getTotalTime() === $b->getTotalTime())
+             {
+                // Both have a grid position
+                if ($a->getGridPosition() AND $b->getGridPosition())
+                {
+                    // Participant a had a better grid position
+                    if ($a->getGridPosition() < $b->getGridPosition())
+                    {
+                        return -1;
+                    }
+
+                    // Participant b had a better grid position
+                    if ($b->getGridPosition() < $a->getGridPosition())
+                    {
+                        return 1;
+                    }
+                }
+
+                // a has grid position
+                if ($a->getGridPosition())
+                {
+                    return -1;
+                }
+
+                // b has grid position
+                if ($b->getGridPosition())
+                {
+                    return 1;
+                }
+
+                // Same
                 return 0;
             }
 
@@ -362,7 +455,7 @@ class Helper {
     /**
      * Sort participants by best lap
      *
-     * TODO: Unittest
+     * TODO: Unittest?
      *
      * @param   array   $participants
      * @return  array   The sorted participants
@@ -449,6 +542,99 @@ class Helper {
 
             // Return normal comparison
             return (($a_consistency < $b_consistency) ? -1 : 1);
+        });
+
+        return $participants;
+    }
+
+    /**
+     * Sort participants by last lap position
+     *
+     * TODO: Unittest?
+     *
+     * @param   array   $participants
+     * @return  array   The sorted participants
+     */
+    public static function sortParticipantsByLastLapPosition(
+        array $participants)
+    {
+        usort($participants, function($a, $b) {
+
+            /**
+             * Criteria 1: Number of laps
+             */
+
+            // Get the number of laps
+            $a_number_of_laps = $a->getNumberOfLaps();
+            $b_number_of_laps = $b->getNumberOfLaps();
+
+            // Both participants have no laps
+            if ( ! $a_number_of_laps AND ! $b_number_of_laps)
+            {
+                // Same
+                return 0;
+            }
+
+            // a has no laps
+            if ( ! $a_number_of_laps)
+            {
+                return 1;
+            }
+
+            // b has no laps
+            if ( ! $b_number_of_laps)
+            {
+                return -1;
+            }
+
+            // Not same number of laps
+             if ($a_number_of_laps !== $b_number_of_laps)
+             {
+                // Return number of laps comparison
+                return (($a_number_of_laps < $b_number_of_laps) ? 1 : -1);
+            }
+
+
+
+            /**
+             * Criteria 2: Last lap position
+             */
+
+
+            // Get last lap
+            $a_last_lap = $a->getLastLap();
+            $b_last_lap = $b->getLastLap();
+
+
+            // Both participants have no last lap
+            if ( ! $a_last_lap AND ! $b_last_lap)
+            {
+                // Same
+                return 0;
+            }
+
+            // a has no last lap
+            if ( ! $a_last_lap)
+            {
+                return 1;
+            }
+
+            // b has no last lap
+            if ( ! $b_last_lap)
+            {
+                return -1;
+            }
+
+            // Same position
+            //  if ($a_last_lap->getPosition() === $b_last_lap->getPosition()) {
+            //     return 0;
+            // }
+
+            // Return normal comparison
+            return ((
+                $a_last_lap->getPosition() <
+                    $b_last_lap->getPosition())
+                ? -1 : 1);
         });
 
         return $participants;

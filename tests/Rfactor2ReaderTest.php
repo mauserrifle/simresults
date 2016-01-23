@@ -268,6 +268,34 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
+     * Test reading the tire wear
+     */
+    public function testReadingTireWear()
+    {
+        // Get the data reader for the given data source
+        $reader = Data_Reader::factory(
+            realpath(__DIR__.'/logs/rfactor2/race_with_tire_wear.xml'));
+
+        // Get participants
+        $participants = $reader->getSession()->getParticipants();
+
+        // Get the first participant laps
+        $laps = $participants[0]->getLaps();
+
+        // Validate ear percentage on first lap
+        $this->assertSame(93.3, $laps[0]->getFrontCompoundLeftWear());
+        $this->assertSame(94.9, $laps[0]->getFrontCompoundRightWear());
+        $this->assertSame(94.1, $laps[0]->getRearCompoundLeftWear());
+        $this->assertSame(95.3, $laps[0]->getRearCompoundRightWear());
+
+        // Validate ear percentage on last lap
+        $this->assertSame(62.7, $laps[34]->getFrontCompoundLeftWear());
+        $this->assertSame(75.3, $laps[34]->getFrontCompoundRightWear());
+        $this->assertSame(82.0, $laps[34]->getRearCompoundLeftWear());
+        $this->assertSame(82.4, $laps[34]->getRearCompoundRightWear());
+    }
+
+    /**
      * Test reading pitstop laps
      */
     public function testReadingPitLaps()
@@ -682,6 +710,38 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
         // Get the data reader for the given data source
         $reader = Data_Reader::factory(
             realpath(__DIR__.'/logs/rfactor2/qualify_with_invalid_chars.xml'));
+    }
+
+
+    /**
+     * Test reading that there are no exceptions on a file that contains
+     * unescaped amp (&) characters. These characters are now escaped before
+     * parsing. The log in this test also contains one escaped amp sign so
+     * we also test that there are uneffected
+     */
+    public function testReadingFileWithUnescapedAmpCharacters()
+    {
+        // Get the data reader for the given data source
+        $reader = Data_Reader::factory(realpath(
+            __DIR__.'/logs/rfactor2/race_with_amp_chars_in_vehicle.xml'));
+    }
+
+
+    /**
+     * Test reading the game of a session based on the mod name. This tests
+     * detecting Game Stock Car
+     */
+    public function testReadingSessionGameBasedOnModName()
+    {
+        // Get the data reader for the given data source
+        $reader = Data_Reader::factory(
+            realpath(__DIR__.'/logs/gamestockcar/race.xml'));
+
+        // Get game
+        $game = $reader->getSession()->getGame();
+
+        // Validate game
+        $this->assertSame('Game Stock Car Extreme', $game->getName());
     }
 
 

@@ -61,12 +61,12 @@ class Data_Reader_Rfactor2 extends Data_Reader {
     }
 
     /**
-     * @see \Simresults\Data_Reader::getSessions()
+     * @see \Simresults\Data_Reader::readSessions()
      */
-    public function getSessions()
+    protected function readSessions()
     {
         // Create new session instance
-        $session = new Session;
+        $session = Session::createInstance();
 
         // Is race session
         if ($xml_session = $this->dom->getElementsByTagName('Race')->item(0))
@@ -335,9 +335,14 @@ class Data_Reader_Rfactor2 extends Data_Reader {
         // Default game name
         $game_name = 'rFactor 2';
 
+        // Mod is from gamestockcar
+        if (preg_match('/reiza[0-9]+\.rfm/i', $this->dom_value('Mod')))
+        {
+            $game_name = 'Game Stock Car Extreme';
+        }
         // Game version matches rfactor 1 version. Let's hope rfactor 2 will
         // never use this version :)
-        if ($game_version === '1.255')
+        elseif ($game_version === '1.255')
         {
             // It's rfactor 1
             $game_name = 'rFactor';
@@ -430,7 +435,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                 ->setNumber( (int) $this->dom_value('CarNumber', $driver_xml));
 
             // Create participant
-            $participant = new Participant;
+            $participant = Participant::createInstance();
 
             // Set participant values
             $participant
@@ -713,6 +718,42 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                     $fuel = $fuel_data*100;
                 }
 
+
+
+
+                $front_compound_left_wear = NULL;
+                if (($wear_data = (float) $lap_xml->getAttribute('twfl')) AND
+                    $wear_data > 0 )
+                {
+                    // Get proper percentage
+                    $front_compound_left_wear = $wear_data*100;
+                }
+
+                $front_compound_right_wear = NULL;
+                if (($wear_data = (float) $lap_xml->getAttribute('twfr')) AND
+                    $wear_data > 0 )
+                {
+                    // Get proper percentage
+                    $front_compound_right_wear = $wear_data*100;
+                }
+
+                $rear_compound_left_wear = NULL;
+                if (($wear_data = (float) $lap_xml->getAttribute('twrl')) AND
+                    $wear_data > 0 )
+                {
+                    // Get proper percentage
+                    $rear_compound_left_wear = $wear_data*100;
+                }
+
+                $rear_compound_right_wear = NULL;
+                if (($wear_data = (float) $lap_xml->getAttribute('twrr')) AND
+                    $wear_data > 0 )
+                {
+                    // Get proper percentage
+                    $rear_compound_right_wear = $wear_data*100;
+                }
+
+
                 // Set lap values
                 $lap
                     ->setTime($lap_time)
@@ -722,6 +763,10 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                     ->setElapsedSeconds($elapsed_seconds)
                     ->setFrontCompound($front_compound)
                     ->setRearCompound($rear_compound)
+                    ->setFrontCompoundLeftWear($front_compound_left_wear)
+                    ->setFrontCompoundRightWear($front_compound_right_wear)
+                    ->setRearCompoundLeftWear($rear_compound_left_wear)
+                    ->setRearCompoundRightWear($rear_compound_right_wear)
                     ->setFuel($fuel)
                     ->setPitLap((boolean) $lap_xml->getAttribute('pit'));
 
@@ -1168,6 +1213,9 @@ class Data_Reader_Rfactor2 extends Data_Reader {
         // Remove any unwanted chars after the end of the file (after last
         // XML closing tag)
         $xml = substr($xml, 0, 1+strrpos($xml, '>'));
+
+        // Fix unescaped amp characters
+        $xml = preg_replace('/&(?!amp;)/', '&amp;$1', $xml);
 
         return $xml;
     }

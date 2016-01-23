@@ -32,9 +32,9 @@ class Data_Reader_Race07 extends Data_Reader {
     }
 
     /**
-     * @see \Simresults\Data_Reader::getSessions()
+     * @see \Simresults\Data_Reader::readSessions()
      */
-    public function getSessions()
+    protected function readSessions()
     {
         $sessions = array();
 
@@ -54,7 +54,7 @@ class Data_Reader_Race07 extends Data_Reader {
             else
             {
                 // Create new session instance
-                $session = new Session;
+                $session = Session::createInstance();
 
                 // Get date from human string when available
                 if (isset($data['header']['timestring']))
@@ -124,32 +124,6 @@ class Data_Reader_Race07 extends Data_Reader {
             if ( ! $session->getParticipants())
             {
                 continue;
-            }
-
-            // Fix driver positions for laps
-            $session_lasted_laps = $session->getLastedLaps();
-
-            // Loop each lap number, beginning from 2 because lap 1 has grid
-            // position
-            for($i=2; $i <= $session_lasted_laps; $i++)
-            {
-                // Get laps sorted by elapsed time
-                $laps_sorted = $session->getLapsByLapNumberSortedByTime($i);
-
-                // Sort laps by elapsed time
-                $laps_sorted = Helper::sortLapsByElapsedTime($laps_sorted);
-
-                // Loop each lap and fix position data
-                foreach ($laps_sorted as $lap_key => $lap)
-                {
-                    // Only fix position if lap has a time, this way users of this
-                    // library can easier detect whether it's a dummy lap and
-                    // decide how to show them
-                    if ($lap->getTime() OR $lap->getElapsedSeconds())
-                    {
-                        $lap->setPosition($lap_key+1);
-                    }
-                }
             }
 
             $sessions[] = $session;
@@ -245,7 +219,7 @@ class Data_Reader_Race07 extends Data_Reader {
             $driver->setName($driver_data['driver']);
 
             // Create participant and add driver
-            $participant = new Participant;
+            $participant = Participant::createInstance();
             $participant->setDrivers(array($driver))
                         ->setTeam(Helper::arrayGet($driver_data, 'team'));
                         // Finish position will be set later using an special
@@ -390,25 +364,8 @@ class Data_Reader_Race07 extends Data_Reader {
             $session->setType(Session::TYPE_RACE);
         }
 
-
-        // Is race result
-        if ($session->getType() === Session::TYPE_RACE)
-        {
-            // Sort participants by total time
-            $participants = Helper::sortParticipantsByTotalTime($participants);
-        }
-        // Is practice of qualify
-        else
-        {
-            // Sort by best lap
-            $participants = Helper::sortParticipantsByBestLap($participants);
-        }
-
-        // Fix participant positions
-        foreach ($participants as $key => $part)
-        {
-            $part->setPosition($key+1);
-        }
+        // Sort participants
+        $this->sortParticipantsAndFixPositions($participants, $session);
 
         // Set participants on session
         $session->setParticipants($participants);

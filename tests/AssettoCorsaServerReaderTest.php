@@ -862,16 +862,19 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertSame(Participant::FINISH_NORMAL,
             $participant->getFinishStatus());
 
-        // Get last participant with no laps
-        $participant = $participants[5];
-        $this->assertSame('Gerardo Primo',
+        // Get 4th participant. Not the most last because they
+        // vary in order because of different usort behavior due pivots
+        // in PHP 5.6 vs HHVM/PHP7. But thats ok, those are all meaningless
+        // DNF anyway
+        $participant = $participants[3];
+        $this->assertSame('Luis Miguel Barrera',
                           $participant->getDriver()->getName());
         $this->assertSame('tatuusfa1*',
                           $participant->getVehicle()->getName());
-        $this->assertSame(0, $participant->getTotalTime());
-        $this->assertSame(6, $participant->getPosition());
+        $this->assertSame(687.901, $participant->getTotalTime());
+        $this->assertSame(4, $participant->getPosition());
         $this->assertNull($participant->getGridPosition());
-        $this->assertSame(Participant::FINISH_DNF,
+        $this->assertSame(Participant::FINISH_NONE,
             $participant->getFinishStatus());
 
 

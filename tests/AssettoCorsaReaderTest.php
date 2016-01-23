@@ -221,6 +221,7 @@ class AssettoCorsaReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertSame('mclaren_mp412c',
                           $participant->getVehicle()->getName());
         $this->assertSame(1, $participant->getPosition());
+        $this->assertNull($participant->getGridPosition());
         $this->assertSame(Participant::FINISH_NORMAL,
             $participant->getFinishStatus());
 

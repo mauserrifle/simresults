@@ -25,18 +25,15 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
     }
 
     /**
-     * @see \Simresults\Data_Reader::getSessions()
+     * @see \Simresults\Data_Reader::readSessions()
      */
-    public function getSessions()
+    protected function readSessions()
     {
         // Get array data
         $data = $this->array_data;
 
         // Init sessions array
         $sessions = array();
-
-        // Remember last qualify session to make up grid positions
-        $last_qualify_session = null;
 
         // Loop each session from data
         foreach ($data as $session_data)
@@ -45,7 +42,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             $vehicle_names = array();
 
             // Init session
-            $session = new Session;
+            $session = Session::createInstance();
 
             // Set session type
             $type = null;
@@ -155,7 +152,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 }
 
                 // Create participant and add driver
-                $participant = new Participant;
+                $participant = Participant::createInstance();
                 $participant->setDrivers(array($driver))
                             ->setTotalTime($total_time);
 
@@ -265,99 +262,12 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 $participants[] = $participant;
             }
 
-            // Is race result
-            if ($session->getType() === Session::TYPE_RACE)
-            {
-                // Sort participants by total time
-                $participants = Helper::sortParticipantsByTotalTime($participants);
-            }
-            // Is practice of qualify
-            else
-            {
-                // Sort by best lap
-                $participants = Helper::sortParticipantsByBestLap($participants);
-            }
-
-            // Fix participant positions
-            foreach ($participants as $key => $part)
-            {
-                $part->setPosition($key+1);
-            }
+            // Sort participants
+            $this->sortParticipantsAndFixPositions($participants, $session);
 
             // Set participants to session
             $session->setParticipants($participants);
 
-
-            // Fix elapsed seconds for all participant laps
-            foreach ($session->getParticipants() as $participant)
-            {
-               $elapsed_time = 0;
-               foreach ($participant->getLaps() as $lap)
-               {
-                    // Set elapsed seconds and increment it
-                    $lap->setElapsedSeconds($elapsed_time);
-                    $elapsed_time += $lap->getTime();
-               }
-            }
-
-            // Is qualify
-            if ($session->getType() === Session::TYPE_QUALIFY)
-            {
-                // Remember last qualify session
-                $last_qualify_session = $session;
-            }
-            // Is race and has last qualify session
-            else if ($session->getType() === Session::TYPE_RACE AND
-                     $last_qualify_session)
-            {
-                // Get pairticpants of last qualify session and store names
-                $last_qualify_session_participants = array();
-                foreach ($last_qualify_session->getParticipants() as $part)
-                {
-                    $last_qualify_session_participants[] =
-                        $part->getDriver()->getName();
-                }
-
-                // Loop this session participants
-                foreach ($participants as $part)
-                {
-                    // Found participant in qualify array
-                    if (false !== $key =
-                        array_search($part->getDriver()->getName(),
-                            $last_qualify_session_participants))
-                    {
-                        $part->setGridPosition($key+1);
-                    }
-                }
-
-            }
-
-            // Fix driver positions for laps
-            $session_lasted_laps = $session->getLastedLaps();
-
-            // Loop each lap number, beginning from 2, because we can't
-            // figure out positions for lap 1 in AC
-            // TODO: Duplicate code with RACE07 and AC normal reader
-            for($i=2; $i <= $session_lasted_laps; $i++)
-            {
-                // Get laps sorted by elapsed time
-                $laps_sorted = $session->getLapsByLapNumberSortedByTime($i);
-
-                // Sort laps by elapsed time
-                $laps_sorted = Helper::sortLapsByElapsedTime($laps_sorted);
-
-                // Loop each lap and fix position data
-                foreach ($laps_sorted as $lap_key => $lap)
-                {
-                    // Only fix position if lap has a time, this way users of this
-                    // library can easier detect whether it's a dummy lap and
-                    // decide how to show them
-                    if ($lap->getTime() OR $lap->getElapsedSeconds())
-                    {
-                        $lap->setPosition($lap_key+1);
-                    }
-                }
-            }
 
 
             // Only one vehicle type in this session
@@ -536,6 +446,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
 
             // Loop each match and collect participants
             $participants = array();
+            if (isset($part_matches[0]))
             foreach ($part_matches[0] as $part_key => $part_data)
             {
                 // Explode data by REQUESTED CAR again
@@ -619,6 +530,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                     $participant_regex_vehicle_match_key = 1;
 
                     // Loop each match and collect participants
+                    if (isset($part_matches[0]))
                     foreach ($part_matches[0] as $part_key => $part_data)
                     {
                         $name = trim($part_matches[3][$part_key]);
@@ -664,6 +576,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                     $participant_regex_vehicle_match_key = 3;
 
                     // Loop each match and collect participants
+                    if (isset($part_matches[0]))
                     foreach ($part_matches[0] as $part_key => $part_data)
                     {
                         $name = trim($part_matches[2][$part_key]);
@@ -716,6 +629,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
 
                 // Loop each match and collect participants
                 $participants = array();
+                if (isset($part_matches[0]))
                 foreach ($part_matches[0] as $part_key => $part_data)
                 {
                     $name = trim($part_matches[3][$part_key]);
@@ -762,6 +676,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
 
                 // Loop each match and collect participants
                 $participants = array();
+                if (isset($part_matches[0]))
                 foreach ($part_matches[0] as $part_key => $part_data)
                 {
                     $name = trim($part_matches[2][$part_key]);

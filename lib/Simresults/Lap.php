@@ -66,6 +66,28 @@ class Lap {
      */
     protected $rear_compound;
 
+
+    /**
+     * @var  float  The left front compound wear in percentage for this lap
+     */
+    protected $front_compound_left_wear;
+
+    /**
+     * @var  float  The right front compound wear in percentage for this lap
+     */
+    protected $front_compound_right_wear;
+
+    /**
+     * @var  float  The left rear compound wear in percentage for this lap
+     */
+    protected $rear_compound_left_wear;
+
+    /**
+     * @var  float  The right rear compound wear in percentage for this lap
+     */
+    protected $rear_compound_right_wear;
+
+
     /**
      * @var  float  Fuel percentage left in tank
      */
@@ -81,6 +103,20 @@ class Lap {
      */
     protected $pit_time;
 
+    /**
+     * @var  int  The number of cuts
+     */
+    protected $number_of_cuts = 0;
+
+    /**
+     * @var  float  The total time in seconds of cuts
+     */
+    protected $cuts_time = 0;
+
+    /**
+     * @var  float  The total time skipped in seconds of cuts
+     */
+    protected $cuts_time_skipped = 0;
 
     /**
      * Set the lap number
@@ -391,6 +427,107 @@ class Lap {
         return $this->rear_compound;
     }
 
+
+
+
+
+
+    /**
+     * Set the left front compound wear in percentage for this lap
+     *
+     * @param   float  $front_compound_left_wear
+     * @return  Lap
+     */
+    public function setFrontCompoundLeftWear($front_compound_left_wear)
+    {
+        $this->front_compound_left_wear = $front_compound_left_wear;
+        return $this;
+    }
+
+    /**
+     * Get the left front compound wear in percentage for this lap
+     *
+     * @return  float
+     */
+    public function getFrontCompoundLeftWear()
+    {
+        return $this->front_compound_left_wear;
+    }
+
+    /**
+     * Set the right front compound wear in percentage for this lap
+     *
+     * @param   float  $front_compound_right_wear
+     * @return  Lap
+     */
+    public function setFrontCompoundRightWear($front_compound_right_wear)
+    {
+        $this->front_compound_right_wear = $front_compound_right_wear;
+        return $this;
+    }
+
+    /**
+     * Get the right front compound wear in percentage for this lap
+     *
+     * @return  float
+     */
+    public function getFrontCompoundRightWear()
+    {
+        return $this->front_compound_right_wear;
+    }
+
+
+
+
+    /**
+     * Set the left rear compound wear in percentage for this lap
+     *
+     * @param   float  $rear_compound_left_wear
+     * @return  Lap
+     */
+    public function setRearCompoundLeftWear($rear_compound_left_wear)
+    {
+        $this->rear_compound_left_wear = $rear_compound_left_wear;
+        return $this;
+    }
+
+    /**
+     * Get the left rear compound wear in percentage for this lap
+     *
+     * @return  float
+     */
+    public function getRearCompoundLeftWear()
+    {
+        return $this->rear_compound_left_wear;
+    }
+
+    /**
+     * Set the right rear compound wear in percentage for this lap
+     *
+     * @param   float  $rear_compound_right_wear
+     * @return  Lap
+     */
+    public function setRearCompoundRightWear($rear_compound_right_wear)
+    {
+        $this->rear_compound_right_wear = $rear_compound_right_wear;
+        return $this;
+    }
+
+    /**
+     * Get the right rear compound wear in percentage for this lap
+     *
+     * @return  float
+     */
+    public function getRearCompoundRightWear()
+    {
+        return $this->rear_compound_right_wear;
+    }
+
+
+
+
+
+
     /**
      * Set the fuel percentage left in tank
      *
@@ -446,6 +583,78 @@ class Lap {
         $this->pit_time = $pit_time;
         return $this;
     }
+
+    /**
+     * Set the number of cuts
+     *
+     * @param   int  $number_of_cuts
+     * @return  Lap
+     */
+    public function setNumberOfCuts($number_of_cuts)
+    {
+        $this->number_of_cuts = $number_of_cuts;
+        return $this;
+    }
+
+    /**
+     * Get the number of cuts
+     *
+     * @return  int
+     */
+    public function getNumberOfCuts()
+    {
+        return $this->number_of_cuts;
+    }
+
+    /**
+     * Add a cut to this lap
+     */
+    public function addCut()
+    {
+        $this->number_of_cuts++;
+    }
+
+
+
+
+    /**
+     * Get the total time in seconds of cuts
+     *
+     * @return  int
+     */
+    public function getCutsTime()
+    {
+        return $this->cuts_time;
+    }
+
+    /**
+     * Add time in seconds to the total cut time
+     */
+    public function addCutsTime($seconds)
+    {
+        $this->cuts_time = round($this->cuts_time + $seconds, 4);
+    }
+
+    /**
+     * Get the total time skipped in seconds of cuts
+     *
+     * @return  int
+     */
+    public function getCutsTimeSkipped()
+    {
+        return $this->cuts_time_skipped;
+    }
+
+    /**
+     * Add time skipped in seconds to the total cut time skipped
+     */
+    public function addCutsTimeSkipped($seconds_skipped)
+    {
+        $this->cuts_time_skipped =
+            round($this->cuts_time_skipped + $seconds_skipped, 4);
+    }
+
+
 
     /**
      * Get the time spend on pitting

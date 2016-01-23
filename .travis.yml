@@ -5,14 +5,10 @@ php:
   - 5.4
   - 5.5
   - 5.6
+  - 7.0
   - hhvm
 
-matrix:
-  allow_failures:
-    - php: hhvm
+install:
+  - travis_retry composer install --no-interaction --prefer-source
 
-before_script:
-  - travis_retry composer self-update
-  - travis_retry composer install --prefer-source --no-interaction --dev
-
-script: vendor/bin/phpunit --verbose
+script: vendor/bin/phpunit

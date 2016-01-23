@@ -1,0 +1,2590 @@
+// Persistent data for addon 'sms_stats', addon version 2.0
+// Automatically maintained by the addon, do not edit!
+
+{
+  "next_history_index" : 11,
+  "stats" : {
+    "history" : [
+      {
+        "end_time" : 1446173234,
+        "finished" : false,
+        "index" : 1,
+        "members" : {
+          "35968" : {
+            "index" : 0,
+            "join_time" : 1446173134,
+            "leave_time" : 1446173234,
+            "name" : "[CAV] F1_Racer68",
+            "participantid" : -1,
+            "setup" : {
+              "LiveryId" : 66,
+              "RaceStatFlags" : 0,
+              "VehicleId" : -1770401008
+            },
+            "steamid" : "76561198151166420"
+          }
+        },
+        "participants" : {},
+        "setup" : {
+          "AllowedViews" : 0,
+          "DamageType" : 1,
+          "DateDay" : 6,
+          "DateHour" : 11,
+          "DateMinute" : 0,
+          "DateMonth" : 7,
+          "DateProgression" : 1,
+          "DateYear" : 2015,
+          "Flags" : 525544,
+          "ForecastProgression" : 1,
+          "FuelUsageType" : 2,
+          "GridSize" : 32,
+          "MaxPlayers" : 32,
+          "PenaltiesType" : 1,
+          "Practice1Length" : 0,
+          "Practice2Length" : 0,
+          "QualifyLength" : 5,
+          "Race1Length" : 3,
+          "ServerControlsSetup" : 1,
+          "ServerControlsTrack" : 1,
+          "ServerControlsVehicle" : 0,
+          "ServerControlsVehicleClass" : 1,
+          "TireWearType" : 8,
+          "TrackId" : 1300627020,
+          "VehicleClassId" : -1300724070,
+          "VehicleModelId" : 274862187,
+          "WarmupLength" : 0,
+          "WeatherSlot1" : -934211870,
+          "WeatherSlot2" : -934211870,
+          "WeatherSlot3" : -934211870,
+          "WeatherSlot4" : -934211870,
+          "WeatherSlots" : 1
+        },
+        "stages" : {},
+        "start_time" : 1446173134
+      },
+      {
+        "end_time" : 1447204011,
+        "finished" : false,
+        "index" : 2,
+        "members" : {
+          "29184" : {
+            "index" : 0,
+            "join_time" : 1447201115,
+            "leave_time" : 1447204011,
+            "name" : "[CAV] F1_Racer68",
+            "participantid" : 0,
+            "setup" : {
+              "LiveryId" : 71,
+              "RaceStatFlags" : 1073767653,
+              "VehicleId" : 1161219858
+            },
+            "steamid" : "76561198151166420"
+          }
+        },
+        "participants" : {
+          "0" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 71,
+            "Name" : "[CAV] F1_Racer68",
+            "RefId" : 29184,
+            "VehicleId" : 1161219858
+          }
+        },
+        "setup" : {
+          "AllowedViews" : 0,
+          "DamageType" : 3,
+          "DateDay" : 14,
+          "DateHour" : 14,
+          "DateMinute" : 0,
+          "DateMonth" : 11,
+          "DateProgression" : 10,
+          "DateYear" : 2014,
+          "Flags" : 787480,
+          "ForecastProgression" : 0,
+          "FuelUsageType" : 0,
+          "GridSize" : 32,
+          "MaxPlayers" : 32,
+          "PenaltiesType" : 1,
+          "Practice1Length" : 15,
+          "Practice2Length" : 0,
+          "QualifyLength" : 10,
+          "Race1Length" : 15,
+          "ServerControlsSetup" : 1,
+          "ServerControlsTrack" : 0,
+          "ServerControlsVehicle" : 0,
+          "ServerControlsVehicleClass" : 0,
+          "TireWearType" : 4,
+          "TrackId" : -661887517,
+          "VehicleClassId" : -112887377,
+          "VehicleModelId" : 1161219858,
+          "WarmupLength" : 10,
+          "WeatherSlot1" : 296956818,
+          "WeatherSlot2" : 296956818,
+          "WeatherSlot3" : -934211870,
+          "WeatherSlot4" : -934211870,
+          "WeatherSlots" : 0
+        },
+        "stages" : {
+          "practice1" : {
+            "end_time" : 1447202054,
+            "events" : {},
+            "results" : [
+              {
+                "attributes" : {
+                  "FastestLapTime" : 119417,
+                  "Lap" : 5,
+                  "RacePosition" : 1,
+                  "State" : "InGarage",
+                  "TotalTime" : 0,
+                  "VehicleId" : 1161219858
+                },
+                "is_player" : true,
+                "name" : "[CAV] F1_Racer68",
+                "participantid" : 0,
+                "refid" : 29184,
+                "time" : 1447202034
+              }
+            ],
+            "start_time" : 1447201134
+          },
+          "qualifying" : {
+            "end_time" : 1447202674,
+            "events" : {},
+            "results" : [
+              {
+                "attributes" : {
+                  "FastestLapTime" : 117950,
+                  "Lap" : 3,
+                  "RacePosition" : 1,
+                  "State" : "Racing",
+                  "TotalTime" : 0,
+                  "VehicleId" : 1161219858
+                },
+                "is_player" : true,
+                "name" : "[CAV] F1_Racer68",
+                "participantid" : 0,
+                "refid" : 29184,
+                "time" : 1447202654
+              }
+            ],
+            "start_time" : 1447202054
+          },
+          "race1" : {
+            "end_time" : 1447204011,
+            "events" : {},
+            "results" : {},
+            "start_time" : 1447203294
+          },
+          "warmup" : {
+            "end_time" : 1447203294,
+            "events" : {},
+            "results" : [
+              {
+                "attributes" : {
+                  "FastestLapTime" : 117781,
+                  "Lap" : 1,
+                  "RacePosition" : 1,
+                  "State" : "InGarage",
+                  "TotalTime" : 0,
+                  "VehicleId" : 1161219858
+                },
+                "is_player" : true,
+                "name" : "[CAV] F1_Racer68",
+                "participantid" : 0,
+                "refid" : 29184,
+                "time" : 1447203274
+              }
+            ],
+            "start_time" : 1447202674
+          }
+        },
+        "start_time" : 1447201107
+      },
+      {
+        "end_time" : 1447204276,
+        "finished" : false,
+        "index" : 3,
+        "members" : {
+          "31104" : {
+            "index" : 0,
+            "join_time" : 1447204251,
+            "leave_time" : 1447204276,
+            "name" : "[CAV] F1_Racer68",
+            "participantid" : 0,
+            "setup" : {
+              "LiveryId" : 71,
+              "RaceStatFlags" : 1073767653,
+              "VehicleId" : 1161219858
+            },
+            "steamid" : "76561198151166420"
+          }
+        },
+        "participants" : {
+          "0" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 71,
+            "Name" : "[CAV] F1_Racer68",
+            "RefId" : 31104,
+            "VehicleId" : 1161219858
+          }
+        },
+        "setup" : {
+          "AllowedViews" : 0,
+          "DamageType" : 3,
+          "DateDay" : 14,
+          "DateHour" : 14,
+          "DateMinute" : 0,
+          "DateMonth" : 11,
+          "DateProgression" : 10,
+          "DateYear" : 2014,
+          "Flags" : 787480,
+          "ForecastProgression" : 0,
+          "FuelUsageType" : 0,
+          "GridSize" : 32,
+          "MaxPlayers" : 32,
+          "PenaltiesType" : 1,
+          "Practice1Length" : 15,
+          "Practice2Length" : 0,
+          "QualifyLength" : 10,
+          "Race1Length" : 15,
+          "ServerControlsSetup" : 1,
+          "ServerControlsTrack" : 0,
+          "ServerControlsVehicle" : 0,
+          "ServerControlsVehicleClass" : 0,
+          "TireWearType" : 4,
+          "TrackId" : -661887517,
+          "VehicleClassId" : -112887377,
+          "VehicleModelId" : 1161219858,
+          "WarmupLength" : 10,
+          "WeatherSlot1" : 296956818,
+          "WeatherSlot2" : 296956818,
+          "WeatherSlot3" : -934211870,
+          "WeatherSlot4" : -934211870,
+          "WeatherSlots" : 0
+        },
+        "stages" : {
+          "practice1" : {
+            "end_time" : 1447204276,
+            "events" : {},
+            "results" : {},
+            "start_time" : 1447204267
+          }
+        },
+        "start_time" : 1447204242
+      },
+      {
+        "end_time" : 1447204601,
+        "finished" : false,
+        "index" : 4,
+        "members" : {
+          "2624" : {
+            "index" : 0,
+            "join_time" : 1447204579,
+            "leave_time" : 1447204601,
+            "name" : "[CAV] F1_Racer68",
+            "participantid" : 0,
+            "setup" : {
+              "LiveryId" : 71,
+              "RaceStatFlags" : 1073767653,
+              "VehicleId" : 1161219858
+            },
+            "steamid" : "76561198151166420"
+          }
+        },
+        "participants" : {
+          "0" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 71,
+            "Name" : "[CAV] F1_Racer68",
+            "RefId" : 2624,
+            "VehicleId" : 1161219858
+          }
+        },
+        "setup" : {
+          "AllowedViews" : 0,
+          "DamageType" : 3,
+          "DateDay" : 14,
+          "DateHour" : 14,
+          "DateMinute" : 0,
+          "DateMonth" : 11,
+          "DateProgression" : 10,
+          "DateYear" : 2014,
+          "Flags" : 787480,
+          "ForecastProgression" : 0,
+          "FuelUsageType" : 0,
+          "GridSize" : 32,
+          "MaxPlayers" : 32,
+          "PenaltiesType" : 1,
+          "Practice1Length" : 15,
+          "Practice2Length" : 0,
+          "QualifyLength" : 10,
+          "Race1Length" : 15,
+          "ServerControlsSetup" : 1,
+          "ServerControlsTrack" : 0,
+          "ServerControlsVehicle" : 0,
+          "ServerControlsVehicleClass" : 0,
+          "TireWearType" : 4,
+          "TrackId" : -661887517,
+          "VehicleClassId" : -112887377,
+          "VehicleModelId" : 1161219858,
+          "WarmupLength" : 10,
+          "WeatherSlot1" : 296956818,
+          "WeatherSlot2" : 296956818,
+          "WeatherSlot3" : -934211870,
+          "WeatherSlot4" : -934211870,
+          "WeatherSlots" : 0
+        },
+        "stages" : {
+          "practice1" : {
+            "end_time" : 1447204601,
+            "events" : {},
+            "results" : {},
+            "start_time" : 1447204598
+          }
+        },
+        "start_time" : 1447204571
+      },
+      {
+        "end_time" : 1447223523,
+        "finished" : true,
+        "index" : 5,
+        "members" : {
+          "20930" : {
+            "index" : 2,
+            "join_time" : 1447219815,
+            "leave_time" : -1,
+            "name" : "[CAV] Noddy",
+            "participantid" : 2,
+            "setup" : {
+              "LiveryId" : 74,
+              "RaceStatFlags" : 1073796835,
+              "VehicleId" : 1161219858
+            },
+            "steamid" : "76561197970321397"
+          },
+          "23553" : {
+            "index" : 1,
+            "join_time" : 1447219724,
+            "leave_time" : -1,
+            "name" : "[CAV] NuNu",
+            "participantid" : 1,
+            "setup" : {
+              "LiveryId" : 52,
+              "RaceStatFlags" : 1073796836,
+              "VehicleId" : -1166911988
+            },
+            "steamid" : "76561197972562837"
+          },
+          "24128" : {
+            "index" : 0,
+            "join_time" : 1447219240,
+            "leave_time" : -1,
+            "name" : "[CAV] VisionX",
+            "participantid" : 0,
+            "setup" : {
+              "LiveryId" : 54,
+              "RaceStatFlags" : 1073800229,
+              "VehicleId" : -1166911988
+            },
+            "steamid" : "76561198193480995"
+          }
+        },
+        "participants" : {
+          "0" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 54,
+            "Name" : "[CAV] VisionX",
+            "RefId" : 24128,
+            "VehicleId" : -1166911988
+          },
+          "1" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 52,
+            "Name" : "[CAV] NuNu",
+            "RefId" : 23553,
+            "VehicleId" : -1166911988
+          },
+          "2" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 74,
+            "Name" : "",
+            "RefId" : 20930,
+            "VehicleId" : 1161219858
+          }
+        },
+        "setup" : {
+          "AllowedViews" : 0,
+          "DamageType" : 3,
+          "DateDay" : 14,
+          "DateHour" : 14,
+          "DateMinute" : 0,
+          "DateMonth" : 11,
+          "DateProgression" : 10,
+          "DateYear" : 2014,
+          "Flags" : 787480,
+          "ForecastProgression" : 0,
+          "FuelUsageType" : 0,
+          "GridSize" : 32,
+          "MaxPlayers" : 32,
+          "PenaltiesType" : 1,
+          "Practice1Length" : 15,
+          "Practice2Length" : 0,
+          "QualifyLength" : 10,
+          "Race1Length" : 15,
+          "ServerControlsSetup" : 1,
+          "ServerControlsTrack" : 0,
+          "ServerControlsVehicle" : 0,
+          "ServerControlsVehicleClass" : 0,
+          "TireWearType" : 4,
+          "TrackId" : -661887517,
+          "VehicleClassId" : -112887377,
+          "VehicleModelId" : -1166911988,
+          "WarmupLength" : 10,
+          "WeatherSlot1" : -934211870,
+          "WeatherSlot2" : -934211870,
+          "WeatherSlot3" : -934211870,
+          "WeatherSlot4" : 296956818,
+          "WeatherSlots" : 0
+        },
+        "stages" : {
+          "practice1" : {
+            "end_time" : 1447220170,
+            "events" : {},
+            "results" : [
+              {
+                "attributes" : {
+                  "FastestLapTime" : 118842,
+                  "Lap" : 1,
+                  "RacePosition" : 1,
+                  "State" : "InGarage",
+                  "TotalTime" : 0,
+                  "VehicleId" : -1166911988
+                },
+                "is_player" : true,
+                "name" : "[CAV] VisionX",
+                "participantid" : 0,
+                "refid" : 24128,
+                "time" : 1447220150
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 0,
+                  "Lap" : 0,
+                  "RacePosition" : 2,
+                  "State" : "Racing",
+                  "TotalTime" : 0,
+                  "VehicleId" : 1161219858
+                },
+                "is_player" : true,
+                "name" : "",
+                "participantid" : 2,
+                "refid" : 20930,
+                "time" : 1447220150
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 0,
+                  "Lap" : 0,
+                  "RacePosition" : 3,
+                  "State" : "InGarage",
+                  "TotalTime" : 0,
+                  "VehicleId" : -1166911988
+                },
+                "is_player" : true,
+                "name" : "[CAV] NuNu",
+                "participantid" : 1,
+                "refid" : 23553,
+                "time" : 1447220150
+              }
+            ],
+            "start_time" : 1447219250
+          },
+          "qualifying" : {
+            "end_time" : 1447220790,
+            "events" : {},
+            "results" : [
+              {
+                "attributes" : {
+                  "FastestLapTime" : 116288,
+                  "Lap" : 3,
+                  "RacePosition" : 1,
+                  "State" : "InGarage",
+                  "TotalTime" : 0,
+                  "VehicleId" : 1161219858
+                },
+                "is_player" : true,
+                "name" : "",
+                "participantid" : 2,
+                "refid" : 20930,
+                "time" : 1447220770
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 0,
+                  "Lap" : 0,
+                  "RacePosition" : 2,
+                  "State" : "Racing",
+                  "TotalTime" : 0,
+                  "VehicleId" : -1166911988
+                },
+                "is_player" : true,
+                "name" : "[CAV] NuNu",
+                "participantid" : 1,
+                "refid" : 23553,
+                "time" : 1447220770
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 0,
+                  "Lap" : 0,
+                  "RacePosition" : 3,
+                  "State" : "Racing",
+                  "TotalTime" : 0,
+                  "VehicleId" : -1166911988
+                },
+                "is_player" : true,
+                "name" : "[CAV] VisionX",
+                "participantid" : 0,
+                "refid" : 24128,
+                "time" : 1447220770
+              }
+            ],
+            "start_time" : 1447220170
+          },
+          "race1" : {
+            "end_time" : 1447223523,
+            "events" : {},
+            "results" : [
+              {
+                "attributes" : {
+                  "FastestLapTime" : 115997,
+                  "Lap" : 15,
+                  "RacePosition" : 1,
+                  "State" : "Finished",
+                  "TotalTime" : 1800873,
+                  "VehicleId" : 1161219858
+                },
+                "is_player" : true,
+                "name" : "",
+                "participantid" : 2,
+                "refid" : 20930,
+                "time" : 1447223523
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 117792,
+                  "Lap" : 8,
+                  "RacePosition" : 2,
+                  "State" : "DNF",
+                  "TotalTime" : 2101008,
+                  "VehicleId" : -1166911988
+                },
+                "is_player" : true,
+                "name" : "[CAV] VisionX",
+                "participantid" : 0,
+                "refid" : 24128,
+                "time" : 1447223523
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 117995,
+                  "Lap" : 6,
+                  "RacePosition" : 3,
+                  "State" : "DNF",
+                  "TotalTime" : 2101008,
+                  "VehicleId" : -1166911988
+                },
+                "is_player" : true,
+                "name" : "[CAV] NuNu",
+                "participantid" : 1,
+                "refid" : 23553,
+                "time" : 1447223523
+              }
+            ],
+            "start_time" : 1447221410
+          },
+          "warmup" : {
+            "end_time" : 1447221410,
+            "events" : {},
+            "results" : [
+              {
+                "attributes" : {
+                  "FastestLapTime" : 116972,
+                  "Lap" : 3,
+                  "RacePosition" : 1,
+                  "State" : "InGarage",
+                  "TotalTime" : 0,
+                  "VehicleId" : -1166911988
+                },
+                "is_player" : true,
+                "name" : "[CAV] NuNu",
+                "participantid" : 1,
+                "refid" : 23553,
+                "time" : 1447221390
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 117367,
+                  "Lap" : 3,
+                  "RacePosition" : 2,
+                  "State" : "Racing",
+                  "TotalTime" : 0,
+                  "VehicleId" : 1161219858
+                },
+                "is_player" : true,
+                "name" : "",
+                "participantid" : 2,
+                "refid" : 20930,
+                "time" : 1447221390
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 117865,
+                  "Lap" : 2,
+                  "RacePosition" : 3,
+                  "State" : "Racing",
+                  "TotalTime" : 0,
+                  "VehicleId" : -1166911988
+                },
+                "is_player" : true,
+                "name" : "[CAV] VisionX",
+                "participantid" : 0,
+                "refid" : 24128,
+                "time" : 1447221390
+              }
+            ],
+            "start_time" : 1447220790
+          }
+        },
+        "start_time" : 1447219186
+      },
+      {
+        "end_time" : 1447229818,
+        "finished" : true,
+        "index" : 6,
+        "members" : {
+          "17283" : {
+            "index" : 3,
+            "join_time" : 1447227687,
+            "leave_time" : -1,
+            "name" : "[CAV]LiveWire11C",
+            "participantid" : 6,
+            "setup" : {
+              "LiveryId" : 69,
+              "RaceStatFlags" : 1073766629,
+              "VehicleId" : 1161219858
+            },
+            "steamid" : "76561197962726630"
+          },
+          "1922" : {
+            "index" : 2,
+            "join_time" : 1447226575,
+            "leave_time" : -1,
+            "name" : "[CAV] B-RAD",
+            "participantid" : 2,
+            "setup" : {
+              "LiveryId" : 51,
+              "RaceStatFlags" : 1073800421,
+              "VehicleId" : 1161219858
+            },
+            "steamid" : "76561198020623583"
+          },
+          "30593" : {
+            "index" : 1,
+            "join_time" : 1447227377,
+            "leave_time" : 1447227525,
+            "name" : "[CAV] NuNu",
+            "participantid" : 4,
+            "setup" : {
+              "LiveryId" : 56,
+              "RaceStatFlags" : 1073792741,
+              "VehicleId" : 1161219858
+            },
+            "steamid" : "76561197972562837"
+          },
+          "33793" : {
+            "index" : 1,
+            "join_time" : 1447227604,
+            "leave_time" : -1,
+            "name" : "[CAV] NuNu",
+            "participantid" : 5,
+            "setup" : {
+              "LiveryId" : 56,
+              "RaceStatFlags" : 1073796837,
+              "VehicleId" : 1161219858
+            },
+            "steamid" : "76561197972562837"
+          },
+          "4160" : {
+            "index" : 0,
+            "join_time" : 1447225762,
+            "leave_time" : -1,
+            "name" : "[CAV] VisionX",
+            "participantid" : 0,
+            "setup" : {
+              "LiveryId" : 54,
+              "RaceStatFlags" : 1073800229,
+              "VehicleId" : -1166911988
+            },
+            "steamid" : "76561198193480995"
+          },
+          "45249" : {
+            "index" : 1,
+            "join_time" : 1447226302,
+            "leave_time" : 1447226873,
+            "name" : "[CAV] NuNu",
+            "participantid" : 1,
+            "setup" : {
+              "LiveryId" : 52,
+              "RaceStatFlags" : 1073796837,
+              "VehicleId" : -1166911988
+            },
+            "steamid" : "76561197972562837"
+          },
+          "63297" : {
+            "index" : 1,
+            "join_time" : 1447226895,
+            "leave_time" : 1447227356,
+            "name" : "[CAV] NuNu",
+            "participantid" : 3,
+            "setup" : {
+              "LiveryId" : 56,
+              "RaceStatFlags" : 1073796837,
+              "VehicleId" : 1161219858
+            },
+            "steamid" : "76561197972562837"
+          }
+        },
+        "participants" : {
+          "0" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 54,
+            "Name" : "[CAV] VisionX",
+            "RefId" : 4160,
+            "VehicleId" : -1166911988
+          },
+          "1" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 52,
+            "Name" : "[CAV] NuNu",
+            "RefId" : 45249,
+            "VehicleId" : -1166911988
+          },
+          "2" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 51,
+            "Name" : "[CAV] B-RAD",
+            "RefId" : 1922,
+            "VehicleId" : 1161219858
+          },
+          "3" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 56,
+            "Name" : "",
+            "RefId" : 63297,
+            "VehicleId" : 1161219858
+          },
+          "4" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 56,
+            "Name" : "",
+            "RefId" : 30593,
+            "VehicleId" : 1161219858
+          },
+          "5" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 56,
+            "Name" : "[CAV] NuNu",
+            "RefId" : 33793,
+            "VehicleId" : 1161219858
+          },
+          "6" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 69,
+            "Name" : "",
+            "RefId" : 17283,
+            "VehicleId" : 1161219858
+          }
+        },
+        "setup" : {
+          "AllowedViews" : 0,
+          "DamageType" : 3,
+          "DateDay" : 14,
+          "DateHour" : 14,
+          "DateMinute" : 0,
+          "DateMonth" : 11,
+          "DateProgression" : 10,
+          "DateYear" : 2014,
+          "Flags" : 787480,
+          "ForecastProgression" : 0,
+          "FuelUsageType" : 0,
+          "GridSize" : 32,
+          "MaxPlayers" : 32,
+          "PenaltiesType" : 1,
+          "Practice1Length" : 15,
+          "Practice2Length" : 0,
+          "QualifyLength" : 10,
+          "Race1Length" : 15,
+          "ServerControlsSetup" : 1,
+          "ServerControlsTrack" : 0,
+          "ServerControlsVehicle" : 0,
+          "ServerControlsVehicleClass" : 0,
+          "TireWearType" : 4,
+          "TrackId" : -661887517,
+          "VehicleClassId" : -112887377,
+          "VehicleModelId" : -1166911988,
+          "WarmupLength" : 10,
+          "WeatherSlot1" : -934211870,
+          "WeatherSlot2" : -934211870,
+          "WeatherSlot3" : 296956818,
+          "WeatherSlot4" : 296956818,
+          "WeatherSlots" : 0
+        },
+        "stages" : {
+          "practice1" : {
+            "end_time" : 1447226692,
+            "events" : {},
+            "results" : [
+              {
+                "attributes" : {
+                  "FastestLapTime" : 117840,
+                  "Lap" : 1,
+                  "RacePosition" : 1,
+                  "State" : "InGarage",
+                  "TotalTime" : 0,
+                  "VehicleId" : -1166911988
+                },
+                "is_player" : true,
+                "name" : "",
+                "participantid" : 1,
+                "refid" : 45249,
+                "time" : 1447226672
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 119288,
+                  "Lap" : 1,
+                  "RacePosition" : 2,
+                  "State" : "Racing",
+                  "TotalTime" : 0,
+                  "VehicleId" : -1166911988
+                },
+                "is_player" : true,
+                "name" : "[CAV] VisionX",
+                "participantid" : 0,
+                "refid" : 4160,
+                "time" : 1447226672
+              }
+            ],
+            "start_time" : 1447225772
+          },
+          "qualifying" : {
+            "end_time" : 1447227312,
+            "events" : {},
+            "results" : [
+              {
+                "attributes" : {
+                  "FastestLapTime" : 118192,
+                  "Lap" : 2,
+                  "RacePosition" : 1,
+                  "State" : "InGarage",
+                  "TotalTime" : 0,
+                  "VehicleId" : -1166911988
+                },
+                "is_player" : true,
+                "name" : "[CAV] VisionX",
+                "participantid" : 0,
+                "refid" : 4160,
+                "time" : 1447227292
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 0,
+                  "Lap" : 0,
+                  "RacePosition" : 2,
+                  "State" : "InGarage",
+                  "TotalTime" : 0,
+                  "VehicleId" : 1161219858
+                },
+                "is_player" : true,
+                "name" : "",
+                "participantid" : 3,
+                "refid" : 63297,
+                "time" : 1447227292
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 0,
+                  "Lap" : 0,
+                  "RacePosition" : 3,
+                  "State" : "InGarage",
+                  "TotalTime" : 0,
+                  "VehicleId" : 1161219858
+                },
+                "is_player" : true,
+                "name" : "[CAV] B-RAD",
+                "participantid" : 2,
+                "refid" : 1922,
+                "time" : 1447227292
+              }
+            ],
+            "start_time" : 1447226692
+          },
+          "race1" : {
+            "end_time" : 1447229818,
+            "events" : {},
+            "results" : [
+              {
+                "attributes" : {
+                  "FastestLapTime" : 117555,
+                  "Lap" : 15,
+                  "RacePosition" : 1,
+                  "State" : "Finished",
+                  "TotalTime" : 1823736,
+                  "VehicleId" : -1166911988
+                },
+                "is_player" : true,
+                "name" : "[CAV] VisionX",
+                "participantid" : 0,
+                "refid" : 4160,
+                "time" : 1447229818
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 115576,
+                  "Lap" : 15,
+                  "RacePosition" : 2,
+                  "State" : "Finished",
+                  "TotalTime" : 1833617,
+                  "VehicleId" : 1161219858
+                },
+                "is_player" : true,
+                "name" : "[CAV] NuNu",
+                "participantid" : 5,
+                "refid" : 33793,
+                "time" : 1447229818
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 117822,
+                  "Lap" : 15,
+                  "RacePosition" : 3,
+                  "State" : "Finished",
+                  "TotalTime" : 1872281,
+                  "VehicleId" : 1161219858
+                },
+                "is_player" : true,
+                "name" : "[CAV] B-RAD",
+                "participantid" : 2,
+                "refid" : 1922,
+                "time" : 1447229818
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 118890,
+                  "Lap" : 11,
+                  "RacePosition" : 4,
+                  "State" : "Disqualified",
+                  "TotalTime" : 0,
+                  "VehicleId" : 1161219858
+                },
+                "is_player" : true,
+                "name" : "",
+                "participantid" : 6,
+                "refid" : 17283,
+                "time" : 1447229818
+              }
+            ],
+            "start_time" : 1447227932
+          },
+          "warmup" : {
+            "end_time" : 1447227932,
+            "events" : {},
+            "results" : [
+              {
+                "attributes" : {
+                  "FastestLapTime" : 118204,
+                  "Lap" : 2,
+                  "RacePosition" : 1,
+                  "State" : "InGarage",
+                  "TotalTime" : 0,
+                  "VehicleId" : 1161219858
+                },
+                "is_player" : true,
+                "name" : "[CAV] B-RAD",
+                "participantid" : 2,
+                "refid" : 1922,
+                "time" : 1447227912
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 118570,
+                  "Lap" : 2,
+                  "RacePosition" : 2,
+                  "State" : "Racing",
+                  "TotalTime" : 0,
+                  "VehicleId" : -1166911988
+                },
+                "is_player" : true,
+                "name" : "[CAV] VisionX",
+                "participantid" : 0,
+                "refid" : 4160,
+                "time" : 1447227912
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 0,
+                  "Lap" : 0,
+                  "RacePosition" : 3,
+                  "State" : "Racing",
+                  "TotalTime" : 0,
+                  "VehicleId" : 1161219858
+                },
+                "is_player" : true,
+                "name" : "",
+                "participantid" : 6,
+                "refid" : 17283,
+                "time" : 1447227912
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 0,
+                  "Lap" : 0,
+                  "RacePosition" : 4,
+                  "State" : "Racing",
+                  "TotalTime" : 0,
+                  "VehicleId" : 1161219858
+                },
+                "is_player" : true,
+                "name" : "[CAV] NuNu",
+                "participantid" : 5,
+                "refid" : 33793,
+                "time" : 1447227912
+              }
+            ],
+            "start_time" : 1447227312
+          }
+        },
+        "start_time" : 1447225589
+      },
+      {
+        "end_time" : 1447230706,
+        "finished" : false,
+        "index" : 7,
+        "members" : {
+          "17283" : {
+            "index" : 3,
+            "join_time" : 1447230134,
+            "leave_time" : 1447230705,
+            "name" : "[CAV]LiveWire11C",
+            "participantid" : 0,
+            "setup" : {
+              "LiveryId" : 69,
+              "RaceStatFlags" : 1073750245,
+              "VehicleId" : 1161219858
+            },
+            "steamid" : "76561197962726630"
+          },
+          "45440" : {
+            "index" : 0,
+            "join_time" : 1447230697,
+            "leave_time" : 1447230706,
+            "name" : "[CAV] NuNu",
+            "participantid" : -1,
+            "setup" : {
+              "LiveryId" : 56,
+              "RaceStatFlags" : 0,
+              "VehicleId" : 1161219858
+            },
+            "steamid" : "76561197972562837"
+          }
+        },
+        "participants" : {
+          "0" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 69,
+            "Name" : "[CAV]LiveWire11C",
+            "RefId" : 17283,
+            "VehicleId" : 1161219858
+          }
+        },
+        "setup" : {
+          "AllowedViews" : 0,
+          "DamageType" : 3,
+          "DateDay" : 14,
+          "DateHour" : 14,
+          "DateMinute" : 0,
+          "DateMonth" : 11,
+          "DateProgression" : 10,
+          "DateYear" : 2014,
+          "Flags" : 787480,
+          "ForecastProgression" : 0,
+          "FuelUsageType" : 0,
+          "GridSize" : 32,
+          "MaxPlayers" : 32,
+          "PenaltiesType" : 1,
+          "Practice1Length" : 15,
+          "Practice2Length" : 0,
+          "QualifyLength" : 10,
+          "Race1Length" : 15,
+          "ServerControlsSetup" : 1,
+          "ServerControlsTrack" : 0,
+          "ServerControlsVehicle" : 0,
+          "ServerControlsVehicleClass" : 0,
+          "TireWearType" : 4,
+          "TrackId" : -661887517,
+          "VehicleClassId" : -112887377,
+          "VehicleModelId" : 1161219858,
+          "WarmupLength" : 10,
+          "WeatherSlot1" : -934211870,
+          "WeatherSlot2" : -934211870,
+          "WeatherSlot3" : 296956818,
+          "WeatherSlot4" : 296956818,
+          "WeatherSlots" : 0
+        },
+        "stages" : {
+          "practice1" : {
+            "end_time" : 1447230706,
+            "events" : {},
+            "results" : {},
+            "start_time" : 1447230148
+          }
+        },
+        "start_time" : 1447229848
+      },
+      {
+        "end_time" : 1447234688,
+        "finished" : true,
+        "index" : 8,
+        "members" : {
+          "19840" : {
+            "index" : 0,
+            "join_time" : 1447230797,
+            "leave_time" : 1447234063,
+            "name" : "[CAV]LiveWire11C",
+            "participantid" : 1,
+            "setup" : {
+              "LiveryId" : 69,
+              "RaceStatFlags" : 1073766629,
+              "VehicleId" : 1161219858
+            },
+            "steamid" : "76561197962726630"
+          },
+          "37826" : {
+            "index" : 2,
+            "join_time" : 1447231758,
+            "leave_time" : 1447232434,
+            "name" : "[CAV] B-RAD",
+            "participantid" : 3,
+            "setup" : {
+              "LiveryId" : 51,
+              "RaceStatFlags" : 1073800421,
+              "VehicleId" : 1161219858
+            },
+            "steamid" : "76561198020623583"
+          },
+          "59650" : {
+            "index" : 2,
+            "join_time" : 1447232624,
+            "leave_time" : -1,
+            "name" : "[CAV] B-RAD",
+            "participantid" : 4,
+            "setup" : {
+              "LiveryId" : 51,
+              "RaceStatFlags" : 1073800933,
+              "VehicleId" : 1161219858
+            },
+            "steamid" : "76561198020623583"
+          },
+          "769" : {
+            "index" : 1,
+            "join_time" : 1447230797,
+            "leave_time" : 1447234687,
+            "name" : "[CAV] NuNu",
+            "participantid" : 2,
+            "setup" : {
+              "LiveryId" : 56,
+              "RaceStatFlags" : 1073796837,
+              "VehicleId" : 1161219858
+            },
+            "steamid" : "76561197972562837"
+          }
+        },
+        "participants" : [
+          {
+            "IsPlayer" : 1,
+            "LiveryId" : 69,
+            "Name" : "[CAV]LiveWire11C",
+            "RefId" : 19840,
+            "VehicleId" : 1161219858
+          },
+          {
+            "IsPlayer" : 1,
+            "LiveryId" : 56,
+            "Name" : "[CAV] NuNu",
+            "RefId" : 769,
+            "VehicleId" : 1161219858
+          },
+          {
+            "IsPlayer" : 1,
+            "LiveryId" : 51,
+            "Name" : "",
+            "RefId" : 37826,
+            "VehicleId" : 1161219858
+          },
+          {
+            "IsPlayer" : 1,
+            "LiveryId" : 51,
+            "Name" : "[CAV] B-RAD",
+            "RefId" : 59650,
+            "VehicleId" : 1161219858
+          }
+        ],
+        "setup" : {
+          "AllowedViews" : 0,
+          "DamageType" : 3,
+          "DateDay" : 14,
+          "DateHour" : 14,
+          "DateMinute" : 0,
+          "DateMonth" : 11,
+          "DateProgression" : 10,
+          "DateYear" : 2014,
+          "Flags" : 787480,
+          "ForecastProgression" : 0,
+          "FuelUsageType" : 0,
+          "GridSize" : 32,
+          "MaxPlayers" : 32,
+          "PenaltiesType" : 1,
+          "Practice1Length" : 15,
+          "Practice2Length" : 0,
+          "QualifyLength" : 10,
+          "Race1Length" : 15,
+          "ServerControlsSetup" : 1,
+          "ServerControlsTrack" : 0,
+          "ServerControlsVehicle" : 0,
+          "ServerControlsVehicleClass" : 0,
+          "TireWearType" : 4,
+          "TrackId" : -661887517,
+          "VehicleClassId" : -112887377,
+          "VehicleModelId" : 1161219858,
+          "WarmupLength" : 10,
+          "WeatherSlot1" : -934211870,
+          "WeatherSlot2" : -934211870,
+          "WeatherSlot3" : 296956818,
+          "WeatherSlot4" : 296956818,
+          "WeatherSlots" : 0
+        },
+        "stages" : {
+          "practice1" : {
+            "end_time" : 1447231733,
+            "events" : {},
+            "results" : [
+              {
+                "attributes" : {
+                  "FastestLapTime" : 0,
+                  "Lap" : 0,
+                  "RacePosition" : 1,
+                  "State" : "InGarage",
+                  "TotalTime" : 0,
+                  "VehicleId" : 1161219858
+                },
+                "is_player" : true,
+                "name" : "[CAV] NuNu",
+                "participantid" : 2,
+                "refid" : 769,
+                "time" : 1447231713
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 0,
+                  "Lap" : 1,
+                  "RacePosition" : 2,
+                  "State" : "Racing",
+                  "TotalTime" : 0,
+                  "VehicleId" : 1161219858
+                },
+                "is_player" : true,
+                "name" : "[CAV]LiveWire11C",
+                "participantid" : 1,
+                "refid" : 19840,
+                "time" : 1447231713
+              }
+            ],
+            "start_time" : 1447230813
+          },
+          "qualifying" : {
+            "end_time" : 1447232596,
+            "events" : {},
+            "results" : [
+              {
+                "attributes" : {
+                  "FastestLapTime" : 115721,
+                  "Lap" : 1,
+                  "RacePosition" : 1,
+                  "State" : "Racing",
+                  "TotalTime" : 0,
+                  "VehicleId" : 1161219858
+                },
+                "is_player" : true,
+                "name" : "[CAV] NuNu",
+                "participantid" : 2,
+                "refid" : 769,
+                "time" : 1447232333
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 118186,
+                  "Lap" : 2,
+                  "RacePosition" : 2,
+                  "State" : "Racing",
+                  "TotalTime" : 0,
+                  "VehicleId" : 1161219858
+                },
+                "is_player" : true,
+                "name" : "",
+                "participantid" : 3,
+                "refid" : 37826,
+                "time" : 1447232333
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 118688,
+                  "Lap" : 3,
+                  "RacePosition" : 3,
+                  "State" : "InGarage",
+                  "TotalTime" : 0,
+                  "VehicleId" : 1161219858
+                },
+                "is_player" : true,
+                "name" : "[CAV]LiveWire11C",
+                "participantid" : 1,
+                "refid" : 19840,
+                "time" : 1447232333
+              }
+            ],
+            "start_time" : 1447231733
+          },
+          "race1" : {
+            "end_time" : 1447234688,
+            "events" : {},
+            "results" : [
+              {
+                "attributes" : {
+                  "FastestLapTime" : 118924,
+                  "Lap" : 5,
+                  "RacePosition" : 1,
+                  "State" : "Retired",
+                  "TotalTime" : 0,
+                  "VehicleId" : 1161219858
+                },
+                "is_player" : true,
+                "name" : "[CAV] B-RAD",
+                "participantid" : 4,
+                "refid" : 59650,
+                "time" : 1447234688
+              }
+            ],
+            "start_time" : 1447233216
+          },
+          "warmup" : {
+            "end_time" : 1447233216,
+            "events" : {},
+            "results" : [
+              {
+                "attributes" : {
+                  "FastestLapTime" : 118682,
+                  "Lap" : 3,
+                  "RacePosition" : 1,
+                  "State" : "InGarage",
+                  "TotalTime" : 0,
+                  "VehicleId" : 1161219858
+                },
+                "is_player" : true,
+                "name" : "",
+                "participantid" : 4,
+                "refid" : 59650,
+                "time" : 1447233196
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 0,
+                  "Lap" : 0,
+                  "RacePosition" : 2,
+                  "State" : "Racing",
+                  "TotalTime" : 0,
+                  "VehicleId" : 1161219858
+                },
+                "is_player" : true,
+                "name" : "[CAV] NuNu",
+                "participantid" : 2,
+                "refid" : 769,
+                "time" : 1447233196
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 0,
+                  "Lap" : 0,
+                  "RacePosition" : 3,
+                  "State" : "InGarage",
+                  "TotalTime" : 0,
+                  "VehicleId" : 1161219858
+                },
+                "is_player" : true,
+                "name" : "[CAV]LiveWire11C",
+                "participantid" : 1,
+                "refid" : 19840,
+                "time" : 1447233196
+              }
+            ],
+            "start_time" : 1447232596
+          }
+        },
+        "start_time" : 1447230745
+      },
+      {
+        "end_time" : 1447299085,
+        "finished" : true,
+        "index" : 9,
+        "members" : {
+          "15299" : {
+            "index" : 3,
+            "join_time" : 1447295483,
+            "leave_time" : -1,
+            "name" : "[CAV] Power",
+            "participantid" : 5,
+            "setup" : {
+              "LiveryId" : 73,
+              "RaceStatFlags" : 1073767429,
+              "VehicleId" : 1884411907
+            },
+            "steamid" : "76561198205236405"
+          },
+          "26435" : {
+            "index" : 3,
+            "join_time" : 1447295190,
+            "leave_time" : 1447295397,
+            "name" : "[CAV] Power",
+            "participantid" : 3,
+            "setup" : {
+              "LiveryId" : 73,
+              "RaceStatFlags" : 1073767429,
+              "VehicleId" : 1884411907
+            },
+            "steamid" : "76561198205236405"
+          },
+          "32192" : {
+            "index" : 0,
+            "join_time" : 1447295021,
+            "leave_time" : 1447295667,
+            "name" : "DCWANTCASH",
+            "participantid" : 0,
+            "setup" : {
+              "LiveryId" : 54,
+              "RaceStatFlags" : 1073751525,
+              "VehicleId" : -1166911988
+            },
+            "steamid" : "76561198258617003"
+          },
+          "3588" : {
+            "index" : 4,
+            "join_time" : 1447295193,
+            "leave_time" : -1,
+            "name" : "[CAV]  J_Millz89",
+            "participantid" : 4,
+            "setup" : {
+              "LiveryId" : 53,
+              "RaceStatFlags" : 1073800421,
+              "VehicleId" : -1166911988
+            },
+            "steamid" : "76561198215606247"
+          },
+          "50882" : {
+            "index" : 2,
+            "join_time" : 1447295021,
+            "leave_time" : -1,
+            "name" : "[CAV] Ozzie123",
+            "participantid" : 2,
+            "setup" : {
+              "LiveryId" : 58,
+              "RaceStatFlags" : 1073800421,
+              "VehicleId" : 1161219858
+            },
+            "steamid" : "76561198201007478"
+          },
+          "6400" : {
+            "index" : 0,
+            "join_time" : 1447295972,
+            "leave_time" : -1,
+            "name" : "[CAV] NuNu",
+            "participantid" : 6,
+            "setup" : {
+              "LiveryId" : 56,
+              "RaceStatFlags" : 1073796837,
+              "VehicleId" : 1161219858
+            },
+            "steamid" : "76561197972562837"
+          },
+          "65409" : {
+            "index" : 1,
+            "join_time" : 1447295021,
+            "leave_time" : -1,
+            "name" : "[CAV] F1_Racer68",
+            "participantid" : 1,
+            "setup" : {
+              "LiveryId" : 71,
+              "RaceStatFlags" : 1073767653,
+              "VehicleId" : 1161219858
+            },
+            "steamid" : "76561198151166420"
+          }
+        },
+        "participants" : {
+          "0" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 54,
+            "Name" : "DCWANTCASH",
+            "RefId" : 32192,
+            "VehicleId" : -1166911988
+          },
+          "1" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 71,
+            "Name" : "[CAV] F1_Racer68",
+            "RefId" : 65409,
+            "VehicleId" : 1161219858
+          },
+          "2" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 58,
+            "Name" : "[CAV] Ozzie123",
+            "RefId" : 50882,
+            "VehicleId" : 1161219858
+          },
+          "3" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 73,
+            "Name" : "[CAV] Power",
+            "RefId" : 26435,
+            "VehicleId" : 1884411907
+          },
+          "4" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 53,
+            "Name" : "[CAV]  J_Millz89",
+            "RefId" : 3588,
+            "VehicleId" : -1166911988
+          },
+          "5" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 73,
+            "Name" : "[CAV] Power",
+            "RefId" : 15299,
+            "VehicleId" : 1884411907
+          },
+          "6" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 56,
+            "Name" : "",
+            "RefId" : 6400,
+            "VehicleId" : 1161219858
+          }
+        },
+        "setup" : {
+          "AllowedViews" : 0,
+          "DamageType" : 3,
+          "DateDay" : 14,
+          "DateHour" : 14,
+          "DateMinute" : 0,
+          "DateMonth" : 11,
+          "DateProgression" : 10,
+          "DateYear" : 2014,
+          "Flags" : 857112,
+          "ForecastProgression" : 0,
+          "FuelUsageType" : 0,
+          "GridSize" : 32,
+          "MaxPlayers" : 32,
+          "PenaltiesType" : 1,
+          "Practice1Length" : 15,
+          "Practice2Length" : 0,
+          "QualifyLength" : 10,
+          "Race1Length" : 15,
+          "ServerControlsSetup" : 1,
+          "ServerControlsTrack" : 0,
+          "ServerControlsVehicle" : 0,
+          "ServerControlsVehicleClass" : 0,
+          "TireWearType" : 4,
+          "TrackId" : -661887517,
+          "VehicleClassId" : -112887377,
+          "VehicleModelId" : -1166911988,
+          "WarmupLength" : 10,
+          "WeatherSlot1" : 129238383,
+          "WeatherSlot2" : 129238383,
+          "WeatherSlot3" : 270338437,
+          "WeatherSlot4" : 270338437,
+          "WeatherSlots" : 0
+        },
+        "stages" : {
+          "practice1" : {
+            "end_time" : 1447295964,
+            "events" : {},
+            "results" : [
+              {
+                "attributes" : {
+                  "FastestLapTime" : 118559,
+                  "Lap" : 2,
+                  "RacePosition" : 1,
+                  "State" : "Racing",
+                  "TotalTime" : 0,
+                  "VehicleId" : 1161219858
+                },
+                "is_player" : true,
+                "name" : "[CAV] Ozzie123",
+                "participantid" : 2,
+                "refid" : 50882,
+                "time" : 1447295944
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 118592,
+                  "Lap" : 1,
+                  "RacePosition" : 2,
+                  "State" : "InGarage",
+                  "TotalTime" : 0,
+                  "VehicleId" : 1161219858
+                },
+                "is_player" : true,
+                "name" : "[CAV] F1_Racer68",
+                "participantid" : 1,
+                "refid" : 65409,
+                "time" : 1447295944
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 0,
+                  "Lap" : 0,
+                  "RacePosition" : 3,
+                  "State" : "Racing",
+                  "TotalTime" : 0,
+                  "VehicleId" : 1884411907
+                },
+                "is_player" : true,
+                "name" : "[CAV] Power",
+                "participantid" : 5,
+                "refid" : 15299,
+                "time" : 1447295944
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 0,
+                  "Lap" : 0,
+                  "RacePosition" : 4,
+                  "State" : "InGarage",
+                  "TotalTime" : 0,
+                  "VehicleId" : -1166911988
+                },
+                "is_player" : true,
+                "name" : "[CAV]  J_Millz89",
+                "participantid" : 4,
+                "refid" : 3588,
+                "time" : 1447295944
+              }
+            ],
+            "start_time" : 1447295044
+          },
+          "qualifying" : {
+            "end_time" : 1447296584,
+            "events" : {},
+            "results" : [
+              {
+                "attributes" : {
+                  "FastestLapTime" : 115712,
+                  "Lap" : 1,
+                  "RacePosition" : 1,
+                  "State" : "Racing",
+                  "TotalTime" : 0,
+                  "VehicleId" : 1161219858
+                },
+                "is_player" : true,
+                "name" : "",
+                "participantid" : 6,
+                "refid" : 6400,
+                "time" : 1447296564
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 117330,
+                  "Lap" : 2,
+                  "RacePosition" : 2,
+                  "State" : "Racing",
+                  "TotalTime" : 0,
+                  "VehicleId" : 1884411907
+                },
+                "is_player" : true,
+                "name" : "[CAV] Power",
+                "participantid" : 5,
+                "refid" : 15299,
+                "time" : 1447296564
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 117882,
+                  "Lap" : 3,
+                  "RacePosition" : 3,
+                  "State" : "InGarage",
+                  "TotalTime" : 0,
+                  "VehicleId" : 1161219858
+                },
+                "is_player" : true,
+                "name" : "[CAV] Ozzie123",
+                "participantid" : 2,
+                "refid" : 50882,
+                "time" : 1447296564
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 118541,
+                  "Lap" : 2,
+                  "RacePosition" : 4,
+                  "State" : "InGarage",
+                  "TotalTime" : 0,
+                  "VehicleId" : -1166911988
+                },
+                "is_player" : true,
+                "name" : "[CAV]  J_Millz89",
+                "participantid" : 4,
+                "refid" : 3588,
+                "time" : 1447296564
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 118771,
+                  "Lap" : 2,
+                  "RacePosition" : 5,
+                  "State" : "InGarage",
+                  "TotalTime" : 0,
+                  "VehicleId" : 1161219858
+                },
+                "is_player" : true,
+                "name" : "[CAV] F1_Racer68",
+                "participantid" : 1,
+                "refid" : 65409,
+                "time" : 1447296564
+              }
+            ],
+            "start_time" : 1447295964
+          },
+          "race1" : {
+            "end_time" : 1447299085,
+            "events" : {},
+            "results" : [
+              {
+                "attributes" : {
+                  "FastestLapTime" : 115445,
+                  "Lap" : 15,
+                  "RacePosition" : 1,
+                  "State" : "Finished",
+                  "TotalTime" : 1787166,
+                  "VehicleId" : 1161219858
+                },
+                "is_player" : true,
+                "name" : "",
+                "participantid" : 6,
+                "refid" : 6400,
+                "time" : 1447299085
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 118019,
+                  "Lap" : 15,
+                  "RacePosition" : 2,
+                  "State" : "Finished",
+                  "TotalTime" : 1816437,
+                  "VehicleId" : 1161219858
+                },
+                "is_player" : true,
+                "name" : "[CAV] Ozzie123",
+                "participantid" : 2,
+                "refid" : 50882,
+                "time" : 1447299085
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 118631,
+                  "Lap" : 15,
+                  "RacePosition" : 3,
+                  "State" : "Finished",
+                  "TotalTime" : 1849983,
+                  "VehicleId" : -1166911988
+                },
+                "is_player" : true,
+                "name" : "[CAV]  J_Millz89",
+                "participantid" : 4,
+                "refid" : 3588,
+                "time" : 1447299085
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 117955,
+                  "Lap" : 15,
+                  "RacePosition" : 4,
+                  "State" : "Finished",
+                  "TotalTime" : 1868767,
+                  "VehicleId" : 1884411907
+                },
+                "is_player" : true,
+                "name" : "[CAV] Power",
+                "participantid" : 5,
+                "refid" : 15299,
+                "time" : 1447299085
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 118414,
+                  "Lap" : 7,
+                  "RacePosition" : 5,
+                  "State" : "Retired",
+                  "TotalTime" : 0,
+                  "VehicleId" : 1161219858
+                },
+                "is_player" : true,
+                "name" : "[CAV] F1_Racer68",
+                "participantid" : 1,
+                "refid" : 65409,
+                "time" : 1447299085
+              }
+            ],
+            "start_time" : 1447297204
+          },
+          "warmup" : {
+            "end_time" : 1447297204,
+            "events" : {},
+            "results" : [
+              {
+                "attributes" : {
+                  "FastestLapTime" : 115212,
+                  "Lap" : 2,
+                  "RacePosition" : 1,
+                  "State" : "InGarage",
+                  "TotalTime" : 0,
+                  "VehicleId" : 1161219858
+                },
+                "is_player" : true,
+                "name" : "",
+                "participantid" : 6,
+                "refid" : 6400,
+                "time" : 1447297184
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 118349,
+                  "Lap" : 3,
+                  "RacePosition" : 2,
+                  "State" : "InGarage",
+                  "TotalTime" : 0,
+                  "VehicleId" : 1161219858
+                },
+                "is_player" : true,
+                "name" : "[CAV] Ozzie123",
+                "participantid" : 2,
+                "refid" : 50882,
+                "time" : 1447297184
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 0,
+                  "Lap" : 0,
+                  "RacePosition" : 3,
+                  "State" : "InGarage",
+                  "TotalTime" : 0,
+                  "VehicleId" : 1884411907
+                },
+                "is_player" : true,
+                "name" : "[CAV] Power",
+                "participantid" : 5,
+                "refid" : 15299,
+                "time" : 1447297184
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 0,
+                  "Lap" : 0,
+                  "RacePosition" : 4,
+                  "State" : "InGarage",
+                  "TotalTime" : 0,
+                  "VehicleId" : -1166911988
+                },
+                "is_player" : true,
+                "name" : "[CAV]  J_Millz89",
+                "participantid" : 4,
+                "refid" : 3588,
+                "time" : 1447297184
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 0,
+                  "Lap" : 0,
+                  "RacePosition" : 5,
+                  "State" : "InGarage",
+                  "TotalTime" : 0,
+                  "VehicleId" : 1161219858
+                },
+                "is_player" : true,
+                "name" : "[CAV] F1_Racer68",
+                "participantid" : 1,
+                "refid" : 65409,
+                "time" : 1447297184
+              }
+            ],
+            "start_time" : 1447296584
+          }
+        },
+        "start_time" : 1447294656
+      },
+      {
+        "end_time" : 0,
+        "finished" : false,
+        "index" : 10,
+        "members" : {
+          "15299" : {
+            "index" : 3,
+            "join_time" : 1447299123,
+            "leave_time" : -1,
+            "name" : "[CAV] Power",
+            "participantid" : -1,
+            "setup" : {
+              "LiveryId" : 73,
+              "RaceStatFlags" : 1073767429,
+              "VehicleId" : 1884411907
+            },
+            "steamid" : "76561198205236405"
+          },
+          "3588" : {
+            "index" : 4,
+            "join_time" : 1447299123,
+            "leave_time" : -1,
+            "name" : "[CAV]  J_Millz89",
+            "participantid" : -1,
+            "setup" : {
+              "LiveryId" : 53,
+              "RaceStatFlags" : 1073800421,
+              "VehicleId" : -1166911988
+            },
+            "steamid" : "76561198215606247"
+          },
+          "50882" : {
+            "index" : 2,
+            "join_time" : 1447299123,
+            "leave_time" : -1,
+            "name" : "[CAV] Ozzie123",
+            "participantid" : -1,
+            "setup" : {
+              "LiveryId" : 58,
+              "RaceStatFlags" : 1073800421,
+              "VehicleId" : 1161219858
+            },
+            "steamid" : "76561198201007478"
+          },
+          "6400" : {
+            "index" : 0,
+            "join_time" : 1447299123,
+            "leave_time" : -1,
+            "name" : "[CAV] NuNu",
+            "participantid" : -1,
+            "setup" : {
+              "LiveryId" : 56,
+              "RaceStatFlags" : 1073796837,
+              "VehicleId" : 1161219858
+            },
+            "steamid" : "76561197972562837"
+          },
+          "65409" : {
+            "index" : 1,
+            "join_time" : 1447299123,
+            "leave_time" : -1,
+            "name" : "[CAV] F1_Racer68",
+            "participantid" : -1,
+            "setup" : {
+              "LiveryId" : 71,
+              "RaceStatFlags" : 1073767653,
+              "VehicleId" : 1161219858
+            },
+            "steamid" : "76561198151166420"
+          }
+        },
+        "participants" : {},
+        "setup" : {
+          "AllowedViews" : 0,
+          "DamageType" : 3,
+          "DateDay" : 14,
+          "DateHour" : 14,
+          "DateMinute" : 0,
+          "DateMonth" : 11,
+          "DateProgression" : 10,
+          "DateYear" : 2014,
+          "Flags" : 857112,
+          "ForecastProgression" : 0,
+          "FuelUsageType" : 0,
+          "GridSize" : 32,
+          "MaxPlayers" : 32,
+          "PenaltiesType" : 1,
+          "Practice1Length" : 15,
+          "Practice2Length" : 0,
+          "QualifyLength" : 10,
+          "Race1Length" : 15,
+          "ServerControlsSetup" : 1,
+          "ServerControlsTrack" : 0,
+          "ServerControlsVehicle" : 0,
+          "ServerControlsVehicleClass" : 0,
+          "TireWearType" : 4,
+          "TrackId" : -661887517,
+          "VehicleClassId" : -112887377,
+          "VehicleModelId" : 274862187,
+          "WarmupLength" : 10,
+          "WeatherSlot1" : -934211870,
+          "WeatherSlot2" : -934211870,
+          "WeatherSlot3" : -934211870,
+          "WeatherSlot4" : -934211870,
+          "WeatherSlots" : 0
+        },
+        "stages" : {},
+        "start_time" : 1447299123
+      }
+    ],
+    "players" : {
+      "76561197962726630" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {
+              "3" : 1
+            },
+            "positions_per_size" : {
+              "3" : {
+                "3" : 1
+              }
+            },
+            "states" : {
+              "ingarage" : 1
+            }
+          },
+          "race" : {
+            "positions" : {
+              "4" : 1
+            },
+            "positions_per_size" : {
+              "4" : {
+                "4" : 1
+              }
+            },
+            "states" : {
+              "disqualified" : 1
+            }
+          },
+          "race_finishes" : 1,
+          "race_joins" : 2,
+          "race_loads" : 3,
+          "race_loads_done" : 3,
+          "track_distances" : {
+            "-661887517" : 107289
+          },
+          "tracks" : {
+            "-661887517" : 2
+          },
+          "vehicle_distances" : {
+            "1161219858" : 107289
+          },
+          "vehicles" : {
+            "1161219858" : 2
+          }
+        },
+        "last_joined" : 1447230744,
+        "name" : "[CAV]LiveWire11C"
+      },
+      "76561197970321397" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : [
+              1
+            ],
+            "positions_per_size" : {
+              "3" : [
+                1
+              ]
+            },
+            "states" : {
+              "ingarage" : 1
+            }
+          },
+          "race" : {
+            "positions" : [
+              1
+            ],
+            "positions_per_size" : {
+              "3" : [
+                1
+              ]
+            },
+            "states" : {
+              "finished" : 1
+            }
+          },
+          "race_finishes" : 1,
+          "race_joins" : 1,
+          "race_loads" : 1,
+          "race_loads_done" : 1,
+          "track_distances" : {
+            "-661887517" : 122452
+          },
+          "tracks" : {},
+          "vehicle_distances" : {
+            "1161219858" : 122452
+          },
+          "vehicles" : {}
+        },
+        "last_joined" : 1447219815,
+        "name" : "[CAV] Noddy"
+      },
+      "76561197972562837" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : [
+              2,
+              2
+            ],
+            "positions_per_size" : {
+              "3" : [
+                1,
+                2
+              ],
+              "5" : [
+                1
+              ]
+            },
+            "states" : {
+              "ingarage" : 1,
+              "racing" : 3
+            }
+          },
+          "race" : {
+            "positions" : [
+              1,
+              1,
+              1
+            ],
+            "positions_per_size" : {
+              "3" : {
+                "3" : 1
+              },
+              "4" : {
+                "2" : 1
+              },
+              "5" : [
+                1
+              ]
+            },
+            "states" : {
+              "dnf" : 1,
+              "finished" : 2
+            }
+          },
+          "race_finishes" : 3,
+          "race_joins" : 8,
+          "race_loads" : 8,
+          "race_loads_done" : 8,
+          "track_distances" : {
+            "-661887517" : 314022
+          },
+          "tracks" : {
+            "-661887517" : 1
+          },
+          "vehicle_distances" : {
+            "-1166911988" : 64020,
+            "1161219858" : 250002
+          },
+          "vehicles" : {
+            "1161219858" : 1
+          }
+        },
+        "last_joined" : 1447295972,
+        "name" : "[CAV] NuNu"
+      },
+      "76561198020623583" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {
+              "2" : 1,
+              "3" : 1
+            },
+            "positions_per_size" : {
+              "3" : {
+                "2" : 1,
+                "3" : 1
+              }
+            },
+            "states" : {
+              "ingarage" : 1,
+              "racing" : 1
+            }
+          },
+          "race" : {
+            "positions" : {
+              "1" : 1,
+              "3" : 1
+            },
+            "positions_per_size" : {
+              "1" : [
+                1
+              ],
+              "4" : {
+                "3" : 1
+              }
+            },
+            "states" : {
+              "finished" : 1,
+              "retired" : 1
+            }
+          },
+          "race_finishes" : 2,
+          "race_joins" : 3,
+          "race_loads" : 3,
+          "race_loads_done" : 3,
+          "track_distances" : {
+            "-661887517" : 160672
+          },
+          "tracks" : {},
+          "vehicle_distances" : {
+            "1161219858" : 160672
+          },
+          "vehicles" : {}
+        },
+        "last_joined" : 1447232624,
+        "name" : "[CAV] B-RAD"
+      },
+      "76561198151166420" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {
+              "1" : 1,
+              "5" : 1
+            },
+            "positions_per_size" : {
+              "1" : [
+                1
+              ],
+              "5" : {
+                "5" : 1
+              }
+            },
+            "states" : {
+              "ingarage" : 1,
+              "racing" : 1
+            }
+          },
+          "race" : {
+            "positions" : {
+              "5" : 1
+            },
+            "positions_per_size" : {
+              "5" : {
+                "5" : 1
+              }
+            },
+            "states" : {
+              "retired" : 1
+            }
+          },
+          "race_finishes" : 1,
+          "race_joins" : 5,
+          "race_loads" : 4,
+          "race_loads_done" : 4,
+          "track_distances" : {
+            "-661887517" : 154627
+          },
+          "tracks" : {
+            "-661887517" : 4
+          },
+          "vehicle_distances" : {
+            "1161219858" : 154627
+          },
+          "vehicles" : {
+            "1161219858" : 4
+          }
+        },
+        "last_joined" : 1447294669,
+        "name" : "[CAV] F1_Racer68"
+      },
+      "76561198193480995" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {
+              "1" : 1,
+              "3" : 1
+            },
+            "positions_per_size" : {
+              "3" : {
+                "1" : 1,
+                "3" : 1
+              }
+            },
+            "states" : {
+              "ingarage" : 1,
+              "racing" : 1
+            }
+          },
+          "race" : {
+            "positions" : [
+              1,
+              1
+            ],
+            "positions_per_size" : {
+              "3" : {
+                "2" : 1
+              },
+              "4" : [
+                1
+              ]
+            },
+            "states" : {
+              "dnf" : 1,
+              "finished" : 1
+            }
+          },
+          "race_finishes" : 2,
+          "race_joins" : 2,
+          "race_loads" : 2,
+          "race_loads_done" : 2,
+          "track_distances" : {
+            "-661887517" : 206447
+          },
+          "tracks" : {
+            "-661887517" : 2
+          },
+          "vehicle_distances" : {
+            "-1166911988" : 206447
+          },
+          "vehicles" : {
+            "-1166911988" : 2
+          }
+        },
+        "last_joined" : 1447225588,
+        "name" : "[CAV] VisionX"
+      },
+      "76561198201007478" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {
+              "3" : 1
+            },
+            "positions_per_size" : {
+              "5" : {
+                "3" : 1
+              }
+            },
+            "states" : {
+              "ingarage" : 1
+            }
+          },
+          "race" : {
+            "positions" : {
+              "2" : 1
+            },
+            "positions_per_size" : {
+              "5" : {
+                "2" : 1
+              }
+            },
+            "states" : {
+              "finished" : 1
+            }
+          },
+          "race_finishes" : 1,
+          "race_joins" : 1,
+          "race_loads" : 1,
+          "race_loads_done" : 1,
+          "track_distances" : {
+            "-661887517" : 145850
+          },
+          "tracks" : {
+            "-661887517" : 1
+          },
+          "vehicle_distances" : {
+            "1161219858" : 145850
+          },
+          "vehicles" : {
+            "1161219858" : 1
+          }
+        },
+        "last_joined" : 1447294977,
+        "name" : "[CAV] Ozzie123"
+      },
+      "76561198205236405" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {
+              "2" : 1
+            },
+            "positions_per_size" : {
+              "5" : {
+                "2" : 1
+              }
+            },
+            "states" : {
+              "racing" : 1
+            }
+          },
+          "race" : {
+            "positions" : {
+              "4" : 1
+            },
+            "positions_per_size" : {
+              "5" : {
+                "4" : 1
+              }
+            },
+            "states" : {
+              "finished" : 1
+            }
+          },
+          "race_finishes" : 1,
+          "race_joins" : 2,
+          "race_loads" : 2,
+          "race_loads_done" : 2,
+          "track_distances" : {
+            "-661887517" : 99789
+          },
+          "tracks" : {},
+          "vehicle_distances" : {
+            "1884411907" : 99789
+          },
+          "vehicles" : {}
+        },
+        "last_joined" : 1447295483,
+        "name" : "[CAV] Power"
+      },
+      "76561198215606247" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {
+              "4" : 1
+            },
+            "positions_per_size" : {
+              "5" : {
+                "4" : 1
+              }
+            },
+            "states" : {
+              "ingarage" : 1
+            }
+          },
+          "race" : {
+            "positions" : {
+              "3" : 1
+            },
+            "positions_per_size" : {
+              "5" : {
+                "3" : 1
+              }
+            },
+            "states" : {
+              "finished" : 1
+            }
+          },
+          "race_finishes" : 1,
+          "race_joins" : 1,
+          "race_loads" : 1,
+          "race_loads_done" : 1,
+          "track_distances" : {
+            "-661887517" : 96115
+          },
+          "tracks" : {},
+          "vehicle_distances" : {
+            "-1166911988" : 96115
+          },
+          "vehicles" : {}
+        },
+        "last_joined" : 1447295192,
+        "name" : "[CAV]  J_Millz89"
+      },
+      "76561198258617003" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race_finishes" : 0,
+          "race_joins" : 1,
+          "race_loads" : 1,
+          "race_loads_done" : 1,
+          "track_distances" : {
+            "-661887517" : 15741
+          },
+          "tracks" : {
+            "-661887517" : 1
+          },
+          "vehicle_distances" : {
+            "-1166911988" : 15741
+          },
+          "vehicles" : {
+            "-1166911988" : 1
+          }
+        },
+        "last_joined" : 1447294655,
+        "name" : "DCWANTCASH"
+      }
+    },
+    "server" : {
+      "name" : "CanAm VRL",
+      "steam_disconnects" : 0,
+      "steam_downtime" : 0,
+      "total_steam_downtime" : 0,
+      "total_uptime" : "111482",
+      "uptime" : "111185"
+    },
+    "session" : {
+      "counts" : {
+        "lobbies" : 10,
+        "player_finishes" : 13,
+        "player_loads" : 11,
+        "player_loads_done" : 11,
+        "race_finishes" : 4,
+        "race_loads" : 8,
+        "race_loads_done" : 8,
+        "sessions" : 8,
+        "stage_counts" : {
+          "practice1" : 8,
+          "qualifying" : 5,
+          "race1" : 5,
+          "warmup" : 5
+        },
+        "stage_durations" : {
+          "practice1" : 5169393,
+          "qualifying" : 3343406,
+          "race1" : 8067391,
+          "warmup" : 3100187
+        },
+        "track_distances" : {
+          "-661887517" : 1423004
+        },
+        "tracks" : {
+          "-661887517" : 8
+        },
+        "vehicle_distances" : {
+          "-1166911988" : 382323,
+          "1161219858" : 940892,
+          "1884411907" : 99789
+        },
+        "vehicles" : {
+          "-1166911988" : 3,
+          "1161219858" : 8
+        }
+      }
+    }
+  }
+}
+
+// EOF //

@@ -1,0 +1,1481 @@
+// Persistent data for addon 'sms_stats', addon version 2.0
+// Automatically maintained by the addon, do not edit!
+
+{
+  "next_history_index" : 2,
+  "stats" : {
+    "history" : [
+      {
+        "end_time" : 1452993016,
+        "finished" : true,
+        "index" : 1,
+        "members" : {
+          "44032" : {
+            "index" : 0,
+            "join_time" : 1452992228,
+            "leave_time" : -1,
+            "name" : "Alberto Torri",
+            "participantid" : 0,
+            "setup" : {
+              "LiveryId" : 72,
+              "RaceStatFlags" : 1073767653,
+              "VehicleId" : -1365918055
+            },
+            "steamid" : "76561198247879640"
+          },
+          "63105" : {
+            "index" : 1,
+            "join_time" : 1452992228,
+            "leave_time" : -1,
+            "name" : "SamX",
+            "participantid" : 1,
+            "setup" : {
+              "LiveryId" : 58,
+              "RaceStatFlags" : 1073766629,
+              "VehicleId" : 1401532035
+            },
+            "steamid" : "76561198012182530"
+          }
+        },
+        "participants" : {
+          "0" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 72,
+            "Name" : "Alberto Torri",
+            "RefId" : 44032,
+            "VehicleId" : -1365918055
+          },
+          "1" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 58,
+            "Name" : "SamX",
+            "RefId" : 63105,
+            "VehicleId" : 1401532035
+          }
+        },
+        "setup" : {
+          "AllowedViews" : 2,
+          "DamageType" : 3,
+          "DateDay" : 19,
+          "DateHour" : 13,
+          "DateMinute" : 0,
+          "DateMonth" : 1,
+          "DateProgression" : 2,
+          "DateYear" : 2016,
+          "Flags" : 802952,
+          "ForecastProgression" : 1,
+          "FuelUsageType" : 0,
+          "GridSize" : 24,
+          "MaxPlayers" : 1,
+          "OpponentDifficulty" : 0,
+          "PenaltiesType" : 0,
+          "Practice1Length" : 45,
+          "Practice2Length" : 45,
+          "QualifyLength" : 30,
+          "Race1Length" : 5,
+          "ServerControlsSetup" : 1,
+          "ServerControlsTrack" : 1,
+          "ServerControlsVehicle" : 0,
+          "ServerControlsVehicleClass" : 0,
+          "TireWearType" : 5,
+          "TrackId" : -945967394,
+          "VehicleClassId" : -112887377,
+          "VehicleModelId" : -1365918055,
+          "WarmupLength" : 5,
+          "WeatherSlot1" : 270338437,
+          "WeatherSlot2" : 270338437,
+          "WeatherSlot3" : 270338437,
+          "WeatherSlot4" : 270338437,
+          "WeatherSlots" : 0
+        },
+        "stages" : {
+          "practice1" : {
+            "end_time" : 1452992250,
+            "events" : {},
+            "results" : {},
+            "start_time" : 1452992247
+          },
+          "practice2" : {
+            "end_time" : 1452992253,
+            "events" : {},
+            "results" : {},
+            "start_time" : 1452992250
+          },
+          "qualifying" : {
+            "end_time" : 1452992255,
+            "events" : {},
+            "results" : {},
+            "start_time" : 1452992253
+          },
+          "race1" : {
+            "end_time" : 1452993016,
+            "events" : [
+              {
+                "attributes" : {
+                  "NewState" : "Racing",
+                  "PreviousState" : "InGarage"
+                },
+                "event_name" : "State",
+                "is_player" : true,
+                "name" : "SamX",
+                "participantid" : 1,
+                "refid" : 63105,
+                "time" : 1452992260
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 1000,
+                  "OtherParticipantId" : 1
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "Alberto Torri",
+                "participantid" : 0,
+                "refid" : 44032,
+                "time" : 1452992284
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 1000,
+                  "OtherParticipantId" : 0
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "SamX",
+                "participantid" : 1,
+                "refid" : 63105,
+                "time" : 1452992284
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 0,
+                  "LapTime" : 24132,
+                  "RacePosition" : 1
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "Alberto Torri",
+                "participantid" : 0,
+                "refid" : 44032,
+                "time" : 1452992306
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 993,
+                  "PenaltyThreshold" : 803,
+                  "PenaltyValue" : 1874,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 1108
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "Alberto Torri",
+                "participantid" : 0,
+                "refid" : 44032,
+                "time" : 1452992307
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 0,
+                  "LapTime" : 29685,
+                  "RacePosition" : 1
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "Alberto Torri",
+                "participantid" : 0,
+                "refid" : 44032,
+                "time" : 1452992313
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 496,
+                  "PenaltyThreshold" : 901,
+                  "PenaltyValue" : 1091,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 384
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "Alberto Torri",
+                "participantid" : 0,
+                "refid" : 44032,
+                "time" : 1452992314
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 0,
+                  "LapTime" : 30197,
+                  "RacePosition" : 2
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "SamX",
+                "participantid" : 1,
+                "refid" : 63105,
+                "time" : 1452992314
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 0,
+                  "LapTime" : 30093,
+                  "RacePosition" : 1
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "Alberto Torri",
+                "participantid" : 0,
+                "refid" : 44032,
+                "time" : 1452992314
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 195,
+                  "PenaltyThreshold" : 960,
+                  "PenaltyValue" : 1121,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 144
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "SamX",
+                "participantid" : 1,
+                "refid" : 63105,
+                "time" : 1452992314
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 167,
+                  "PenaltyThreshold" : 967,
+                  "PenaltyValue" : 1233,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 132
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "Alberto Torri",
+                "participantid" : 0,
+                "refid" : 44032,
+                "time" : 1452992314
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 0,
+                  "LapTime" : 30488,
+                  "RacePosition" : 1
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "Alberto Torri",
+                "participantid" : 0,
+                "refid" : 44032,
+                "time" : 1452992315
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 200,
+                  "PenaltyThreshold" : 960,
+                  "PenaltyValue" : 1190,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 156
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "Alberto Torri",
+                "participantid" : 0,
+                "refid" : 44032,
+                "time" : 1452992315
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 0,
+                  "LapTime" : 30709,
+                  "RacePosition" : 1
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "Alberto Torri",
+                "participantid" : 0,
+                "refid" : 44032,
+                "time" : 1452992315
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 35,
+                  "PenaltyThreshold" : 994,
+                  "PenaltyValue" : 1242,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 27
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "Alberto Torri",
+                "participantid" : 0,
+                "refid" : 44032,
+                "time" : 1452992315
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 0,
+                  "LapTime" : 64116,
+                  "RacePosition" : 2
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "SamX",
+                "participantid" : 1,
+                "refid" : 63105,
+                "time" : 1452992355
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 2659,
+                  "PenaltyThreshold" : 469,
+                  "PenaltyValue" : 624,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 2221
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "SamX",
+                "participantid" : 1,
+                "refid" : 63105,
+                "time" : 1452992358
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 0,
+                  "LapTime" : 77030,
+                  "RacePosition" : 2
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "SamX",
+                "participantid" : 1,
+                "refid" : 63105,
+                "time" : 1452992373
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 1147,
+                  "PenaltyThreshold" : 770,
+                  "PenaltyValue" : 1134,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 989
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "SamX",
+                "participantid" : 1,
+                "refid" : 63105,
+                "time" : 1452992375
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 0,
+                  "LapTime" : 97067,
+                  "RacePosition" : 1
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "Alberto Torri",
+                "participantid" : 0,
+                "refid" : 44032,
+                "time" : 1452992394
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 620,
+                  "PenaltyThreshold" : 876,
+                  "PenaltyValue" : 1778,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 700
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "Alberto Torri",
+                "participantid" : 0,
+                "refid" : 44032,
+                "time" : 1452992394
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 0,
+                  "LapTime" : 95905,
+                  "RacePosition" : 2
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "SamX",
+                "participantid" : 1,
+                "refid" : 63105,
+                "time" : 1452992395
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 21,
+                  "PenaltyThreshold" : 996,
+                  "PenaltyValue" : 2418,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 33
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "SamX",
+                "participantid" : 1,
+                "refid" : 63105,
+                "time" : 1452992395
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 0,
+                  "LapTime" : 95968,
+                  "RacePosition" : 2
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "SamX",
+                "participantid" : 1,
+                "refid" : 63105,
+                "time" : 1452992395
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 153,
+                  "PenaltyThreshold" : 969,
+                  "PenaltyValue" : 22875,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 2051
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "SamX",
+                "participantid" : 1,
+                "refid" : 63105,
+                "time" : 1452992395
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 1000,
+                  "OtherParticipantId" : -1
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "Alberto Torri",
+                "participantid" : 0,
+                "refid" : 44032,
+                "time" : 1452992406
+              },
+              {
+                "attributes" : {
+                  "CountThisLapTimes" : 0,
+                  "DistanceTravelled" : 5124,
+                  "Lap" : 0,
+                  "LapTime" : 141903,
+                  "RacePosition" : 1,
+                  "Sector1Time" : 50648,
+                  "Sector2Time" : 48180,
+                  "Sector3Time" : 43074
+                },
+                "event_name" : "Lap",
+                "is_player" : true,
+                "name" : "SamX",
+                "participantid" : 1,
+                "refid" : 63105,
+                "time" : 1452992412
+              },
+              {
+                "attributes" : {
+                  "CountThisLapTimes" : 0,
+                  "DistanceTravelled" : 5106,
+                  "Lap" : 0,
+                  "LapTime" : 142579,
+                  "RacePosition" : 2,
+                  "Sector1Time" : 49818,
+                  "Sector2Time" : 44136,
+                  "Sector3Time" : 48624
+                },
+                "event_name" : "Lap",
+                "is_player" : true,
+                "name" : "Alberto Torri",
+                "participantid" : 0,
+                "refid" : 44032,
+                "time" : 1452992413
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 544,
+                  "OtherParticipantId" : -1
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "SamX",
+                "participantid" : 1,
+                "refid" : 63105,
+                "time" : 1452992521
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 1,
+                  "LapTime" : 97456,
+                  "RacePosition" : 1
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "SamX",
+                "participantid" : 1,
+                "refid" : 63105,
+                "time" : 1452992521
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 1434,
+                  "PenaltyThreshold" : 713,
+                  "PenaltyValue" : 5999,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 3165
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "SamX",
+                "participantid" : 1,
+                "refid" : 63105,
+                "time" : 1452992523
+              },
+              {
+                "attributes" : {
+                  "CountThisLapTimes" : 0,
+                  "DistanceTravelled" : 5071,
+                  "Lap" : 1,
+                  "LapTime" : 126567,
+                  "RacePosition" : 1,
+                  "Sector1Time" : 40931,
+                  "Sector2Time" : 41927,
+                  "Sector3Time" : 43710
+                },
+                "event_name" : "Lap",
+                "is_player" : true,
+                "name" : "SamX",
+                "participantid" : 1,
+                "refid" : 63105,
+                "time" : 1452992538
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 1,
+                  "LapTime" : 97203,
+                  "RacePosition" : 2
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "Alberto Torri",
+                "participantid" : 0,
+                "refid" : 44032,
+                "time" : 1452992546
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 295,
+                  "PenaltyThreshold" : 940,
+                  "PenaltyValue" : 991,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 212
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "Alberto Torri",
+                "participantid" : 0,
+                "refid" : 44032,
+                "time" : 1452992547
+              },
+              {
+                "attributes" : {
+                  "CountThisLapTimes" : 0,
+                  "DistanceTravelled" : 5186,
+                  "Lap" : 1,
+                  "LapTime" : 152147,
+                  "RacePosition" : 2,
+                  "Sector1Time" : 51507,
+                  "Sector2Time" : 52317,
+                  "Sector3Time" : 48323
+                },
+                "event_name" : "Lap",
+                "is_player" : true,
+                "name" : "Alberto Torri",
+                "participantid" : 0,
+                "refid" : 44032,
+                "time" : 1452992565
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 2,
+                  "LapTime" : 66176,
+                  "RacePosition" : 2
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "Alberto Torri",
+                "participantid" : 0,
+                "refid" : 44032,
+                "time" : 1452992643
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 2547,
+                  "PenaltyThreshold" : 491,
+                  "PenaltyValue" : -518,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 1745
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "Alberto Torri",
+                "participantid" : 0,
+                "refid" : 44032,
+                "time" : 1452992646
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 2,
+                  "LapTime" : 67988,
+                  "RacePosition" : 2
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "Alberto Torri",
+                "participantid" : 0,
+                "refid" : 44032,
+                "time" : 1452992646
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 15,
+                  "PenaltyThreshold" : 998,
+                  "PenaltyValue" : 357,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 6
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "Alberto Torri",
+                "participantid" : 0,
+                "refid" : 44032,
+                "time" : 1452992646
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 874,
+                  "OtherParticipantId" : -1
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "Alberto Torri",
+                "participantid" : 0,
+                "refid" : 44032,
+                "time" : 1452992647
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 2,
+                  "LapTime" : 97498,
+                  "RacePosition" : 1
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "SamX",
+                "participantid" : 1,
+                "refid" : 63105,
+                "time" : 1452992654
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 1097,
+                  "PenaltyThreshold" : 780,
+                  "PenaltyValue" : 7022,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 2994
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "SamX",
+                "participantid" : 1,
+                "refid" : 63105,
+                "time" : 1452992655
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 2,
+                  "LapTime" : 76026,
+                  "RacePosition" : 2
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "Alberto Torri",
+                "participantid" : 0,
+                "refid" : 44032,
+                "time" : 1452992669
+              },
+              {
+                "attributes" : {
+                  "CountThisLapTimes" : 0,
+                  "DistanceTravelled" : 5071,
+                  "Lap" : 2,
+                  "LapTime" : 131408,
+                  "RacePosition" : 1,
+                  "Sector1Time" : 43047,
+                  "Sector2Time" : 45795,
+                  "Sector3Time" : 42566
+                },
+                "event_name" : "Lap",
+                "is_player" : true,
+                "name" : "SamX",
+                "participantid" : 1,
+                "refid" : 63105,
+                "time" : 1452992670
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 2163,
+                  "PenaltyThreshold" : 567,
+                  "PenaltyValue" : -65,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 1451
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "Alberto Torri",
+                "participantid" : 0,
+                "refid" : 44032,
+                "time" : 1452992671
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 1000,
+                  "OtherParticipantId" : -1
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "SamX",
+                "participantid" : 1,
+                "refid" : 63105,
+                "time" : 1452992672
+              },
+              {
+                "attributes" : {
+                  "CountThisLapTimes" : 1,
+                  "DistanceTravelled" : 5192,
+                  "Lap" : 2,
+                  "LapTime" : 149932,
+                  "RacePosition" : 2,
+                  "Sector1Time" : 41563,
+                  "Sector2Time" : 57634,
+                  "Sector3Time" : 50735
+                },
+                "event_name" : "Lap",
+                "is_player" : true,
+                "name" : "Alberto Torri",
+                "participantid" : 0,
+                "refid" : 44032,
+                "time" : 1452992715
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 3,
+                  "LapTime" : 26388,
+                  "RacePosition" : 2
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "Alberto Torri",
+                "participantid" : 0,
+                "refid" : 44032,
+                "time" : 1452992764
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 2180,
+                  "PenaltyThreshold" : 564,
+                  "PenaltyValue" : -637,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 1150
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "Alberto Torri",
+                "participantid" : 0,
+                "refid" : 44032,
+                "time" : 1452992766
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 3,
+                  "LapTime" : 68623,
+                  "RacePosition" : 1
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "SamX",
+                "participantid" : 1,
+                "refid" : 63105,
+                "time" : 1452992779
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 94,
+                  "PenaltyThreshold" : 981,
+                  "PenaltyValue" : 765,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 64
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "SamX",
+                "participantid" : 1,
+                "refid" : 63105,
+                "time" : 1452992779
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 1000,
+                  "OtherParticipantId" : -1
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "SamX",
+                "participantid" : 1,
+                "refid" : 63105,
+                "time" : 1452992780
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 1000,
+                  "OtherParticipantId" : -1
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "SamX",
+                "participantid" : 1,
+                "refid" : 63105,
+                "time" : 1452992780
+              },
+              {
+                "attributes" : {
+                  "CountThisLapTimes" : 1,
+                  "DistanceTravelled" : 5235,
+                  "Lap" : 3,
+                  "LapTime" : 178089,
+                  "RacePosition" : 1,
+                  "Sector1Time" : 69929,
+                  "Sector2Time" : 59233,
+                  "Sector3Time" : 48927
+                },
+                "event_name" : "Lap",
+                "is_player" : true,
+                "name" : "SamX",
+                "participantid" : 1,
+                "refid" : 63105,
+                "time" : 1452992848
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 3,
+                  "LapTime" : 97012,
+                  "RacePosition" : 2
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "Alberto Torri",
+                "participantid" : 0,
+                "refid" : 44032,
+                "time" : 1452992848
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 725,
+                  "PenaltyThreshold" : 856,
+                  "PenaltyValue" : 1731,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 801
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "Alberto Torri",
+                "participantid" : 0,
+                "refid" : 44032,
+                "time" : 1452992849
+              },
+              {
+                "attributes" : {
+                  "CountThisLapTimes" : 0,
+                  "DistanceTravelled" : 5195,
+                  "Lap" : 3,
+                  "LapTime" : 151027,
+                  "RacePosition" : 2,
+                  "Sector1Time" : 61959,
+                  "Sector2Time" : 42793,
+                  "Sector3Time" : 46275
+                },
+                "event_name" : "Lap",
+                "is_player" : true,
+                "name" : "Alberto Torri",
+                "participantid" : 0,
+                "refid" : 44032,
+                "time" : 1452992866
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 4,
+                  "LapTime" : 22270,
+                  "RacePosition" : 1
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "SamX",
+                "participantid" : 1,
+                "refid" : 63105,
+                "time" : 1452992886
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 1117,
+                  "PenaltyThreshold" : 775,
+                  "PenaltyValue" : -3123,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 0
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "SamX",
+                "participantid" : 1,
+                "refid" : 63105,
+                "time" : 1452992887
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 4,
+                  "LapTime" : 29394,
+                  "RacePosition" : 2
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "SamX",
+                "participantid" : 1,
+                "refid" : 63105,
+                "time" : 1452992903
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 1040,
+                  "PenaltyThreshold" : 793,
+                  "PenaltyValue" : 608,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 757
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "SamX",
+                "participantid" : 1,
+                "refid" : 63105,
+                "time" : 1452992904
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 4,
+                  "LapTime" : 29089,
+                  "RacePosition" : 2
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "Alberto Torri",
+                "participantid" : 0,
+                "refid" : 44032,
+                "time" : 1452992906
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 1000,
+                  "OtherParticipantId" : -1
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "SamX",
+                "participantid" : 1,
+                "refid" : 63105,
+                "time" : 1452992906
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 1840,
+                  "PenaltyThreshold" : 631,
+                  "PenaltyValue" : -616,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 777
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "Alberto Torri",
+                "participantid" : 0,
+                "refid" : 44032,
+                "time" : 1452992908
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 4,
+                  "LapTime" : 76087,
+                  "RacePosition" : 1
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "Alberto Torri",
+                "participantid" : 0,
+                "refid" : 44032,
+                "time" : 1452992965
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 3471,
+                  "PenaltyThreshold" : 306,
+                  "PenaltyValue" : -1627,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 1814
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "Alberto Torri",
+                "participantid" : 0,
+                "refid" : 44032,
+                "time" : 1452992968
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 4,
+                  "LapTime" : 78375,
+                  "RacePosition" : 1
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "Alberto Torri",
+                "participantid" : 0,
+                "refid" : 44032,
+                "time" : 1452992970
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 2560,
+                  "PenaltyThreshold" : 488,
+                  "PenaltyValue" : -6252,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 42
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "Alberto Torri",
+                "participantid" : 0,
+                "refid" : 44032,
+                "time" : 1452992972
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 4,
+                  "LapTime" : 76951,
+                  "RacePosition" : 2
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "SamX",
+                "participantid" : 1,
+                "refid" : 63105,
+                "time" : 1452992973
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 3007,
+                  "PenaltyThreshold" : 398,
+                  "PenaltyValue" : 885,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 2682
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "SamX",
+                "participantid" : 1,
+                "refid" : 63105,
+                "time" : 1452992976
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 4,
+                  "LapTime" : 96352,
+                  "RacePosition" : 1
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "Alberto Torri",
+                "participantid" : 0,
+                "refid" : 44032,
+                "time" : 1452992997
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 4,
+                  "LapTime" : 97456,
+                  "RacePosition" : 2
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "SamX",
+                "participantid" : 1,
+                "refid" : 63105,
+                "time" : 1452992998
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 84,
+                  "PenaltyThreshold" : 982,
+                  "PenaltyValue" : 2367,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 151
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "SamX",
+                "participantid" : 1,
+                "refid" : 63105,
+                "time" : 1452992998
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 4,
+                  "LapTime" : 97461,
+                  "RacePosition" : 2
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "SamX",
+                "participantid" : 1,
+                "refid" : 63105,
+                "time" : 1452992998
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 1520,
+                  "PenaltyThreshold" : 695,
+                  "PenaltyValue" : 3572,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 2382
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "Alberto Torri",
+                "participantid" : 0,
+                "refid" : 44032,
+                "time" : 1452992998
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 1366,
+                  "PenaltyThreshold" : 728,
+                  "PenaltyValue" : 3835,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 2311
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "SamX",
+                "participantid" : 1,
+                "refid" : 63105,
+                "time" : 1452992999
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 485,
+                  "OtherParticipantId" : 0
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "SamX",
+                "participantid" : 1,
+                "refid" : 63105,
+                "time" : 1452993005
+              },
+              {
+                "attributes" : {
+                  "CountThisLapTimes" : 0,
+                  "DistanceTravelled" : 5179,
+                  "Lap" : 4,
+                  "LapTime" : 149404,
+                  "RacePosition" : 1,
+                  "Sector1Time" : 48659,
+                  "Sector2Time" : 44864,
+                  "Sector3Time" : 55881
+                },
+                "event_name" : "Lap",
+                "is_player" : true,
+                "name" : "Alberto Torri",
+                "participantid" : 0,
+                "refid" : 44032,
+                "time" : 1452993015
+              },
+              {
+                "attributes" : {
+                  "NewState" : "Finished",
+                  "PreviousState" : "Racing"
+                },
+                "event_name" : "State",
+                "is_player" : true,
+                "name" : "Alberto Torri",
+                "participantid" : 0,
+                "refid" : 44032,
+                "time" : 1452993015
+              },
+              {
+                "attributes" : {
+                  "NewState" : "Finished",
+                  "PreviousState" : "Racing"
+                },
+                "event_name" : "State",
+                "is_player" : true,
+                "name" : "SamX",
+                "participantid" : 1,
+                "refid" : 63105,
+                "time" : 1452993015
+              },
+              {
+                "attributes" : {
+                  "CountThisLapTimes" : 0,
+                  "DistanceTravelled" : 5320,
+                  "Lap" : 4,
+                  "LapTime" : 167844,
+                  "RacePosition" : 2,
+                  "Sector1Time" : 77638,
+                  "Sector2Time" : 43210,
+                  "Sector3Time" : 46997
+                },
+                "event_name" : "Lap",
+                "is_player" : true,
+                "name" : "SamX",
+                "participantid" : 1,
+                "refid" : 63105,
+                "time" : 1452993016
+              }
+            ],
+            "results" : [
+              {
+                "attributes" : {
+                  "FastestLapTime" : 149932,
+                  "Lap" : 5,
+                  "RacePosition" : 1,
+                  "State" : "Finished",
+                  "TotalTime" : 745089,
+                  "VehicleId" : -1365918055
+                },
+                "is_player" : true,
+                "name" : "Alberto Torri",
+                "participantid" : 0,
+                "refid" : 44032,
+                "time" : 1452993016
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 178089,
+                  "Lap" : 5,
+                  "RacePosition" : 2,
+                  "State" : "Finished",
+                  "TotalTime" : 745794,
+                  "VehicleId" : 1401532035
+                },
+                "is_player" : true,
+                "name" : "SamX",
+                "participantid" : 1,
+                "refid" : 63105,
+                "time" : 1452993016
+              }
+            ],
+            "start_time" : 1452992260
+          },
+          "warmup" : {
+            "end_time" : 1452992260,
+            "events" : [
+              {
+                "attributes" : {
+                  "NewState" : "Racing",
+                  "PreviousState" : "InGarage"
+                },
+                "event_name" : "State",
+                "is_player" : true,
+                "name" : "Alberto Torri",
+                "participantid" : 0,
+                "refid" : 44032,
+                "time" : 1452992260
+              }
+            ],
+            "results" : {},
+            "start_time" : 1452992255
+          }
+        },
+        "start_time" : 1452992106
+      }
+    ],
+    "players" : {
+      "76561198012182530" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race" : {
+            "positions" : {
+              "2" : 1
+            },
+            "positions_per_size" : {
+              "2" : {
+                "2" : 1
+              }
+            },
+            "states" : {
+              "finished" : 1
+            }
+          },
+          "race_finishes" : 1,
+          "race_joins" : 1,
+          "race_loads" : 1,
+          "race_loads_done" : 1,
+          "track_distances" : {
+            "-945967394" : 25821
+          },
+          "tracks" : {
+            "-945967394" : 1
+          },
+          "vehicle_distances" : {
+            "1401532035" : 25821
+          },
+          "vehicles" : {
+            "1401532035" : 1
+          }
+        },
+        "last_joined" : 1452992213,
+        "name" : "SamX"
+      },
+      "76561198247879640" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race" : {
+            "positions" : [
+              1
+            ],
+            "positions_per_size" : {
+              "2" : [
+                1
+              ]
+            },
+            "states" : {
+              "finished" : 1
+            }
+          },
+          "race_finishes" : 1,
+          "race_joins" : 1,
+          "race_loads" : 1,
+          "race_loads_done" : 1,
+          "track_distances" : {
+            "-945967394" : 25858
+          },
+          "tracks" : {
+            "-945967394" : 1
+          },
+          "vehicle_distances" : {
+            "-1365918055" : 25858
+          },
+          "vehicles" : {
+            "-1365918055" : 1
+          }
+        },
+        "last_joined" : 1452992106,
+        "name" : "Alberto Torri"
+      }
+    },
+    "server" : {
+      "name" : "RN",
+      "steam_disconnects" : 0,
+      "steam_downtime" : 0,
+      "total_steam_downtime" : 0,
+      "total_uptime" : "1067.33",
+      "uptime" : "1067.33"
+    },
+    "session" : {
+      "counts" : {
+        "lobbies" : 1,
+        "player_finishes" : 2,
+        "player_loads" : 2,
+        "player_loads_done" : 2,
+        "race_finishes" : 1,
+        "race_loads" : 1,
+        "race_loads_done" : 1,
+        "sessions" : 1,
+        "stage_counts" : {
+          "practice1" : 1,
+          "practice2" : 1,
+          "qualifying" : 1,
+          "race1" : 1,
+          "warmup" : 1
+        },
+        "stage_durations" : {
+          "practice1" : 3219,
+          "practice2" : 2640,
+          "qualifying" : 2094,
+          "race1" : 756078,
+          "warmup" : 4641
+        },
+        "track_distances" : {
+          "-945967394" : 51679
+        },
+        "tracks" : {
+          "-945967394" : 1
+        },
+        "vehicle_distances" : {
+          "-1365918055" : 25858,
+          "1401532035" : 25821
+        },
+        "vehicles" : {
+          "-1365918055" : 1,
+          "1401532035" : 1
+        }
+      }
+    }
+  }
+}
+
+// EOF //

@@ -25,9 +25,9 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
     }
 
     /**
-     * @see \Simresults\Data_Reader::getSessions()
+     * @see \Simresults\Data_Reader::readSessions()
      */
-    public function getSessions()
+    protected function readSessions()
     {
         // Get data
         $data = json_decode($this->data, TRUE);
@@ -70,7 +70,7 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
         foreach ($sessions_data as $session_data)
         {
             // Init session
-            $session = new Session;
+            $session = Session::createInstance();
 
             // Get participants (do for each session to prevent re-used objects
             // between sessions)
@@ -83,11 +83,8 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
                 $driver->setName(Helper::arrayGet($player_data, 'name'));
 
                 // Create participant and add driver
-                $participant = new Participant;
+                $participant = Participant::createInstance();
                 $participant->setDrivers(array($driver))
-                            // No grid position yet. Can't figure out in AC log
-                            // files
-                            // ->setGridPosition($player_index+1)
                             ->setFinishStatus(Participant::FINISH_NORMAL);
 
                 // Create vehicle and add to participant
@@ -197,67 +194,19 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
 
                 $participants = $participants_sorted;
             }
-            // Is race result
-            elseif ($session->getType() === Session::TYPE_RACE)
-            {
-                // Sort participants by total time
-                $participants =
-                    Helper::sortParticipantsByTotalTime($participants);
-            }
-            // Is practice or qualify
+            // No predefined result
             else
             {
-                // Sort by best lap
-                $participants =
-                    Helper::sortParticipantsByBestLap($participants);
-            }
-
-            // Fix participant positions
-            foreach ($participants as $key => $part)
-            {
-                $part->setPosition($key+1);
-            }
-
-            // Set participants (sorted)
-            $session->setParticipants($participants);
-
-
-            // Fix elapsed seconds for all participant laps
-            foreach ($participants as $participant)
-            {
-               $elapsed_time = 0;
-               foreach ($participant->getLaps() as $lap)
-               {
-                    // Set elapsed seconds and increment it
-                    $lap->setElapsedSeconds($elapsed_time);
-                    $elapsed_time += $lap->getTime();
-               }
-            }
-
-
-            // Fix driver positions for laps
-            $session_lasted_laps = $session->getLastedLaps();
-
-            // Loop each lap number, beginning from 2, because we can't
-            // figure out positions for lap 1 in AC
-            for($i=2; $i <= $session_lasted_laps; $i++)
-            {
-                // Get laps by lap number from session
-                $laps_sorted = $session->getLapsByLapNumberSortedByTime($i);
-
-                // Sort the laps by elapsed time
-                $laps_sorted = Helper::sortLapsByElapsedTime($laps_sorted);
-
-                // Loop each lap and fix position data
-                foreach ($laps_sorted as $lap_key => $lap)
-                {
-                    // Fix lap position
-                    $lap->setPosition($lap_key+1);
-                }
+                // Sort participants
+                $this->sortParticipantsAndFixPositions($participants, $session);
             }
 
             // Add extras to session
             $session->setOtherSettings($extras);
+
+
+            // Set participants (sorted)
+            $session->setParticipants($participants);
 
             // Add session to collection
             $sessions[] = $session;
