@@ -433,6 +433,32 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertSame(7, $laps[2]->getPosition());
     }
 
+    /**
+     * Test reading detailed cuts data
+     */
+    public function testCuts()
+    {
+        // Get participants
+        $participants = $this->getWorkingReader()->getSession(5)
+            ->getParticipants();
+
+
+        // Get the laps of second participants (first is missing a lap)
+        $participant = $participants[1];
+        $laps = $participant->getLaps();
+
+        // Second lap cuts
+        $cuts = $laps[1]->getCuts();
+
+        // Validate
+        $this->assertSame(3, count($cuts));
+        $this->assertSame(2.8780, $cuts[0]->getCutTime());
+        $this->assertSame(2.7480, $cuts[0]->getTimeSkipped());
+        $this->assertSame(1446150159, $cuts[0]->getDate()->getTimestamp());
+        $this->assertSame(137, $cuts[0]->getElapsedSeconds());
+        $this->assertSame($laps[1], $cuts[0]->getLap());
+    }
+
 
     /**
      * Test reading incidents between cars
@@ -450,6 +476,7 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
             $incidents[0]->getMessage());
         $this->assertSame(1446150056,
             $incidents[0]->getDate()->getTimestamp());
+        $this->assertSame(34, $incidents[0]->getElapsedSeconds());
 
         // Validate incident that would have a unknown participant. But now
         // it should not because we ignore these
@@ -459,6 +486,7 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
             $incidents[5]->getMessage());
         $this->assertSame(1446150147,
             $incidents[5]->getDate()->getTimestamp());
+        $this->assertSame(125, $incidents[5]->getElapsedSeconds());
     }
 
 

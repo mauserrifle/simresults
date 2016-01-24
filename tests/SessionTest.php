@@ -5,6 +5,7 @@ use Simresults\Vehicle;
 use Simresults\Session;
 use Simresults\Incident;
 use Simresults\Lap;
+use Simresults\Cut;
 
 /**
  * Tests for the session.
@@ -513,6 +514,31 @@ class SessionTest extends PHPUnit_Framework_TestCase {
         $this->assertNotSame($participants, $session->getParticipants());
     }
 
+    /**
+     * Test getting cuts sorted by the datetime
+     */
+    public function testGettingCutsSortedByDateTime()
+    {
+        // Get session
+        $session = $this->getSessionWithData();
+
+        // Get cuts
+        $cuts = $session->getCuts();
+
+        // Validate cuts order
+        $this->assertSame(1, $cuts[0]->getCutTime());
+        $this->assertSame(2, $cuts[0]->getTimeSkipped());
+
+        $this->assertSame(3, $cuts[1]->getCutTime());
+        $this->assertSame(4, $cuts[1]->getTimeSkipped());
+
+        $this->assertSame(5, $cuts[2]->getCutTime());
+        $this->assertSame(6, $cuts[2]->getTimeSkipped());
+
+        $this->assertSame(7, $cuts[3]->getCutTime());
+        $this->assertSame(8, $cuts[3]->getTimeSkipped());
+    }
+
 
     /**
      * Get a Session instance populated with test data.
@@ -539,6 +565,12 @@ class SessionTest extends PHPUnit_Framework_TestCase {
                         'time'      => 130.7517,
                         'sectors'    => array(53.2312, 32.2990, 45.2215),
                         'position'  => 1,
+                        'cuts'      => array (
+                            array(
+                            'cut_time'     => 3,
+                            'time_skipped' => 4,
+                            'time'         => time()+20,
+                        )),
                     ),
                     array(
                         'time'      => 125.2989,
@@ -549,6 +581,16 @@ class SessionTest extends PHPUnit_Framework_TestCase {
                         'time'      => 123.3179,
                         'sectors'    => array(46.6382, 32.0084, 44.6712),
                         'position'  => 1,
+                        'cuts'      => array (
+                            array(
+                            'cut_time'     => 5,
+                            'time_skipped' => 6,
+                            'time'         => time()+200),
+                           array(
+                            'cut_time'     => 7,
+                            'time_skipped' => 8,
+                            'time'         => time()+220),
+                        ),
                     ),
                 ),
             ),
@@ -562,6 +604,12 @@ class SessionTest extends PHPUnit_Framework_TestCase {
                         'time'      => 130.9077,
                         'sectors'    => array(54.0223, 32.3176, 44.5677),
                         'position'  => 2,
+                        'cuts'      => array (
+                            array(
+                            'cut_time'     => 1,
+                            'time_skipped' => 2,
+                            'time'         => time(),
+                        )),
                     ),
                     array(
                         'time'      => 125.6976,
@@ -665,6 +713,23 @@ class SessionTest extends PHPUnit_Framework_TestCase {
                     ->setNumber(($lap_key+1))
                     ->setPosition($lap_data['position'])
                     ->setParticipant($participant);
+
+                // Process cuts
+                if (isset($lap_data['cuts']))
+                {
+                    foreach ($lap_data['cuts'] as $cut_data)
+                    {
+                        $cut = new Cut;
+                        $cut->setCutTime($cut_data['cut_time']);
+                        $cut->setTimeSkipped($cut_data['time_skipped']);
+
+                        $date = new \DateTime;
+                        $date->setTimestamp($cut_data['time']);
+                        $cut->setDate($date);
+
+                        $lap->addCut($cut);
+                    }
+                }
 
                 // Add lap to participant
                 $participant->addLap($lap);

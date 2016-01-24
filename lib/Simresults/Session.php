@@ -815,6 +815,64 @@ class Session {
     }
 
     /**
+     * Get the cuts sorted by datetime
+     *
+     * @return  array
+     */
+    public function getCuts()
+    {
+        // Init cuts
+        $cuts = array();
+
+        // Loop each participant
+        foreach ($this->getParticipants() as $participant)
+        {
+            foreach ($participant->getLaps() as $lap)
+            {
+                // Collect cuts of participant
+                $cuts = array_merge($cuts, $lap->getCuts());
+            }
+        }
+
+        // Sort cuts
+        usort($cuts, function($a, $b) {
+
+            // Get dates
+            $a_date = $a->getDate();
+            $b_date = $b->getDate();
+
+            // Both cuts have no date
+            if ($a_date === null AND $b_date === null)
+            {
+                // Same
+                return 0;
+            }
+
+            // a has no date
+            if ( $a_date === null)
+            {
+                return 1;
+            }
+
+            // b has no date
+            if ( $b_date === null)
+            {
+                return -1;
+            }
+
+            // Same date
+             if ($a_date === $b_date) {
+                return 0;
+            }
+
+            // Return normal comparison
+            return (($a_date < $b_date) ? -1 : 1);
+        });
+
+        return $cuts;
+    }
+
+    /**
      * Get the participant that led the most
      *
      * @return  Participant|null

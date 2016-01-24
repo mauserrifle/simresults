@@ -295,6 +295,11 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                         $date = new \DateTime;
                         $date->setTimestamp($event['time']);
                         $incident->setDate($date);
+                        $incident->setElapsedSeconds(
+                            $date->getTimestamp()
+                            -
+                            $session->getDate()->getTimestamp()
+                        );
 
                         $session->addIncident($incident);
                     }
@@ -401,9 +406,6 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                     if ($event['event_name'] === 'CutTrackStart' AND
                         $lap = $part->getLap($event['attributes']['Lap']+1))
                     {
-                        // Add cut
-                        $lap->addCut();
-
                         // Find the end of cutting by looping following events
                         for ($end_key=$key+1; $end_key < count($cut_data);
                                  $end_key++)
@@ -413,12 +415,29 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                             if ($next_event['event_name'] === 'CutTrackEnd' AND
                                 $next_event['participantid'] == $event['participantid'])
                             {
-                                $lap->addCutsTime(round(
+
+                                $cut = new Cut;
+                                $cut->setCutTime(round(
                                     $next_event['attributes']['ElapsedTime']
                                     / 1000, 4));
-                                $lap->addCutsTimeSkipped(round(
+                                $cut->setTimeSkipped(round(
                                     $next_event['attributes']['SkippedTime']
                                     / 1000, 4));
+
+
+                                $date = new \DateTime;
+                                $date->setTimestamp($next_event['time']);
+                                $date->setTimezone(new \DateTimeZone(
+                                    self::$default_timezone));
+                                $cut->setDate($date);
+                                $cut->setLap($lap);
+                                $cut->setElapsedSeconds(
+                                    $date->getTimestamp()
+                                    -
+                                    $session->getDate()->getTimestamp()
+                                );
+
+                                $lap->addCut($cut);
 
                                 // Stop searching
                                 break;
