@@ -125,8 +125,7 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
-     * Test reading the best laps from a log that has no events (thus no laps).
-     * We fallback to "FastestLapTime" within the results data.
+     * Test reading  DNF states
      */
     public function testReadingDNFstates()
     {
@@ -137,12 +136,21 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
         // Get the data reader for the given data source
         $sessions = Data_Reader::factory($file_path)->getSessions();
 
-        // Get participants
+        // Get participants of 10th session
         $participants = $sessions[9]->getParticipants();
 
         // Test DNF status
         $this->assertSame(Participant::FINISH_DNF,
             $participants[1]->getFinishStatus());
+
+        // Get participants of last session
+        $participants = $sessions[count($sessions)-1]->getParticipants();
+
+        // Test retired status as DNF
+        $this->assertSame('[CAV] F1_Racer68',
+            $participants[4]->getDriver()->getName());
+        $this->assertSame(Participant::FINISH_DNF,
+            $participants[4]->getFinishStatus());
     }
 
 

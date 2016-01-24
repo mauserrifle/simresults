@@ -331,7 +331,8 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                         }
 
                         // Has DNF state
-                        if ($result['attributes']['State'] === 'DNF')
+                        if (in_array(strtolower($result['attributes']['State']),
+                                array('dnf', 'retired')))
                         {
                             // Get participant
                             $part = $participants_by_id[$result['participantid']];
