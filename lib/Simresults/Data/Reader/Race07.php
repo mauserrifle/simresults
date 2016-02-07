@@ -240,8 +240,9 @@ class Data_Reader_Race07 extends Data_Reader {
             // Has race time information
             if ($race_time = Helper::arrayGet($driver_data, 'racetime'))
             {
-                // Not dnf by default if it's not 0:00:00.000
-                $set_dnf = ($race_time === '0:00:00.000');
+                // Not dnf by default if it's not 0:00:00.000 or dnf
+                $set_dnf = ($race_time === '0:00:00.000' OR
+                            $race_time === 'DNF');
 
                 // Try setting seconds if not dnf
                 if ( ! $set_dnf)
