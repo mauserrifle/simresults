@@ -411,9 +411,18 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                         for ($end_key=$key+1; $end_key < count($cut_data);
                                  $end_key++)
                         {
-                            // Next event is end of current cut
                             $next_event = $cut_data[$end_key];
-                            if ($next_event['event_name'] === 'CutTrackEnd' AND
+
+                            // Next event is another cut start. Ignore current
+                            // cut as theres no proper end data
+                            if ($next_event['event_name'] === 'CutTrackStart' AND
+                                $next_event['participantid'] == $event['participantid'])
+                            {
+                                // Theres no end
+                                break;
+                            }
+                            // Next event is end of current cut
+                            elseif ($next_event['event_name'] === 'CutTrackEnd' AND
                                 $next_event['participantid'] == $event['participantid'])
                             {
 

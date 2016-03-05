@@ -233,6 +233,29 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertSame(1.434, $laps[1]->getCutsTime());
     }
 
+    /**
+     * Test whether we filter out cuts without end data
+     */
+    public function testFilteringOutCutsWithoutEndData()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/projectcars-server/missing.cut.end.data.json');
+
+        // Get race session
+        $session = Data_Reader::factory($file_path)->getSession(3);
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Get laps of third participant
+        $laps = $participants[2]->getLaps();
+
+        // Validate that lap 20 does not have cuts and lap 24 does
+        $this->assertSame(0, $laps[19]->getNumberOfCuts());
+        $this->assertSame(1, $laps[23]->getNumberOfCuts());
+    }
+
 
 
     /***
