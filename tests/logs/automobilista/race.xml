@@ -1,0 +1,1706 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE rF [
+<!ENTITY rFEnt "rFactor Entity">
+]>
+<rFactorXML version="1.0">
+<RaceResults>
+<Setting>Season</Setting>
+<PlayerFile>Maurice</PlayerFile>
+<DateTime>1456939641</DateTime>
+<TimeString>2016/03/02 18:27:21</TimeString>
+<Mod>reiza06.srs</Mod>
+<Season>Formula 3 Brasil</Season>
+<TrackVenue>Taruma</TrackVenue>
+<TrackCourse>Taruma</TrackCourse>
+<TrackEvent>Taruma</TrackEvent>
+<TrackLength>3038.6</TrackLength>
+<GameVersion>2.000</GameVersion>
+<Dedicated>0</Dedicated>
+<ConnectionType upload="64" download="64">ISDN</ConnectionType>
+<RaceLaps>0</RaceLaps>
+<RaceTime>20</RaceTime>
+<MechFailRate>1</MechFailRate>
+<DamageMult>50</DamageMult>
+<FuelMult>1</FuelMult>
+<TireMult>1</TireMult>
+<VehiclesAllowed>|F301|F309</VehiclesAllowed>
+<ParcFerme>3</ParcFerme>
+<FixedSetups>0</FixedSetups>
+<FreeSettings>255</FreeSettings>
+<FixedUpgrades>0</FixedUpgrades>
+<Race>
+<DateTime>1456941184</DateTime>
+<TimeString>2016/03/02 18:53:04</TimeString>
+<Laps>2147483647</Laps>
+<Minutes>20</Minutes>
+<Stream>
+<Score et="6.2">L食o Oliveira(13) lap=0 point=0 t=-1.000 et=6.166</Score>
+<Score et="6.2">Maurice(14) lap=0 point=0 t=-1.000 et=6.220</Score>
+<Score et="6.5">Andrew collins(9) lap=0 point=0 t=-1.000 et=6.436</Score>
+<Score et="6.5">Carlos Zemantese(4) lap=0 point=0 t=-1.000 et=6.457</Score>
+<Score et="6.7">Chrsitiano Kortes(6) lap=0 point=0 t=-1.000 et=6.684</Score>
+<Score et="6.7">Th食o Straplo(11) lap=0 point=0 t=-1.000 et=6.699</Score>
+<Score et="7.0">Georgio Hamda(2) lap=0 point=0 t=-1.000 et=6.930</Score>
+<Score et="7.0">Ruan Lanchiaro(7) lap=0 point=0 t=-1.000 et=6.962</Score>
+<Score et="7.2">Raoul Dropes(12) lap=0 point=0 t=-1.000 et=7.150</Score>
+<Score et="7.2">Jeremy Davis(3) lap=0 point=0 t=-1.000 et=7.215</Score>
+<Score et="7.4">Felipe Amorio(10) lap=0 point=0 t=-1.000 et=7.426</Score>
+<Score et="7.5">Pedro Montil(0) lap=0 point=0 t=-1.000 et=7.488</Score>
+<Score et="7.7">Thiago Izequiel(5) lap=0 point=0 t=-1.000 et=7.675</Score>
+<Score et="7.8">Marcio Jamirez(1) lap=0 point=0 t=-1.000 et=7.734</Score>
+<Score et="7.9">Karl Anderson(8) lap=0 point=0 t=-1.000 et=7.920</Score>
+<Score et="24.1">L食o Oliveira(13) lap=0 point=1 t=17.921 et=24.088</Score>
+<Score et="24.6">Andrew collins(9) lap=0 point=1 t=18.163 et=24.599</Score>
+<Score et="25.1">Th食o Straplo(11) lap=0 point=1 t=18.393 et=25.092</Score>
+<Score et="25.7">Georgio Hamda(2) lap=0 point=1 t=18.790 et=25.720</Score>
+<Score et="26.4">Ruan Lanchiaro(7) lap=0 point=1 t=19.396 et=26.358</Score>
+<Score et="26.7">Carlos Zemantese(4) lap=0 point=1 t=20.213 et=26.670</Score>
+<Score et="26.9">Raoul Dropes(12) lap=0 point=1 t=19.680 et=26.830</Score>
+<Score et="27.7">Maurice(14) lap=0 point=1 t=21.489 et=27.710</Score>
+<Score et="27.8">Chrsitiano Kortes(6) lap=0 point=1 t=21.126 et=27.809</Score>
+<Score et="27.9">Jeremy Davis(3) lap=0 point=1 t=20.705 et=27.920</Score>
+<Score et="28.2">Felipe Amorio(10) lap=0 point=1 t=20.723 et=28.148</Score>
+<Score et="28.3">Pedro Montil(0) lap=0 point=1 t=20.789 et=28.278</Score>
+<Score et="28.5">Thiago Izequiel(5) lap=0 point=1 t=20.798 et=28.472</Score>
+<Score et="28.6">Marcio Jamirez(1) lap=0 point=1 t=20.843 et=28.577</Score>
+<Score et="28.7">Karl Anderson(8) lap=0 point=1 t=20.793 et=28.713</Score>
+<Score et="50.4">L食o Oliveira(13) lap=0 point=2 t=44.176 et=50.343</Score>
+<Score et="50.9">Andrew collins(9) lap=0 point=2 t=44.439 et=50.876</Score>
+<Score et="51.4">Th食o Straplo(11) lap=0 point=2 t=44.639 et=51.339</Score>
+<Score et="52.1">Georgio Hamda(2) lap=0 point=2 t=45.104 et=52.034</Score>
+<Score et="53.0">Ruan Lanchiaro(7) lap=0 point=2 t=46.043 et=53.004</Score>
+<Score et="53.3">Carlos Zemantese(4) lap=0 point=2 t=46.827 et=53.284</Score>
+<Score et="54.0">Maurice(14) lap=0 point=2 t=47.751 et=53.972</Score>
+<Score et="54.3">Raoul Dropes(12) lap=0 point=2 t=47.099 et=54.249</Score>
+<Score et="54.4">Chrsitiano Kortes(6) lap=0 point=2 t=47.725 et=54.409</Score>
+<Score et="54.6">Jeremy Davis(3) lap=0 point=2 t=47.320 et=54.535</Score>
+<Score et="55.1">Felipe Amorio(10) lap=0 point=2 t=47.608 et=55.034</Score>
+<Score et="55.2">Pedro Montil(0) lap=0 point=2 t=47.735 et=55.224</Score>
+<Score et="55.4">Thiago Izequiel(5) lap=0 point=2 t=47.687 et=55.361</Score>
+<Score et="55.7">Marcio Jamirez(1) lap=0 point=2 t=47.912 et=55.646</Score>
+<Score et="56.0">Karl Anderson(8) lap=0 point=2 t=48.063 et=55.983</Score>
+<Score et="67.0">L食o Oliveira(13) lap=1 point=0 t=60.838 et=67.005</Score>
+<Score et="67.6">Andrew collins(9) lap=1 point=0 t=61.145 et=67.581</Score>
+<Score et="68.1">Th食o Straplo(11) lap=1 point=0 t=61.379 et=68.079</Score>
+<Score et="68.8">Georgio Hamda(2) lap=1 point=0 t=61.820 et=68.750</Score>
+<Score et="70.0">Ruan Lanchiaro(7) lap=1 point=0 t=63.024 et=69.985</Score>
+<Score et="70.2">Carlos Zemantese(4) lap=1 point=0 t=63.759 et=70.216</Score>
+<Score et="70.3">Maurice(14) lap=1 point=0 t=64.082 et=70.303</Score>
+<Score et="71.3">Raoul Dropes(12) lap=1 point=0 t=64.103 et=71.253</Score>
+<Score et="71.4">Chrsitiano Kortes(6) lap=1 point=0 t=64.695 et=71.379</Score>
+<Score et="71.8">Jeremy Davis(3) lap=1 point=0 t=64.594 et=71.810</Score>
+<Score et="72.4">Felipe Amorio(10) lap=1 point=0 t=64.998 et=72.424</Score>
+<Score et="72.6">Pedro Montil(0) lap=1 point=0 t=65.074 et=72.562</Score>
+<Score et="72.7">Thiago Izequiel(5) lap=1 point=0 t=65.017 et=72.692</Score>
+<Score et="72.9">Marcio Jamirez(1) lap=1 point=0 t=65.178 et=72.911</Score>
+<Score et="73.2">Karl Anderson(8) lap=1 point=0 t=65.260 et=73.180</Score>
+<Incident et="80.1">Carlos Zemantese(4) reported contact (0.29) with another vehicle Maurice(14)</Incident>
+<Score et="84.4">L食o Oliveira(13) lap=1 point=1 t=17.344 et=84.349</Score>
+<Score et="84.9">Andrew collins(9) lap=1 point=1 t=17.320 et=84.902</Score>
+<Score et="85.4">Th食o Straplo(11) lap=1 point=1 t=17.347 et=85.426</Score>
+<Score et="86.1">Georgio Hamda(2) lap=1 point=1 t=17.352 et=86.102</Score>
+<Score et="88.0">Ruan Lanchiaro(7) lap=1 point=1 t=17.976 et=87.962</Score>
+<Score et="88.6">Carlos Zemantese(4) lap=1 point=1 t=18.383 et=88.599</Score>
+<Score et="88.7">Maurice(14) lap=1 point=1 t=18.402 et=88.705</Score>
+<Score et="89.3">Raoul Dropes(12) lap=1 point=1 t=17.998 et=89.250</Score>
+<Score et="89.4">Chrsitiano Kortes(6) lap=1 point=1 t=18.014 et=89.393</Score>
+<Score et="89.9">Jeremy Davis(3) lap=1 point=1 t=18.076 et=89.885</Score>
+<Score et="90.4">Felipe Amorio(10) lap=1 point=1 t=17.999 et=90.422</Score>
+<Score et="91.0">Pedro Montil(0) lap=1 point=1 t=18.393 et=90.955</Score>
+<Score et="91.1">Thiago Izequiel(5) lap=1 point=1 t=18.423 et=91.114</Score>
+<Score et="91.4">Marcio Jamirez(1) lap=1 point=1 t=18.486 et=91.397</Score>
+<Score et="91.8">Karl Anderson(8) lap=1 point=1 t=18.594 et=91.774</Score>
+<Incident et="105.7">Ruan Lanchiaro(7) reported contact (0.13) with another vehicle Maurice(14)</Incident>
+<Score et="110.5">L食o Oliveira(13) lap=1 point=2 t=43.458 et=110.463</Score>
+<Score et="111.1">Andrew collins(9) lap=1 point=2 t=43.458 et=111.040</Score>
+<Score et="111.7">Th食o Straplo(11) lap=1 point=2 t=43.554 et=111.632</Score>
+<Score et="112.2">Georgio Hamda(2) lap=1 point=2 t=43.421 et=112.171</Score>
+<Score et="114.4">Maurice(14) lap=1 point=2 t=44.086 et=114.389</Score>
+<Score et="114.6">Ruan Lanchiaro(7) lap=1 point=2 t=44.544 et=114.530</Score>
+<Score et="115.0">Carlos Zemantese(4) lap=1 point=2 t=44.759 et=114.976</Score>
+<Score et="115.7">Chrsitiano Kortes(6) lap=1 point=2 t=44.302 et=115.681</Score>
+<Score et="116.0">Raoul Dropes(12) lap=1 point=2 t=44.730 et=115.982</Score>
+<Score et="116.6">Jeremy Davis(3) lap=1 point=2 t=44.744 et=116.554</Score>
+<Score et="117.0">Felipe Amorio(10) lap=1 point=2 t=44.597 et=117.020</Score>
+<Score et="117.5">Pedro Montil(0) lap=1 point=2 t=44.910 et=117.472</Score>
+<Score et="117.9">Thiago Izequiel(5) lap=1 point=2 t=45.195 et=117.887</Score>
+<Score et="118.3">Marcio Jamirez(1) lap=1 point=2 t=45.345 et=118.256</Score>
+<Score et="118.7">Karl Anderson(8) lap=1 point=2 t=45.515 et=118.695</Score>
+<Score et="127.1">L食o Oliveira(13) lap=2 point=0 t=60.072 et=127.076</Score>
+<Score et="127.7">Andrew collins(9) lap=2 point=0 t=60.054 et=127.635</Score>
+<Score et="128.3">Th食o Straplo(11) lap=2 point=0 t=60.149 et=128.227</Score>
+<Score et="128.8">Georgio Hamda(2) lap=2 point=0 t=60.023 et=128.773</Score>
+<Score et="130.4">Maurice(14) lap=2 point=0 t=60.065 et=130.367</Score>
+<Score et="131.5">Ruan Lanchiaro(7) lap=2 point=0 t=61.499 et=131.484</Score>
+<Score et="131.7">Carlos Zemantese(4) lap=2 point=0 t=61.507 et=131.723</Score>
+<Score et="132.3">Chrsitiano Kortes(6) lap=2 point=0 t=60.944 et=132.324</Score>
+<Score et="133.2">Raoul Dropes(12) lap=2 point=0 t=61.883 et=133.136</Score>
+<Score et="133.8">Jeremy Davis(3) lap=2 point=0 t=61.987 et=133.797</Score>
+<Score et="134.3">Felipe Amorio(10) lap=2 point=0 t=61.841 et=134.264</Score>
+<Score et="134.7">Pedro Montil(0) lap=2 point=0 t=62.112 et=134.674</Score>
+<Score et="135.2">Thiago Izequiel(5) lap=2 point=0 t=62.441 et=135.133</Score>
+<Score et="135.7">Marcio Jamirez(1) lap=2 point=0 t=62.748 et=135.660</Score>
+<Score et="135.9">Karl Anderson(8) lap=2 point=0 t=62.671 et=135.850</Score>
+<Score et="144.4">L食o Oliveira(13) lap=2 point=1 t=17.251 et=144.328</Score>
+<Score et="144.9">Andrew collins(9) lap=2 point=1 t=17.278 et=144.913</Score>
+<Score et="145.5">Th食o Straplo(11) lap=2 point=1 t=17.265 et=145.492</Score>
+<Score et="146.1">Georgio Hamda(2) lap=2 point=1 t=17.308 et=146.081</Score>
+<Score et="147.2">Maurice(14) lap=2 point=1 t=16.774 et=147.141</Score>
+<Score et="149.3">Ruan Lanchiaro(7) lap=2 point=1 t=17.810 et=149.294</Score>
+<Score et="149.5">Carlos Zemantese(4) lap=2 point=1 t=17.736 et=149.459</Score>
+<Score et="149.7">Chrsitiano Kortes(6) lap=2 point=1 t=17.357 et=149.681</Score>
+<Score et="151.1">Raoul Dropes(12) lap=2 point=1 t=17.912 et=151.048</Score>
+<Score et="151.7">Jeremy Davis(3) lap=2 point=1 t=17.899 et=151.696</Score>
+<Score et="152.3">Felipe Amorio(10) lap=2 point=1 t=17.969 et=152.233</Score>
+<Score et="152.7">Pedro Montil(0) lap=2 point=1 t=17.968 et=152.642</Score>
+<Score et="153.3">Thiago Izequiel(5) lap=2 point=1 t=18.109 et=153.242</Score>
+<Score et="153.9">Marcio Jamirez(1) lap=2 point=1 t=18.195 et=153.855</Score>
+<Score et="154.1">Karl Anderson(8) lap=2 point=1 t=18.274 et=154.125</Score>
+<Score et="170.4">L食o Oliveira(13) lap=2 point=2 t=43.289 et=170.365</Score>
+<Score et="171.0">Andrew collins(9) lap=2 point=2 t=43.371 et=171.007</Score>
+<Score et="171.7">Th食o Straplo(11) lap=2 point=2 t=43.407 et=171.634</Score>
+<Score et="172.2">Georgio Hamda(2) lap=2 point=2 t=43.395 et=172.168</Score>
+<Score et="172.6">Maurice(14) lap=2 point=2 t=42.178 et=172.546</Score>
+<Score et="175.5">Carlos Zemantese(4) lap=2 point=2 t=43.762 et=175.486</Score>
+<Score et="175.9">Ruan Lanchiaro(7) lap=2 point=2 t=44.392 et=175.876</Score>
+<Score et="176.2">Chrsitiano Kortes(6) lap=2 point=2 t=43.813 et=176.137</Score>
+<Score et="177.6">Raoul Dropes(12) lap=2 point=2 t=44.401 et=177.537</Score>
+<Score et="178.2">Jeremy Davis(3) lap=2 point=2 t=44.415 et=178.212</Score>
+<Score et="178.8">Felipe Amorio(10) lap=2 point=2 t=44.561 et=178.826</Score>
+<Score et="179.4">Pedro Montil(0) lap=2 point=2 t=44.684 et=179.358</Score>
+<Score et="179.7">Thiago Izequiel(5) lap=2 point=2 t=44.581 et=179.714</Score>
+<Score et="180.5">Marcio Jamirez(1) lap=2 point=2 t=44.833 et=180.493</Score>
+<Score et="181.1">Karl Anderson(8) lap=2 point=2 t=45.230 et=181.081</Score>
+<Score et="187.0">L食o Oliveira(13) lap=3 point=0 t=59.866 et=186.942</Score>
+<Score et="187.6">Andrew collins(9) lap=3 point=0 t=59.900 et=187.535</Score>
+<Score et="188.2">Th食o Straplo(11) lap=3 point=0 t=59.945 et=188.173</Score>
+<Score et="188.7">Maurice(14) lap=3 point=0 t=58.288 et=188.655</Score>
+<Score et="188.8">Georgio Hamda(2) lap=3 point=0 t=60.018 et=188.790</Score>
+<Score et="192.1">Carlos Zemantese(4) lap=3 point=0 t=60.360 et=192.083</Score>
+<Score et="193.2">Ruan Lanchiaro(7) lap=3 point=0 t=61.645 et=193.129</Score>
+<Score et="193.3">Chrsitiano Kortes(6) lap=3 point=0 t=60.947 et=193.271</Score>
+<Score et="194.4">Raoul Dropes(12) lap=3 point=0 t=61.252 et=194.388</Score>
+<Score et="195.4">Jeremy Davis(3) lap=3 point=0 t=61.613 et=195.409</Score>
+<Score et="196.0">Felipe Amorio(10) lap=3 point=0 t=61.760 et=196.024</Score>
+<Score et="196.6">Pedro Montil(0) lap=3 point=0 t=61.915 et=196.590</Score>
+<Score et="197.1">Thiago Izequiel(5) lap=3 point=0 t=61.929 et=197.062</Score>
+<Score et="197.9">Marcio Jamirez(1) lap=3 point=0 t=62.171 et=197.830</Score>
+<Score et="198.5">Karl Anderson(8) lap=3 point=0 t=62.610 et=198.460</Score>
+<Score et="204.2">L食o Oliveira(13) lap=3 point=1 t=17.199 et=204.140</Score>
+<Score et="204.8">Andrew collins(9) lap=3 point=1 t=17.201 et=204.736</Score>
+<Score et="205.4">Th食o Straplo(11) lap=3 point=1 t=17.187 et=205.359</Score>
+<Score et="205.6">Maurice(14) lap=3 point=1 t=16.917 et=205.572</Score>
+<Score et="206.3">Georgio Hamda(2) lap=3 point=1 t=17.495 et=206.285</Score>
+<Score et="209.3">Carlos Zemantese(4) lap=3 point=1 t=17.203 et=209.286</Score>
+<Score et="211.1">Ruan Lanchiaro(7) lap=3 point=1 t=17.933 et=211.062</Score>
+<Score et="211.2">Chrsitiano Kortes(6) lap=3 point=1 t=17.898 et=211.169</Score>
+<Score et="212.2">Raoul Dropes(12) lap=3 point=1 t=17.808 et=212.196</Score>
+<Score et="213.3">Jeremy Davis(3) lap=3 point=1 t=17.817 et=213.227</Score>
+<Score et="213.9">Felipe Amorio(10) lap=3 point=1 t=17.885 et=213.909</Score>
+<Score et="214.6">Pedro Montil(0) lap=3 point=1 t=17.960 et=214.550</Score>
+<Score et="214.9">Thiago Izequiel(5) lap=3 point=1 t=17.859 et=214.921</Score>
+<Score et="215.8">Marcio Jamirez(1) lap=3 point=1 t=17.971 et=215.801</Score>
+<Score et="216.6">Karl Anderson(8) lap=3 point=1 t=18.163 et=216.623</Score>
+<Score et="230.1">L食o Oliveira(13) lap=3 point=2 t=43.134 et=230.076</Score>
+<Score et="230.8">Andrew collins(9) lap=3 point=2 t=43.240 et=230.775</Score>
+<Score et="231.3">Th食o Straplo(11) lap=3 point=2 t=43.144 et=231.316</Score>
+<Score et="231.6">Maurice(14) lap=3 point=2 t=42.939 et=231.594</Score>
+<Score et="232.3">Georgio Hamda(2) lap=3 point=2 t=43.526 et=232.316</Score>
+<Score et="235.3">Carlos Zemantese(4) lap=3 point=2 t=43.190 et=235.273</Score>
+<Score et="237.6">Ruan Lanchiaro(7) lap=3 point=2 t=44.437 et=237.565</Score>
+<Score et="237.8">Chrsitiano Kortes(6) lap=3 point=2 t=44.524 et=237.795</Score>
+<Score et="238.6">Raoul Dropes(12) lap=3 point=2 t=44.216 et=238.603</Score>
+<Score et="239.6">Jeremy Davis(3) lap=3 point=2 t=44.186 et=239.595</Score>
+<Score et="240.3">Felipe Amorio(10) lap=3 point=2 t=44.276 et=240.300</Score>
+<Score et="240.9">Pedro Montil(0) lap=3 point=2 t=44.257 et=240.847</Score>
+<Score et="241.5">Thiago Izequiel(5) lap=3 point=2 t=44.392 et=241.454</Score>
+<Score et="242.4">Marcio Jamirez(1) lap=3 point=2 t=44.582 et=242.412</Score>
+<Score et="243.4">Karl Anderson(8) lap=3 point=2 t=44.885 et=243.345</Score>
+<Score et="246.6">L食o Oliveira(13) lap=4 point=0 t=59.681 et=246.623</Score>
+<Score et="247.3">Andrew collins(9) lap=4 point=0 t=59.748 et=247.284</Score>
+<Score et="247.8">Maurice(14) lap=4 point=0 t=59.161 et=247.816</Score>
+<Score et="247.9">Th食o Straplo(11) lap=4 point=0 t=59.690 et=247.862</Score>
+<Score et="248.9">Georgio Hamda(2) lap=4 point=0 t=60.065 et=248.855</Score>
+<Score et="251.8">Carlos Zemantese(4) lap=4 point=0 t=59.720 et=251.803</Score>
+<Score et="254.7">Chrsitiano Kortes(6) lap=4 point=0 t=61.380 et=254.651</Score>
+<Score et="254.7">Ruan Lanchiaro(7) lap=4 point=0 t=61.560 et=254.689</Score>
+<Score et="255.4">Raoul Dropes(12) lap=4 point=0 t=61.007 et=255.395</Score>
+<Score et="256.7">Jeremy Davis(3) lap=4 point=0 t=61.313 et=256.723</Score>
+<Score et="257.4">Felipe Amorio(10) lap=4 point=0 t=61.367 et=257.392</Score>
+<Score et="258.0">Pedro Montil(0) lap=4 point=0 t=61.354 et=257.944</Score>
+<Score et="258.6">Thiago Izequiel(5) lap=4 point=0 t=61.522 et=258.584</Score>
+<Score et="259.3">Marcio Jamirez(1) lap=4 point=0 t=61.487 et=259.318</Score>
+<Score et="260.4">Karl Anderson(8) lap=4 point=0 t=61.887 et=260.347</Score>
+<Score et="263.8">L食o Oliveira(13) lap=4 point=1 t=17.157 et=263.780</Score>
+<Score et="264.5">Andrew collins(9) lap=4 point=1 t=17.150 et=264.434</Score>
+<Score et="265.0">Maurice(14) lap=4 point=1 t=17.177 et=264.993</Score>
+<Score et="265.4">Th食o Straplo(11) lap=4 point=1 t=17.487 et=265.349</Score>
+<Score et="266.1">Georgio Hamda(2) lap=4 point=1 t=17.250 et=266.105</Score>
+<Score et="269.0">Carlos Zemantese(4) lap=4 point=1 t=17.151 et=268.954</Score>
+<Score et="271.9">Chrsitiano Kortes(6) lap=4 point=1 t=17.181 et=271.831</Score>
+<Score et="272.7">Ruan Lanchiaro(7) lap=4 point=1 t=18.033 et=272.721</Score>
+<Score et="273.3">Raoul Dropes(12) lap=4 point=1 t=17.847 et=273.242</Score>
+<Score et="274.5">Jeremy Davis(3) lap=4 point=1 t=17.791 et=274.513</Score>
+<Score et="275.2">Felipe Amorio(10) lap=4 point=1 t=17.809 et=275.201</Score>
+<Score et="275.8">Pedro Montil(0) lap=4 point=1 t=17.833 et=275.777</Score>
+<Score et="276.5">Thiago Izequiel(5) lap=4 point=1 t=17.851 et=276.435</Score>
+<Score et="277.3">Marcio Jamirez(1) lap=4 point=1 t=17.923 et=277.241</Score>
+<Score et="278.4">Karl Anderson(8) lap=4 point=1 t=17.997 et=278.344</Score>
+<Score et="289.7">L食o Oliveira(13) lap=4 point=2 t=43.046 et=289.669</Score>
+<Score et="290.4">Andrew collins(9) lap=4 point=2 t=43.083 et=290.367</Score>
+<Score et="290.6">Maurice(14) lap=4 point=2 t=42.771 et=290.586</Score>
+<Score et="291.4">Th食o Straplo(11) lap=4 point=2 t=43.466 et=291.329</Score>
+<Score et="291.9">Georgio Hamda(2) lap=4 point=2 t=43.031 et=291.886</Score>
+<Score et="294.9">Carlos Zemantese(4) lap=4 point=2 t=43.066 et=294.869</Score>
+<Score et="297.7">Chrsitiano Kortes(6) lap=4 point=2 t=43.070 et=297.720</Score>
+<Score et="299.1">Ruan Lanchiaro(7) lap=4 point=2 t=44.393 et=299.082</Score>
+<Score et="299.6">Raoul Dropes(12) lap=4 point=2 t=44.162 et=299.557</Score>
+<Score et="300.9">Jeremy Davis(3) lap=4 point=2 t=44.174 et=300.897</Score>
+<Score et="301.7">Felipe Amorio(10) lap=4 point=2 t=44.246 et=301.638</Score>
+<Score et="302.3">Pedro Montil(0) lap=4 point=2 t=44.380 et=302.324</Score>
+<Score et="302.9">Thiago Izequiel(5) lap=4 point=2 t=44.330 et=302.914</Score>
+<Score et="304.0">Marcio Jamirez(1) lap=4 point=2 t=44.683 et=304.001</Score>
+<Score et="305.1">Karl Anderson(8) lap=4 point=2 t=44.719 et=305.066</Score>
+<Score et="306.3">L食o Oliveira(13) lap=5 point=0 t=59.678 et=306.301</Score>
+<Score et="306.8">Maurice(14) lap=5 point=0 t=58.929 et=306.745</Score>
+<Score et="306.8">Andrew collins(9) lap=5 point=0 t=59.542 et=306.826</Score>
+<Score et="307.9">Th食o Straplo(11) lap=5 point=0 t=59.975 et=307.838</Score>
+<Score et="308.4">Georgio Hamda(2) lap=5 point=0 t=59.553 et=308.408</Score>
+<Score et="311.4">Carlos Zemantese(4) lap=5 point=0 t=59.569 et=311.372</Score>
+<Score et="314.3">Chrsitiano Kortes(6) lap=5 point=0 t=59.612 et=314.263</Score>
+<Score et="316.2">Ruan Lanchiaro(7) lap=5 point=0 t=61.506 et=316.195</Score>
+<Score et="316.6">Raoul Dropes(12) lap=5 point=0 t=61.220 et=316.616</Score>
+<Score et="318.0">Jeremy Davis(3) lap=5 point=0 t=61.273 et=317.995</Score>
+<Score et="318.5">Felipe Amorio(10) lap=5 point=0 t=61.062 et=318.454</Score>
+<Score et="319.5">Pedro Montil(0) lap=5 point=0 t=61.540 et=319.484</Score>
+<Score et="320.0">Thiago Izequiel(5) lap=5 point=0 t=61.388 et=319.972</Score>
+<Score et="321.0">Marcio Jamirez(1) lap=5 point=0 t=61.654 et=320.972</Score>
+<Score et="322.5">Karl Anderson(8) lap=5 point=0 t=62.161 et=322.508</Score>
+<Score et="323.5">L食o Oliveira(13) lap=5 point=1 t=17.213 et=323.514</Score>
+<Score et="323.6">Maurice(14) lap=5 point=1 t=16.856 et=323.601</Score>
+<Score et="324.3">Andrew collins(9) lap=5 point=1 t=17.493 et=324.318</Score>
+<Score et="325.1">Th食o Straplo(11) lap=5 point=1 t=17.201 et=325.039</Score>
+<Score et="325.6">Georgio Hamda(2) lap=5 point=1 t=17.166 et=325.574</Score>
+<Score et="328.5">Carlos Zemantese(4) lap=5 point=1 t=17.129 et=328.500</Score>
+<Score et="331.4">Chrsitiano Kortes(6) lap=5 point=1 t=17.101 et=331.364</Score>
+<Score et="334.0">Ruan Lanchiaro(7) lap=5 point=1 t=17.782 et=333.978</Score>
+<Score et="334.8">Raoul Dropes(12) lap=5 point=1 t=18.126 et=334.741</Score>
+<Score et="335.8">Jeremy Davis(3) lap=5 point=1 t=17.786 et=335.782</Score>
+<Score et="336.3">Felipe Amorio(10) lap=5 point=1 t=17.823 et=336.277</Score>
+<Score et="337.3">Pedro Montil(0) lap=5 point=1 t=17.766 et=337.250</Score>
+<Score et="337.9">Thiago Izequiel(5) lap=5 point=1 t=17.885 et=337.857</Score>
+<Score et="338.9">Marcio Jamirez(1) lap=5 point=1 t=17.878 et=338.850</Score>
+<Incident et="340.3">L食o Oliveira(13) reported contact (0.13) with another vehicle Maurice(14)</Incident>
+<Score et="340.5">Karl Anderson(8) lap=5 point=1 t=18.009 et=340.517</Score>
+<Score et="349.3">L食o Oliveira(13) lap=5 point=2 t=42.929 et=349.230</Score>
+<Score et="350.3">Andrew collins(9) lap=5 point=2 t=43.449 et=350.275</Score>
+<Score et="351.0">Th食o Straplo(11) lap=5 point=2 t=43.138 et=350.976</Score>
+<Score et="351.2">Maurice(14) lap=5 point=2 t=44.398 et=351.143</Score>
+<Score et="351.6">Georgio Hamda(2) lap=5 point=2 t=43.178 et=351.585</Score>
+<Score et="354.4">Carlos Zemantese(4) lap=5 point=2 t=42.984 et=354.355</Score>
+<Score et="357.3">Chrsitiano Kortes(6) lap=5 point=2 t=43.016 et=357.278</Score>
+<Score et="360.3">Ruan Lanchiaro(7) lap=5 point=2 t=44.073 et=360.268</Score>
+<Score et="361.0">Raoul Dropes(12) lap=5 point=2 t=44.396 et=361.012</Score>
+<Score et="362.2">Jeremy Davis(3) lap=5 point=2 t=44.167 et=362.162</Score>
+<Score et="362.6">Felipe Amorio(10) lap=5 point=2 t=44.151 et=362.605</Score>
+<Score et="363.6">Pedro Montil(0) lap=5 point=2 t=44.117 et=363.601</Score>
+<Score et="364.2">Thiago Izequiel(5) lap=5 point=2 t=44.165 et=364.137</Score>
+<Score et="365.3">Marcio Jamirez(1) lap=5 point=2 t=44.297 et=365.269</Score>
+<Score et="365.7">L食o Oliveira(13) lap=6 point=0 t=59.398 et=365.699</Score>
+<Score et="366.8">Andrew collins(9) lap=6 point=0 t=59.929 et=366.755</Score>
+<Score et="367.2">Karl Anderson(8) lap=5 point=2 t=44.630 et=367.138</Score>
+<Score et="367.4">Maurice(14) lap=6 point=0 t=60.629 et=367.373</Score>
+<Score et="367.5">Th食o Straplo(11) lap=6 point=0 t=59.609 et=367.447</Score>
+<Score et="368.3">Georgio Hamda(2) lap=6 point=0 t=59.825 et=368.233</Score>
+<Score et="370.9">Carlos Zemantese(4) lap=6 point=0 t=59.481 et=370.852</Score>
+<Score et="373.8">Chrsitiano Kortes(6) lap=6 point=0 t=59.535 et=373.797</Score>
+<Score et="377.1">Ruan Lanchiaro(7) lap=6 point=0 t=60.863 et=377.058</Score>
+<Score et="378.1">Raoul Dropes(12) lap=6 point=0 t=61.434 et=378.050</Score>
+<Score et="379.3">Jeremy Davis(3) lap=6 point=0 t=61.263 et=379.259</Score>
+<Score et="379.8">Felipe Amorio(10) lap=6 point=0 t=61.274 et=379.728</Score>
+<Score et="380.4">Pedro Montil(0) lap=6 point=0 t=60.896 et=380.380</Score>
+<Score et="381.4">Thiago Izequiel(5) lap=6 point=0 t=61.364 et=381.336</Score>
+<Score et="382.2">Marcio Jamirez(1) lap=6 point=0 t=61.209 et=382.181</Score>
+<Score et="382.8">L食o Oliveira(13) lap=6 point=1 t=17.114 et=382.813</Score>
+<Score et="383.9">Andrew collins(9) lap=6 point=1 t=17.114 et=383.869</Score>
+<Score et="384.1">Karl Anderson(8) lap=6 point=0 t=61.599 et=384.107</Score>
+<Score et="384.2">Maurice(14) lap=6 point=1 t=16.776 et=384.150</Score>
+<Score et="385.0">Th食o Straplo(11) lap=6 point=1 t=17.554 et=385.001</Score>
+<Score et="385.4">Georgio Hamda(2) lap=6 point=1 t=17.146 et=385.379</Score>
+<Score et="388.0">Carlos Zemantese(4) lap=6 point=1 t=17.122 et=387.974</Score>
+<Score et="390.9">Chrsitiano Kortes(6) lap=6 point=1 t=17.125 et=390.922</Score>
+<Score et="394.7">Ruan Lanchiaro(7) lap=6 point=1 t=17.660 et=394.718</Score>
+<Score et="395.9">Raoul Dropes(12) lap=6 point=1 t=17.780 et=395.830</Score>
+<Score et="397.0">Jeremy Davis(3) lap=6 point=1 t=17.741 et=397.000</Score>
+<Score et="397.6">Felipe Amorio(10) lap=6 point=1 t=17.850 et=397.578</Score>
+<Score et="398.2">Pedro Montil(0) lap=6 point=1 t=17.776 et=398.156</Score>
+<Score et="399.1">Thiago Izequiel(5) lap=6 point=1 t=17.707 et=399.043</Score>
+<Score et="400.0">Marcio Jamirez(1) lap=6 point=1 t=17.809 et=399.990</Score>
+<Score et="402.1">Karl Anderson(8) lap=6 point=1 t=17.953 et=402.060</Score>
+<Score et="408.7">L食o Oliveira(13) lap=6 point=2 t=42.975 et=408.674</Score>
+<Score et="409.1">Maurice(14) lap=6 point=2 t=41.702 et=409.075</Score>
+<Score et="409.9">Andrew collins(9) lap=6 point=2 t=43.128 et=409.883</Score>
+<Score et="410.9">Th食o Straplo(11) lap=6 point=2 t=43.426 et=410.872</Score>
+<Score et="411.4">Georgio Hamda(2) lap=6 point=2 t=43.118 et=411.351</Score>
+<Score et="413.9">Carlos Zemantese(4) lap=6 point=2 t=43.019 et=413.871</Score>
+<Score et="416.9">Chrsitiano Kortes(6) lap=6 point=2 t=43.063 et=416.860</Score>
+<Score et="421.1">Ruan Lanchiaro(7) lap=6 point=2 t=43.996 et=421.054</Score>
+<Score et="422.1">Raoul Dropes(12) lap=6 point=2 t=44.014 et=422.064</Score>
+<Score et="423.4">Jeremy Davis(3) lap=6 point=2 t=44.073 et=423.331</Score>
+<Score et="424.0">Felipe Amorio(10) lap=6 point=2 t=44.204 et=423.933</Score>
+<Score et="424.6">Pedro Montil(0) lap=6 point=2 t=44.179 et=424.560</Score>
+<Score et="425.2">L食o Oliveira(13) lap=7 point=0 t=59.471 et=425.170</Score>
+<Score et="425.5">Thiago Izequiel(5) lap=6 point=2 t=44.100 et=425.436</Score>
+<Score et="425.6">Maurice(14) lap=7 point=0 t=58.157 et=425.531</Score>
+<Score et="426.4">Andrew collins(9) lap=7 point=0 t=59.576 et=426.331</Score>
+<Score et="426.6">Marcio Jamirez(1) lap=6 point=2 t=44.398 et=426.578</Score>
+<Score et="427.4">Th食o Straplo(11) lap=7 point=0 t=59.919 et=427.365</Score>
+<Score et="427.8">Georgio Hamda(2) lap=7 point=0 t=59.588 et=427.821</Score>
+<Score et="428.7">Karl Anderson(8) lap=6 point=2 t=44.609 et=428.716</Score>
+<Score et="430.4">Carlos Zemantese(4) lap=7 point=0 t=59.513 et=430.365</Score>
+<Score et="433.4">Chrsitiano Kortes(6) lap=7 point=0 t=59.554 et=433.351</Score>
+<Score et="438.1">Ruan Lanchiaro(7) lap=7 point=0 t=61.067 et=438.125</Score>
+<Score et="439.2">Raoul Dropes(12) lap=7 point=0 t=61.095 et=439.145</Score>
+<Score et="440.1">Jeremy Davis(3) lap=7 point=0 t=60.831 et=440.090</Score>
+<Score et="441.1">Felipe Amorio(10) lap=7 point=0 t=61.306 et=441.035</Score>
+<Score et="441.7">Pedro Montil(0) lap=7 point=0 t=61.272 et=441.652</Score>
+<Score et="442.3">L食o Oliveira(13) lap=7 point=1 t=17.105 et=442.275</Score>
+<Score et="442.4">Maurice(14) lap=7 point=1 t=16.870 et=442.401</Score>
+<Score et="442.6">Thiago Izequiel(5) lap=7 point=0 t=61.205 et=442.540</Score>
+<Score et="443.5">Andrew collins(9) lap=7 point=1 t=17.125 et=443.456</Score>
+<Score et="443.8">Marcio Jamirez(1) lap=7 point=0 t=61.564 et=443.745</Score>
+<Score et="444.5">Th食o Straplo(11) lap=7 point=1 t=17.114 et=444.479</Score>
+<Score et="445.1">Georgio Hamda(2) lap=7 point=1 t=17.267 et=445.088</Score>
+<Score et="446.1">Karl Anderson(8) lap=7 point=0 t=61.924 et=446.031</Score>
+<Score et="447.5">Carlos Zemantese(4) lap=7 point=1 t=17.132 et=447.497</Score>
+<Score et="450.5">Chrsitiano Kortes(6) lap=7 point=1 t=17.133 et=450.484</Score>
+<Score et="455.9">Ruan Lanchiaro(7) lap=7 point=1 t=17.726 et=455.850</Score>
+<Score et="456.9">Raoul Dropes(12) lap=7 point=1 t=17.763 et=456.908</Score>
+<Score et="457.7">Jeremy Davis(3) lap=7 point=1 t=17.636 et=457.725</Score>
+<Score et="458.8">Felipe Amorio(10) lap=7 point=1 t=17.716 et=458.751</Score>
+<Score et="459.4">Pedro Montil(0) lap=7 point=1 t=17.722 et=459.374</Score>
+<Score et="460.3">Thiago Izequiel(5) lap=7 point=1 t=17.768 et=460.308</Score>
+<Score et="461.7">Marcio Jamirez(1) lap=7 point=1 t=17.944 et=461.689</Score>
+<Score et="464.1">Karl Anderson(8) lap=7 point=1 t=18.007 et=464.039</Score>
+<Score et="469.4">L食o Oliveira(13) lap=7 point=2 t=44.214 et=469.384</Score>
+<Score et="469.9">Andrew collins(9) lap=7 point=2 t=43.538 et=469.868</Score>
+<Score et="470.6">Th食o Straplo(11) lap=7 point=2 t=43.173 et=470.538</Score>
+<Score et="471.5">Georgio Hamda(2) lap=7 point=2 t=43.630 et=471.451</Score>
+<Score et="472.2">Maurice(14) lap=7 point=2 t=46.634 et=472.165</Score>
+<Score et="473.4">Carlos Zemantese(4) lap=7 point=2 t=43.005 et=473.371</Score>
+<Score et="476.5">Chrsitiano Kortes(6) lap=7 point=2 t=43.105 et=476.456</Score>
+<Score et="482.3">Ruan Lanchiaro(7) lap=7 point=2 t=44.108 et=482.233</Score>
+<Score et="483.2">Raoul Dropes(12) lap=7 point=2 t=44.002 et=483.147</Score>
+<Score et="484.0">Jeremy Davis(3) lap=7 point=2 t=43.914 et=484.004</Score>
+<Score et="485.1">Felipe Amorio(10) lap=7 point=2 t=44.025 et=485.060</Score>
+<Score et="485.7">Pedro Montil(0) lap=7 point=2 t=44.049 et=485.701</Score>
+<Score et="486.1">L食o Oliveira(13) lap=8 point=0 t=60.880 et=486.050</Score>
+<Score et="486.5">Andrew collins(9) lap=8 point=0 t=60.162 et=486.493</Score>
+<Score et="486.6">Thiago Izequiel(5) lap=7 point=2 t=44.065 et=486.605</Score>
+<Score et="487.1">Th食o Straplo(11) lap=8 point=0 t=59.674 et=487.039</Score>
+<Score et="488.2">Marcio Jamirez(1) lap=7 point=2 t=44.402 et=488.147</Score>
+<Score et="488.2">Georgio Hamda(2) lap=8 point=0 t=60.405 et=488.226</Score>
+<Score et="488.7">Maurice(14) lap=8 point=0 t=63.137 et=488.668</Score>
+<Score et="489.9">Carlos Zemantese(4) lap=8 point=0 t=59.481 et=489.847</Score>
+<Score et="490.6">Karl Anderson(8) lap=7 point=2 t=44.580 et=490.611</Score>
+<Score et="493.0">Chrsitiano Kortes(6) lap=8 point=0 t=59.594 et=492.945</Score>
+<Score et="499.3">Ruan Lanchiaro(7) lap=8 point=0 t=61.149 et=499.274</Score>
+<Score et="500.2">Raoul Dropes(12) lap=8 point=0 t=61.081 et=500.226</Score>
+<Score et="501.1">Jeremy Davis(3) lap=8 point=0 t=60.967 et=501.056</Score>
+<Score et="502.1">Felipe Amorio(10) lap=8 point=0 t=61.075 et=502.110</Score>
+<Score et="502.8">Pedro Montil(0) lap=8 point=0 t=61.075 et=502.728</Score>
+<Score et="503.2">L食o Oliveira(13) lap=8 point=1 t=17.090 et=503.140</Score>
+<Score et="503.7">Thiago Izequiel(5) lap=8 point=0 t=61.159 et=503.699</Score>
+<Score et="503.7">Andrew collins(9) lap=8 point=1 t=17.224 et=503.717</Score>
+<Score et="504.2">Th食o Straplo(11) lap=8 point=1 t=17.186 et=504.225</Score>
+<Score et="505.1">Marcio Jamirez(1) lap=8 point=0 t=61.311 et=505.056</Score>
+<Score et="505.3">Georgio Hamda(2) lap=8 point=1 t=17.098 et=505.324</Score>
+<Score et="505.6">Maurice(14) lap=8 point=1 t=16.877 et=505.545</Score>
+<Score et="507.0">Carlos Zemantese(4) lap=8 point=1 t=17.122 et=506.969</Score>
+<Score et="507.9">Karl Anderson(8) lap=8 point=0 t=61.890 et=507.921</Score>
+<Score et="510.1">Chrsitiano Kortes(6) lap=8 point=1 t=17.112 et=510.057</Score>
+<Score et="517.0">Ruan Lanchiaro(7) lap=8 point=1 t=17.727 et=517.001</Score>
+<Score et="518.0">Raoul Dropes(12) lap=8 point=1 t=17.748 et=517.974</Score>
+<Score et="518.8">Jeremy Davis(3) lap=8 point=1 t=17.699 et=518.756</Score>
+<Score et="519.9">Felipe Amorio(10) lap=8 point=1 t=17.730 et=519.840</Score>
+<Score et="520.5">Pedro Montil(0) lap=8 point=1 t=17.798 et=520.526</Score>
+<Score et="521.4">Thiago Izequiel(5) lap=8 point=1 t=17.716 et=521.415</Score>
+<Score et="522.9">Marcio Jamirez(1) lap=8 point=1 t=17.798 et=522.854</Score>
+<Score et="525.9">Karl Anderson(8) lap=8 point=1 t=17.994 et=525.915</Score>
+<Score et="529.1">L食o Oliveira(13) lap=8 point=2 t=43.008 et=529.058</Score>
+<Score et="529.7">Andrew collins(9) lap=8 point=2 t=43.203 et=529.696</Score>
+<Score et="530.2">Th食o Straplo(11) lap=8 point=2 t=43.096 et=530.135</Score>
+<Score et="530.6">Maurice(14) lap=8 point=2 t=41.886 et=530.554</Score>
+<Score et="531.4">Georgio Hamda(2) lap=8 point=2 t=43.163 et=531.388</Score>
+<Score et="533.0">Carlos Zemantese(4) lap=8 point=2 t=43.091 et=532.937</Score>
+<Score et="536.0">Chrsitiano Kortes(6) lap=8 point=2 t=43.013 et=535.958</Score>
+<Score et="543.4">Ruan Lanchiaro(7) lap=8 point=2 t=44.097 et=543.371</Score>
+<Score et="544.3">Raoul Dropes(12) lap=8 point=2 t=44.011 et=544.237</Score>
+<Score et="545.1">Jeremy Davis(3) lap=8 point=2 t=44.000 et=545.056</Score>
+<Score et="545.6">L食o Oliveira(13) lap=9 point=0 t=59.490 et=545.540</Score>
+<Score et="546.2">Andrew collins(9) lap=9 point=0 t=59.648 et=546.141</Score>
+<Score et="546.2">Felipe Amorio(10) lap=8 point=2 t=44.049 et=546.159</Score>
+<Score et="546.7">Th食o Straplo(11) lap=9 point=0 t=59.629 et=546.668</Score>
+<Score et="546.7">Maurice(14) lap=9 point=0 t=58.058 et=546.726</Score>
+<Score et="546.8">Pedro Montil(0) lap=8 point=2 t=44.070 et=546.798</Score>
+<Score et="547.7">Thiago Izequiel(5) lap=8 point=2 t=44.018 et=547.717</Score>
+<Score et="547.9">Georgio Hamda(2) lap=9 point=0 t=59.639 et=547.865</Score>
+<Score et="549.4">Marcio Jamirez(1) lap=8 point=2 t=44.285 et=549.341</Score>
+<Score et="549.4">Carlos Zemantese(4) lap=9 point=0 t=59.568 et=549.415</Score>
+<Score et="552.5">Chrsitiano Kortes(6) lap=9 point=0 t=59.504 et=552.450</Score>
+<Score et="552.6">Karl Anderson(8) lap=8 point=2 t=44.628 et=552.549</Score>
+<Score et="560.4">Ruan Lanchiaro(7) lap=9 point=0 t=61.127 et=560.401</Score>
+<Score et="561.3">Raoul Dropes(12) lap=9 point=0 t=61.083 et=561.309</Score>
+<Score et="562.1">Jeremy Davis(3) lap=9 point=0 t=61.064 et=562.120</Score>
+<Score et="562.7">L食o Oliveira(13) lap=9 point=1 t=17.092 et=562.632</Score>
+<Score et="563.2">Felipe Amorio(10) lap=9 point=0 t=61.116 et=563.225</Score>
+<Score et="563.3">Andrew collins(9) lap=9 point=1 t=17.121 et=563.261</Score>
+<Score et="563.8">Th食o Straplo(11) lap=9 point=1 t=17.149 et=563.817</Score>
+<Score et="563.9">Pedro Montil(0) lap=9 point=0 t=61.107 et=563.835</Score>
+<Score et="563.9">Maurice(14) lap=9 point=1 t=17.195 et=563.921</Score>
+<Score et="564.8">Thiago Izequiel(5) lap=9 point=0 t=61.057 et=564.756</Score>
+<Score et="565.0">Georgio Hamda(2) lap=9 point=1 t=17.110 et=564.974</Score>
+<Score et="566.2">Marcio Jamirez(1) lap=9 point=0 t=61.140 et=566.196</Score>
+<Score et="566.6">Carlos Zemantese(4) lap=9 point=1 t=17.116 et=566.530</Score>
+<Score et="569.6">Chrsitiano Kortes(6) lap=9 point=1 t=17.095 et=569.544</Score>
+<Score et="569.9">Karl Anderson(8) lap=9 point=0 t=61.930 et=569.851</Score>
+<Score et="578.2">Ruan Lanchiaro(7) lap=9 point=1 t=17.732 et=578.133</Score>
+<Score et="579.1">Raoul Dropes(12) lap=9 point=1 t=17.736 et=579.045</Score>
+<Score et="579.9">Jeremy Davis(3) lap=9 point=1 t=17.711 et=579.831</Score>
+<Score et="581.0">Felipe Amorio(10) lap=9 point=1 t=17.713 et=580.938</Score>
+<Score et="581.5">Pedro Montil(0) lap=9 point=1 t=17.678 et=581.513</Score>
+<Score et="582.5">Thiago Izequiel(5) lap=9 point=1 t=17.727 et=582.483</Score>
+<Score et="584.0">Marcio Jamirez(1) lap=9 point=1 t=17.823 et=584.020</Score>
+<Score et="587.9">Karl Anderson(8) lap=9 point=1 t=17.999 et=587.850</Score>
+<Score et="588.6">L食o Oliveira(13) lap=9 point=2 t=43.029 et=588.569</Score>
+<Score et="589.2">Andrew collins(9) lap=9 point=2 t=42.994 et=589.135</Score>
+<Score et="589.3">Maurice(14) lap=9 point=2 t=42.540 et=589.267</Score>
+<Score et="589.9">Th食o Straplo(11) lap=9 point=2 t=43.169 et=589.838</Score>
+<Score et="590.8">Georgio Hamda(2) lap=9 point=2 t=42.906 et=590.771</Score>
+<Score et="592.5">Carlos Zemantese(4) lap=9 point=2 t=43.044 et=592.458</Score>
+<Score et="595.5">Chrsitiano Kortes(6) lap=9 point=2 t=43.051 et=595.501</Score>
+<Score et="604.4">Ruan Lanchiaro(7) lap=9 point=2 t=44.008 et=604.409</Score>
+<Score et="605.1">L食o Oliveira(13) lap=10 point=0 t=59.509 et=605.049</Score>
+<Score et="605.4">Raoul Dropes(12) lap=9 point=2 t=44.033 et=605.342</Score>
+<Score et="605.7">Andrew collins(9) lap=10 point=0 t=59.490 et=605.630</Score>
+<Score et="605.9">Maurice(14) lap=10 point=0 t=59.139 et=605.866</Score>
+<Score et="606.2">Jeremy Davis(3) lap=9 point=2 t=44.060 et=606.181</Score>
+<Score et="606.3">Th食o Straplo(11) lap=10 point=0 t=59.581 et=606.249</Score>
+<Score et="607.3">Felipe Amorio(10) lap=9 point=2 t=44.091 et=607.316</Score>
+<Score et="607.7">Georgio Hamda(2) lap=10 point=0 t=59.791 et=607.656</Score>
+<Score et="607.9">Pedro Montil(0) lap=9 point=2 t=44.086 et=607.921</Score>
+<Score et="608.9">Thiago Izequiel(5) lap=9 point=2 t=44.158 et=608.914</Score>
+<Score et="609.0">Carlos Zemantese(4) lap=10 point=0 t=59.522 et=608.937</Score>
+<Score et="610.7">Marcio Jamirez(1) lap=9 point=2 t=44.436 et=610.633</Score>
+<Score et="612.0">Chrsitiano Kortes(6) lap=10 point=0 t=59.573 et=612.023</Score>
+<Score et="614.4">Karl Anderson(8) lap=9 point=2 t=44.564 et=614.416</Score>
+<Score et="621.5">Ruan Lanchiaro(7) lap=10 point=0 t=61.075 et=621.476</Score>
+<Score et="622.2">L食o Oliveira(13) lap=10 point=1 t=17.099 et=622.148</Score>
+<Score et="622.4">Raoul Dropes(12) lap=10 point=0 t=61.113 et=622.422</Score>
+<Score et="622.8">Andrew collins(9) lap=10 point=1 t=17.149 et=622.779</Score>
+<Score et="623.0">Maurice(14) lap=10 point=1 t=17.064 et=622.930</Score>
+<Score et="623.2">Jeremy Davis(3) lap=10 point=0 t=61.106 et=623.226</Score>
+<Score et="623.7">Th食o Straplo(11) lap=10 point=1 t=17.462 et=623.711</Score>
+<Score et="624.4">Felipe Amorio(10) lap=10 point=0 t=61.155 et=624.381</Score>
+<Score et="624.9">Georgio Hamda(2) lap=10 point=1 t=17.205 et=624.860</Score>
+<Score et="625.0">Pedro Montil(0) lap=10 point=0 t=61.177 et=625.012</Score>
+<Score et="626.0">Thiago Izequiel(5) lap=10 point=0 t=61.216 et=625.972</Score>
+<Score et="626.1">Carlos Zemantese(4) lap=10 point=1 t=17.105 et=626.042</Score>
+<Score et="627.5">Marcio Jamirez(1) lap=10 point=0 t=61.302 et=627.499</Score>
+<Score et="629.2">Chrsitiano Kortes(6) lap=10 point=1 t=17.107 et=629.130</Score>
+<Score et="631.7">Karl Anderson(8) lap=10 point=0 t=61.832 et=631.683</Score>
+<Score et="639.2">Ruan Lanchiaro(7) lap=10 point=1 t=17.723 et=639.198</Score>
+<Score et="640.2">Raoul Dropes(12) lap=10 point=1 t=17.741 et=640.164</Score>
+<Score et="641.0">Jeremy Davis(3) lap=10 point=1 t=17.710 et=640.936</Score>
+<Score et="642.1">Felipe Amorio(10) lap=10 point=1 t=17.725 et=642.105</Score>
+<Score et="642.8">Pedro Montil(0) lap=10 point=1 t=17.778 et=642.790</Score>
+<Score et="643.7">Thiago Izequiel(5) lap=10 point=1 t=17.746 et=643.718</Score>
+<Score et="645.4">Marcio Jamirez(1) lap=10 point=1 t=17.846 et=645.344</Score>
+<Score et="648.1">L食o Oliveira(13) lap=10 point=2 t=43.047 et=648.096</Score>
+<Score et="648.4">Maurice(14) lap=10 point=2 t=42.552 et=648.418</Score>
+<Score et="648.9">Andrew collins(9) lap=10 point=2 t=43.240 et=648.871</Score>
+<Score et="649.7">Karl Anderson(8) lap=10 point=1 t=17.986 et=649.669</Score>
+<Score et="649.7">Th食o Straplo(11) lap=10 point=2 t=43.435 et=649.684</Score>
+<Score et="650.8">Georgio Hamda(2) lap=10 point=2 t=43.170 et=650.826</Score>
+<Score et="651.9">Carlos Zemantese(4) lap=10 point=2 t=42.985 et=651.922</Score>
+<Score et="655.1">Chrsitiano Kortes(6) lap=10 point=2 t=43.032 et=655.055</Score>
+<Score et="664.6">L食o Oliveira(13) lap=11 point=0 t=59.536 et=664.585</Score>
+<Score et="664.6">Maurice(14) lap=11 point=0 t=58.757 et=664.623</Score>
+<Score et="665.4">Andrew collins(9) lap=11 point=0 t=59.762 et=665.393</Score>
+<Score et="665.5">Ruan Lanchiaro(7) lap=10 point=2 t=43.991 et=665.467</Score>
+<Score et="666.1">Th食o Straplo(11) lap=11 point=0 t=59.860 et=666.109</Score>
+<Score et="666.5">Raoul Dropes(12) lap=10 point=2 t=44.065 et=666.487</Score>
+<Score et="667.3">Georgio Hamda(2) lap=11 point=0 t=59.653 et=667.308</Score>
+<Score et="667.4">Jeremy Davis(3) lap=10 point=2 t=44.107 et=667.333</Score>
+<Score et="668.4">Carlos Zemantese(4) lap=11 point=0 t=59.435 et=668.371</Score>
+<Score et="668.4">Felipe Amorio(10) lap=10 point=2 t=44.023 et=668.404</Score>
+<Score et="669.0">Pedro Montil(0) lap=10 point=2 t=43.960 et=668.972</Score>
+<Score et="670.0">Thiago Izequiel(5) lap=10 point=2 t=44.015 et=669.987</Score>
+<Score et="671.8">Marcio Jamirez(1) lap=10 point=2 t=44.248 et=671.747</Score>
+<Score et="671.8">Chrsitiano Kortes(6) lap=11 point=0 t=59.787 et=671.810</Score>
+<Score et="676.3">Karl Anderson(8) lap=10 point=2 t=44.622 et=676.305</Score>
+<Score et="681.5">Maurice(14) lap=11 point=1 t=16.848 et=681.471</Score>
+<Score et="682.4">L食o Oliveira(13) lap=11 point=1 t=17.753 et=682.338</Score>
+<Score et="682.6">Ruan Lanchiaro(7) lap=11 point=0 t=61.060 et=682.536</Score>
+<Score et="682.6">Andrew collins(9) lap=11 point=1 t=17.190 et=682.583</Score>
+<Score et="683.2">Th食o Straplo(11) lap=11 point=1 t=17.094 et=683.204</Score>
+<Score et="683.3">Raoul Dropes(12) lap=11 point=0 t=60.843 et=683.266</Score>
+<Score et="684.4">Jeremy Davis(3) lap=11 point=0 t=61.154 et=684.380</Score>
+<Score et="684.4">Georgio Hamda(2) lap=11 point=1 t=17.117 et=684.425</Score>
+<Score et="685.5">Carlos Zemantese(4) lap=11 point=1 t=17.098 et=685.470</Score>
+<Score et="685.5">Felipe Amorio(10) lap=11 point=0 t=61.079 et=685.460</Score>
+<Score et="686.0">Pedro Montil(0) lap=11 point=0 t=60.958 et=685.970</Score>
+<Score et="687.1">Thiago Izequiel(5) lap=11 point=0 t=61.110 et=687.082</Score>
+<Score et="689.0">Chrsitiano Kortes(6) lap=11 point=1 t=17.153 et=688.963</Score>
+<Score et="689.0">Marcio Jamirez(1) lap=11 point=0 t=61.495 et=688.993</Score>
+<Score et="693.6">Karl Anderson(8) lap=11 point=0 t=61.925 et=693.608</Score>
+<Score et="700.3">Ruan Lanchiaro(7) lap=11 point=1 t=17.702 et=700.238</Score>
+<Score et="701.0">Raoul Dropes(12) lap=11 point=1 t=17.703 et=700.968</Score>
+<Score et="702.1">Jeremy Davis(3) lap=11 point=1 t=17.714 et=702.093</Score>
+<Score et="703.2">Felipe Amorio(10) lap=11 point=1 t=17.718 et=703.177</Score>
+<Score et="703.8">Pedro Montil(0) lap=11 point=1 t=17.772 et=703.742</Score>
+<Score et="704.8">Thiago Izequiel(5) lap=11 point=1 t=17.700 et=704.782</Score>
+<Score et="706.5">Maurice(14) lap=11 point=2 t=41.843 et=706.466</Score>
+<Score et="706.9">Marcio Jamirez(1) lap=11 point=1 t=17.860 et=706.854</Score>
+<Score et="708.3">L食o Oliveira(13) lap=11 point=2 t=43.739 et=708.324</Score>
+<Score et="708.7">Andrew collins(9) lap=11 point=2 t=43.319 et=708.711</Score>
+<Score et="709.1">Th食o Straplo(11) lap=11 point=2 t=43.003 et=709.113</Score>
+<Score et="710.4">Georgio Hamda(2) lap=11 point=2 t=43.070 et=710.378</Score>
+<Score et="711.3">Carlos Zemantese(4) lap=11 point=2 t=42.953 et=711.324</Score>
+<Score et="711.6">Karl Anderson(8) lap=11 point=1 t=17.998 et=711.606</Score>
+<Score et="715.0">Chrsitiano Kortes(6) lap=11 point=2 t=43.189 et=714.999</Score>
+<Score et="722.9">Maurice(14) lap=12 point=0 t=58.241 et=722.864</Score>
+<Score et="724.8">L食o Oliveira(13) lap=12 point=0 t=60.207 et=724.792</Score>
+<Score et="725.4">Andrew collins(9) lap=12 point=0 t=59.937 et=725.330</Score>
+<Score et="725.7">Th食o Straplo(11) lap=12 point=0 t=59.613 et=725.723</Score>
+<Score et="726.6">Ruan Lanchiaro(7) lap=11 point=2 t=44.051 et=726.588</Score>
+<Score et="726.9">Georgio Hamda(2) lap=12 point=0 t=59.562 et=726.870</Score>
+<Score et="727.4">Raoul Dropes(12) lap=11 point=2 t=44.078 et=727.344</Score>
+<Score et="727.8">Carlos Zemantese(4) lap=12 point=0 t=59.422 et=727.794</Score>
+<Score et="728.4">Jeremy Davis(3) lap=11 point=2 t=44.021 et=728.401</Score>
+<Score et="729.6">Felipe Amorio(10) lap=11 point=2 t=44.108 et=729.568</Score>
+<Score et="730.3">Pedro Montil(0) lap=11 point=2 t=44.275 et=730.245</Score>
+<Score et="731.2">Thiago Izequiel(5) lap=11 point=2 t=44.113 et=731.195</Score>
+<Score et="731.6">Chrsitiano Kortes(6) lap=12 point=0 t=59.768 et=731.578</Score>
+<Score et="733.5">Marcio Jamirez(1) lap=11 point=2 t=44.446 et=733.439</Score>
+<Score et="738.2">Karl Anderson(8) lap=11 point=2 t=44.589 et=738.197</Score>
+<Score et="739.6">Maurice(14) lap=12 point=1 t=16.743 et=739.606</Score>
+<Score et="741.9">L食o Oliveira(13) lap=12 point=1 t=17.114 et=741.906</Score>
+<Score et="742.5">Andrew collins(9) lap=12 point=1 t=17.176 et=742.505</Score>
+<Score et="742.9">Th食o Straplo(11) lap=12 point=1 t=17.167 et=742.889</Score>
+<Score et="743.7">Ruan Lanchiaro(7) lap=12 point=0 t=61.101 et=743.638</Score>
+<Score et="744.0">Georgio Hamda(2) lap=12 point=1 t=17.152 et=744.022</Score>
+<Score et="744.5">Raoul Dropes(12) lap=12 point=0 t=61.189 et=744.455</Score>
+<Score et="744.9">Carlos Zemantese(4) lap=12 point=1 t=17.101 et=744.894</Score>
+<Score et="745.5">Jeremy Davis(3) lap=12 point=0 t=61.092 et=745.472</Score>
+<Score et="746.7">Felipe Amorio(10) lap=12 point=0 t=61.171 et=746.631</Score>
+<Score et="747.4">Pedro Montil(0) lap=12 point=0 t=61.381 et=747.351</Score>
+<Score et="748.3">Thiago Izequiel(5) lap=12 point=0 t=61.208 et=748.290</Score>
+<Score et="748.7">Chrsitiano Kortes(6) lap=12 point=1 t=17.148 et=748.726</Score>
+<Score et="750.3">Marcio Jamirez(1) lap=12 point=0 t=61.288 et=750.281</Score>
+<Score et="755.5">Karl Anderson(8) lap=12 point=0 t=61.899 et=755.507</Score>
+<Score et="761.4">Ruan Lanchiaro(7) lap=12 point=1 t=17.718 et=761.356</Score>
+<Score et="762.2">Raoul Dropes(12) lap=12 point=1 t=17.724 et=762.179</Score>
+<Score et="763.2">Jeremy Davis(3) lap=12 point=1 t=17.725 et=763.197</Score>
+<Score et="764.4">Felipe Amorio(10) lap=12 point=1 t=17.728 et=764.359</Score>
+<Score et="764.8">Maurice(14) lap=12 point=2 t=41.909 et=764.773</Score>
+<Score et="765.1">Pedro Montil(0) lap=12 point=1 t=17.748 et=765.099</Score>
+<Score et="766.1">Thiago Izequiel(5) lap=12 point=1 t=17.758 et=766.048</Score>
+<Score et="767.9">L食o Oliveira(13) lap=12 point=2 t=43.123 et=767.915</Score>
+<Score et="768.2">Marcio Jamirez(1) lap=12 point=1 t=17.865 et=768.146</Score>
+<Score et="768.5">Andrew collins(9) lap=12 point=2 t=43.107 et=768.437</Score>
+<Score et="768.9">Th食o Straplo(11) lap=12 point=2 t=43.192 et=768.915</Score>
+<Score et="769.9">Georgio Hamda(2) lap=12 point=2 t=42.984 et=769.854</Score>
+<Score et="770.8">Carlos Zemantese(4) lap=12 point=2 t=42.968 et=770.762</Score>
+<Score et="773.5">Karl Anderson(8) lap=12 point=1 t=18.013 et=773.520</Score>
+<Score et="774.8">Chrsitiano Kortes(6) lap=12 point=2 t=43.216 et=774.794</Score>
+<Score et="781.2">Maurice(14) lap=13 point=0 t=58.305 et=781.169</Score>
+<Score et="784.4">L食o Oliveira(13) lap=13 point=0 t=59.604 et=784.396</Score>
+<Score et="785.0">Andrew collins(9) lap=13 point=0 t=59.629 et=784.958</Score>
+<Score et="785.5">Th食o Straplo(11) lap=13 point=0 t=59.708 et=785.431</Score>
+<Score et="786.4">Georgio Hamda(2) lap=13 point=0 t=59.495 et=786.365</Score>
+<Score et="787.3">Carlos Zemantese(4) lap=13 point=0 t=59.462 et=787.256</Score>
+<Score et="787.8">Ruan Lanchiaro(7) lap=12 point=2 t=44.107 et=787.745</Score>
+<Score et="788.6">Raoul Dropes(12) lap=12 point=2 t=44.119 et=788.574</Score>
+<Score et="789.5">Jeremy Davis(3) lap=12 point=2 t=44.043 et=789.515</Score>
+<Score et="790.7">Felipe Amorio(10) lap=12 point=2 t=44.042 et=790.673</Score>
+<Score et="791.3">Chrsitiano Kortes(6) lap=13 point=0 t=59.682 et=791.260</Score>
+<Score et="791.4">Pedro Montil(0) lap=12 point=2 t=43.993 et=791.344</Score>
+<Score et="792.4">Thiago Izequiel(5) lap=12 point=2 t=44.122 et=792.412</Score>
+<Score et="794.7">Marcio Jamirez(1) lap=12 point=2 t=44.360 et=794.641</Score>
+<Score et="797.8">Maurice(14) lap=13 point=1 t=16.634 et=797.802</Score>
+<Score et="800.2">Karl Anderson(8) lap=12 point=2 t=44.664 et=800.172</Score>
+<Score et="801.5">L食o Oliveira(13) lap=13 point=1 t=17.130 et=801.525</Score>
+<Score et="802.1">Andrew collins(9) lap=13 point=1 t=17.163 et=802.122</Score>
+<Score et="802.6">Th食o Straplo(11) lap=13 point=1 t=17.188 et=802.619</Score>
+<Score et="803.5">Georgio Hamda(2) lap=13 point=1 t=17.138 et=803.503</Score>
+<Score et="804.4">Carlos Zemantese(4) lap=13 point=1 t=17.137 et=804.393</Score>
+<Score et="804.8">Ruan Lanchiaro(7) lap=13 point=0 t=61.165 et=804.802</Score>
+<Score et="805.7">Raoul Dropes(12) lap=13 point=0 t=61.238 et=805.693</Score>
+<Score et="806.6">Jeremy Davis(3) lap=13 point=0 t=61.110 et=806.582</Score>
+<Score et="807.8">Felipe Amorio(10) lap=13 point=0 t=61.111 et=807.742</Score>
+<Score et="808.4">Pedro Montil(0) lap=13 point=0 t=60.981 et=808.332</Score>
+<Score et="808.5">Chrsitiano Kortes(6) lap=13 point=1 t=17.205 et=808.465</Score>
+<Score et="809.5">Thiago Izequiel(5) lap=13 point=0 t=61.209 et=809.499</Score>
+<Score et="811.9">Marcio Jamirez(1) lap=13 point=0 t=61.618 et=811.899</Score>
+<Score et="817.1">Karl Anderson(8) lap=13 point=0 t=61.617 et=817.124</Score>
+<Score et="822.8">Ruan Lanchiaro(7) lap=13 point=1 t=17.989 et=822.792</Score>
+<Score et="823.0">Maurice(14) lap=13 point=2 t=41.797 et=822.966</Score>
+<Score et="823.4">Raoul Dropes(12) lap=13 point=1 t=17.719 et=823.412</Score>
+<Score et="824.3">Jeremy Davis(3) lap=13 point=1 t=17.740 et=824.323</Score>
+<Score et="825.5">Felipe Amorio(10) lap=13 point=1 t=17.737 et=825.480</Score>
+<Score et="826.2">Pedro Montil(0) lap=13 point=1 t=17.801 et=826.133</Score>
+<Score et="827.3">Thiago Izequiel(5) lap=13 point=1 t=17.745 et=827.244</Score>
+<Score et="827.6">L食o Oliveira(13) lap=13 point=2 t=43.166 et=827.561</Score>
+<Score et="828.2">Andrew collins(9) lap=13 point=2 t=43.190 et=828.148</Score>
+<Score et="828.7">Th食o Straplo(11) lap=13 point=2 t=43.214 et=828.644</Score>
+<Score et="829.6">Georgio Hamda(2) lap=13 point=2 t=43.240 et=829.605</Score>
+<Score et="829.8">Marcio Jamirez(1) lap=13 point=1 t=17.889 et=829.788</Score>
+<Score et="830.4">Carlos Zemantese(4) lap=13 point=2 t=43.108 et=830.364</Score>
+<Score et="834.6">Chrsitiano Kortes(6) lap=13 point=2 t=43.363 et=834.623</Score>
+<Score et="835.1">Karl Anderson(8) lap=13 point=1 t=17.933 et=835.057</Score>
+<Score et="839.1">Maurice(14) lap=14 point=0 t=57.917 et=839.086</Score>
+<Score et="844.1">L食o Oliveira(13) lap=14 point=0 t=59.657 et=844.053</Score>
+<Score et="844.7">Andrew collins(9) lap=14 point=0 t=59.759 et=844.717</Score>
+<Score et="845.2">Th食o Straplo(11) lap=14 point=0 t=59.757 et=845.188</Score>
+<Score et="846.1">Georgio Hamda(2) lap=14 point=0 t=59.751 et=846.116</Score>
+<Score et="846.9">Carlos Zemantese(4) lap=14 point=0 t=59.579 et=846.835</Score>
+<Score et="849.3">Ruan Lanchiaro(7) lap=13 point=2 t=44.484 et=849.287</Score>
+<Score et="850.0">Raoul Dropes(12) lap=13 point=2 t=44.245 et=849.938</Score>
+<Score et="850.8">Jeremy Davis(3) lap=13 point=2 t=44.151 et=850.733</Score>
+<Score et="851.2">Chrsitiano Kortes(6) lap=14 point=0 t=59.922 et=851.182</Score>
+<Score et="851.9">Felipe Amorio(10) lap=13 point=2 t=44.124 et=851.866</Score>
+<Score et="852.6">Pedro Montil(0) lap=13 point=2 t=44.256 et=852.588</Score>
+<Score et="853.7">Thiago Izequiel(5) lap=13 point=2 t=44.146 et=853.645</Score>
+<Score et="856.3">Marcio Jamirez(1) lap=13 point=2 t=44.427 et=856.326</Score>
+<Score et="857.0">Maurice(14) lap=14 point=1 t=17.857 et=856.943</Score>
+<Score et="861.2">L食o Oliveira(13) lap=14 point=1 t=17.148 et=861.201</Score>
+<Score et="861.7">Karl Anderson(8) lap=13 point=2 t=44.575 et=861.699</Score>
+<Score et="861.9">Andrew collins(9) lap=14 point=1 t=17.121 et=861.838</Score>
+<Score et="862.4">Th食o Straplo(11) lap=14 point=1 t=17.229 et=862.417</Score>
+<Score et="863.3">Georgio Hamda(2) lap=14 point=1 t=17.121 et=863.237</Score>
+<Score et="864.0">Carlos Zemantese(4) lap=14 point=1 t=17.116 et=863.951</Score>
+<Score et="866.4">Ruan Lanchiaro(7) lap=14 point=0 t=61.567 et=866.369</Score>
+<Score et="867.1">Raoul Dropes(12) lap=14 point=0 t=61.385 et=867.078</Score>
+<Score et="867.8">Jeremy Davis(3) lap=14 point=0 t=61.189 et=867.771</Score>
+<Score et="868.4">Chrsitiano Kortes(6) lap=14 point=1 t=17.186 et=868.368</Score>
+<Score et="869.0">Felipe Amorio(10) lap=14 point=0 t=61.209 et=868.951</Score>
+<Score et="869.7">Pedro Montil(0) lap=14 point=0 t=61.365 et=869.696</Score>
+<Score et="870.4">Thiago Izequiel(5) lap=14 point=0 t=60.910 et=870.409</Score>
+<Score et="873.6">Marcio Jamirez(1) lap=14 point=0 t=61.669 et=873.568</Score>
+<Score et="879.0">Karl Anderson(8) lap=14 point=0 t=61.889 et=879.013</Score>
+<Score et="882.8">Maurice(14) lap=14 point=2 t=43.724 et=882.810</Score>
+<Score et="884.2">Ruan Lanchiaro(7) lap=14 point=1 t=17.769 et=884.138</Score>
+<Score et="884.8">Raoul Dropes(12) lap=14 point=1 t=17.699 et=884.777</Score>
+<Score et="885.6">Jeremy Davis(3) lap=14 point=1 t=17.774 et=885.545</Score>
+<Score et="886.7">Felipe Amorio(10) lap=14 point=1 t=17.744 et=886.695</Score>
+<Score et="887.3">L食o Oliveira(13) lap=14 point=2 t=43.189 et=887.242</Score>
+<Score et="887.4">Pedro Montil(0) lap=14 point=1 t=17.715 et=887.411</Score>
+<Score et="887.9">Andrew collins(9) lap=14 point=2 t=43.125 et=887.842</Score>
+<Score et="888.1">Thiago Izequiel(5) lap=14 point=1 t=17.696 et=888.105</Score>
+<Score et="888.4">Th食o Straplo(11) lap=14 point=2 t=43.159 et=888.347</Score>
+<Score et="889.2">Georgio Hamda(2) lap=14 point=2 t=43.055 et=889.170</Score>
+<Score et="890.0">Carlos Zemantese(4) lap=14 point=2 t=43.119 et=889.953</Score>
+<Score et="891.5">Marcio Jamirez(1) lap=14 point=1 t=17.937 et=891.505</Score>
+<Score et="894.4">Chrsitiano Kortes(6) lap=14 point=2 t=43.210 et=894.392</Score>
+<Score et="897.1">Karl Anderson(8) lap=14 point=1 t=18.024 et=897.037</Score>
+<Score et="899.2">Maurice(14) lap=15 point=0 t=60.083 et=899.169</Score>
+<Score et="903.8">L食o Oliveira(13) lap=15 point=0 t=59.685 et=903.738</Score>
+<Score et="904.4">Andrew collins(9) lap=15 point=0 t=59.638 et=904.355</Score>
+<Score et="904.9">Th食o Straplo(11) lap=15 point=0 t=59.706 et=904.893</Score>
+<Score et="905.6">Georgio Hamda(2) lap=15 point=0 t=59.502 et=905.617</Score>
+<Score et="906.5">Carlos Zemantese(4) lap=15 point=0 t=59.621 et=906.456</Score>
+<Score et="910.5">Ruan Lanchiaro(7) lap=14 point=2 t=44.111 et=910.481</Score>
+<Score et="910.9">Chrsitiano Kortes(6) lap=15 point=0 t=59.700 et=910.882</Score>
+<Score et="911.3">Raoul Dropes(12) lap=14 point=2 t=44.243 et=911.321</Score>
+<Score et="912.0">Jeremy Davis(3) lap=14 point=2 t=44.217 et=911.988</Score>
+<Score et="913.1">Felipe Amorio(10) lap=14 point=2 t=44.105 et=913.056</Score>
+<Score et="913.8">Pedro Montil(0) lap=14 point=2 t=44.084 et=913.780</Score>
+<Score et="914.6">Thiago Izequiel(5) lap=14 point=2 t=44.208 et=914.617</Score>
+<Score et="915.8">Maurice(14) lap=15 point=1 t=16.641 et=915.810</Score>
+<Score et="918.4">Marcio Jamirez(1) lap=14 point=2 t=44.786 et=918.354</Score>
+<Score et="920.9">L食o Oliveira(13) lap=15 point=1 t=17.163 et=920.901</Score>
+<Score et="921.5">Andrew collins(9) lap=15 point=1 t=17.143 et=921.499</Score>
+<Score et="922.0">Th食o Straplo(11) lap=15 point=1 t=17.121 et=922.014</Score>
+<Score et="922.8">Georgio Hamda(2) lap=15 point=1 t=17.147 et=922.764</Score>
+<Score et="923.6">Carlos Zemantese(4) lap=15 point=1 t=17.112 et=923.568</Score>
+<Score et="923.7">Karl Anderson(8) lap=14 point=2 t=44.713 et=923.726</Score>
+<Score et="927.6">Ruan Lanchiaro(7) lap=15 point=0 t=61.202 et=927.571</Score>
+<Score et="928.1">Chrsitiano Kortes(6) lap=15 point=1 t=17.190 et=928.072</Score>
+<Score et="928.5">Raoul Dropes(12) lap=15 point=0 t=61.368 et=928.446</Score>
+<Score et="929.0">Jeremy Davis(3) lap=15 point=0 t=61.229 et=929.001</Score>
+<Score et="930.1">Felipe Amorio(10) lap=15 point=0 t=61.171 et=930.122</Score>
+<Score et="930.9">Pedro Montil(0) lap=15 point=0 t=61.177 et=930.873</Score>
+<Score et="931.7">Thiago Izequiel(5) lap=15 point=0 t=61.278 et=931.687</Score>
+<Score et="935.6">Marcio Jamirez(1) lap=15 point=0 t=62.013 et=935.581</Score>
+<Score et="940.8">Maurice(14) lap=15 point=2 t=41.625 et=940.793</Score>
+<Score et="941.1">Karl Anderson(8) lap=15 point=0 t=62.046 et=941.059</Score>
+<Score et="945.3">Ruan Lanchiaro(7) lap=15 point=1 t=17.752 et=945.323</Score>
+<Score et="946.2">Raoul Dropes(12) lap=15 point=1 t=17.728 et=946.174</Score>
+<Score et="946.9">Jeremy Davis(3) lap=15 point=1 t=17.842 et=946.842</Score>
+<Score et="947.0">L食o Oliveira(13) lap=15 point=2 t=43.208 et=946.946</Score>
+<Score et="947.5">Andrew collins(9) lap=15 point=2 t=43.131 et=947.486</Score>
+<Score et="947.9">Felipe Amorio(10) lap=15 point=1 t=17.761 et=947.882</Score>
+<Score et="948.1">Th食o Straplo(11) lap=15 point=2 t=43.178 et=948.071</Score>
+<Score et="948.7">Pedro Montil(0) lap=15 point=1 t=17.792 et=948.665</Score>
+<Score et="948.7">Georgio Hamda(2) lap=15 point=2 t=43.078 et=948.695</Score>
+<Score et="949.5">Thiago Izequiel(5) lap=15 point=1 t=17.774 et=949.461</Score>
+<Score et="949.6">Carlos Zemantese(4) lap=15 point=2 t=43.167 et=949.622</Score>
+<Score et="953.6">Marcio Jamirez(1) lap=15 point=1 t=17.952 et=953.533</Score>
+<Score et="954.1">Chrsitiano Kortes(6) lap=15 point=2 t=43.224 et=954.106</Score>
+<Score et="956.9">Maurice(14) lap=16 point=0 t=57.684 et=956.852</Score>
+<Score et="959.1">Karl Anderson(8) lap=15 point=1 t=18.023 et=959.082</Score>
+<Score et="963.5">L食o Oliveira(13) lap=16 point=0 t=59.725 et=963.463</Score>
+<Score et="964.1">Andrew collins(9) lap=16 point=0 t=59.678 et=964.033</Score>
+<Score et="964.6">Th食o Straplo(11) lap=16 point=0 t=59.681 et=964.575</Score>
+<Score et="965.2">Georgio Hamda(2) lap=16 point=0 t=59.592 et=965.209</Score>
+<Score et="966.1">Carlos Zemantese(4) lap=16 point=0 t=59.660 et=966.116</Score>
+<Score et="970.6">Chrsitiano Kortes(6) lap=16 point=0 t=59.708 et=970.590</Score>
+<Score et="971.7">Ruan Lanchiaro(7) lap=15 point=2 t=44.154 et=971.725</Score>
+<Score et="972.7">Raoul Dropes(12) lap=15 point=2 t=44.255 et=972.701</Score>
+<Score et="973.2">Jeremy Davis(3) lap=15 point=2 t=44.189 et=973.189</Score>
+<Score et="973.5">Maurice(14) lap=16 point=1 t=16.636 et=973.488</Score>
+<Score et="974.3">Felipe Amorio(10) lap=15 point=2 t=44.141 et=974.263</Score>
+<Score et="975.0">Pedro Montil(0) lap=15 point=2 t=44.148 et=975.021</Score>
+<Score et="975.8">Thiago Izequiel(5) lap=15 point=2 t=44.136 et=975.823</Score>
+<Score et="980.0">Marcio Jamirez(1) lap=15 point=2 t=44.435 et=980.016</Score>
+<Score et="980.7">L食o Oliveira(13) lap=16 point=1 t=17.172 et=980.635</Score>
+<Score et="981.2">Andrew collins(9) lap=16 point=1 t=17.153 et=981.185</Score>
+<Score et="981.8">Th食o Straplo(11) lap=16 point=1 t=17.186 et=981.761</Score>
+<Score et="982.3">Georgio Hamda(2) lap=16 point=1 t=17.085 et=982.294</Score>
+<Score et="983.3">Carlos Zemantese(4) lap=16 point=1 t=17.133 et=983.248</Score>
+<Score et="985.8">Karl Anderson(8) lap=15 point=2 t=44.745 et=985.804</Score>
+<Score et="987.8">Chrsitiano Kortes(6) lap=16 point=1 t=17.194 et=987.784</Score>
+<Score et="988.8">Ruan Lanchiaro(7) lap=16 point=0 t=61.245 et=988.816</Score>
+<Score et="989.8">Raoul Dropes(12) lap=16 point=0 t=61.367 et=989.814</Score>
+<Score et="990.3">Jeremy Davis(3) lap=16 point=0 t=61.252 et=990.253</Score>
+<Score et="991.4">Felipe Amorio(10) lap=16 point=0 t=61.234 et=991.355</Score>
+<Score et="992.1">Pedro Montil(0) lap=16 point=0 t=61.240 et=992.113</Score>
+<Score et="993.0">Thiago Izequiel(5) lap=16 point=0 t=61.257 et=992.944</Score>
+<Score et="997.0">Marcio Jamirez(1) lap=16 point=0 t=61.378 et=996.959</Score>
+<Score et="998.6">Maurice(14) lap=16 point=2 t=41.755 et=998.607</Score>
+<Score et="1003.2">Karl Anderson(8) lap=16 point=0 t=62.071 et=1003.130</Score>
+<Score et="1006.6">Ruan Lanchiaro(7) lap=16 point=1 t=17.766 et=1006.582</Score>
+<Score et="1006.7">L食o Oliveira(13) lap=16 point=2 t=43.252 et=1006.715</Score>
+<Score et="1007.2">Andrew collins(9) lap=16 point=2 t=43.155 et=1007.187</Score>
+<Score et="1007.6">Raoul Dropes(12) lap=16 point=1 t=17.751 et=1007.565</Score>
+<Score et="1007.9">Th食o Straplo(11) lap=16 point=2 t=43.263 et=1007.838</Score>
+<Score et="1008.2">Jeremy Davis(3) lap=16 point=1 t=17.940 et=1008.193</Score>
+<Score et="1008.5">Georgio Hamda(2) lap=16 point=2 t=43.278 et=1008.487</Score>
+<Score et="1009.1">Felipe Amorio(10) lap=16 point=1 t=17.760 et=1009.115</Score>
+<Score et="1009.3">Carlos Zemantese(4) lap=16 point=2 t=43.134 et=1009.249</Score>
+<Score et="1009.9">Pedro Montil(0) lap=16 point=1 t=17.729 et=1009.842</Score>
+<Score et="1010.7">Thiago Izequiel(5) lap=16 point=1 t=17.736 et=1010.680</Score>
+<Score et="1013.8">Chrsitiano Kortes(6) lap=16 point=2 t=43.200 et=1013.789</Score>
+<Score et="1014.8">Marcio Jamirez(1) lap=16 point=1 t=17.835 et=1014.793</Score>
+<Score et="1015.1">Maurice(14) lap=17 point=0 t=58.183 et=1015.036</Score>
+<Score et="1021.2">Karl Anderson(8) lap=16 point=1 t=18.042 et=1021.172</Score>
+<Score et="1023.3">L食o Oliveira(13) lap=17 point=0 t=59.765 et=1023.227</Score>
+<Score et="1023.8">Andrew collins(9) lap=17 point=0 t=59.754 et=1023.787</Score>
+<Score et="1024.4">Th食o Straplo(11) lap=17 point=0 t=59.755 et=1024.330</Score>
+<Score et="1025.1">Georgio Hamda(2) lap=17 point=0 t=59.818 et=1025.027</Score>
+<Score et="1025.7">Carlos Zemantese(4) lap=17 point=0 t=59.611 et=1025.726</Score>
+<Score et="1030.3">Chrsitiano Kortes(6) lap=17 point=0 t=59.701 et=1030.291</Score>
+<Score et="1031.8">Maurice(14) lap=17 point=1 t=16.790 et=1031.826</Score>
+<Score et="1033.1">Ruan Lanchiaro(7) lap=16 point=2 t=44.241 et=1033.057</Score>
+<Score et="1034.1">Raoul Dropes(12) lap=16 point=2 t=44.288 et=1034.101</Score>
+<Score et="1034.6">Jeremy Davis(3) lap=16 point=2 t=44.340 et=1034.593</Score>
+<Score et="1035.6">Felipe Amorio(10) lap=16 point=2 t=44.151 et=1035.506</Score>
+<Score et="1036.3">Pedro Montil(0) lap=16 point=2 t=44.213 et=1036.326</Score>
+<Score et="1037.2">Thiago Izequiel(5) lap=16 point=2 t=44.215 et=1037.160</Score>
+<Score et="1040.4">L食o Oliveira(13) lap=17 point=1 t=17.190 et=1040.418</Score>
+<Score et="1041.0">Andrew collins(9) lap=17 point=1 t=17.166 et=1040.953</Score>
+<Score et="1041.5">Marcio Jamirez(1) lap=16 point=2 t=44.521 et=1041.480</Score>
+<Score et="1041.5">Th食o Straplo(11) lap=17 point=1 t=17.191 et=1041.521</Score>
+<Score et="1042.2">Georgio Hamda(2) lap=17 point=1 t=17.169 et=1042.196</Score>
+<Score et="1042.8">Carlos Zemantese(4) lap=17 point=1 t=17.078 et=1042.804</Score>
+<Score et="1047.5">Chrsitiano Kortes(6) lap=17 point=1 t=17.201 et=1047.492</Score>
+<Score et="1047.9">Karl Anderson(8) lap=16 point=2 t=44.747 et=1047.876</Score>
+<Score et="1050.2">Ruan Lanchiaro(7) lap=17 point=0 t=61.346 et=1050.162</Score>
+<Score et="1051.2">Raoul Dropes(12) lap=17 point=0 t=61.401 et=1051.214</Score>
+<Score et="1051.7">Jeremy Davis(3) lap=17 point=0 t=61.468 et=1051.721</Score>
+<Score et="1052.6">Felipe Amorio(10) lap=17 point=0 t=61.251 et=1052.607</Score>
+<Score et="1053.5">Pedro Montil(0) lap=17 point=0 t=61.329 et=1053.442</Score>
+<Score et="1054.4">Thiago Izequiel(5) lap=17 point=0 t=61.397 et=1054.341</Score>
+<Score et="1056.9">Maurice(14) lap=17 point=2 t=41.852 et=1056.888</Score>
+<Score et="1058.7">Marcio Jamirez(1) lap=17 point=0 t=61.728 et=1058.687</Score>
+<Score et="1064.9">Karl Anderson(8) lap=17 point=0 t=61.723 et=1064.852</Score>
+<Score et="1066.5">L食o Oliveira(13) lap=17 point=2 t=43.228 et=1066.456</Score>
+<Score et="1066.9">Andrew collins(9) lap=17 point=2 t=43.132 et=1066.919</Score>
+<Score et="1067.5">Th食o Straplo(11) lap=17 point=2 t=43.178 et=1067.508</Score>
+<Score et="1068.0">Ruan Lanchiaro(7) lap=17 point=1 t=17.789 et=1067.951</Score>
+<Score et="1068.1">Georgio Hamda(2) lap=17 point=2 t=43.099 et=1068.126</Score>
+<Score et="1068.8">Carlos Zemantese(4) lap=17 point=2 t=43.060 et=1068.787</Score>
+<Score et="1069.0">Raoul Dropes(12) lap=17 point=1 t=17.770 et=1068.984</Score>
+<Score et="1069.7">Jeremy Davis(3) lap=17 point=1 t=17.913 et=1069.634</Score>
+<Score et="1070.4">Felipe Amorio(10) lap=17 point=1 t=17.775 et=1070.382</Score>
+<Score et="1071.3">Pedro Montil(0) lap=17 point=1 t=17.803 et=1071.245</Score>
+<Score et="1072.2">Thiago Izequiel(5) lap=17 point=1 t=17.796 et=1072.137</Score>
+<Score et="1073.0">Maurice(14) lap=18 point=0 t=57.981 et=1073.017</Score>
+<Score et="1073.5">Chrsitiano Kortes(6) lap=17 point=2 t=43.204 et=1073.495</Score>
+<Score et="1076.7">Marcio Jamirez(1) lap=17 point=1 t=17.999 et=1076.686</Score>
+<Score et="1082.8">Karl Anderson(8) lap=17 point=1 t=17.968 et=1082.820</Score>
+<Score et="1083.0">L食o Oliveira(13) lap=18 point=0 t=59.736 et=1082.963</Score>
+<Score et="1083.5">Andrew collins(9) lap=18 point=0 t=59.697 et=1083.484</Score>
+<Score et="1084.1">Th食o Straplo(11) lap=18 point=0 t=59.710 et=1084.040</Score>
+<Score et="1084.6">Georgio Hamda(2) lap=18 point=0 t=59.540 et=1084.568</Score>
+<Score et="1085.4">Carlos Zemantese(4) lap=18 point=0 t=59.623 et=1085.350</Score>
+<Score et="1089.7">Maurice(14) lap=18 point=1 t=16.642 et=1089.659</Score>
+<Score et="1090.0">Chrsitiano Kortes(6) lap=18 point=0 t=59.730 et=1090.021</Score>
+<Score et="1094.5">Ruan Lanchiaro(7) lap=17 point=2 t=44.303 et=1094.465</Score>
+<Score et="1095.5">Raoul Dropes(12) lap=17 point=2 t=44.311 et=1095.525</Score>
+<Score et="1096.1">Jeremy Davis(3) lap=17 point=2 t=44.338 et=1096.059</Score>
+<Score et="1096.8">Felipe Amorio(10) lap=17 point=2 t=44.211 et=1096.818</Score>
+<Score et="1097.6">Pedro Montil(0) lap=17 point=2 t=44.156 et=1097.599</Score>
+<Score et="1098.6">Thiago Izequiel(5) lap=17 point=2 t=44.230 et=1098.571</Score>
+<Score et="1100.2">L食o Oliveira(13) lap=18 point=1 t=17.184 et=1100.147</Score>
+<Score et="1100.7">Andrew collins(9) lap=18 point=1 t=17.203 et=1100.687</Score>
+<Score et="1101.2">Th食o Straplo(11) lap=18 point=1 t=17.146 et=1101.186</Score>
+<Score et="1101.8">Georgio Hamda(2) lap=18 point=1 t=17.216 et=1101.784</Score>
+<Score et="1102.5">Carlos Zemantese(4) lap=18 point=1 t=17.141 et=1102.491</Score>
+<Score et="1103.3">Marcio Jamirez(1) lap=17 point=2 t=44.580 et=1103.268</Score>
+<Score et="1107.2">Chrsitiano Kortes(6) lap=18 point=1 t=17.194 et=1107.214</Score>
+<Score et="1109.6">Karl Anderson(8) lap=17 point=2 t=44.738 et=1109.590</Score>
+<Score et="1111.6">Ruan Lanchiaro(7) lap=18 point=0 t=61.407 et=1111.570</Score>
+<Score et="1112.7">Raoul Dropes(12) lap=18 point=0 t=61.423 et=1112.637</Score>
+<Score et="1113.2">Jeremy Davis(3) lap=18 point=0 t=61.465 et=1113.186</Score>
+<Score et="1113.9">Felipe Amorio(10) lap=18 point=0 t=61.309 et=1113.916</Score>
+<Score et="1114.5">Maurice(14) lap=18 point=2 t=41.509 et=1114.526</Score>
+<Score et="1114.7">Pedro Montil(0) lap=18 point=0 t=61.264 et=1114.706</Score>
+<Score et="1115.7">Thiago Izequiel(5) lap=18 point=0 t=61.343 et=1115.684</Score>
+<Score et="1120.6">Marcio Jamirez(1) lap=18 point=0 t=61.880 et=1120.567</Score>
+<Score et="1126.2">L食o Oliveira(13) lap=18 point=2 t=43.238 et=1126.201</Score>
+<Score et="1126.6">Karl Anderson(8) lap=18 point=0 t=61.738 et=1126.590</Score>
+<Score et="1126.7">Andrew collins(9) lap=18 point=2 t=43.240 et=1126.724</Score>
+<Score et="1127.3">Th食o Straplo(11) lap=18 point=2 t=43.233 et=1127.272</Score>
+<Score et="1127.9">Georgio Hamda(2) lap=18 point=2 t=43.278 et=1127.846</Score>
+<Score et="1128.5">Carlos Zemantese(4) lap=18 point=2 t=43.094 et=1128.444</Score>
+<Score et="1129.4">Ruan Lanchiaro(7) lap=18 point=1 t=17.819 et=1129.388</Score>
+<Score et="1130.4">Raoul Dropes(12) lap=18 point=1 t=17.783 et=1130.420</Score>
+<Score et="1130.9">Maurice(14) lap=19 point=0 t=57.841 et=1130.858</Score>
+<Score et="1131.1">Jeremy Davis(3) lap=18 point=1 t=17.885 et=1131.072</Score>
+<Score et="1131.7">Felipe Amorio(10) lap=18 point=1 t=17.773 et=1131.689</Score>
+<Score et="1132.5">Pedro Montil(0) lap=18 point=1 t=17.759 et=1132.465</Score>
+<Score et="1133.2">Chrsitiano Kortes(6) lap=18 point=2 t=43.188 et=1133.208</Score>
+<Score et="1133.5">Thiago Izequiel(5) lap=18 point=1 t=17.783 et=1133.467</Score>
+<Score et="1138.5">Marcio Jamirez(1) lap=18 point=1 t=17.945 et=1138.512</Score>
+<Score et="1142.7">L食o Oliveira(13) lap=19 point=0 t=59.758 et=1142.722</Score>
+<Score et="1143.3">Andrew collins(9) lap=19 point=0 t=59.778 et=1143.261</Score>
+<Score et="1143.8">Th食o Straplo(11) lap=19 point=0 t=59.757 et=1143.797</Score>
+<Score et="1144.5">Georgio Hamda(2) lap=19 point=0 t=59.882 et=1144.449</Score>
+<Score et="1144.6">Karl Anderson(8) lap=18 point=1 t=17.989 et=1144.580</Score>
+<Score et="1145.0">Carlos Zemantese(4) lap=19 point=0 t=59.599 et=1144.948</Score>
+<Score et="1147.6">Maurice(14) lap=19 point=1 t=16.709 et=1147.568</Score>
+<Score et="1149.8">Chrsitiano Kortes(6) lap=19 point=0 t=59.728 et=1149.749</Score>
+<Score et="1155.8">Ruan Lanchiaro(7) lap=18 point=2 t=44.249 et=1155.819</Score>
+<Score et="1157.0">Raoul Dropes(12) lap=18 point=2 t=44.336 et=1156.973</Score>
+<Score et="1157.6">Jeremy Davis(3) lap=18 point=2 t=44.393 et=1157.579</Score>
+<Score et="1158.2">Felipe Amorio(10) lap=18 point=2 t=44.306 et=1158.222</Score>
+<Score et="1159.1">Pedro Montil(0) lap=18 point=2 t=44.372 et=1159.078</Score>
+<Score et="1159.9">Thiago Izequiel(5) lap=18 point=2 t=44.228 et=1159.912</Score>
+<Score et="1159.9">L食o Oliveira(13) lap=19 point=1 t=17.202 et=1159.923</Score>
+<Score et="1160.5">Andrew collins(9) lap=19 point=1 t=17.185 et=1160.446</Score>
+<Score et="1161.0">Th食o Straplo(11) lap=19 point=1 t=17.226 et=1161.023</Score>
+<Score et="1161.5">Georgio Hamda(2) lap=19 point=1 t=17.065 et=1161.515</Score>
+<Score et="1162.3">Carlos Zemantese(4) lap=19 point=1 t=17.280 et=1162.229</Score>
+<Score et="1165.2">Marcio Jamirez(1) lap=18 point=2 t=44.584 et=1165.151</Score>
+<Score et="1167.0">Chrsitiano Kortes(6) lap=19 point=1 t=17.189 et=1166.938</Score>
+<Score et="1171.4">Karl Anderson(8) lap=18 point=2 t=44.754 et=1171.344</Score>
+<Score et="1172.7">Maurice(14) lap=19 point=2 t=41.783 et=1172.642</Score>
+<Score et="1173.0">Ruan Lanchiaro(7) lap=19 point=0 t=61.365 et=1172.935</Score>
+<Score et="1174.1">Raoul Dropes(12) lap=19 point=0 t=61.448 et=1174.085</Score>
+<Score et="1174.7">Jeremy Davis(3) lap=19 point=0 t=61.483 et=1174.669</Score>
+<Score et="1175.4">Felipe Amorio(10) lap=19 point=0 t=61.456 et=1175.372</Score>
+<Score et="1176.2">Pedro Montil(0) lap=19 point=0 t=61.516 et=1176.222</Score>
+<Score et="1177.1">Thiago Izequiel(5) lap=19 point=0 t=61.348 et=1177.032</Score>
+<Score et="1182.4">Marcio Jamirez(1) lap=19 point=0 t=61.823 et=1182.390</Score>
+<Score et="1186.0">L食o Oliveira(13) lap=19 point=2 t=43.259 et=1185.981</Score>
+<Score et="1186.6">Andrew collins(9) lap=19 point=2 t=43.302 et=1186.564</Score>
+<Score et="1187.1">Th食o Straplo(11) lap=19 point=2 t=43.270 et=1187.067</Score>
+<Score et="1187.7">Georgio Hamda(2) lap=19 point=2 t=43.193 et=1187.642</Score>
+<Score et="1188.3">Carlos Zemantese(4) lap=19 point=2 t=43.291 et=1188.239</Score>
+<Score et="1188.7">Karl Anderson(8) lap=19 point=0 t=62.097 et=1188.687</Score>
+<Score et="1188.7">Maurice(14) lap=20 point=0 t=57.834 et=1188.693</Score>
+<Score et="1190.8">Ruan Lanchiaro(7) lap=19 point=1 t=17.812 et=1190.747</Score>
+<Score et="1191.9">Raoul Dropes(12) lap=19 point=1 t=17.809 et=1191.894</Score>
+<Score et="1192.5">Jeremy Davis(3) lap=19 point=1 t=17.853 et=1192.522</Score>
+<Score et="1192.9">Chrsitiano Kortes(6) lap=19 point=2 t=43.157 et=1192.906</Score>
+<Score et="1193.2">Felipe Amorio(10) lap=19 point=1 t=17.805 et=1193.177</Score>
+<Score et="1194.1">Pedro Montil(0) lap=19 point=1 t=17.869 et=1194.091</Score>
+<Score et="1194.8">Thiago Izequiel(5) lap=19 point=1 t=17.779 et=1194.811</Score>
+<Score et="1200.4">Marcio Jamirez(1) lap=19 point=1 t=18.003 et=1200.393</Score>
+<Score et="1202.5">L食o Oliveira(13) lap=20 point=0 t=59.791 et=1202.512</Score>
+<Score et="1203.1">Andrew collins(9) lap=20 point=0 t=59.838 et=1203.099</Score>
+<Score et="1203.7">Th食o Straplo(11) lap=20 point=0 t=59.850 et=1203.647</Score>
+<Score et="1204.2">Georgio Hamda(2) lap=20 point=0 t=59.748 et=1204.197</Score>
+<Score et="1204.8">Carlos Zemantese(4) lap=20 point=0 t=59.866 et=1204.815</Score>
+<Score et="1205.4">Maurice(14) lap=20 point=1 t=16.710 et=1205.403</Score>
+<Score et="1207.0">Karl Anderson(8) lap=19 point=1 t=18.317 et=1207.004</Score>
+<Score et="1209.5">Chrsitiano Kortes(6) lap=20 point=0 t=59.727 et=1209.476</Score>
+<Score et="1217.2">Ruan Lanchiaro(7) lap=19 point=2 t=44.221 et=1217.156</Score>
+<Score et="1218.4">Raoul Dropes(12) lap=19 point=2 t=44.341 et=1218.426</Score>
+<Score et="1219.0">Jeremy Davis(3) lap=19 point=2 t=44.271 et=1218.940</Score>
+<Score et="1219.6">Felipe Amorio(10) lap=19 point=2 t=44.222 et=1219.594</Score>
+<Score et="1219.7">L食o Oliveira(13) lap=20 point=1 t=17.195 et=1219.707</Score>
+<Score et="1220.3">Andrew collins(9) lap=20 point=1 t=17.201 et=1220.300</Score>
+<Score et="1220.5">Pedro Montil(0) lap=19 point=2 t=44.212 et=1220.434</Score>
+<Score et="1220.9">Th食o Straplo(11) lap=20 point=1 t=17.194 et=1220.841</Score>
+<Score et="1221.4">Thiago Izequiel(5) lap=19 point=2 t=44.351 et=1221.383</Score>
+<Score et="1221.5">Georgio Hamda(2) lap=20 point=1 t=17.282 et=1221.479</Score>
+<Score et="1222.0">Carlos Zemantese(4) lap=20 point=1 t=17.151 et=1221.966</Score>
+<Score et="1226.7">Chrsitiano Kortes(6) lap=20 point=1 t=17.180 et=1226.656</Score>
+<Score et="1227.1">Marcio Jamirez(1) lap=19 point=2 t=44.731 et=1227.122</Score>
+<Score et="1230.5">Maurice(14) lap=20 point=2 t=41.808 et=1230.501</Score>
+<Score et="1233.8">Karl Anderson(8) lap=19 point=2 t=45.120 et=1233.807</Score>
+<Score et="1234.3">Ruan Lanchiaro(7) lap=20 point=0 t=61.357 et=1234.292</Score>
+<Score et="1235.5">Raoul Dropes(12) lap=20 point=0 t=61.437 et=1235.522</Score>
+<Score et="1236.1">Jeremy Davis(3) lap=20 point=0 t=61.428 et=1236.097</Score>
+<Score et="1236.7">Felipe Amorio(10) lap=20 point=0 t=61.287 et=1236.659</Score>
+<Score et="1237.5">Pedro Montil(0) lap=20 point=0 t=61.290 et=1237.512</Score>
+<Score et="1238.5">Thiago Izequiel(5) lap=20 point=0 t=61.476 et=1238.508</Score>
+<Score et="1244.4">Marcio Jamirez(1) lap=20 point=0 t=62.004 et=1244.394</Score>
+<Score et="1245.8">L食o Oliveira(13) lap=20 point=2 t=43.238 et=1245.750</Score>
+<Score et="1246.4">Andrew collins(9) lap=20 point=2 t=43.266 et=1246.365</Score>
+<Score et="1246.9">Checkered for Maurice, laps=21/21, endET=1246.876099/1203.980469, crossedAfterTime=0</Score>
+<Score et="1246.9">Maurice(14) lap=21 point=0 t=58.183 et=1246.876</Score>
+<Score et="1246.9">Th食o Straplo(11) lap=20 point=2 t=43.236 et=1246.883</Score>
+<Score et="1247.4">Georgio Hamda(2) lap=20 point=2 t=43.228 et=1247.426</Score>
+<Score et="1248.2">Carlos Zemantese(4) lap=20 point=2 t=43.348 et=1248.162</Score>
+<Score et="1251.2">Karl Anderson(8) lap=20 point=0 t=62.479 et=1251.166</Score>
+<Score et="1252.1">Ruan Lanchiaro(7) lap=20 point=1 t=17.802 et=1252.095</Score>
+<Score et="1252.7">Chrsitiano Kortes(6) lap=20 point=2 t=43.170 et=1252.646</Score>
+<Score et="1253.4">Raoul Dropes(12) lap=20 point=1 t=17.819 et=1253.341</Score>
+<Score et="1254.0">Jeremy Davis(3) lap=20 point=1 t=17.879 et=1253.976</Score>
+<Score et="1254.5">Felipe Amorio(10) lap=20 point=1 t=17.846 et=1254.505</Score>
+<Score et="1255.3">Pedro Montil(0) lap=20 point=1 t=17.799 et=1255.311</Score>
+<Score et="1256.4">Thiago Izequiel(5) lap=20 point=1 t=17.829 et=1256.338</Score>
+<Score et="1262.3">L食o Oliveira(13) lap=21 point=0 t=59.784 et=1262.296</Score>
+<Score et="1262.4">Marcio Jamirez(1) lap=20 point=1 t=18.007 et=1262.401</Score>
+<Score et="1262.9">Andrew collins(9) lap=21 point=0 t=59.782 et=1262.881</Score>
+<Score et="1263.5">Th食o Straplo(11) lap=21 point=0 t=59.815 et=1263.463</Score>
+<Score et="1264.0">Georgio Hamda(2) lap=21 point=0 t=59.760 et=1263.958</Score>
+<Score et="1264.7">Carlos Zemantese(4) lap=21 point=0 t=59.886 et=1264.700</Score>
+<Score et="1269.2">Chrsitiano Kortes(6) lap=21 point=0 t=59.745 et=1269.221</Score>
+<Score et="1278.6">Ruan Lanchiaro(7) lap=20 point=2 t=44.295 et=1278.587</Score>
+<Score et="1279.9">Raoul Dropes(12) lap=20 point=2 t=44.337 et=1279.859</Score>
+<Score et="1280.5">Jeremy Davis(3) lap=20 point=2 t=44.361 et=1280.458</Score>
+<Score et="1281.1">Felipe Amorio(10) lap=20 point=2 t=44.397 et=1281.056</Score>
+<Score et="1281.9">Pedro Montil(0) lap=20 point=2 t=44.405 et=1281.917</Score>
+<Score et="1282.8">Thiago Izequiel(5) lap=20 point=2 t=44.259 et=1282.767</Score>
+<Score et="1289.0">Marcio Jamirez(1) lap=20 point=2 t=44.555 et=1288.949</Score>
+<Score et="1295.7">Ruan Lanchiaro(7) lap=21 point=0 t=61.434 et=1295.726</Score>
+<Score et="1297.0">Raoul Dropes(12) lap=21 point=0 t=61.471 et=1296.993</Score>
+<Score et="1297.7">Jeremy Davis(3) lap=21 point=0 t=61.533 et=1297.630</Score>
+<Score et="1298.2">Felipe Amorio(10) lap=21 point=0 t=61.529 et=1298.188</Score>
+<Score et="1299.1">Pedro Montil(0) lap=21 point=0 t=61.562 et=1299.074</Score>
+<Score et="1299.9">Thiago Izequiel(5) lap=21 point=0 t=61.393 et=1299.901</Score>
+<Score et="1306.2">Marcio Jamirez(1) lap=21 point=0 t=61.830 et=1306.224</Score>
+</Stream>
+<MostLapsCompleted>21</MostLapsCompleted>
+<Driver>
+<Name>Maurice</Name>
+<Connected>1</Connected>
+<VehFile>PPITTA.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>F309: #5 Pedro Pitta</VehName>
+<CarType>F309</CarType>
+<CarClass>F309</CarClass>
+<CarNumber>5</CarNumber>
+<TeamName>Cesare F3</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>1</GridPos>
+<Position>1</Position>
+<ClassGridPos>1</ClassGridPos>
+<ClassPosition>1</ClassPosition>
+<Points>25</Points>
+<ClassPoints>25</ClassPoints>
+<LapRankIncludingDiscos>1</LapRankIncludingDiscos>
+<Lap num="1" p="7" et="6.2204" s1="21.4894" s2="26.2621" s3="16.3308" fuel="0.710">64.0823</Lap>
+<Lap num="2" p="5" et="70.3026" s1="18.4020" s2="25.6844" s3="15.9781" fuel="0.694">60.0645</Lap>
+<Lap num="3" p="4" et="130.3672" s1="16.7738" s2="25.4045" s3="16.1093" fuel="0.675">58.2877</Lap>
+<Lap num="4" p="3" et="188.6548" s1="16.9167" s2="26.0222" s3="16.2221" fuel="0.659">59.1610</Lap>
+<Lap num="5" p="2" et="247.8158" s1="17.1768" s2="25.5938" s3="16.1584" fuel="0.643">58.9290</Lap>
+<Lap num="6" p="3" et="306.7448" s1="16.8564" s2="27.5416" s3="16.2306" fuel="0.627">60.6286</Lap>
+<Lap num="7" p="2" et="367.3735" s1="16.7763" s2="24.9256" s3="16.4555" fuel="0.608">58.1574</Lap>
+<Lap num="8" p="5" et="425.5309" s1="16.8701" s2="29.7636" s3="16.5037" fuel="0.592">63.1375</Lap>
+<Lap num="9" p="4" et="488.6684" s1="16.8768" s2="25.0087" s3="16.1725" fuel="0.573">58.0580</Lap>
+<Lap num="10" p="3" et="546.7264" s1="17.1950" s2="25.3455" s3="16.5987" fuel="0.557">59.1392</Lap>
+<Lap num="11" p="2" et="605.8655" s1="17.0643" s2="25.4880" s3="16.2049" fuel="0.541">58.7573</Lap>
+<Lap num="12" p="1" et="664.6228" s1="16.8483" s2="24.9946" s3="16.3978" fuel="0.522">58.2408</Lap>
+<Lap num="13" p="1" et="722.8636" s1="16.7426" s2="25.1666" s3="16.3962" fuel="0.506">58.3054</Lap>
+<Lap num="14" p="1" et="781.1689" s1="16.6335" s2="25.1633" s3="16.1202" fuel="0.486">57.9171</Lap>
+<Lap num="15" p="1" et="839.0860" s1="17.8569" s2="25.8676" s3="16.3581" fuel="0.471">60.0826</Lap>
+<Lap num="16" p="1" et="899.1686" s1="16.6411" s2="24.9834" s3="16.0594" fuel="0.451">57.6839</Lap>
+<Lap num="17" p="1" et="956.8525" s1="16.6358" s2="25.1190" s3="16.4286" fuel="0.435">58.1833</Lap>
+<Lap num="18" p="1" et="1015.0358" s1="16.7897" s2="25.0627" s3="16.1288" fuel="0.416">57.9813</Lap>
+<Lap num="19" p="1" et="1073.0171" s1="16.6418" s2="24.8674" s3="16.3320" fuel="0.400">57.8413</Lap>
+<Lap num="20" p="1" et="1130.8584" s1="16.7094" s2="25.0740" s3="16.0511" fuel="0.380">57.8345</Lap>
+<Lap num="21" p="1" et="1188.6929" s1="16.7104" s2="25.0978" s3="16.3750" fuel="0.365">58.1832</Lap>
+<BestLapTime>57.6839</BestLapTime>
+<FinishTime>1242.8956</FinishTime>
+<Laps>21</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="21">PlayerControl</ControlAndAids>
+</Driver>
+<Driver>
+<Name>L食o Oliveira</Name>
+<Connected>1</Connected>
+<VehFile>LOLIVEIRA.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>F309: #86 L食o Oliveira</VehName>
+<CarType>F309</CarType>
+<CarClass>F309</CarClass>
+<CarNumber>86</CarNumber>
+<TeamName>PowerTeam</TeamName>
+<isPlayer>0</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>2</GridPos>
+<Position>2</Position>
+<ClassGridPos>2</ClassGridPos>
+<ClassPosition>2</ClassPosition>
+<Points>20</Points>
+<ClassPoints>20</ClassPoints>
+<LapRankIncludingDiscos>2</LapRankIncludingDiscos>
+<Lap num="1" p="1" et="6.1665" s1="17.9214" s2="26.2550" s3="16.6619" fuel="0.980">60.8382</Lap>
+<Lap num="2" p="1" et="67.0047" s1="17.3441" s2="26.1137" s3="16.6138" fuel="0.965">60.0716</Lap>
+<Lap num="3" p="1" et="127.0764" s1="17.2514" s2="26.0373" s3="16.5768" fuel="0.945">59.8655</Lap>
+<Lap num="4" p="1" et="186.9419" s1="17.1985" s2="25.9355" s3="16.5471" fuel="0.929">59.6811</Lap>
+<Lap num="5" p="1" et="246.6230" s1="17.1567" s2="25.8893" s3="16.6320" fuel="0.914">59.6780</Lap>
+<Lap num="6" p="1" et="306.3010" s1="17.2135" s2="25.7153" s3="16.4692" fuel="0.898">59.3980</Lap>
+<Lap num="7" p="1" et="365.6990" s1="17.1142" s2="25.8611" s3="16.4957" fuel="0.878">59.4709</Lap>
+<Lap num="8" p="1" et="425.1700" s1="17.1049" s2="27.1090" s3="16.6664" fuel="0.863">60.8802</Lap>
+<Lap num="9" p="1" et="486.0502" s1="17.0898" s2="25.9180" s3="16.4818" fuel="0.847">59.4897</Lap>
+<Lap num="10" p="1" et="545.5399" s1="17.0924" s2="25.9368" s3="16.4797" fuel="0.831">59.5089</Lap>
+<Lap num="11" p="1" et="605.0488" s1="17.0989" s2="25.9479" s3="16.4893" fuel="0.812">59.5361</Lap>
+<Lap num="12" p="2" et="664.5848" s1="17.7529" s2="25.9864" s3="16.4674" fuel="0.796">60.2067</Lap>
+<Lap num="13" p="2" et="724.7915" s1="17.1141" s2="26.0093" s3="16.4807" fuel="0.776">59.6041</Lap>
+<Lap num="14" p="2" et="784.3956" s1="17.1296" s2="26.0360" s3="16.4916" fuel="0.761">59.6573</Lap>
+<Lap num="15" p="2" et="844.0529" s1="17.1483" s2="26.0403" s3="16.4963" fuel="0.745">59.6849</Lap>
+<Lap num="16" p="2" et="903.7379" s1="17.1630" s2="26.0452" s3="16.5168" fuel="0.725">59.7249</Lap>
+<Lap num="17" p="2" et="963.4628" s1="17.1721" s2="26.0803" s3="16.5123" fuel="0.710">59.7646</Lap>
+<Lap num="18" p="2" et="1023.2274" s1="17.1902" s2="26.0381" s3="16.5077" fuel="0.694">59.7360</Lap>
+<Lap num="19" p="2" et="1082.9634" s1="17.1840" s2="26.0540" s3="16.5205" fuel="0.678">59.7584</Lap>
+<Lap num="20" p="2" et="1142.7218" s1="17.2017" s2="26.0575" s3="16.5314" fuel="0.659">59.7905</Lap>
+<Lap num="21" p="2" et="1202.5123" s1="17.1947" s2="26.0432" s3="16.5458" fuel="0.643">59.7837</Lap>
+<BestLapTime>59.3980</BestLapTime>
+<FinishTime>1258.3156</FinishTime>
+<Laps>21</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="21">AIControl</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Carlos Zemantese</Name>
+<Connected>1</Connected>
+<VehFile>CZEMANTES.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>F309: #59 Carlos Zemantes</VehName>
+<CarType>F309</CarType>
+<CarClass>F309</CarClass>
+<CarNumber>59</CarNumber>
+<TeamName>Granido</TeamName>
+<isPlayer>0</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>3</GridPos>
+<Position>6</Position>
+<ClassGridPos>3</ClassGridPos>
+<ClassPosition>6</ClassPosition>
+<Points>6</Points>
+<ClassPoints>6</ClassPoints>
+<LapRankIncludingDiscos>3</LapRankIncludingDiscos>
+<Lap num="1" p="6" et="6.4573" s1="20.2128" s2="26.6143" s3="16.9319" fuel="0.980">63.7590</Lap>
+<Lap num="2" p="7" et="70.2163" s1="18.3828" s2="26.3766" s3="16.7476" fuel="0.965">61.5070</Lap>
+<Lap num="3" p="6" et="131.7233" s1="17.7358" s2="26.0265" s3="16.5973" fuel="0.949">60.3597</Lap>
+<Lap num="4" p="6" et="192.0829" s1="17.2032" s2="25.9868" s3="16.5297" fuel="0.933">59.7197</Lap>
+<Lap num="5" p="6" et="251.8026" s1="17.1512" s2="25.9150" s3="16.5026" fuel="0.914">59.5689</Lap>
+<Lap num="6" p="6" et="311.3715" s1="17.1285" s2="25.8553" s3="16.4968" fuel="0.898">59.4806</Lap>
+<Lap num="7" p="6" et="370.8521" s1="17.1218" s2="25.8968" s3="16.4944" fuel="0.878">59.5131</Lap>
+<Lap num="8" p="6" et="430.3652" s1="17.1316" s2="25.8737" s3="16.4761" fuel="0.863">59.4814</Lap>
+<Lap num="9" p="6" et="489.8466" s1="17.1219" s2="25.9689" s3="16.4773" fuel="0.847">59.5681</Lap>
+<Lap num="10" p="6" et="549.4147" s1="17.1155" s2="25.9282" s3="16.4781" fuel="0.827">59.5219</Lap>
+<Lap num="11" p="6" et="608.9365" s1="17.1055" s2="25.8799" s3="16.4493" fuel="0.812">59.4348</Lap>
+<Lap num="12" p="6" et="668.3713" s1="17.0983" s2="25.8542" s3="16.4697" fuel="0.796">59.4223</Lap>
+<Lap num="13" p="6" et="727.7936" s1="17.1008" s2="25.8676" s3="16.4937" fuel="0.776">59.4622</Lap>
+<Lap num="14" p="6" et="787.2557" s1="17.1374" s2="25.9704" s3="16.4714" fuel="0.761">59.5792</Lap>
+<Lap num="15" p="6" et="846.8350" s1="17.1156" s2="26.0029" s3="16.5020" fuel="0.741">59.6205</Lap>
+<Lap num="16" p="6" et="906.4555" s1="17.1121" s2="26.0545" s3="16.4934" fuel="0.725">59.6600</Lap>
+<Lap num="17" p="6" et="966.1155" s1="17.1328" s2="26.0012" s3="16.4769" fuel="0.710">59.6108</Lap>
+<Lap num="18" p="6" et="1025.7263" s1="17.0781" s2="25.9823" s3="16.5630" fuel="0.694">59.6234</Lap>
+<Lap num="19" p="6" et="1085.3497" s1="17.1415" s2="25.9529" s3="16.5042" fuel="0.675">59.5985</Lap>
+<Lap num="20" p="6" et="1144.9482" s1="17.2804" s2="26.0105" s3="16.5756" fuel="0.659">59.8665</Lap>
+<Lap num="21" p="6" et="1204.8147" s1="17.1515" s2="26.1962" s3="16.5381" fuel="0.643">59.8857</Lap>
+<BestLapTime>59.4223</BestLapTime>
+<FinishTime>1260.7200</FinishTime>
+<Laps>21</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="21">AIControl</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Andrew collins</Name>
+<Connected>1</Connected>
+<VehFile>ACOLLINS.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>F309: #84 Andrew collins</VehName>
+<CarType>F309</CarType>
+<CarClass>F309</CarClass>
+<CarNumber>84</CarNumber>
+<TeamName>High Racing</TeamName>
+<isPlayer>0</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>4</GridPos>
+<Position>3</Position>
+<ClassGridPos>4</ClassGridPos>
+<ClassPosition>3</ClassPosition>
+<Points>15</Points>
+<ClassPoints>15</ClassPoints>
+<LapRankIncludingDiscos>4</LapRankIncludingDiscos>
+<Lap num="1" p="2" et="6.4361" s1="18.1627" s2="26.2768" s3="16.7057" fuel="0.980">61.1451</Lap>
+<Lap num="2" p="2" et="67.5813" s1="17.3204" s2="26.1379" s3="16.5959" fuel="0.965">60.0542</Lap>
+<Lap num="3" p="2" et="127.6355" s1="17.2776" s2="26.0938" s3="16.5285" fuel="0.949">59.8999</Lap>
+<Lap num="4" p="2" et="187.5354" s1="17.2010" s2="26.0390" s3="16.5084" fuel="0.933">59.7484</Lap>
+<Lap num="5" p="3" et="247.2838" s1="17.1505" s2="25.9330" s3="16.4586" fuel="0.914">59.5420</Lap>
+<Lap num="6" p="2" et="306.8258" s1="17.4926" s2="25.9568" s3="16.4800" fuel="0.898">59.9295</Lap>
+<Lap num="7" p="3" et="366.7553" s1="17.1136" s2="26.0139" s3="16.4480" fuel="0.882">59.5755</Lap>
+<Lap num="8" p="2" et="426.3308" s1="17.1254" s2="26.4123" s3="16.6244" fuel="0.867">60.1621</Lap>
+<Lap num="9" p="2" et="486.4929" s1="17.2244" s2="25.9784" s3="16.4453" fuel="0.851">59.6480</Lap>
+<Lap num="10" p="2" et="546.1409" s1="17.1205" s2="25.8737" s3="16.4953" fuel="0.831">59.4895</Lap>
+<Lap num="11" p="3" et="605.6304" s1="17.1489" s2="26.0912" s3="16.5221" fuel="0.816">59.7623</Lap>
+<Lap num="12" p="3" et="665.3927" s1="17.1899" s2="26.1287" s3="16.6182" fuel="0.800">59.9368</Lap>
+<Lap num="13" p="3" et="725.3295" s1="17.1760" s2="25.9314" s3="16.5212" fuel="0.784">59.6285</Lap>
+<Lap num="14" p="3" et="784.9581" s1="17.1635" s2="26.0262" s3="16.5691" fuel="0.765">59.7587</Lap>
+<Lap num="15" p="3" et="844.7168" s1="17.1213" s2="26.0041" s3="16.5131" fuel="0.749">59.6384</Lap>
+<Lap num="16" p="3" et="904.3552" s1="17.1433" s2="25.9877" s3="16.5466" fuel="0.733">59.6776</Lap>
+<Lap num="17" p="3" et="964.0328" s1="17.1526" s2="26.0020" s3="16.5997" fuel="0.718">59.7543</Lap>
+<Lap num="18" p="3" et="1023.7870" s1="17.1656" s2="25.9668" s3="16.5645" fuel="0.698">59.6968</Lap>
+<Lap num="19" p="3" et="1083.4839" s1="17.2032" s2="26.0367" s3="16.5376" fuel="0.682">59.7776</Lap>
+<Lap num="20" p="3" et="1143.2615" s1="17.1846" s2="26.1178" s3="16.5352" fuel="0.667">59.8375</Lap>
+<Lap num="21" p="3" et="1203.0990" s1="17.2013" s2="26.0643" s3="16.5164" fuel="0.651">59.7820</Lap>
+<BestLapTime>59.4895</BestLapTime>
+<FinishTime>1258.9005</FinishTime>
+<Laps>21</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="21">AIControl</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Georgio Hamda</Name>
+<Connected>1</Connected>
+<VehFile>GHAMDA.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>F309: #31 Georgio Hamda</VehName>
+<CarType>F309</CarType>
+<CarClass>F309</CarClass>
+<CarNumber>31</CarNumber>
+<TeamName>Tibex Motorsport</TeamName>
+<isPlayer>0</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>7</GridPos>
+<Position>5</Position>
+<ClassGridPos>7</ClassGridPos>
+<ClassPosition>5</ClassPosition>
+<Points>8</Points>
+<ClassPoints>8</ClassPoints>
+<LapRankIncludingDiscos>5</LapRankIncludingDiscos>
+<Lap num="1" p="4" et="6.9299" s1="18.7901" s2="26.3143" s3="16.7159" fuel="0.980">61.8202</Lap>
+<Lap num="2" p="4" et="68.7501" s1="17.3522" s2="26.0688" s3="16.6017" fuel="0.965">60.0227</Lap>
+<Lap num="3" p="5" et="128.7728" s1="17.3079" s2="26.0875" s3="16.6222" fuel="0.945">60.0176</Lap>
+<Lap num="4" p="5" et="188.7905" s1="17.4946" s2="26.0313" s3="16.5390" fuel="0.929">60.0648</Lap>
+<Lap num="5" p="5" et="248.8553" s1="17.2496" s2="25.7815" s3="16.5214" fuel="0.914">59.5525</Lap>
+<Lap num="6" p="5" et="308.4078" s1="17.1662" s2="26.0113" s3="16.6479" fuel="0.894">59.8254</Lap>
+<Lap num="7" p="5" et="368.2332" s1="17.1463" s2="25.9717" s3="16.4702" fuel="0.878">59.5881</Lap>
+<Lap num="8" p="4" et="427.8213" s1="17.2667" s2="26.3633" s3="16.7745" fuel="0.863">60.4045</Lap>
+<Lap num="9" p="5" et="488.2258" s1="17.0984" s2="26.0641" s3="16.4763" fuel="0.847">59.6389</Lap>
+<Lap num="10" p="5" et="547.8646" s1="17.1099" s2="25.7960" s3="16.8851" fuel="0.827">59.7910</Lap>
+<Lap num="11" p="5" et="607.6556" s1="17.2046" s2="25.9656" s3="16.4825" fuel="0.812">59.6526</Lap>
+<Lap num="12" p="5" et="667.3082" s1="17.1171" s2="25.9528" s3="16.4920" fuel="0.796">59.5620</Lap>
+<Lap num="13" p="5" et="726.8702" s1="17.1521" s2="25.8320" s3="16.5106" fuel="0.776">59.4946</Lap>
+<Lap num="14" p="5" et="786.3648" s1="17.1378" s2="26.1020" s3="16.5112" fuel="0.761">59.7509</Lap>
+<Lap num="15" p="5" et="846.1157" s1="17.1212" s2="25.9333" s3="16.4472" fuel="0.741">59.5018</Lap>
+<Lap num="16" p="5" et="905.6175" s1="17.1467" s2="25.9313" s3="16.5139" fuel="0.725">59.5919</Lap>
+<Lap num="17" p="5" et="965.2094" s1="17.0847" s2="26.1929" s3="16.5403" fuel="0.710">59.8179</Lap>
+<Lap num="18" p="5" et="1025.0272" s1="17.1686" s2="25.9305" s3="16.4413" fuel="0.694">59.5404</Lap>
+<Lap num="19" p="5" et="1084.5676" s1="17.2164" s2="26.0618" s3="16.6036" fuel="0.675">59.8818</Lap>
+<Lap num="20" p="5" et="1144.4495" s1="17.0652" s2="26.1277" s3="16.5551" fuel="0.659">59.7479</Lap>
+<Lap num="21" p="5" et="1204.1974" s1="17.2817" s2="25.9467" s3="16.5321" fuel="0.643">59.7605</Lap>
+<BestLapTime>59.4946</BestLapTime>
+<FinishTime>1259.9774</FinishTime>
+<Laps>21</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="21">AIControl</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Chrsitiano Kortes</Name>
+<Connected>1</Connected>
+<VehFile>CKORTES.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>F309: #13 Christiano Kortes</VehName>
+<CarType>F309</CarType>
+<CarClass>F309</CarClass>
+<CarNumber>13</CarNumber>
+<TeamName>Carbone</TeamName>
+<isPlayer>0</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>5</GridPos>
+<Position>7</Position>
+<ClassGridPos>5</ClassGridPos>
+<ClassPosition>7</ClassPosition>
+<Points>5</Points>
+<ClassPoints>5</ClassPoints>
+<LapRankIncludingDiscos>6</LapRankIncludingDiscos>
+<Lap num="1" p="9" et="6.6839" s1="21.1255" s2="26.5998" s3="16.9701" fuel="0.980">64.6955</Lap>
+<Lap num="2" p="8" et="71.3794" s1="18.0139" s2="26.2878" s3="16.6425" fuel="0.965">60.9442</Lap>
+<Lap num="3" p="8" et="132.3235" s1="17.3571" s2="26.4560" s3="17.1342" fuel="0.949">60.9473</Lap>
+<Lap num="4" p="7" et="193.2709" s1="17.8978" s2="26.6260" s3="16.8559" fuel="0.933">61.3797</Lap>
+<Lap num="5" p="7" et="254.6506" s1="17.1806" s2="25.8893" s3="16.5421" fuel="0.914">59.6120</Lap>
+<Lap num="6" p="7" et="314.2625" s1="17.1012" s2="25.9147" s3="16.5188" fuel="0.898">59.5347</Lap>
+<Lap num="7" p="7" et="373.7972" s1="17.1248" s2="25.9378" s3="16.4910" fuel="0.882">59.5536</Lap>
+<Lap num="8" p="7" et="433.3509" s1="17.1332" s2="25.9722" s3="16.4890" fuel="0.863">59.5945</Lap>
+<Lap num="9" p="7" et="492.9453" s1="17.1118" s2="25.9011" s3="16.4915" fuel="0.847">59.5043</Lap>
+<Lap num="10" p="7" et="552.4496" s1="17.0948" s2="25.9562" s3="16.5222" fuel="0.831">59.5732</Lap>
+<Lap num="11" p="7" et="612.0229" s1="17.1066" s2="25.9252" s3="16.7553" fuel="0.812">59.7872</Lap>
+<Lap num="12" p="7" et="671.8101" s1="17.1532" s2="26.0361" s3="16.5785" fuel="0.796">59.7678</Lap>
+<Lap num="13" p="7" et="731.5779" s1="17.1479" s2="26.0679" s3="16.4664" fuel="0.776">59.6823</Lap>
+<Lap num="14" p="7" et="791.2601" s1="17.2047" s2="26.1583" s3="16.5591" fuel="0.761">59.9221</Lap>
+<Lap num="15" p="7" et="851.1822" s1="17.1860" s2="26.0240" s3="16.4896" fuel="0.745">59.6997</Lap>
+<Lap num="16" p="7" et="910.8819" s1="17.1902" s2="26.0341" s3="16.4834" fuel="0.729">59.7077</Lap>
+<Lap num="17" p="7" et="970.5896" s1="17.1944" s2="26.0053" s3="16.5015" fuel="0.714">59.7012</Lap>
+<Lap num="18" p="7" et="1030.2908" s1="17.2010" s2="26.0032" s3="16.5255" fuel="0.694">59.7297</Lap>
+<Lap num="19" p="7" et="1090.0205" s1="17.1938" s2="25.9937" s3="16.5409" fuel="0.678">59.7284</Lap>
+<Lap num="20" p="7" et="1149.7489" s1="17.1887" s2="25.9679" s3="16.5706" fuel="0.659">59.7272</Lap>
+<Lap num="21" p="7" et="1209.4761" s1="17.1801" s2="25.9904" s3="16.5748" fuel="0.643">59.7452</Lap>
+<BestLapTime>59.5043</BestLapTime>
+<FinishTime>1265.2408</FinishTime>
+<Laps>21</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="21">AIControl</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Th食o Straplo</Name>
+<Connected>1</Connected>
+<VehFile>TSTRAPLO.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>F309: #17 Th食o Straplo</VehName>
+<CarType>F309</CarType>
+<CarClass>F309</CarClass>
+<CarNumber>17</CarNumber>
+<TeamName>Blimp Racing</TeamName>
+<isPlayer>0</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>6</GridPos>
+<Position>4</Position>
+<ClassGridPos>6</ClassGridPos>
+<ClassPosition>4</ClassPosition>
+<Points>10</Points>
+<ClassPoints>10</ClassPoints>
+<LapRankIncludingDiscos>7</LapRankIncludingDiscos>
+<Lap num="1" p="3" et="6.6991" s1="18.3928" s2="26.2466" s3="16.7400" fuel="0.980">61.3794</Lap>
+<Lap num="2" p="3" et="68.0785" s1="17.3475" s2="26.2064" s3="16.5948" fuel="0.965">60.1487</Lap>
+<Lap num="3" p="3" et="128.2272" s1="17.2652" s2="26.1417" s3="16.5383" fuel="0.949">59.9453</Lap>
+<Lap num="4" p="4" et="188.1725" s1="17.1869" s2="25.9571" s3="16.5457" fuel="0.933">59.6896</Lap>
+<Lap num="5" p="4" et="247.8622" s1="17.4868" s2="25.9796" s3="16.5090" fuel="0.914">59.9754</Lap>
+<Lap num="6" p="4" et="307.8376" s1="17.2014" s2="25.9370" s3="16.4706" fuel="0.898">59.6090</Lap>
+<Lap num="7" p="4" et="367.4466" s1="17.5544" s2="25.8712" s3="16.4932" fuel="0.882">59.9188</Lap>
+<Lap num="8" p="3" et="427.3654" s1="17.1140" s2="26.0587" s3="16.5011" fuel="0.863">59.6737</Lap>
+<Lap num="9" p="3" et="487.0391" s1="17.1863" s2="25.9101" s3="16.5327" fuel="0.847">59.6291</Lap>
+<Lap num="10" p="4" et="546.6682" s1="17.1492" s2="26.0203" s3="16.4116" fuel="0.831">59.5811</Lap>
+<Lap num="11" p="4" et="606.2493" s1="17.4618" s2="25.9728" s3="16.4255" fuel="0.816">59.8600</Lap>
+<Lap num="12" p="4" et="666.1094" s1="17.0943" s2="25.9089" s3="16.6100" fuel="0.796">59.6132</Lap>
+<Lap num="13" p="4" et="725.7226" s1="17.1668" s2="26.0255" s3="16.5160" fuel="0.780">59.7083</Lap>
+<Lap num="14" p="4" et="785.4308" s1="17.1885" s2="26.0251" s3="16.5432" fuel="0.765">59.7567</Lap>
+<Lap num="15" p="4" et="845.1876" s1="17.2294" s2="25.9296" s3="16.5468" fuel="0.749">59.7058</Lap>
+<Lap num="16" p="4" et="904.8934" s1="17.1205" s2="26.0573" s3="16.5037" fuel="0.729">59.6815</Lap>
+<Lap num="17" p="4" et="964.5748" s1="17.1857" s2="26.0776" s3="16.4919" fuel="0.714">59.7552</Lap>
+<Lap num="18" p="4" et="1024.3301" s1="17.1913" s2="25.9863" s3="16.5321" fuel="0.698">59.7097</Lap>
+<Lap num="19" p="4" et="1084.0398" s1="17.1464" s2="26.0862" s3="16.5247" fuel="0.682">59.7572</Lap>
+<Lap num="20" p="4" et="1143.7970" s1="17.2262" s2="26.0438" s3="16.5803" fuel="0.663">59.8503</Lap>
+<Lap num="21" p="4" et="1203.6473" s1="17.1937" s2="26.0420" s3="16.5796" fuel="0.647">59.8153</Lap>
+<BestLapTime>59.5811</BestLapTime>
+<FinishTime>1259.4822</FinishTime>
+<Laps>21</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="21">AIControl</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Jeremy Davis</Name>
+<Connected>1</Connected>
+<VehFile>JDAVIS.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>F301: #77 Jeremy Davis</VehName>
+<CarType>F301</CarType>
+<CarClass>F301</CarClass>
+<CarNumber>77</CarNumber>
+<TeamName>Dispar Motors</TeamName>
+<isPlayer>0</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>10</GridPos>
+<Position>10</Position>
+<ClassGridPos>3</ClassGridPos>
+<ClassPosition>3</ClassPosition>
+<Points>1</Points>
+<ClassPoints>15</ClassPoints>
+<LapRankIncludingDiscos>8</LapRankIncludingDiscos>
+<Lap num="1" p="10" et="7.2152" s1="20.7048" s2="26.6154" s3="17.2742" fuel="0.980">64.5945</Lap>
+<Lap num="2" p="10" et="71.8097" s1="18.0756" s2="26.6684" s3="17.2431" fuel="0.965">61.9871</Lap>
+<Lap num="3" p="10" et="133.7968" s1="17.8990" s2="26.5165" s3="17.1971" fuel="0.949">61.6126</Lap>
+<Lap num="4" p="10" et="195.4094" s1="17.8174" s2="26.3682" s3="17.1276" fuel="0.933">61.3132</Lap>
+<Lap num="5" p="10" et="256.7226" s1="17.7909" s2="26.3836" s3="17.0984" fuel="0.918">61.2729</Lap>
+<Lap num="6" p="10" et="317.9955" s1="17.7860" s2="26.3805" s3="17.0967" fuel="0.902">61.2632</Lap>
+<Lap num="7" p="10" et="379.2587" s1="17.7410" s2="26.3317" s3="16.7584" fuel="0.886">60.8311</Lap>
+<Lap num="8" p="10" et="440.0899" s1="17.6356" s2="26.2781" s3="17.0528" fuel="0.871">60.9665</Lap>
+<Lap num="9" p="10" et="501.0564" s1="17.6993" s2="26.3007" s3="17.0638" fuel="0.855">61.0639</Lap>
+<Lap num="10" p="10" et="562.1203" s1="17.7109" s2="26.3495" s3="17.0451" fuel="0.835">61.1055</Lap>
+<Lap num="11" p="10" et="623.2258" s1="17.7103" s2="26.3964" s3="17.0470" fuel="0.820">61.1537</Lap>
+<Lap num="12" p="10" et="684.3795" s1="17.7138" s2="26.3074" s3="17.0712" fuel="0.804">61.0924</Lap>
+<Lap num="13" p="10" et="745.4719" s1="17.7246" s2="26.3182" s3="17.0676" fuel="0.788">61.1104</Lap>
+<Lap num="14" p="10" et="806.5823" s1="17.7405" s2="26.4100" s3="17.0382" fuel="0.773">61.1887</Lap>
+<Lap num="15" p="10" et="867.7711" s1="17.7744" s2="26.4426" s3="17.0126" fuel="0.757">61.2295</Lap>
+<Lap num="16" p="10" et="929.0005" s1="17.8416" s2="26.3472" s3="17.0633" fuel="0.741">61.2521</Lap>
+<Lap num="17" p="10" et="990.2527" s1="17.9398" s2="26.4001" s3="17.1283" fuel="0.725">61.4683</Lap>
+<Lap num="18" p="10" et="1051.7209" s1="17.9126" s2="26.4255" s3="17.1272" fuel="0.710">61.4653</Lap>
+<Lap num="19" p="10" et="1113.1863" s1="17.8855" s2="26.5073" s3="17.0898" fuel="0.694">61.4827</Lap>
+<Lap num="20" p="10" et="1174.6689" s1="17.8533" s2="26.4177" s3="17.1575" fuel="0.678">61.4285</Lap>
+<Lap num="21" p="10" et="1236.0974" s1="17.8789" s2="26.4821" s3="17.1716" fuel="0.663">61.5326</Lap>
+<BestLapTime>60.8311</BestLapTime>
+<FinishTime>1293.6495</FinishTime>
+<Laps>21</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="21">AIControl</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Raoul Dropes</Name>
+<Connected>1</Connected>
+<VehFile>RDROPES.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>F301: #46 Raoul Dropes</VehName>
+<CarType>F301</CarType>
+<CarClass>F301</CarClass>
+<CarNumber>46</CarNumber>
+<TeamName>Kota</TeamName>
+<isPlayer>0</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>9</GridPos>
+<Position>9</Position>
+<ClassGridPos>2</ClassGridPos>
+<ClassPosition>2</ClassPosition>
+<Points>2</Points>
+<ClassPoints>20</ClassPoints>
+<LapRankIncludingDiscos>9</LapRankIncludingDiscos>
+<Lap num="1" p="8" et="7.1497" s1="19.6804" s2="27.4190" s3="17.0035" fuel="0.980">64.1030</Lap>
+<Lap num="2" p="9" et="71.2526" s1="17.9977" s2="26.7319" s3="17.1535" fuel="0.965">61.8831</Lap>
+<Lap num="3" p="9" et="133.1358" s1="17.9118" s2="26.4892" s3="16.8510" fuel="0.949">61.2521</Lap>
+<Lap num="4" p="9" et="194.3879" s1="17.8083" s2="26.4073" s3="16.7919" fuel="0.933">61.0074</Lap>
+<Lap num="5" p="9" et="255.3953" s1="17.8469" s2="26.3152" s3="17.0582" fuel="0.918">61.2203</Lap>
+<Lap num="6" p="9" et="316.6156" s1="18.1257" s2="26.2706" s3="17.0377" fuel="0.902">61.4341</Lap>
+<Lap num="7" p="9" et="378.0497" s1="17.7802" s2="26.2340" s3="17.0811" fuel="0.886">61.0953</Lap>
+<Lap num="8" p="9" et="439.1450" s1="17.7630" s2="26.2389" s3="17.0792" fuel="0.871">61.0811</Lap>
+<Lap num="9" p="9" et="500.2261" s1="17.7479" s2="26.2627" s3="17.0721" fuel="0.855">61.0827</Lap>
+<Lap num="10" p="9" et="561.3088" s1="17.7365" s2="26.2964" s3="17.0804" fuel="0.835">61.1133</Lap>
+<Lap num="11" p="9" et="622.4221" s1="17.7415" s2="26.3231" s3="16.7789" fuel="0.820">60.8434</Lap>
+<Lap num="12" p="9" et="683.2655" s1="17.7025" s2="26.3757" s3="17.1113" fuel="0.804">61.1895</Lap>
+<Lap num="13" p="9" et="744.4550" s1="17.7240" s2="26.3947" s3="17.1194" fuel="0.788">61.2380</Lap>
+<Lap num="14" p="9" et="805.6930" s1="17.7189" s2="26.5264" s3="17.1399" fuel="0.773">61.3852</Lap>
+<Lap num="15" p="9" et="867.0782" s1="17.6991" s2="26.5439" s3="17.1251" fuel="0.757">61.3682</Lap>
+<Lap num="16" p="9" et="928.4464" s1="17.7280" s2="26.5270" s3="17.1123" fuel="0.741">61.3673</Lap>
+<Lap num="17" p="9" et="989.8137" s1="17.7512" s2="26.5365" s3="17.1130" fuel="0.725">61.4007</Lap>
+<Lap num="18" p="9" et="1051.2144" s1="17.7697" s2="26.5413" s3="17.1118" fuel="0.710">61.4227</Lap>
+<Lap num="19" p="9" et="1112.6371" s1="17.7826" s2="26.5532" s3="17.1118" fuel="0.694">61.4476</Lap>
+<Lap num="20" p="9" et="1174.0847" s1="17.8092" s2="26.5320" s3="17.0961" fuel="0.678">61.4373</Lap>
+<Lap num="21" p="9" et="1235.5220" s1="17.8190" s2="26.5181" s3="17.1340" fuel="0.663">61.4711</Lap>
+<BestLapTime>60.8434</BestLapTime>
+<FinishTime>1293.0126</FinishTime>
+<Laps>21</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="21">AIControl</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Ruan Lanchiaro</Name>
+<Connected>1</Connected>
+<VehFile>RLANCHIARO.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>F301: #55 Ruan Lanchiaro</VehName>
+<CarType>F301</CarType>
+<CarClass>F301</CarClass>
+<CarNumber>55</CarNumber>
+<TeamName>Blimp Racing 2</TeamName>
+<isPlayer>0</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>8</GridPos>
+<Position>8</Position>
+<ClassGridPos>1</ClassGridPos>
+<ClassPosition>1</ClassPosition>
+<Points>3</Points>
+<ClassPoints>25</ClassPoints>
+<LapRankIncludingDiscos>10</LapRankIncludingDiscos>
+<Lap num="1" p="5" et="6.9616" s1="19.3961" s2="26.6467" s3="16.9808" fuel="0.980">63.0237</Lap>
+<Lap num="2" p="6" et="69.9853" s1="17.9764" s2="26.5681" s3="16.9540" fuel="0.965">61.4985</Lap>
+<Lap num="3" p="7" et="131.4838" s1="17.8097" s2="26.5826" s3="17.2525" fuel="0.949">61.6449</Lap>
+<Lap num="4" p="8" et="193.1287" s1="17.9333" s2="26.5034" s3="17.1234" fuel="0.933">61.5600</Lap>
+<Lap num="5" p="8" et="254.6888" s1="18.0325" s2="26.3606" s3="17.1133" fuel="0.918">61.5064</Lap>
+<Lap num="6" p="8" et="316.1951" s1="17.7824" s2="26.2901" s3="16.7904" fuel="0.898">60.8629</Lap>
+<Lap num="7" p="8" et="377.0580" s1="17.6603" s2="26.3358" s3="17.0706" fuel="0.882">61.0668</Lap>
+<Lap num="8" p="8" et="438.1248" s1="17.7256" s2="26.3822" s3="17.0416" fuel="0.867">61.1494</Lap>
+<Lap num="9" p="8" et="499.2742" s1="17.7269" s2="26.3698" s3="17.0302" fuel="0.851">61.1268</Lap>
+<Lap num="10" p="8" et="560.4010" s1="17.7316" s2="26.2766" s3="17.0667" fuel="0.835">61.0748</Lap>
+<Lap num="11" p="8" et="621.4758" s1="17.7227" s2="26.2688" s3="17.0690" fuel="0.820">61.0604</Lap>
+<Lap num="12" p="8" et="682.5363" s1="17.7015" s2="26.3499" s3="17.0498" fuel="0.804">61.1013</Lap>
+<Lap num="13" p="8" et="743.6375" s1="17.7182" s2="26.3889" s3="17.0578" fuel="0.788">61.1649</Lap>
+<Lap num="14" p="8" et="804.8024" s1="17.9893" s2="26.4951" s3="17.0825" fuel="0.773">61.5668</Lap>
+<Lap num="15" p="8" et="866.3692" s1="17.7688" s2="26.3425" s3="17.0905" fuel="0.757">61.2018</Lap>
+<Lap num="16" p="8" et="927.5710" s1="17.7523" s2="26.4014" s3="17.0916" fuel="0.741">61.2453</Lap>
+<Lap num="17" p="8" et="988.8163" s1="17.7658" s2="26.4753" s3="17.1047" fuel="0.725">61.3459</Lap>
+<Lap num="18" p="8" et="1050.1622" s1="17.7886" s2="26.5146" s3="17.1042" fuel="0.706">61.4075</Lap>
+<Lap num="19" p="8" et="1111.5697" s1="17.8186" s2="26.4304" s3="17.1162" fuel="0.694">61.3652</Lap>
+<Lap num="20" p="8" et="1172.9349" s1="17.8118" s2="26.4094" s3="17.1361" fuel="0.675">61.3573</Lap>
+<Lap num="21" p="8" et="1234.2922" s1="17.8024" s2="26.4923" s3="17.1394" fuel="0.659">61.4341</Lap>
+<BestLapTime>60.8629</BestLapTime>
+<FinishTime>1291.7458</FinishTime>
+<Laps>21</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="21">AIControl</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Pedro Montil</Name>
+<Connected>1</Connected>
+<VehFile>PMONTIL.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>F301: #27 Pedro Montil</VehName>
+<CarType>F301</CarType>
+<CarClass>F301</CarClass>
+<CarNumber>27</CarNumber>
+<TeamName>Goucho Team</TeamName>
+<isPlayer>0</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>12</GridPos>
+<Position>12</Position>
+<ClassGridPos>5</ClassGridPos>
+<ClassPosition>5</ClassPosition>
+<Points>0</Points>
+<ClassPoints>8</ClassPoints>
+<LapRankIncludingDiscos>11</LapRankIncludingDiscos>
+<Lap num="1" p="12" et="7.4884" s1="20.7894" s2="26.9459" s3="17.3384" fuel="0.980">65.0736</Lap>
+<Lap num="2" p="12" et="72.5621" s1="18.3932" s2="26.5169" s3="17.2020" fuel="0.965">62.1121</Lap>
+<Lap num="3" p="12" et="134.6742" s1="17.9676" s2="26.7167" s3="17.2310" fuel="0.953">61.9153</Lap>
+<Lap num="4" p="12" et="196.5895" s1="17.9603" s2="26.2968" s3="17.0974" fuel="0.937">61.3545</Lap>
+<Lap num="5" p="12" et="257.9440" s1="17.8329" s2="26.5475" s3="17.1599" fuel="0.922">61.5402</Lap>
+<Lap num="6" p="12" et="319.4842" s1="17.7656" s2="26.3510" s3="16.7795" fuel="0.902">60.8961</Lap>
+<Lap num="7" p="12" et="380.3803" s1="17.7757" s2="26.4037" s3="17.0928" fuel="0.890">61.2722</Lap>
+<Lap num="8" p="12" et="441.6524" s1="17.7216" s2="26.3269" s3="17.0268" fuel="0.875">61.0753</Lap>
+<Lap num="9" p="12" et="502.7278" s1="17.7981" s2="26.2724" s3="17.0369" fuel="0.859">61.1073</Lap>
+<Lap num="10" p="12" et="563.8351" s1="17.6783" s2="26.4077" s3="17.0912" fuel="0.843">61.1772</Lap>
+<Lap num="11" p="12" et="625.0123" s1="17.7777" s2="26.1818" s3="16.9980" fuel="0.827">60.9575</Lap>
+<Lap num="12" p="12" et="685.9698" s1="17.7720" s2="26.5033" s3="17.1055" fuel="0.812">61.3807</Lap>
+<Lap num="13" p="12" et="747.3506" s1="17.7480" s2="26.2454" s3="16.9877" fuel="0.796">60.9811</Lap>
+<Lap num="14" p="12" et="808.3317" s1="17.8009" s2="26.4554" s3="17.1083" fuel="0.780">61.3646</Lap>
+<Lap num="15" p="12" et="869.6963" s1="17.7152" s2="26.3683" s3="17.0930" fuel="0.765">61.1765</Lap>
+<Lap num="16" p="12" et="930.8728" s1="17.7917" s2="26.3567" s3="17.0919" fuel="0.749">61.2404</Lap>
+<Lap num="17" p="12" et="992.1132" s1="17.7292" s2="26.4836" s3="17.1163" fuel="0.733">61.3291</Lap>
+<Lap num="18" p="12" et="1053.4423" s1="17.8030" s2="26.3535" s3="17.1071" fuel="0.714">61.2635</Lap>
+<Lap num="19" p="12" et="1114.7058" s1="17.7594" s2="26.6129" s3="17.1436" fuel="0.698">61.5159</Lap>
+<Lap num="20" p="12" et="1176.2217" s1="17.8689" s2="26.3434" s3="17.0780" fuel="0.682">61.2903</Lap>
+<Lap num="21" p="12" et="1237.5120" s1="17.7990" s2="26.6056" s3="17.1578" fuel="0.667">61.5624</Lap>
+<BestLapTime>60.8961</BestLapTime>
+<FinishTime>1295.0939</FinishTime>
+<Laps>21</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="21">AIControl</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Thiago Izequiel</Name>
+<Connected>1</Connected>
+<VehFile>TIZEQUIEL.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>F301: #26 Thiago Izequiel</VehName>
+<CarType>F301</CarType>
+<CarClass>F301</CarClass>
+<CarNumber>26</CarNumber>
+<TeamName>Furio</TeamName>
+<isPlayer>0</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>13</GridPos>
+<Position>13</Position>
+<ClassGridPos>6</ClassGridPos>
+<ClassPosition>6</ClassPosition>
+<Points>0</Points>
+<ClassPoints>6</ClassPoints>
+<LapRankIncludingDiscos>12</LapRankIncludingDiscos>
+<Lap num="1" p="13" et="7.6745" s1="20.7977" s2="26.8892" s3="17.3301" fuel="0.980">65.0170</Lap>
+<Lap num="2" p="13" et="72.6915" s1="18.4226" s2="26.7725" s3="17.2463" fuel="0.965">62.4413</Lap>
+<Lap num="3" p="13" et="135.1329" s1="18.1087" s2="26.4727" s3="17.3474" fuel="0.949">61.9288</Lap>
+<Lap num="4" p="13" et="197.0616" s1="17.8590" s2="26.5331" s3="17.1301" fuel="0.937">61.5222</Lap>
+<Lap num="5" p="13" et="258.5839" s1="17.8513" s2="26.4791" s3="17.0577" fuel="0.922">61.3881</Lap>
+<Lap num="6" p="13" et="319.9719" s1="17.8851" s2="26.2797" s3="17.1989" fuel="0.906">61.3637</Lap>
+<Lap num="7" p="13" et="381.3356" s1="17.7072" s2="26.3930" s3="17.1044" fuel="0.886">61.2045</Lap>
+<Lap num="8" p="13" et="442.5402" s1="17.7680" s2="26.2969" s3="17.0942" fuel="0.871">61.1592</Lap>
+<Lap num="9" p="13" et="503.6993" s1="17.7156" s2="26.3023" s3="17.0386" fuel="0.855">61.0565</Lap>
+<Lap num="10" p="13" et="564.7559" s1="17.7273" s2="26.4310" s3="17.0577" fuel="0.839">61.2160</Lap>
+<Lap num="11" p="13" et="625.9719" s1="17.7457" s2="26.2692" s3="17.0954" fuel="0.824">61.1102</Lap>
+<Lap num="12" p="13" et="687.0821" s1="17.6995" s2="26.4136" s3="17.0946" fuel="0.808">61.2078</Lap>
+<Lap num="13" p="13" et="748.2899" s1="17.7581" s2="26.3643" s3="17.0870" fuel="0.792">61.2094</Lap>
+<Lap num="14" p="13" et="809.4992" s1="17.7450" s2="26.4008" s3="16.7642" fuel="0.776">60.9099</Lap>
+<Lap num="15" p="13" et="870.4091" s1="17.6963" s2="26.5115" s3="17.0703" fuel="0.761">61.2781</Lap>
+<Lap num="16" p="13" et="931.6872" s1="17.7737" s2="26.3621" s3="17.1214" fuel="0.745">61.2572</Lap>
+<Lap num="17" p="13" et="992.9444" s1="17.7359" s2="26.4795" s3="17.1815" fuel="0.729">61.3969</Lap>
+<Lap num="18" p="13" et="1054.3413" s1="17.7960" s2="26.4336" s3="17.1130" fuel="0.714">61.3427</Lap>
+<Lap num="19" p="13" et="1115.6840" s1="17.7827" s2="26.4451" s3="17.1202" fuel="0.698">61.3480</Lap>
+<Lap num="20" p="13" et="1177.0320" s1="17.7789" s2="26.5718" s3="17.1257" fuel="0.682">61.4764</Lap>
+<Lap num="21" p="13" et="1238.5084" s1="17.8292" s2="26.4294" s3="17.1340" fuel="0.667">61.3927</Lap>
+<BestLapTime>60.9099</BestLapTime>
+<FinishTime>1295.9207</FinishTime>
+<Laps>21</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="21">AIControl</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Felipe Amorio</Name>
+<Connected>1</Connected>
+<VehFile>FAMORIO.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>F301: #43 Felipe Amorio</VehName>
+<CarType>F301</CarType>
+<CarClass>F301</CarClass>
+<CarNumber>43</CarNumber>
+<TeamName>PowerTeam 2</TeamName>
+<isPlayer>0</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>11</GridPos>
+<Position>11</Position>
+<ClassGridPos>4</ClassGridPos>
+<ClassPosition>4</ClassPosition>
+<Points>0</Points>
+<ClassPoints>10</ClassPoints>
+<LapRankIncludingDiscos>13</LapRankIncludingDiscos>
+<Lap num="1" p="11" et="7.4259" s1="20.7226" s2="26.8854" s3="17.3896" fuel="0.980">64.9977</Lap>
+<Lap num="2" p="11" et="72.4235" s1="17.9987" s2="26.5979" s3="17.2440" fuel="0.965">61.8406</Lap>
+<Lap num="3" p="11" et="134.2641" s1="17.9689" s2="26.5926" s3="17.1989" fuel="0.949">61.7603</Lap>
+<Lap num="4" p="11" et="196.0244" s1="17.8847" s2="26.3912" s3="17.0915" fuel="0.937">61.3674</Lap>
+<Lap num="5" p="11" et="257.3918" s1="17.8091" s2="26.4374" s3="16.8157" fuel="0.918">61.0621</Lap>
+<Lap num="6" p="11" et="318.4539" s1="17.8234" s2="26.3273" s3="17.1238" fuel="0.902">61.2744</Lap>
+<Lap num="7" p="11" et="379.7283" s1="17.8502" s2="26.3542" s3="17.1021" fuel="0.886">61.3065</Lap>
+<Lap num="8" p="11" et="441.0348" s1="17.7161" s2="26.3091" s3="17.0497" fuel="0.871">61.0750</Lap>
+<Lap num="9" p="11" et="502.1098" s1="17.7301" s2="26.3193" s3="17.0662" fuel="0.855">61.1156</Lap>
+<Lap num="10" p="11" et="563.2253" s1="17.7126" s2="26.3784" s3="17.0645" fuel="0.839">61.1554</Lap>
+<Lap num="11" p="11" et="624.3807" s1="17.7246" s2="26.2984" s3="17.0562" fuel="0.824">61.0792</Lap>
+<Lap num="12" p="11" et="685.4600" s1="17.7175" s2="26.3902" s3="17.0632" fuel="0.808">61.1709</Lap>
+<Lap num="13" p="11" et="746.6309" s1="17.7285" s2="26.3138" s3="17.0692" fuel="0.792">61.1115</Lap>
+<Lap num="14" p="11" et="807.7423" s1="17.7372" s2="26.3865" s3="17.0848" fuel="0.776">61.2086</Lap>
+<Lap num="15" p="11" et="868.9509" s1="17.7441" s2="26.3610" s3="17.0654" fuel="0.761">61.1706</Lap>
+<Lap num="16" p="11" et="930.1215" s1="17.7609" s2="26.3802" s3="17.0927" fuel="0.745">61.2338</Lap>
+<Lap num="17" p="11" et="991.3553" s1="17.7601" s2="26.3904" s3="17.1008" fuel="0.729">61.2514</Lap>
+<Lap num="18" p="11" et="1052.6067" s1="17.7750" s2="26.4359" s3="17.0981" fuel="0.714">61.3091</Lap>
+<Lap num="19" p="11" et="1113.9158" s1="17.7734" s2="26.5330" s3="17.1495" fuel="0.698">61.4559</Lap>
+<Lap num="20" p="11" et="1175.3717" s1="17.8049" s2="26.4170" s3="17.0654" fuel="0.682">61.2874</Lap>
+<Lap num="21" p="11" et="1236.6591" s1="17.8456" s2="26.5511" s3="17.1321" fuel="0.663">61.5288</Lap>
+<BestLapTime>61.0621</BestLapTime>
+<FinishTime>1294.2074</FinishTime>
+<Laps>21</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="21">AIControl</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Marcio Jamirez</Name>
+<Connected>1</Connected>
+<VehFile>MJAMIREZ.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>F301: #26 Marcio Jamirez</VehName>
+<CarType>F301</CarType>
+<CarClass>F301</CarClass>
+<CarNumber>26</CarNumber>
+<TeamName>Furio</TeamName>
+<isPlayer>0</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>14</GridPos>
+<Position>14</Position>
+<ClassGridPos>7</ClassGridPos>
+<ClassPosition>7</ClassPosition>
+<Points>0</Points>
+<ClassPoints>5</ClassPoints>
+<LapRankIncludingDiscos>14</LapRankIncludingDiscos>
+<Lap num="1" p="14" et="7.7339" s1="20.8431" s2="27.0690" s3="17.2654" fuel="0.980">65.1776</Lap>
+<Lap num="2" p="14" et="72.9114" s1="18.4857" s2="26.8590" s3="17.4037" fuel="0.965">62.7484</Lap>
+<Lap num="3" p="14" et="135.6598" s1="18.1947" s2="26.6383" s3="17.3377" fuel="0.949">62.1707</Lap>
+<Lap num="4" p="14" et="197.8305" s1="17.9707" s2="26.6110" s3="16.9057" fuel="0.933">61.4874</Lap>
+<Lap num="5" p="14" et="259.3178" s1="17.9232" s2="26.7602" s3="16.9709" fuel="0.918">61.6543</Lap>
+<Lap num="6" p="14" et="320.9721" s1="17.8775" s2="26.4195" s3="16.9117" fuel="0.902">61.2087</Lap>
+<Lap num="7" p="14" et="382.1808" s1="17.8091" s2="26.5885" s3="17.1669" fuel="0.886">61.5644</Lap>
+<Lap num="8" p="14" et="443.7453" s1="17.9441" s2="26.4578" s3="16.9091" fuel="0.871">61.3110</Lap>
+<Lap num="9" p="14" et="505.0563" s1="17.7980" s2="26.4866" s3="16.8556" fuel="0.855">61.1402</Lap>
+<Lap num="10" p="14" et="566.1965" s1="17.8234" s2="26.6130" s3="16.8656" fuel="0.839">61.3021</Lap>
+<Lap num="11" p="14" et="627.4985" s1="17.8456" s2="26.4025" s3="17.2468" fuel="0.824">61.4949</Lap>
+<Lap num="12" p="14" et="688.9935" s1="17.8601" s2="26.5859" s3="16.8416" fuel="0.804">61.2875</Lap>
+<Lap num="13" p="14" et="750.2810" s1="17.8652" s2="26.4949" s3="17.2578" fuel="0.788">61.6179</Lap>
+<Lap num="14" p="14" et="811.8989" s1="17.8893" s2="26.5375" s3="17.2421" fuel="0.773">61.6689</Lap>
+<Lap num="15" p="14" et="873.5678" s1="17.9374" s2="26.8491" s3="17.2266" fuel="0.757">62.0131</Lap>
+<Lap num="16" p="14" et="935.5809" s1="17.9524" s2="26.4825" s3="16.9431" fuel="0.741">61.3780</Lap>
+<Lap num="17" p="14" et="996.9589" s1="17.8345" s2="26.6862" s3="17.2076" fuel="0.725">61.7284</Lap>
+<Lap num="18" p="14" et="1058.6873" s1="17.9987" s2="26.5817" s3="17.2993" fuel="0.710">61.8796</Lap>
+<Lap num="19" p="14" et="1120.5669" s1="17.9454" s2="26.6389" s3="17.2390" fuel="0.694">61.8234</Lap>
+<Lap num="20" p="14" et="1182.3903" s1="18.0031" s2="26.7283" s3="17.2723" fuel="0.678">62.0037</Lap>
+<Lap num="21" p="14" et="1244.3939" s1="18.0067" s2="26.5480" s3="17.2755" fuel="0.663">61.8302</Lap>
+<BestLapTime>61.1402</BestLapTime>
+<FinishTime>1302.2437</FinishTime>
+<Laps>21</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="21">AIControl</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Karl Anderson</Name>
+<Connected>1</Connected>
+<VehFile>KANDERSON.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>F301: #21 Karl Anderson</VehName>
+<CarType>F301</CarType>
+<CarClass>F301</CarClass>
+<CarNumber>21</CarNumber>
+<TeamName>Anderson Motorsport</TeamName>
+<isPlayer>0</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>15</GridPos>
+<Position>15</Position>
+<ClassGridPos>8</ClassGridPos>
+<ClassPosition>8</ClassPosition>
+<Points>0</Points>
+<ClassPoints>3</ClassPoints>
+<LapRankIncludingDiscos>15</LapRankIncludingDiscos>
+<Lap num="1" p="15" et="7.9196" s1="20.7935" s2="27.2696" s3="17.1969" fuel="0.980">65.2600</Lap>
+<Lap num="2" p="15" et="73.1797" s1="18.5939" s2="26.9211" s3="17.1557" fuel="0.965">62.6707</Lap>
+<Lap num="3" p="15" et="135.8503" s1="18.2744" s2="26.9560" s3="17.3794" fuel="0.949">62.6098</Lap>
+<Lap num="4" p="15" et="198.4601" s1="18.1633" s2="26.7215" s3="17.0018" fuel="0.933">61.8866</Lap>
+<Lap num="5" p="15" et="260.3468" s1="17.9970" s2="26.7224" s3="17.4419" fuel="0.918">62.1613</Lap>
+<Lap num="6" p="15" et="322.5081" s1="18.0088" s2="26.6216" s3="16.9687" fuel="0.902">61.5991</Lap>
+<Lap num="7" p="15" et="384.1071" s1="17.9528" s2="26.6563" s3="17.3151" fuel="0.886">61.9242</Lap>
+<Lap num="8" p="15" et="446.0313" s1="18.0073" s2="26.5722" s3="17.3104" fuel="0.871">61.8899</Lap>
+<Lap num="9" p="15" et="507.9213" s1="17.9935" s2="26.6343" s3="17.3022" fuel="0.855">61.9301</Lap>
+<Lap num="10" p="15" et="569.8513" s1="17.9986" s2="26.5656" s3="17.2677" fuel="0.839">61.8319</Lap>
+<Lap num="11" p="15" et="631.6832" s1="17.9857" s2="26.6359" s3="17.3033" fuel="0.824">61.9249</Lap>
+<Lap num="12" p="15" et="693.6081" s1="17.9980" s2="26.5905" s3="17.3109" fuel="0.808">61.8994</Lap>
+<Lap num="13" p="15" et="755.5074" s1="18.0126" s2="26.6516" s3="16.9528" fuel="0.792">61.6169</Lap>
+<Lap num="14" p="15" et="817.1243" s1="17.9326" s2="26.6423" s3="17.3137" fuel="0.776">61.8885</Lap>
+<Lap num="15" p="15" et="879.0129" s1="18.0240" s2="26.6890" s3="17.3331" fuel="0.757">62.0460</Lap>
+<Lap num="16" p="15" et="941.0589" s1="18.0233" s2="26.7219" s3="17.3255" fuel="0.741">62.0707</Lap>
+<Lap num="17" p="15" et="1003.1296" s1="18.0421" s2="26.7047" s3="16.9758" fuel="0.725">61.7226</Lap>
+<Lap num="18" p="15" et="1064.8522" s1="17.9679" s2="26.7704" s3="16.9998" fuel="0.710">61.7380</Lap>
+<Lap num="19" p="15" et="1126.5902" s1="17.9894" s2="26.7642" s3="17.3431" fuel="0.694">62.0967</Lap>
+<Lap num="20" p="15" et="1188.6869" s1="18.3167" s2="26.8030" s3="17.3590" fuel="0.678">62.4786</Lap>
+<BestLapTime>61.5991</BestLapTime>
+<FinishTime>1247.1851</FinishTime>
+<Laps>20</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="20">AIControl</ControlAndAids>
+</Driver>
+</Race>
+</RaceResults>
+</rFactorXML>
