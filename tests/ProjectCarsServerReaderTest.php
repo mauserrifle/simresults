@@ -256,6 +256,39 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertSame(1, $laps[23]->getNumberOfCuts());
     }
 
+    /**
+     * Test whether we have proper lap and cut matches. The library earlier read
+     * laps by number using the laps array keys. But in some cases the first
+     * key [0] could be lap number 2 (by reading `getNumber()`. So we can't
+     * rely on array keys and this tests a scenario where we had bugged cuts
+     *
+     * Participant `getLap` has been modified for this.
+     */
+    public function testFixingBadLapNumberCutMatching()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/projectcars-server/missing.cut.end.data.json');
+
+        // Get qualify session
+        $session = Data_Reader::factory($file_path)->getSession(1);
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Get laps of third participant
+        $laps = $participants[2]->getLaps();
+
+        // Validate that lap 1 and 2 have no cuts. Validate that lap 3 does not
+        // exist (but there is a cut for this). By testing this we make sure
+        // the unfinished lap 3 cut has not been misread into the first two
+        // laps
+        $this->assertSame(0, $laps[1]->getNumberOfCuts());
+        $this->assertSame(0, $laps[2]->getNumberOfCuts());
+        $this->assertFalse(isset($laps[3]));
+    }
+
+
 
 
     /***

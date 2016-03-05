@@ -14,6 +14,11 @@ namespace Simresults;
 class CachedParticipant extends Participant {
 
     /**
+     * @var  array  The cache for getting a lap by number
+     */
+    protected $cache_lap = array();
+
+    /**
      * @var  array|null  The cache for laps sorted by time
      */
     protected $cache_laps_sorted_by_time;
@@ -66,6 +71,21 @@ class CachedParticipant extends Participant {
         false  => null,
     );
 
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getLap($lap_number)
+    {
+        // There is cache
+        if (array_key_exists($lap_number, $this->cache_lap))
+        {
+            return $this->cache_lap[$lap_number];
+        }
+
+        // Return lap and cache it
+        return $this->cache_lap[$lap_number] = parent::getLap($lap_number);
+    }
 
     /**
      * {@inheritdoc}
