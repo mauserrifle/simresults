@@ -513,7 +513,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                         // Add to sorted array and remove from normal array
                         $participants_resultsorted[] = $participant;
                         unset($participants[
-                            array_search($participant, $participants)]);
+                            array_search($participant, $participants, true)]);
 
                     }
 
@@ -523,8 +523,19 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
 
                     // Merge the sorted participants result with normal sort
                     // array. Merge them and remove any duplicates
-                    $participants = array_unique(array_merge(
-                        $participants_resultsorted, $participants), SORT_REGULAR);
+                    // NOTE: We are not using array_unique as it's causing
+                    // recursive depedency
+                    $merged = array_merge(
+                        $participants_resultsorted, $participants);
+                    $final  = array();
+
+                    foreach ($merged as $current) {
+                        if ( ! in_array($current, $final, true)) {
+                            $final[] = $current;
+                        }
+                    }
+
+                    $participants = $final;
                 }
                 // No predefined result
                 else
