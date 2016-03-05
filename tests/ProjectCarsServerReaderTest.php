@@ -520,6 +520,7 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertSame(2.7480, $cuts[0]->getTimeSkipped());
         $this->assertSame(1446150159, $cuts[0]->getDate()->getTimestamp());
         $this->assertSame(137, $cuts[0]->getElapsedSeconds());
+        $this->assertSame(9.888, $cuts[0]->getElapsedSecondsInLap());
         $this->assertSame($laps[1], $cuts[0]->getLap());
     }
 

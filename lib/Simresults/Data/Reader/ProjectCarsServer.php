@@ -446,6 +446,9 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                                     -
                                     $session->getDate()->getTimestamp()
                                 );
+                                $cut->setElapsedSecondsInLap(round(
+                                    $event['attributes']['LapTime']
+                                    / 1000, 4));
 
                                 $lap->addCut($cut);
 

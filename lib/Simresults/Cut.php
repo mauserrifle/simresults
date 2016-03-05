@@ -32,9 +32,15 @@ class Cut {
 
     /**
      * @var  float  The elapsed time in seconds. This could be used to get
-     *              a precise time ncluding miliseconds.
+     *              a precise time including miliseconds.
      */
     protected $elapsed_seconds;
+
+    /**
+     * @var  float  The elapsed time in lap in seconds. This could be used to
+     *              get a precise time including miliseconds.
+     */
+    protected $elapsed_seconds_in_lap;
 
 
 
@@ -150,6 +156,32 @@ class Cut {
     public function getElapsedSeconds()
     {
         return $this->elapsed_seconds;
+    }
+
+    /**
+     * Set the elapsed time in lap in seconds. This could be used to get a
+     * precise time including miliseconds.
+     *
+     * @param   float  $seconds
+     * @return  Cut
+     */
+    public function setElapsedSecondsInLap($seconds)
+    {
+        $this->elapsed_seconds_in_lap = $seconds;
+        return $this;
+    }
+
+    /**
+     * Get the elapsed time in lap in seconds. This could be used to get a
+     * precise time including miliseconds.
+     *
+     * FUTURE: Calculate using cut date if this data is missing
+     *
+     * @return  float
+     */
+    public function getElapsedSecondsInLap()
+    {
+        return $this->elapsed_seconds_in_lap;
     }
 
 }
