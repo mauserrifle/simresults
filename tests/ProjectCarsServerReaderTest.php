@@ -148,9 +148,9 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
 
         // Test retired status as DNF
         $this->assertSame('[CAV] F1_Racer68',
-            $participants[4]->getDriver()->getName());
+            $participants[count($participants)-1]->getDriver()->getName());
         $this->assertSame(Participant::FINISH_DNF,
-            $participants[4]->getFinishStatus());
+            $participants[count($participants)-1]->getFinishStatus());
     }
 
 
@@ -297,9 +297,11 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
-     * Test ignoring invalid laps
+     * Test ignoring invalid laps and proper finishes. Tests a fix where
+     * the results array from the json is not parsed when the leading
+     * participant is not in it.
      */
-    public function testIgnoringInvalidLaps()
+    public function testIgnoringInvalidLapsAndProperFinishes()
     {
         // The path to the data source
         $file_path = realpath(__DIR__.
@@ -311,7 +313,7 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
         // Get participants
         $participants = $session->getParticipants();
 
-        // Validate that first participant
+        // Validate first participant
         $this->assertSame('Markus Walter',
             $participants[0]->getDriver()->getName());
 
@@ -323,6 +325,16 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
             $lap_num++;
         }
 
+
+        // Get race session
+        $session = Data_Reader::factory($file_path)->getSession(3);
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Validate first participant
+        $this->assertSame('Markus Walter',
+            $participants[0]->getDriver()->getName());
     }
 
 

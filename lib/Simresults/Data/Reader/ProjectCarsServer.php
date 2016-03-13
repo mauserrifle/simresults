@@ -310,6 +310,11 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                     {
                         $cut_data[] = $event;
                     }
+                    elseif ($event['event_name'] === 'State' AND
+                            $event['attributes']['NewState'] === 'Retired')
+                    {
+                        $part->setFinishStatus(Participant::FINISH_DNF);
+                    }
 
                 }
 
@@ -495,9 +500,13 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 if ($results = $session_data['results'] AND
                     $session->getType() === Session::TYPE_RACE)
                 {
-                    // Create new participants order
-                    $participants_resultsorted = array();
+                    // Sort participants using our own sort
+                    $tmp_sort =
+                        Helper::sortParticipantsByTotalTime($participants);
 
+                    // Find whether our leading participant using our own sort
+                    // is in the result
+                    $leading_is_in_result = false;
                     foreach ($results as $result)
                     {
                         // Participant not found, continue to next
@@ -511,36 +520,67 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                         $participant = $participants_by_id[
                             $result['participantid']];
 
-                        // Set total time
-                        $participant->setTotalTime(round(
-                            $result['attributes']['TotalTime'] / 1000, 4));
-
-                        // Add to sorted array and remove from normal array
-                        $participants_resultsorted[] = $participant;
-                        unset($participants[
-                            array_search($participant, $participants, true)]);
-
-                    }
-
-                    // Sort participants not sorted by result by total time
-                    $participants =
-                        Helper::sortParticipantsByTotalTime($participants);
-
-                    // Merge the sorted participants result with normal sort
-                    // array. Merge them and remove any duplicates
-                    // NOTE: We are not using array_unique as it's causing
-                    // recursive depedency
-                    $merged = array_merge(
-                        $participants_resultsorted, $participants);
-                    $final  = array();
-
-                    foreach ($merged as $current) {
-                        if ( ! in_array($current, $final, true)) {
-                            $final[] = $current;
+                        // Leading found
+                        if ($participant === $tmp_sort[0])
+                        {
+                            $leading_is_in_result = true;
                         }
                     }
 
-                    $participants = $final;
+                    // Leading participant is in the results array
+                    if ($leading_is_in_result)
+                    {
+                        foreach ($results as $result)
+                        {
+                            // Participant not found, continue to next
+                            if ( ! isset($participants_by_id[
+                                             $result['participantid']]))
+                            {
+                                continue;
+                            }
+
+                            // Get participant
+                            $participant = $participants_by_id[
+                                $result['participantid']];
+
+                            // Set total time
+                            $participant->setTotalTime(round(
+                                $result['attributes']['TotalTime'] / 1000, 4));
+
+                            // Add to sorted array and remove from normal array
+                            $participants_resultsorted[] = $participant;
+                            unset($participants[
+                                array_search($participant, $participants, true)]);
+                        }
+
+                        // Sort participants not sorted by result by total time
+                        $participants =
+                            Helper::sortParticipantsByTotalTime($participants);
+
+                        // Merge the sorted participants result with normal sort
+                        // array. Merge them and remove any duplicates
+                        // NOTE: We are not using array_unique as it's causing
+                        // recursive depedency
+                        $merged = array_merge(
+                            $participants_resultsorted, $participants);
+                        $final  = array();
+
+                        foreach ($merged as $current) {
+                            if ( ! in_array($current, $final, true)) {
+                                $final[] = $current;
+                            }
+                        }
+
+                        $participants = $final;
+                    }
+                    // Cannot trust the results, just fallback to laps sorting
+                    else
+                    {
+                        // Sort participants
+                        $this->sortParticipantsAndFixPositions(
+                            $participants, $session);
+                    }
+
                 }
                 // No predefined result
                 else
