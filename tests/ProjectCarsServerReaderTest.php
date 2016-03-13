@@ -279,15 +279,51 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
         // Get laps of third participant
         $laps = $participants[2]->getLaps();
 
+        // Validate that lap 1 does not have cuts
+        $this->assertSame(0, $laps[1]->getNumberOfCuts());
+
+
+        // BELOW WAS THE OLD TEST THAT IS NOT VALID ANY MORE DUE TO
+        // IMPROVEMENTS IN NOT INCLUDING INVALID LAPS:
+        //
         // Validate that lap 1 and 2 have no cuts. Validate that lap 3 does not
         // exist (but there is a cut for this). By testing this we make sure
         // the unfinished lap 3 cut has not been misread into the first two
         // laps
-        $this->assertSame(0, $laps[1]->getNumberOfCuts());
-        $this->assertSame(0, $laps[2]->getNumberOfCuts());
-        $this->assertFalse(isset($laps[3]));
+        //
+        // $this->assertSame(0, $laps[1]->getNumberOfCuts());
+        // $this->assertSame(0, $laps[2]->getNumberOfCuts());
+        // $this->assertFalse(isset($laps[3]));
     }
 
+    /**
+     * Test ignoring invalid laps
+     */
+    public function testIgnoringInvalidLaps()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/projectcars-server/invalid.laps.json');
+
+        // Get qualify session
+        $session = Data_Reader::factory($file_path)->getSession(1);
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Validate that first participant
+        $this->assertSame('Markus Walter',
+            $participants[0]->getDriver()->getName());
+
+        // Validate proper lap numbers increment (there were double laps)
+        $lap_num = 1;
+        foreach($participants[0]->getLaps() as $lap)
+        {
+            $this->assertSame($lap_num, $lap->getNumber());
+            $lap_num++;
+        }
+
+    }
 
 
 
@@ -425,7 +461,7 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
                           $participant->getDriver()->getDriverId());
         $this->assertTrue($participant->getDriver()->isHuman());
         $this->assertSame(1, $participant->getPosition());
-        $this->assertSame(12, $participant->getGridPosition());
+        $this->assertSame(11, $participant->getGridPosition());
         $this->assertSame(Participant::FINISH_NORMAL,
             $participant->getFinishStatus());
         $this->assertSame(516.67499999999995, $participant->getTotalTime());

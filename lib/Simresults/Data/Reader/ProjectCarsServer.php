@@ -226,9 +226,11 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                     // Remember this participant
                     $participants_with_events[] = $part;
 
-                    // Is lap
-                    // TODO: Lap cutting
-                    if ($event['event_name'] === 'Lap')
+                    // Is lap and the lap is valid (only checked for non-race)
+                    if ($event['event_name'] === 'Lap' AND
+                        ($session->getType() === Session::TYPE_RACE
+                         OR
+                         $event['attributes']['CountThisLapTimes']))
                     {
                         // Init new lap
                         $lap = new Lap;
