@@ -251,7 +251,7 @@ sure all your new additions are tested.
 
 To run the tests, use the following command:
 
-    ./vendor/bin/phpunit tests
+    ./vendor/bin/phpunit
 
 ## License
 
