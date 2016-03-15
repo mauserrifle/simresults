@@ -42,6 +42,9 @@ class HelperTest extends PHPUnit_Framework_TestCase {
         // formatting with leading zeros
         $this->assertSame('01:11.6610', Helper::formatTime(71.661));
 
+        // Validate negative seconds
+        $this->assertSame('-01:11.0661', Helper::formatTime(-71.0661));
+
         // Validate time with hours
         $this->assertSame('01:31:56.5879', Helper::formatTime(5516.5879));
 

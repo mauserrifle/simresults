@@ -20,6 +20,15 @@ class Helper {
      */
     public static function formatTime($seconds, $force_hours=false)
     {
+        // Is negative?
+        $is_negative = false;
+        if ($seconds < 0)
+        {
+            // Make positive for further formatting
+            $is_negative = true;
+            $seconds = abs($seconds);
+        }
+
         // Make seconds without micro
         $round_seconds = (int) $seconds;
 
@@ -49,6 +58,9 @@ class Helper {
             // Prefix format with hours
             $format = sprintf('%02d:', $hours).$format;
         }
+
+        // Add minus sign if negative
+        if ($is_negative) $format = '-'.$format;
 
         // Return the format
         return $format;
