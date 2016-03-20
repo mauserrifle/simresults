@@ -36,6 +36,11 @@ class Vehicle {
     private $ballast = 0;
 
     /**
+     * @var  string  The skin of the vehicle
+     */
+    private $skin;
+
+    /**
      * Set the name of the vehicle
      *
      * @param   string   $name
@@ -143,6 +148,28 @@ class Vehicle {
     public function getBallast()
     {
         return $this->ballast;
+    }
+
+    /**
+     * Set the skin of the vehicle
+     *
+     * @param   string   $skin
+     * @return  Vehicle
+     */
+    public function setSkin($skin)
+    {
+        $this->skin = $skin;
+        return $this;
+    }
+
+    /**
+     * Get the skin of the vehicle
+     *
+     * @return  string
+     */
+    public function getSkin()
+    {
+        return $this->skin;
     }
 
     /**
