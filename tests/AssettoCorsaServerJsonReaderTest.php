@@ -150,6 +150,7 @@ class AssettoCorsaServerJsonReaderTest extends PHPUnit_Framework_TestCase {
                           $participant->getDriver()->getName());
         $this->assertSame('lotus_exos_125',
                           $participant->getVehicle()->getName());
+        $this->assertSame(20, $participant->getVehicle()->getBallast());
         $this->assertSame('TEST TEAM',
                           $participant->getTeam());
         $this->assertSame('76561198213775428',
@@ -168,6 +169,7 @@ class AssettoCorsaServerJsonReaderTest extends PHPUnit_Framework_TestCase {
                           $participant->getDriver()->getName());
         $this->assertSame('lotus_exos_125',
                           $participant->getVehicle()->getName());
+        $this->assertSame(0, $participant->getVehicle()->getBallast());
         $this->assertSame('',
                           $participant->getTeam());
         $this->assertSame('76561198156462312',

@@ -31,6 +31,11 @@ class Vehicle {
     private $number;
 
     /**
+     * @var  int  The ballast in KG
+     */
+    private $ballast = 0;
+
+    /**
      * Set the name of the vehicle
      *
      * @param   string   $name
@@ -116,6 +121,28 @@ class Vehicle {
     public function getNumber()
     {
         return $this->number;
+    }
+
+    /**
+     * Set the ballast in KG
+     *
+     * @param  int  $ballast
+     * @return  Vehicle
+     */
+    public function setBallast($ballast)
+    {
+        $this->ballast = $ballast;
+        return $this;
+    }
+
+    /**
+     * Get the ballast in KG
+     *
+     * @return  int
+     */
+    public function getBallast()
+    {
+        return $this->ballast;
     }
 
     /**
