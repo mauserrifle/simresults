@@ -121,7 +121,7 @@ class Vehicle {
     /**
      * Get the number of the vehicle
      *
-     * @return  string
+     * @return  int
      */
     public function getNumber()
     {
