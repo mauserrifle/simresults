@@ -175,7 +175,10 @@ class Participant {
     }
 
     /**
-     * Get the vehicle. Returns a vehicle in this order:
+     * Get the vehicle.
+     *
+     * When the argument `$ignore_lap_vehicles` is set to false (default) it
+     * returns a vehicle in this order:
      *
      *     * The best lap vehicle (if any)
      *     * The main vehicle set on participant (if any)
@@ -185,12 +188,16 @@ class Participant {
      * A participant might ran  multiple cars on different laps due to
      * reconnecting
      *
-     * @return  Vehicle
+     * @param  boolean  $ignore_lap_vehicles   Used to prevent infinite loops
+     *                                         when calling `Lap::getVehicle()`
+     *                                         which fallbacks to this class.
+     *
+     * @return Vehicle
      */
-    public function getVehicle()
+    public function getVehicle($ignore_lap_vehicles=false)
     {
         // Has multiple vehicles from laps
-        if ($vehicles = $this->getVehicles())
+        if ( ! $ignore_lap_vehicles AND $vehicles = $this->getVehicles())
         {
             // Return best lap vehicle if any
             if ($best_lap = $this->getBestLap() AND

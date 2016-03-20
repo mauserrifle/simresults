@@ -193,12 +193,20 @@ class Lap {
     /**
      * Get the vehicle
      *
+     * When no vehicle is set on the lap, this method will return the single
+     * vehicle set on the Participant
+     *
      * @param   int       $vehicle_number
      * @return  Vehicle
      */
     public function getVehicle()
     {
-        return $this->vehicle;
+        // Has lap vehicle, return that
+        if ($this->vehicle) return $this->vehicle;
+
+        // Return participant vehicle and make sure that method will not search
+        // the laps (which causes infinite loops)
+        return $this->participant->getVehicle(true);
     }
 
     /**

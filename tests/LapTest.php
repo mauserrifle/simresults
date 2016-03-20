@@ -1,6 +1,7 @@
 <?php
 use Simresults\Lap;
 use Simresults\Participant;
+use Simresults\Vehicle;
 use Simresults\CachedParticipant;
 
 /**
@@ -228,6 +229,22 @@ class LapTest extends PHPUnit_Framework_TestCase {
         // Validate that calculation is done when hard pit time is available
         $lap2->setPitTime(21);
         $this->assertSame(21, $lap2->getPitTime());
+    }
+
+    public function testGettingVehicleWhenVehicleNotSetOnLap()
+    {
+        // Init participant
+        $participant = Participant::createInstance();
+
+        // Set vehicle
+        $participant->setVehicle($vehicle = new Vehicle);
+
+        // Normal lap without vehicle on lap itself
+        $lap  = new Lap;
+        $lap->setParticipant($participant);
+
+        // Validate vehicle
+        $this->assertSame($vehicle, $lap->getVehicle());
     }
 
 }
