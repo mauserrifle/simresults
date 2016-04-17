@@ -530,6 +530,9 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                     // Leading participant is in the results array
                     if ($leading_is_in_result)
                     {
+                        // Init sorted result array
+                        $participants_resultsorted = array();
+
                         foreach ($results as $result)
                         {
                             // Participant not found, continue to next
@@ -556,6 +559,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                         // Sort participants not sorted by result by total time
                         $participants =
                             Helper::sortParticipantsByTotalTime($participants);
+
 
                         // Merge the sorted participants result with normal sort
                         // array. Merge them and remove any duplicates
@@ -606,8 +610,8 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 $session->setParticipants($participants);
 
                 $sessions[] = $session;
-            }
-        }
+            } // End stages loop
+        } // End history loop
 
 
         // Swap warmup and race positions if wrong

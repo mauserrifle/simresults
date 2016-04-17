@@ -337,6 +337,36 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
             $participants[0]->getDriver()->getName());
     }
 
+    /**
+     * Tests not mixing up races data. This happend because an sorted result
+     * array was not (re)initiated for each stage, so it kept building up
+     */
+    public function testNotMixingUpRaces()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/projectcars-server/races.to.test.mixed.races.json');
+
+        // Get sessions
+        $sessions = Data_Reader::factory($file_path)->getSessions();
+
+        // Validate each race session winner
+        $drivers = array('-T2R-Julien', '-T2R-Julien', '-T2R-Julien',
+                         'GTS - Ipod [FR]', 'GTS - Ipod [FR]');
+
+        $session_key = 1;
+        foreach ($drivers as $driver)
+        {
+            $this->assertSame($driver, $sessions[$session_key]
+                ->getWinningParticipant()->getDriver()->getName());
+
+            $session_key += 2;
+        }
+
+        // Validate number of participants last session
+        $this->assertSame(6, count($sessions[9]->getParticipants()));
+    }
+
 
 
     /***
