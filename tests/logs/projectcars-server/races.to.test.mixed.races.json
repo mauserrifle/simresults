@@ -1,0 +1,2977 @@
+// Persistent data for addon 'sms_stats', addon version 2.0
+// Automatically maintained by the addon, do not edit!
+
+{
+  "next_history_index" : 7,
+  "stats" : {
+    "history" : [
+      {
+        "end_time" : 1459686569,
+        "finished" : true,
+        "index" : 1,
+        "members" : {
+          "28356" : {
+            "index" : 4,
+            "join_time" : 1459684808,
+            "leave_time" : 1459684852,
+            "name" : "GTS-vince7700",
+            "participantid" : 4,
+            "setup" : {
+              "LiveryId" : 62,
+              "RaceStatFlags" : 1073779941,
+              "VehicleId" : -384044277
+            },
+            "steamid" : "76561198034146390"
+          },
+          "36228" : {
+            "index" : 4,
+            "join_time" : 1459684927,
+            "leave_time" : -1,
+            "name" : "GTS-vince7700",
+            "participantid" : 8,
+            "setup" : {
+              "LiveryId" : 62,
+              "RaceStatFlags" : 1073796333,
+              "VehicleId" : -384044277
+            },
+            "steamid" : "76561198034146390"
+          },
+          "37442" : {
+            "index" : 2,
+            "join_time" : 1459684808,
+            "leave_time" : 1459685728,
+            "name" : "allan72",
+            "participantid" : 2,
+            "setup" : {
+              "LiveryId" : 67,
+              "RaceStatFlags" : 1073792738,
+              "VehicleId" : -384044277
+            },
+            "steamid" : "76561198040469135"
+          },
+          "43265" : {
+            "index" : 1,
+            "join_time" : 1459684808,
+            "leave_time" : -1,
+            "name" : "GTS-Neo",
+            "participantid" : 1,
+            "setup" : {
+              "LiveryId" : 75,
+              "RaceStatFlags" : 1073766405,
+              "VehicleId" : 1884411907
+            },
+            "steamid" : "76561198000881110"
+          },
+          "44614" : {
+            "index" : 6,
+            "join_time" : 1459684808,
+            "leave_time" : -1,
+            "name" : "(L.C.T.FR) loloracer",
+            "participantid" : 6,
+            "setup" : {
+              "LiveryId" : 58,
+              "RaceStatFlags" : 1073768195,
+              "VehicleId" : -1365918055
+            },
+            "steamid" : "76561197992711309"
+          },
+          "45187" : {
+            "index" : 3,
+            "join_time" : 1459684808,
+            "leave_time" : -1,
+            "name" : "-T2R-Julien",
+            "participantid" : 3,
+            "setup" : {
+              "LiveryId" : 53,
+              "RaceStatFlags" : 1073767653,
+              "VehicleId" : -1166911988
+            },
+            "steamid" : "76561198116275297"
+          },
+          "51456" : {
+            "index" : 0,
+            "join_time" : 1459684808,
+            "leave_time" : -1,
+            "name" : "GTS - Ipod [FR]",
+            "participantid" : 0,
+            "setup" : {
+              "LiveryId" : 70,
+              "RaceStatFlags" : 1073796325,
+              "VehicleId" : -1365918055
+            },
+            "steamid" : "76561197976030838"
+          },
+          "62597" : {
+            "index" : 5,
+            "join_time" : 1459684808,
+            "leave_time" : 1459685904,
+            "name" : "(L.C.T.FR) Doky14",
+            "participantid" : 5,
+            "setup" : {
+              "LiveryId" : 57,
+              "RaceStatFlags" : 1073760163,
+              "VehicleId" : -1365918055
+            },
+            "steamid" : "76561198071472030"
+          },
+          "64327" : {
+            "index" : 7,
+            "join_time" : 1459684808,
+            "leave_time" : -1,
+            "name" : "GTS-dice",
+            "participantid" : 7,
+            "setup" : {
+              "LiveryId" : 62,
+              "RaceStatFlags" : 1073799397,
+              "VehicleId" : 1452261378
+            },
+            "steamid" : "76561198031826465"
+          }
+        },
+        "participants" : {
+          "0" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 70,
+            "Name" : "GTS - Ipod [FR]",
+            "RefId" : 51456,
+            "VehicleId" : -1365918055
+          },
+          "1" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 75,
+            "Name" : "GTS-Neo",
+            "RefId" : 43265,
+            "VehicleId" : 1884411907
+          },
+          "2" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 67,
+            "Name" : "allan72",
+            "RefId" : 37442,
+            "VehicleId" : -384044277
+          },
+          "3" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 53,
+            "Name" : "-T2R-Julien",
+            "RefId" : 45187,
+            "VehicleId" : -1166911988
+          },
+          "4" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 62,
+            "Name" : "GTS-vince7700",
+            "RefId" : 28356,
+            "VehicleId" : -384044277
+          },
+          "5" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 57,
+            "Name" : "(L.C.T.FR) Doky14",
+            "RefId" : 62597,
+            "VehicleId" : -1365918055
+          },
+          "6" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 58,
+            "Name" : "(L.C.T.FR) loloracer",
+            "RefId" : 44614,
+            "VehicleId" : -1365918055
+          },
+          "7" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 62,
+            "Name" : "GTS-dice",
+            "RefId" : 64327,
+            "VehicleId" : 1452261378
+          },
+          "8" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 62,
+            "Name" : "",
+            "RefId" : 36228,
+            "VehicleId" : -384044277
+          }
+        },
+        "setup" : {
+          "AllowedViews" : 0,
+          "DamageType" : 3,
+          "DateDay" : 3,
+          "DateHour" : 13,
+          "DateMinute" : 0,
+          "DateMonth" : 4,
+          "DateProgression" : 1,
+          "DateYear" : 2016,
+          "Flags" : 787480,
+          "ForecastProgression" : 1,
+          "FuelUsageType" : 0,
+          "GridSize" : 24,
+          "MaxPlayers" : 20,
+          "OpponentDifficulty" : 95,
+          "PenaltiesType" : 1,
+          "Practice1Length" : 0,
+          "Practice2Length" : 0,
+          "QualifyLength" : 15,
+          "Race1Length" : 7,
+          "ServerControlsSetup" : 1,
+          "ServerControlsTrack" : 1,
+          "ServerControlsVehicle" : 0,
+          "ServerControlsVehicleClass" : 1,
+          "TireWearType" : 5,
+          "TrackId" : 354022214,
+          "VehicleClassId" : -112887377,
+          "VehicleModelId" : -1365918055,
+          "WarmupLength" : 0,
+          "WeatherSlot1" : 129238383,
+          "WeatherSlot2" : 270338437,
+          "WeatherSlot3" : 270338437,
+          "WeatherSlot4" : 270338437,
+          "WeatherSlots" : 0
+        },
+        "stages" : {
+          "qualifying" : {
+            "end_time" : 1459685744,
+            "events" : {},
+            "results" : [
+              {
+                "attributes" : {
+                  "FastestLapTime" : 87057,
+                  "Lap" : 4,
+                  "RacePosition" : 1,
+                  "State" : "InGarage",
+                  "TotalTime" : 0,
+                  "VehicleId" : -1365918055
+                },
+                "is_player" : true,
+                "name" : "GTS - Ipod [FR]",
+                "participantid" : 0,
+                "refid" : 51456,
+                "time" : 1459685724
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 87369,
+                  "Lap" : 4,
+                  "RacePosition" : 2,
+                  "State" : "Racing",
+                  "TotalTime" : 0,
+                  "VehicleId" : 1884411907
+                },
+                "is_player" : true,
+                "name" : "GTS-Neo",
+                "participantid" : 1,
+                "refid" : 43265,
+                "time" : 1459685724
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 87496,
+                  "Lap" : 4,
+                  "RacePosition" : 3,
+                  "State" : "InGarage",
+                  "TotalTime" : 0,
+                  "VehicleId" : -1365918055
+                },
+                "is_player" : true,
+                "name" : "(L.C.T.FR) Doky14",
+                "participantid" : 5,
+                "refid" : 62597,
+                "time" : 1459685724
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 87604,
+                  "Lap" : 8,
+                  "RacePosition" : 4,
+                  "State" : "InGarage",
+                  "TotalTime" : 0,
+                  "VehicleId" : -1166911988
+                },
+                "is_player" : true,
+                "name" : "-T2R-Julien",
+                "participantid" : 3,
+                "refid" : 45187,
+                "time" : 1459685724
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 88248,
+                  "Lap" : 3,
+                  "RacePosition" : 5,
+                  "State" : "InGarage",
+                  "TotalTime" : 0,
+                  "VehicleId" : -1365918055
+                },
+                "is_player" : true,
+                "name" : "(L.C.T.FR) loloracer",
+                "participantid" : 6,
+                "refid" : 44614,
+                "time" : 1459685724
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 91392,
+                  "Lap" : 3,
+                  "RacePosition" : 6,
+                  "State" : "InGarage",
+                  "TotalTime" : 0,
+                  "VehicleId" : -384044277
+                },
+                "is_player" : true,
+                "name" : "",
+                "participantid" : 8,
+                "refid" : 36228,
+                "time" : 1459685724
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 100530,
+                  "Lap" : 3,
+                  "RacePosition" : 7,
+                  "State" : "InGarage",
+                  "TotalTime" : 0,
+                  "VehicleId" : 1452261378
+                },
+                "is_player" : true,
+                "name" : "GTS-dice",
+                "participantid" : 7,
+                "refid" : 64327,
+                "time" : 1459685724
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 105232,
+                  "Lap" : 2,
+                  "RacePosition" : 8,
+                  "State" : "Racing",
+                  "TotalTime" : 0,
+                  "VehicleId" : -384044277
+                },
+                "is_player" : true,
+                "name" : "allan72",
+                "participantid" : 2,
+                "refid" : 37442,
+                "time" : 1459685724
+              }
+            ],
+            "start_time" : 1459684824
+          },
+          "race1" : {
+            "end_time" : 1459686569,
+            "events" : {},
+            "results" : [
+              {
+                "attributes" : {
+                  "FastestLapTime" : 87002,
+                  "Lap" : 7,
+                  "RacePosition" : 1,
+                  "State" : "Finished",
+                  "TotalTime" : 621146,
+                  "VehicleId" : -1166911988
+                },
+                "is_player" : true,
+                "name" : "-T2R-Julien",
+                "participantid" : 3,
+                "refid" : 45187,
+                "time" : 1459686568
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 87379,
+                  "Lap" : 7,
+                  "RacePosition" : 2,
+                  "State" : "Finished",
+                  "TotalTime" : 621993,
+                  "VehicleId" : -1365918055
+                },
+                "is_player" : true,
+                "name" : "GTS - Ipod [FR]",
+                "participantid" : 0,
+                "refid" : 51456,
+                "time" : 1459686568
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 87332,
+                  "Lap" : 7,
+                  "RacePosition" : 3,
+                  "State" : "Finished",
+                  "TotalTime" : 631872,
+                  "VehicleId" : 1884411907
+                },
+                "is_player" : true,
+                "name" : "GTS-Neo",
+                "participantid" : 1,
+                "refid" : 43265,
+                "time" : 1459686568
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 88816,
+                  "Lap" : 7,
+                  "RacePosition" : 4,
+                  "State" : "Finished",
+                  "TotalTime" : 645322,
+                  "VehicleId" : -1365918055
+                },
+                "is_player" : true,
+                "name" : "(L.C.T.FR) loloracer",
+                "participantid" : 6,
+                "refid" : 44614,
+                "time" : 1459686568
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 98040,
+                  "Lap" : 2,
+                  "RacePosition" : 5,
+                  "State" : "DNF",
+                  "TotalTime" : 812184,
+                  "VehicleId" : 1452261378
+                },
+                "is_player" : true,
+                "name" : "GTS-dice",
+                "participantid" : 7,
+                "refid" : 64327,
+                "time" : 1459686568
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 0,
+                  "Lap" : 0,
+                  "RacePosition" : 6,
+                  "State" : "DNF",
+                  "TotalTime" : 812184,
+                  "VehicleId" : -384044277
+                },
+                "is_player" : true,
+                "name" : "",
+                "participantid" : 8,
+                "refid" : 36228,
+                "time" : 1459686568
+              }
+            ],
+            "start_time" : 1459685744
+          }
+        },
+        "start_time" : 1459684342
+      },
+      {
+        "end_time" : 1459686923,
+        "finished" : false,
+        "index" : 2,
+        "members" : {
+          "20549" : {
+            "index" : 5,
+            "join_time" : 1459686739,
+            "leave_time" : 1459686890,
+            "name" : "[NRT]naremby",
+            "participantid" : -1,
+            "setup" : {
+              "LiveryId" : 72,
+              "RaceStatFlags" : 0,
+              "VehicleId" : 1161219858
+            },
+            "steamid" : "76561198271825673"
+          },
+          "21313" : {
+            "index" : 1,
+            "join_time" : 1459686680,
+            "leave_time" : 1459686895,
+            "name" : "GTS-vince7700",
+            "participantid" : -1,
+            "setup" : {
+              "LiveryId" : 62,
+              "RaceStatFlags" : 0,
+              "VehicleId" : -384044277
+            },
+            "steamid" : "76561198034146390"
+          },
+          "2823" : {
+            "index" : 7,
+            "join_time" : 1459686887,
+            "leave_time" : 1459686920,
+            "name" : "(L.C.T.FR) loloracer",
+            "participantid" : -1,
+            "setup" : {
+              "LiveryId" : 58,
+              "RaceStatFlags" : 0,
+              "VehicleId" : -1365918055
+            },
+            "steamid" : "76561197992711309"
+          },
+          "33606" : {
+            "index" : 6,
+            "join_time" : 1459686762,
+            "leave_time" : 1459686889,
+            "name" : "GTS-Neo",
+            "participantid" : -1,
+            "setup" : {
+              "LiveryId" : 75,
+              "RaceStatFlags" : 0,
+              "VehicleId" : 1884411907
+            },
+            "steamid" : "76561198000881110"
+          },
+          "38339" : {
+            "index" : 3,
+            "join_time" : 1459686724,
+            "leave_time" : 1459686896,
+            "name" : "GTS-dice",
+            "participantid" : -1,
+            "setup" : {
+              "LiveryId" : 62,
+              "RaceStatFlags" : 0,
+              "VehicleId" : 1452261378
+            },
+            "steamid" : "76561198031826465"
+          },
+          "4034" : {
+            "index" : 2,
+            "join_time" : 1459686683,
+            "leave_time" : 1459686889,
+            "name" : "-T2R-Julien",
+            "participantid" : -1,
+            "setup" : {
+              "LiveryId" : 53,
+              "RaceStatFlags" : 0,
+              "VehicleId" : -1166911988
+            },
+            "steamid" : "76561198116275297"
+          },
+          "42816" : {
+            "index" : 0,
+            "join_time" : 1459686653,
+            "leave_time" : 1459686923,
+            "name" : "GTS - Ipod [FR]",
+            "participantid" : -1,
+            "setup" : {
+              "LiveryId" : 70,
+              "RaceStatFlags" : 0,
+              "VehicleId" : -1365918055
+            },
+            "steamid" : "76561197976030838"
+          },
+          "56900" : {
+            "index" : 4,
+            "join_time" : 1459686737,
+            "leave_time" : 1459686893,
+            "name" : "(L.C.T.FR) Doky14",
+            "participantid" : -1,
+            "setup" : {
+              "LiveryId" : 57,
+              "RaceStatFlags" : 0,
+              "VehicleId" : -1365918055
+            },
+            "steamid" : "76561198071472030"
+          }
+        },
+        "participants" : {},
+        "setup" : {
+          "AllowedViews" : 0,
+          "DamageType" : 3,
+          "DateDay" : 3,
+          "DateHour" : 13,
+          "DateMinute" : 0,
+          "DateMonth" : 4,
+          "DateProgression" : 1,
+          "DateYear" : 2016,
+          "Flags" : 787480,
+          "ForecastProgression" : 1,
+          "FuelUsageType" : 0,
+          "GridSize" : 24,
+          "MaxPlayers" : 20,
+          "OpponentDifficulty" : 95,
+          "PenaltiesType" : 1,
+          "Practice1Length" : 0,
+          "Practice2Length" : 0,
+          "QualifyLength" : 15,
+          "Race1Length" : 7,
+          "ServerControlsSetup" : 1,
+          "ServerControlsTrack" : 1,
+          "ServerControlsVehicle" : 0,
+          "ServerControlsVehicleClass" : 1,
+          "TireWearType" : 5,
+          "TrackId" : 904625875,
+          "VehicleClassId" : -112887377,
+          "VehicleModelId" : -1041674971,
+          "WarmupLength" : 0,
+          "WeatherSlot1" : 296956818,
+          "WeatherSlot2" : 129238383,
+          "WeatherSlot3" : 296956818,
+          "WeatherSlot4" : 888299130,
+          "WeatherSlots" : 0
+        },
+        "stages" : {},
+        "start_time" : 1459686653
+      },
+      {
+        "end_time" : 1459689521,
+        "finished" : true,
+        "index" : 3,
+        "members" : {
+          "10117" : {
+            "index" : 5,
+            "join_time" : 1459687373,
+            "leave_time" : -1,
+            "name" : "GTS-dice",
+            "participantid" : 5,
+            "setup" : {
+              "LiveryId" : 62,
+              "RaceStatFlags" : 1073799397,
+              "VehicleId" : 1452261378
+            },
+            "steamid" : "76561198031826465"
+          },
+          "20868" : {
+            "index" : 4,
+            "join_time" : 1459687373,
+            "leave_time" : -1,
+            "name" : "GTS-Neo",
+            "participantid" : 4,
+            "setup" : {
+              "LiveryId" : 75,
+              "RaceStatFlags" : 1073766405,
+              "VehicleId" : 1884411907
+            },
+            "steamid" : "76561198000881110"
+          },
+          "37894" : {
+            "index" : 6,
+            "join_time" : 1459687373,
+            "leave_time" : -1,
+            "name" : "(L.C.T.FR) Doky14",
+            "participantid" : 6,
+            "setup" : {
+              "LiveryId" : 57,
+              "RaceStatFlags" : 1073760163,
+              "VehicleId" : -1365918055
+            },
+            "steamid" : "76561198071472030"
+          },
+          "40705" : {
+            "index" : 1,
+            "join_time" : 1459687672,
+            "leave_time" : -1,
+            "name" : "GTS-vince7700",
+            "participantid" : 7,
+            "setup" : {
+              "LiveryId" : 62,
+              "RaceStatFlags" : 1073796325,
+              "VehicleId" : -384044277
+            },
+            "steamid" : "76561198034146390"
+          },
+          "43715" : {
+            "index" : 3,
+            "join_time" : 1459687373,
+            "leave_time" : -1,
+            "name" : "(L.C.T.FR) loloracer",
+            "participantid" : 3,
+            "setup" : {
+              "LiveryId" : 58,
+              "RaceStatFlags" : 1073768195,
+              "VehicleId" : -1365918055
+            },
+            "steamid" : "76561197992711309"
+          },
+          "47426" : {
+            "index" : 2,
+            "join_time" : 1459687373,
+            "leave_time" : -1,
+            "name" : "-T2R-Julien",
+            "participantid" : 2,
+            "setup" : {
+              "LiveryId" : 53,
+              "RaceStatFlags" : 1073767653,
+              "VehicleId" : -1166911988
+            },
+            "steamid" : "76561198116275297"
+          },
+          "57472" : {
+            "index" : 0,
+            "join_time" : 1459687373,
+            "leave_time" : -1,
+            "name" : "GTS - Ipod [FR]",
+            "participantid" : 0,
+            "setup" : {
+              "LiveryId" : 70,
+              "RaceStatFlags" : 1073796325,
+              "VehicleId" : -1365918055
+            },
+            "steamid" : "76561197976030838"
+          },
+          "64833" : {
+            "index" : 1,
+            "join_time" : 1459687373,
+            "leave_time" : 1459687607,
+            "name" : "GTS-vince7700",
+            "participantid" : 1,
+            "setup" : {
+              "LiveryId" : 62,
+              "RaceStatFlags" : 1073779965,
+              "VehicleId" : -384044277
+            },
+            "steamid" : "76561198034146390"
+          }
+        },
+        "participants" : {
+          "0" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 70,
+            "Name" : "GTS - Ipod [FR]",
+            "RefId" : 57472,
+            "VehicleId" : -1365918055
+          },
+          "1" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 62,
+            "Name" : "GTS-vince7700",
+            "RefId" : 64833,
+            "VehicleId" : -384044277
+          },
+          "2" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 53,
+            "Name" : "-T2R-Julien",
+            "RefId" : 47426,
+            "VehicleId" : -1166911988
+          },
+          "3" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 58,
+            "Name" : "(L.C.T.FR) loloracer",
+            "RefId" : 43715,
+            "VehicleId" : -1365918055
+          },
+          "4" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 75,
+            "Name" : "GTS-Neo",
+            "RefId" : 20868,
+            "VehicleId" : 1884411907
+          },
+          "5" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 62,
+            "Name" : "GTS-dice",
+            "RefId" : 10117,
+            "VehicleId" : 1452261378
+          },
+          "6" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 57,
+            "Name" : "(L.C.T.FR) Doky14",
+            "RefId" : 37894,
+            "VehicleId" : -1365918055
+          },
+          "7" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 62,
+            "Name" : "",
+            "RefId" : 40705,
+            "VehicleId" : -384044277
+          }
+        },
+        "setup" : {
+          "AllowedViews" : 0,
+          "DamageType" : 3,
+          "DateDay" : 3,
+          "DateHour" : 13,
+          "DateMinute" : 0,
+          "DateMonth" : 4,
+          "DateProgression" : 1,
+          "DateYear" : 2016,
+          "Flags" : 787688,
+          "ForecastProgression" : 1,
+          "FuelUsageType" : 0,
+          "GridSize" : 24,
+          "MaxPlayers" : 20,
+          "OpponentDifficulty" : 95,
+          "PenaltiesType" : 1,
+          "Practice1Length" : 0,
+          "Practice2Length" : 0,
+          "QualifyLength" : 15,
+          "Race1Length" : 7,
+          "ServerControlsSetup" : 1,
+          "ServerControlsTrack" : 1,
+          "ServerControlsVehicle" : 0,
+          "ServerControlsVehicleClass" : 1,
+          "TireWearType" : 5,
+          "TrackId" : 904625875,
+          "VehicleClassId" : -112887377,
+          "VehicleModelId" : -1365918055,
+          "WarmupLength" : 0,
+          "WeatherSlot1" : 129238383,
+          "WeatherSlot2" : 270338437,
+          "WeatherSlot3" : 270338437,
+          "WeatherSlot4" : 270338437,
+          "WeatherSlots" : 0
+        },
+        "stages" : {
+          "qualifying" : {
+            "end_time" : 1459688309,
+            "events" : {},
+            "results" : [
+              {
+                "attributes" : {
+                  "FastestLapTime" : 137017,
+                  "Lap" : 2,
+                  "RacePosition" : 1,
+                  "State" : "InGarage",
+                  "TotalTime" : 0,
+                  "VehicleId" : -1365918055
+                },
+                "is_player" : true,
+                "name" : "GTS - Ipod [FR]",
+                "participantid" : 0,
+                "refid" : 57472,
+                "time" : 1459688289
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 137970,
+                  "Lap" : 4,
+                  "RacePosition" : 2,
+                  "State" : "InGarage",
+                  "TotalTime" : 0,
+                  "VehicleId" : -1166911988
+                },
+                "is_player" : true,
+                "name" : "-T2R-Julien",
+                "participantid" : 2,
+                "refid" : 47426,
+                "time" : 1459688289
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 138243,
+                  "Lap" : 4,
+                  "RacePosition" : 3,
+                  "State" : "Racing",
+                  "TotalTime" : 0,
+                  "VehicleId" : -1365918055
+                },
+                "is_player" : true,
+                "name" : "(L.C.T.FR) Doky14",
+                "participantid" : 6,
+                "refid" : 37894,
+                "time" : 1459688289
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 140360,
+                  "Lap" : 3,
+                  "RacePosition" : 4,
+                  "State" : "InGarage",
+                  "TotalTime" : 0,
+                  "VehicleId" : 1884411907
+                },
+                "is_player" : true,
+                "name" : "GTS-Neo",
+                "participantid" : 4,
+                "refid" : 20868,
+                "time" : 1459688289
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 142081,
+                  "Lap" : 4,
+                  "RacePosition" : 5,
+                  "State" : "Racing",
+                  "TotalTime" : 0,
+                  "VehicleId" : 1452261378
+                },
+                "is_player" : true,
+                "name" : "GTS-dice",
+                "participantid" : 5,
+                "refid" : 10117,
+                "time" : 1459688289
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 0,
+                  "Lap" : 2,
+                  "RacePosition" : 6,
+                  "State" : "Racing",
+                  "TotalTime" : 0,
+                  "VehicleId" : -384044277
+                },
+                "is_player" : true,
+                "name" : "",
+                "participantid" : 7,
+                "refid" : 40705,
+                "time" : 1459688289
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 0,
+                  "Lap" : 0,
+                  "RacePosition" : 7,
+                  "State" : "InGarage",
+                  "TotalTime" : 0,
+                  "VehicleId" : -1365918055
+                },
+                "is_player" : true,
+                "name" : "(L.C.T.FR) loloracer",
+                "participantid" : 3,
+                "refid" : 43715,
+                "time" : 1459688289
+              }
+            ],
+            "start_time" : 1459687389
+          },
+          "race1" : {
+            "end_time" : 1459689521,
+            "events" : {},
+            "results" : [
+              {
+                "attributes" : {
+                  "FastestLapTime" : 137196,
+                  "Lap" : 7,
+                  "RacePosition" : 1,
+                  "State" : "Finished",
+                  "TotalTime" : 974800,
+                  "VehicleId" : -1166911988
+                },
+                "is_player" : true,
+                "name" : "-T2R-Julien",
+                "participantid" : 2,
+                "refid" : 47426,
+                "time" : 1459689521
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 136950,
+                  "Lap" : 7,
+                  "RacePosition" : 2,
+                  "State" : "Finished",
+                  "TotalTime" : 985478,
+                  "VehicleId" : -1365918055
+                },
+                "is_player" : true,
+                "name" : "GTS - Ipod [FR]",
+                "participantid" : 0,
+                "refid" : 57472,
+                "time" : 1459689521
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 139067,
+                  "Lap" : 7,
+                  "RacePosition" : 3,
+                  "State" : "Finished",
+                  "TotalTime" : 995390,
+                  "VehicleId" : 1884411907
+                },
+                "is_player" : true,
+                "name" : "GTS-Neo",
+                "participantid" : 4,
+                "refid" : 20868,
+                "time" : 1459689521
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 140505,
+                  "Lap" : 7,
+                  "RacePosition" : 4,
+                  "State" : "Finished",
+                  "TotalTime" : 1014845,
+                  "VehicleId" : 1452261378
+                },
+                "is_player" : true,
+                "name" : "GTS-dice",
+                "participantid" : 5,
+                "refid" : 10117,
+                "time" : 1459689521
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 139667,
+                  "Lap" : 7,
+                  "RacePosition" : 5,
+                  "State" : "Finished",
+                  "TotalTime" : 1016798,
+                  "VehicleId" : -1365918055
+                },
+                "is_player" : true,
+                "name" : "(L.C.T.FR) loloracer",
+                "participantid" : 3,
+                "refid" : 43715,
+                "time" : 1459689521
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 138983,
+                  "Lap" : 7,
+                  "RacePosition" : 6,
+                  "State" : "Finished",
+                  "TotalTime" : 1070228,
+                  "VehicleId" : -1365918055
+                },
+                "is_player" : true,
+                "name" : "(L.C.T.FR) Doky14",
+                "participantid" : 6,
+                "refid" : 37894,
+                "time" : 1459689521
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 146438,
+                  "Lap" : 3,
+                  "RacePosition" : 7,
+                  "State" : "DNF",
+                  "TotalTime" : 1197982,
+                  "VehicleId" : -384044277
+                },
+                "is_player" : true,
+                "name" : "",
+                "participantid" : 7,
+                "refid" : 40705,
+                "time" : 1459689521
+              }
+            ],
+            "start_time" : 1459688309
+          }
+        },
+        "start_time" : 1459687176
+      },
+      {
+        "end_time" : 1459692024,
+        "finished" : true,
+        "index" : 4,
+        "members" : {
+          "14144" : {
+            "index" : 0,
+            "join_time" : 1459690176,
+            "leave_time" : -1,
+            "name" : "GTS - Ipod [FR]",
+            "participantid" : 8,
+            "setup" : {
+              "LiveryId" : 70,
+              "RaceStatFlags" : 1073796325,
+              "VehicleId" : -1365918055
+            },
+            "steamid" : "76561197976030838"
+          },
+          "18819" : {
+            "index" : 3,
+            "join_time" : 1459690176,
+            "leave_time" : -1,
+            "name" : "-T2R-Julien",
+            "participantid" : 10,
+            "setup" : {
+              "LiveryId" : 53,
+              "RaceStatFlags" : 1073767653,
+              "VehicleId" : -1166911988
+            },
+            "steamid" : "76561198116275297"
+          },
+          "27841" : {
+            "index" : 1,
+            "join_time" : 1459690245,
+            "leave_time" : -1,
+            "name" : "GTS-Neo",
+            "participantid" : 14,
+            "setup" : {
+              "LiveryId" : 75,
+              "RaceStatFlags" : 1073766405,
+              "VehicleId" : 1884411907
+            },
+            "steamid" : "76561198000881110"
+          },
+          "36230" : {
+            "index" : 6,
+            "join_time" : 1459690176,
+            "leave_time" : -1,
+            "name" : "(L.C.T.FR) loloracer",
+            "participantid" : 13,
+            "setup" : {
+              "LiveryId" : 58,
+              "RaceStatFlags" : 1073768195,
+              "VehicleId" : -1365918055
+            },
+            "steamid" : "76561197992711309"
+          },
+          "389" : {
+            "index" : 5,
+            "join_time" : 1459690176,
+            "leave_time" : -1,
+            "name" : "GTS-vince7700",
+            "participantid" : 12,
+            "setup" : {
+              "LiveryId" : 62,
+              "RaceStatFlags" : 1073796325,
+              "VehicleId" : -384044277
+            },
+            "steamid" : "76561198034146390"
+          },
+          "49538" : {
+            "index" : 2,
+            "join_time" : 1459690176,
+            "leave_time" : -1,
+            "name" : "GTS-dice",
+            "participantid" : 9,
+            "setup" : {
+              "LiveryId" : 62,
+              "RaceStatFlags" : 1073799397,
+              "VehicleId" : 1452261378
+            },
+            "steamid" : "76561198031826465"
+          },
+          "61188" : {
+            "index" : 4,
+            "join_time" : 1459690176,
+            "leave_time" : -1,
+            "name" : "(L.C.T.FR) Doky14",
+            "participantid" : 11,
+            "setup" : {
+              "LiveryId" : 57,
+              "RaceStatFlags" : 1073760163,
+              "VehicleId" : -1365918055
+            },
+            "steamid" : "76561198071472030"
+          }
+        },
+        "participants" : {
+          "10" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 53,
+            "Name" : "-T2R-Julien",
+            "RefId" : 18819,
+            "VehicleId" : -1166911988
+          },
+          "11" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 57,
+            "Name" : "(L.C.T.FR) Doky14",
+            "RefId" : 61188,
+            "VehicleId" : -1365918055
+          },
+          "12" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 62,
+            "Name" : "GTS-vince7700",
+            "RefId" : 389,
+            "VehicleId" : -384044277
+          },
+          "13" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 58,
+            "Name" : "(L.C.T.FR) loloracer",
+            "RefId" : 36230,
+            "VehicleId" : -1365918055
+          },
+          "14" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 75,
+            "Name" : "",
+            "RefId" : 27841,
+            "VehicleId" : 1884411907
+          },
+          "8" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 70,
+            "Name" : "GTS - Ipod [FR]",
+            "RefId" : 14144,
+            "VehicleId" : -1365918055
+          },
+          "9" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 62,
+            "Name" : "GTS-dice",
+            "RefId" : 49538,
+            "VehicleId" : 1452261378
+          }
+        },
+        "setup" : {
+          "AllowedViews" : 0,
+          "DamageType" : 3,
+          "DateDay" : 3,
+          "DateHour" : 13,
+          "DateMinute" : 0,
+          "DateMonth" : 4,
+          "DateProgression" : 1,
+          "DateYear" : 2016,
+          "Flags" : 787688,
+          "ForecastProgression" : 1,
+          "FuelUsageType" : 0,
+          "GridSize" : 24,
+          "MaxPlayers" : 20,
+          "OpponentDifficulty" : 95,
+          "PenaltiesType" : 1,
+          "Practice1Length" : 0,
+          "Practice2Length" : 0,
+          "QualifyLength" : 15,
+          "Race1Length" : 7,
+          "ServerControlsSetup" : 1,
+          "ServerControlsTrack" : 1,
+          "ServerControlsVehicle" : 0,
+          "ServerControlsVehicleClass" : 1,
+          "TireWearType" : 5,
+          "TrackId" : 920145926,
+          "VehicleClassId" : -112887377,
+          "VehicleModelId" : -1365918055,
+          "WarmupLength" : 0,
+          "WeatherSlot1" : 888299130,
+          "WeatherSlot2" : -934211870,
+          "WeatherSlot3" : 296956818,
+          "WeatherSlot4" : -934211870,
+          "WeatherSlots" : 0
+        },
+        "stages" : {
+          "qualifying" : {
+            "end_time" : 1459691110,
+            "events" : {},
+            "results" : [
+              {
+                "attributes" : {
+                  "FastestLapTime" : 103312,
+                  "Lap" : 6,
+                  "RacePosition" : 1,
+                  "State" : "InGarage",
+                  "TotalTime" : 0,
+                  "VehicleId" : -1166911988
+                },
+                "is_player" : true,
+                "name" : "-T2R-Julien",
+                "participantid" : 10,
+                "refid" : 18819,
+                "time" : 1459691089
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 103722,
+                  "Lap" : 4,
+                  "RacePosition" : 2,
+                  "State" : "InGarage",
+                  "TotalTime" : 0,
+                  "VehicleId" : -1365918055
+                },
+                "is_player" : true,
+                "name" : "GTS - Ipod [FR]",
+                "participantid" : 8,
+                "refid" : 14144,
+                "time" : 1459691089
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 104185,
+                  "Lap" : 5,
+                  "RacePosition" : 3,
+                  "State" : "Racing",
+                  "TotalTime" : 0,
+                  "VehicleId" : -1365918055
+                },
+                "is_player" : true,
+                "name" : "(L.C.T.FR) Doky14",
+                "participantid" : 11,
+                "refid" : 61188,
+                "time" : 1459691089
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 104655,
+                  "Lap" : 3,
+                  "RacePosition" : 4,
+                  "State" : "Racing",
+                  "TotalTime" : 0,
+                  "VehicleId" : 1452261378
+                },
+                "is_player" : true,
+                "name" : "GTS-dice",
+                "participantid" : 9,
+                "refid" : 49538,
+                "time" : 1459691089
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 104662,
+                  "Lap" : 3,
+                  "RacePosition" : 5,
+                  "State" : "Racing",
+                  "TotalTime" : 0,
+                  "VehicleId" : 1884411907
+                },
+                "is_player" : true,
+                "name" : "",
+                "participantid" : 14,
+                "refid" : 27841,
+                "time" : 1459691089
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 104731,
+                  "Lap" : 3,
+                  "RacePosition" : 6,
+                  "State" : "Racing",
+                  "TotalTime" : 0,
+                  "VehicleId" : -1365918055
+                },
+                "is_player" : true,
+                "name" : "(L.C.T.FR) loloracer",
+                "participantid" : 13,
+                "refid" : 36230,
+                "time" : 1459691089
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 105314,
+                  "Lap" : 3,
+                  "RacePosition" : 7,
+                  "State" : "InGarage",
+                  "TotalTime" : 0,
+                  "VehicleId" : -384044277
+                },
+                "is_player" : true,
+                "name" : "GTS-vince7700",
+                "participantid" : 12,
+                "refid" : 389,
+                "time" : 1459691089
+              }
+            ],
+            "start_time" : 1459690189
+          },
+          "race1" : {
+            "end_time" : 1459692024,
+            "events" : {},
+            "results" : [
+              {
+                "attributes" : {
+                  "FastestLapTime" : 103480,
+                  "Lap" : 7,
+                  "RacePosition" : 1,
+                  "State" : "Finished",
+                  "TotalTime" : 737380,
+                  "VehicleId" : -1166911988
+                },
+                "is_player" : true,
+                "name" : "-T2R-Julien",
+                "participantid" : 10,
+                "refid" : 18819,
+                "time" : 1459692024
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 105115,
+                  "Lap" : 7,
+                  "RacePosition" : 2,
+                  "State" : "Finished",
+                  "TotalTime" : 757307,
+                  "VehicleId" : -384044277
+                },
+                "is_player" : true,
+                "name" : "GTS-vince7700",
+                "participantid" : 12,
+                "refid" : 389,
+                "time" : 1459692024
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 106154,
+                  "Lap" : 7,
+                  "RacePosition" : 3,
+                  "State" : "Finished",
+                  "TotalTime" : 770955,
+                  "VehicleId" : 1452261378
+                },
+                "is_player" : true,
+                "name" : "GTS-dice",
+                "participantid" : 9,
+                "refid" : 49538,
+                "time" : 1459692024
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 105967,
+                  "Lap" : 7,
+                  "RacePosition" : 4,
+                  "State" : "Finished",
+                  "TotalTime" : 779127,
+                  "VehicleId" : -1365918055
+                },
+                "is_player" : true,
+                "name" : "(L.C.T.FR) loloracer",
+                "participantid" : 13,
+                "refid" : 36230,
+                "time" : 1459692024
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 104789,
+                  "Lap" : 7,
+                  "RacePosition" : 5,
+                  "State" : "Finished",
+                  "TotalTime" : 780902,
+                  "VehicleId" : -1365918055
+                },
+                "is_player" : true,
+                "name" : "GTS - Ipod [FR]",
+                "participantid" : 8,
+                "refid" : 14144,
+                "time" : 1459692024
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 105512,
+                  "Lap" : 7,
+                  "RacePosition" : 6,
+                  "State" : "Finished",
+                  "TotalTime" : 813181,
+                  "VehicleId" : -1365918055
+                },
+                "is_player" : true,
+                "name" : "(L.C.T.FR) Doky14",
+                "participantid" : 11,
+                "refid" : 61188,
+                "time" : 1459692024
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 0,
+                  "Lap" : 0,
+                  "RacePosition" : 7,
+                  "State" : "DNF",
+                  "TotalTime" : 902383,
+                  "VehicleId" : 1884411907
+                },
+                "is_player" : true,
+                "name" : "",
+                "participantid" : 14,
+                "refid" : 27841,
+                "time" : 1459692024
+              }
+            ],
+            "start_time" : 1459691110
+          }
+        },
+        "start_time" : 1459689565
+      },
+      {
+        "end_time" : 1459694198,
+        "finished" : true,
+        "index" : 5,
+        "members" : {
+          "13825" : {
+            "index" : 1,
+            "join_time" : 1459692375,
+            "leave_time" : -1,
+            "name" : "GTS - Ipod [FR]",
+            "participantid" : 1,
+            "setup" : {
+              "LiveryId" : 70,
+              "RaceStatFlags" : 1073796325,
+              "VehicleId" : -1365918055
+            },
+            "steamid" : "76561197976030838"
+          },
+          "16899" : {
+            "index" : 3,
+            "join_time" : 1459692375,
+            "leave_time" : -1,
+            "name" : "GTS-dice",
+            "participantid" : 3,
+            "setup" : {
+              "LiveryId" : 62,
+              "RaceStatFlags" : 1073799397,
+              "VehicleId" : 1452261378
+            },
+            "steamid" : "76561198031826465"
+          },
+          "17858" : {
+            "index" : 2,
+            "join_time" : 1459692375,
+            "leave_time" : -1,
+            "name" : "-T2R-Julien",
+            "participantid" : 2,
+            "setup" : {
+              "LiveryId" : 53,
+              "RaceStatFlags" : 1073767653,
+              "VehicleId" : -1166911988
+            },
+            "steamid" : "76561198116275297"
+          },
+          "28807" : {
+            "index" : 7,
+            "join_time" : 1459692426,
+            "leave_time" : -1,
+            "name" : "[NRT]naremby",
+            "participantid" : 7,
+            "setup" : {
+              "LiveryId" : 53,
+              "RaceStatFlags" : 1073800421,
+              "VehicleId" : 1161219858
+            },
+            "steamid" : "76561198271825673"
+          },
+          "34432" : {
+            "index" : 0,
+            "join_time" : 1459692375,
+            "leave_time" : 1459693576,
+            "name" : "GTS-vince7700",
+            "participantid" : 0,
+            "setup" : {
+              "LiveryId" : 62,
+              "RaceStatFlags" : 1073779941,
+              "VehicleId" : -384044277
+            },
+            "steamid" : "76561198034146390"
+          },
+          "40262" : {
+            "index" : 6,
+            "join_time" : 1459692375,
+            "leave_time" : -1,
+            "name" : "GTS-Neo",
+            "participantid" : 6,
+            "setup" : {
+              "LiveryId" : 75,
+              "RaceStatFlags" : 1073766405,
+              "VehicleId" : 1884411907
+            },
+            "steamid" : "76561198000881110"
+          },
+          "45893" : {
+            "index" : 5,
+            "join_time" : 1459692375,
+            "leave_time" : -1,
+            "name" : "(L.C.T.FR) loloracer",
+            "participantid" : 5,
+            "setup" : {
+              "LiveryId" : 58,
+              "RaceStatFlags" : 1073768227,
+              "VehicleId" : -1365918055
+            },
+            "steamid" : "76561197992711309"
+          },
+          "47812" : {
+            "index" : 4,
+            "join_time" : 1459692375,
+            "leave_time" : -1,
+            "name" : "(L.C.T.FR) Doky14",
+            "participantid" : 4,
+            "setup" : {
+              "LiveryId" : 57,
+              "RaceStatFlags" : 1073760163,
+              "VehicleId" : -1365918055
+            },
+            "steamid" : "76561198071472030"
+          }
+        },
+        "participants" : {
+          "0" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 62,
+            "Name" : "GTS-vince7700",
+            "RefId" : 34432,
+            "VehicleId" : -384044277
+          },
+          "1" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 70,
+            "Name" : "GTS - Ipod [FR]",
+            "RefId" : 13825,
+            "VehicleId" : -1365918055
+          },
+          "2" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 53,
+            "Name" : "-T2R-Julien",
+            "RefId" : 17858,
+            "VehicleId" : -1166911988
+          },
+          "3" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 62,
+            "Name" : "GTS-dice",
+            "RefId" : 16899,
+            "VehicleId" : 1452261378
+          },
+          "4" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 57,
+            "Name" : "(L.C.T.FR) Doky14",
+            "RefId" : 47812,
+            "VehicleId" : -1365918055
+          },
+          "5" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 58,
+            "Name" : "(L.C.T.FR) loloracer",
+            "RefId" : 45893,
+            "VehicleId" : -1365918055
+          },
+          "6" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 75,
+            "Name" : "GTS-Neo",
+            "RefId" : 40262,
+            "VehicleId" : 1884411907
+          },
+          "7" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 53,
+            "Name" : "",
+            "RefId" : 28807,
+            "VehicleId" : 1161219858
+          }
+        },
+        "setup" : {
+          "AllowedViews" : 0,
+          "DamageType" : 3,
+          "DateDay" : 3,
+          "DateHour" : 13,
+          "DateMinute" : 0,
+          "DateMonth" : 4,
+          "DateProgression" : 1,
+          "DateYear" : 2016,
+          "Flags" : 791784,
+          "ForecastProgression" : 1,
+          "FuelUsageType" : 0,
+          "GridSize" : 24,
+          "MaxPlayers" : 20,
+          "OpponentDifficulty" : 95,
+          "PenaltiesType" : 1,
+          "Practice1Length" : 0,
+          "Practice2Length" : 0,
+          "QualifyLength" : 15,
+          "Race1Length" : 7,
+          "ServerControlsSetup" : 1,
+          "ServerControlsTrack" : 1,
+          "ServerControlsVehicle" : 0,
+          "ServerControlsVehicleClass" : 1,
+          "TireWearType" : 5,
+          "TrackId" : -661887517,
+          "VehicleClassId" : -112887377,
+          "VehicleModelId" : -1365918055,
+          "WarmupLength" : 0,
+          "WeatherSlot1" : -934211870,
+          "WeatherSlot2" : -934211870,
+          "WeatherSlot3" : 296956818,
+          "WeatherSlot4" : 888299130,
+          "WeatherSlots" : 0
+        },
+        "stages" : {
+          "qualifying" : {
+            "end_time" : 1459693310,
+            "events" : {},
+            "results" : [
+              {
+                "attributes" : {
+                  "FastestLapTime" : 115652,
+                  "Lap" : 4,
+                  "RacePosition" : 1,
+                  "State" : "InGarage",
+                  "TotalTime" : 0,
+                  "VehicleId" : -1365918055
+                },
+                "is_player" : true,
+                "name" : "GTS - Ipod [FR]",
+                "participantid" : 1,
+                "refid" : 13825,
+                "time" : 1459693290
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 117263,
+                  "Lap" : 4,
+                  "RacePosition" : 2,
+                  "State" : "InGarage",
+                  "TotalTime" : 0,
+                  "VehicleId" : -1365918055
+                },
+                "is_player" : true,
+                "name" : "(L.C.T.FR) Doky14",
+                "participantid" : 4,
+                "refid" : 47812,
+                "time" : 1459693290
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 117987,
+                  "Lap" : 4,
+                  "RacePosition" : 3,
+                  "State" : "InGarage",
+                  "TotalTime" : 0,
+                  "VehicleId" : -1166911988
+                },
+                "is_player" : true,
+                "name" : "-T2R-Julien",
+                "participantid" : 2,
+                "refid" : 17858,
+                "time" : 1459693290
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 118756,
+                  "Lap" : 3,
+                  "RacePosition" : 4,
+                  "State" : "ExitingPits",
+                  "TotalTime" : 0,
+                  "VehicleId" : 1161219858
+                },
+                "is_player" : true,
+                "name" : "",
+                "participantid" : 7,
+                "refid" : 28807,
+                "time" : 1459693290
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 118876,
+                  "Lap" : 4,
+                  "RacePosition" : 5,
+                  "State" : "InGarage",
+                  "TotalTime" : 0,
+                  "VehicleId" : -1365918055
+                },
+                "is_player" : true,
+                "name" : "(L.C.T.FR) loloracer",
+                "participantid" : 5,
+                "refid" : 45893,
+                "time" : 1459693290
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 119271,
+                  "Lap" : 2,
+                  "RacePosition" : 6,
+                  "State" : "InGarage",
+                  "TotalTime" : 0,
+                  "VehicleId" : 1452261378
+                },
+                "is_player" : true,
+                "name" : "GTS-dice",
+                "participantid" : 3,
+                "refid" : 16899,
+                "time" : 1459693290
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 121967,
+                  "Lap" : 2,
+                  "RacePosition" : 7,
+                  "State" : "InGarage",
+                  "TotalTime" : 0,
+                  "VehicleId" : -384044277
+                },
+                "is_player" : true,
+                "name" : "GTS-vince7700",
+                "participantid" : 0,
+                "refid" : 34432,
+                "time" : 1459693290
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 0,
+                  "Lap" : 2,
+                  "RacePosition" : 8,
+                  "State" : "Racing",
+                  "TotalTime" : 0,
+                  "VehicleId" : 1884411907
+                },
+                "is_player" : true,
+                "name" : "GTS-Neo",
+                "participantid" : 6,
+                "refid" : 40262,
+                "time" : 1459693290
+              }
+            ],
+            "start_time" : 1459692390
+          },
+          "race1" : {
+            "end_time" : 1459694198,
+            "events" : {},
+            "results" : [
+              {
+                "attributes" : {
+                  "FastestLapTime" : 116436,
+                  "Lap" : 7,
+                  "RacePosition" : 1,
+                  "State" : "Finished",
+                  "TotalTime" : 824276,
+                  "VehicleId" : -1365918055
+                },
+                "is_player" : true,
+                "name" : "GTS - Ipod [FR]",
+                "participantid" : 1,
+                "refid" : 13825,
+                "time" : 1459694198
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 117518,
+                  "Lap" : 7,
+                  "RacePosition" : 2,
+                  "State" : "Finished",
+                  "TotalTime" : 836258,
+                  "VehicleId" : -1365918055
+                },
+                "is_player" : true,
+                "name" : "(L.C.T.FR) Doky14",
+                "participantid" : 4,
+                "refid" : 47812,
+                "time" : 1459694198
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 117330,
+                  "Lap" : 7,
+                  "RacePosition" : 3,
+                  "State" : "Finished",
+                  "TotalTime" : 838089,
+                  "VehicleId" : 1884411907
+                },
+                "is_player" : true,
+                "name" : "GTS-Neo",
+                "participantid" : 6,
+                "refid" : 40262,
+                "time" : 1459694198
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 117832,
+                  "Lap" : 7,
+                  "RacePosition" : 4,
+                  "State" : "Finished",
+                  "TotalTime" : 838899,
+                  "VehicleId" : -1166911988
+                },
+                "is_player" : true,
+                "name" : "-T2R-Julien",
+                "participantid" : 2,
+                "refid" : 17858,
+                "time" : 1459694198
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 119184,
+                  "Lap" : 7,
+                  "RacePosition" : 5,
+                  "State" : "Finished",
+                  "TotalTime" : 868642,
+                  "VehicleId" : 1452261378
+                },
+                "is_player" : true,
+                "name" : "GTS-dice",
+                "participantid" : 3,
+                "refid" : 16899,
+                "time" : 1459694198
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 118149,
+                  "Lap" : 7,
+                  "RacePosition" : 6,
+                  "State" : "Finished",
+                  "TotalTime" : 869576,
+                  "VehicleId" : 1161219858
+                },
+                "is_player" : true,
+                "name" : "",
+                "participantid" : 7,
+                "refid" : 28807,
+                "time" : 1459694198
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 120412,
+                  "Lap" : 7,
+                  "RacePosition" : 7,
+                  "State" : "Finished",
+                  "TotalTime" : 875111,
+                  "VehicleId" : -1365918055
+                },
+                "is_player" : true,
+                "name" : "(L.C.T.FR) loloracer",
+                "participantid" : 5,
+                "refid" : 45893,
+                "time" : 1459694198
+              }
+            ],
+            "start_time" : 1459693310
+          }
+        },
+        "start_time" : 1459692245
+      },
+      {
+        "end_time" : 1459696140,
+        "finished" : true,
+        "index" : 6,
+        "members" : {
+          "10567" : {
+            "index" : 7,
+            "join_time" : 1459694570,
+            "leave_time" : -1,
+            "name" : "[NRT]naremby",
+            "participantid" : 15,
+            "setup" : {
+              "LiveryId" : 53,
+              "RaceStatFlags" : 1073800421,
+              "VehicleId" : 1161219858
+            },
+            "steamid" : "76561198271825673"
+          },
+          "12994" : {
+            "index" : 2,
+            "join_time" : 1459694370,
+            "leave_time" : -1,
+            "name" : "(L.C.T.FR) Doky14",
+            "participantid" : 10,
+            "setup" : {
+              "LiveryId" : 57,
+              "RaceStatFlags" : 1073760163,
+              "VehicleId" : -1365918055
+            },
+            "steamid" : "76561198071472030"
+          },
+          "1601" : {
+            "index" : 1,
+            "join_time" : 1459694370,
+            "leave_time" : -1,
+            "name" : "-T2R-Julien",
+            "participantid" : 9,
+            "setup" : {
+              "LiveryId" : 53,
+              "RaceStatFlags" : 1073767653,
+              "VehicleId" : -1166911988
+            },
+            "steamid" : "76561198116275297"
+          },
+          "24198" : {
+            "index" : 6,
+            "join_time" : 1459694370,
+            "leave_time" : -1,
+            "name" : "GTS-Neo",
+            "participantid" : 14,
+            "setup" : {
+              "LiveryId" : 75,
+              "RaceStatFlags" : 1073766405,
+              "VehicleId" : 1884411907
+            },
+            "steamid" : "76561198000881110"
+          },
+          "4933" : {
+            "index" : 5,
+            "join_time" : 1459694370,
+            "leave_time" : -1,
+            "name" : "GTS-dice",
+            "participantid" : 13,
+            "setup" : {
+              "LiveryId" : 62,
+              "RaceStatFlags" : 1073799397,
+              "VehicleId" : 1452261378
+            },
+            "steamid" : "76561198031826465"
+          },
+          "4996" : {
+            "index" : 4,
+            "join_time" : 1459694370,
+            "leave_time" : 1459696131,
+            "name" : "(L.C.T.FR) loloracer",
+            "participantid" : 12,
+            "setup" : {
+              "LiveryId" : 58,
+              "RaceStatFlags" : 1073768227,
+              "VehicleId" : -1365918055
+            },
+            "steamid" : "76561197992711309"
+          },
+          "54531" : {
+            "index" : 3,
+            "join_time" : 1459694370,
+            "leave_time" : 1459695624,
+            "name" : "GTS-vince7700",
+            "participantid" : 11,
+            "setup" : {
+              "LiveryId" : 62,
+              "RaceStatFlags" : 1073779941,
+              "VehicleId" : -384044277
+            },
+            "steamid" : "76561198034146390"
+          },
+          "8000" : {
+            "index" : 0,
+            "join_time" : 1459694370,
+            "leave_time" : -1,
+            "name" : "GTS - Ipod [FR]",
+            "participantid" : 8,
+            "setup" : {
+              "LiveryId" : 70,
+              "RaceStatFlags" : 1073796325,
+              "VehicleId" : -1365918055
+            },
+            "steamid" : "76561197976030838"
+          }
+        },
+        "participants" : {
+          "10" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 57,
+            "Name" : "(L.C.T.FR) Doky14",
+            "RefId" : 12994,
+            "VehicleId" : -1365918055
+          },
+          "11" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 62,
+            "Name" : "GTS-vince7700",
+            "RefId" : 54531,
+            "VehicleId" : -384044277
+          },
+          "12" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 58,
+            "Name" : "(L.C.T.FR) loloracer",
+            "RefId" : 4996,
+            "VehicleId" : -1365918055
+          },
+          "13" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 62,
+            "Name" : "GTS-dice",
+            "RefId" : 4933,
+            "VehicleId" : 1452261378
+          },
+          "14" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 75,
+            "Name" : "GTS-Neo",
+            "RefId" : 24198,
+            "VehicleId" : 1884411907
+          },
+          "15" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 53,
+            "Name" : "",
+            "RefId" : 10567,
+            "VehicleId" : 1161219858
+          },
+          "8" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 70,
+            "Name" : "GTS - Ipod [FR]",
+            "RefId" : 8000,
+            "VehicleId" : -1365918055
+          },
+          "9" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 53,
+            "Name" : "-T2R-Julien",
+            "RefId" : 1601,
+            "VehicleId" : -1166911988
+          }
+        },
+        "setup" : {
+          "AllowedViews" : 0,
+          "DamageType" : 3,
+          "DateDay" : 3,
+          "DateHour" : 13,
+          "DateMinute" : 0,
+          "DateMonth" : 4,
+          "DateProgression" : 1,
+          "DateYear" : 2016,
+          "Flags" : 787688,
+          "ForecastProgression" : 1,
+          "FuelUsageType" : 0,
+          "GridSize" : 24,
+          "MaxPlayers" : 20,
+          "OpponentDifficulty" : 95,
+          "PenaltiesType" : 1,
+          "Practice1Length" : 0,
+          "Practice2Length" : 0,
+          "QualifyLength" : 15,
+          "Race1Length" : 7,
+          "ServerControlsSetup" : 1,
+          "ServerControlsTrack" : 1,
+          "ServerControlsVehicle" : 0,
+          "ServerControlsVehicleClass" : 1,
+          "TireWearType" : 5,
+          "TrackId" : 521933422,
+          "VehicleClassId" : -112887377,
+          "VehicleModelId" : -1365918055,
+          "WarmupLength" : 0,
+          "WeatherSlot1" : 129238383,
+          "WeatherSlot2" : 888299130,
+          "WeatherSlot3" : -934211870,
+          "WeatherSlot4" : 296956818,
+          "WeatherSlots" : 0
+        },
+        "stages" : {
+          "qualifying" : {
+            "end_time" : 1459695308,
+            "events" : {},
+            "results" : [
+              {
+                "attributes" : {
+                  "FastestLapTime" : 103155,
+                  "Lap" : 3,
+                  "RacePosition" : 1,
+                  "State" : "InGarage",
+                  "TotalTime" : 0,
+                  "VehicleId" : -1365918055
+                },
+                "is_player" : true,
+                "name" : "GTS - Ipod [FR]",
+                "participantid" : 8,
+                "refid" : 8000,
+                "time" : 1459695288
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 105339,
+                  "Lap" : 4,
+                  "RacePosition" : 2,
+                  "State" : "InGarage",
+                  "TotalTime" : 0,
+                  "VehicleId" : -1166911988
+                },
+                "is_player" : true,
+                "name" : "-T2R-Julien",
+                "participantid" : 9,
+                "refid" : 1601,
+                "time" : 1459695288
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 105456,
+                  "Lap" : 5,
+                  "RacePosition" : 3,
+                  "State" : "Racing",
+                  "TotalTime" : 0,
+                  "VehicleId" : -1365918055
+                },
+                "is_player" : true,
+                "name" : "(L.C.T.FR) Doky14",
+                "participantid" : 10,
+                "refid" : 12994,
+                "time" : 1459695288
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 106112,
+                  "Lap" : 4,
+                  "RacePosition" : 4,
+                  "State" : "Racing",
+                  "TotalTime" : 0,
+                  "VehicleId" : -1365918055
+                },
+                "is_player" : true,
+                "name" : "(L.C.T.FR) loloracer",
+                "participantid" : 12,
+                "refid" : 4996,
+                "time" : 1459695288
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 106983,
+                  "Lap" : 3,
+                  "RacePosition" : 5,
+                  "State" : "Racing",
+                  "TotalTime" : 0,
+                  "VehicleId" : 1452261378
+                },
+                "is_player" : true,
+                "name" : "GTS-dice",
+                "participantid" : 13,
+                "refid" : 4933,
+                "time" : 1459695288
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 115939,
+                  "Lap" : 2,
+                  "RacePosition" : 6,
+                  "State" : "InGarage",
+                  "TotalTime" : 0,
+                  "VehicleId" : -384044277
+                },
+                "is_player" : true,
+                "name" : "GTS-vince7700",
+                "participantid" : 11,
+                "refid" : 54531,
+                "time" : 1459695288
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 117971,
+                  "Lap" : 2,
+                  "RacePosition" : 7,
+                  "State" : "InGarage",
+                  "TotalTime" : 0,
+                  "VehicleId" : 1161219858
+                },
+                "is_player" : true,
+                "name" : "",
+                "participantid" : 15,
+                "refid" : 10567,
+                "time" : 1459695288
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 0,
+                  "Lap" : 1,
+                  "RacePosition" : 8,
+                  "State" : "Racing",
+                  "TotalTime" : 0,
+                  "VehicleId" : 1884411907
+                },
+                "is_player" : true,
+                "name" : "GTS-Neo",
+                "participantid" : 14,
+                "refid" : 24198,
+                "time" : 1459695288
+              }
+            ],
+            "start_time" : 1459694388
+          },
+          "race1" : {
+            "end_time" : 1459696140,
+            "events" : {},
+            "results" : [
+              {
+                "attributes" : {
+                  "FastestLapTime" : 103811,
+                  "Lap" : 7,
+                  "RacePosition" : 1,
+                  "State" : "Finished",
+                  "TotalTime" : 737134,
+                  "VehicleId" : -1365918055
+                },
+                "is_player" : true,
+                "name" : "GTS - Ipod [FR]",
+                "participantid" : 8,
+                "refid" : 8000,
+                "time" : 1459696140
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 105292,
+                  "Lap" : 7,
+                  "RacePosition" : 2,
+                  "State" : "Finished",
+                  "TotalTime" : 752737,
+                  "VehicleId" : -1365918055
+                },
+                "is_player" : true,
+                "name" : "(L.C.T.FR) Doky14",
+                "participantid" : 10,
+                "refid" : 12994,
+                "time" : 1459696140
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 106054,
+                  "Lap" : 7,
+                  "RacePosition" : 3,
+                  "State" : "Finished",
+                  "TotalTime" : 755890,
+                  "VehicleId" : 1452261378
+                },
+                "is_player" : true,
+                "name" : "GTS-dice",
+                "participantid" : 13,
+                "refid" : 4933,
+                "time" : 1459696140
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 105042,
+                  "Lap" : 7,
+                  "RacePosition" : 4,
+                  "State" : "Finished",
+                  "TotalTime" : 756194,
+                  "VehicleId" : -1166911988
+                },
+                "is_player" : true,
+                "name" : "-T2R-Julien",
+                "participantid" : 9,
+                "refid" : 1601,
+                "time" : 1459696140
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 105206,
+                  "Lap" : 7,
+                  "RacePosition" : 5,
+                  "State" : "Finished",
+                  "TotalTime" : 758585,
+                  "VehicleId" : 1884411907
+                },
+                "is_player" : true,
+                "name" : "GTS-Neo",
+                "participantid" : 14,
+                "refid" : 24198,
+                "time" : 1459696140
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 107963,
+                  "Lap" : 7,
+                  "RacePosition" : 6,
+                  "State" : "Finished",
+                  "TotalTime" : 819959,
+                  "VehicleId" : 1161219858
+                },
+                "is_player" : true,
+                "name" : "",
+                "participantid" : 15,
+                "refid" : 10567,
+                "time" : 1459696140
+              }
+            ],
+            "start_time" : 1459695308
+          }
+        },
+        "start_time" : 1459694256
+      }
+    ],
+    "players" : {
+      "76561197976030838" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : [
+              4,
+              1
+            ],
+            "positions_per_size" : {
+              "7" : [
+                1,
+                1
+              ],
+              "8" : [
+                3
+              ]
+            },
+            "states" : {
+              "ingarage" : 5
+            }
+          },
+          "race" : {
+            "positions" : {
+              "1" : 2,
+              "2" : 2,
+              "5" : 1
+            },
+            "positions_per_size" : {
+              "6" : {
+                "1" : 1,
+                "2" : 1
+              },
+              "7" : {
+                "1" : 1,
+                "2" : 1,
+                "5" : 1
+              }
+            },
+            "states" : {
+              "finished" : 5
+            }
+          },
+          "race_finishes" : 5,
+          "race_joins" : 6,
+          "race_loads" : 5,
+          "race_loads_done" : 5,
+          "track_distances" : {
+            "-661887517" : 69470,
+            "354022214" : 52972,
+            "521933422" : 50560,
+            "904625875" : 72203,
+            "920145926" : 65100
+          },
+          "tracks" : {
+            "-661887517" : 1,
+            "354022214" : 1,
+            "521933422" : 1,
+            "904625875" : 1,
+            "920145926" : 1
+          },
+          "vehicle_distances" : {
+            "-1365918055" : 310305
+          },
+          "vehicles" : {
+            "-1365918055" : 5
+          }
+        },
+        "last_joined" : 1459694255,
+        "name" : "GTS - Ipod [FR]"
+      },
+      "76561197992711309" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {
+              "4" : 1,
+              "5" : 2,
+              "6" : 1,
+              "7" : 1
+            },
+            "positions_per_size" : {
+              "7" : {
+                "6" : 1,
+                "7" : 1
+              },
+              "8" : {
+                "4" : 1,
+                "5" : 1
+              }
+            },
+            "states" : {
+              "ingarage" : 3,
+              "racing" : 2
+            }
+          },
+          "race" : {
+            "positions" : {
+              "4" : 2,
+              "5" : 1,
+              "7" : 1
+            },
+            "positions_per_size" : {
+              "6" : {
+                "4" : 1
+              },
+              "7" : {
+                "4" : 1,
+                "5" : 1,
+                "7" : 1
+              }
+            },
+            "states" : {
+              "finished" : 4
+            }
+          },
+          "race_finishes" : 4,
+          "race_joins" : 6,
+          "race_loads" : 5,
+          "race_loads_done" : 5,
+          "track_distances" : {
+            "-661887517" : 63860,
+            "354022214" : 43579,
+            "521933422" : 43217,
+            "904625875" : 48945,
+            "920145926" : 61010
+          },
+          "tracks" : {
+            "-661887517" : 1,
+            "354022214" : 1,
+            "521933422" : 1,
+            "904625875" : 1,
+            "920145926" : 1
+          },
+          "vehicle_distances" : {
+            "-1365918055" : 260611
+          },
+          "vehicles" : {
+            "-1365918055" : 5
+          }
+        },
+        "last_joined" : 1459694280,
+        "name" : "(L.C.T.FR) loloracer"
+      },
+      "76561198000881110" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {
+              "2" : 1,
+              "4" : 1,
+              "5" : 1,
+              "8" : 2
+            },
+            "positions_per_size" : {
+              "7" : {
+                "4" : 1,
+                "5" : 1
+              },
+              "8" : {
+                "2" : 1,
+                "8" : 2
+              }
+            },
+            "states" : {
+              "ingarage" : 1,
+              "racing" : 4
+            }
+          },
+          "race" : {
+            "positions" : {
+              "3" : 3,
+              "5" : 1,
+              "7" : 1
+            },
+            "positions_per_size" : {
+              "6" : {
+                "3" : 1,
+                "5" : 1
+              },
+              "7" : {
+                "3" : 1,
+                "7" : 1
+              }
+            },
+            "states" : {
+              "dnf" : 1,
+              "finished" : 4
+            }
+          },
+          "race_finishes" : 5,
+          "race_joins" : 7,
+          "race_loads" : 5,
+          "race_loads_done" : 5,
+          "track_distances" : {
+            "-661887517" : 63926,
+            "354022214" : 59033,
+            "521933422" : 48850,
+            "904625875" : 77639,
+            "920145926" : 25353
+          },
+          "tracks" : {
+            "-661887517" : 1,
+            "354022214" : 1,
+            "521933422" : 1,
+            "904625875" : 1
+          },
+          "vehicle_distances" : {
+            "1884411907" : 274801
+          },
+          "vehicles" : {
+            "1884411907" : 4
+          }
+        },
+        "last_joined" : 1459694303,
+        "name" : "GTS-Neo"
+      },
+      "76561198031826465" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {
+              "4" : 1,
+              "5" : 2,
+              "6" : 1,
+              "7" : 1
+            },
+            "positions_per_size" : {
+              "7" : {
+                "4" : 1,
+                "5" : 1
+              },
+              "8" : {
+                "5" : 1,
+                "6" : 1,
+                "7" : 1
+              }
+            },
+            "states" : {
+              "ingarage" : 2,
+              "racing" : 3
+            }
+          },
+          "race" : {
+            "positions" : {
+              "3" : 2,
+              "4" : 1,
+              "5" : 2
+            },
+            "positions_per_size" : {
+              "6" : {
+                "3" : 1,
+                "5" : 1
+              },
+              "7" : {
+                "3" : 1,
+                "4" : 1,
+                "5" : 1
+              }
+            },
+            "states" : {
+              "dnf" : 1,
+              "finished" : 4
+            }
+          },
+          "race_finishes" : 5,
+          "race_joins" : 6,
+          "race_loads" : 5,
+          "race_loads_done" : 5,
+          "track_distances" : {
+            "-661887517" : 53397,
+            "354022214" : 29338,
+            "521933422" : 50307,
+            "904625875" : 86771,
+            "920145926" : 62068
+          },
+          "tracks" : {
+            "-661887517" : 1,
+            "354022214" : 1,
+            "521933422" : 1,
+            "904625875" : 1,
+            "920145926" : 1
+          },
+          "vehicle_distances" : {
+            "1452261378" : 281881
+          },
+          "vehicles" : {
+            "1452261378" : 5
+          }
+        },
+        "last_joined" : 1459694302,
+        "name" : "GTS-dice"
+      },
+      "76561198034146390" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {
+              "6" : 3,
+              "7" : 2
+            },
+            "positions_per_size" : {
+              "7" : {
+                "6" : 1,
+                "7" : 1
+              },
+              "8" : {
+                "6" : 1,
+                "7" : 1
+              }
+            },
+            "states" : {
+              "ingarage" : 4,
+              "racing" : 1
+            }
+          },
+          "race" : {
+            "positions" : {
+              "2" : 1,
+              "6" : 1,
+              "7" : 1
+            },
+            "positions_per_size" : {
+              "6" : {
+                "6" : 1
+              },
+              "7" : {
+                "2" : 1,
+                "7" : 1
+              }
+            },
+            "states" : {
+              "dnf" : 2,
+              "finished" : 1
+            }
+          },
+          "race_finishes" : 3,
+          "race_joins" : 9,
+          "race_loads" : 7,
+          "race_loads_done" : 7,
+          "track_distances" : {
+            "-661887517" : 28579,
+            "354022214" : 23651,
+            "521933422" : 32726,
+            "904625875" : 39784,
+            "920145926" : 59573
+          },
+          "tracks" : {
+            "-661887517" : 1,
+            "354022214" : 1,
+            "521933422" : 1,
+            "904625875" : 1,
+            "920145926" : 1
+          },
+          "vehicle_distances" : {
+            "-384044277" : 184313
+          },
+          "vehicles" : {
+            "-384044277" : 5
+          }
+        },
+        "last_joined" : 1459694277,
+        "name" : "GTS-vince7700"
+      },
+      "76561198040469135" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {
+              "8" : 1
+            },
+            "positions_per_size" : {
+              "8" : {
+                "8" : 1
+              }
+            },
+            "states" : {
+              "racing" : 1
+            }
+          },
+          "race" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race_finishes" : 0,
+          "race_joins" : 3,
+          "race_loads" : 1,
+          "race_loads_done" : 1,
+          "track_distances" : {
+            "354022214" : 29346
+          },
+          "tracks" : {
+            "354022214" : 1
+          },
+          "vehicle_distances" : {
+            "-384044277" : 29346
+          },
+          "vehicles" : {
+            "-384044277" : 1
+          }
+        },
+        "last_joined" : 1459684801,
+        "name" : "allan72"
+      },
+      "76561198071472030" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {
+              "2" : 1,
+              "3" : 4
+            },
+            "positions_per_size" : {
+              "7" : {
+                "3" : 2
+              },
+              "8" : {
+                "2" : 1,
+                "3" : 1
+              }
+            },
+            "states" : {
+              "ingarage" : 2,
+              "racing" : 3
+            }
+          },
+          "race" : {
+            "positions" : {
+              "2" : 2,
+              "6" : 2
+            },
+            "positions_per_size" : {
+              "6" : {
+                "2" : 1
+              },
+              "7" : {
+                "2" : 1,
+                "6" : 2
+              }
+            },
+            "states" : {
+              "finished" : 4
+            }
+          },
+          "race_finishes" : 4,
+          "race_joins" : 6,
+          "race_loads" : 5,
+          "race_loads_done" : 5,
+          "track_distances" : {
+            "-661887517" : 70113,
+            "354022214" : 23827,
+            "521933422" : 65069,
+            "904625875" : 90767,
+            "920145926" : 68276
+          },
+          "tracks" : {
+            "-661887517" : 1,
+            "354022214" : 1,
+            "521933422" : 1,
+            "904625875" : 1,
+            "920145926" : 1
+          },
+          "vehicle_distances" : {
+            "-1365918055" : 318052
+          },
+          "vehicles" : {
+            "-1365918055" : 5
+          }
+        },
+        "last_joined" : 1459694277,
+        "name" : "(L.C.T.FR) Doky14"
+      },
+      "76561198116275297" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : [
+              1,
+              2,
+              1,
+              1
+            ],
+            "positions_per_size" : {
+              "7" : [
+                1,
+                1
+              ],
+              "8" : {
+                "2" : 1,
+                "3" : 1,
+                "4" : 1
+              }
+            },
+            "states" : {
+              "ingarage" : 5
+            }
+          },
+          "race" : {
+            "positions" : {
+              "1" : 3,
+              "4" : 2
+            },
+            "positions_per_size" : {
+              "6" : {
+                "1" : 1,
+                "4" : 1
+              },
+              "7" : {
+                "1" : 2,
+                "4" : 1
+              }
+            },
+            "states" : {
+              "finished" : 5
+            }
+          },
+          "race_finishes" : 5,
+          "race_joins" : 6,
+          "race_loads" : 5,
+          "race_loads_done" : 5,
+          "track_distances" : {
+            "-661887517" : 63817,
+            "354022214" : 63396,
+            "521933422" : 60080,
+            "904625875" : 84429,
+            "920145926" : 68283
+          },
+          "tracks" : {
+            "-661887517" : 1,
+            "354022214" : 1,
+            "521933422" : 1,
+            "904625875" : 1,
+            "920145926" : 1
+          },
+          "vehicle_distances" : {
+            "-1166911988" : 340005
+          },
+          "vehicles" : {
+            "-1166911988" : 5
+          }
+        },
+        "last_joined" : 1459694264,
+        "name" : "-T2R-Julien"
+      },
+      "76561198271825673" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {
+              "4" : 1,
+              "7" : 1
+            },
+            "positions_per_size" : {
+              "8" : {
+                "4" : 1,
+                "7" : 1
+              }
+            },
+            "states" : {
+              "exitingpits" : 1,
+              "ingarage" : 1
+            }
+          },
+          "race" : {
+            "positions" : {
+              "6" : 2
+            },
+            "positions_per_size" : {
+              "6" : {
+                "6" : 1
+              },
+              "7" : {
+                "6" : 1
+              }
+            },
+            "states" : {
+              "finished" : 2
+            }
+          },
+          "race_finishes" : 2,
+          "race_joins" : 4,
+          "race_loads" : 2,
+          "race_loads_done" : 2,
+          "track_distances" : {
+            "-661887517" : 58671,
+            "521933422" : 49353
+          },
+          "tracks" : {},
+          "vehicle_distances" : {
+            "1161219858" : 108024
+          },
+          "vehicles" : {}
+        },
+        "last_joined" : 1459694570,
+        "name" : "[NRT]naremby"
+      }
+    },
+    "server" : {
+      "name" : "[FR]www.gtsimulations.eu",
+      "steam_disconnects" : 0,
+      "steam_downtime" : 0,
+      "total_steam_downtime" : 0,
+      "total_uptime" : "11568.8",
+      "uptime" : "3974.34"
+    },
+    "session" : {
+      "counts" : {
+        "lobbies" : 6,
+        "player_finishes" : 33,
+        "player_loads" : 35,
+        "player_loads_done" : 35,
+        "race_finishes" : 5,
+        "race_loads" : 5,
+        "race_loads_done" : 5,
+        "sessions" : 6,
+        "stage_counts" : {
+          "qualifying" : 5,
+          "race1" : 5
+        },
+        "stage_durations" : {
+          "qualifying" : 4600451,
+          "race1" : 4670907
+        },
+        "track_distances" : {
+          "-661887517" : 471833,
+          "354022214" : 325142,
+          "521933422" : 400162,
+          "904625875" : 500538,
+          "920145926" : 409663
+        },
+        "tracks" : {
+          "-661887517" : 1,
+          "354022214" : 1,
+          "521933422" : 1,
+          "904625875" : 1,
+          "920145926" : 1
+        },
+        "vehicle_distances" : {
+          "-1166911988" : 340005,
+          "-1365918055" : 888968,
+          "-384044277" : 213659,
+          "1161219858" : 108024,
+          "1452261378" : 281881,
+          "1884411907" : 274801
+        },
+        "vehicles" : {
+          "-1166911988" : 5,
+          "-1365918055" : 15,
+          "-384044277" : 6,
+          "1452261378" : 5,
+          "1884411907" : 4
+        }
+      }
+    }
+  }
+}
+
+// EOF //

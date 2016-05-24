@@ -732,8 +732,17 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 // Is race session
                 if ($session2['type'] === 'race')
                 {
-                    // Explode data on race over line
-                    $race_end = explode('RACE OVER DETECTED!', $data_session2);
+                    // Explode data on best possible race data
+                    $race_end = explode(
+                        'RACE OVER PACKET, FINAL RANK', $data_session2);
+
+                    // Not two parts. So no race over detected in above code.
+                    // Try exploding on alternative race over list
+                    if (count($race_end) === 1)
+                    {
+                        $race_end = explode(
+                            'RACE OVER DETECTED!', $data_session2);
+                    }
 
                     // Just one result. Probably a race session that is not
                     // finished

@@ -527,7 +527,7 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
                      48.929,
                  ))
                 ->setPosition(2)
-                ->setNumber(2)
+                ->setNumber(3)
                 ->setAids(array(
                     'AutoShift'      => 3,
                 ))
@@ -542,7 +542,7 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
                      49.929,
                  ))
                 ->setPosition(2)
-                ->setNumber(2)
+                ->setNumber(4)
                 ->setAids(array(
                     'AutoShift'      => 3,
                 ))
@@ -558,7 +558,7 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
                      57.929,
                  ))
                 ->setPosition(1)
-                ->setNumber(3)
+                ->setNumber(5)
         );
 
         // null lap as somtimes present in qualify sessions

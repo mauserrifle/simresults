@@ -4,6 +4,8 @@ namespace Simresults;
 /**
  * The reader for RaceRoom server logs
  *
+ * TODO: finish status
+ *
  * @author     Maurice van der Star <mauserrifle@gmail.com>
  * @copyright  (c) 2013 Maurice van der Star
  * @license    http://opensource.org/licenses/ISC
@@ -107,23 +109,94 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
             {
                 // Create driver
                 $driver = new Driver;
-                $driver->setName(Helper::arrayGet($player_data, 'Username',
-                                            'unknown'));
+
+                // Has name
+                if ($name = Helper::arrayGet($player_data, 'Username') OR
+                    $name = Helper::arrayGet($player_data, 'FullName'))
+                {
+                    $driver->setName($name);
+                }
+                // No name
+                else
+                {
+                    $driver->setName('unknown');
+                }
 
                 // Create participant and add driver
                 $participant = Participant::createInstance();
                 $participant->setDrivers(array($driver))
-                            ->setPosition(Helper::arrayGet($player_data, 'Position',
-                                                     null))
-                            ->setFinishStatus(Participant::FINISH_NORMAL);
+                            ->setPosition(Helper::arrayGet(
+                                $player_data, 'Position', null));
+
+                // Has finish status
+                if ($status = Helper::arrayGet($player_data, 'FinishStatus'))
+                {
+                    // Figure out status
+                    switch(strtolower($status))
+                    {
+                        case 'finished':
+                            $participant->setFinishStatus(
+                                Participant::FINISH_NORMAL);
+                            break;
+                        case 'disqualified':
+                            $participant->setFinishStatus(
+                                Participant::FINISH_DQ);
+                            break;
+                        default:
+                            $participant->setFinishStatus(
+                                Participant::FINISH_DNF);
+                            break;
+                    }
+                }
+                // No finish status, so always finished
+                else
+                {
+                    $participant->setFinishStatus(Participant::FINISH_NORMAL);
+                }
+
+                // Has total time
+                if ($total_time = Helper::arrayGet($player_data, 'TotalTime'))
+                {
+                    $participant->setTotalTime(
+                        round($player_data['TotalTime'] / 1000, 4));
+                }
 
                 // Create vehicle and add to participant
                 $vehicle = new Vehicle;
                 $vehicle->setName(Helper::arrayGet($player_data, 'Car'));
                 $participant->setVehicle($vehicle);
 
-                // Has best lap
-                if (0 < $best_lap = Helper::arrayGet($player_data, 'BestLapTime'))
+                // Has laps
+                if ($laps = Helper::arrayGet($player_data, 'RaceSessionLaps'))
+                {
+                    foreach ($laps as $lap_key => $lap_data)
+                    {
+                        // Negative lap time, skip
+                        if ($lap_data['Time'] < 0) continue;
+
+                        // Init new lap
+                        $lap = new Lap;
+
+                        // Set participant
+                        $lap->setParticipant($participant);
+
+                        // Set first driver of participant as lap driver. RR does
+                        // not support swapping
+                        $lap->setDriver($participant->getDriver());
+
+                        // Set lap data
+                        $lap->setNumber($lap_key+1);
+                        $lap->setPosition($lap_data['Position']);
+                        $lap->setPitLap($lap_data['PitStopOccured']);
+                        $lap->setTime(round($lap_data['Time'] / 1000, 4));
+
+                        // Add lap to participant
+                        $participant->addLap($lap);
+                    }
+
+                }
+                // Has best lap (fallback)
+                elseif (0 < $best_lap = Helper::arrayGet($player_data, 'BestLapTime'))
                 {
                     // Init new lap
                     $lap = new Lap;

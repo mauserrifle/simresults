@@ -1,0 +1,205 @@
+{
+   "Server":"[[KOC]] R3E DTM MASTERS R02",
+   "Time":"\/Date(1437748751470)\/",
+   "Experience":"RaceRoom Experience",
+   "Difficulty":"GetReal",
+   "FuelUsage":"Normal",
+   "TireWear":"Two",
+   "MechanicalDamage":"Off",
+   "FlagRules":"All",
+   "CutRules":"StopAndGo",
+   "RaceSeriesFormat":"CustomRRE",
+   "WreckerPrevention":"On",
+   "MandatoryPitstop":"Off",
+   "Track":"EuroSpeedway Lausitz",
+   "Sessions":[
+      {
+         "Type":"Qualify",
+         "Players":[
+            {
+               "Username":"YHKIM",
+               "Car":"DTM Mercedes AMG C-Coupé",
+               "Position":1,
+               "BestLapTime":80138
+            },
+            {
+               "Username":"seossg",
+               "Car":"BMW M3 DTM",
+               "Position":2,
+               "BestLapTime":80687
+            },
+            {
+               "Username":"RedMoca",
+               "Car":"Audi RS 5 DTM",
+               "Position":3,
+               "BestLapTime":80830
+            },
+            {
+               "Username":"MangoJuice",
+               "Car":"BMW M3 DTM",
+               "Position":4,
+               "BestLapTime":81802
+            },
+            {
+               "Username":"GoodFriend",
+               "Car":"BMW M3 DTM",
+               "Position":5,
+               "BestLapTime":82599
+            },
+            {
+               "Car":"DTM Mercedes AMG C-Coupé",
+               "Position":6,
+               "BestLapTime":83093
+            },
+            {
+               "Username":"junkim",
+               "Car":"Audi RS 5 DTM",
+               "Position":7,
+               "BestLapTime":83128
+            },
+            {
+               "Username":"DunkinCup",
+               "Car":"BMW M3 DTM",
+               "Position":8,
+               "BestLapTime":83784
+            },
+            {
+               "Username":"Matrix741",
+               "Car":"Audi RS 5 DTM",
+               "Position":9,
+               "BestLapTime":-1000
+            },
+            {
+               "Username":"Modnee",
+               "Car":"Audi RS 5 DTM",
+               "Position":10,
+               "BestLapTime":-1000
+            },
+            {
+               "Username":"jphil",
+               "Car":"BMW M3 DTM",
+               "Position":11,
+               "BestLapTime":-1000
+            },
+            {
+               "Username":"dl53",
+               "Car":"DTM Mercedes AMG C-Coupé",
+               "Position":12,
+               "BestLapTime":-1000
+            },
+            {
+               "Username":"Shanaa",
+               "Car":"Audi RS 5 DTM",
+               "Position":13,
+               "BestLapTime":-1000
+            },
+            {
+               "Username":"spin4208",
+               "Car":"DTM Mercedes AMG C-Coupé",
+               "Position":14,
+               "BestLapTime":-1000
+            },
+            {
+               "Username":"BigShot",
+               "Car":"BMW M3 DTM",
+               "Position":15,
+               "BestLapTime":-1000
+            }
+         ]
+      },
+      {
+         "Type":"Race",
+         "Players":[
+            {
+               "Username":"YHKIM",
+               "Car":"DTM Mercedes AMG C-Coupé",
+               "Position":1,
+               "BestLapTime":80966
+            },
+            {
+               "Username":"Modnee",
+               "Car":"Audi RS 5 DTM",
+               "Position":2,
+               "BestLapTime":81886
+            },
+            {
+               "Username":"jphil",
+               "Car":"BMW M3 DTM",
+               "Position":3,
+               "BestLapTime":81382
+            },
+            {
+               "Username":"MangoJuice",
+               "Car":"BMW M3 DTM",
+               "Position":4,
+               "BestLapTime":81691
+            },
+            {
+               "Username":"BigShot",
+               "Car":"BMW M3 DTM",
+               "Position":5,
+               "BestLapTime":80728
+            },
+            {
+               "Username":"RedMoca",
+               "Car":"Audi RS 5 DTM",
+               "Position":6,
+               "BestLapTime":80785
+            },
+            {
+               "Username":"GoodFriend",
+               "Car":"BMW M3 DTM",
+               "Position":7,
+               "BestLapTime":82269
+            },
+            {
+               "Username":"spin4208",
+               "Car":"DTM Mercedes AMG C-Coupé",
+               "Position":8,
+               "BestLapTime":82074
+            },
+            {
+               "Username":"dl53",
+               "Car":"DTM Mercedes AMG C-Coupé",
+               "Position":9,
+               "BestLapTime":82216
+            },
+            {
+               "Username":"DunkinCup",
+               "Car":"BMW M3 DTM",
+               "Position":10,
+               "BestLapTime":82776
+            },
+            {
+               "Username":"junkim",
+               "Car":"Audi RS 5 DTM",
+               "Position":11,
+               "BestLapTime":83253
+            },
+            {
+               "Car":"DTM Mercedes AMG C-Coupé",
+               "Position":12,
+               "BestLapTime":82467
+            },
+            {
+               "Username":"Shanaa",
+               "Car":"Audi RS 5 DTM",
+               "Position":13,
+               "BestLapTime":-1
+            },
+            {
+               "Username":"Matrix741",
+               "Car":"Audi RS 5 DTM",
+               "Position":14,
+               "BestLapTime":-1
+            },
+            {
+               "Username":"seossg",
+               "Car":"BMW M3 DTM",
+               "Position":15,
+               "BestLapTime":-1
+            }
+         ]
+      }
+   ]
+}

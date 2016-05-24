@@ -731,6 +731,32 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
     }
 
 
+    /*
+     * Test better race over rank data which contains proper ranking. Testing
+     * a log that is really depended on this ranking
+     */
+    public function testBetterRaceOverRankData()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-server/different.ranks.on.final.rank.txt');
+
+        // Get the race session
+        $session = Data_Reader::factory($file_path)->getSession();
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Assert drivers on position 16, 17 and 18
+        $this->assertSame('Yoan Morcamp',
+            $participants[15]->getDriver()->getName());
+        $this->assertSame('Arnaud Marechal',
+            $participants[16]->getDriver()->getName());
+        $this->assertSame('Jean-claude Menke',
+            $participants[17]->getDriver()->getName());
+    }
+
+
 
 
 

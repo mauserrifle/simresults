@@ -729,7 +729,7 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
 
     /**
      * Test reading the game of a session based on the mod name. This tests
-     * detecting Game Stock Car
+     * detecting Game Stock Car and Automobilista
      */
     public function testReadingSessionGameBasedOnModName()
     {
@@ -742,6 +742,17 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
 
         // Validate game
         $this->assertSame('Game Stock Car Extreme', $game->getName());
+
+
+        // Get the data reader for the given data source
+        $reader = Data_Reader::factory(
+            realpath(__DIR__.'/logs/automobilista/race.xml'));
+
+        // Get game
+        $game = $reader->getSession()->getGame();
+
+        // Validate game
+        $this->assertSame('Automobilista', $game->getName());
     }
 
 

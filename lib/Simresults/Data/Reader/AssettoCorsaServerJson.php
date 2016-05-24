@@ -102,7 +102,9 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
                 $name=$player_data['Driver']['Name'],
                 $player_data['Driver']['Guid'],
                 $player_data['Model'],
-                $player_data['Driver']['Team']
+                $player_data['Driver']['Team'],
+                $player_data['BallastKG'],
+                $player_data['Skin']
             );
 
             // Add participant to collection
@@ -124,7 +126,9 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
                 $participant = $this->getParticipant(
                     $name=$player_data['DriverName'],
                     $player_data['DriverGuid'],
-                    $player_data['CarModel']
+                    $player_data['CarModel'],
+                    null,
+                    $player_data['BallastKG']
                 );
 
                 // Add participant to collection
@@ -166,7 +170,9 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
                 $participant = $this->getParticipant(
                     $name=$lap_data['DriverName'],
                     $lap_data['DriverGuid'],
-                    $lap_data['CarModel']
+                    $lap_data['CarModel'],
+                    null,
+                    $lap_data['BallastKG']
                 );
 
                 // Add participant to collection
@@ -248,9 +254,12 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
      * @param  string        $guid
      * @param  string        $car
      * @param  string        $team
+     * @param  int           $vehicle_ballast
      * @return Participant
      */
-    protected function getParticipant($name, $guid, $car, $team=null)
+    protected function getParticipant($name, $guid, $car, $team=null,
+                                      $vehicle_ballast=null,
+                                      $vehicle_skin=null)
     {
         // Create driver
         $driver = new Driver;
@@ -269,6 +278,19 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
         // Create vehicle and add to participant
         $vehicle = new Vehicle;
         $vehicle->setName($car);
+
+        // Has ballast
+        if ($vehicle_ballast)
+        {
+            $vehicle->setBallast($vehicle_ballast);
+        }
+
+        // Has skin
+        if ($vehicle_skin)
+        {
+            $vehicle->setSkin($vehicle_skin);
+        }
+
         $participant->setVehicle($vehicle);
 
         return $participant;

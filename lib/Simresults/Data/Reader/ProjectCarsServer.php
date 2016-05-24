@@ -226,9 +226,11 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                     // Remember this participant
                     $participants_with_events[] = $part;
 
-                    // Is lap
-                    // TODO: Lap cutting
-                    if ($event['event_name'] === 'Lap')
+                    // Is lap and the lap is valid (only checked for non-race)
+                    if ($event['event_name'] === 'Lap' AND
+                        ($session->getType() === Session::TYPE_RACE
+                         OR
+                         $event['attributes']['CountThisLapTimes']))
                     {
                         // Init new lap
                         $lap = new Lap;
@@ -295,6 +297,11 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                         $date = new \DateTime;
                         $date->setTimestamp($event['time']);
                         $incident->setDate($date);
+                        $incident->setElapsedSeconds(
+                            $date->getTimestamp()
+                            -
+                            $session->getDate()->getTimestamp()
+                        );
 
                         $session->addIncident($incident);
                     }
@@ -302,6 +309,11 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                                 array('CutTrackStart', 'CutTrackEnd')))
                     {
                         $cut_data[] = $event;
+                    }
+                    elseif ($event['event_name'] === 'State' AND
+                            $event['attributes']['NewState'] === 'Retired')
+                    {
+                        $part->setFinishStatus(Participant::FINISH_DNF);
                     }
 
                 }
@@ -326,7 +338,8 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                         }
 
                         // Has DNF state
-                        if ($result['attributes']['State'] === 'DNF')
+                        if (in_array(strtolower($result['attributes']['State']),
+                                array('dnf', 'retired')))
                         {
                             // Get participant
                             $part = $participants_by_id[$result['participantid']];
@@ -401,24 +414,50 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                     if ($event['event_name'] === 'CutTrackStart' AND
                         $lap = $part->getLap($event['attributes']['Lap']+1))
                     {
-                        // Add cut
-                        $lap->addCut();
-
                         // Find the end of cutting by looping following events
                         for ($end_key=$key+1; $end_key < count($cut_data);
                                  $end_key++)
                         {
-                            // Next event is end of current cut
                             $next_event = $cut_data[$end_key];
-                            if ($next_event['event_name'] === 'CutTrackEnd' AND
+
+                            // Next event is another cut start. Ignore current
+                            // cut as theres no proper end data
+                            if ($next_event['event_name'] === 'CutTrackStart' AND
                                 $next_event['participantid'] == $event['participantid'])
                             {
-                                $lap->addCutsTime(round(
+                                // Theres no end
+                                break;
+                            }
+                            // Next event is end of current cut
+                            elseif ($next_event['event_name'] === 'CutTrackEnd' AND
+                                $next_event['participantid'] == $event['participantid'])
+                            {
+
+                                $cut = new Cut;
+                                $cut->setCutTime(round(
                                     $next_event['attributes']['ElapsedTime']
                                     / 1000, 4));
-                                $lap->addCutsTimeSkipped(round(
+                                $cut->setTimeSkipped(round(
                                     $next_event['attributes']['SkippedTime']
                                     / 1000, 4));
+
+
+                                $date = new \DateTime;
+                                $date->setTimestamp($next_event['time']);
+                                $date->setTimezone(new \DateTimeZone(
+                                    self::$default_timezone));
+                                $cut->setDate($date);
+                                $cut->setLap($lap);
+                                $cut->setElapsedSeconds(
+                                    $date->getTimestamp()
+                                    -
+                                    $session->getDate()->getTimestamp()
+                                );
+                                $cut->setElapsedSecondsInLap(round(
+                                    $event['attributes']['LapTime']
+                                    / 1000, 4));
+
+                                $lap->addCut($cut);
 
                                 // Stop searching
                                 break;
@@ -461,9 +500,13 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 if ($results = $session_data['results'] AND
                     $session->getType() === Session::TYPE_RACE)
                 {
-                    // Create new participants order
-                    $participants_resultsorted = array();
+                    // Sort participants using our own sort
+                    $tmp_sort =
+                        Helper::sortParticipantsByTotalTime($participants);
 
+                    // Find whether our leading participant using our own sort
+                    // is in the result
+                    $leading_is_in_result = false;
                     foreach ($results as $result)
                     {
                         // Participant not found, continue to next
@@ -477,25 +520,71 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                         $participant = $participants_by_id[
                             $result['participantid']];
 
-                        // Set total time
-                        $participant->setTotalTime(round(
-                            $result['attributes']['TotalTime'] / 1000, 4));
-
-                        // Add to sorted array and remove from normal array
-                        $participants_resultsorted[] = $participant;
-                        unset($participants[
-                            array_search($participant, $participants)]);
-
+                        // Leading found
+                        if ($participant === $tmp_sort[0])
+                        {
+                            $leading_is_in_result = true;
+                        }
                     }
 
-                    // Sort participants not sorted by result by total time
-                    $participants =
-                        Helper::sortParticipantsByTotalTime($participants);
+                    // Leading participant is in the results array
+                    if ($leading_is_in_result)
+                    {
+                        // Init sorted result array
+                        $participants_resultsorted = array();
 
-                    // Merge the sorted participants result with normal sort
-                    // array. Merge them and remove any duplicates
-                    $participants = array_unique(array_merge(
-                        $participants_resultsorted, $participants), SORT_REGULAR);
+                        foreach ($results as $result)
+                        {
+                            // Participant not found, continue to next
+                            if ( ! isset($participants_by_id[
+                                             $result['participantid']]))
+                            {
+                                continue;
+                            }
+
+                            // Get participant
+                            $participant = $participants_by_id[
+                                $result['participantid']];
+
+                            // Set total time
+                            $participant->setTotalTime(round(
+                                $result['attributes']['TotalTime'] / 1000, 4));
+
+                            // Add to sorted array and remove from normal array
+                            $participants_resultsorted[] = $participant;
+                            unset($participants[
+                                array_search($participant, $participants, true)]);
+                        }
+
+                        // Sort participants not sorted by result by total time
+                        $participants =
+                            Helper::sortParticipantsByTotalTime($participants);
+
+
+                        // Merge the sorted participants result with normal sort
+                        // array. Merge them and remove any duplicates
+                        // NOTE: We are not using array_unique as it's causing
+                        // recursive depedency
+                        $merged = array_merge(
+                            $participants_resultsorted, $participants);
+                        $final  = array();
+
+                        foreach ($merged as $current) {
+                            if ( ! in_array($current, $final, true)) {
+                                $final[] = $current;
+                            }
+                        }
+
+                        $participants = $final;
+                    }
+                    // Cannot trust the results, just fallback to laps sorting
+                    else
+                    {
+                        // Sort participants
+                        $this->sortParticipantsAndFixPositions(
+                            $participants, $session);
+                    }
+
                 }
                 // No predefined result
                 else
@@ -521,8 +610,8 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 $session->setParticipants($participants);
 
                 $sessions[] = $session;
-            }
-        }
+            } // End stages loop
+        } // End history loop
 
 
         // Swap warmup and race positions if wrong

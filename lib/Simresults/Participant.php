@@ -175,7 +175,10 @@ class Participant {
     }
 
     /**
-     * Get the vehicle. Returns a vehicle in this order:
+     * Get the vehicle.
+     *
+     * When the argument `$ignore_lap_vehicles` is set to false (default) it
+     * returns a vehicle in this order:
      *
      *     * The best lap vehicle (if any)
      *     * The main vehicle set on participant (if any)
@@ -185,12 +188,16 @@ class Participant {
      * A participant might ran  multiple cars on different laps due to
      * reconnecting
      *
-     * @return  Vehicle
+     * @param  boolean  $ignore_lap_vehicles   Used to prevent infinite loops
+     *                                         when calling `Lap::getVehicle()`
+     *                                         which fallbacks to this class.
+     *
+     * @return Vehicle
      */
-    public function getVehicle()
+    public function getVehicle($ignore_lap_vehicles=false)
     {
         // Has multiple vehicles from laps
-        if ($vehicles = $this->getVehicles())
+        if ( ! $ignore_lap_vehicles AND $vehicles = $this->getVehicles())
         {
             // Return best lap vehicle if any
             if ($best_lap = $this->getBestLap() AND
@@ -355,13 +362,30 @@ class Participant {
     }
 
     /**
-     * Add lap to this participant
+     * Add lap to this participant. When the lap number is not set on Lap,
+     * this method adds the number.
      *
      * @param   Lap  $lap
      * @return  Participant
      */
     public function addLap(Lap $lap)
     {
+        // No lap number set. Set lap number because we can't function without
+        if ( ! $lap->getNumber())
+        {
+            // No laps yet, so is the first
+            if ( ! $this->laps)
+            {
+                $lap->setNumber(1);
+            }
+            // Has laps, get last added lap and use as number
+            else
+            {
+                $lap->setNumber($this->laps[count($this->laps)-1]
+                    ->getNumber()+1);
+            }
+        }
+
         $this->laps[] = $lap;
         return $this;
     }
@@ -374,14 +398,14 @@ class Participant {
      */
     public function getLap($lap_number)
     {
-        // Lap does not exist
-        if ( ! isset($this->laps[$lap_number-1]))
+        // Find lap by number. We are not selecting on array key because
+        // in some cases not all laps are in the array!
+        foreach ($this->laps as $lap)
         {
-            return null;
+            if ($lap->getNumber() === $lap_number) return $lap;
         }
 
-        // Return lap
-        return $this->laps[$lap_number-1];
+        return null;
     }
 
     /**
@@ -547,12 +571,19 @@ class Participant {
                                 abs($lap_difference));
                  $lap_i--)
             {
+                // Lap does not exist on leader
+                if ( ! $leading_lap = $leading_participant->getLap($lap_i))
+                {
+                    // Go to next
+                    continue;
+                }
+
                 // Negative lap difference
                 if ($lap_difference < 0)
                 {
                     // Subtract lap time of leading participant to total gap
                     $gap = round(
-                        $gap - $leading_participant->getLap($lap_i)->getTime(),
+                        $gap - $leading_lap->getTime(),
                         4
                     );
                 }
@@ -561,7 +592,7 @@ class Participant {
                 {
                     // Add lap time of leading participant to total gap
                     $gap = round(
-                        $gap + $leading_participant->getLap($lap_i)->getTime(),
+                        $gap + $leading_lap->getTime(),
                         4
                     );
                 }

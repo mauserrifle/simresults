@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/mauserrifle/simresults.svg)](https://travis-ci.org/mauserrifle/simresults)
 
-Simresults is an open-source, object-oriented library built using PHP5. It
+Simresults is an open-source, object-oriented library built using PHP. It
 allows you to read out log files of a race game and transforms them to a simple
 data model to easily read out this data.
 
@@ -31,6 +31,7 @@ Simresults supports a wide range of games:
 * rFactor 2
 * Project Cars
 * Assetto Corsa
+* Automobilista
 * Game Stock Car 2012
 * Game Stock Car 2013
 * Game Stock Car Extreme
@@ -62,8 +63,7 @@ The following expansions of RACE (07) should work too:
 * Volvo - The Game
 
 
-Please note that Game Stock Car and Formula Truck will be reported as as a
-rFactor game.
+Please note that Formula Truck will be reported as as a rFactor game.
 
 Results from F1 challenge and GTR might miss laps.
 
@@ -90,7 +90,7 @@ lap.
 `lib/Data/Reader/Rfactor2.php`
 
 * Supports rFactor and rFactor 2. Also works for other rFactor powered games:
-  Game Stock Car 2012, Game Stock Car 2013 and Formula Truck 2013
+  Automobilista, Game Stock Car 2012, Game Stock Car 2013 and Formula Truck 2013
 * Detects and fixes position data (sometimes log files report complete wrong
   positions due to lag/bugs)
 * Detects human and AI players using their aids (sometimes log files report
@@ -251,7 +251,7 @@ sure all your new additions are tested.
 
 To run the tests, use the following command:
 
-    ./vendor/bin/phpunit tests
+    ./vendor/bin/phpunit
 
 ## License
 

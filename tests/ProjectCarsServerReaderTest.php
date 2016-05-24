@@ -125,8 +125,7 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
-     * Test reading the best laps from a log that has no events (thus no laps).
-     * We fallback to "FastestLapTime" within the results data.
+     * Test reading  DNF states
      */
     public function testReadingDNFstates()
     {
@@ -137,12 +136,21 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
         // Get the data reader for the given data source
         $sessions = Data_Reader::factory($file_path)->getSessions();
 
-        // Get participants
+        // Get participants of 10th session
         $participants = $sessions[9]->getParticipants();
 
         // Test DNF status
         $this->assertSame(Participant::FINISH_DNF,
             $participants[1]->getFinishStatus());
+
+        // Get participants of last session
+        $participants = $sessions[count($sessions)-1]->getParticipants();
+
+        // Test retired status as DNF
+        $this->assertSame('[CAV] F1_Racer68',
+            $participants[count($participants)-1]->getDriver()->getName());
+        $this->assertSame(Participant::FINISH_DNF,
+            $participants[count($participants)-1]->getFinishStatus());
     }
 
 
@@ -223,6 +231,140 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
 
         // Validate cuts
         $this->assertSame(1.434, $laps[1]->getCutsTime());
+    }
+
+    /**
+     * Test whether we filter out cuts without end data
+     */
+    public function testFilteringOutCutsWithoutEndData()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/projectcars-server/missing.cut.end.data.json');
+
+        // Get race session
+        $session = Data_Reader::factory($file_path)->getSession(3);
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Get laps of third participant
+        $laps = $participants[2]->getLaps();
+
+        // Validate that lap 20 does not have cuts and lap 24 does
+        $this->assertSame(0, $laps[19]->getNumberOfCuts());
+        $this->assertSame(1, $laps[23]->getNumberOfCuts());
+    }
+
+    /**
+     * Test whether we have proper lap and cut matches. The library earlier read
+     * laps by number using the laps array keys. But in some cases the first
+     * key [0] could be lap number 2 (by reading `getNumber()`. So we can't
+     * rely on array keys and this tests a scenario where we had bugged cuts
+     *
+     * Participant `getLap` has been modified for this.
+     */
+    public function testFixingBadLapNumberCutMatching()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/projectcars-server/missing.cut.end.data.json');
+
+        // Get qualify session
+        $session = Data_Reader::factory($file_path)->getSession(1);
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Get laps of third participant
+        $laps = $participants[2]->getLaps();
+
+        // Validate that lap 1 does not have cuts
+        $this->assertSame(0, $laps[1]->getNumberOfCuts());
+
+
+        // BELOW WAS THE OLD TEST THAT IS NOT VALID ANY MORE DUE TO
+        // IMPROVEMENTS IN NOT INCLUDING INVALID LAPS:
+        //
+        // Validate that lap 1 and 2 have no cuts. Validate that lap 3 does not
+        // exist (but there is a cut for this). By testing this we make sure
+        // the unfinished lap 3 cut has not been misread into the first two
+        // laps
+        //
+        // $this->assertSame(0, $laps[1]->getNumberOfCuts());
+        // $this->assertSame(0, $laps[2]->getNumberOfCuts());
+        // $this->assertFalse(isset($laps[3]));
+    }
+
+    /**
+     * Test ignoring invalid laps and proper finishes. Tests a fix where
+     * the results array from the json is not parsed when the leading
+     * participant is not in it.
+     */
+    public function testIgnoringInvalidLapsAndProperFinishes()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/projectcars-server/invalid.laps.json');
+
+        // Get qualify session
+        $session = Data_Reader::factory($file_path)->getSession(1);
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Validate first participant
+        $this->assertSame('Markus Walter',
+            $participants[0]->getDriver()->getName());
+
+        // Validate proper lap numbers increment (there were double laps)
+        $lap_num = 1;
+        foreach($participants[0]->getLaps() as $lap)
+        {
+            $this->assertSame($lap_num, $lap->getNumber());
+            $lap_num++;
+        }
+
+
+        // Get race session
+        $session = Data_Reader::factory($file_path)->getSession(3);
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Validate first participant
+        $this->assertSame('Markus Walter',
+            $participants[0]->getDriver()->getName());
+    }
+
+    /**
+     * Tests not mixing up races data. This happend because an sorted result
+     * array was not (re)initiated for each stage, so it kept building up
+     */
+    public function testNotMixingUpRaces()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/projectcars-server/races.to.test.mixed.races.json');
+
+        // Get sessions
+        $sessions = Data_Reader::factory($file_path)->getSessions();
+
+        // Validate each race session winner
+        $drivers = array('-T2R-Julien', '-T2R-Julien', '-T2R-Julien',
+                         'GTS - Ipod [FR]', 'GTS - Ipod [FR]');
+
+        $session_key = 1;
+        foreach ($drivers as $driver)
+        {
+            $this->assertSame($driver, $sessions[$session_key]
+                ->getWinningParticipant()->getDriver()->getName());
+
+            $session_key += 2;
+        }
+
+        // Validate number of participants last session
+        $this->assertSame(6, count($sessions[9]->getParticipants()));
     }
 
 
@@ -361,7 +503,7 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
                           $participant->getDriver()->getDriverId());
         $this->assertTrue($participant->getDriver()->isHuman());
         $this->assertSame(1, $participant->getPosition());
-        $this->assertSame(12, $participant->getGridPosition());
+        $this->assertSame(11, $participant->getGridPosition());
         $this->assertSame(Participant::FINISH_NORMAL,
             $participant->getFinishStatus());
         $this->assertSame(516.67499999999995, $participant->getTotalTime());
@@ -433,6 +575,33 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertSame(7, $laps[2]->getPosition());
     }
 
+    /**
+     * Test reading detailed cuts data
+     */
+    public function testCuts()
+    {
+        // Get participants
+        $participants = $this->getWorkingReader()->getSession(5)
+            ->getParticipants();
+
+
+        // Get the laps of second participants (first is missing a lap)
+        $participant = $participants[1];
+        $laps = $participant->getLaps();
+
+        // Second lap cuts
+        $cuts = $laps[1]->getCuts();
+
+        // Validate
+        $this->assertSame(3, count($cuts));
+        $this->assertSame(2.8780, $cuts[0]->getCutTime());
+        $this->assertSame(2.7480, $cuts[0]->getTimeSkipped());
+        $this->assertSame(1446150159, $cuts[0]->getDate()->getTimestamp());
+        $this->assertSame(137, $cuts[0]->getElapsedSeconds());
+        $this->assertSame(9.888, $cuts[0]->getElapsedSecondsInLap());
+        $this->assertSame($laps[1], $cuts[0]->getLap());
+    }
+
 
     /**
      * Test reading incidents between cars
@@ -450,6 +619,7 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
             $incidents[0]->getMessage());
         $this->assertSame(1446150056,
             $incidents[0]->getDate()->getTimestamp());
+        $this->assertSame(34, $incidents[0]->getElapsedSeconds());
 
         // Validate incident that would have a unknown participant. But now
         // it should not because we ignore these
@@ -459,6 +629,7 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
             $incidents[5]->getMessage());
         $this->assertSame(1446150147,
             $incidents[5]->getDate()->getTimestamp());
+        $this->assertSame(125, $incidents[5]->getElapsedSeconds());
     }
 
 

@@ -26,83 +26,19 @@ class RaceRoomReaderTest extends PHPUnit_Framework_TestCase {
 
 
     /**
-     * Test reading multiple sessions. Sessiosn without data should be ignored
-     * and not parsed.
+     * Test reading laps using the best lap and check for unknown usernames
      */
-    public function testReadingMultipleSessions()
+    public function testLogWithoutLapsAndUnknownUsernames()
     {
-        // Get sessions
-        $sessions = $this->getWorkingReader()->getSessions();
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/raceroom-server/no.laps.json');
 
-        // Validate the number of sessions
-        $this->assertSame(2, sizeof($sessions));
+        // Get the data reader for the given data source
+        $session = Data_Reader::factory($file_path)->getSession(1);
 
-
-        // Get first session
-        $session = $sessions[0];
-        $date = $session->getDate();
-
-        //-- Validate
-
-        $this->assertSame(Session::TYPE_QUALIFY, $session->getType());
-        $this->assertSame(1437748751, $date->getTimestamp());
-        $this->assertSame('UTC', $date->getTimezone()->getName());
-
-
-        // Get second session
-        $session = $sessions[1];
-
-        //-- Validate
-        $this->assertSame(Session::TYPE_RACE, $session->getType());
-        $this->assertSame(1437748751, $date->getTimestamp());
-        $this->assertSame('UTC', $date->getTimezone()->getName());
-    }
-
-    /**
-     * Test reading the server of a session
-     */
-    public function testReadingSessionServer()
-    {
-        // Get the server
-        $server = $this->getWorkingReader()->getSession()->getServer();
-
-        // Validate server
-        $this->assertSame('[[KOC]] R3E DTM MASTERS R02', $server->getName());
-    }
-
-    /**
-     * Test reading the game of a session
-     */
-    public function testReadingSessionGame()
-    {
-        // Get the game
-        $game = $this->getWorkingReader()->getSession()->getGame();
-
-        // Validate game
-        $this->assertSame('RaceRoom Racing Experience', $game->getName());
-    }
-
-    /**
-     * Test reading the track of a session
-     */
-    public function testReadingSessionTrack()
-    {
-        // Get the track
-        $track = $this->getWorkingReader()->getSession()->getTrack();
-
-        // Validate track
-        $this->assertSame('EuroSpeedway Lausitz', $track->getVenue());
-    }
-
-
-    /**
-     * Test reading the participants and their laps of a session
-     */
-    public function testReadingSessionParticipantsAndLaps()
-    {
         // Test first participant
-        $participants = $this->getWorkingReader()->getSession()
-            ->getParticipants();
+        $participants = $session->getParticipants();
         $participant = $participants[0];
 
         $this->assertSame('YHKIM', $participant->getDriver()->getName());
@@ -127,6 +63,137 @@ class RaceRoomReaderTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
+     * Test pit stop marking and skipping negative lap times
+     */
+    public function testPitLapsAndSkippingNegativeLapTimes()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/raceroom-server/pit.lap.and.negative.lap.json');
+
+        // Get the data reader for the given data source
+        $session = Data_Reader::factory($file_path)->getSession(2);
+
+        $participants = $session->getParticipants();
+        $participant = $participants[15];
+
+        $this->assertTrue($participant->getLap(3)->isPitLap());
+        $this->assertNull($participant->getLap(4));
+    }
+
+
+
+
+    /***
+    **** Below tests use 1 race log file
+    ***/
+
+
+    /**
+     * Test reading multiple sessions. Sessiosn without data should be ignored
+     * and not parsed.
+     */
+    public function testReadingMultipleSessions()
+    {
+        // Get sessions
+        $sessions = $this->getWorkingReader()->getSessions();
+
+        // Validate the number of sessions
+        $this->assertSame(2, sizeof($sessions));
+
+
+        // Get first session
+        $session = $sessions[0];
+        $date = $session->getDate();
+
+        //-- Validate
+
+        $this->assertSame(Session::TYPE_QUALIFY, $session->getType());
+        $this->assertSame(1459003463, $date->getTimestamp());
+        $this->assertSame('UTC', $date->getTimezone()->getName());
+
+
+        // Get second session
+        $session = $sessions[1];
+
+        //-- Validate
+        $this->assertSame(Session::TYPE_RACE, $session->getType());
+        $this->assertSame(1459003463, $date->getTimestamp());
+        $this->assertSame('UTC', $date->getTimezone()->getName());
+    }
+
+    /**
+     * Test reading the server of a session
+     */
+    public function testReadingSessionServer()
+    {
+        // Get the server
+        $server = $this->getWorkingReader()->getSession()->getServer();
+
+        // Validate server
+        $this->assertSame('!grass-saba!!', $server->getName());
+    }
+
+    /**
+     * Test reading the game of a session
+     */
+    public function testReadingSessionGame()
+    {
+        // Get the game
+        $game = $this->getWorkingReader()->getSession()->getGame();
+
+        // Validate game
+        $this->assertSame('RaceRoom Racing Experience', $game->getName());
+    }
+
+    /**
+     * Test reading the track of a session
+     */
+    public function testReadingSessionTrack()
+    {
+        // Get the track
+        $track = $this->getWorkingReader()->getSession()->getTrack();
+
+        // Validate track
+        $this->assertSame('Portimao Circuit', $track->getVenue());
+    }
+
+
+    /**
+     * Test reading the participants and their laps of a session
+     */
+    public function testReadingSessionParticipantsAndLaps()
+    {
+        // Test first participant
+        $participants = $this->getWorkingReader()->getSession(2)
+            ->getParticipants();
+        $participant = $participants[0];
+
+        $this->assertSame('matsuo', $participant->getDriver()->getName());
+        $this->assertSame('Ford GT GT1',
+                          $participant->getVehicle()->getName());
+        $this->assertSame(1, $participant->getPosition());
+        $this->assertSame(1216.072, $participant->getTotalTime());
+        $this->assertSame(Participant::FINISH_NORMAL,
+            $participant->getFinishStatus());
+        $this->assertSame(115.0910, $participant->getLap(1)->getTime());
+        $this->assertSame(100.417, $participant->getLap(5)->getTime());
+
+        // Test DQ participant
+        $participant = $participants[count($participants)-2];
+        $this->assertSame(Participant::FINISH_DQ,
+            $participant->getFinishStatus());
+
+        // Test last participant
+        $participant = $participants[count($participants)-1];
+        $this->assertSame('RaidenHornet', $participant->getDriver()->getName());
+        $this->assertSame('Saleen S7R', $participant->getVehicle()->getName());
+        $this->assertSame(4, $participant->getPosition());
+        $this->assertSame(Participant::FINISH_DNF,
+            $participant->getFinishStatus());
+    }
+
+    /**
      * Test reading session settings
      */
     public function testReadingSessionSettings()
@@ -141,11 +208,10 @@ class RaceRoomReaderTest extends PHPUnit_Framework_TestCase {
                 'Difficulty'         =>  'GetReal',
                 'FuelUsage'          =>  'Normal',
                 'MechanicalDamage'   =>  'Off',
-                'FlagRules'          =>  'All',
-                'CutRules'           =>  'StopAndGo',
-                'RaceSeriesFormat'   =>  'CustomRRE',
-                'WreckerPrevention'  =>  'On',
-                'MandatoryPitstop'   =>  'Off',
+                'FlagRules'          =>  'Black',
+                'CutRules'           =>  'SlowDown',
+                'RaceSeriesFormat'   =>  'DTM2013',
+                'WreckerPrevention'  =>  'Off',
                 'MandatoryPitstop'   =>  'Off',
             ),
             $session->getOtherSettings()

@@ -104,19 +104,11 @@ class Lap {
     protected $pit_time;
 
     /**
-     * @var  int  The number of cuts
+     * @var  array  Array containing all the cuts
      */
-    protected $number_of_cuts = 0;
+    protected $cuts = array();
 
-    /**
-     * @var  float  The total time in seconds of cuts
-     */
-    protected $cuts_time = 0;
 
-    /**
-     * @var  float  The total time skipped in seconds of cuts
-     */
-    protected $cuts_time_skipped = 0;
 
     /**
      * Set the lap number
@@ -201,12 +193,20 @@ class Lap {
     /**
      * Get the vehicle
      *
+     * When no vehicle is set on the lap, this method will return the single
+     * vehicle set on the Participant
+     *
      * @param   int       $vehicle_number
      * @return  Vehicle
      */
     public function getVehicle()
     {
-        return $this->vehicle;
+        // Has lap vehicle, return that
+        if ($this->vehicle) return $this->vehicle;
+
+        // Return participant vehicle and make sure that method will not search
+        // the laps (which causes infinite loops)
+        return $this->participant->getVehicle(true);
     }
 
     /**
@@ -584,17 +584,27 @@ class Lap {
         return $this;
     }
 
+
     /**
-     * Set the number of cuts
+     * Get the cuts
      *
-     * @param   int  $number_of_cuts
-     * @return  Lap
+     * @return  array
      */
-    public function setNumberOfCuts($number_of_cuts)
+    public function getCuts()
     {
-        $this->number_of_cuts = $number_of_cuts;
-        return $this;
+        return $this->cuts;
     }
+
+    /**
+     * Add a cut to this lap
+     *
+     * @param  Cut $cut
+     */
+    public function addCut(Cut $cut)
+    {
+        $this->cuts[] = $cut;
+    }
+
 
     /**
      * Get the number of cuts
@@ -603,19 +613,8 @@ class Lap {
      */
     public function getNumberOfCuts()
     {
-        return $this->number_of_cuts;
+        return count($this->cuts);
     }
-
-    /**
-     * Add a cut to this lap
-     */
-    public function addCut()
-    {
-        $this->number_of_cuts++;
-    }
-
-
-
 
     /**
      * Get the total time in seconds of cuts
@@ -624,15 +623,12 @@ class Lap {
      */
     public function getCutsTime()
     {
-        return $this->cuts_time;
-    }
-
-    /**
-     * Add time in seconds to the total cut time
-     */
-    public function addCutsTime($seconds)
-    {
-        $this->cuts_time = round($this->cuts_time + $seconds, 4);
+        $time = 0;
+        foreach ($this->cuts as $cut)
+        {
+            $time += $cut->getCutTime();
+        }
+        return  $time;
     }
 
     /**
@@ -642,17 +638,14 @@ class Lap {
      */
     public function getCutsTimeSkipped()
     {
-        return $this->cuts_time_skipped;
+        $time = 0;
+        foreach ($this->cuts as $cut)
+        {
+            $time += $cut->getTimeSkipped();
+        }
+        return  $time;
     }
 
-    /**
-     * Add time skipped in seconds to the total cut time skipped
-     */
-    public function addCutsTimeSkipped($seconds_skipped)
-    {
-        $this->cuts_time_skipped =
-            round($this->cuts_time_skipped + $seconds_skipped, 4);
-    }
 
 
 
