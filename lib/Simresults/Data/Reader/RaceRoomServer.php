@@ -111,8 +111,8 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
                 $driver = new Driver;
 
                 // Has name
-                if ($name = Helper::arrayGet($player_data, 'Username') OR
-                    $name = Helper::arrayGet($player_data, 'FullName'))
+                if ($name = Helper::arrayGet($player_data, 'FullName') OR
+                    $name = Helper::arrayGet($player_data, 'Username'))
                 {
                     $driver->setName($name);
                 }
