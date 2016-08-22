@@ -732,7 +732,13 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 // Is race session
                 if ($session2['type'] === 'race')
                 {
+                    $before_race_over = null;
+                    $after_race_over = null;
+
                     // Explode data on best possible race data
+                    // TODO: This is not correct. FINAL RANK includes laps
+                    //       after finish. We should revert this back to
+                    //       "RACE OVER DETECTED!" perhaps ?
                     $race_end = explode(
                         'RACE OVER PACKET, FINAL RANK', $data_session2);
 
@@ -752,16 +758,29 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                         $after_race_over = null;
                     }
                     // More results. Ignore anything above 2 parts by just
-                    // reading the first and second part. For example:
-                    // when we would had 3 or more parts. Last is probably from
-                    // "RACE OVER PACKET, FINAL RANK". We should ignore that
-                    // as it included alot of 0:00:000 times..
+                    // reading the first and second part.
                     else
                     {
                         $before_race_over = $race_end[0];
                         $after_race_over = $race_end[1];
                     }
 
+                    // Before race over still has RACE OVER LINES :(
+                    // We need to split again
+                    if ( 1 < count($race_end2 = explode(
+                        'RACE OVER DETECTED!', $before_race_over)))
+                    {
+                        // Use first part as new before race over
+                        $before_race_over = array_shift($race_end2);
+
+                        // Merge any other with the existing after race over
+                        $ends = '';
+                        foreach ($race_end2 as $end)
+                        {
+                            $ends .= "\n".$end;
+                        }
+                        $after_race_over = $ends."\n".$after_race_over;
+                    }
 
                     // Parse lap data before race over, continue to next
                     // session data if failed
@@ -784,7 +803,6 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                             $participants_copy, $participant_regex,
                             $participant_regex_vehicle_match_key, true);
                     }
-
 
                     // Get total times
                     // MATCH: 0) Rodrigo  Sanchez Paz BEST: 16666:39:999 TOTAL:
