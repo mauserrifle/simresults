@@ -52,13 +52,14 @@
                "BestLapTime":83093
             },
             {
-               "Username":"junkim",
+               "FullName":"junkim",
                "Car":"Audi RS 5 DTM",
                "Position":7,
                "BestLapTime":83128
             },
             {
                "Username":"DunkinCup",
+               "FullName":"DunkinCupF",
                "Car":"BMW M3 DTM",
                "Position":8,
                "BestLapTime":83784

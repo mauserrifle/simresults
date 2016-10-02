@@ -53,6 +53,13 @@ class RaceRoomReaderTest extends PHPUnit_Framework_TestCase {
         // Test participant without name
         $this->assertSame('unknown', $participants[5]->getDriver()->getName());
 
+        // Test FullName fallback
+        $this->assertSame('junkim', $participants[6]->getDriver()->getName());
+
+        // Test favor FullName over Username
+        $this->assertSame('DunkinCupF', $participants[7]->getDriver()->getName());
+
+
 
         // Test last participant
         $participant = $participants[count($participants)-1];
