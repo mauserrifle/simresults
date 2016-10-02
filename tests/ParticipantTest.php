@@ -311,6 +311,38 @@ class ParticipantTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
+     * Test getting percentage of a driver driven laps in participant with
+     * multiple drivers (swapping)
+     */
+    public function testDriverPercentage()
+    {
+        // Create new participant
+        $participant = Participant::createInstance();
+
+        // Add drivers
+        $participant->setDrivers(array(
+            $driver1 = new Driver,
+            $driver2 = new Driver,
+        ));
+
+        $lap1 = new Lap;
+        $lap1->setNumber(1)->setDriver($driver1);
+        $participant->addLap($lap1);
+
+        $lap2 = new Lap;
+        $lap2->setNumber(2)->setDriver($driver1);
+        $participant->addLap($lap2);
+
+        $lap3 = new Lap;
+        $lap3->setNumber(3)->setDriver($driver2);
+        $participant->addLap($lap3);
+
+        // Validate drivers percentage
+        $this->assertSame(66.67, $participant->getDriverPercentage($driver1));
+        $this->assertSame(33.33, $participant->getDriverPercentage($driver2));
+    }
+
+    /**
      * Test the number of laps a participant has led
      */
     public function testParticipantNumerOfLapsLed()

@@ -939,4 +939,25 @@ class Participant {
             100 - ($consistency / ($this->getBestLap()->getTime() / 100)),
             2);
     }
+
+    /**
+     * Get the percentage of laps a given driver has driven within this
+     * participant
+     *
+     * @param   Driver  $driver
+     * @return  float
+     */
+    public function getDriverPercentage(Driver $driver)
+    {
+        $lap_count = 0 ;
+        foreach ($this->getLaps() as $lap)
+        {
+            if ($lap->getDriver() === $driver)
+            {
+                $lap_count++;
+            }
+        }
+
+        return round((100 / $this->getNumberOfLaps()) * $lap_count, 2);
+    }
 }
