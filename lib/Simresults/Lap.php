@@ -109,6 +109,19 @@ class Lap {
     protected $cuts = array();
 
 
+    /**
+     * @var  Helper  The helper for sorting
+     */
+    protected $helper;
+
+
+    public function __construct(Helper $helper=null)
+    {
+        if ( ! $helper) $helper = new Helper;
+
+        $this->helper = $helper;
+    }
+
 
     /**
      * Set the lap number
@@ -781,6 +794,6 @@ class Lap {
      */
     public function __toString()
     {
-        return Helper::formatTime($this->time);
+        return $this->helper->formatTime($this->time);
     }
 }

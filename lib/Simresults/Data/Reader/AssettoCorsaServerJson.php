@@ -42,7 +42,7 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
 
         // Check session name to get type
         // TODO: Could we prevent duplicate code for this with other readers?
-        switch(strtolower($name = Helper::arrayGet($data, 'Type')))
+        switch(strtolower($name = $this->helper->arrayGet($data, 'Type')))
         {
             case 'qualify session':
             case 'qualify':
@@ -63,10 +63,10 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
         $session->setType($type)
                 ->setName($name)
                 ->setMaxLaps(
-                    (int) Helper::arrayGet($data, 'RaceLaps'));
+                    (int) $this->helper->arrayGet($data, 'RaceLaps'));
 
         // Has Duration
-        if ($seconds = (int) Helper::arrayGet($data, 'DurationSecs'))
+        if ($seconds = (int) $this->helper->arrayGet($data, 'DurationSecs'))
         {
             $session->setMaxMinutes(round($seconds / 60));
         }
@@ -86,7 +86,7 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
 
         // Set track
         $track = new Track;
-        $track->setVenue(Helper::arrayGet($data, 'TrackName'));
+        $track->setVenue($this->helper->arrayGet($data, 'TrackName'));
         $session->setTrack($track);
 
 
@@ -94,7 +94,7 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
 
         // Get participants from Cars data
         $participants_by_name = array();
-        $players_data = Helper::arrayGet($data, 'Cars', array());
+        $players_data = $this->helper->arrayGet($data, 'Cars', array());
         foreach ($players_data as $player_index => $player_data)
         {
             // Build participant
@@ -116,7 +116,7 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
         // Get participants from result data.
         // WARNING: This should be orded by position but these logs are BUGGED.
         //          DO NOT TRUST!
-        $players_data = Helper::arrayGet($data, 'Result', array());
+        $players_data = $this->helper->arrayGet($data, 'Result', array());
         foreach ($players_data as $player_index => $player_data)
         {
             // No participant found
@@ -194,7 +194,7 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
             }
 
             // Set sector times in seconds
-            foreach (Helper::arrayGet($lap_data, 'Sectors', array())
+            foreach ($this->helper->arrayGet($lap_data, 'Sectors', array())
                          as $sector_time)
             {
                 $lap->addSectorTime(round($sector_time / 1000, 4));

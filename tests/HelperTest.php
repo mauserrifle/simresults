@@ -19,6 +19,7 @@ class HelperTest extends PHPUnit_Framework_TestCase {
     protected function setUp()
     {
         error_reporting(E_ALL);
+        $this->helper = new Helper;
     }
 
     /**
@@ -27,29 +28,29 @@ class HelperTest extends PHPUnit_Framework_TestCase {
     public function testFormattingTime()
     {
         // Validate
-        $this->assertSame('01:40.5279', Helper::formatTime(100.5279));
+        $this->assertSame('01:40.5279', $this->helper->formatTime(100.5279));
 
         // Validate leading zeros for seconds
-        $this->assertSame('01:02.5279', Helper::formatTime(62.5279));
+        $this->assertSame('01:02.5279', $this->helper->formatTime(62.5279));
 
         // Validate special case that had rounding problem (01:23.128099)
-        $this->assertSame('01:23.1281', Helper::formatTime(83.1281));
+        $this->assertSame('01:23.1281', $this->helper->formatTime(83.1281));
 
         // Validate the microseconds are always 4 digits
-        $this->assertSame('01:11.0661', Helper::formatTime(71.0661));
+        $this->assertSame('01:11.0661', $this->helper->formatTime(71.0661));
 
         // Make sure a smaller number, without leading zero, will not result in
         // formatting with leading zeros
-        $this->assertSame('01:11.6610', Helper::formatTime(71.661));
+        $this->assertSame('01:11.6610', $this->helper->formatTime(71.661));
 
         // Validate negative seconds
-        $this->assertSame('-01:11.0661', Helper::formatTime(-71.0661));
+        $this->assertSame('-01:11.0661', $this->helper->formatTime(-71.0661));
 
         // Validate time with hours
-        $this->assertSame('01:31:56.5879', Helper::formatTime(5516.5879));
+        $this->assertSame('01:31:56.5879', $this->helper->formatTime(5516.5879));
 
         // Validate forcing hours
-        $this->assertSame('00:01:40.5279', Helper::formatTime(100.5279, true));
+        $this->assertSame('00:01:40.5279', $this->helper->formatTime(100.5279, true));
     }
 
     /**
@@ -59,13 +60,13 @@ class HelperTest extends PHPUnit_Framework_TestCase {
     {
         // validate
         $this->assertsame(
-            100.5279, helper::secondsfromformattedtime('01:40.5279'));
+            100.5279, $this->helper->secondsfromformattedtime('01:40.5279'));
         $this->assertsame(
-            5516.5879, helper::secondsfromformattedtime('01:31:56.5879'));
+            5516.5879, $this->helper->secondsfromformattedtime('01:31:56.5879'));
         $this->assertsame(
-            123.506, helper::secondsfromformattedtime('02:03:506', true));
+            123.506, $this->helper->secondsfromformattedtime('02:03:506', true));
         $this->assertsame(
-            3723.506, helper::secondsfromformattedtime('01:02:03:506', true));
+            3723.506, $this->helper->secondsfromformattedtime('01:02:03:506', true));
     }
 
     /**
@@ -76,7 +77,7 @@ class HelperTest extends PHPUnit_Framework_TestCase {
      */
     public function testSecondsFromFormattedTimeWithInvalidFormat()
     {
-       Helper::secondsFromFormattedTime('40.5279');
+       $this->helper->secondsFromFormattedTime('40.5279');
     }
 
     /**
@@ -100,7 +101,7 @@ class HelperTest extends PHPUnit_Framework_TestCase {
         $laps[] = $lap;
 
         // Sort laps
-        $laps = Helper::sortLapsByTime($laps);
+        $laps = $this->helper->sortLapsByTime($laps);
 
         // Validate laps
         $this->assertSame(100.10, $laps[0]->getTime());
@@ -129,7 +130,7 @@ class HelperTest extends PHPUnit_Framework_TestCase {
         $laps[] = $lap;
 
         // Sort laps
-        $laps = Helper::sortLapsBySector($laps, 1);
+        $laps = $this->helper->sortLapsBySector($laps, 1);
 
         // Get sector info
         $sectors1 = $laps[0]->getSectorTimes();
@@ -174,7 +175,7 @@ class HelperTest extends PHPUnit_Framework_TestCase {
             $participant1, $participant2, $participant3, $participant4);
 
         // Sort participants
-        $participants = Helper::sortParticipantsByConsistency($participants);
+        $participants = $this->helper->sortParticipantsByConsistency($participants);
 
         // Validate participants
         $this->assertSame($participant2, $participants[0]);
@@ -190,9 +191,9 @@ class HelperTest extends PHPUnit_Framework_TestCase {
     {
         $array = array('key' => 'value');
 
-        $this->assertSame('value', Helper::arrayGet($array, 'key'));
-        $this->assertNull(Helper::arrayGet($array, 'nothing'));
-        $this->assertSame('default value', Helper::arrayGet(
+        $this->assertSame('value', $this->helper->arrayGet($array, 'key'));
+        $this->assertNull($this->helper->arrayGet($array, 'nothing'));
+        $this->assertSame('default value', $this->helper->arrayGet(
             $array, 'nothing', 'default value'));
     }
 

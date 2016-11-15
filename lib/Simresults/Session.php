@@ -104,6 +104,21 @@ class Session {
      */
     protected $other_settings = array();
 
+
+    /**
+     * @var  Helper  The helper for sorting
+     */
+    protected $helper;
+
+
+    public function __construct(Helper $helper=null)
+    {
+        if ( ! $helper) $helper = new Helper;
+
+        $this->helper = $helper;
+    }
+
+
     /**
      * Create a session instance. Returns cached version.
      *
@@ -598,7 +613,7 @@ class Session {
         }
 
         // Return sorted laps
-        return Helper::sortLapsByTime($laps);
+        return $this->helper->sortLapsByTime($laps);
     }
 
     /**
@@ -646,7 +661,7 @@ class Session {
         }
 
         // Return sorted laps
-        return Helper::sortLapsByTime($laps);
+        return $this->helper->sortLapsByTime($laps);
     }
 
     /**
@@ -684,7 +699,7 @@ class Session {
         }
 
         // Return sorted laps
-        return Helper::sortLapsByTime($laps);
+        return $this->helper->sortLapsByTime($laps);
     }
 
     /**
@@ -702,7 +717,7 @@ class Session {
         }
 
         // Return sorted laps
-        return Helper::sortLapsBySector($laps, $sector);
+        return $this->helper->sortLapsBySector($laps, $sector);
     }
 
     /**
@@ -742,7 +757,7 @@ class Session {
         }
 
         // Return sorted laps
-        return Helper::sortLapsBySector($laps, $sector);
+        return $this->helper->sortLapsBySector($laps, $sector);
     }
 
     /**
@@ -768,7 +783,7 @@ class Session {
         }
 
         // Return sorted laps
-        return Helper::sortLapsBySector($laps, $sector);
+        return $this->helper->sortLapsBySector($laps, $sector);
     }
 
     /**
@@ -1000,7 +1015,7 @@ class Session {
      */
     public function getParticipantsSortedByConsistency()
     {
-        return Helper::sortParticipantsByConsistency($this->getParticipants());
+        return $this->helper->sortParticipantsByConsistency($this->getParticipants());
     }
 
     /**

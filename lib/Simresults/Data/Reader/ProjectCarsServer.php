@@ -502,7 +502,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 {
                     // Sort participants using our own sort
                     $tmp_sort =
-                        Helper::sortParticipantsByTotalTime($participants);
+                        $this->helper->sortParticipantsByTotalTime($participants);
 
                     // Find whether our leading participant using our own sort
                     // is in the result
@@ -558,7 +558,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
 
                         // Sort participants not sorted by result by total time
                         $participants =
-                            Helper::sortParticipantsByTotalTime($participants);
+                            $this->helper->sortParticipantsByTotalTime($participants);
 
 
                         // Merge the sorted participants result with normal sort

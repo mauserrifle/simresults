@@ -135,7 +135,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             foreach ($session_data['participants'] as $part_data)
             {
                 // No name
-                if ( ! Helper::arrayGet($part_data, 'name'))
+                if ( ! $this->helper->arrayGet($part_data, 'name'))
                 {
                     continue;
                 }
@@ -145,7 +145,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 $driver->setName($part_data['name']);
 
                 // Total time not greater than 0
-                if (0 >= $total_time=Helper::arrayGet($part_data, 'total_time'))
+                if (0 >= $total_time=$this->helper->arrayGet($part_data, 'total_time'))
                 {
                     // Total time is null
                     $total_time = null;
@@ -157,7 +157,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                             ->setTotalTime($total_time);
 
                 // Has total time parsed data and should not be a forced DNF
-                if ($total_time AND ! Helper::arrayGet($part_data, 'force_dnf'))
+                if ($total_time AND ! $this->helper->arrayGet($part_data, 'force_dnf'))
                 {
                     $participant->setFinishStatus(Participant::FINISH_NORMAL);
                 }
@@ -200,7 +200,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 }
 
                 // Collect laps
-                foreach (Helper::arrayGet($part_data, 'laps', array()) as
+                foreach ($this->helper->arrayGet($part_data, 'laps', array()) as
                     $lap_i => $lap_data)
                 {
                     // Init new lap
@@ -837,7 +837,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                         if ($time_matches[2][$time_key] !== '0:00:000')
                         {
                             $participants_copy[$name_key]['total_time'] =
-                                Helper::secondsFromFormattedTime(
+                                $this->helper->secondsFromFormattedTime(
                                       $time_matches[2][$time_key], true);
                         }
                     }
@@ -1053,7 +1053,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
 
             // Add lap
             $participants_copy[$name_key]['laps'][] = array(
-                'time'    => Helper::secondsFromFormattedTime(
+                'time'    => $this->helper->secondsFromFormattedTime(
                                  $lap_matches[2][$lap_key], true),
                 'vehicle' => $lap_vehicle
                                  ? $lap_vehicle
