@@ -396,8 +396,11 @@ class Participant {
             // Has laps, get last added lap and use as number
             else
             {
-                $lap->setNumber($this->laps[count($this->laps)-1]
-                    ->getNumber()+1);
+                $lap->setNumber(
+                    $this->laps[count($this->laps)-1]->getNumber()
+                    +
+                    1
+                );
             }
         }
 
