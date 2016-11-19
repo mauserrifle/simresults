@@ -54,8 +54,10 @@ class ParticipantSpec extends ObjectBehavior
         $this->beConstructedWith($helper);
         $this->setLaps(array($lap1, $lap2));
 
-        $helper->sortLapsByTime(array($lap1, $lap2))->shouldBeCalled();
-        $this->getLapsSortedByTime();
+        $helper->sortLapsByTime(array($lap1, $lap2))
+               ->willReturn([$lap2, $lap1]);
+
+        $this->getLapsSortedByTime()->shouldReturn([$lap2, $lap1]);
     }
 
     function it_counts_number_of_laps(Lap $lap1, Lap $lap2, Lap $lap3)
@@ -153,8 +155,9 @@ class ParticipantSpec extends ObjectBehavior
         $this->beConstructedWith($helper);
         $this->setLaps(array($lap1, $lap2));
 
-        $helper->sortLapsBySector(array($lap1, $lap2), 2)->shouldBeCalled();
-        $this->getLapsSortedBySector(2);
+        $helper->sortLapsBySector([$lap1, $lap2], 2)
+               ->willReturn([$lap2, $lap1]);
+        $this->getLapsSortedBySector(2)->shouldReturn([$lap2, $lap1]);
     }
 
     function it_has_best_lap_by_sector(
