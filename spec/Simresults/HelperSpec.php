@@ -12,7 +12,7 @@ class HelperSpec extends ObjectBehavior
 {
     function it_is_initializable()
     {
-        $this->shouldHaveType(Helper::class);
+        $this->shouldHaveType('Simresults\Helper');
     }
 
     function it_formats_time()
@@ -77,31 +77,32 @@ class HelperSpec extends ObjectBehavior
     	$part3->getConsistency()->willReturn(1.79);
     	$part4->getConsistency()->willReturn(null);
 
-    	$this->sortParticipantsByConsistency([$part1, $part2, $part3, $part4])
-    	     ->shouldReturn([$part2, $part3, $part1, $part4]);
+    	$this->sortParticipantsByConsistency(array($part1, $part2,
+                                                   $part3, $part4))
+    	     ->shouldReturn(array($part2, $part3, $part1, $part4));
     }
 
     function it_sorts_laps_by_time()
     {
-    	$lap1 = (new Lap)->setTime(155.730);
+    	$lap1 = new Lap; $lap1->setTime(155.730);
     	$lap2 = new Lap;
-    	$lap3 = (new Lap)->setTime(128.211);
-    	$lap4 = (new Lap)->setTime(128.211);
-    	$lap5 = (new Lap)->setTime(128.730);
+    	$lap3 = new Lap; $lap3->setTime(128.211);
+    	$lap4 = new Lap; $lap4->setTime(128.211);
+    	$lap5 = new Lap; $lap5->setTime(128.730);
 
-        $this->sortLapsByTime([$lap1, $lap2, $lap3, $lap4, $lap5])
-             ->shouldReturn([$lap4, $lap3, $lap5, $lap1, $lap2]);
+        $this->sortLapsByTime(array($lap1, $lap2, $lap3, $lap4, $lap5))
+             ->shouldReturn(array($lap4, $lap3, $lap5, $lap1, $lap2));
     }
 
     function it_sorts_laps_by_sector()
     {
-    	$lap1 = (new Lap)->setSectorTimes([20.20]);
+    	$lap1 = new Lap; $lap1->setSectorTimes(array(20.20));
     	$lap2 = new Lap;
-    	$lap3 = (new Lap)->setSectorTimes([20.10]);
-    	$lap4 = (new Lap)->setSectorTimes([20.10]);
-    	$lap5 = (new Lap)->setSectorTimes([23.50]);
+    	$lap3 = new Lap; $lap3->setSectorTimes(array(20.10));
+    	$lap4 = new Lap; $lap4->setSectorTimes(array(20.10));
+    	$lap5 = new Lap; $lap5->setSectorTimes(array(23.50));
 
-        $this->sortLapsBySector([$lap1, $lap2, $lap3, $lap4, $lap5], 1)
-             ->shouldReturn([$lap4, $lap3, $lap1, $lap5, $lap2]);
+        $this->sortLapsBySector(array($lap1, $lap2, $lap3, $lap4, $lap5), 1)
+             ->shouldReturn(array($lap4, $lap3, $lap1, $lap5, $lap2));
     }
 }

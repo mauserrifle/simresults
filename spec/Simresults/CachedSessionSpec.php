@@ -20,7 +20,7 @@ class CachedSessionSpec extends ObjectBehavior
 {
     function it_is_initializable()
     {
-        $this->shouldHaveType(CachedSession::class);
+        $this->shouldHaveType('Simresults\CachedSession');
     }
 
     function it_splits_sessions_by_vehicle_class_without_cache_conflicts(
@@ -33,15 +33,15 @@ class CachedSessionSpec extends ObjectBehavior
     	$vehicle3->getClass()->willReturn(null);
 
     	$part1->getVehicle()->willReturn($vehicle1);
-    	$part1->getLaps()->willReturn([new Lap]);
+    	$part1->getLaps()->willReturn(array(new Lap));
 
     	$part2->getVehicle()->willReturn($vehicle2);
-    	$part2->getLaps()->willReturn([new Lap]);
+    	$part2->getLaps()->willReturn(array(new Lap));
 
     	$part3->getVehicle()->willReturn($vehicle3);
-    	$part3->getLaps()->willReturn([new Lap]);
+    	$part3->getLaps()->willReturn(array(new Lap));
 
-    	$this->setParticipants([$part1, $part2, $part3]);
+    	$this->setParticipants(array($part1, $part2, $part3));
 
     	// Get sorted laps already. Will use lateron to check cache
     	// invalidation

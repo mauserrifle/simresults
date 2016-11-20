@@ -10,7 +10,7 @@ class TrackSpec extends ObjectBehavior
 {
     function it_is_initializable()
     {
-        $this->shouldHaveType(Track::class);
+        $this->shouldHaveType('Simresults\Track');
     }
 
     function it_returns_friendly_name_using_venue_course_event()

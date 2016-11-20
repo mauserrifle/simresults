@@ -12,7 +12,7 @@ class LapSpec extends ObjectBehavior
 {
     function it_is_initializable()
     {
-        $this->shouldHaveType(Lap::class);
+        $this->shouldHaveType('Simresults\Lap');
     }
 
     function it_can_cast_to_string()

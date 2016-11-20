@@ -14,7 +14,7 @@ class ParticipantSpec extends ObjectBehavior
 {
     function it_is_initializable()
     {
-        $this->shouldHaveType(Participant::class);
+        $this->shouldHaveType('Simresults\Participant');
     }
 
     function it_has_vehicle_or_multiple_vehicles_from_laps()
@@ -55,14 +55,14 @@ class ParticipantSpec extends ObjectBehavior
         $this->setLaps(array($lap1, $lap2));
 
         $helper->sortLapsByTime(array($lap1, $lap2))
-               ->willReturn([$lap2, $lap1]);
+               ->willReturn(array($lap2, $lap1));
 
-        $this->getLapsSortedByTime()->shouldReturn([$lap2, $lap1]);
+        $this->getLapsSortedByTime()->shouldReturn(array($lap2, $lap1));
     }
 
     function it_counts_number_of_laps(Lap $lap1, Lap $lap2, Lap $lap3)
     {
-        $this->setLaps([$lap1, $lap2, $lap3]);
+        $this->setLaps(array($lap1, $lap2, $lap3));
         $this->getNumberOfLaps()->shouldReturn(3);
 
         $lap3->isCompleted()->willReturn(true);
@@ -72,10 +72,10 @@ class ParticipantSpec extends ObjectBehavior
     function it_has_best_lap(Helper $helper, Lap $lap1, Lap $lap2, Lap $lap3)
     {
         $this->beConstructedWith($helper);
-        $this->setLaps([$lap1, $lap2, $lap3]);
+        $this->setLaps(array($lap1, $lap2, $lap3));
 
-        $helper->sortLapsByTime([$lap1, $lap2, $lap3])
-               ->willReturn([$lap2, $lap1, $lap3]);
+        $helper->sortLapsByTime(array($lap1, $lap2, $lap3))
+               ->willReturn(array($lap2, $lap1, $lap3));
 
         // No best lap when all laps are not completed
         $this->getBestLap()->shouldReturn(null);
@@ -142,9 +142,9 @@ class ParticipantSpec extends ObjectBehavior
         // leadng participant
         $participant4->getTotalTime()->willReturn(1673.2322);
         $participant4->getNumberOfLaps()->willReturn(3);
-        $participant4->getLap(3)->willReturn(
-            (new Lap)->setTime(621.1234)
-        );
+
+        $lap = new Lap; $lap->setTime(621.1234);
+        $participant4->getLap(3)->willReturn($lap);
 
         // Test (1673.2322 - 1250.2322  - 621.1234)
         $this->getTotalTimeGap($participant4)->shouldReturn(-198.1234);
@@ -155,9 +155,9 @@ class ParticipantSpec extends ObjectBehavior
         $this->beConstructedWith($helper);
         $this->setLaps(array($lap1, $lap2));
 
-        $helper->sortLapsBySector([$lap1, $lap2], 2)
-               ->willReturn([$lap2, $lap1]);
-        $this->getLapsSortedBySector(2)->shouldReturn([$lap2, $lap1]);
+        $helper->sortLapsBySector(array($lap1, $lap2), 2)
+               ->willReturn(array($lap2, $lap1));
+        $this->getLapsSortedBySector(2)->shouldReturn(array($lap2, $lap1));
     }
 
     function it_has_best_lap_by_sector(
@@ -166,8 +166,8 @@ class ParticipantSpec extends ObjectBehavior
         $this->beConstructedWith($helper);
         $this->setLaps(array($lap1, $lap2, $lap3));
 
-        $helper->sortLapsBySector([$lap1, $lap2, $lap3], 2)
-               ->willReturn([$lap2, $lap3, $lap1]);
+        $helper->sortLapsBySector(array($lap1, $lap2, $lap3), 2)
+               ->willReturn(array($lap2, $lap3, $lap1));
 
         $this->getBestLapBySector(2)->shouldReturn($lap2);
     }
@@ -190,7 +190,7 @@ class ParticipantSpec extends ObjectBehavior
     public function it_returns_driver_by_number(
         Driver $driver1, Driver $driver2)
     {
-        $this->setDrivers([$driver1, $driver2]);
+        $this->setDrivers(array($driver1, $driver2));
 
         $this->getDriver()->shouldReturn($driver1);
         $this->getDriver(1)->shouldReturn($driver1);
@@ -204,8 +204,8 @@ class ParticipantSpec extends ObjectBehavior
         $lap2->getDriver()->willReturn($driver1);
         $lap3->getDriver()->willReturn($driver2);
 
-        $this->setDrivers([$driver1, $driver2]);
-        $this->setLaps([$lap1, $lap2, $lap3]);
+        $this->setDrivers(array($driver1, $driver2));
+        $this->setLaps(array($lap1, $lap2, $lap3));
 
         $this->getDriverPercentage($driver1)->shouldReturn(66.67);
         $this->getDriverPercentage($driver2)->shouldReturn(33.33);
@@ -217,40 +217,41 @@ class ParticipantSpec extends ObjectBehavior
         $lap2->getPosition()->willReturn(1);
         $lap3->getPosition()->willReturn(1);
 
-        $this->setLaps([$lap1, $lap2, $lap3]);
+        $this->setLaps(array($lap1, $lap2, $lap3));
         $this->getNumberOfLapsLed()->shouldReturn(2);
     }
 
     function it_has_aids(Lap $lap1, Lap $lap2, Lap $lap3)
     {
-        $lap1->getAids()->willReturn(['PlayerControl' => null, 'TC' => 3]);
-        $lap2->getAids()->willReturn(['TC' => 3]);
-        $lap3->getAids()->willReturn(['AutoShift' => 3]);
+        $lap1->getAids()->willReturn(array('PlayerControl' => null, 'TC' => 3));
+        $lap2->getAids()->willReturn(array('TC' => 3));
+        $lap3->getAids()->willReturn(array('AutoShift' => 3));
 
-        $this->setLaps([$lap1, $lap2, $lap3]);
+        $this->setLaps(array($lap1, $lap2, $lap3));
         $this->getAids()->shouldReturn(
-            ['PlayerControl' => null, 'TC' => 3, 'AutoShift' => 3]);
+            array('PlayerControl' => null, 'TC' => 3, 'AutoShift' => 3));
     }
 
     function it_calculates_an_average_lap()
     {
         // No average on missing data
         $this->getAverageLap()->shouldReturn(null);
-        $this->addLap((new Lap)->setSectorTimes([14]))
+        $lap = new Lap; $lap->setSectorTimes(array(14));
+        $this->addLap($lap)
              ->getAverageLap()->shouldReturn(null);
 
-        $this->setLaps([]); // Reset
-        $this->addLap((new Lap)->setSectorTimes([40.201, 33.500, 54.510]))
-             ->addLap((new Lap)->setSectorTimes([49.601, 48.200, 57.929])
-                               ->setPitLap(true))
-             ->addLap((new Lap)->setSectorTimes([41.601, 40.200, 49.929]))
-             ->addLap(new Lap);
+        $this->setLaps(array()); // Reset
+        $lap1 = new Lap; $lap1->setSectorTimes(array(40.201, 33.500, 54.510));
+        $lap2 = new Lap; $lap2->setSectorTimes(array(49.601, 48.200, 57.929))
+                              ->setPitLap(true);
+        $lap3 = new Lap; $lap3->setSectorTimes(array(41.601, 40.200, 49.929));
+        $this->setLaps(array($lap1, $lap2, $lap3, new Lap));
 
 
         // Complete average
         $average = $this->getAverageLap();
         $average->getTime()->shouldReturn(138.557);
-        $average->getSectorTimes()->shouldReturn([43.801, 40.6333, 54.1227]);
+        $average->getSectorTimes()->shouldReturn(array(43.801, 40.6333, 54.1227));
         $average->getNumber()->shouldReturn(null);
         $average->getPosition()->shouldReturn(null);
         $average->getElapsedSeconds()->shouldReturn(null);
@@ -259,25 +260,26 @@ class ParticipantSpec extends ObjectBehavior
         // Without pit sectors (Sector 3 of pit lap and sector 1 of next lap)
         $average = $this->getAverageLap($exclude_pitstop_sectors=true);
         $average->getTime()->shouldReturn(137.7538);
-        $average->getSectorTimes()->shouldReturn([44.901, 40.6333, 52.2195]);
+        $average->getSectorTimes()->shouldReturn(array(44.901, 40.6333, 52.2195));
     }
 
     function it_calculates_best_possible_lap()
     {
         // No best on missing data
         $this->getBestPossibleLap()->shouldReturn(null);
-        $this->addLap((new Lap)->setSectorTimes([14]))
+        $lap = new Lap; $lap->setSectorTimes(array(14));
+        $this->addLap($lap)
              ->getBestPossibleLap()->shouldReturn(null);
 
-        $this->setLaps([]); // Reset
-        $this->addLap((new Lap)->setSectorTimes([40.201, 33.500, 54.510]))
-             ->addLap((new Lap)->setSectorTimes([49.601, 48.200, 57.929]))
-             ->addLap((new Lap)->setSectorTimes([41.601, 40.200, 49.929]))
-             ->addLap(new Lap);
+        $this->setLaps(array()); // Reset
+        $lap1 = new Lap; $lap1->setSectorTimes(array(40.201, 33.500, 54.510));
+        $lap2 = new Lap; $lap2->setSectorTimes(array(49.601, 48.200, 57.929));
+        $lap3 = new Lap; $lap3->setSectorTimes(array(41.601, 40.200, 49.929));
+        $this->setLaps(array($lap1, $lap2, $lap3, new Lap));
 
         $best = $this->getBestPossibleLap();
         $best->getTime()->shouldReturn(123.63);
-        $best->getSectorTimes()->shouldReturn([40.201, 33.500, 49.929]);
+        $best->getSectorTimes()->shouldReturn(array(40.201, 33.500, 49.929));
         $best->getNumber()->shouldReturn(null);
         $best->getPosition()->shouldReturn(null);
         $best->getElapsedSeconds()->shouldReturn(null);
@@ -295,27 +297,20 @@ class ParticipantSpec extends ObjectBehavior
         $this->getConsistencyPercentage(false)->shouldReturn(null);
 
         // No devision by zero error on 1 normal and 1 pit lap
-        $this->addLap((new Lap)->setTime(125.211))
-             ->addLap((new Lap)->setTime(128.211)->setPitLap(true))
+        $lap1 = new Lap; $lap1->setTime(125.211);
+        $lap2 = new Lap; $lap2->setTime(128.211)->setPitLap(true);
+        $this->setLaps(array($lap1, $lap2))
              ->getConsistency(false)->shouldReturn(null);
 
-        // Main testing
-        $this->setLaps([]);
-        $this->addLap((new Lap)->setTime(155.73))
+        $lap1 = new Lap; $lap1->setTime(155.73);
+        $lap2 = new Lap; $lap2->setTime(152.211); // Second is the best lap
+        $lap3 = new Lap; $lap3->setTime(158.73);
 
-              // Second is the best lap
-             ->addLap((new Lap)->setTime(152.211))
+        //-- Laps below should be ignored
+        $lap4 = new Lap; $lap4->setTime(152.211+21); // +21s of best lap
+        $lap5 = new Lap; $lap5->setTime(161.731)->setPitLap(true);
 
-             ->addLap((new Lap)->setTime(158.73))
-
-             //-- Laps below should be ignored
-
-             // Slow lap (exactly +21s of best lap)
-             ->addLap((new Lap)->setTime(152.211+21))
-
-             ->addLap((new Lap)->setTime(161.73)->setPitLap(true))
-             ->addLap(new Lap)
-             ;
+        $this->setLaps(array($lap1, $lap2, $lap3, $lap4, $lap5, new Lap));
 
         $this->getConsistency(false)->shouldReturn(5.019);
         $this->getConsistencyPercentage(false)->shouldReturn(96.70);
