@@ -22,13 +22,13 @@ class TrackSpec extends ObjectBehavior
                                                         // errors that
                                                         // previously occured
         $this->getFriendlyName()->shouldReturn(
-        	'Sebring [Virtua_LM], Sebring 12h Course ( /1 # `');
+            'Sebring [Virtua_LM], Sebring 12h Course ( /1 # `');
 
         // Change event name
         $this->setEvent('12h Alternative course');
 
         $this->getFriendlyName() ->shouldReturn(
-        	'Sebring [Virtua_LM], Sebring 12h Course ( /1 # ` '.
-        	'(12h Alternative course)');
+            'Sebring [Virtua_LM], Sebring 12h Course ( /1 # ` '.
+            '(12h Alternative course)');
     }
 }

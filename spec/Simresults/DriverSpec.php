@@ -15,10 +15,10 @@ class DriverSpec extends ObjectBehavior
 
     function it_can_return_ai_driver_name()
     {
-    	$this->setName('mauserrifle')->setHuman(false);
-    	$this->getNameWithAiMention()->shouldReturn('mauserrifle (AI)');
+        $this->setName('mauserrifle')->setHuman(false);
+        $this->getNameWithAiMention()->shouldReturn('mauserrifle (AI)');
 
-    	$this->setHuman(true);
-    	$this->getNameWithAiMention()->shouldReturn('mauserrifle');
+        $this->setHuman(true);
+        $this->getNameWithAiMention()->shouldReturn('mauserrifle');
     }
 }

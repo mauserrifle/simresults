@@ -45,17 +45,17 @@ class HelperSpec extends ObjectBehavior
 
     function it_converts_time_strings_to_seconds()
     {
-    	$this->secondsfromformattedtime('01:40.5279')
-    	     ->shouldReturn(100.5279);
-    	$this->secondsfromformattedtime('01:31:56.5879')
-    	     ->shouldReturn(5516.5879);
-    	$this->secondsfromformattedtime('02:03:506', true)
-    	     ->shouldReturn(123.506);
-    	$this->secondsfromformattedtime('01:02:03:506', true)
-    	     ->shouldReturn(3723.506);
+        $this->secondsfromformattedtime('01:40.5279')
+             ->shouldReturn(100.5279);
+        $this->secondsfromformattedtime('01:31:56.5879')
+             ->shouldReturn(5516.5879);
+        $this->secondsfromformattedtime('02:03:506', true)
+             ->shouldReturn(123.506);
+        $this->secondsfromformattedtime('01:02:03:506', true)
+             ->shouldReturn(3723.506);
 
-    	$this->shouldThrow('InvalidArgumentException')
-    	     ->duringSecondsfromformattedtime('40.5279');
+        $this->shouldThrow('InvalidArgumentException')
+             ->duringSecondsfromformattedtime('40.5279');
     }
 
     function it_can_get_values_from_arrays()
@@ -69,26 +69,26 @@ class HelperSpec extends ObjectBehavior
     }
 
     function it_sorts_participants_by_consistency(
-    	Participant $part1, Participant $part2,
-    	Participant $part3, Participant $part4)
+        Participant $part1, Participant $part2,
+        Participant $part3, Participant $part4)
     {
-    	$part1->getConsistency()->willReturn(1.8);
-    	$part2->getConsistency()->willReturn(1.3);
-    	$part3->getConsistency()->willReturn(1.79);
-    	$part4->getConsistency()->willReturn(null);
+        $part1->getConsistency()->willReturn(1.8);
+        $part2->getConsistency()->willReturn(1.3);
+        $part3->getConsistency()->willReturn(1.79);
+        $part4->getConsistency()->willReturn(null);
 
-    	$this->sortParticipantsByConsistency(array($part1, $part2,
+        $this->sortParticipantsByConsistency(array($part1, $part2,
                                                    $part3, $part4))
-    	     ->shouldReturn(array($part2, $part3, $part1, $part4));
+             ->shouldReturn(array($part2, $part3, $part1, $part4));
     }
 
     function it_sorts_laps_by_time()
     {
-    	$lap1 = new Lap; $lap1->setTime(155.730);
-    	$lap2 = new Lap;
-    	$lap3 = new Lap; $lap3->setTime(128.211);
-    	$lap4 = new Lap; $lap4->setTime(128.211);
-    	$lap5 = new Lap; $lap5->setTime(128.730);
+        $lap1 = new Lap; $lap1->setTime(155.730);
+        $lap2 = new Lap;
+        $lap3 = new Lap; $lap3->setTime(128.211);
+        $lap4 = new Lap; $lap4->setTime(128.211);
+        $lap5 = new Lap; $lap5->setTime(128.730);
 
         $this->sortLapsByTime(array($lap1, $lap2, $lap3, $lap4, $lap5))
              ->shouldReturn(array($lap4, $lap3, $lap5, $lap1, $lap2));
@@ -96,11 +96,11 @@ class HelperSpec extends ObjectBehavior
 
     function it_sorts_laps_by_sector()
     {
-    	$lap1 = new Lap; $lap1->setSectorTimes(array(20.20));
-    	$lap2 = new Lap;
-    	$lap3 = new Lap; $lap3->setSectorTimes(array(20.10));
-    	$lap4 = new Lap; $lap4->setSectorTimes(array(20.10));
-    	$lap5 = new Lap; $lap5->setSectorTimes(array(23.50));
+        $lap1 = new Lap; $lap1->setSectorTimes(array(20.20));
+        $lap2 = new Lap;
+        $lap3 = new Lap; $lap3->setSectorTimes(array(20.10));
+        $lap4 = new Lap; $lap4->setSectorTimes(array(20.10));
+        $lap5 = new Lap; $lap5->setSectorTimes(array(23.50));
 
         $this->sortLapsBySector(array($lap1, $lap2, $lap3, $lap4, $lap5), 1)
              ->shouldReturn(array($lap4, $lap3, $lap1, $lap5, $lap2));

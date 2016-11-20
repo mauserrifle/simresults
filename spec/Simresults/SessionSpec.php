@@ -21,182 +21,182 @@ class SessionSpec extends ObjectBehavior
 
     function it_lasted_laps(Participant $part1, Participant $part2)
     {
-    	$part1->getNumberOfLaps()->willReturn(3);
-    	$part2->getNumberOfLaps()->willReturn(4);
+        $part1->getNumberOfLaps()->willReturn(3);
+        $part2->getNumberOfLaps()->willReturn(4);
 
-    	$this->setParticipants(array($part1, $part2));
-    	$this->getLastedLaps()->shouldReturn(4);
+        $this->setParticipants(array($part1, $part2));
+        $this->getLastedLaps()->shouldReturn(4);
     }
 
     function it_sorts_laps_by_time(
-    	Helper $helper, Participant $part1, Participant $part2)
+        Helper $helper, Participant $part1, Participant $part2)
     {
         $this->beConstructedWith($helper);
 
-   		$part1_laps = array(new Lap, new Lap);
-    	$part1->getLaps()->willReturn($part1_laps);
-   		$part2_laps = array(new Lap, new Lap);
-    	$part2->getLaps()->willReturn($part2_laps);
+           $part1_laps = array(new Lap, new Lap);
+        $part1->getLaps()->willReturn($part1_laps);
+           $part2_laps = array(new Lap, new Lap);
+        $part2->getLaps()->willReturn($part2_laps);
 
-    	$this->setParticipants(array($part1, $part2));
+        $this->setParticipants(array($part1, $part2));
 
-    	$expect = array_merge($part2_laps, $part1_laps);
-    	$helper->sortLapsByTime(array_merge($part1_laps, $part2_laps))
-    	       ->willReturn($expect);
-    	$this->getLapsSortedByTime()->shouldReturn($expect);
+        $expect = array_merge($part2_laps, $part1_laps);
+        $helper->sortLapsByTime(array_merge($part1_laps, $part2_laps))
+               ->willReturn($expect);
+        $this->getLapsSortedByTime()->shouldReturn($expect);
     }
 
     function it_sorts_laps_by_number(
-    	Helper $helper, Participant $part1, Participant $part2)
+        Helper $helper, Participant $part1, Participant $part2)
     {
         $this->beConstructedWith($helper);
 
-    	$part1->getLap(2)->willReturn($lap1 = new Lap);
-    	$part2->getLap(2)->willReturn($lap2 = new Lap);
+        $part1->getLap(2)->willReturn($lap1 = new Lap);
+        $part2->getLap(2)->willReturn($lap2 = new Lap);
 
-    	$this->setParticipants(array($part1, $part2));
+        $this->setParticipants(array($part1, $part2));
 
-    	$expect = array($lap2, $lap1);
-    	$helper->sortLapsByTime(array($lap1, $lap2))
-    	       ->willReturn($expect);
-    	$this->getLapsByLapNumberSortedByTime(2)->shouldReturn($expect);
+        $expect = array($lap2, $lap1);
+        $helper->sortLapsByTime(array($lap1, $lap2))
+               ->willReturn($expect);
+        $this->getLapsByLapNumberSortedByTime(2)->shouldReturn($expect);
     }
 
     function it_has_best_laps_grouped_by_participant(
-    	Helper $helper, Participant $part1, Participant $part2)
+        Helper $helper, Participant $part1, Participant $part2)
     {
         $this->beConstructedWith($helper);
 
-    	$part1->getBestLap()->willReturn($lap1 = new Lap);
-    	$part2->getBestLap()->willReturn($lap2 = new Lap);
+        $part1->getBestLap()->willReturn($lap1 = new Lap);
+        $part2->getBestLap()->willReturn($lap2 = new Lap);
 
-    	$this->setParticipants(array($part1, $part2));
+        $this->setParticipants(array($part1, $part2));
 
-    	$expect = array($lap2, $lap1);
-    	$helper->sortLapsByTime(array($lap1, $lap2))
-    	       ->willReturn($expect);
-    	$this->getBestLapsGroupedByParticipant()->shouldReturn($expect);
+        $expect = array($lap2, $lap1);
+        $helper->sortLapsByTime(array($lap1, $lap2))
+               ->willReturn($expect);
+        $this->getBestLapsGroupedByParticipant()->shouldReturn($expect);
     }
 
     function it_has_best_lap(Participant $part1, Participant $part2)
     {
-    	$this->getBestLap()->shouldReturn(null);
+        $this->getBestLap()->shouldReturn(null);
 
-    	$this->setParticipants(array($part1, $part2));
+        $this->setParticipants(array($part1, $part2));
 
-    	$part1->getLaps()->willReturn(array(new Lap));
-    	$part2->getLaps()->willReturn(array());
+        $part1->getLaps()->willReturn(array(new Lap));
+        $part2->getLaps()->willReturn(array());
 
-    	$this->getBestLap()->shouldReturn(null);
+        $this->getBestLap()->shouldReturn(null);
 
-    	$lap1 = new Lap; $lap1->setTime(30);
-    	$lap2 = new Lap; $lap2->setTime(20.99);
-    	$lap3 = new Lap; $lap3->setTime(60);
+        $lap1 = new Lap; $lap1->setTime(30);
+        $lap2 = new Lap; $lap2->setTime(20.99);
+        $lap3 = new Lap; $lap3->setTime(60);
 
-    	$part1->getLaps()->willReturn(array($lap1, $lap2));
-    	$part2->getLaps()->willReturn(array($lap3));
+        $part1->getLaps()->willReturn(array($lap1, $lap2));
+        $part2->getLaps()->willReturn(array($lap3));
 
 
-    	$this->getBestLap()->shouldReturn($lap2);
+        $this->getBestLap()->shouldReturn($lap2);
     }
 
     function it_has_bad_laps(Participant $part1, Participant $part2)
     {
-    	$this->getBadLaps()->shouldReturn(array());
+        $this->getBadLaps()->shouldReturn(array());
 
-    	$lap1 = new Lap; $lap1->setTime(30);
-    	$lap2 = new Lap; $lap2->setTime(20.99);
-    	$lap3 = new Lap; $lap3->setTime(60);
-    	$lap4 = new Lap; $lap4->setTime(23);
+        $lap1 = new Lap; $lap1->setTime(30);
+        $lap2 = new Lap; $lap2->setTime(20.99);
+        $lap3 = new Lap; $lap3->setTime(60);
+        $lap4 = new Lap; $lap4->setTime(23);
 
-    	$part1->getLaps()->willReturn(array($lap1, $lap2));
-    	$part2->getLaps()->willReturn(array($lap3, $lap4));
+        $part1->getLaps()->willReturn(array($lap1, $lap2));
+        $part2->getLaps()->willReturn(array($lap3, $lap4));
 
-    	$this->setParticipants(array($part1, $part2));
+        $this->setParticipants(array($part1, $part2));
 
-    	// Default 107%
-    	$this->getBadLaps()->shouldReturn(array($lap4, $lap1, $lap3));
+        // Default 107%
+        $this->getBadLaps()->shouldReturn(array($lap4, $lap1, $lap3));
 
-    	// Different percentage than default
-    	$this->getBadLaps(285)->shouldReturn(array($lap3));
-    	$this->getBadLaps(286)->shouldReturn(array());
+        // Different percentage than default
+        $this->getBadLaps(285)->shouldReturn(array($lap3));
+        $this->getBadLaps(286)->shouldReturn(array());
     }
 
     function it_has_ledmost_participant(Participant $part1, Participant $part2)
     {
-    	$this->getLedMostParticipant()->shouldReturn(null);
+        $this->getLedMostParticipant()->shouldReturn(null);
 
-    	$part1->getNumberOfLaps()->willReturn(3);
-    	$part1->getNumberOfLapsLed()->willReturn(1);
-    	$part2->getNumberOfLaps()->willReturn(4);
-    	$part2->getNumberOfLapsLed()->willReturn(3);
+        $part1->getNumberOfLaps()->willReturn(3);
+        $part1->getNumberOfLapsLed()->willReturn(1);
+        $part2->getNumberOfLaps()->willReturn(4);
+        $part2->getNumberOfLapsLed()->willReturn(3);
 
-    	$this->setParticipants(array($part1, $part2));
-    	$this->getLedMostParticipant()->shouldReturn($part2);
+        $this->setParticipants(array($part1, $part2));
+        $this->getLedMostParticipant()->shouldReturn($part2);
     }
 
     function it_has_winning_participant(Participant $part1, Participant $part2)
     {
-    	$this->getWinningParticipant()->shouldReturn(null);
+        $this->getWinningParticipant()->shouldReturn(null);
 
-    	$this->setParticipants(array($part1, $part2));
-    	$this->getWinningParticipant()->shouldReturn($part1);
+        $this->setParticipants(array($part1, $part2));
+        $this->getWinningParticipant()->shouldReturn($part1);
     }
 
     function it_has_leading_participant_by_lap_number(
-    	Participant $part1, Participant $part2, Lap $lap1, Lap $lap2)
+        Participant $part1, Participant $part2, Lap $lap1, Lap $lap2)
     {
-    	$this->getLeadingParticipant(3)->shouldReturn(null);
+        $this->getLeadingParticipant(3)->shouldReturn(null);
 
-    	$lap1->getPosition()->willReturn(2);
-    	$lap2->getPosition()->willReturn(1);
+        $lap1->getPosition()->willReturn(2);
+        $lap2->getPosition()->willReturn(1);
 
-    	$part1->getLap(3)->willReturn($lap1);
-    	$part2->getLap(3)->willReturn($lap2);
+        $part1->getLap(3)->willReturn($lap1);
+        $part2->getLap(3)->willReturn($lap2);
 
-    	$this->setParticipants(array($part1, $part2));
+        $this->setParticipants(array($part1, $part2));
 
-    	$this->getLeadingParticipant(3)->shouldReturn($part2);
+        $this->getLeadingParticipant(3)->shouldReturn($part2);
     }
 
     function it_has_leading_participant_by_elapsed_time(
-    	Participant $part1, Participant $part2, Participant $part3,
-    	Lap $lap1,Lap $lap2,Lap $lap3)
+        Participant $part1, Participant $part2, Participant $part3,
+        Lap $lap1,Lap $lap2,Lap $lap3)
     {
-    	$this->getLeadingParticipantByElapsedTime(3)->shouldReturn(null);
+        $this->getLeadingParticipantByElapsedTime(3)->shouldReturn(null);
 
-    	$lap1->getElapsedSeconds()->willReturn(23);
-    	$lap2->getElapsedSeconds()->willReturn(20);
-    	$lap3->getElapsedSeconds()->willReturn(null);
+        $lap1->getElapsedSeconds()->willReturn(23);
+        $lap2->getElapsedSeconds()->willReturn(20);
+        $lap3->getElapsedSeconds()->willReturn(null);
 
-    	$lap2->getParticipant()->willReturn($part2);
+        $lap2->getParticipant()->willReturn($part2);
 
-    	$part1->getLap(3)->willReturn($lap1);
-    	$part2->getLap(3)->willReturn($lap2);
-    	$part3->getLap(3)->willReturn($lap3);
+        $part1->getLap(3)->willReturn($lap1);
+        $part2->getLap(3)->willReturn($lap2);
+        $part3->getLap(3)->willReturn($lap3);
 
-    	$this->setParticipants(array($part1, $part2, $part3));
-    	$this->getLeadingParticipantByElapsedTime(3)->shouldReturn($part2);
+        $this->setParticipants(array($part1, $part2, $part3));
+        $this->getLeadingParticipantByElapsedTime(3)->shouldReturn($part2);
     }
 
     function it_has_max_position(
-    	Participant $part1, Participant $part2, Lap $lap1,Lap $lap2,Lap $lap3)
+        Participant $part1, Participant $part2, Lap $lap1,Lap $lap2,Lap $lap3)
     {
-    	$lap1->getPosition()->willReturn(1);
-    	$lap2->getPosition()->willReturn(7);
-    	$lap3->getPosition()->willReturn(3);
+        $lap1->getPosition()->willReturn(1);
+        $lap2->getPosition()->willReturn(7);
+        $lap3->getPosition()->willReturn(3);
 
-    	$part1->getLaps()->willReturn(array($lap1));
-    	$part2->getLaps()->willReturn(array($lap2, $lap3));
+        $part1->getLaps()->willReturn(array($lap1));
+        $part2->getLaps()->willReturn(array($lap2, $lap3));
 
-    	$this->setParticipants(array($part1, $part2));
+        $this->setParticipants(array($part1, $part2));
 
-    	$this->getMaxPosition()->shouldReturn(7);
+        $this->getMaxPosition()->shouldReturn(7);
     }
 
     function it_can_sort_laps_by_sector(
-    	Helper $helper, Participant $part1, Participant $part2,
-    	Lap $lap1, Lap $lap2, Lap $lap3)
+        Helper $helper, Participant $part1, Participant $part2,
+        Lap $lap1, Lap $lap2, Lap $lap3)
     {
         $this->beConstructedWith($helper);
 
@@ -229,25 +229,25 @@ class SessionSpec extends ObjectBehavior
     }
 
     function it_has_best_laps_by_sector_grouped_by_participant(
-    	Helper $helper, Participant $part1, Participant $part2)
+        Helper $helper, Participant $part1, Participant $part2)
     {
         $this->beConstructedWith($helper);
 
-    	$part1->getBestLapBySector(1)->willReturn($lap1 = new Lap);
-    	$part2->getBestLapBySector(1)->willReturn($lap2 = new Lap);
+        $part1->getBestLapBySector(1)->willReturn($lap1 = new Lap);
+        $part2->getBestLapBySector(1)->willReturn($lap2 = new Lap);
 
-    	$this->setParticipants(array($part1, $part2));
+        $this->setParticipants(array($part1, $part2));
 
-    	$expect = array($lap2, $lap1);
-    	$helper->sortLapsBySector(array($lap1, $lap2), 1)
-    	       ->willReturn($expect);
-    	$this->getBestLapsBySectorGroupedByParticipant(1)
-    	     ->shouldReturn($expect);
+        $expect = array($lap2, $lap1);
+        $helper->sortLapsBySector(array($lap1, $lap2), 1)
+               ->willReturn($expect);
+        $this->getBestLapsBySectorGroupedByParticipant(1)
+             ->shouldReturn($expect);
     }
 
     function it_can_sort_laps_by_sector_and_lap_number(
-    	Helper $helper, Participant $part1, Participant $part2,
-    	Lap $lap1, Lap $lap2)
+        Helper $helper, Participant $part1, Participant $part2,
+        Lap $lap1, Lap $lap2)
     {
         $this->beConstructedWith($helper);
 
@@ -264,8 +264,8 @@ class SessionSpec extends ObjectBehavior
     }
 
     function it_has_best_lap_by_lap_number(
-    	Helper $helper, Participant $part1, Participant $part2,
-    	Lap $lap1, Lap $lap2)
+        Helper $helper, Participant $part1, Participant $part2,
+        Lap $lap1, Lap $lap2)
     {
         $this->beConstructedWith($helper);
 
@@ -281,39 +281,39 @@ class SessionSpec extends ObjectBehavior
     }
 
     function it_has_incidents_for_review(
-    	Incident $incident1, Incident $incident2)
+        Incident $incident1, Incident $incident2)
     {
-    	$incident1->isForReview()->willReturn(false);
-    	$incident2->isForReview()->willReturn(true);
+        $incident1->isForReview()->willReturn(false);
+        $incident2->isForReview()->willReturn(true);
 
-    	$this->setIncidents(array($incident1, $incident2));
-    	$this->getIncidentsForReview()->shouldReturn(array($incident2));
+        $this->setIncidents(array($incident1, $incident2));
+        $this->getIncidentsForReview()->shouldReturn(array($incident2));
     }
 
     function it_splits_sessions_by_vehicle_class(
-    	Participant $part1, Participant $part2, Participant $part3,
-    	Vehicle $vehicle1, Vehicle $vehicle2, Vehicle $vehicle3)
+        Participant $part1, Participant $part2, Participant $part3,
+        Vehicle $vehicle1, Vehicle $vehicle2, Vehicle $vehicle3)
     {
 
-    	$vehicle1->getClass()->willReturn('A class');
-    	$vehicle2->getClass()->willReturn('Another class');
-    	$vehicle3->getClass()->willReturn(null);
+        $vehicle1->getClass()->willReturn('A class');
+        $vehicle2->getClass()->willReturn('Another class');
+        $vehicle3->getClass()->willReturn(null);
 
-    	$part1->getVehicle()->willReturn($vehicle1);
-    	$part2->getVehicle()->willReturn($vehicle2);
-    	$part3->getVehicle()->willReturn($vehicle3);
+        $part1->getVehicle()->willReturn($vehicle1);
+        $part2->getVehicle()->willReturn($vehicle2);
+        $part3->getVehicle()->willReturn($vehicle3);
 
-    	$this->setParticipants(array($part1, $part2, $part3));
+        $this->setParticipants(array($part1, $part2, $part3));
 
-    	$sessions = $this->splitByVehicleClass();
+        $sessions = $this->splitByVehicleClass();
 
-    	$sessions[0]->getParticipants()->shouldReturn(array($part3));
-    	$sessions[1]->getParticipants()->shouldReturn(array($part1));
-    	$sessions[2]->getParticipants()->shouldReturn(array($part2));
+        $sessions[0]->getParticipants()->shouldReturn(array($part3));
+        $sessions[1]->getParticipants()->shouldReturn(array($part1));
+        $sessions[2]->getParticipants()->shouldReturn(array($part2));
     }
 
     function it_can_sort_participants_by_consistency(
-    	Helper $helper, Participant $part1, Participant $part2)
+        Helper $helper, Participant $part1, Participant $part2)
     {
         $this->beConstructedWith($helper);
 
@@ -322,32 +322,32 @@ class SessionSpec extends ObjectBehavior
         $helper->sortParticipantsByConsistency(array($part1, $part2))
                ->willReturn(array($part2, $part1));
 
-    	$this->getParticipantsSortedByConsistency()
-    	     ->shouldReturn(array($part2, $part1));
+        $this->getParticipantsSortedByConsistency()
+             ->shouldReturn(array($part2, $part1));
     }
 
     function it_has_cuts(
-    	Participant $part1, Participant $part2,
-    	Cut $cut1, Cut $cut2, Cut $cut3,
-    	Lap $lap1, Lap $lap2)
+        Participant $part1, Participant $part2,
+        Cut $cut1, Cut $cut2, Cut $cut3,
+        Lap $lap1, Lap $lap2)
     {
-    	$date1 = new \DateTime; $date1->setTimestamp(time()-10);
-    	$date2 = new \DateTime; $date2->setTimestamp(time()-40);
-    	$date3 = new \DateTime; $date3->setTimestamp(time());
+        $date1 = new \DateTime; $date1->setTimestamp(time()-10);
+        $date2 = new \DateTime; $date2->setTimestamp(time()-40);
+        $date3 = new \DateTime; $date3->setTimestamp(time());
 
-    	$cut1->getDate()->willReturn($date1);
-    	$cut2->getDate()->willReturn($date2);
-    	$cut3->getDate()->willReturn($date3);
+        $cut1->getDate()->willReturn($date1);
+        $cut2->getDate()->willReturn($date2);
+        $cut3->getDate()->willReturn($date3);
 
-    	$lap1->getCuts()->willReturn(array($cut1));
-    	$lap2->getCuts()->willReturn(array($cut2, $cut3));
+        $lap1->getCuts()->willReturn(array($cut1));
+        $lap2->getCuts()->willReturn(array($cut2, $cut3));
 
-    	$part1->getLaps()->willReturn(array($lap1));
-    	$part2->getLaps()->willReturn(array($lap2));
+        $part1->getLaps()->willReturn(array($lap1));
+        $part2->getLaps()->willReturn(array($lap2));
 
-    	$this->setParticipants(array($part1, $part2));
+        $this->setParticipants(array($part1, $part2));
 
-    	$this->getCuts()->shouldReturn(array($cut2, $cut1, $cut3));
+        $this->getCuts()->shouldReturn(array($cut2, $cut1, $cut3));
     }
 
 
