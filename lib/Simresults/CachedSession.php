@@ -21,23 +21,13 @@ class CachedSession extends Session {
         parent::__construct($helper);
     }
 
-
     /**
      * {@inheritdoc}
      */
     public function getLapsSortedByTime()
     {
-        $cache_key = __METHOD__;
+        return $this->cache(__FUNCTION__, func_get_args());
 
-        if (null !== $value = $this->cache->get($cache_key))
-        {
-            return $this->cache->get($cache_key);
-        }
-
-        $result =  parent::getLapsSortedByTime();
-        $this->cache->put($cache_key, $result);
-
-        return $result;
     }
 
     /**
@@ -45,17 +35,7 @@ class CachedSession extends Session {
      */
     public function getLapsByLapNumberSortedByTime($lap_number)
     {
-        $cache_key = __METHOD__.'-'.$lap_number;
-
-        if (null !== $value = $this->cache->get($cache_key))
-        {
-            return $this->cache->get($cache_key);
-        }
-
-        $result =  parent::getLapsByLapNumberSortedByTime($lap_number);
-        $this->cache->put($cache_key, $result);
-
-        return $result;
+        return $this->cache(__FUNCTION__, func_get_args());
     }
 
     /**
@@ -63,17 +43,7 @@ class CachedSession extends Session {
      */
     public function getBestLapByLapNumber($lap_number)
     {
-        $cache_key = __METHOD__.'-'.$lap_number;
-
-        if (null !== $value = $this->cache->get($cache_key))
-        {
-            return $this->cache->get($cache_key);
-        }
-
-        $result =  parent::getBestLapByLapNumber($lap_number);
-        $this->cache->put($cache_key, $result);
-
-        return $result;
+        return $this->cache(__FUNCTION__, func_get_args());
     }
 
     /**
@@ -81,17 +51,7 @@ class CachedSession extends Session {
      */
     public function getBestLapsGroupedByParticipant()
     {
-        $cache_key = __METHOD__;
-
-        if (null !== $value = $this->cache->get($cache_key))
-        {
-            return $this->cache->get($cache_key);
-        }
-
-        $result =  parent::getBestLapsGroupedByParticipant();
-        $this->cache->put($cache_key, $result);
-
-        return $result;
+        return $this->cache(__FUNCTION__, func_get_args());
     }
 
     /**
@@ -99,17 +59,7 @@ class CachedSession extends Session {
      */
     public function getLapsSortedBySector($sector)
     {
-        $cache_key = __METHOD__.'-'.$sector;
-
-        if (null !== $value = $this->cache->get($cache_key))
-        {
-            return $this->cache->get($cache_key);
-        }
-
-        $result =  parent::getLapsSortedBySector($sector);
-        $this->cache->put($cache_key, $result);
-
-        return $result;
+        return $this->cache(__FUNCTION__, func_get_args());
     }
 
     /**
@@ -117,17 +67,7 @@ class CachedSession extends Session {
      */
     public function getBestLapsBySectorGroupedByParticipant($sector)
     {
-        $cache_key = __METHOD__.'-'.$sector;
-
-        if (null !== $value = $this->cache->get($cache_key))
-        {
-            return $this->cache->get($cache_key);
-        }
-
-        $result =  parent::getBestLapsBySectorGroupedByParticipant($sector);
-        $this->cache->put($cache_key, $result);
-
-        return $result;
+        return $this->cache(__FUNCTION__, func_get_args());
     }
 
     /**
@@ -135,17 +75,7 @@ class CachedSession extends Session {
      */
     public function getLapsSortedBySectorByLapNumber($sector, $lap_number)
     {
-        $cache_key = __METHOD__.'-'.$sector.'-'.$lap_number;
-
-        if (null !== $value = $this->cache->get($cache_key))
-        {
-            return $this->cache->get($cache_key);
-        }
-
-        $result = parent::getLapsSortedBySectorByLapNumber($sector, $lap_number);
-        $this->cache->put($cache_key, $result);
-
-        return $result;
+        return $this->cache(__FUNCTION__, func_get_args());
     }
 
     /**
@@ -153,17 +83,7 @@ class CachedSession extends Session {
      */
     public function getBestLapBySectorByLapNumber($sector, $lap_number)
     {
-        $cache_key = __METHOD__.'-'.$sector.'-'.$lap_number;
-
-        if (null !== $value = $this->cache->get($cache_key))
-        {
-            return $this->cache->get($cache_key);
-        }
-
-        $result = parent::getBestLapBySectorByLapNumber($sector, $lap_number);
-        $this->cache->put($cache_key, $result);
-
-        return $result;
+        return $this->cache(__FUNCTION__, func_get_args());
     }
 
     /**
@@ -171,17 +91,7 @@ class CachedSession extends Session {
      */
     public function getBadLaps($above_percent = 107)
     {
-        $cache_key = __METHOD__.'-'.$above_percent;
-
-        if (null !== $value = $this->cache->get($cache_key))
-        {
-            return $this->cache->get($cache_key);
-        }
-
-        $result =  parent::getBadLaps($above_percent);
-        $this->cache->put($cache_key, $result);
-
-        return $result;
+        return $this->cache(__FUNCTION__, func_get_args());
     }
 
     /**
@@ -189,17 +99,7 @@ class CachedSession extends Session {
      */
     public function getLedMostParticipant()
     {
-        $cache_key = __METHOD__;
-
-        if (null !== $value = $this->cache->get($cache_key))
-        {
-            return $this->cache->get($cache_key);
-        }
-
-        $result =  parent::getLedMostParticipant();
-        $this->cache->put($cache_key, $result);
-
-        return $result;
+        return $this->cache(__FUNCTION__, func_get_args());
     }
 
     /**
@@ -207,17 +107,7 @@ class CachedSession extends Session {
      */
     public function getLeadingParticipant($lap_number)
     {
-        $cache_key = __METHOD__.'-'.$lap_number;
-
-        if (null !== $value = $this->cache->get($cache_key))
-        {
-            return $this->cache->get($cache_key);
-        }
-
-        $result =  parent::getLeadingParticipant($lap_number);
-        $this->cache->put($cache_key, $result);
-
-        return $result;
+        return $this->cache(__FUNCTION__, func_get_args());
     }
 
     /**
@@ -225,17 +115,7 @@ class CachedSession extends Session {
      */
     public function getLeadingParticipantByElapsedTime($lap_number)
     {
-        $cache_key = __METHOD__.'-'.$lap_number;
-
-        if (null !== $value = $this->cache->get($cache_key))
-        {
-            return $this->cache->get($cache_key);
-        }
-
-        $result =  parent::getLeadingParticipantByElapsedTime($lap_number);
-        $this->cache->put($cache_key, $result);
-
-        return $result;
+        return $this->cache(__FUNCTION__, func_get_args());
     }
 
 
@@ -244,17 +124,7 @@ class CachedSession extends Session {
      */
     public function getLastedLaps()
     {
-        $cache_key = __METHOD__;
-
-        if (null !== $value = $this->cache->get($cache_key))
-        {
-            return $this->cache->get($cache_key);
-        }
-
-        $result =  parent::getLastedLaps();
-        $this->cache->put($cache_key, $result);
-
-        return $result;
+        return $this->cache(__FUNCTION__, func_get_args());
     }
 
     /**
@@ -262,17 +132,7 @@ class CachedSession extends Session {
      */
     public function getMaxPosition()
     {
-        $cache_key = __METHOD__;
-
-        if (null !== $value = $this->cache->get($cache_key))
-        {
-            return $this->cache->get($cache_key);
-        }
-
-        $result =  parent::getMaxPosition();
-        $this->cache->put($cache_key, $result);
-
-        return $result;
+        return $this->cache(__FUNCTION__, func_get_args());
     }
 
 
@@ -293,4 +153,27 @@ class CachedSession extends Session {
         $this->invalidateCache();
     }
 
+
+    /**
+     * @param  string $method
+     * @param  array  $args
+     * @return mixed
+     */
+    protected function cache($method, $args)
+    {
+        $cache_key = __CLASS__.'::'.$method;
+        if ($args) {
+            $cache_key .= '-'.implode('-', $args);
+        }
+
+        if (null !== $value = $this->cache->get($cache_key))
+        {
+            return $this->cache->get($cache_key);
+        }
+
+        $result =  call_user_func_array(array('parent', $method), $args);
+        $this->cache->put($cache_key, $result);
+
+        return $result;
+    }
 }
