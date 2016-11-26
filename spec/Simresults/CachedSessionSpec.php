@@ -11,14 +11,9 @@ use Simresults\Helper;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
-// require_once(__DIR__.'/SessionSpec.php');
-
-/**
- * @todo  Find a proper way to test cache invalidation so
- *        tests below that compare laps are not needed
- */
 class CachedSessionSpec extends ObjectBehavior
 {
+    protected $cache;
     protected $lap1;
     protected $part1;
 
@@ -29,6 +24,8 @@ class CachedSessionSpec extends ObjectBehavior
 
     function let(Cache $cache)
     {
+        $this->cache = $cache;
+
         $this->beConstructedWith(new Helper, $cache);
 
         $this->part1 = new Participant;
@@ -59,35 +56,32 @@ class CachedSessionSpec extends ObjectBehavior
      */
     function it_caches_sorted_laps_by_time(Cache $cache)
     {
-        $this->itCaches($cache, 'getLapsSortedByTime', array($this->lap1));
+        $this->itCaches('getLapsSortedByTime', array($this->lap1));
     }
 
     function it_retrieves_sorted_laps_by_time_from_cache(Cache $cache)
     {
-        $this->itGetsCache($cache, 'getLapsSortedByTime', array($this->lap1));
+        $this->itGetsCache('getLapsSortedByTime', array($this->lap1));
     }
 
     /**
      * getLapsByLapNumberSortedByTime
      */
-    function it_caches_laps_by_number_sorted_by_time(
-        Cache $cache)
+    function it_caches_laps_by_number_sorted_by_time(Cache $cache)
     {
-        $this->itCaches($cache, 'getLapsByLapNumberSortedByTime',
+        $this->itCaches('getLapsByLapNumberSortedByTime',
             array($this->lap1), array(1));
     }
-    function it_retrieves_laps_by_number_sorted_by_time_from_cache(
-        Cache $cache)
+    function it_retrieves_laps_by_number_sorted_by_time_from_cache(Cache $cache)
     {
-        $this->itGetsCache($cache, 'getLapsByLapNumberSortedByTime',
+        $this->itGetsCache('getLapsByLapNumberSortedByTime',
             array($this->lap1), array(1));
     }
 
     /**
      * getBestLapByLapNumber
      */
-    function it_caches_best_lap_by_number(
-        Cache $cache)
+    function it_caches_best_lap_by_number(Cache $cache)
     {
         // Relies on other cache too
         $cache->put(CachedSession::class.'::getLapsByLapNumberSortedByTime-1',
@@ -98,10 +92,9 @@ class CachedSessionSpec extends ObjectBehavior
               ->willReturn(array($this->lap1));
 
         // This test cache
-        $this->itCaches($cache, 'getBestLapByLapNumber', $this->lap1, array(1));
+        $this->itCaches('getBestLapByLapNumber', $this->lap1, array(1));
     }
-    function it_retrieves_best_lap_by_number_from_cache(
-        Cache $cache)
+    function it_retrieves_best_lap_by_number_from_cache(Cache $cache)
     {
         $cache->put(CachedSession::class.'::getBestLapByLapNumber-1', $this->lap1)
               ->shouldNotBeCalled();
@@ -115,33 +108,30 @@ class CachedSessionSpec extends ObjectBehavior
     /**
      * getBestLapsGroupedByParticipant
      */
-    function it_caches_best_laps_grouped_by_participant(
-        Cache $cache)
+    function it_caches_best_laps_grouped_by_participant(Cache $cache)
     {
-        $this->itCaches($cache, 'getBestLapsGroupedByParticipant',
+        $this->itCaches('getBestLapsGroupedByParticipant',
             array($this->lap1));
 
     }
     function it_retrieves_best_laps_grouped_by_participant_from_cache(
         Cache $cache)
     {
-        $this->itGetsCache($cache, 'getBestLapsGroupedByParticipant',
+        $this->itGetsCache('getBestLapsGroupedByParticipant',
             array($this->lap1));
     }
 
     /**
      * getLapsSortedBySector
      */
-    function it_caches_laps_sorted_by_sector(
-        Cache $cache)
+    function it_caches_laps_sorted_by_sector(Cache $cache)
     {
-        $this->itCaches($cache, 'getLapsSortedBySector',
+        $this->itCaches('getLapsSortedBySector',
             array($this->lap1), array(1));
     }
-    function it_retrieves_laps_sorted_by_sector_from_cache(
-        Cache $cache)
+    function it_retrieves_laps_sorted_by_sector_from_cache(Cache $cache)
     {
-        $this->itGetsCache($cache, 'getLapsSortedBySector',
+        $this->itGetsCache('getLapsSortedBySector',
             array($this->lap1), array(1));
 
     }
@@ -149,16 +139,15 @@ class CachedSessionSpec extends ObjectBehavior
     /**
      * getBestLapsBySectorGroupedByParticipant
      */
-    function it_caches_laps_by_sector_grouped_by_participant(
-        Cache $cache)
+    function it_caches_laps_by_sector_grouped_by_participant(Cache $cache)
     {
-        $this->itCaches($cache, 'getBestLapsBySectorGroupedByParticipant',
+        $this->itCaches('getBestLapsBySectorGroupedByParticipant',
             array($this->lap1), array(1));
     }
     function it_retrieves_laps_by_sector_grouped_by_participant_from_cache(
         Cache $cache)
     {
-        $this->itGetsCache($cache, 'getBestLapsBySectorGroupedByParticipant',
+        $this->itGetsCache('getBestLapsBySectorGroupedByParticipant',
             array($this->lap1), array(1));
     }
 
@@ -166,17 +155,16 @@ class CachedSessionSpec extends ObjectBehavior
     /**
      * getLapsSortedBySectorByLapNumber
      */
-    function it_caches_laps_sorted_by_sector_by_lap_number(
-        Cache $cache)
+    function it_caches_laps_sorted_by_sector_by_lap_number(Cache $cache)
     {
-        $this->itCaches($cache, 'getLapsSortedBySectorByLapNumber',
+        $this->itCaches('getLapsSortedBySectorByLapNumber',
             array($this->lap1), array(2, 1));
 
     }
     function it_retrieves_laps_sorted_by_sector_by_lap_number_from_cache(
         Cache $cache)
     {
-        $this->itGetsCache($cache, 'getLapsSortedBySectorByLapNumber',
+        $this->itGetsCache('getLapsSortedBySectorByLapNumber',
             array($this->lap1), array(2, 1));
     }
 
@@ -184,8 +172,7 @@ class CachedSessionSpec extends ObjectBehavior
     /**
      * getBestLapBySectorByLapNumber
      */
-    function it_caches_best_lap_by_sector_by_lap_number(
-        Cache $cache)
+    function it_caches_best_lap_by_sector_by_lap_number(Cache $cache)
     {
         // Relies on other cache too
         $cache->put(CachedSession::class.'::getLapsSortedBySectorByLapNumber-2-1',
@@ -195,13 +182,12 @@ class CachedSessionSpec extends ObjectBehavior
               ->willReturn(null);
 
         // This test cache
-        $this->itCaches($cache, 'getBestLapBySectorByLapNumber',
+        $this->itCaches('getBestLapBySectorByLapNumber',
             $this->lap1, array(2, 1));
     }
-    function it_retrieves_best_lap_by_sector_by_lap_number_from_cache(
-        Cache $cache)
+    function it_retrieves_best_lap_by_sector_by_lap_number_from_cache(Cache $cache)
     {
-        $this->itGetsCache($cache, 'getBestLapBySectorByLapNumber',
+        $this->itGetsCache('getBestLapBySectorByLapNumber',
             $this->lap1, array(2, 1));
     }
 
@@ -209,8 +195,7 @@ class CachedSessionSpec extends ObjectBehavior
     /**
      * getBadLaps
      */
-    function it_caches_bad_laps(
-        Cache $cache)
+    function it_caches_bad_laps(Cache $cache)
     {
         // Relies on other cache
         $cache->put(CachedSession::class.'::getLapsSortedByTime',
@@ -220,12 +205,11 @@ class CachedSessionSpec extends ObjectBehavior
               ->willReturn(null);
 
         // This test cache
-        $this->itCaches($cache, 'getBadLaps', array(), array(107));
+        $this->itCaches('getBadLaps', array(), array(107));
     }
-    function it_retrieves_bad_laps_from_cache(
-        Cache $cache)
+    function it_retrieves_bad_laps_from_cache(Cache $cache)
     {
-        $this->itGetsCache($cache, 'getBadLaps', array(), array(107));
+        $this->itGetsCache('getBadLaps', array(), array(107));
     }
 
 
@@ -234,11 +218,11 @@ class CachedSessionSpec extends ObjectBehavior
      */
     function it_caches_led_most_participant(Cache $cache)
     {
-        $this->itCaches($cache, 'getLedMostParticipant', $this->part1);
+        $this->itCaches('getLedMostParticipant', $this->part1);
     }
     function it_retrieves_led_most_participant_from_cache(Cache $cache)
     {
-        $this->itGetsCache($cache, 'getLedMostParticipant', $this->part1);
+        $this->itGetsCache('getLedMostParticipant', $this->part1);
     }
 
 
@@ -247,12 +231,12 @@ class CachedSessionSpec extends ObjectBehavior
      */
     function it_caches_leading_participant(Cache $cache)
     {
-        $this->itCaches($cache, 'getLeadingParticipant',
+        $this->itCaches('getLeadingParticipant',
             $this->part1, array(1));
     }
     function it_retrieves_leading_participant_from_cache(Cache $cache)
     {
-        $this->itGetsCache($cache, 'getLeadingParticipant',
+        $this->itGetsCache('getLeadingParticipant',
             $this->part1, array(1));
     }
 
@@ -263,13 +247,13 @@ class CachedSessionSpec extends ObjectBehavior
      */
     function it_caches_leading_participant_by_elapsed_time(Cache $cache)
     {
-        $this->itCaches($cache, 'getLeadingParticipantByElapsedTime',
+        $this->itCaches('getLeadingParticipantByElapsedTime',
             $this->part1, array(1));
     }
     function it_retrieves_leading_participant_by_elapsed_time_from_cache(
         Cache $cache)
     {
-        $this->itGetsCache($cache, 'getLeadingParticipantByElapsedTime',
+        $this->itGetsCache('getLeadingParticipantByElapsedTime',
             $this->part1, array(1));
     }
 
@@ -278,11 +262,11 @@ class CachedSessionSpec extends ObjectBehavior
      */
     function it_caches_lasted_laps(Cache $cache)
     {
-        $this->itCaches($cache, 'getLastedLaps', 1);
+        $this->itCaches('getLastedLaps', 1);
     }
     function it_retrieves_lasted_laps_from_cache(Cache $cache)
     {
-        $this->itGetsCache($cache, 'getLastedLaps', 1);
+        $this->itGetsCache('getLastedLaps', 1);
     }
 
     /**
@@ -290,11 +274,11 @@ class CachedSessionSpec extends ObjectBehavior
      */
     function it_caches_max_position(Cache $cache)
     {
-        $this->itCaches($cache, 'getMaxPosition', 1);
+        $this->itCaches('getMaxPosition', 1);
     }
     function it_retrieves_max_position_from_cache(Cache $cache)
     {
-        $this->itGetsCache($cache, 'getMaxPosition', 1);
+        $this->itGetsCache('getMaxPosition', 1);
     }
 
 
@@ -340,23 +324,23 @@ class CachedSessionSpec extends ObjectBehavior
 
 
 
-    protected function itCaches(Cache $cache, $method, $data, $args=array())
+    protected function itCaches($method, $data, $args=array())
     {
         $cache_key = $this->cacheKey($method, $args);
 
-        $cache->put($cache_key, $data)->shouldBeCalled();
-        $cache->get($cache_key)->willReturn(null);
+        $this->cache->put($cache_key, $data)->shouldBeCalled();
+        $this->cache->get($cache_key)->willReturn(null);
 
         call_user_func_array(array($this, $method), $args)
             ->shouldReturn($data);
     }
 
-    protected function itGetsCache(Cache $cache, $method, $data, $args=array())
+    protected function itGetsCache($method, $data, $args=array())
     {
         $cache_key = $this->cacheKey($method, $args);
 
-        $cache->put($cache_key, $data)->shouldNotBeCalled();
-        $cache->get($cache_key)->willReturn($data);
+        $this->cache->put($cache_key, $data)->shouldNotBeCalled();
+        $this->cache->get($cache_key)->willReturn($data);
 
         call_user_func_array(array($this, $method), $args)
             ->shouldReturn($data);
