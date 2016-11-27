@@ -40,4 +40,29 @@ class CacheSpec extends ObjectBehavior
         $this->get('a key')->shouldReturn(null);
         $this->get('a key2')->shouldReturn(null);
     }
+
+    function it_can_help_implement_parent_cache_in_extended_classes(aClass $object)
+    {
+       $object->aMethod(1, 2)->willReturn(array('some data'));
+       $this->cacheParentCall($object, 'aMethod', array(1, 2))
+            ->shouldReturn(array('some data'));
+    }
+}
+
+
+class AClass extends AOtherClass
+{
+
+    public function aMethod($argument1, $argument2)
+    {
+        return parent::aMethod($argument1, $argument2);
+    }
+}
+
+class AOtherClass
+{
+    public function aMethod($argument1, $argument2)
+    {
+        return array('some data');
+    }
 }
