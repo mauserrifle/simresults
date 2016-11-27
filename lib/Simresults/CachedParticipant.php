@@ -27,15 +27,16 @@ class CachedParticipant extends Participant {
      */
     public function getLap($lap_number)
     {
-        return $this->cache(__FUNCTION__, func_get_args());
-    }
+        return $this->cache->cacheParentCall(
+            $this, __FUNCTION__, func_get_args());    }
 
     /**
      * {@inheritdoc}
      */
     public function getVehicles()
     {
-        return $this->cache(__FUNCTION__, func_get_args());
+        return $this->cache->cacheParentCall(
+            $this, __FUNCTION__, func_get_args());
     }
 
     /**
@@ -43,7 +44,8 @@ class CachedParticipant extends Participant {
      */
     public function getLapsSortedByTime()
     {
-        return $this->cache(__FUNCTION__, func_get_args());
+        return $this->cache->cacheParentCall(
+            $this, __FUNCTION__, func_get_args());
     }
 
     /**
@@ -51,7 +53,8 @@ class CachedParticipant extends Participant {
      */
     public function getBestLap()
     {
-        return $this->cache(__FUNCTION__, func_get_args());
+        return $this->cache->cacheParentCall(
+            $this, __FUNCTION__, func_get_args());
     }
 
     /**
@@ -59,7 +62,8 @@ class CachedParticipant extends Participant {
      */
     public function getNumberOfCompletedLaps()
     {
-        return $this->cache(__FUNCTION__, func_get_args());
+        return $this->cache->cacheParentCall(
+            $this, __FUNCTION__, func_get_args());
     }
 
     /**
@@ -67,7 +71,8 @@ class CachedParticipant extends Participant {
      */
     public function getNumberOfLapsLed()
     {
-        return $this->cache(__FUNCTION__, func_get_args());
+        return $this->cache->cacheParentCall(
+            $this, __FUNCTION__, func_get_args());
     }
 
     /**
@@ -75,7 +80,8 @@ class CachedParticipant extends Participant {
      */
     public function getLapsSortedBySector($sector)
     {
-        return $this->cache(__FUNCTION__, func_get_args());
+        return $this->cache->cacheParentCall(
+            $this, __FUNCTION__, func_get_args());
     }
 
     /**
@@ -83,7 +89,8 @@ class CachedParticipant extends Participant {
      */
     public function getBestLapBySector($sector)
     {
-        return $this->cache(__FUNCTION__, func_get_args());
+        return $this->cache->cacheParentCall(
+            $this, __FUNCTION__, func_get_args());
     }
 
     /**
@@ -91,7 +98,8 @@ class CachedParticipant extends Participant {
      */
     public function getAverageLap($exclude_pitstop_sectors=false)
     {
-        return $this->cache(__FUNCTION__, func_get_args());
+        return $this->cache->cacheParentCall(
+            $this, __FUNCTION__, func_get_args());
     }
 
     /**
@@ -99,7 +107,8 @@ class CachedParticipant extends Participant {
      */
     public function getBestPossibleLap()
     {
-        return $this->cache(__FUNCTION__, func_get_args());
+        return $this->cache->cacheParentCall(
+            $this, __FUNCTION__, func_get_args());
     }
 
 
@@ -108,7 +117,8 @@ class CachedParticipant extends Participant {
      */
     public function getConsistency($ignore_first_lap = true)
     {
-        return $this->cache(__FUNCTION__, func_get_args());
+        return $this->cache->cacheParentCall(
+            $this, __FUNCTION__, func_get_args());
     }
 
 
@@ -127,28 +137,4 @@ class CachedParticipant extends Participant {
     {
         $this->invalidateCache();
     }
-
-    /**
-     * @param  string $method
-     * @param  array  $args
-     * @return mixed
-     */
-    protected function cache($method, $args)
-    {
-        $cache_key = 'P:'.$method;
-        if ($args) {
-            $cache_key .= '-'.implode('-', $args);
-        }
-
-        if (null !== $value = $this->cache->get($cache_key))
-        {
-            return $this->cache->get($cache_key);
-        }
-
-        $result =  call_user_func_array(array('parent', $method), $args);
-        $this->cache->put($cache_key, $result);
-
-        return $result;
-    }
-
 }
