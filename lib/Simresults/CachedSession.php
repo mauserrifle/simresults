@@ -26,7 +26,8 @@ class CachedSession extends Session {
      */
     public function getLapsSortedByTime()
     {
-        return $this->cache(__FUNCTION__, func_get_args());
+        return $this->cache->cacheParentCall(
+            $this, __FUNCTION__, func_get_args());
 
     }
 
@@ -35,7 +36,8 @@ class CachedSession extends Session {
      */
     public function getLapsByLapNumberSortedByTime($lap_number)
     {
-        return $this->cache(__FUNCTION__, func_get_args());
+        return $this->cache->cacheParentCall(
+            $this, __FUNCTION__, func_get_args());
     }
 
     /**
@@ -43,7 +45,8 @@ class CachedSession extends Session {
      */
     public function getBestLapByLapNumber($lap_number)
     {
-        return $this->cache(__FUNCTION__, func_get_args());
+        return $this->cache->cacheParentCall(
+            $this, __FUNCTION__, func_get_args());
     }
 
     /**
@@ -51,7 +54,8 @@ class CachedSession extends Session {
      */
     public function getBestLapsGroupedByParticipant()
     {
-        return $this->cache(__FUNCTION__, func_get_args());
+        return $this->cache->cacheParentCall(
+            $this, __FUNCTION__, func_get_args());
     }
 
     /**
@@ -59,7 +63,8 @@ class CachedSession extends Session {
      */
     public function getLapsSortedBySector($sector)
     {
-        return $this->cache(__FUNCTION__, func_get_args());
+        return $this->cache->cacheParentCall(
+            $this, __FUNCTION__, func_get_args());
     }
 
     /**
@@ -67,7 +72,8 @@ class CachedSession extends Session {
      */
     public function getBestLapsBySectorGroupedByParticipant($sector)
     {
-        return $this->cache(__FUNCTION__, func_get_args());
+        return $this->cache->cacheParentCall(
+            $this, __FUNCTION__, func_get_args());
     }
 
     /**
@@ -75,7 +81,8 @@ class CachedSession extends Session {
      */
     public function getLapsSortedBySectorByLapNumber($sector, $lap_number)
     {
-        return $this->cache(__FUNCTION__, func_get_args());
+        return $this->cache->cacheParentCall(
+            $this, __FUNCTION__, func_get_args());
     }
 
     /**
@@ -83,7 +90,8 @@ class CachedSession extends Session {
      */
     public function getBestLapBySectorByLapNumber($sector, $lap_number)
     {
-        return $this->cache(__FUNCTION__, func_get_args());
+        return $this->cache->cacheParentCall(
+            $this, __FUNCTION__, func_get_args());
     }
 
     /**
@@ -91,7 +99,8 @@ class CachedSession extends Session {
      */
     public function getBadLaps($above_percent = 107)
     {
-        return $this->cache(__FUNCTION__, func_get_args());
+        return $this->cache->cacheParentCall(
+            $this, __FUNCTION__, func_get_args());
     }
 
     /**
@@ -99,7 +108,8 @@ class CachedSession extends Session {
      */
     public function getLedMostParticipant()
     {
-        return $this->cache(__FUNCTION__, func_get_args());
+        return $this->cache->cacheParentCall(
+            $this, __FUNCTION__, func_get_args());
     }
 
     /**
@@ -107,7 +117,8 @@ class CachedSession extends Session {
      */
     public function getLeadingParticipant($lap_number)
     {
-        return $this->cache(__FUNCTION__, func_get_args());
+        return $this->cache->cacheParentCall(
+            $this, __FUNCTION__, func_get_args());
     }
 
     /**
@@ -115,7 +126,8 @@ class CachedSession extends Session {
      */
     public function getLeadingParticipantByElapsedTime($lap_number)
     {
-        return $this->cache(__FUNCTION__, func_get_args());
+        return $this->cache->cacheParentCall(
+            $this, __FUNCTION__, func_get_args());
     }
 
 
@@ -124,7 +136,8 @@ class CachedSession extends Session {
      */
     public function getLastedLaps()
     {
-        return $this->cache(__FUNCTION__, func_get_args());
+        return $this->cache->cacheParentCall(
+            $this, __FUNCTION__, func_get_args());
     }
 
     /**
@@ -132,7 +145,8 @@ class CachedSession extends Session {
      */
     public function getMaxPosition()
     {
-        return $this->cache(__FUNCTION__, func_get_args());
+        return $this->cache->cacheParentCall(
+            $this, __FUNCTION__, func_get_args());
     }
 
 
@@ -151,29 +165,5 @@ class CachedSession extends Session {
     public function __clone()
     {
         $this->invalidateCache();
-    }
-
-
-    /**
-     * @param  string $method
-     * @param  array  $args
-     * @return mixed
-     */
-    protected function cache($method, $args)
-    {
-        $cache_key = __CLASS__.'::'.$method;
-        if ($args) {
-            $cache_key .= '-'.implode('-', $args);
-        }
-
-        if (null !== $value = $this->cache->get($cache_key))
-        {
-            return $this->cache->get($cache_key);
-        }
-
-        $result =  call_user_func_array(array('parent', $method), $args);
-        $this->cache->put($cache_key, $result);
-
-        return $result;
     }
 }

@@ -66,4 +66,30 @@ class Cache {
         return true;
     }
 
+    /**
+     * Helper to cache methods of an extended class that should cache the
+     * parent
+     *
+     * @param  string $method
+     * @param  array  $args
+     * @return mixed
+     */
+    public function cacheParentCall($object, $method, $args)
+    {
+        $cache_key = get_class($object).'::'.$method;
+        if ($args) {
+            $cache_key .= '-'.implode('-', $args);
+        }
+
+        if (null !== $value = $this->get($cache_key))
+        {
+            return $this->get($cache_key);
+        }
+
+        $result =  call_user_func_array(array($object, 'parent::'.$method), $args);
+        $this->put($cache_key, $result);
+
+        return $result;
+    }
+
 }
