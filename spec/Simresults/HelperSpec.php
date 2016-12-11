@@ -93,6 +93,19 @@ class HelperSpec extends ObjectBehavior
              ->shouldReturn(array($lap3, $lap5, $lap1, $lap2));
     }
 
+    function it_sorts_laps_by_elapsed_time()
+    {
+        $lap1 = new Lap; $lap1->setTime(155.730)->setElapsedSeconds(160);
+        $lap2 = new Lap;
+
+        // Identical elapsed time but different lap times
+        $lap3 = new Lap; $lap3->setTime(128.211)->setElapsedSeconds(130);
+        $lap5 = new Lap; $lap5->setTime(128.111)->setElapsedSeconds(130);
+
+        $this->sortLapsByElapsedTime(array($lap1, $lap2, $lap3, $lap5))
+             ->shouldReturn(array($lap5, $lap3, $lap1, $lap2));
+    }
+
     function it_sorts_laps_by_sector()
     {
         $lap1 = new Lap; $lap1->setSectorTimes(array(20.20));

@@ -249,8 +249,6 @@ class Helper {
     /**
      * Returns the given laps sorted by elapsed time (ASC)
      *
-     * TODO: Unittest?
-     *
      * @return  array  the laps
      */
     public function sortLapsByElapsedTime(array $laps)
