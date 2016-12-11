@@ -465,51 +465,29 @@ class Helper {
     /**
      * Sort participants by best lap
      *
-     * TODO: Unittest?
-     *
      * @param   array   $participants
      * @return  array   The sorted participants
      */
     public function sortParticipantsByBestLap(array $participants)
     {
-        usort($participants, function($a, $b) {
+        $laps = array(); $parts = array(); $parts_without_best_lap = array();
 
-            // Get best laps
-            $a_best_lap = $a->getBestLap();
-            $b_best_lap = $b->getBestLap();
-
-            // Both participants have no best lap
-            if ( ! $a_best_lap AND ! $b_best_lap)
-            {
-                // Same
-                return 0;
+        foreach ($participants as $part) {
+            if ($best_lap = $part->getBestLap()) {
+                $laps[] = $best_lap;
             }
-
-            // a has no best lap
-            if ( ! $a_best_lap)
-            {
-                return 1;
+            else {
+                $parts_without_best_lap[] = $part;
             }
+        }
 
-            // b has no best lap
-            if ( ! $b_best_lap)
-            {
-                return -1;
-            }
+        $laps = $this->sortLapsByTime($laps);
 
-            // Same time
-             if ($a_best_lap->getTime() === $b_best_lap->getTime()) {
-                return 0;
-            }
+        foreach ($laps as $lap) {
+            $parts[] = $lap->getParticipant();
+        }
 
-            // Return normal comparison
-            return ((
-                $a_best_lap->getTime() <
-                    $b_best_lap->getTime())
-                ? -1 : 1);
-        });
-
-        return $participants;
+        return array_merge($parts, $parts_without_best_lap);
     }
 
     /**

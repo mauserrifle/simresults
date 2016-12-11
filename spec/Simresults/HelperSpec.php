@@ -116,4 +116,21 @@ class HelperSpec extends ObjectBehavior
         $this->sortLapsBySector(array($lap1, $lap2, $lap3, $lap5), 1)
              ->shouldReturn(array($lap3, $lap1, $lap5, $lap2));
     }
+
+    function it_sorts_participants_by_best_lap()
+    {
+        $part1 = new Participant; $part2 = new Participant;
+        $part3 = new Participant; $part4 = new Participant;
+
+        $lap1 = new Lap; $lap1->setTime(155.730)->setParticipant($part1);
+        $lap2 = new Lap; $lap2->setParticipant($part2);
+        $lap3 = new Lap; $lap3->setTime(128.211)->setParticipant($part3);
+        $lap4 = new Lap; $lap4->setTime(128.730)->setParticipant($part4);
+
+        $part1->addLap($lap1); $part2->addLap($lap2);
+        $part3->addLap($lap3); $part4->addLap($lap4);
+
+        $this->sortParticipantsByBestLap(array($part1, $part2, $part3, $part4))
+             ->shouldReturn(array($part3, $part4, $part1, $part2));
+    }
 }
