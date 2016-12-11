@@ -75,7 +75,14 @@ class Data_Reader_Rfactor2 extends Data_Reader {
             $session->setType(Session::TYPE_RACE);
         }
         // Is qualify session
-        elseif ($xml_session = $this->dom->getElementsByTagName('Qualify')->item(0))
+        elseif (
+            $xml_session = $this->dom->getElementsByTagName('Qualify')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('Qualify1')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('Qualify2')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('Qualify3')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('Qualify4')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('Qualify5')->item(0)
+            )
         {
             // Set type to qualify
             $session->setType(Session::TYPE_QUALIFY);

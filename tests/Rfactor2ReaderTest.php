@@ -755,6 +755,23 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertSame('Automobilista', $game->getName());
     }
 
+    /**
+     * Test reading result file generated from multiple qualify sessions
+     */
+    public function testReadingResultFileForMultipleQualifySessions()
+    {
+        // Get the data reader for the given data source
+        $reader = Data_Reader::factory(
+            realpath(__DIR__.'/logs/rfactor2/multiple.qualy.xml'));
+
+        // Get session
+        $session = $reader->getSession();
+
+        // Validate session type
+        $this->assertSame(Session::TYPE_QUALIFY,
+            $reader->getSession()->getType());
+    }
+
 
 
     //---------------------------------------------------------------

@@ -682,6 +682,29 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
             $participants[9]->getDriver()->getName());
     }
 
+    /*
+     * Test that we do not parse any extra laps after finishing. In this case
+     * there were both "RACE OVER DETECTED!" and "RACE OVER PACKET, FINAL RANK"
+     * lines in the log which caused bad lap parsing
+     */
+    public function testNotParsingExtraLapsAfterFinish2()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-server/'.
+            'driver.fabio.guarezi.crossed.finish.twice.after.RACE.OVER.DETECTED.txt');
+
+        // Get the race session
+        $session = Data_Reader::factory($file_path)->getSession(3);
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Assert driver on position 12
+        $this->assertSame('Fabio Guarezi',
+            $participants[11]->getDriver()->getName());
+    }
+
     /**
      * Test exception when no session has been found
      *
@@ -748,12 +771,27 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
         $participants = $session->getParticipants();
 
         // Assert drivers on position 16, 17 and 18
-        $this->assertSame('Yoan Morcamp',
-            $participants[15]->getDriver()->getName());
-        $this->assertSame('Arnaud Marechal',
-            $participants[16]->getDriver()->getName());
         $this->assertSame('Jean-claude Menke',
+            $participants[15]->getDriver()->getName());
+        $this->assertSame('Yoan Morcamp',
+            $participants[16]->getDriver()->getName());
+        $this->assertSame('Arnaud Marechal',
             $participants[17]->getDriver()->getName());
+
+        /**
+         * Code below was changed on 2016-08-22. It seems that the person who
+         * requested a proper RANK did not take into account that some of his
+         * drivers did extra laps AFTER the finish. Based on the information of
+         * test `testNotParsingExtraLapsAfterFinish2` I couldn't support this
+         * supposely "fix" anymore
+         */
+        // // Assert drivers on position 16, 17 and 18
+        // $this->assertSame('Yoan Morcamp',
+        //     $participants[15]->getDriver()->getName());
+        // $this->assertSame('Arnaud Marechal',
+        //     $participants[16]->getDriver()->getName());
+        // $this->assertSame('Jean-claude Menke',
+        //     $participants[17]->getDriver()->getName());
     }
 
 

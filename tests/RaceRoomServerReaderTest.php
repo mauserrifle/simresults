@@ -53,6 +53,13 @@ class RaceRoomReaderTest extends PHPUnit_Framework_TestCase {
         // Test participant without name
         $this->assertSame('unknown', $participants[5]->getDriver()->getName());
 
+        // Test FullName fallback
+        $this->assertSame('junkim', $participants[6]->getDriver()->getName());
+
+        // Test favor FullName over Username
+        $this->assertSame('DunkinCupF', $participants[7]->getDriver()->getName());
+
+
 
         // Test last participant
         $participant = $participants[count($participants)-1];
@@ -169,7 +176,7 @@ class RaceRoomReaderTest extends PHPUnit_Framework_TestCase {
             ->getParticipants();
         $participant = $participants[0];
 
-        $this->assertSame('matsuo', $participant->getDriver()->getName());
+        $this->assertSame('chin matsuo', $participant->getDriver()->getName());
         $this->assertSame('Ford GT GT1',
                           $participant->getVehicle()->getName());
         $this->assertSame(1, $participant->getPosition());
@@ -186,7 +193,7 @@ class RaceRoomReaderTest extends PHPUnit_Framework_TestCase {
 
         // Test last participant
         $participant = $participants[count($participants)-1];
-        $this->assertSame('RaidenHornet', $participant->getDriver()->getName());
+        $this->assertSame('Akihiro Nakao', $participant->getDriver()->getName());
         $this->assertSame('Saleen S7R', $participant->getVehicle()->getName());
         $this->assertSame(4, $participant->getPosition());
         $this->assertSame(Participant::FINISH_DNF,
