@@ -133,4 +133,34 @@ class HelperSpec extends ObjectBehavior
         $this->sortParticipantsByBestLap(array($part1, $part2, $part3, $part4))
              ->shouldReturn(array($part3, $part4, $part1, $part2));
     }
+
+    function it_sorts_particpants_by_last_lap_position(
+        Participant $part1, Participant $part2, Participant $part3,
+        Participant $part4, Participant $part5,
+        Lap $lap1, Lap $lap2, Lap $lap3, Lap $lap4, Lap $lap5)
+    {
+        $part1->getNumberOfLaps()->willReturn(3);
+        $part1->getLastLap()->willReturn($lap1);
+        $lap1->getPosition()->willReturn(4);
+
+        $part2->getNumberOfLaps()->willReturn(0);
+        $part2->getLastLap()->willReturn($lap2);
+        $lap2->getPosition()->willReturn(5);
+
+        $part3->getNumberOfLaps()->willReturn(4);
+        $part3->getLastLap()->willReturn($lap3);
+        $lap3->getPosition()->willReturn(2);
+
+        $part4->getNumberOfLaps()->willReturn(4);
+        $part4->getLastLap()->willReturn($lap4);
+        $lap4->getPosition()->willReturn(1);
+
+        $part5->getNumberOfLaps()->willReturn(4);
+        $part5->getLastLap()->willReturn($lap5);
+        $lap5->getPosition()->willReturn(3);
+
+        $this->sortParticipantsByLastLapPosition(array($part1, $part2, $part3,
+                                                       $part4, $part5))
+             ->shouldReturn(array($part4, $part3, $part5, $part1, $part2));
+    }
 }

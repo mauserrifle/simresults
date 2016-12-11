@@ -538,8 +538,6 @@ class Helper {
     /**
      * Sort participants by last lap position
      *
-     * TODO: Unittest?
-     *
      * @param   array   $participants
      * @return  array   The sorted participants
      */
