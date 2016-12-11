@@ -11,6 +11,11 @@ use Simresults\Helper;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
+/**
+ * @author     Maurice van der Star <mauserrifle@gmail.com>
+ * @copyright  (c) 2013 Maurice van der Star
+ * @license    http://opensource.org/licenses/ISC
+ */
 class CachedSessionSpec extends ObjectBehavior
 {
     protected $cache;

@@ -6,6 +6,11 @@ use Simresults\Track;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
+/**
+ * @author     Maurice van der Star <mauserrifle@gmail.com>
+ * @copyright  (c) 2013 Maurice van der Star
+ * @license    http://opensource.org/licenses/ISC
+ */
 class TrackSpec extends ObjectBehavior
 {
     function it_is_initializable()
