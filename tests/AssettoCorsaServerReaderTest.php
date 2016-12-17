@@ -794,6 +794,23 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
         //     $participants[17]->getDriver()->getName());
     }
 
+    function testNotMatchingLapKeywordsInChat()
+    {
+          // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-server/lap.keyword.in.chat.txt');
+
+        // Get the race session
+        $session = Data_Reader::factory($file_path)->getSession(3);
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Assert winning driver
+        $this->assertSame('Mark Jones',
+            $participants[0]->getDriver()->getName());
+    }
+
 
 
 

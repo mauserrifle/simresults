@@ -327,6 +327,11 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             $data = str_replace('\r', "\n", $data);
         }
 
+        // QUICKFIX: Do not match system keywords in chats
+        $data = preg_replace('/(CHAT .*?)LAP/', '${1}lap', $data);
+        $data = preg_replace('/(CHAT .*?)WARNING/', '${1}warning', $data);
+        $data = preg_replace('/(CHAT .*?)CAR/', '${1}car', $data);
+
         // Split data by sessions
         $data_sessions = explode('NextSession', $data);
 
