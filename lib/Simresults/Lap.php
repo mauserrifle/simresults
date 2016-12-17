@@ -109,6 +109,19 @@ class Lap {
     protected $cuts = array();
 
 
+    /**
+     * @var  Helper  The helper for sorting
+     */
+    protected $helper;
+
+
+    public function __construct(Helper $helper=null)
+    {
+        if ( ! $helper) $helper = new Helper;
+
+        $this->helper = $helper;
+    }
+
 
     /**
      * Set the lap number
@@ -686,9 +699,6 @@ class Lap {
 
         //-- Calculate sector 1 pit time of next lap
 
-        // No next lap by default
-        $next_lap = null;
-
         // No sector 1 time by default
         $sector_1_pit = 0;
 
@@ -698,11 +708,11 @@ class Lap {
             // Current lap found
             if ($lap === $this )
             {
-                // Next lap found, store it
-                if (isset($laps[$lap_key+1]))
+                // Next lap found
+                if (isset($laps[$lap_key+1]) AND
+                    $next_lap = $laps[$lap_key+1] AND
+                    $next_lap->getSectorTime(1))
                 {
-                    $next_lap = $laps[$lap_key+1];
-
                     // Calculate sector 1 pit time using the next lap
                     $sector_1_pit = $next_lap->getSectorTime(1) -
                                     $average_lap->getSectorTime(1);
@@ -784,6 +794,6 @@ class Lap {
      */
     public function __toString()
     {
-        return Helper::formatTime($this->time);
+        return $this->helper->formatTime($this->time);
     }
 }

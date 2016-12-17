@@ -21,6 +21,10 @@ abstract class Data_Reader {
      */
     protected $data;
 
+    /**
+     * @var  Helper  The helper for sorting
+     */
+    protected $helper;
 
 
     /**
@@ -87,7 +91,7 @@ abstract class Data_Reader {
      * @param   string  $data
      * @throws  Exception\CannotReadData
      */
-    public function __construct($data)
+    public function __construct($data, Helper $helper=null)
     {
         // Cannot read the data
         if ( ! static::canRead($data))
@@ -98,6 +102,9 @@ abstract class Data_Reader {
 
         // Set data to instance
         $this->data = $data;
+
+        if ( ! $helper) $helper = new Helper;
+        $this->helper = $helper;
 
         // Run init method so the object can init properly
         $this->init();
@@ -344,7 +351,7 @@ abstract class Data_Reader {
                     $laps_sorted = $session->getLapsByLapNumberSortedByTime($i);
 
                     // Sort the laps by elapsed time
-                    $laps_sorted = Helper::sortLapsByElapsedTime($laps_sorted);
+                    $laps_sorted = $this->helper->sortLapsByElapsedTime($laps_sorted);
 
                     // Loop each lap and fix position data
                     foreach ($laps_sorted as $lap_key => $lap)
@@ -423,14 +430,14 @@ abstract class Data_Reader {
             {
                 // Sort participants by last lap positions
                 $participants =
-                    Helper::sortParticipantsByLastLapPosition($participants);
+                    $this->helper->sortParticipantsByLastLapPosition($participants);
             }
             // We have a normal race result
             else
             {
                 // Sort participants by total time
                 $participants =
-                    Helper::sortParticipantsByTotalTime($participants);
+                    $this->helper->sortParticipantsByTotalTime($participants);
             }
 
         }
@@ -439,7 +446,7 @@ abstract class Data_Reader {
         {
             // Sort by best lap
             $participants =
-                Helper::sortParticipantsByBestLap($participants);
+                $this->helper->sortParticipantsByBestLap($participants);
         }
 
 

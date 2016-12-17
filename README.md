@@ -191,8 +191,8 @@ Create index.php:
     $session_best_lap = $session->getBestLap();
 
     // Format the gap between the two laps
-    $best_lap_gap = \Simresults\Helper::formatTime(
-        $session_best_lap->getGap($best_lap));
+    $helper = new \Simresults\Helper;
+    $best_lap_gap = $helper->formatTime($session_best_lap->getGap($best_lap));
     echo $best_lap_gap;
 
  Run server

@@ -53,7 +53,7 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
         );
         foreach ($known_setting_keys as $setting)
         {
-            if ($setting_value = Helper::arrayGet($data, $setting)) {
+            if ($setting_value = $this->helper->arrayGet($data, $setting)) {
                 $other_settings[$setting] = $setting_value;
             }
         }
@@ -94,25 +94,25 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
             $session->setGame($game);
 
             // Set server
-            $server = new Server; $server->setName(Helper::arrayGet($data, 'Server'));
+            $server = new Server; $server->setName($this->helper->arrayGet($data, 'Server'));
             $session->setServer($server);
 
             // Set track
             $track = new Track;
-            $track->setVenue(Helper::arrayGet($data, 'Track'));
+            $track->setVenue($this->helper->arrayGet($data, 'Track'));
             $session->setTrack($track);
 
             // Get participants and their best lap (only lap)
             $participants = array();
-            $players_data = Helper::arrayGet($session_data, 'Players', array());
+            $players_data = $this->helper->arrayGet($session_data, 'Players', array());
             foreach ($players_data as $player_index => $player_data)
             {
                 // Create driver
                 $driver = new Driver;
 
                 // Has name
-                if ($name = Helper::arrayGet($player_data, 'FullName') OR
-                    $name = Helper::arrayGet($player_data, 'Username'))
+                if ($name = $this->helper->arrayGet($player_data, 'FullName') OR
+                    $name = $this->helper->arrayGet($player_data, 'Username'))
                 {
                     $driver->setName($name);
                 }
@@ -125,11 +125,11 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
                 // Create participant and add driver
                 $participant = Participant::createInstance();
                 $participant->setDrivers(array($driver))
-                            ->setPosition(Helper::arrayGet(
+                            ->setPosition($this->helper->arrayGet(
                                 $player_data, 'Position', null));
 
                 // Has finish status
-                if ($status = Helper::arrayGet($player_data, 'FinishStatus'))
+                if ($status = $this->helper->arrayGet($player_data, 'FinishStatus'))
                 {
                     // Figure out status
                     switch(strtolower($status))
@@ -155,7 +155,7 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
                 }
 
                 // Has total time
-                if ($total_time = Helper::arrayGet($player_data, 'TotalTime'))
+                if ($total_time = $this->helper->arrayGet($player_data, 'TotalTime'))
                 {
                     $participant->setTotalTime(
                         round($player_data['TotalTime'] / 1000, 4));
@@ -163,11 +163,11 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
 
                 // Create vehicle and add to participant
                 $vehicle = new Vehicle;
-                $vehicle->setName(Helper::arrayGet($player_data, 'Car'));
+                $vehicle->setName($this->helper->arrayGet($player_data, 'Car'));
                 $participant->setVehicle($vehicle);
 
                 // Has laps
-                if ($laps = Helper::arrayGet($player_data, 'RaceSessionLaps'))
+                if ($laps = $this->helper->arrayGet($player_data, 'RaceSessionLaps'))
                 {
                     foreach ($laps as $lap_key => $lap_data)
                     {
@@ -196,7 +196,7 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
 
                 }
                 // Has best lap (fallback)
-                elseif (0 < $best_lap = Helper::arrayGet($player_data, 'BestLapTime'))
+                elseif (0 < $best_lap = $this->helper->arrayGet($player_data, 'BestLapTime'))
                 {
                     // Init new lap
                     $lap = new Lap;

@@ -211,7 +211,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
             if ($position_corruption)
             {
                 // Sort participants by total time
-                $participants = Helper::sortParticipantsByTotalTime($participants);
+                $participants = $this->helper->sortParticipantsByTotalTime($participants);
             }
         }
         // Other session
@@ -250,7 +250,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
             {
                 // Sort by best lap instead of position
                 $participants =
-                    Helper::sortParticipantsByBestLap($participants);
+                    $this->helper->sortParticipantsByBestLap($participants);
             }
         }
 
@@ -969,7 +969,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                 }
 
                 // Sort the laps by elapsed time
-                $laps = Helper::sortLapsByElapsedTime($laps);
+                $laps = $this->helper->sortLapsByElapsedTime($laps);
 
                 // Fix the positions
                 foreach ($laps as $lap_key => $lap)
