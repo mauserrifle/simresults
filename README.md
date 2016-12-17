@@ -244,14 +244,15 @@ The project is designed to be extended with new features and game support.
 Feel free to [fork Simresults on GitHub](https://github.com/mauserrifle/simresults)
 and submit a pull request!
 
-The project is fully unittested using PHPUnit. If you offer any changes, make
-sure all your new additions are tested.
+The project is tested using PHPUnit and phpspec. If you offer any changes,
+make sure all your new additions are tested.
 
 ## Running simresults tests
 
 To run the tests, use the following command:
 
     ./vendor/bin/phpunit
+    ./vendor/bin/phpspec run
 
 ## License
 
