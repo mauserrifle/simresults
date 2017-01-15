@@ -76,7 +76,13 @@ class Cache {
      */
     public function cacheParentCall($object, $method, $args)
     {
-        $cache_key = get_class($object).'::'.$method;
+        // TODO: Find alternative due to spl_object_hash performance hit?
+        $cache_key = spl_object_hash($object).
+                    '-'.
+                    get_class($object).
+                    '::'.
+                    $method;
+
         if ($args) {
             $cache_key .= '-'.implode('-', $args);
         }

@@ -121,7 +121,7 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
         $participants = $sessions[0]->getParticipants();
 
         // Test the best lap
-        $this->assertSame(117.7810, $participants[0]->getBestLap()->getTime());
+        $this->assertSame(119.417, $participants[0]->getBestLap()->getTime());
     }
 
     /**
