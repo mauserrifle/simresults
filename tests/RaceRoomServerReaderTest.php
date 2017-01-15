@@ -88,6 +88,22 @@ class RaceRoomReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertNull($participant->getLap(4));
     }
 
+    /**
+     * Test supporting race2
+     */
+    public function testRace2Session()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/raceroom-server/log.with.race2.json');
+
+        // Get session
+        $session = Data_Reader::factory($file_path)->getSession(3);
+
+        //-- Validate
+        $this->assertSame(Session::TYPE_RACE, $session->getType());
+    }
+
 
 
 

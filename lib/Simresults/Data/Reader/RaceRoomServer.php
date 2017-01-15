@@ -76,10 +76,22 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
                 case 'qualify':
                     $type = Session::TYPE_QUALIFY;
                     break;
+                case 'qualify2':
+                    $type = Session::TYPE_QUALIFY;
+                    break;
+                case 'qualify3':
+                    $type = Session::TYPE_QUALIFY;
+                    break;
                 case 'warmup':
                     $type = Session::TYPE_WARMUP;
                     break;
                 case 'race':
+                    $type = Session::TYPE_RACE;
+                    break;
+                case 'race2':
+                    $type = Session::TYPE_RACE;
+                    break;
+                case 'race3':
                     $type = Session::TYPE_RACE;
                     break;
             }
