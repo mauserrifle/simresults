@@ -69,7 +69,11 @@ class Data_Reader_Rfactor2 extends Data_Reader {
         $session = Session::createInstance();
 
         // Is race session
-        if ($xml_session = $this->dom->getElementsByTagName('Race')->item(0))
+        if (
+            $xml_session = $this->dom->getElementsByTagName('Race')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('Race2')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('Race3')->item(0)
+        	)
         {
             // Set type to race
             $session->setType(Session::TYPE_RACE);
@@ -95,14 +99,10 @@ class Data_Reader_Rfactor2 extends Data_Reader {
         }
         // Is practice session
         elseif (
-            $xml_session =
-                $this->dom->getElementsByTagName('Practice1')->item(0)
-            OR
-            $xml_session =
-                $this->dom->getElementsByTagName('Practice2')->item(0)
-            OR
-            $xml_session =
-                $this->dom->getElementsByTagName('Practice3')->item(0))
+        		$xml_session = $this->dom->getElementsByTagName('Practice1')->item(0) OR
+        		$xml_session = $this->dom->getElementsByTagName('Practice2')->item(0) OR
+        		$xml_session = $this->dom->getElementsByTagName('Practice3')->item(0)
+        		)
         {
             // Set type to practice
             $session->setType(Session::TYPE_PRACTICE);
