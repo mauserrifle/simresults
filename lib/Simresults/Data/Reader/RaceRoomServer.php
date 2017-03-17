@@ -112,6 +112,7 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
             // Set track
             $track = new Track;
             $track->setVenue($this->helper->arrayGet($data, 'Track'));
+            $track->setCourse($this->helper->arrayGet($data, 'TrackLayout'));
             $session->setTrack($track);
 
             // Get participants and their best lap (only lap)
