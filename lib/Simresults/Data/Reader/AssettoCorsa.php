@@ -177,6 +177,12 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
                     $lap->addSectorTime(round($sector_time / 1000, 4));
                 }
 
+                // Set compound info
+                $lap->setFrontCompound(
+                    $this->helper->arrayGet($lap_data, 'tyre'));
+                $lap->setRearCompound(
+                    $this->helper->arrayGet($lap_data, 'tyre'));
+
                 // Add lap to participant
                 $lap_participant->addLap($lap);
             }

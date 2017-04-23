@@ -148,6 +148,29 @@ class AssettoCorsaReaderTest extends PHPUnit_Framework_TestCase {
                           $participant->getDriver()->getName());
     }
 
+     /**
+     * Test tyre info
+     */
+    public function testReadingTyreInfo()
+    {
+        // The path to the data source
+        $file_path = realpath(
+            __DIR__.'/logs/assettocorsa/tyre.info.json');
+
+        // Get the data reader for the given data source
+        $reader = Data_Reader::factory($file_path);
+
+        // Get first session
+        $session = $reader->getSession(1);
+
+        // Get first participant
+        $participants = $session->getParticipants();
+        $participant = $participants[0];
+
+        $this->assertSame('H', $participant->getLap(1)->getFrontCompound());
+        $this->assertSame('H', $participant->getLap(1)->getRearCompound());
+    }
+
 
 
     /***
