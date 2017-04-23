@@ -200,6 +200,12 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
                 $lap->addSectorTime(round($sector_time / 1000, 4));
             }
 
+                // Set compound info
+                $lap->setFrontCompound(
+                    $this->helper->arrayGet($lap_data, 'Tyre'));
+                $lap->setRearCompound(
+                    $this->helper->arrayGet($lap_data, 'Tyre'));
+
             // Add lap to participant
             $lap_participant->addLap($lap);
         }
