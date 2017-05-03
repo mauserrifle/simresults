@@ -4,6 +4,7 @@
 	"Type": "RACE",
 	"DurationSecs": 0,
 	"RaceLaps": 0,
+	"Server": "Custom server",
 	"Cars": [
 		{
 			"CarId": 0,

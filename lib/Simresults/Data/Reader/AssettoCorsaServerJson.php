@@ -81,7 +81,8 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
         $session->setGame($game);
 
         // Set server (we do not know...)
-        $server = new Server; $server->setName('Unknown');
+        $server = new Server;
+        $server->setName($this->helper->arrayGet($data, 'Server', 'Unknown'));
         $session->setServer($server);
 
         // Set track
