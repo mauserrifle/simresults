@@ -11,6 +11,11 @@ namespace Simresults;
 class Track {
 
     /**
+     * @var  int
+     */
+    protected $id;
+
+    /**
      * @var  string  The venue of the track (e.g. Sebring)
      */
     protected $venue;
@@ -30,6 +35,24 @@ class Track {
      */
     protected $length;
 
+    /**
+     * @return  int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param   int      $id
+     * @return  Track
+     */
+
+    public function setId($id)
+    {
+        $this->id = $id;
+        return $this;
+    }
 
     /**
      * Set the venue of the track

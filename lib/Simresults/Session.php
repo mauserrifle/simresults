@@ -16,6 +16,10 @@ class Session {
     const TYPE_WARMUP   = 'warmup';
     const TYPE_RACE     = 'race';
 
+    /**
+     * @var  int
+     */
+    protected $id;
 
     /**
      * @var  string  The session type based on the constants
@@ -127,6 +131,25 @@ class Session {
     public static function createInstance()
     {
         return new CachedSession;
+    }
+
+    /**
+     * @return  int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param   int      $id
+     * @return  Session
+     */
+
+    public function setId($id)
+    {
+        $this->id = $id;
+        return $this;
     }
 
     /**

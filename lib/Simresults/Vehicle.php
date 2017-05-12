@@ -11,6 +11,11 @@ namespace Simresults;
 class Vehicle {
 
     /**
+     * @var  int
+     */
+    protected $id;
+
+    /**
      * @var  string  The name of the vehicle
      */
     private $name;
@@ -39,6 +44,25 @@ class Vehicle {
      * @var  string  The skin of the vehicle
      */
     private $skin;
+
+    /**
+     * @return  int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param   int      $id
+     * @return  Vehicle
+     */
+
+    public function setId($id)
+    {
+        $this->id = $id;
+        return $this;
+    }
 
     /**
      * Set the name of the vehicle

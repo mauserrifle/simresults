@@ -11,6 +11,11 @@ namespace Simresults;
 class Driver {
 
     /**
+     * @var  int
+     */
+    protected $id;
+
+    /**
      * @var  string  The name of the driver
      */
     protected $name;
@@ -25,6 +30,24 @@ class Driver {
      */
     protected $driver_id;
 
+    /**
+     * @return  int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param   int      $id
+     * @return  Driver
+     */
+
+    public function setId($id)
+    {
+        $this->id = $id;
+        return $this;
+    }
 
     /**
      * Set the name of the driver

@@ -11,6 +11,11 @@ namespace Simresults;
 class Chat {
 
     /**
+     * @var  int
+     */
+    protected $id;
+
+    /**
      * @var  string  The message sent
      */
     protected $message;
@@ -27,6 +32,24 @@ class Chat {
      */
     protected $elapsed_seconds;
 
+    /**
+     * @return  int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param   int      $id
+     * @return  Chat
+     */
+
+    public function setId($id)
+    {
+        $this->id = $id;
+        return $this;
+    }
 
     /**
      * Set the message sent

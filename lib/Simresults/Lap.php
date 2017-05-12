@@ -11,6 +11,11 @@ namespace Simresults;
 class Lap {
 
     /**
+     * @var  int
+     */
+    protected $id;
+
+    /**
      * @var  int  The lap number
      */
     protected $number;
@@ -122,6 +127,24 @@ class Lap {
         $this->helper = $helper;
     }
 
+    /**
+     * @return  int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param   int      $id
+     * @return  Lap
+     */
+
+    public function setId($id)
+    {
+        $this->id = $id;
+        return $this;
+    }
 
     /**
      * Set the lap number

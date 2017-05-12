@@ -11,6 +11,11 @@ namespace Simresults;
 class Server {
 
     /**
+     * @var  int
+     */
+    protected $id;
+
+    /**
      * @var  string  The name of the server
      */
     protected $name;
@@ -24,6 +29,25 @@ class Server {
      * @var  boolean  Whether this was a dedicated server or not
      */
     protected $dedicated;
+
+    /**
+     * @return  int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param   int      $id
+     * @return  Server
+     */
+
+    public function setId($id)
+    {
+        $this->id = $id;
+        return $this;
+    }
 
     /**
      * Set the name of the server

@@ -11,6 +11,11 @@ namespace Simresults;
 class Cut {
 
     /**
+     * @var  int
+     */
+    protected $id;
+
+    /**
      * @var  float  The cut time in seconds
      */
     protected $cut_time;
@@ -43,6 +48,24 @@ class Cut {
     protected $elapsed_seconds_in_lap;
 
 
+    /**
+     * @return  int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param   int      $id
+     * @return  Cut
+     */
+
+    public function setId($id)
+    {
+        $this->id = $id;
+        return $this;
+    }
 
     /**
      * Set the cut cut time

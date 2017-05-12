@@ -26,6 +26,10 @@ class Participant {
         Participant::FINISH_NONE,
     );
 
+    /**
+     * @var  int
+     */
+    protected $id;
 
     /**
      * @var  array  The drivers
@@ -117,6 +121,25 @@ class Participant {
     public static function createInstance()
     {
         return new CachedParticipant;
+    }
+
+    /**
+     * @return  int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param   int      $id
+     * @return  Participant
+     */
+
+    public function setId($id)
+    {
+        $this->id = $id;
+        return $this;
     }
 
     /**

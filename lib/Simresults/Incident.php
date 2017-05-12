@@ -11,6 +11,11 @@ namespace Simresults;
 class Incident {
 
     /**
+     * @var  int
+     */
+    protected $id;
+
+    /**
      * @var  string  The incident message
      */
     protected $message;
@@ -31,6 +36,24 @@ class Incident {
      */
     protected $for_review = false;
 
+    /**
+     * @return  int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param   int      $id
+     * @return  Incident
+     */
+
+    public function setId($id)
+    {
+        $this->id = $id;
+        return $this;
+    }
 
     /**
      * Set the incident message

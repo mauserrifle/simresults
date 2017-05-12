@@ -11,6 +11,11 @@ namespace Simresults;
 class Penalty {
 
     /**
+     * @var  int
+     */
+    protected $id;
+
+    /**
      * @var  string  The penalty message
      */
     protected $message;
@@ -27,6 +32,24 @@ class Penalty {
      */
     protected $elapsed_seconds;
 
+    /**
+     * @return  int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param   int      $id
+     * @return  Penalty
+     */
+
+    public function setId($id)
+    {
+        $this->id = $id;
+        return $this;
+    }
 
     /**
      * Set the penalty message

@@ -11,6 +11,11 @@ namespace Simresults;
 class Game {
 
     /**
+     * @var  int
+     */
+    protected $id;
+
+    /**
      * @var  string  The name of the game
      */
     protected $name;
@@ -19,6 +24,25 @@ class Game {
      * @var  string  The version of the game
      */
     protected $version;
+
+    /**
+     * @return  int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param   int      $id
+     * @return  Game
+     */
+
+    public function setId($id)
+    {
+        $this->id = $id;
+        return $this;
+    }
 
     /**
      * Set the name of the game
