@@ -52,9 +52,19 @@ class Lap {
     protected $aids = array();
 
     /**
-     * @var  array  Array containing all the sector times
+     * @var  float
      */
-    protected $sector_times = array();
+    protected $sector1;
+
+    /**
+     * @var  float
+     */
+    protected $sector2;
+
+    /**
+     * @var  float
+     */
+    protected $sector3;
 
     /**
      * @var  float  The elapsed time in seconds before this lap started
@@ -319,7 +329,14 @@ class Lap {
      */
     public function setSectorTimes(array $sector_times)
     {
-        $this->sector_times = $sector_times;
+        foreach (array(1,2,3) as $sector) {
+            $this->{'sector'.$sector} = NULL;
+
+            if (isset($sector_times[$sector-1])) {
+                $this->{'sector'.$sector} = $sector_times[$sector-1];
+            }
+        }
+
         return $this;
     }
 
@@ -330,7 +347,15 @@ class Lap {
      */
     public function getSectorTimes()
     {
-        return $this->sector_times;
+        $sectors = array();
+
+        foreach (array(1,2,3) as $sector) {
+            if ($this->{'sector'.$sector} !== NULL) {
+                $sectors[] = $this->{'sector'.$sector};
+            }
+        }
+
+        return $sectors;
     }
 
     /**
@@ -341,14 +366,7 @@ class Lap {
      */
     public function getSectorTime($sector_number)
     {
-        // Sector does not exist
-        if ( ! isset($this->sector_times[$sector_number-1]))
-        {
-            return null;
-        }
-
-        // Return sector time
-        return $this->sector_times[$sector_number-1];
+        return $this->{'sector'.$sector_number};
     }
 
     /**
@@ -359,7 +377,13 @@ class Lap {
      */
     public function addSectorTime($sector_time)
     {
-        $this->sector_times[] = $sector_time;
+        foreach (array(1,2,3) as $sector) {
+            if ($this->{'sector'.$sector} === NULL) {
+                $this->{'sector'.$sector} = $sector_time;
+                break;
+            }
+        }
+
         return $this;
     }
 
