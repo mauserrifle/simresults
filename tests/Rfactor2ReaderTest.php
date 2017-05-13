@@ -771,7 +771,7 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertSame(Session::TYPE_QUALIFY,
             $reader->getSession()->getType());
     }
-    
+
     /**
      * Test reading result file generated from multiple race sessions
      */
@@ -780,10 +780,10 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
     	// Get the data reader for the given data source
     	$reader = Data_Reader::factory(
     			realpath(__DIR__.'/logs/automobilista/multiple_race.xml'));
-    
+
     	// Get session
     	$session = $reader->getSession();
-    
+
     	// Validate session type
     	$this->assertSame(Session::TYPE_RACE,
     			$reader->getSession()->getType());
@@ -1037,7 +1037,7 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertSame($driver, $lap->getDriver());
 
         // Get aids
-        $aids = $lap->getAids();
+        $aids = $lap->getAidsSummary();
 
         // Validate aids
         $this->assertSame($validate_aids, $aids);

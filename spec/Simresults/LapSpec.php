@@ -5,6 +5,7 @@ namespace spec\Simresults;
 use Simresults\Lap;
 use Simresults\Participant;
 use Simresults\Vehicle;
+use Simresults\Aid;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
@@ -111,6 +112,27 @@ class LapSpec extends ObjectBehavior
     {
         $this->setPitTime(46.5656);
         $this->getPitTime()->shouldReturn(46.5656);
+    }
+
+    function it_can_add_aids()
+    {
+        // Set using old method (non objects)
+        $this->setAids(array('PlayerControl' => null, 'TC' => 3,
+                             'AutoShift' => 3));
+
+        $aid1 = new Aid; $aid1->setAid('PlayerControl');
+        $aid2 = new Aid; $aid2->setAid('TC')->setValue(3);
+        $aid3 = new Aid; $aid3->setAid('AutoShift')->setValue(3);
+
+        $this->getAids()->shouldBeLike(array($aid1, $aid2, $aid3));
+
+        // Set using objects
+        $this->setAids(array($aid1, $aid2, $aid3));
+        $this->getAids()->shouldReturn(array($aid1, $aid2, $aid3));
+
+        // Test summary
+        $this->getAidsSummary()->shouldReturn(array(
+            'PlayerControl' => null, 'TC' => 3, 'AutoShift' => 3));
     }
 
     /**

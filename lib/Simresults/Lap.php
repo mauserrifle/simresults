@@ -395,7 +395,25 @@ class Lap {
      */
     public function setAids(array $aids)
     {
-        $this->aids = $aids;
+        $aids_collection = array();
+
+        foreach ($aids as $aid_name => $aid_value)
+        {
+            // By default we assume the value is an Aid object
+            $aid = $aid_value;
+
+            // Is pure array (old method), convert to Aid objects
+            if (is_string($aid_name) OR is_string($aid_value))
+            {
+                $aid = new Aid;
+                $aid->setAid($aid_name)
+                    ->setValue($aid_value);
+            }
+
+            $aids_collection[] = $aid;
+        }
+
+        $this->aids = $aids_collection;
         return $this;
     }
 
@@ -410,12 +428,28 @@ class Lap {
     }
 
     /**
+     * Get the aids this participant used as pure array summary
+     *
+     * @return  array
+     */
+    public function getAidsSummary()
+    {
+        $aids = array();
+        foreach($this->getAids() as $aid)
+        {
+            $aids[$aid->getAid()] = $aid->getValue();
+        }
+
+        return $aids;
+    }
+
+    /**
      * Add a new aid this participant used
      *
      * @param   string  $aid
      * @return  Lap
      */
-    public function addAid($aid)
+    public function addAid(Aid $aid)
     {
         $this->aids[] = $aid;
         return $this;

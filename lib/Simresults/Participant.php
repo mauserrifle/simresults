@@ -758,10 +758,7 @@ class Participant {
 
     /**
      * Returns the aids used by this participant by looking into all lap aids.
-     * This could be used as a summary of all aids on laps. Mind that when
-     * a user switched between values of the aid, some values might get lost
-     * due to the merging of the aids. For proper aid overviews, please parse
-     * the lap aids yourself.
+     * This returns duplicate aids too.
      *
      * @return  array
      */
@@ -776,6 +773,42 @@ class Participant {
         }
 
         // Return aids
+        return $aids;
+    }
+
+    /**
+     * Returns the aids used by this participant by looking into all lap aids.
+     * This filters out duplicates by aid name
+     *
+     * @return  array
+     */
+    public function getAidsUnique()
+    {
+        $aids = array();
+        foreach($this->getAids() as $aid)
+        {
+            $aids[$aid->getAid()] = $aid;
+        }
+
+        return array_values($aids);
+    }
+
+    /**
+     * Returns the aids used by this participant by looking into all lap aids.
+     * Returns pure array instead of Aid objects. Mind that when
+     * a user switched between values of the aid, some values might get lost
+     * due to the merging of the aids.
+     *
+     * @return  array
+     */
+    public function getAidsSummary()
+    {
+        $aids = array();
+        foreach($this->getAidsUnique() as $aid)
+        {
+            $aids[$aid->getAid()] = $aid->getValue();
+        }
+
         return $aids;
     }
 

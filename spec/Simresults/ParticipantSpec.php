@@ -4,6 +4,7 @@ namespace spec\Simresults;
 
 use Simresults\Participant;
 use Simresults\Lap;
+use Simresults\Aid;
 use Simresults\Vehicle;
 use Simresults\Driver;
 use Simresults\Helper;
@@ -226,14 +227,32 @@ class ParticipantSpec extends ObjectBehavior
         $this->getNumberOfLapsLed()->shouldReturn(2);
     }
 
-    function it_has_aids(Lap $lap1, Lap $lap2, Lap $lap3)
+    function it_has_aids(Lap $lap1, Lap $lap2, Lap $lap3,
+                         Aid $aid1, Aid $aid2, Aid $aid3, Aid $aid4)
     {
-        $lap1->getAids()->willReturn(array('PlayerControl' => null, 'TC' => 3));
-        $lap2->getAids()->willReturn(array('TC' => 3));
-        $lap3->getAids()->willReturn(array('AutoShift' => 3));
+        // Four aids
+        $aid1->getAid()->willReturn('PlayerControl');
+        $aid1->getValue()->willReturn(null);
+
+        $aid2->getAid()->willReturn('TC');
+        $aid2->getValue()->willReturn(3);
+
+        $aid3->getAid()->willReturn('TC');
+        $aid3->getValue()->willReturn(3);
+
+        $aid4->getAid()->willReturn('AutoShift');
+        $aid4->getValue()->willReturn(3);
+
+        // Three laps with aids
+        $lap1->getAids()->willReturn(array($aid1, $aid2));
+        $lap2->getAids()->willReturn(array($aid3));
+        $lap3->getAids()->willReturn(array($aid4));
 
         $this->setLaps(array($lap1, $lap2, $lap3));
-        $this->getAids()->shouldReturn(
+
+        $this->getAids()->shouldReturn(array($aid1, $aid2, $aid3, $aid4));
+        $this->getAidsUnique()->shouldReturn(array($aid1, $aid3, $aid4));
+        $this->getAidsSummary()->shouldReturn(
             array('PlayerControl' => null, 'TC' => 3, 'AutoShift' => 3));
     }
 
