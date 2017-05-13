@@ -237,7 +237,7 @@ class RaceRoomReaderTest extends PHPUnit_Framework_TestCase {
                 'WreckerPrevention'  =>  'Off',
                 'MandatoryPitstop'   =>  'Off',
             ),
-            $session->getOtherSettings()
+            $session->getOtherSettingsSummary()
         );
     }
 

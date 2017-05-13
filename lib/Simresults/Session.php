@@ -103,8 +103,8 @@ class Session {
     protected $setup_fixed;
 
     /**
-     * @var  array  Any other settings that were used. This is an assoc array
-     *              (setting => value)
+     * @var  array  Any other settings that were used
+     *
      */
     protected $other_settings = array();
 
@@ -582,15 +582,33 @@ class Session {
     }
 
     /**
-     * Set the other settings that were used in this session. Assoc array
-     * is expected
+     * Set the other settings that were used in this session. Settings object
+     * or assoc array (old method) is expected.
      *
      * @param   array    $settings
      * @return  Session
      */
     public function setOtherSettings(array $settings)
     {
-        $this->other_settings = $settings;
+        $settings_collection = array();
+
+        foreach ($settings as $setting_name => $setting_value)
+        {
+            // By default we assume the value is an Setting object
+            $setting = $setting_value;
+
+            // Is pure array (old method), convert to Setting objects
+            if (is_string($setting_name) OR is_string($setting_value))
+            {
+                $setting = new Setting;
+                $setting->setSetting($setting_name)
+                        ->setValue($setting_value);
+            }
+
+            $settings_collection[] = $setting;
+        }
+
+        $this->other_settings = $settings_collection;
         return $this;
     }
 
@@ -603,18 +621,38 @@ class Session {
      */
     public function addOtherSetting($setting, $value)
     {
-        $this->other_settings[$setting] = $value;
+        $setting_object = new Setting;
+        $setting_object->setSetting($setting);
+        $setting_object->setValue($value);
+        $this->other_settings[] = $setting_object;
         return $this;
     }
 
     /**
-     * Get the other settings used within this session. Returns an assoc array
+     * Get the other settings used within this session
      *
      * @return  array
      */
     public function getOtherSettings()
     {
         return $this->other_settings;
+    }
+
+    /**
+     * Get the other settings used within this session. Returns an assoc array
+     * as summary.
+     *
+     * @return  array
+     */
+    public function getOtherSettingsSummary()
+    {
+        $settings = array();
+        foreach($this->getOtherSettings() as $setting)
+        {
+            $settings[$setting->getSetting()] = $setting->getValue();
+        }
+
+        return $settings;
     }
 
 

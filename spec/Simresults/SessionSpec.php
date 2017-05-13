@@ -5,6 +5,7 @@ namespace spec\Simresults;
 use Simresults\Session;
 use Simresults\Participant;
 use Simresults\Lap;
+use Simresults\Setting;
 use Simresults\Incident;
 use Simresults\Vehicle;
 use Simresults\Cut;
@@ -353,6 +354,31 @@ class SessionSpec extends ObjectBehavior
         $this->setParticipants(array($part1, $part2));
 
         $this->getCuts()->shouldReturn(array($cut2, $cut1, $cut3));
+    }
+
+    function it_has_other_settings()
+    {
+        // Set using old method (non objects)
+        $this->setOtherSettings(array('A setting' => null,
+                                      'Another setting' => 3,
+                                      'More' => 3));
+
+        $setting1 = new Setting; $setting1->setSetting('A setting');
+        $setting2 = new Setting; $setting2->setSetting('Another setting')
+                                          ->setValue(3);
+        $setting3 = new Setting; $setting3->setSetting('More')->setValue(3);
+
+        $this->getOtherSettings()->shouldBeLike(
+            array($setting1, $setting2, $setting3));
+
+        // Set using objects
+        $this->setOtherSettings(array($setting1, $setting2, $setting3));
+        $this->getOtherSettings()->shouldReturn(
+            array($setting1, $setting2, $setting3));
+
+        // Test summary
+        $this->getOtherSettingsSummary()->shouldReturn(array(
+            'A setting' => null, 'Another setting' => 3, 'More' => 3));
     }
 
 

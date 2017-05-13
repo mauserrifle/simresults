@@ -86,7 +86,7 @@ class AssettoCorsaReaderTest extends PHPUnit_Framework_TestCase {
                 'Drift combos'   =>  2,
                 'Drift levels'   =>  1,
             ),
-            $session->getOtherSettings()
+            $session->getOtherSettingsSummary()
         );
     }
 

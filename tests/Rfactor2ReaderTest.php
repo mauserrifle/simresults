@@ -835,7 +835,7 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
                 'FuelMult'       =>  0,
                 'TireMult'       =>  7,
             ),
-            $session->getOtherSettings()
+            $session->getOtherSettingsSummary()
         );
     }
 

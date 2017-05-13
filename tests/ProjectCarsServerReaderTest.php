@@ -431,7 +431,7 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
                 'ServerControlsVehicleClass'  => 1,
                 'TireWearType'                => 6,
                 ),
-                $session->getOtherSettings());
+                $session->getOtherSettingsSummary());
         }
 
 
