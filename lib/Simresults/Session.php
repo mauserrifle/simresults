@@ -90,7 +90,7 @@ class Session {
     /**
      * @var  string  The mod used for this session
      */
-    protected $mod;
+    protected $mod_name;
 
     /**
      * @var  array  The vehicles that were allowed during this session
@@ -509,7 +509,7 @@ class Session {
      */
     public function setMod($mod)
     {
-        $this->mod = $mod;
+        $this->mod_name = $mod;
         return $this;
     }
 
@@ -520,7 +520,7 @@ class Session {
      */
     public function getMod()
     {
-        return $this->mod;
+        return $this->mod_name;
     }
 
     /*
