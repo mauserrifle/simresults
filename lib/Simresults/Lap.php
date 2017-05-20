@@ -1,6 +1,8 @@
 <?php
 namespace Simresults;
 
+use Doctrine\Common\Collections\ArrayCollection;
+
 /**
  * The lap class.
  *
@@ -49,7 +51,7 @@ class Lap {
     /**
      * @var  array  The aids this participant has used in this lap
      */
-    protected $aids = array();
+    protected $aids;
 
     /**
      * @var  float
@@ -121,7 +123,7 @@ class Lap {
     /**
      * @var  array  Array containing all the cuts
      */
-    protected $cuts = array();
+    protected $cuts;
 
 
     /**
@@ -135,6 +137,9 @@ class Lap {
         if ( ! $helper) $helper = new Helper;
 
         $this->helper = $helper;
+
+        $this->aids = new ArrayCollection;
+        $this->cuts = new ArrayCollection;
     }
 
     /**
@@ -686,7 +691,7 @@ class Lap {
      */
     public function getCuts()
     {
-        return $this->cuts;
+        return $this->cuts->toArray();
     }
 
     /**

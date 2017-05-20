@@ -1,6 +1,8 @@
 <?php
 namespace Simresults;
 
+use Doctrine\Common\Collections\ArrayCollection;
+
 /**
  * The participant class.
  *
@@ -34,7 +36,7 @@ class Participant {
     /**
      * @var  array  The drivers
      */
-    protected $drivers = array();
+    protected $drivers;
 
     /**
      * @var  string  The team
@@ -69,7 +71,7 @@ class Participant {
     /**
      * @var  array  The laps of this participant
      */
-    protected $laps = array();
+    protected $laps;
 
     /**
      * @var  float  The total time this participant has driven. Used to
@@ -110,6 +112,9 @@ class Participant {
         if ( ! $helper) $helper = new Helper;
 
         $this->helper = $helper;
+
+        $this->drivers = new ArrayCollection;
+        $this->laps = new ArrayCollection;
     }
 
 
@@ -150,7 +155,7 @@ class Participant {
      */
     public function setDrivers(array $drivers)
     {
-        $this->drivers = $drivers;
+        $this->drivers = new ArrayCollection($drivers);
         return $this;
     }
 
@@ -161,7 +166,7 @@ class Participant {
      */
     public function getDrivers()
     {
-        return $this->drivers;
+        return $this->drivers->toArray();
     }
 
     /**
@@ -385,7 +390,7 @@ class Participant {
      */
     public function setLaps(array $laps)
     {
-        $this->laps = $laps;
+        $this->laps = new ArrayCollection($laps);
         return $this;
     }
 
@@ -396,7 +401,7 @@ class Participant {
      */
     public function getLaps()
     {
-        return $this->laps;
+        return $this->laps->toArray();
     }
 
     /**
@@ -408,11 +413,13 @@ class Participant {
      */
     public function addLap(Lap $lap)
     {
+        $laps = $this->getLaps();
+
         // No lap number set. Set lap number because we can't function without
         if ( ! $lap->getNumber())
         {
             // No laps yet, so is the first
-            if ( ! $this->laps)
+            if ( ! $laps)
             {
                 $lap->setNumber(1);
             }
@@ -420,7 +427,7 @@ class Participant {
             else
             {
                 $lap->setNumber(
-                    $this->laps[count($this->laps)-1]->getNumber()
+                    $laps[count($laps)-1]->getNumber()
                     +
                     1
                 );
@@ -439,7 +446,7 @@ class Participant {
             }
         }
 
-        $this->laps[] = $lap;
+        $this->laps->add($lap);
         return $this;
     }
 
@@ -468,7 +475,7 @@ class Participant {
      */
     public function getLastLap()
     {
-        if ($laps = $this->laps)
+        if ($laps = $this->getLaps())
         {
             return array_pop($laps);
         }

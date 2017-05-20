@@ -1,6 +1,8 @@
 <?php
 namespace Simresults;
 
+use Doctrine\Common\Collections\ArrayCollection;
+
 /**
  * The session class. Main point for results.
  *
@@ -50,7 +52,7 @@ class Session {
      * @var  array  The participants of this session. Contains Participant
      *              objects
      */
-    protected $participants = array();
+    protected $participants;
 
     /**
      * @var  \DateTime  The date and time this session started
@@ -75,17 +77,17 @@ class Session {
     /**
      * @var  array  The chat messages sent within this session
      */
-    protected $chats = array();
+    protected $chats;
 
     /**
      * @var  array  The incidents within this session
      */
-    protected $incidents = array();
+    protected $incidents;
 
     /**
      * @var  array  The penalties within this session
      */
-    protected $penalties = array();
+    protected $penalties;
 
     /**
      * @var  string  The mod used for this session
@@ -95,7 +97,7 @@ class Session {
     /**
      * @var  array  The vehicles that were allowed during this session
      */
-    protected $allowed_vehicles = array();
+    protected $allowed_vehicles;
 
     /**
      * @var  boolean  Whether the session only allowed a fixed setup
@@ -106,7 +108,7 @@ class Session {
      * @var  array  Any other settings that were used
      *
      */
-    protected $other_settings = array();
+    protected $other_settings;
 
 
     /**
@@ -120,6 +122,13 @@ class Session {
         if ( ! $helper) $helper = new Helper;
 
         $this->helper = $helper;
+
+        $this->participants = new ArrayCollection;
+        $this->chats = new ArrayCollection;
+        $this->incidents = new ArrayCollection;
+        $this->penalties = new ArrayCollection;
+        $this->allowed_vehicles = new ArrayCollection;
+        $this->other_settings = new ArrayCollection;
     }
 
 
@@ -270,7 +279,7 @@ class Session {
      */
     public function setParticipants(array $participants)
     {
-        $this->participants = $participants;
+        $this->participants = new ArrayCollection($participants);
         return $this;
     }
 
@@ -282,7 +291,7 @@ class Session {
      */
     public function addParticipant(Participant $participant)
     {
-        $this->participants[] = $participant;
+        $this->participants->add($participant);
         return $this;
     }
 
@@ -293,7 +302,7 @@ class Session {
      */
     public function getParticipants()
     {
-        return $this->participants;
+        return $this->participants->toArray();
     }
 
     /**
@@ -392,7 +401,7 @@ class Session {
      */
     public function setChats(array $chats)
     {
-        $this->chats = $chats;
+        $this->chats = new ArrayCollection($chats);
         return $this;
     }
 
@@ -415,7 +424,7 @@ class Session {
      */
     public function getChats()
     {
-        return $this->chats;
+        return $this->chats->toArray();
     }
 
     /**
@@ -426,7 +435,7 @@ class Session {
      */
     public function setIncidents(array $incidents)
     {
-        $this->incidents = $incidents;
+        $this->incidents = new ArrayCollection($incidents);
         return $this;
     }
 
@@ -450,7 +459,7 @@ class Session {
      */
     public function getIncidents()
     {
-        return $this->incidents;
+        return $this->incidents->toArray();
     }
 
     /**
@@ -462,7 +471,7 @@ class Session {
     {
         // Return filtered incidents
         return array_values(
-            array_filter($this->incidents,
+            array_filter($this->getIncidents(),
             function(Incident $incident){return ($incident->isForReview());}
         ));
     }
@@ -475,7 +484,7 @@ class Session {
      */
     public function setPenalties(array $penalties)
     {
-        $this->penalties = $penalties;
+        $this->penalties = new ArrayCollection($penalties);
         return $this;
     }
 
@@ -498,7 +507,7 @@ class Session {
      */
     public function getPenalties()
     {
-        return $this->penalties;
+        return $this->penalties->toArray();
     }
 
     /**
@@ -531,7 +540,7 @@ class Session {
      */
     public function setAllowedVehicles(array $vehicles)
     {
-        $this->allowed_vehicles = $vehicles;
+        $this->allowed_vehicles = new ArrayCollection($vehicles);
         return $this;
     }
 
@@ -555,7 +564,7 @@ class Session {
      */
     public function getAllowedVehicles()
     {
-        return $this->allowed_vehicles;
+        return $this->allowed_vehicles->toArray();
     }
 
     /**
@@ -608,7 +617,7 @@ class Session {
             $settings_collection[] = $setting;
         }
 
-        $this->other_settings = $settings_collection;
+        $this->other_settings = new ArrayCollection($settings_collection);
         return $this;
     }
 
@@ -635,7 +644,7 @@ class Session {
      */
     public function getOtherSettings()
     {
-        return $this->other_settings;
+        return $this->other_settings->toArray();
     }
 
     /**

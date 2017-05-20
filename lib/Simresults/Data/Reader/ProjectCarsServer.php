@@ -8,6 +8,8 @@ namespace Simresults;
  *          Expect alot of duplicate code that has to be refactored soon
  *          (TODO).
  *
+ * GOOD TO KNOW: participant is cloned, when this happens laps are resetted
+ *
  * @author     Maurice van der Star <mauserrifle@gmail.com>
  * @copyright  (c) 2013 Maurice van der Star
  * @license    http://opensource.org/licenses/ISC
@@ -126,10 +128,12 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 $participants_by_id = array();
                 foreach ($initial_participants_by_ref as $part_key => $part )
                 {
+                    $part->setLaps(array()); // Fix laps collection
                     $participants_by_ref[$part_key] = clone $part;
                 }
                 foreach ($initial_participants_by_id as $part_key => $part )
                 {
+                    $part->setLaps(array()); // Fix laps collection
                     $participants_by_id[$part_key] = clone $part;
                 }
 
