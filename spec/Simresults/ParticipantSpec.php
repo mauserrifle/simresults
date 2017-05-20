@@ -357,4 +357,15 @@ class ParticipantSpec extends ObjectBehavior
         $this->addLap($lap2);
     }
 
+    function it_does_not_add_duplicate_lap_numbers(Lap $lap1, Lap $lap2)
+    {
+        $lap1->getNumber()->willReturn(1);
+        $lap2->getNumber()->willReturn(1);
+
+        $this->addLap($lap1);
+
+        $this->shouldThrow('InvalidArgumentException')
+             ->duringAddLap($lap2);
+    }
+
 }

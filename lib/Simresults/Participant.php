@@ -426,6 +426,18 @@ class Participant {
                 );
             }
         }
+        // Lap number set, lets validate it
+        else
+        {
+            foreach ($this->laps as $existing_lap)
+            {
+                // Lap number already added
+                if ($lap->getNumber() == $existing_lap->getNumber()) {
+                    throw new \InvalidArgumentException(
+                        'Lap number '.$lap->getNumber().' is already added.');
+                }
+            }
+        }
 
         $this->laps[] = $lap;
         return $this;
