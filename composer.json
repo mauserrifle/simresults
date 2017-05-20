@@ -12,6 +12,9 @@
             "homepage": "http://mauserrifle.nl"
         }
     ],
+    "require": {
+        "doctrine/collections": "^1.4"
+    },
     "require-dev": {
         "phpunit/phpunit": "4.0.15",
         "phpspec/phpspec": "2.5.*"
