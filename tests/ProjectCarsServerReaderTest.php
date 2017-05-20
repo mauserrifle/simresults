@@ -528,6 +528,9 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
         $participants = $this->getWorkingReader()->getSession(5)
             ->getParticipants();
 
+        // Validate winner
+        $this->assertSame('ItchyTrigaFinga',
+                          $participants[0]->getDriver()->getName());
 
         // Get the laps of second participants (first is missing a lap)
         $participant = $participants[1];
@@ -538,6 +541,9 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
 
         // Get driver of first participant (only one cause there are no swaps)
         $driver = $participant->getDriver();
+
+        // Validate driver name
+        $this->assertSame('RouTeaX', $driver->getName());
 
         // Get first lap only
         $lap = $laps[0];
