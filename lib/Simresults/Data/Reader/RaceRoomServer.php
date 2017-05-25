@@ -1,5 +1,8 @@
 <?php
 namespace Simresults;
+use Simresults\Result\Helper;
+use Simresults\Result\Session;
+use Simresults\Result\Participant;
 
 /**
  * The reader for RaceRoom server logs
@@ -65,34 +68,34 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
         foreach ($data['Sessions'] as $session_data)
         {
             // Init session
-            $session = Result\Session::createInstance();
+            $session = Session::createInstance();
 
             // Practice session by default
-            $type = Result\Session::TYPE_PRACTICE;
+            $type = Session::TYPE_PRACTICE;
 
             // Check session type
             switch(strtolower($name = $session_data['Type']))
             {
                 case 'qualify':
-                    $type = Result\Session::TYPE_QUALIFY;
+                    $type = Session::TYPE_QUALIFY;
                     break;
                 case 'qualify2':
-                    $type = Result\Session::TYPE_QUALIFY;
+                    $type = Session::TYPE_QUALIFY;
                     break;
                 case 'qualify3':
-                    $type = Result\Session::TYPE_QUALIFY;
+                    $type = Session::TYPE_QUALIFY;
                     break;
                 case 'warmup':
-                    $type = Result\Session::TYPE_WARMUP;
+                    $type = Session::TYPE_WARMUP;
                     break;
                 case 'race':
-                    $type = Result\Session::TYPE_RACE;
+                    $type = Session::TYPE_RACE;
                     break;
                 case 'race2':
-                    $type = Result\Session::TYPE_RACE;
+                    $type = Session::TYPE_RACE;
                     break;
                 case 'race3':
-                    $type = Result\Session::TYPE_RACE;
+                    $type = Session::TYPE_RACE;
                     break;
             }
 
@@ -136,7 +139,7 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
                 }
 
                 // Create participant and add driver
-                $participant = Result\Participant::createInstance();
+                $participant = Participant::createInstance();
                 $participant->setDrivers(array($driver))
                             ->setPosition($this->helper->arrayGet(
                                 $player_data, 'Position', null));
@@ -149,22 +152,22 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
                     {
                         case 'finished':
                             $participant->setFinishStatus(
-                                Result\Participant::FINISH_NORMAL);
+                                Participant::FINISH_NORMAL);
                             break;
                         case 'disqualified':
                             $participant->setFinishStatus(
-                                Result\Participant::FINISH_DQ);
+                                Participant::FINISH_DQ);
                             break;
                         default:
                             $participant->setFinishStatus(
-                                Result\Participant::FINISH_DNF);
+                                Participant::FINISH_DNF);
                             break;
                     }
                 }
                 // No finish status, so always finished
                 else
                 {
-                    $participant->setFinishStatus(Result\Participant::FINISH_NORMAL);
+                    $participant->setFinishStatus(Participant::FINISH_NORMAL);
                 }
 
                 // Has total time

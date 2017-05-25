@@ -1,6 +1,9 @@
 <?php
 namespace Simresults;
 
+use Simresults\Result\Session;
+use Simresults\Result\Participant;
+
 use Simresults\Result\Helper;
 
 /**

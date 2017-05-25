@@ -1,5 +1,8 @@
 <?php
 namespace Simresults;
+use Simresults\Result\Helper;
+use Simresults\Result\Session;
+use Simresults\Result\Participant;
 
 /**
  * The reader for Project Cars sms_stats data files.
@@ -138,10 +141,10 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 }
 
                 // Init session
-                $session = Result\Session::createInstance();
+                $session = Session::createInstance();
 
                 // Practice session by default
-                $type = Result\Session::TYPE_PRACTICE;
+                $type = Session::TYPE_PRACTICE;
 
                 // Setup name for session type
                 $type_setup_name = ucfirst($type_key);
@@ -151,14 +154,14 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 switch(strtolower(preg_replace('#\d#', '', $type_key)))
                 {
                     case 'qualifying':
-                        $type = Result\Session::TYPE_QUALIFY;
+                        $type = Session::TYPE_QUALIFY;
                         $type_setup_name = 'Qualify';
                         break;
                     case 'warmup':
-                        $type = Result\Session::TYPE_WARMUP;
+                        $type = Session::TYPE_WARMUP;
                         break;
                     case 'race':
-                        $type = Result\Session::TYPE_RACE;
+                        $type = Session::TYPE_RACE;
                         break;
                 }
 
@@ -232,7 +235,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
 
                     // Is lap and the lap is valid (only checked for non-race)
                     if ($event['event_name'] === 'Lap' AND
-                        ($session->getType() === Result\Session::TYPE_RACE
+                        ($session->getType() === Session::TYPE_RACE
                          OR
                          $event['attributes']['CountThisLapTimes']))
                     {
@@ -317,7 +320,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                     elseif ($event['event_name'] === 'State' AND
                             $event['attributes']['NewState'] === 'Retired')
                     {
-                        $part->setFinishStatus(Result\Participant::FINISH_DNF);
+                        $part->setFinishStatus(Participant::FINISH_DNF);
                     }
 
                 }
@@ -349,7 +352,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                             $part = $participants_by_id[$result['participantid']];
 
                             // Set DNF
-                            $part->setFinishStatus(Result\Participant::FINISH_DNF);
+                            $part->setFinishStatus(Participant::FINISH_DNF);
                         }
                     }
                 }
@@ -502,7 +505,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 // qualify and practice some drivers are missing from the
                 // result
                 if ($results = $session_data['results'] AND
-                    $session->getType() === Result\Session::TYPE_RACE)
+                    $session->getType() === Session::TYPE_RACE)
                 {
                     // Sort participants using our own sort
                     $tmp_sort =
@@ -594,13 +597,13 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 else
                 {
                     // Is race
-                    if ($session->getType() === Result\Session::TYPE_RACE)
+                    if ($session->getType() === Session::TYPE_RACE)
                     {
                         // Set all participants on unknown finish status
                         // We should of had a result for proper statusses
                         foreach ($participants as $part)
                         {
-                            $part->setFinishStatus(Result\Participant::FINISH_NONE);
+                            $part->setFinishStatus(Participant::FINISH_NONE);
                         }
                     }
 
@@ -624,8 +627,8 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
         {
             // Found warmup after race session
             if ($prevous_session AND
-                $prevous_session->getType() === Result\Session::TYPE_RACE AND
-                $session->getType() === Result\Session::TYPE_WARMUP)
+                $prevous_session->getType() === Session::TYPE_RACE AND
+                $session->getType() === Session::TYPE_WARMUP)
             {
                 // Swap them
                 $sessions[$key] = $prevous_session;
@@ -662,9 +665,9 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
         }
 
         // Create participant and add driver
-        $participant = Result\Participant::createInstance();
+        $participant = Participant::createInstance();
         $participant->setDrivers(array($driver))
-                    ->setFinishStatus(Result\Participant::FINISH_NORMAL);
+                    ->setFinishStatus(Participant::FINISH_NORMAL);
 
         // Create vehicle and add to participant
         $vehicle = new Result\Vehicle;

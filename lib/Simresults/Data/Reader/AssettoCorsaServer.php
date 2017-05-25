@@ -1,5 +1,8 @@
 <?php
 namespace Simresults;
+use Simresults\Result\Helper;
+use Simresults\Result\Session;
+use Simresults\Result\Participant;
 
 /**
  * The reader for AssettoCorsa Server
@@ -42,7 +45,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             $vehicle_names = array();
 
             // Init session
-            $session = Result\Session::createInstance();
+            $session = Session::createInstance();
 
             // Set session type
             $type = null;
@@ -50,16 +53,16 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             switch($session_data['type'])
             {
                 case 'qualify':
-                    $type = Result\Session::TYPE_QUALIFY;
+                    $type = Session::TYPE_QUALIFY;
                     break;
                 case 'practice':
-                    $type = Result\Session::TYPE_PRACTICE;
+                    $type = Session::TYPE_PRACTICE;
                     break;
                 case 'warmup':
-                    $type = Result\Session::TYPE_PRACTICE;
+                    $type = Session::TYPE_PRACTICE;
                     break;
                 case 'race':
-                    $type = Result\Session::TYPE_RACE;
+                    $type = Session::TYPE_RACE;
                     break;
             }
             $session->setType($type);
@@ -152,19 +155,19 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 }
 
                 // Create participant and add driver
-                $participant = Result\Participant::createInstance();
+                $participant = Participant::createInstance();
                 $participant->setDrivers(array($driver))
                             ->setTotalTime($total_time);
 
                 // Has total time parsed data and should not be a forced DNF
                 if ($total_time AND ! $this->helper->arrayGet($part_data, 'force_dnf'))
                 {
-                    $participant->setFinishStatus(Result\Participant::FINISH_NORMAL);
+                    $participant->setFinishStatus(Participant::FINISH_NORMAL);
                 }
                 // No total time in parsed data
                 else
                 {
-                    $participant->setFinishStatus(Result\Participant::FINISH_DNF);
+                    $participant->setFinishStatus(Participant::FINISH_DNF);
                 }
 
                 // Remember vehicle instances by vehicle name
@@ -252,10 +255,10 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
 
                 // No laps and race result
                 if ( ! $participant->getLaps() AND
-                    $session->getType() === Result\Session::TYPE_RACE)
+                    $session->getType() === Session::TYPE_RACE)
                 {
                     // Did not finish
-                    $participant->setFinishStatus(Result\Participant::FINISH_DNF);
+                    $participant->setFinishStatus(Participant::FINISH_DNF);
                 }
 
                 // Add participant to collection

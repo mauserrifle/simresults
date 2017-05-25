@@ -1,6 +1,8 @@
 <?php
 namespace Simresults;
 use Simresults\Result\Helper;
+use Simresults\Result\Session;
+use Simresults\Result\Participant;
 
 /**
  * The reader for Race07
@@ -54,7 +56,7 @@ class Data_Reader_Race07 extends Data_Reader {
             else
             {
                 // Create new session instance
-                $session = Result\Session::createInstance();
+                $session = Session::createInstance();
 
                 // Get date from human string when available
                 if (isset($data['header']['timestring']))
@@ -219,7 +221,7 @@ class Data_Reader_Race07 extends Data_Reader {
             $driver->setName($driver_data['driver']);
 
             // Create participant and add driver
-            $participant = Result\Participant::createInstance();
+            $participant = Participant::createInstance();
             $participant->setDrivers(array($driver))
                         ->setTeam($this->helper->arrayGet($driver_data, 'team'));
                         // Finish position will be set later using an special
@@ -255,7 +257,7 @@ class Data_Reader_Race07 extends Data_Reader {
                     $participant->setTotalTime($seconds);
 
                     // Is finished
-                    $participant->setFinishStatus(Result\Participant::FINISH_NORMAL);
+                    $participant->setFinishStatus(Participant::FINISH_NORMAL);
 
                     $all_dnf = false;
 
@@ -269,7 +271,7 @@ class Data_Reader_Race07 extends Data_Reader {
                 // Should set this participant dnf
                 if ($set_dnf)
                 {
-                    $participant->setFinishStatus(Result\Participant::FINISH_DNF);
+                    $participant->setFinishStatus(Participant::FINISH_DNF);
 
                     // Has reason
                     if (null !== $reason = $this->helper->arrayGet($driver_data, 'reason'))
@@ -355,14 +357,14 @@ class Data_Reader_Race07 extends Data_Reader {
         if ($all_dnf)
         {
             // Assume we're dealing with qualify session
-            $session->setType(Result\Session::TYPE_QUALIFY);
+            $session->setType(Session::TYPE_QUALIFY);
             $session->setName('Qualify or practice session');
         }
         // Not all participants are dnf
         else
         {
             // Race session
-            $session->setType(Result\Session::TYPE_RACE);
+            $session->setType(Session::TYPE_RACE);
         }
 
         // Sort participants

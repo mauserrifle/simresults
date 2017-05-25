@@ -1,5 +1,8 @@
 <?php
 namespace Simresults;
+use Simresults\Result\Helper;
+use Simresults\Result\Session;
+use Simresults\Result\Participant;
 
 /**
  * The reader for rfactor 2. Supports rfactor 1 too.
@@ -66,7 +69,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
     protected function readSessions()
     {
         // Create new session instance
-        $session = Result\Session::createInstance();
+        $session = Session::createInstance();
 
         // Is race session
         if (
@@ -76,7 +79,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
         	)
         {
             // Set type to race
-            $session->setType(Result\Session::TYPE_RACE);
+            $session->setType(Session::TYPE_RACE);
         }
         // Is qualify session
         elseif (
@@ -89,13 +92,13 @@ class Data_Reader_Rfactor2 extends Data_Reader {
             )
         {
             // Set type to qualify
-            $session->setType(Result\Session::TYPE_QUALIFY);
+            $session->setType(Session::TYPE_QUALIFY);
         }
         // Is warmup session
         elseif ($xml_session = $this->dom->getElementsByTagName('Warmup')->item(0))
         {
             // Set type to warmup
-            $session->setType(Result\Session::TYPE_WARMUP);
+            $session->setType(Session::TYPE_WARMUP);
         }
         // Is practice session
         elseif (
@@ -105,7 +108,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
         		)
         {
             // Set type to practice
-            $session->setType(Result\Session::TYPE_PRACTICE);
+            $session->setType(Session::TYPE_PRACTICE);
         }
         // No session data found
         else
@@ -174,13 +177,13 @@ class Data_Reader_Rfactor2 extends Data_Reader {
 
            // DNF statusses
         $dnf_statusses = array(
-            Result\Participant::FINISH_DNF,
-            Result\Participant::FINISH_DQ,
-            Result\Participant::FINISH_NONE,
+            Participant::FINISH_DNF,
+            Participant::FINISH_DQ,
+            Participant::FINISH_NONE,
         );
 
         // This is a race session
-        if ($session->getType() === Result\Session::TYPE_RACE)
+        if ($session->getType() === Session::TYPE_RACE)
         {
             // Loop each participant to find position corruption
             foreach ($participants as $part_key => $part)
@@ -447,7 +450,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                 ->setNumber( (int) $this->dom_value('CarNumber', $driver_xml));
 
             // Create participant
-            $participant = Result\Participant::createInstance();
+            $participant = Participant::createInstance();
 
             // Set participant values
             $participant
@@ -481,19 +484,19 @@ class Data_Reader_Rfactor2 extends Data_Reader {
             if ($finish_status === 'finished normally')
             {
                 // Set finish status
-                $participant->setFinishStatus(Result\Participant::FINISH_NORMAL);
+                $participant->setFinishStatus(Participant::FINISH_NORMAL);
             }
             // Is disqualified
             elseif ($finish_status === 'dq')
             {
                 // Set disqualified status
-                $participant->setFinishStatus(Result\Participant::FINISH_DQ);
+                $participant->setFinishStatus(Participant::FINISH_DQ);
             }
             // Not finished
             elseif ($finish_status === 'dnf')
             {
                 // Set did not finish status
-                $participant->setFinishStatus(Result\Participant::FINISH_DNF);
+                $participant->setFinishStatus(Participant::FINISH_DNF);
 
                 // Set finish comment (if any)
                 if ($finish_status = $this->dom_value('DNFReason', $driver_xml))
@@ -505,7 +508,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
             else
             {
                 // Set no finish status
-                $participant->setFinishStatus(Result\Participant::FINISH_NONE);
+                $participant->setFinishStatus(Participant::FINISH_NONE);
             }
 
 

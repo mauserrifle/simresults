@@ -1,5 +1,8 @@
 <?php
 namespace Simresults;
+use Simresults\Result\Helper;
+use Simresults\Result\Session;
+use Simresults\Result\Participant;
 
 /**
  * The reader for AssettoCorsa Server JSON files
@@ -35,10 +38,10 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
         $data = json_decode($this->data, TRUE);
 
         // Init session
-        $session = Result\Session::createInstance();
+        $session = Session::createInstance();
 
         // Practice session by default
-        $type = Result\Session::TYPE_PRACTICE;
+        $type = Session::TYPE_PRACTICE;
 
         // Check session name to get type
         // TODO: Could we prevent duplicate code for this with other readers?
@@ -46,15 +49,15 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
         {
             case 'qualify session':
             case 'qualify':
-                $type = Result\Session::TYPE_QUALIFY;
+                $type = Session::TYPE_QUALIFY;
                 break;
             case 'warmup session':
-                $type = Result\Session::TYPE_WARMUP;
+                $type = Session::TYPE_WARMUP;
                 break;
             case 'race session':
             case 'quick race':
             case 'race':
-                $type = Result\Session::TYPE_RACE;
+                $type = Session::TYPE_RACE;
                 break;
         }
 
@@ -147,7 +150,7 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
             else
             {
                 // DNF
-                $participant->setFinishStatus(Result\Participant::FINISH_DNF);
+                $participant->setFinishStatus(Participant::FINISH_DNF);
             }
 
             // Set total time and position (but we can't trust, so we will
@@ -274,12 +277,12 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
                ->setDriverId($guid);
 
         // Create participant and add driver
-        $participant = Result\Participant::createInstance();
+        $participant = Participant::createInstance();
         $participant->setDrivers(array($driver))
                     // No grid position yet. Can't figure out in AC log
                     // files
                     // ->setGridPosition($player_index+1)
-                    ->setFinishStatus(Result\Participant::FINISH_NORMAL)
+                    ->setFinishStatus(Participant::FINISH_NORMAL)
                     ->setTeam($team);
 
         // Create vehicle and add to participant

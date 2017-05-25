@@ -1,8 +1,8 @@
     <?php
 use Simresults\Data_Reader_AssettoCorsa;
 use Simresults\Data_Reader;
-use Simresults\Session;
-use Simresults\Participant;
+use Simresults\Result\Session;
+use Simresults\Result\Participant;
 
 /**
  * Tests for the Assetto Corsa reader

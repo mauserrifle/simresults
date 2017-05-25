@@ -1,5 +1,8 @@
 <?php
 namespace Simresults;
+use Simresults\Result\Helper;
+use Simresults\Result\Session;
+use Simresults\Result\Participant;
 
 /**
  * The reader for AssettoCorsa
@@ -70,7 +73,7 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
         foreach ($sessions_data as $session_data)
         {
             // Init session
-            $session = Result\Session::createInstance();
+            $session = Session::createInstance();
 
             // Get participants (do for each session to prevent re-used objects
             // between sessions)
@@ -83,9 +86,9 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
                 $driver->setName($this->helper->arrayGet($player_data, 'name'));
 
                 // Create participant and add driver
-                $participant = Result\Participant::createInstance();
+                $participant = Participant::createInstance();
                 $participant->setDrivers(array($driver))
-                            ->setFinishStatus(Result\Participant::FINISH_NORMAL);
+                            ->setFinishStatus(Participant::FINISH_NORMAL);
 
                 // Create vehicle and add to participant
                 $vehicle = new Result\Vehicle;
@@ -97,7 +100,7 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
             }
 
             // Practice session by default
-            $type = Result\Session::TYPE_PRACTICE;
+            $type = Session::TYPE_PRACTICE;
 
             // Check session name to get type
             // TODO: Should be checked when full game is released. Also create
@@ -106,15 +109,15 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
             {
                 case 'qualify session':
                 case 'qualify':
-                    $type = Result\Session::TYPE_QUALIFY;
+                    $type = Session::TYPE_QUALIFY;
                     break;
                 case 'warmup session':
-                    $type = Result\Session::TYPE_WARMUP;
+                    $type = Session::TYPE_WARMUP;
                     break;
                 case 'race session':
                 case 'quick race':
                 case 'race':
-                    $type = Result\Session::TYPE_RACE;
+                    $type = Session::TYPE_RACE;
                     break;
             }
 
