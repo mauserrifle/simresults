@@ -66,7 +66,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
     protected function readSessions()
     {
         // Create new session instance
-        $session = Session::createInstance();
+        $session = Result\Session::createInstance();
 
         // Is race session
         if (
@@ -76,7 +76,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
         	)
         {
             // Set type to race
-            $session->setType(Session::TYPE_RACE);
+            $session->setType(Result\Session::TYPE_RACE);
         }
         // Is qualify session
         elseif (
@@ -89,13 +89,13 @@ class Data_Reader_Rfactor2 extends Data_Reader {
             )
         {
             // Set type to qualify
-            $session->setType(Session::TYPE_QUALIFY);
+            $session->setType(Result\Session::TYPE_QUALIFY);
         }
         // Is warmup session
         elseif ($xml_session = $this->dom->getElementsByTagName('Warmup')->item(0))
         {
             // Set type to warmup
-            $session->setType(Session::TYPE_WARMUP);
+            $session->setType(Result\Session::TYPE_WARMUP);
         }
         // Is practice session
         elseif (
@@ -105,7 +105,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
         		)
         {
             // Set type to practice
-            $session->setType(Session::TYPE_PRACTICE);
+            $session->setType(Result\Session::TYPE_PRACTICE);
         }
         // No session data found
         else
@@ -174,13 +174,13 @@ class Data_Reader_Rfactor2 extends Data_Reader {
 
            // DNF statusses
         $dnf_statusses = array(
-            Participant::FINISH_DNF,
-            Participant::FINISH_DQ,
-            Participant::FINISH_NONE,
+            Result\Participant::FINISH_DNF,
+            Result\Participant::FINISH_DQ,
+            Result\Participant::FINISH_NONE,
         );
 
         // This is a race session
-        if ($session->getType() === Session::TYPE_RACE)
+        if ($session->getType() === Result\Session::TYPE_RACE)
         {
             // Loop each participant to find position corruption
             foreach ($participants as $part_key => $part)
@@ -312,7 +312,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
     protected function getTrack()
     {
         // Create new track
-        $track = new Track;
+        $track = new Result\Track;
 
         // Set track values
         $track
@@ -334,7 +334,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
     protected function getGame()
     {
         // Create new game
-        $game = new Game;
+        $game = new Result\Game;
 
         // Get game version
         $game_version = $this->dom_value('GameVersion');
@@ -378,7 +378,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
     protected function getServer()
     {
         // Create new server
-        $server = new Server;
+        $server = new Result\Server;
 
         // Not multiplayer. No server data available
         if ($this->dom_value('Setting') !== 'Multiplayer')
@@ -426,7 +426,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
         foreach ($this->dom->getElementsByTagName('Driver') as $driver_xml)
         {
             // Create new driver
-            $main_driver = new Driver;
+            $main_driver = new Result\Driver;
 
             // Get position
             $position = (int) $this->dom_value('Position', $driver_xml);
@@ -437,7 +437,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                 ->setHuman( (bool) $this->dom_value('isPlayer', $driver_xml));
 
             // Create new vehicle
-            $vehicle = new Vehicle;
+            $vehicle = new Result\Vehicle;
 
             // Set vehicle values
             $vehicle
@@ -447,7 +447,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                 ->setNumber( (int) $this->dom_value('CarNumber', $driver_xml));
 
             // Create participant
-            $participant = Participant::createInstance();
+            $participant = Result\Participant::createInstance();
 
             // Set participant values
             $participant
@@ -481,19 +481,19 @@ class Data_Reader_Rfactor2 extends Data_Reader {
             if ($finish_status === 'finished normally')
             {
                 // Set finish status
-                $participant->setFinishStatus(Participant::FINISH_NORMAL);
+                $participant->setFinishStatus(Result\Participant::FINISH_NORMAL);
             }
             // Is disqualified
             elseif ($finish_status === 'dq')
             {
                 // Set disqualified status
-                $participant->setFinishStatus(Participant::FINISH_DQ);
+                $participant->setFinishStatus(Result\Participant::FINISH_DQ);
             }
             // Not finished
             elseif ($finish_status === 'dnf')
             {
                 // Set did not finish status
-                $participant->setFinishStatus(Participant::FINISH_DNF);
+                $participant->setFinishStatus(Result\Participant::FINISH_DNF);
 
                 // Set finish comment (if any)
                 if ($finish_status = $this->dom_value('DNFReason', $driver_xml))
@@ -505,7 +505,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
             else
             {
                 // Set no finish status
-                $participant->setFinishStatus(Participant::FINISH_NONE);
+                $participant->setFinishStatus(Result\Participant::FINISH_NONE);
             }
 
 
@@ -548,7 +548,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                 else
                 {
                     // Create new driver
-                    $swap_driver = new Driver;
+                    $swap_driver = new Result\Driver;
 
                     // Set name
                     $swap_driver->setName($driver_name);
@@ -683,7 +683,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
             foreach ($driver_xml->getElementsByTagName('Lap') as $lap_xml)
             {
                 // Create new lap
-                $lap = new Lap;
+                $lap = new Result\Lap;
 
                 // Lap time zero or lower
                 if (($lap_time = (float) $lap_xml->nodeValue) <= 0.0)
@@ -1000,7 +1000,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
      *
      * @param  Sesssion  $session
      */
-    protected function setChats(Session $session)
+    protected function setChats(Result\Session $session)
     {
         // No chats by default
         $chats = array();
@@ -1010,7 +1010,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
         foreach ($this->dom->getElementsByTagName('Chat') as $chat_xml)
         {
             // Create new chat
-            $chat = new Chat;
+            $chat = new Result\Chat;
 
             // Set message
             $chat->setMessage($chat_xml->nodeValue);
@@ -1042,7 +1042,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
      *
      * @param  Sesssion  $session
      */
-    protected function setIncidents(Session $session)
+    protected function setIncidents(Result\Session $session)
     {
         // No incidents by default
         $incidents = array();
@@ -1054,7 +1054,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
         if ($incidents_dom->length > 2000)
         {
              // Create new dummy incident
-            $incident = new Incident;
+            $incident = new Result\Incident;
 
             $session->setIncidents(array(
                 $incident->setMessage('Sorry, way too many incidents to show!')
@@ -1068,7 +1068,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
         foreach ($incidents_dom as $incident_xml)
         {
             // Create new incident
-            $incident = new Incident;
+            $incident = new Result\Incident;
 
             // Set message
             $incident->setMessage($incident_xml->nodeValue);
@@ -1113,7 +1113,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
      * Sets the penalties on a session instance
      * @param  Sesssion  $session
      */
-    protected function setPenalties(Session $session)
+    protected function setPenalties(Result\Session $session)
     {
         // No penalties by default
         $penalties = array();
@@ -1123,7 +1123,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
         foreach ($this->dom->getElementsByTagName('Penalty') as $penalty_xml)
         {
             // Create new penalty
-            $penalty = new Penalty;
+            $penalty = new Result\Penalty;
 
             // Set message
             $penalty->setMessage($penalty_xml->nodeValue);
@@ -1168,7 +1168,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
         $allowed_vehicles_objects = array();
         foreach ($allowed_vehicles as $vehicle_name)
         {
-            $vehicle = new Vehicle;
+            $vehicle = new Result\Vehicle;
             $vehicle->setName($vehicle_name);
             $allowed_vehicles_objects[] = $vehicle;
         }

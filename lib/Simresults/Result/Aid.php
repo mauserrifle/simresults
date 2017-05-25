@@ -1,14 +1,14 @@
 <?php
-namespace Simresults;
+namespace Simresults\Result;
 
 /**
- * The game class.
+ * The aid class.
  *
  * @author     Maurice van der Star <mauserrifle@gmail.com>
  * @copyright  (c) 2013 Maurice van der Star
  * @license    http://opensource.org/licenses/ISC
  */
-class Game {
+class Aid {
 
     /**
      * @var  int
@@ -16,14 +16,14 @@ class Game {
     protected $id;
 
     /**
-     * @var  string  The name of the game
+     * @var  string  The aid used
      */
-    protected $name;
+    protected $aid;
 
     /**
-     * @var  string  The version of the game
+     * @var  string  The value for the aid
      */
-    protected $version;
+    protected $value;
 
     /**
      * @return  int
@@ -35,7 +35,7 @@ class Game {
 
     /**
      * @param   int      $id
-     * @return  Game
+     * @return  Aid
      */
 
     public function setId($id)
@@ -45,47 +45,47 @@ class Game {
     }
 
     /**
-     * Set the name of the game
+     * Set the aid
      *
-     * @param   string  $name
-     * @return  Game
+     * @param   string  $aid
+     * @return  Aid
      */
-    public function setName($name)
+    public function setAid($aid)
     {
-        $this->name = $name;
+        $this->aid = $aid;
         return $this;
     }
 
     /**
-     * Get the name of the game
+     * Get the aid
      *
      * @return  string
      */
-    public function getName()
+    public function getAid()
     {
-        return $this->name;
+        return $this->aid;
     }
 
     /**
-     * Set the version of the game
+     * Set the value
      *
-     * @param   string  $version
-     * @return  Game
+     * @param   string  $value
+     * @return  value
      */
-    public function setVersion($version)
+    public function setValue($value)
     {
-        $this->version = $version;
+        $this->value = $value;
         return $this;
     }
 
     /**
-     * Get the version of the game
+     * Get the value
      *
      * @return  string
      */
-    public function getVersion()
+    public function getValue()
     {
-        return $this->version;
+        return $this->value;
     }
 
 }

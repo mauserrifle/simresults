@@ -1,14 +1,14 @@
 <?php
-namespace Simresults;
+namespace Simresults\Result;
 
 /**
- * The incident class.
+ * The penalty class.
  *
  * @author     Maurice van der Star <mauserrifle@gmail.com>
  * @copyright  (c) 2013 Maurice van der Star
  * @license    http://opensource.org/licenses/ISC
  */
-class Incident {
+class Penalty {
 
     /**
      * @var  int
@@ -16,12 +16,13 @@ class Incident {
     protected $id;
 
     /**
-     * @var  string  The incident message
+     * @var  string  The penalty message
      */
     protected $message;
 
     /**
      * @var  \DateTime  The date. Mind that this does not support miliseconds.
+     *
      */
     protected $date;
 
@@ -30,11 +31,6 @@ class Incident {
      *              a precise time including miliseconds.
      */
     protected $elapsed_seconds;
-
-    /**
-     * @var  boolean  Whether this incident is worth reviewing
-     */
-    protected $for_review = false;
 
     /**
      * @return  int
@@ -46,7 +42,7 @@ class Incident {
 
     /**
      * @param   int      $id
-     * @return  Incident
+     * @return  Penalty
      */
 
     public function setId($id)
@@ -56,10 +52,10 @@ class Incident {
     }
 
     /**
-     * Set the incident message
+     * Set the penalty message
      *
-     * @param   string    $message
-     * @return  Incident
+     * @param   string   $message
+     * @return  Penalty
      */
     public function setMessage($message)
     {
@@ -68,7 +64,7 @@ class Incident {
     }
 
     /**
-     * Get the message
+     * Get the penalty message
      *
      * @return  string
      */
@@ -78,11 +74,11 @@ class Incident {
     }
 
     /**
-     * Set the date and time this incident happend. Mind that this does not
-     * support miliseconds.
+     * Set the date and time this penalty was. Mind that this does not support
+     * miliseconds
      *
      * @param   \DateTime  $date
-     * @return  Incident
+     * @return  Penalty
      */
     public function setDate(\DateTime $date)
     {
@@ -91,8 +87,8 @@ class Incident {
     }
 
     /**
-     * Get the date and time this incident happend. Mind that this does not
-     * support miliseconds.
+     * Get the date and time this penalty was. Mind that this does not support
+     * miliseconds
      *
      * @return  \DateTime
      */
@@ -106,7 +102,7 @@ class Incident {
      * time including miliseconds.
      *
      * @param   float  $seconds
-     * @return  Incident
+     * @return  Penalty
      */
     public function setElapsedSeconds($seconds)
     {
@@ -125,25 +121,4 @@ class Incident {
         return $this->elapsed_seconds;
     }
 
-    /**
-     * Set whether this incident is worth reviewing
-     *
-     * @param   boolean  $for_review
-     * @return  Incident
-     */
-    public function setForReview($for_review)
-    {
-        $this->for_review = $for_review;
-        return $this;
-    }
-
-    /**
-     * Get whether this incident is worth reviewing
-     *
-     * @return  boolean
-     */
-    public function isForReview()
-    {
-        return $this->for_review;
-    }
 }

@@ -70,7 +70,7 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
         foreach ($sessions_data as $session_data)
         {
             // Init session
-            $session = Session::createInstance();
+            $session = Result\Session::createInstance();
 
             // Get participants (do for each session to prevent re-used objects
             // between sessions)
@@ -79,16 +79,16 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
             foreach ($players_data as $player_index => $player_data)
             {
                 // Create driver
-                $driver = new Driver;
+                $driver = new Result\Driver;
                 $driver->setName($this->helper->arrayGet($player_data, 'name'));
 
                 // Create participant and add driver
-                $participant = Participant::createInstance();
+                $participant = Result\Participant::createInstance();
                 $participant->setDrivers(array($driver))
-                            ->setFinishStatus(Participant::FINISH_NORMAL);
+                            ->setFinishStatus(Result\Participant::FINISH_NORMAL);
 
                 // Create vehicle and add to participant
-                $vehicle = new Vehicle;
+                $vehicle = new Result\Vehicle;
                 $vehicle->setName($this->helper->arrayGet($player_data, 'car'));
                 $participant->setVehicle($vehicle);
 
@@ -97,7 +97,7 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
             }
 
             // Practice session by default
-            $type = Session::TYPE_PRACTICE;
+            $type = Result\Session::TYPE_PRACTICE;
 
             // Check session name to get type
             // TODO: Should be checked when full game is released. Also create
@@ -106,15 +106,15 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
             {
                 case 'qualify session':
                 case 'qualify':
-                    $type = Session::TYPE_QUALIFY;
+                    $type = Result\Session::TYPE_QUALIFY;
                     break;
                 case 'warmup session':
-                    $type = Session::TYPE_WARMUP;
+                    $type = Result\Session::TYPE_WARMUP;
                     break;
                 case 'race session':
                 case 'quick race':
                 case 'race':
-                    $type = Session::TYPE_RACE;
+                    $type = Result\Session::TYPE_RACE;
                     break;
             }
 
@@ -127,17 +127,17 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
                         (int) $this->helper->arrayGet($session_data, 'duration'));
 
             // Set game
-            $game = new Game; $game->setName('Assetto Corsa');
+            $game = new Result\Game; $game->setName('Assetto Corsa');
             $session->setGame($game);
 
             // Set server (we do not know...)
-            $server = new Server;
+            $server = new Result\Server;
             $server->setName($this->helper->arrayGet(
                 $data, 'server', 'Unknown or offline'));
             $session->setServer($server);
 
             // Set track
-            $track = new Track;
+            $track = new Result\Track;
             $track->setVenue($this->helper->arrayGet($data, 'track'));
             $session->setTrack($track);
 
@@ -156,7 +156,7 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
             foreach ($laps_data as $lap_data)
             {
                 // Init new lap
-                $lap = new Lap;
+                $lap = new Result\Lap;
 
                 // Set participant
                 $lap->setParticipant(

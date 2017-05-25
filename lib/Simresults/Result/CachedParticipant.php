@@ -1,5 +1,5 @@
 <?php
-namespace Simresults;
+namespace Simresults\Result;
 
 /**
  * The cached participant class. Overrides methods to implement cache.

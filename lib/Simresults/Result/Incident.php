@@ -1,14 +1,14 @@
 <?php
-namespace Simresults;
+namespace Simresults\Result;
 
 /**
- * The chat class.
+ * The incident class.
  *
  * @author     Maurice van der Star <mauserrifle@gmail.com>
  * @copyright  (c) 2013 Maurice van der Star
  * @license    http://opensource.org/licenses/ISC
  */
-class Chat {
+class Incident {
 
     /**
      * @var  int
@@ -16,13 +16,12 @@ class Chat {
     protected $id;
 
     /**
-     * @var  string  The message sent
+     * @var  string  The incident message
      */
     protected $message;
 
     /**
-     * @var  \DateTime  The date it was sent. Mind that this does not support
-     *                  miliseconds.
+     * @var  \DateTime  The date. Mind that this does not support miliseconds.
      */
     protected $date;
 
@@ -31,6 +30,11 @@ class Chat {
      *              a precise time including miliseconds.
      */
     protected $elapsed_seconds;
+
+    /**
+     * @var  boolean  Whether this incident is worth reviewing
+     */
+    protected $for_review = false;
 
     /**
      * @return  int
@@ -42,7 +46,7 @@ class Chat {
 
     /**
      * @param   int      $id
-     * @return  Chat
+     * @return  Incident
      */
 
     public function setId($id)
@@ -52,10 +56,10 @@ class Chat {
     }
 
     /**
-     * Set the message sent
+     * Set the incident message
      *
-     * @param   string  $message
-     * @return  Chat
+     * @param   string    $message
+     * @return  Incident
      */
     public function setMessage($message)
     {
@@ -64,7 +68,7 @@ class Chat {
     }
 
     /**
-     * Get the message sent
+     * Get the message
      *
      * @return  string
      */
@@ -74,11 +78,11 @@ class Chat {
     }
 
     /**
-     * Set the date and time this chat was sent. Mind that this does not
+     * Set the date and time this incident happend. Mind that this does not
      * support miliseconds.
      *
      * @param   \DateTime  $date
-     * @return  Chat
+     * @return  Incident
      */
     public function setDate(\DateTime $date)
     {
@@ -87,7 +91,7 @@ class Chat {
     }
 
     /**
-     * Get the date and time this chat was sent. Mind that this does not
+     * Get the date and time this incident happend. Mind that this does not
      * support miliseconds.
      *
      * @return  \DateTime
@@ -102,7 +106,7 @@ class Chat {
      * time including miliseconds.
      *
      * @param   float  $seconds
-     * @return  Chat
+     * @return  Incident
      */
     public function setElapsedSeconds($seconds)
     {
@@ -121,4 +125,25 @@ class Chat {
         return $this->elapsed_seconds;
     }
 
+    /**
+     * Set whether this incident is worth reviewing
+     *
+     * @param   boolean  $for_review
+     * @return  Incident
+     */
+    public function setForReview($for_review)
+    {
+        $this->for_review = $for_review;
+        return $this;
+    }
+
+    /**
+     * Get whether this incident is worth reviewing
+     *
+     * @return  boolean
+     */
+    public function isForReview()
+    {
+        return $this->for_review;
+    }
 }

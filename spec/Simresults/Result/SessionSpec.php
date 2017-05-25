@@ -1,15 +1,15 @@
 <?php
 
-namespace spec\Simresults;
+namespace spec\Simresults\Result;
 
-use Simresults\Session;
-use Simresults\Participant;
-use Simresults\Lap;
-use Simresults\Setting;
-use Simresults\Incident;
-use Simresults\Vehicle;
-use Simresults\Cut;
-use Simresults\Helper;
+use Simresults\Result\Session;
+use Simresults\Result\Participant;
+use Simresults\Result\Lap;
+use Simresults\Result\Setting;
+use Simresults\Result\Incident;
+use Simresults\Result\Vehicle;
+use Simresults\Result\Cut;
+use Simresults\Result\Helper;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
@@ -22,7 +22,7 @@ class SessionSpec extends ObjectBehavior
 {
     function it_is_initializable()
     {
-        $this->shouldHaveType('Simresults\Session');
+        $this->shouldHaveType('Simresults\Result\Session');
     }
 
     function it_lasted_laps(Participant $part1, Participant $part2)

@@ -65,34 +65,34 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
         foreach ($data['Sessions'] as $session_data)
         {
             // Init session
-            $session = Session::createInstance();
+            $session = Result\Session::createInstance();
 
             // Practice session by default
-            $type = Session::TYPE_PRACTICE;
+            $type = Result\Session::TYPE_PRACTICE;
 
             // Check session type
             switch(strtolower($name = $session_data['Type']))
             {
                 case 'qualify':
-                    $type = Session::TYPE_QUALIFY;
+                    $type = Result\Session::TYPE_QUALIFY;
                     break;
                 case 'qualify2':
-                    $type = Session::TYPE_QUALIFY;
+                    $type = Result\Session::TYPE_QUALIFY;
                     break;
                 case 'qualify3':
-                    $type = Session::TYPE_QUALIFY;
+                    $type = Result\Session::TYPE_QUALIFY;
                     break;
                 case 'warmup':
-                    $type = Session::TYPE_WARMUP;
+                    $type = Result\Session::TYPE_WARMUP;
                     break;
                 case 'race':
-                    $type = Session::TYPE_RACE;
+                    $type = Result\Session::TYPE_RACE;
                     break;
                 case 'race2':
-                    $type = Session::TYPE_RACE;
+                    $type = Result\Session::TYPE_RACE;
                     break;
                 case 'race3':
-                    $type = Session::TYPE_RACE;
+                    $type = Result\Session::TYPE_RACE;
                     break;
             }
 
@@ -102,15 +102,15 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
                     ->setOtherSettings($other_settings);
 
             // Set game
-            $game = new Game; $game->setName('RaceRoom Racing Experience');
+            $game = new Result\Game; $game->setName('RaceRoom Racing Experience');
             $session->setGame($game);
 
             // Set server
-            $server = new Server; $server->setName($this->helper->arrayGet($data, 'Server'));
+            $server = new Result\Server; $server->setName($this->helper->arrayGet($data, 'Server'));
             $session->setServer($server);
 
             // Set track
-            $track = new Track;
+            $track = new Result\Track;
             $track->setVenue($this->helper->arrayGet($data, 'Track'));
             $track->setCourse($this->helper->arrayGet($data, 'TrackLayout'));
             $session->setTrack($track);
@@ -121,7 +121,7 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
             foreach ($players_data as $player_index => $player_data)
             {
                 // Create driver
-                $driver = new Driver;
+                $driver = new Result\Driver;
 
                 // Has name
                 if ($name = $this->helper->arrayGet($player_data, 'FullName') OR
@@ -136,7 +136,7 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
                 }
 
                 // Create participant and add driver
-                $participant = Participant::createInstance();
+                $participant = Result\Participant::createInstance();
                 $participant->setDrivers(array($driver))
                             ->setPosition($this->helper->arrayGet(
                                 $player_data, 'Position', null));
@@ -149,22 +149,22 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
                     {
                         case 'finished':
                             $participant->setFinishStatus(
-                                Participant::FINISH_NORMAL);
+                                Result\Participant::FINISH_NORMAL);
                             break;
                         case 'disqualified':
                             $participant->setFinishStatus(
-                                Participant::FINISH_DQ);
+                                Result\Participant::FINISH_DQ);
                             break;
                         default:
                             $participant->setFinishStatus(
-                                Participant::FINISH_DNF);
+                                Result\Participant::FINISH_DNF);
                             break;
                     }
                 }
                 // No finish status, so always finished
                 else
                 {
-                    $participant->setFinishStatus(Participant::FINISH_NORMAL);
+                    $participant->setFinishStatus(Result\Participant::FINISH_NORMAL);
                 }
 
                 // Has total time
@@ -175,7 +175,7 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
                 }
 
                 // Create vehicle and add to participant
-                $vehicle = new Vehicle;
+                $vehicle = new Result\Vehicle;
                 $vehicle->setName($this->helper->arrayGet($player_data, 'Car'));
                 $participant->setVehicle($vehicle);
 
@@ -188,7 +188,7 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
                         if ($lap_data['Time'] < 0) continue;
 
                         // Init new lap
-                        $lap = new Lap;
+                        $lap = new Result\Lap;
 
                         // Set participant
                         $lap->setParticipant($participant);
@@ -212,7 +212,7 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
                 elseif (0 < $best_lap = $this->helper->arrayGet($player_data, 'BestLapTime'))
                 {
                     // Init new lap
-                    $lap = new Lap;
+                    $lap = new Result\Lap;
 
                     // Set participant
                     $lap->setParticipant($participant);

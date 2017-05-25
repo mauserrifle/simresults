@@ -1,5 +1,5 @@
 <?php
-namespace Simresults;
+namespace Simresults\Result;
 
 /**
  * The vehicle class.

@@ -42,7 +42,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             $vehicle_names = array();
 
             // Init session
-            $session = Session::createInstance();
+            $session = Result\Session::createInstance();
 
             // Set session type
             $type = null;
@@ -50,16 +50,16 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             switch($session_data['type'])
             {
                 case 'qualify':
-                    $type = Session::TYPE_QUALIFY;
+                    $type = Result\Session::TYPE_QUALIFY;
                     break;
                 case 'practice':
-                    $type = Session::TYPE_PRACTICE;
+                    $type = Result\Session::TYPE_PRACTICE;
                     break;
                 case 'warmup':
-                    $type = Session::TYPE_PRACTICE;
+                    $type = Result\Session::TYPE_PRACTICE;
                     break;
                 case 'race':
-                    $type = Session::TYPE_RACE;
+                    $type = Result\Session::TYPE_RACE;
                     break;
             }
             $session->setType($type);
@@ -83,13 +83,13 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             }
 
             // Set game
-            $game = new Game; $game->setName('Assetto Corsa');
+            $game = new Result\Game; $game->setName('Assetto Corsa');
             $session->setGame($game);
 
             // Has track
             if (isset($session_data['track']))
             {
-                $track = new Track;
+                $track = new Result\Track;
                 $track->setVenue($session_data['track']);
                 $session->setTrack($track);
             }
@@ -102,7 +102,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             }
 
             // Set server
-            $server = new Server;
+            $server = new Result\Server;
             $server->setDedicated(true);
             if (isset($session_data['server']))
             {
@@ -117,7 +117,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             // Add allowed vehicles
             foreach ($session_data['car_list'] as $vehicle_name)
             {
-                $vehicle = new Vehicle;
+                $vehicle = new Result\Vehicle;
                 $vehicle->setName($vehicle_name);
                 $session->addAllowedVehicle($vehicle);
             }
@@ -125,7 +125,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             // Set chats
             foreach ($session_data['chats'] as $chat_message)
             {
-                $chat = new Chat;
+                $chat = new Result\Chat;
                 $chat->setMessage($chat_message);
                 $session->addChat($chat);
             }
@@ -141,7 +141,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 }
 
                 // Create driver
-                $driver = new Driver;
+                $driver = new Result\Driver;
                 $driver->setName($part_data['name']);
 
                 // Total time not greater than 0
@@ -152,19 +152,19 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 }
 
                 // Create participant and add driver
-                $participant = Participant::createInstance();
+                $participant = Result\Participant::createInstance();
                 $participant->setDrivers(array($driver))
                             ->setTotalTime($total_time);
 
                 // Has total time parsed data and should not be a forced DNF
                 if ($total_time AND ! $this->helper->arrayGet($part_data, 'force_dnf'))
                 {
-                    $participant->setFinishStatus(Participant::FINISH_NORMAL);
+                    $participant->setFinishStatus(Result\Participant::FINISH_NORMAL);
                 }
                 // No total time in parsed data
                 else
                 {
-                    $participant->setFinishStatus(Participant::FINISH_DNF);
+                    $participant->setFinishStatus(Result\Participant::FINISH_DNF);
                 }
 
                 // Remember vehicle instances by vehicle name
@@ -175,7 +175,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 if (isset($part_data['vehicle']))
                 {
                     // Init vehicle
-                    $vehicle = new Vehicle;
+                    $vehicle = new Result\Vehicle;
                     $vehicle->setName($part_data['vehicle']);
                     $participant->setVehicle($vehicle);
 
@@ -204,7 +204,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                     $lap_i => $lap_data)
                 {
                     // Init new lap
-                    $lap = new Lap;
+                    $lap = new Result\Lap;
 
                     // Set participant
                     $lap->setParticipant($participant);
@@ -238,7 +238,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                     else
                     {
                         // Init vehicle
-                        $vehicle = new Vehicle;
+                        $vehicle = new Result\Vehicle;
                         $vehicle->setName($lap_data['vehicle']);
                         $lap->setVehicle($vehicle);
 
@@ -252,10 +252,10 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
 
                 // No laps and race result
                 if ( ! $participant->getLaps() AND
-                    $session->getType() === Session::TYPE_RACE)
+                    $session->getType() === Result\Session::TYPE_RACE)
                 {
                     // Did not finish
-                    $participant->setFinishStatus(Participant::FINISH_DNF);
+                    $participant->setFinishStatus(Result\Participant::FINISH_DNF);
                 }
 
                 // Add participant to collection
@@ -280,7 +280,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 if ( ! $participant->getVehicle())
                 {
                     // Init vehicle
-                    $vehicle = new Vehicle;
+                    $vehicle = new Result\Vehicle;
                     $vehicle->setName(key($vehicle_names));
                     $participant->setVehicle($vehicle);
                 }

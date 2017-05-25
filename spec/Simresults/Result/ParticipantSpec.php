@@ -1,13 +1,13 @@
 <?php
 
-namespace spec\Simresults;
+namespace spec\Simresults\Result;
 
-use Simresults\Participant;
-use Simresults\Lap;
-use Simresults\Aid;
-use Simresults\Vehicle;
-use Simresults\Driver;
-use Simresults\Helper;
+use Simresults\Result\Participant;
+use Simresults\Result\Lap;
+use Simresults\Result\Aid;
+use Simresults\Result\Vehicle;
+use Simresults\Result\Driver;
+use Simresults\Result\Helper;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
@@ -20,7 +20,7 @@ class ParticipantSpec extends ObjectBehavior
 {
     function it_is_initializable()
     {
-        $this->shouldHaveType('Simresults\Participant');
+        $this->shouldHaveType('Simresults\Result\Participant');
     }
 
     function it_has_vehicle_or_multiple_vehicles_from_laps()

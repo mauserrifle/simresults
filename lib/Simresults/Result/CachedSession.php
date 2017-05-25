@@ -1,5 +1,5 @@
 <?php
-namespace Simresults;
+namespace Simresults\Result;
 
 /**
  * The cached session class. Overrides methods to implement cache.

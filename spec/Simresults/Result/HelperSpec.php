@@ -1,10 +1,10 @@
 <?php
 
-namespace spec\Simresults;
+namespace spec\Simresults\Result;
 
-use Simresults\Helper;
-use Simresults\Participant;
-use Simresults\Lap;
+use Simresults\Result\Helper;
+use Simresults\Result\Participant;
+use Simresults\Result\Lap;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
@@ -17,7 +17,7 @@ class HelperSpec extends ObjectBehavior
 {
     function it_is_initializable()
     {
-        $this->shouldHaveType('Simresults\Helper');
+        $this->shouldHaveType('Simresults\Result\Helper');
     }
 
     function it_formats_time()

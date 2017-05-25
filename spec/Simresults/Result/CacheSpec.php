@@ -1,6 +1,6 @@
 <?php
 
-namespace spec\Simresults;
+namespace spec\Simresults\Result;
 
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
@@ -14,7 +14,7 @@ class CacheSpec extends ObjectBehavior
 {
     function it_is_initializable()
     {
-        $this->shouldHaveType('Simresults\Cache');
+        $this->shouldHaveType('Simresults\Result\Cache');
     }
 
     function it_can_add_data()

@@ -1,14 +1,14 @@
 <?php
-namespace Simresults;
+namespace Simresults\Result;
 
 /**
- * The aid class.
+ * The game class.
  *
  * @author     Maurice van der Star <mauserrifle@gmail.com>
  * @copyright  (c) 2013 Maurice van der Star
  * @license    http://opensource.org/licenses/ISC
  */
-class Aid {
+class Game {
 
     /**
      * @var  int
@@ -16,14 +16,14 @@ class Aid {
     protected $id;
 
     /**
-     * @var  string  The aid used
+     * @var  string  The name of the game
      */
-    protected $aid;
+    protected $name;
 
     /**
-     * @var  string  The value for the aid
+     * @var  string  The version of the game
      */
-    protected $value;
+    protected $version;
 
     /**
      * @return  int
@@ -35,7 +35,7 @@ class Aid {
 
     /**
      * @param   int      $id
-     * @return  Aid
+     * @return  Game
      */
 
     public function setId($id)
@@ -45,47 +45,47 @@ class Aid {
     }
 
     /**
-     * Set the aid
+     * Set the name of the game
      *
-     * @param   string  $aid
-     * @return  Aid
+     * @param   string  $name
+     * @return  Game
      */
-    public function setAid($aid)
+    public function setName($name)
     {
-        $this->aid = $aid;
+        $this->name = $name;
         return $this;
     }
 
     /**
-     * Get the aid
+     * Get the name of the game
      *
      * @return  string
      */
-    public function getAid()
+    public function getName()
     {
-        return $this->aid;
+        return $this->name;
     }
 
     /**
-     * Set the value
+     * Set the version of the game
      *
-     * @param   string  $value
-     * @return  value
+     * @param   string  $version
+     * @return  Game
      */
-    public function setValue($value)
+    public function setVersion($version)
     {
-        $this->value = $value;
+        $this->version = $version;
         return $this;
     }
 
     /**
-     * Get the value
+     * Get the version of the game
      *
      * @return  string
      */
-    public function getValue()
+    public function getVersion()
     {
-        return $this->value;
+        return $this->version;
     }
 
 }

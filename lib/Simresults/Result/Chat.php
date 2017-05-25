@@ -1,14 +1,14 @@
 <?php
-namespace Simresults;
+namespace Simresults\Result;
 
 /**
- * The penalty class.
+ * The chat class.
  *
  * @author     Maurice van der Star <mauserrifle@gmail.com>
  * @copyright  (c) 2013 Maurice van der Star
  * @license    http://opensource.org/licenses/ISC
  */
-class Penalty {
+class Chat {
 
     /**
      * @var  int
@@ -16,13 +16,13 @@ class Penalty {
     protected $id;
 
     /**
-     * @var  string  The penalty message
+     * @var  string  The message sent
      */
     protected $message;
 
     /**
-     * @var  \DateTime  The date. Mind that this does not support miliseconds.
-     *
+     * @var  \DateTime  The date it was sent. Mind that this does not support
+     *                  miliseconds.
      */
     protected $date;
 
@@ -42,7 +42,7 @@ class Penalty {
 
     /**
      * @param   int      $id
-     * @return  Penalty
+     * @return  Chat
      */
 
     public function setId($id)
@@ -52,10 +52,10 @@ class Penalty {
     }
 
     /**
-     * Set the penalty message
+     * Set the message sent
      *
-     * @param   string   $message
-     * @return  Penalty
+     * @param   string  $message
+     * @return  Chat
      */
     public function setMessage($message)
     {
@@ -64,7 +64,7 @@ class Penalty {
     }
 
     /**
-     * Get the penalty message
+     * Get the message sent
      *
      * @return  string
      */
@@ -74,11 +74,11 @@ class Penalty {
     }
 
     /**
-     * Set the date and time this penalty was. Mind that this does not support
-     * miliseconds
+     * Set the date and time this chat was sent. Mind that this does not
+     * support miliseconds.
      *
      * @param   \DateTime  $date
-     * @return  Penalty
+     * @return  Chat
      */
     public function setDate(\DateTime $date)
     {
@@ -87,8 +87,8 @@ class Penalty {
     }
 
     /**
-     * Get the date and time this penalty was. Mind that this does not support
-     * miliseconds
+     * Get the date and time this chat was sent. Mind that this does not
+     * support miliseconds.
      *
      * @return  \DateTime
      */
@@ -102,7 +102,7 @@ class Penalty {
      * time including miliseconds.
      *
      * @param   float  $seconds
-     * @return  Penalty
+     * @return  Chat
      */
     public function setElapsedSeconds($seconds)
     {

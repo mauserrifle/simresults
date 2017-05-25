@@ -1,13 +1,13 @@
 <?php
 
-namespace spec\Simresults;
+namespace spec\Simresults\Result;
 
-use Simresults\Participant;
-use Simresults\CachedParticipant;
-use Simresults\Lap;
-use Simresults\Vehicle;
-use Simresults\Cache;
-use Simresults\Helper;
+use Simresults\Result\Participant;
+use Simresults\Result\CachedParticipant;
+use Simresults\Result\Lap;
+use Simresults\Result\Vehicle;
+use Simresults\Result\Cache;
+use Simresults\Result\Helper;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
@@ -24,7 +24,7 @@ class CachedParticipantSpec extends ObjectBehavior
 
     function it_is_initializable()
     {
-        $this->shouldHaveType('Simresults\CachedParticipant');
+        $this->shouldHaveType('Simresults\Result\CachedParticipant');
     }
 
     function let(Cache $cache)

@@ -1,6 +1,6 @@
 <?php
 namespace Simresults;
-use Simresults\Helper;
+use Simresults\Result\Helper;
 
 /**
  * The reader for Race07
@@ -54,7 +54,7 @@ class Data_Reader_Race07 extends Data_Reader {
             else
             {
                 // Create new session instance
-                $session = Session::createInstance();
+                $session = Result\Session::createInstance();
 
                 // Get date from human string when available
                 if (isset($data['header']['timestring']))
@@ -75,18 +75,18 @@ class Data_Reader_Race07 extends Data_Reader {
                 }
 
                 //--- Set game
-                $game = new Game;
+                $game = new Result\Game;
                 $game->setName($data['header']['game'])
                      -> setVersion($data['header']['version']);
                 $session->setGame($game);
 
                 //--- Set server (we do not know...)
-                $server = new Server; $server->setName('Unknown or offline');
+                $server = new Result\Server; $server->setName('Unknown or offline');
                 $session->setServer($server);
 
                 //--- Set track
 
-                $track = new Track;
+                $track = new Result\Track;
 
 
                 // Has race data
@@ -215,11 +215,11 @@ class Data_Reader_Race07 extends Data_Reader {
         foreach ($driver_data_array as $driver_data)
         {
             // Create driver
-            $driver = new Driver;
+            $driver = new Result\Driver;
             $driver->setName($driver_data['driver']);
 
             // Create participant and add driver
-            $participant = Participant::createInstance();
+            $participant = Result\Participant::createInstance();
             $participant->setDrivers(array($driver))
                         ->setTeam($this->helper->arrayGet($driver_data, 'team'));
                         // Finish position will be set later using an special
@@ -233,7 +233,7 @@ class Data_Reader_Race07 extends Data_Reader {
             }
 
             // Create vehicle and add to participant
-            $vehicle = new Vehicle;
+            $vehicle = new Result\Vehicle;
             $vehicle->setName($this->helper->arrayGet($driver_data, 'vehicle'));
             $participant->setVehicle($vehicle);
 
@@ -255,7 +255,7 @@ class Data_Reader_Race07 extends Data_Reader {
                     $participant->setTotalTime($seconds);
 
                     // Is finished
-                    $participant->setFinishStatus(Participant::FINISH_NORMAL);
+                    $participant->setFinishStatus(Result\Participant::FINISH_NORMAL);
 
                     $all_dnf = false;
 
@@ -269,7 +269,7 @@ class Data_Reader_Race07 extends Data_Reader {
                 // Should set this participant dnf
                 if ($set_dnf)
                 {
-                    $participant->setFinishStatus(Participant::FINISH_DNF);
+                    $participant->setFinishStatus(Result\Participant::FINISH_DNF);
 
                     // Has reason
                     if (null !== $reason = $this->helper->arrayGet($driver_data, 'reason'))
@@ -297,7 +297,7 @@ class Data_Reader_Race07 extends Data_Reader {
                 for ($lap_i=1; $lap_i <= $laps_count; $lap_i++)
                 {
                     // Init new lap
-                    $lap = new Lap;
+                    $lap = new Result\Lap;
 
                     // Set participant
                     $lap->setParticipant($participant);
@@ -355,14 +355,14 @@ class Data_Reader_Race07 extends Data_Reader {
         if ($all_dnf)
         {
             // Assume we're dealing with qualify session
-            $session->setType(Session::TYPE_QUALIFY);
+            $session->setType(Result\Session::TYPE_QUALIFY);
             $session->setName('Qualify or practice session');
         }
         // Not all participants are dnf
         else
         {
             // Race session
-            $session->setType(Session::TYPE_RACE);
+            $session->setType(Result\Session::TYPE_RACE);
         }
 
         // Sort participants

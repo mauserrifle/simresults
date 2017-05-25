@@ -35,10 +35,10 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
         $data = json_decode($this->data, TRUE);
 
         // Init session
-        $session = Session::createInstance();
+        $session = Result\Session::createInstance();
 
         // Practice session by default
-        $type = Session::TYPE_PRACTICE;
+        $type = Result\Session::TYPE_PRACTICE;
 
         // Check session name to get type
         // TODO: Could we prevent duplicate code for this with other readers?
@@ -46,15 +46,15 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
         {
             case 'qualify session':
             case 'qualify':
-                $type = Session::TYPE_QUALIFY;
+                $type = Result\Session::TYPE_QUALIFY;
                 break;
             case 'warmup session':
-                $type = Session::TYPE_WARMUP;
+                $type = Result\Session::TYPE_WARMUP;
                 break;
             case 'race session':
             case 'quick race':
             case 'race':
-                $type = Session::TYPE_RACE;
+                $type = Result\Session::TYPE_RACE;
                 break;
         }
 
@@ -77,16 +77,16 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
 
 
         // Set game
-        $game = new Game; $game->setName('Assetto Corsa');
+        $game = new Result\Game; $game->setName('Assetto Corsa');
         $session->setGame($game);
 
         // Set server (we do not know...)
-        $server = new Server;
+        $server = new Result\Server;
         $server->setName($this->helper->arrayGet($data, 'Server', 'Unknown'));
         $session->setServer($server);
 
         // Set track
-        $track = new Track;
+        $track = new Result\Track;
         $track->setVenue($this->helper->arrayGet($data, 'TrackName'));
         $session->setTrack($track);
 
@@ -147,7 +147,7 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
             else
             {
                 // DNF
-                $participant->setFinishStatus(Participant::FINISH_DNF);
+                $participant->setFinishStatus(Result\Participant::FINISH_DNF);
             }
 
             // Set total time and position (but we can't trust, so we will
@@ -162,7 +162,7 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
         foreach ($data['Laps'] as $lap_data)
         {
             // Init new lap
-            $lap = new Lap;
+            $lap = new Result\Lap;
 
             // No participant found
             if ( ! isset($participants_by_name[$lap_data['DriverName']]))
@@ -220,7 +220,7 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
             // Not car collision. continue to next
             if ($event['Type'] !== 'COLLISION_WITH_CAR') continue;
 
-            $incident = new Incident;
+            $incident = new Result\Incident;
             $incident->setMessage(sprintf(
                '%s reported contact with another vehicle '.
                 '%s. Impact speed: %s' ,
@@ -269,21 +269,21 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
                                       $vehicle_skin=null)
     {
         // Create driver
-        $driver = new Driver;
+        $driver = new Result\Driver;
         $driver->setName($name)
                ->setDriverId($guid);
 
         // Create participant and add driver
-        $participant = Participant::createInstance();
+        $participant = Result\Participant::createInstance();
         $participant->setDrivers(array($driver))
                     // No grid position yet. Can't figure out in AC log
                     // files
                     // ->setGridPosition($player_index+1)
-                    ->setFinishStatus(Participant::FINISH_NORMAL)
+                    ->setFinishStatus(Result\Participant::FINISH_NORMAL)
                     ->setTeam($team);
 
         // Create vehicle and add to participant
-        $vehicle = new Vehicle;
+        $vehicle = new Result\Vehicle;
         $vehicle->setName($car);
 
         // Has ballast

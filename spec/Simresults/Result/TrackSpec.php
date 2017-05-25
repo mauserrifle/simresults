@@ -1,8 +1,8 @@
 <?php
 
-namespace spec\Simresults;
+namespace spec\Simresults\Result;
 
-use Simresults\Track;
+use Simresults\Result\Track;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
@@ -15,7 +15,7 @@ class TrackSpec extends ObjectBehavior
 {
     function it_is_initializable()
     {
-        $this->shouldHaveType('Simresults\Track');
+        $this->shouldHaveType('Simresults\Result\Track');
     }
 
     function it_returns_friendly_name_using_venue_course_event()

@@ -1,6 +1,8 @@
 <?php
 namespace Simresults;
 
+use Simresults\Result\Helper;
+
 /**
  * The abstract data reader. It's the base for all readers. It's able to
  * find the proper reader using the factory method.

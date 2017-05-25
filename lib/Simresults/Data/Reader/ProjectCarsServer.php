@@ -138,10 +138,10 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 }
 
                 // Init session
-                $session = Session::createInstance();
+                $session = Result\Session::createInstance();
 
                 // Practice session by default
-                $type = Session::TYPE_PRACTICE;
+                $type = Result\Session::TYPE_PRACTICE;
 
                 // Setup name for session type
                 $type_setup_name = ucfirst($type_key);
@@ -151,14 +151,14 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 switch(strtolower(preg_replace('#\d#', '', $type_key)))
                 {
                     case 'qualifying':
-                        $type = Session::TYPE_QUALIFY;
+                        $type = Result\Session::TYPE_QUALIFY;
                         $type_setup_name = 'Qualify';
                         break;
                     case 'warmup':
-                        $type = Session::TYPE_WARMUP;
+                        $type = Result\Session::TYPE_WARMUP;
                         break;
                     case 'race':
-                        $type = Session::TYPE_RACE;
+                        $type = Result\Session::TYPE_RACE;
                         break;
                 }
 
@@ -177,16 +177,16 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
 
 
                 // Set game
-                $game = new Game; $game->setName('Project Cars');
+                $game = new Result\Game; $game->setName('Project Cars');
                 $session->setGame($game);
 
                 // Set server
                 // TODO: Set configurations
-                $server = new Server; $server->setName($data['server']['name']);
+                $server = new Result\Server; $server->setName($data['server']['name']);
                 $session->setServer($server);
 
                 // Set track
-                $track = new Track;
+                $track = new Result\Track;
 
                 // Have friendly track name
                 if (isset($this->attribute_names['tracks'][$history
@@ -232,12 +232,12 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
 
                     // Is lap and the lap is valid (only checked for non-race)
                     if ($event['event_name'] === 'Lap' AND
-                        ($session->getType() === Session::TYPE_RACE
+                        ($session->getType() === Result\Session::TYPE_RACE
                          OR
                          $event['attributes']['CountThisLapTimes']))
                     {
                         // Init new lap
-                        $lap = new Lap;
+                        $lap = new Result\Lap;
 
                         // Set participant
                         $lap->setParticipant($part);
@@ -288,7 +288,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                             continue;
                         }
 
-                        $incident = new Incident;
+                        $incident = new Result\Incident;
                         $incident->setMessage(sprintf(
                            '%s reported contact with another vehicle '.
                             '%s. CollisionMagnitude: %s' ,
@@ -317,7 +317,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                     elseif ($event['event_name'] === 'State' AND
                             $event['attributes']['NewState'] === 'Retired')
                     {
-                        $part->setFinishStatus(Participant::FINISH_DNF);
+                        $part->setFinishStatus(Result\Participant::FINISH_DNF);
                     }
 
                 }
@@ -349,7 +349,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                             $part = $participants_by_id[$result['participantid']];
 
                             // Set DNF
-                            $part->setFinishStatus(Participant::FINISH_DNF);
+                            $part->setFinishStatus(Result\Participant::FINISH_DNF);
                         }
                     }
                 }
@@ -381,7 +381,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                         if ($result['attributes']['FastestLapTime'])
                         {
                             // Init new lap
-                            $lap = new Lap;
+                            $lap = new Result\Lap;
 
                             // Set participant
                             $lap->setParticipant($part);
@@ -437,7 +437,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                                 $next_event['participantid'] == $event['participantid'])
                             {
 
-                                $cut = new Cut;
+                                $cut = new Result\Cut;
                                 $cut->setCutTime(round(
                                     $next_event['attributes']['ElapsedTime']
                                     / 1000, 4));
@@ -502,7 +502,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 // qualify and practice some drivers are missing from the
                 // result
                 if ($results = $session_data['results'] AND
-                    $session->getType() === Session::TYPE_RACE)
+                    $session->getType() === Result\Session::TYPE_RACE)
                 {
                     // Sort participants using our own sort
                     $tmp_sort =
@@ -594,13 +594,13 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 else
                 {
                     // Is race
-                    if ($session->getType() === Session::TYPE_RACE)
+                    if ($session->getType() === Result\Session::TYPE_RACE)
                     {
                         // Set all participants on unknown finish status
                         // We should of had a result for proper statusses
                         foreach ($participants as $part)
                         {
-                            $part->setFinishStatus(Participant::FINISH_NONE);
+                            $part->setFinishStatus(Result\Participant::FINISH_NONE);
                         }
                     }
 
@@ -624,8 +624,8 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
         {
             // Found warmup after race session
             if ($prevous_session AND
-                $prevous_session->getType() === Session::TYPE_RACE AND
-                $session->getType() === Session::TYPE_WARMUP)
+                $prevous_session->getType() === Result\Session::TYPE_RACE AND
+                $session->getType() === Result\Session::TYPE_WARMUP)
             {
                 // Swap them
                 $sessions[$key] = $prevous_session;
@@ -651,7 +651,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
     protected function getParticipant($part_data)
     {
         // Create driver
-        $driver = new Driver;
+        $driver = new Result\Driver;
         $driver->setName($part_data['name'])
                ->setHuman(false);
 
@@ -662,12 +662,12 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
         }
 
         // Create participant and add driver
-        $participant = Participant::createInstance();
+        $participant = Result\Participant::createInstance();
         $participant->setDrivers(array($driver))
-                    ->setFinishStatus(Participant::FINISH_NORMAL);
+                    ->setFinishStatus(Result\Participant::FINISH_NORMAL);
 
         // Create vehicle and add to participant
-        $vehicle = new Vehicle;
+        $vehicle = new Result\Vehicle;
 
         // TODO: Parse livery too?
         // $vehicle->setType( (string) $part_data['setup']['LiveryId']);
