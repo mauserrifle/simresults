@@ -178,9 +178,28 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
                 $vehicle = new Vehicle;
                 $vehicle->setName($this->helper->arrayGet($player_data, 'Car'));
                 $participant->setVehicle($vehicle);
+                
+                // Laps
+	            $laps = $this->helper->arrayGet($player_data, 'RaceSessionLaps');
+	            $best_lap = $this->helper->arrayGet($player_data, 'BestLapTime');
 
-                // Has laps
-                if ($laps = $this->helper->arrayGet($player_data, 'RaceSessionLaps'))
+	            if ($best_lap > 0 && $laps) {
+	            	// Validate: Remove laps, if all laps has no time but BestLapTime is set
+		            $hasLapWithTime = false;
+		            foreach ($laps as $lap_key => $lap_data)
+		            {
+			            if ($lap_data['Time'] > 0) {
+				            $hasLapWithTime = true;
+				            break;
+			            }
+		            }
+		            if (!$hasLapWithTime) {
+			            $laps = array();
+		            }
+	            }
+
+	            // Has Laps
+                if ($laps)
                 {
                     foreach ($laps as $lap_key => $lap_data)
                     {
@@ -215,7 +234,7 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
 
                 }
                 // Has best lap (fallback)
-                elseif (0 < $best_lap = $this->helper->arrayGet($player_data, 'BestLapTime'))
+                elseif (0 < $best_lap)
                 {
                     // Init new lap
                     $lap = new Lap;
