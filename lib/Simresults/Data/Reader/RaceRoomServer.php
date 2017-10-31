@@ -148,6 +148,7 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
                     switch(strtolower($status))
                     {
                         case 'finished':
+                        case 'none':
                             $participant->setFinishStatus(
                                 Participant::FINISH_NORMAL);
                             break;
@@ -178,7 +179,7 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
                 $vehicle = new Vehicle;
                 $vehicle->setName($this->helper->arrayGet($player_data, 'Car'));
                 $participant->setVehicle($vehicle);
-                
+
                 // Laps
 	            $laps = $this->helper->arrayGet($player_data, 'RaceSessionLaps');
 	            $best_lap = $this->helper->arrayGet($player_data, 'BestLapTime');
@@ -224,7 +225,7 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
 
                         // Add lap to participant
                         $participant->addLap($lap);
-                        
+
                         if ($lap->isPitLap())
                         {
                             // Count Pitstops

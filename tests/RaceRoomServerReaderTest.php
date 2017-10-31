@@ -104,6 +104,24 @@ class RaceRoomReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertSame(Session::TYPE_RACE, $session->getType());
     }
 
+    /**
+     * Test finish status "none"
+     */
+    public function testFinishStatusNone()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/raceroom-server/finish.status.none.json');
+
+        // Get session
+        $session = Data_Reader::factory($file_path)->getSession(1);
+        $participants = $session->getParticipants();
+
+        //-- Validate
+        $this->assertSame(Participant::FINISH_NORMAL,
+            $participants[0]->getFinishStatus());
+    }
+
 
 
 
