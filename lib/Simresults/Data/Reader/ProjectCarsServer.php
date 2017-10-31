@@ -141,6 +141,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
 
                 // Setup name for session type
                 $type_setup_name = ucfirst($type_key);
+                $type_setup_name2 = preg_replace('/[0-9]+/', '', $type_setup_name);
 
                 // Check session name to get type
                 // TODO: Could we prevent duplicate code for this with other readers?
@@ -158,6 +159,20 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                         break;
                 }
 
+                $max_laps = NULL;
+                // Setting key found
+                if (isset($history['setup'][$type_setup_name.'Length']))
+                {
+                    // Get max laps using the usual setting keys
+                   $max_laps = $history['setup'][$type_setup_name.'Length'];
+                }
+                // Setting key not found, probably Project Cars 2
+                elseif (isset($history['setup'][$type_setup_name2.'Length']))
+                {
+                    // Get max laps using alternative
+                   $max_laps = $history['setup'][$type_setup_name2.'Length'];
+                }
+
 
                 // Date of this session
                 $date = new \DateTime;
@@ -167,10 +182,12 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 // Set session values
                 $session->setType($type)
                         ->setName($type_key)
-                        ->setMaxLaps($history['setup'][$type_setup_name.'Length'])
                         ->setDate($date)
                         ->setOtherSettings($session_settings);
 
+                if ($max_laps) {
+                    $session->setMaxLaps($max_laps);
+                }
 
                 // Set game
                 $game = new Game; $game->setName('Project Cars');
