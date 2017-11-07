@@ -16,9 +16,14 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
 
 
     /**
-     * @var  array  The attribute names
+     * @var  array  The attribute names of project cars 1
      */
     protected $attribute_names;
+
+    /**
+     * @var  array  The attribute names of project cars 2
+     */
+    protected $attribute_names2;
 
 
     /**
@@ -60,6 +65,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
 
         // Get attribute info of project cars to figure out vehicle names etc
         $this->attribute_names = $this->getAttributeNames();
+        $this->attribute_names2 = $this->getAttributeNames2();
 
         // Init sessions array
         $sessions = array();
@@ -206,6 +212,12 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                     ['setup']['TrackId']]))
                 {
                     $track->setVenue($this->attribute_names['tracks'][$history
+                        ['setup']['TrackId']]['name']);
+                }
+                elseif (isset($this->attribute_names2['tracks'][$history
+                    ['setup']['TrackId']]))
+                {
+                    $track->setVenue($this->attribute_names2['tracks'][$history
                         ['setup']['TrackId']]['name']);
                 }
                 else
@@ -706,6 +718,13 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
             $vehicle->setClass($this->attribute_names['vehicles']
                 [$part_data['setup']['VehicleId']]['class']);
         }
+        elseif (isset($this->attribute_names2['vehicles'][$vehicle_id]))
+        {
+            $vehicle->setName($this->attribute_names2['vehicles']
+                [$part_data['setup']['VehicleId']]['name']);
+            $vehicle->setClass($this->attribute_names2['vehicles']
+                [$part_data['setup']['VehicleId']]['class']);
+        }
         else
         {
             $vehicle->setName( (string) $vehicle_id);
@@ -736,34 +755,50 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
      *
      * @return array
      */
-    protected function getAttributeNames()
+    protected function getAttributeNames($file='ProjectCarsAttributes.json')
     {
         // Get attribute info of project cars to figure out vehicle names etc
         $attributes = json_decode(file_get_contents(
-            realpath(__DIR__.'/ProjectCarsAttributes.json')), true);
+            realpath(__DIR__.'/'.$file)), true);
 
         // Attributes we would like to have from config
         $attribute_names = array(
             'vehicles'        => array(),
-            'liveries'        => array(),
             'tracks'          => array(),
         );
 
         // Make easy readable array
         foreach ($attribute_names as $cat => &$values)
         {
+            if (isset($attributes['response'][$cat]))
             foreach($attributes['response'][$cat]['list'] as $item)
             {
-                $values[$item['id']]['name'] = $item['name'];
+                if (isset($item['id'])) {
+                    $id = $item['id'];
+                } else {
+                    $id = $item['value'];
+                }
+
+                $values[$id]['name'] = $item['name'];
 
                 if (isset($item['class']))
                 {
-                    $values[$item['id']]['class'] = $item['class'];
+                    $values[$id]['class'] = $item['class'];
                 }
             }
         }
 
         return $attribute_names;
+    }
+
+    /**
+     * Get the attribute names of the project cars 2 attributes json
+     *
+     * @return array
+     */
+    protected function getAttributeNames2()
+    {
+        return $this->getAttributeNames('ProjectCars2Attributes.json');
     }
 
 }
