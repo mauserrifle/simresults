@@ -348,7 +348,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
             $game_name = 'Game Stock Car Extreme';
         }
         // Mod is from automobilista
-        elseif (preg_match('/reiza[0-9]+\.srs/i', $this->dom_value('Mod')))
+        elseif (preg_match('/.*?\.srs/i', $this->dom_value('Mod')))
         {
             $game_name = 'Automobilista';
         }

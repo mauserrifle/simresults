@@ -148,6 +148,7 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
                     switch(strtolower($status))
                     {
                         case 'finished':
+                        case 'none':
                             $participant->setFinishStatus(
                                 Participant::FINISH_NORMAL);
                             break;
@@ -179,8 +180,27 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
                 $vehicle->setName($this->helper->arrayGet($player_data, 'Car'));
                 $participant->setVehicle($vehicle);
 
-                // Has laps
-                if ($laps = $this->helper->arrayGet($player_data, 'RaceSessionLaps'))
+                // Laps
+	            $laps = $this->helper->arrayGet($player_data, 'RaceSessionLaps');
+	            $best_lap = $this->helper->arrayGet($player_data, 'BestLapTime');
+
+	            if ($best_lap > 0 && $laps) {
+	            	// Validate: Remove laps, if all laps has no time but BestLapTime is set
+		            $hasLapWithTime = false;
+		            foreach ($laps as $lap_key => $lap_data)
+		            {
+			            if ($lap_data['Time'] > 0) {
+				            $hasLapWithTime = true;
+				            break;
+			            }
+		            }
+		            if (!$hasLapWithTime) {
+			            $laps = array();
+		            }
+	            }
+
+	            // Has Laps
+                if ($laps)
                 {
                     foreach ($laps as $lap_key => $lap_data)
                     {
@@ -205,11 +225,17 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
 
                         // Add lap to participant
                         $participant->addLap($lap);
+
+                        if ($lap->isPitLap())
+                        {
+                            // Count Pitstops
+                            $participant->setPitstops((int) $participant->getPitstops() + 1);
+                        }
                     }
 
                 }
                 // Has best lap (fallback)
-                elseif (0 < $best_lap = $this->helper->arrayGet($player_data, 'BestLapTime'))
+                elseif (0 < $best_lap)
                 {
                     // Init new lap
                     $lap = new Lap;
