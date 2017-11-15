@@ -86,7 +86,7 @@ class Incident {
         return $this->driver_id;
     }
 
-    public function setOtherDriverId($driver_id)
+    public function setOtherDriverId($other_driver_id)
     {
         $this->other_driver_id = $other_driver_id;
         return $this;
