@@ -229,6 +229,9 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
                 $event['OtherDriver']['Name'],
                 $event['ImpactSpeed']
             ));
+            $incident->setDriverId($event['Driver']['Guid']);
+            $incident->setOtherDriverId($event['OtherDriver']['Guid']);
+            $incident->setImpactSpeed($event['ImpactSpeed']);
             $session->addIncident($incident);
         }
 
