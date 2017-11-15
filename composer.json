@@ -1,5 +1,5 @@
 {
-    "name": "mauserrifle/simresults",
+    "name": "aleex1848/simresults",
     "type": "library",
     "description": "Simrace result reader for PHP",
     "keywords": ["sim", "racing", "simracing", "rfactor"],
