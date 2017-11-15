@@ -20,15 +20,15 @@ class Incident {
      */
      protected $driver_id;
 
-     /**
-      * @var  string  The other driver id (for example Steam ID)
-      */
-      protected $other_driver_id;
+   /**
+    * @var  string  The other driver id (for example Steam ID)
+    */
+    protected $other_driver_id;
 
-      /**
-       * @var  float  The Impact Speed
-       */
-       protected $impact_speed;
+    /**
+     * @var  float  The Impact Speed
+     */
+     protected $impact_speed;
 
     /**
      * @var  \DateTime  The date. Mind that this does not support miliseconds.
@@ -69,7 +69,12 @@ class Incident {
         return $this->message;
     }
 
-
+    /**
+     * Set the driver id
+     *
+     * @param   string    $driver_id
+     * @return  Incident
+     */
     public function setDriverId($driver_id)
     {
         $this->driver_id = $driver_id;
@@ -77,7 +82,7 @@ class Incident {
     }
 
     /**
-     * Get the message
+     * Get the driver id
      *
      * @return  string
      */
@@ -86,6 +91,12 @@ class Incident {
         return $this->driver_id;
     }
 
+    /**
+     * Set the other driver id
+     *
+     * @param   string    $other_driver_id
+     * @return  Incident
+     */
     public function setOtherDriverId($other_driver_id)
     {
         $this->other_driver_id = $other_driver_id;
@@ -93,7 +104,7 @@ class Incident {
     }
 
     /**
-     * Get the message
+     * Get the other driver id
      *
      * @return  string
      */
@@ -102,6 +113,12 @@ class Incident {
         return $this->other_driver_id;
     }
 
+    /**
+     * Set the impact speed
+     *
+     * @param   string    $impact_speed
+     * @return  Incident
+     */
     public function setImpactSpeed($impact_speed)
     {
         $this->impact_speed = $impact_speed;
@@ -109,7 +126,7 @@ class Incident {
     }
 
     /**
-     * Get the message
+     * Get the impact speed
      *
      * @return  string
      */
