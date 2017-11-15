@@ -88,6 +88,7 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
         // Set track
         $track = new Track;
         $track->setVenue($this->helper->arrayGet($data, 'TrackName'));
+        $track->setCourse($this->helper->arrayGet($data, 'TrackConfig'));
         $session->setTrack($track);
 
 
