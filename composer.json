@@ -5,12 +5,6 @@
     "keywords": ["sim", "racing", "simracing", "rfactor"],
     "homepage": "http://simresults.net",
     "license": "ISC",
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/aleex1848/simresults"  
-        }
-    ],
     "authors": [
         {
             "name": "Maurice van der Star",
