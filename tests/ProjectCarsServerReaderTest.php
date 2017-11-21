@@ -367,6 +367,25 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertSame(6, count($sessions[9]->getParticipants()));
     }
 
+    /**
+     * Project Cars 2 fixes
+     */
+    public function testProjectCars2Fixes()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/projectcars2-server/aborted.race.json');
+
+        // Get sessions without error
+        $sessions = Data_Reader::factory($file_path)->getSessions();
+
+        $participants = $sessions[4]->getParticipants();
+
+        // Test vehicle friendly name
+        $this->assertSame('Ligier JS P2 Nissan',
+                          $participants[0]->getVehicle()->getName());
+    }
+
 
 
     /***

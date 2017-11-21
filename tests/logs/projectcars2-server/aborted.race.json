@@ -1,0 +1,2827 @@
+// Persistent data for addon 'sms_stats', addon version 2.0
+// Automatically maintained by the addon, do not edit!
+
+{
+  "next_history_index" : 13,
+  "stats" : {
+    "history" : [
+      {
+        "end_time" : 1508605316,
+        "finished" : false,
+        "index" : 1,
+        "members" : {},
+        "participants" : {
+          "0" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 67,
+            "Name" : "[CAV] F1_Racer68",
+            "RefId" : 19456,
+            "VehicleId" : -1856752594
+          },
+          "1" : {
+            "IsPlayer" : 0,
+            "LiveryId" : 55,
+            "Name" : "Trent White",
+            "RefId" : 19456,
+            "VehicleId" : -1856752594
+          },
+          "10" : {
+            "IsPlayer" : 0,
+            "LiveryId" : 61,
+            "Name" : "Kevin Malling",
+            "RefId" : 19456,
+            "VehicleId" : -1856752594
+          },
+          "11" : {
+            "IsPlayer" : 0,
+            "LiveryId" : 53,
+            "Name" : "Stefan Bosch",
+            "RefId" : 19456,
+            "VehicleId" : -1856752594
+          },
+          "12" : {
+            "IsPlayer" : 0,
+            "LiveryId" : 64,
+            "Name" : "James Brooks",
+            "RefId" : 19456,
+            "VehicleId" : -1856752594
+          },
+          "13" : {
+            "IsPlayer" : 0,
+            "LiveryId" : 56,
+            "Name" : "Jochen Fromel",
+            "RefId" : 19456,
+            "VehicleId" : -1856752594
+          },
+          "14" : {
+            "IsPlayer" : 0,
+            "LiveryId" : 54,
+            "Name" : "Davy Van den Abbeele",
+            "RefId" : 19456,
+            "VehicleId" : -1856752594
+          },
+          "2" : {
+            "IsPlayer" : 0,
+            "LiveryId" : 65,
+            "Name" : "Andreas Kittlaus",
+            "RefId" : 19456,
+            "VehicleId" : -1856752594
+          },
+          "3" : {
+            "IsPlayer" : 0,
+            "LiveryId" : 67,
+            "Name" : "Max Spooner",
+            "RefId" : 19456,
+            "VehicleId" : -1856752594
+          },
+          "4" : {
+            "IsPlayer" : 0,
+            "LiveryId" : 59,
+            "Name" : "Mark Barrow",
+            "RefId" : 19456,
+            "VehicleId" : -1856752594
+          },
+          "5" : {
+            "IsPlayer" : 0,
+            "LiveryId" : 62,
+            "Name" : "Kay Schurig",
+            "RefId" : 19456,
+            "VehicleId" : -1856752594
+          },
+          "6" : {
+            "IsPlayer" : 0,
+            "LiveryId" : 52,
+            "Name" : "Kaiden Phoenix",
+            "RefId" : 19456,
+            "VehicleId" : -1856752594
+          },
+          "7" : {
+            "IsPlayer" : 0,
+            "LiveryId" : 60,
+            "Name" : "Aidan Taylor",
+            "RefId" : 19456,
+            "VehicleId" : -1856752594
+          },
+          "8" : {
+            "IsPlayer" : 0,
+            "LiveryId" : 51,
+            "Name" : "Richard Touzimsky",
+            "RefId" : 19456,
+            "VehicleId" : -1856752594
+          },
+          "9" : {
+            "IsPlayer" : 0,
+            "LiveryId" : 63,
+            "Name" : "Rune Morling",
+            "RefId" : 19456,
+            "VehicleId" : -1856752594
+          }
+        },
+        "setup" : {
+          "AllowablePenaltyTime" : 0,
+          "AllowedViews" : 0,
+          "DamageType" : 3,
+          "DriveThroughPenalty" : 1,
+          "Flags" : -1617161192,
+          "FuelUsageType" : 0,
+          "GridLayout" : 0,
+          "GridSize" : 32,
+          "ManualPitStops" : 0,
+          "ManualRollingStarts" : 0,
+          "MaxPlayers" : 32,
+          "MinimumOnlineRank" : 1,
+          "MinimumOnlineStrength" : 100,
+          "MultiClassSlot1" : 1740243009,
+          "MultiClassSlot2" : -112887377,
+          "MultiClassSlot3" : -564539194,
+          "MultiClassSlots" : 3,
+          "OpponentDifficulty" : 50,
+          "PenaltiesType" : 1,
+          "PitWhiteLinePenalty" : 1,
+          "PracticeDateDay" : 8,
+          "PracticeDateHour" : 14,
+          "PracticeDateMonth" : 4,
+          "PracticeDateProgression" : 1,
+          "PracticeDateYear" : 2017,
+          "PracticeLength" : 45,
+          "PracticeWeatherProgression" : 0,
+          "PracticeWeatherSlot1" : -934211870,
+          "PracticeWeatherSlot2" : -934211870,
+          "PracticeWeatherSlot3" : -934211870,
+          "PracticeWeatherSlot4" : -934211870,
+          "PracticeWeatherSlots" : 1,
+          "QualifyDateDay" : 8,
+          "QualifyDateHour" : 15,
+          "QualifyDateMonth" : 4,
+          "QualifyDateProgression" : 1,
+          "QualifyDateYear" : 2017,
+          "QualifyLength" : 45,
+          "QualifyWeatherProgression" : 0,
+          "QualifyWeatherSlot1" : -934211870,
+          "QualifyWeatherSlot2" : -934211870,
+          "QualifyWeatherSlot3" : -934211870,
+          "QualifyWeatherSlot4" : -934211870,
+          "QualifyWeatherSlots" : 1,
+          "RaceDateDay" : 8,
+          "RaceDateHour" : 16,
+          "RaceDateMonth" : 4,
+          "RaceDateProgression" : 2,
+          "RaceDateYear" : 2017,
+          "RaceFormationLap" : 0,
+          "RaceLength" : 90,
+          "RaceMandatoryPitStops" : 0,
+          "RaceRollingStart" : 0,
+          "RaceWeatherProgression" : 0,
+          "RaceWeatherSlot1" : -934211870,
+          "RaceWeatherSlot2" : -934211870,
+          "RaceWeatherSlot3" : -934211870,
+          "RaceWeatherSlot4" : -934211870,
+          "RaceWeatherSlots" : 1,
+          "ServerControlsSetup" : 1,
+          "ServerControlsTrack" : 1,
+          "ServerControlsVehicle" : 0,
+          "ServerControlsVehicleClass" : 1,
+          "TireWearType" : 5,
+          "TrackId" : 1731699995,
+          "VehicleClassId" : -112887377,
+          "VehicleModelId" : -1856752594
+        },
+        "stages" : {
+          "practice1" : {
+            "end_time" : 1508605316,
+            "events" : {},
+            "results" : {},
+            "start_time" : 1508605312
+          }
+        },
+        "start_time" : 1508605201
+      },
+      {
+        "end_time" : 1508605417,
+        "finished" : false,
+        "index" : 2,
+        "members" : {},
+        "participants" : {},
+        "setup" : {
+          "AllowablePenaltyTime" : 0,
+          "AllowedViews" : 0,
+          "DamageType" : 3,
+          "DriveThroughPenalty" : 1,
+          "Flags" : -1617161192,
+          "FuelUsageType" : 0,
+          "GridLayout" : 0,
+          "GridSize" : 32,
+          "ManualPitStops" : 0,
+          "ManualRollingStarts" : 0,
+          "MaxPlayers" : 32,
+          "MinimumOnlineRank" : 1,
+          "MinimumOnlineStrength" : 100,
+          "MultiClassSlot1" : 1740243009,
+          "MultiClassSlot2" : -112887377,
+          "MultiClassSlot3" : -564539194,
+          "MultiClassSlots" : 3,
+          "OpponentDifficulty" : 50,
+          "PenaltiesType" : 1,
+          "PitWhiteLinePenalty" : 1,
+          "PracticeDateDay" : 8,
+          "PracticeDateHour" : 14,
+          "PracticeDateMonth" : 4,
+          "PracticeDateProgression" : 1,
+          "PracticeDateYear" : 2017,
+          "PracticeLength" : 45,
+          "PracticeWeatherProgression" : 0,
+          "PracticeWeatherSlot1" : -934211870,
+          "PracticeWeatherSlot2" : -934211870,
+          "PracticeWeatherSlot3" : -934211870,
+          "PracticeWeatherSlot4" : -934211870,
+          "PracticeWeatherSlots" : 1,
+          "QualifyDateDay" : 8,
+          "QualifyDateHour" : 15,
+          "QualifyDateMonth" : 4,
+          "QualifyDateProgression" : 1,
+          "QualifyDateYear" : 2017,
+          "QualifyLength" : 45,
+          "QualifyWeatherProgression" : 0,
+          "QualifyWeatherSlot1" : -934211870,
+          "QualifyWeatherSlot2" : -934211870,
+          "QualifyWeatherSlot3" : -934211870,
+          "QualifyWeatherSlot4" : -934211870,
+          "QualifyWeatherSlots" : 1,
+          "RaceDateDay" : 8,
+          "RaceDateHour" : 16,
+          "RaceDateMonth" : 4,
+          "RaceDateProgression" : 2,
+          "RaceDateYear" : 2017,
+          "RaceFormationLap" : 0,
+          "RaceLength" : 90,
+          "RaceMandatoryPitStops" : 0,
+          "RaceRollingStart" : 0,
+          "RaceWeatherProgression" : 0,
+          "RaceWeatherSlot1" : -934211870,
+          "RaceWeatherSlot2" : -934211870,
+          "RaceWeatherSlot3" : -934211870,
+          "RaceWeatherSlot4" : -934211870,
+          "RaceWeatherSlots" : 1,
+          "ServerControlsSetup" : 1,
+          "ServerControlsTrack" : 1,
+          "ServerControlsVehicle" : 0,
+          "ServerControlsVehicleClass" : 1,
+          "TireWearType" : 5,
+          "TrackId" : 1731699995,
+          "VehicleClassId" : -112887377,
+          "VehicleModelId" : -1856752594
+        },
+        "stages" : {},
+        "start_time" : 1508605343
+      },
+      {
+        "end_time" : 1508632188,
+        "finished" : false,
+        "index" : 3,
+        "members" : {},
+        "participants" : {},
+        "setup" : {
+          "AllowablePenaltyTime" : 0,
+          "AllowedViews" : 0,
+          "DamageType" : 3,
+          "DriveThroughPenalty" : 1,
+          "Flags" : -1617161192,
+          "FuelUsageType" : 0,
+          "GridLayout" : 0,
+          "GridSize" : 32,
+          "ManualPitStops" : 0,
+          "ManualRollingStarts" : 0,
+          "MaxPlayers" : 32,
+          "MinimumOnlineRank" : 1,
+          "MinimumOnlineStrength" : 100,
+          "MultiClassSlot1" : 1740243009,
+          "MultiClassSlot2" : -112887377,
+          "MultiClassSlot3" : -564539194,
+          "MultiClassSlots" : 3,
+          "OpponentDifficulty" : 50,
+          "PenaltiesType" : 1,
+          "PitWhiteLinePenalty" : 1,
+          "PracticeDateDay" : 8,
+          "PracticeDateHour" : 14,
+          "PracticeDateMonth" : 4,
+          "PracticeDateProgression" : 1,
+          "PracticeDateYear" : 2017,
+          "PracticeLength" : 45,
+          "PracticeWeatherProgression" : 0,
+          "PracticeWeatherSlot1" : -934211870,
+          "PracticeWeatherSlot2" : -934211870,
+          "PracticeWeatherSlot3" : -934211870,
+          "PracticeWeatherSlot4" : -934211870,
+          "PracticeWeatherSlots" : 1,
+          "QualifyDateDay" : 8,
+          "QualifyDateHour" : 15,
+          "QualifyDateMonth" : 4,
+          "QualifyDateProgression" : 1,
+          "QualifyDateYear" : 2017,
+          "QualifyLength" : 45,
+          "QualifyWeatherProgression" : 0,
+          "QualifyWeatherSlot1" : -934211870,
+          "QualifyWeatherSlot2" : -934211870,
+          "QualifyWeatherSlot3" : -934211870,
+          "QualifyWeatherSlot4" : -934211870,
+          "QualifyWeatherSlots" : 1,
+          "RaceDateDay" : 8,
+          "RaceDateHour" : 16,
+          "RaceDateMonth" : 4,
+          "RaceDateProgression" : 2,
+          "RaceDateYear" : 2017,
+          "RaceFormationLap" : 0,
+          "RaceLength" : 90,
+          "RaceMandatoryPitStops" : 0,
+          "RaceRollingStart" : 0,
+          "RaceWeatherProgression" : 0,
+          "RaceWeatherSlot1" : -934211870,
+          "RaceWeatherSlot2" : -934211870,
+          "RaceWeatherSlot3" : -934211870,
+          "RaceWeatherSlot4" : -934211870,
+          "RaceWeatherSlots" : 1,
+          "ServerControlsSetup" : 1,
+          "ServerControlsTrack" : 1,
+          "ServerControlsVehicle" : 0,
+          "ServerControlsVehicleClass" : 1,
+          "TireWearType" : 5,
+          "TrackId" : 1731699995,
+          "VehicleClassId" : -112887377,
+          "VehicleModelId" : -1856752594
+        },
+        "stages" : {},
+        "start_time" : 1508632084
+      },
+      {
+        "end_time" : 1508632283,
+        "finished" : false,
+        "index" : 4,
+        "members" : {},
+        "participants" : {
+          "15" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 67,
+            "Name" : "[CAV] F1_Racer68",
+            "RefId" : 53312,
+            "VehicleId" : -1856752594
+          }
+        },
+        "setup" : {
+          "AllowablePenaltyTime" : 0,
+          "AllowedViews" : 0,
+          "DamageType" : 3,
+          "DriveThroughPenalty" : 1,
+          "Flags" : -1617161192,
+          "FuelUsageType" : 0,
+          "GridLayout" : 0,
+          "GridSize" : 32,
+          "ManualPitStops" : 0,
+          "ManualRollingStarts" : 0,
+          "MaxPlayers" : 32,
+          "MinimumOnlineRank" : 1,
+          "MinimumOnlineStrength" : 100,
+          "MultiClassSlot1" : 1740243009,
+          "MultiClassSlot2" : -112887377,
+          "MultiClassSlot3" : -564539194,
+          "MultiClassSlots" : 3,
+          "OpponentDifficulty" : 50,
+          "PenaltiesType" : 1,
+          "PitWhiteLinePenalty" : 1,
+          "PracticeDateDay" : 8,
+          "PracticeDateHour" : 14,
+          "PracticeDateMonth" : 4,
+          "PracticeDateProgression" : 1,
+          "PracticeDateYear" : 2017,
+          "PracticeLength" : 45,
+          "PracticeWeatherProgression" : 0,
+          "PracticeWeatherSlot1" : -934211870,
+          "PracticeWeatherSlot2" : -934211870,
+          "PracticeWeatherSlot3" : -934211870,
+          "PracticeWeatherSlot4" : -934211870,
+          "PracticeWeatherSlots" : 1,
+          "QualifyDateDay" : 8,
+          "QualifyDateHour" : 15,
+          "QualifyDateMonth" : 4,
+          "QualifyDateProgression" : 1,
+          "QualifyDateYear" : 2017,
+          "QualifyLength" : 45,
+          "QualifyWeatherProgression" : 0,
+          "QualifyWeatherSlot1" : -934211870,
+          "QualifyWeatherSlot2" : -934211870,
+          "QualifyWeatherSlot3" : -934211870,
+          "QualifyWeatherSlot4" : -934211870,
+          "QualifyWeatherSlots" : 1,
+          "RaceDateDay" : 8,
+          "RaceDateHour" : 16,
+          "RaceDateMonth" : 4,
+          "RaceDateProgression" : 2,
+          "RaceDateYear" : 2017,
+          "RaceFormationLap" : 0,
+          "RaceLength" : 90,
+          "RaceMandatoryPitStops" : 0,
+          "RaceRollingStart" : 0,
+          "RaceWeatherProgression" : 0,
+          "RaceWeatherSlot1" : -934211870,
+          "RaceWeatherSlot2" : -934211870,
+          "RaceWeatherSlot3" : -934211870,
+          "RaceWeatherSlot4" : -934211870,
+          "RaceWeatherSlots" : 1,
+          "ServerControlsSetup" : 1,
+          "ServerControlsTrack" : 1,
+          "ServerControlsVehicle" : 0,
+          "ServerControlsVehicleClass" : 1,
+          "TireWearType" : 5,
+          "TrackId" : 1731699995,
+          "VehicleClassId" : -112887377,
+          "VehicleModelId" : -1856752594
+        },
+        "stages" : {
+          "practice1" : {
+            "end_time" : 1508632283,
+            "events" : {},
+            "results" : {},
+            "start_time" : 1508632277
+          }
+        },
+        "start_time" : 1508632212
+      },
+      {
+        "end_time" : 1508633958,
+        "finished" : false,
+        "index" : 5,
+        "members" : {
+          "26689" : {
+            "index" : 1,
+            "join_time" : 1508632580,
+            "leave_time" : 1508632660,
+            "name" : "[CAV] Ozzie123",
+            "participantid" : -1,
+            "setup" : {
+              "LiveryId" : 69,
+              "RaceStatFlags" : 0,
+              "VehicleId" : -1856752594
+            },
+            "steamid" : "76561198201007478"
+          },
+          "35137" : {
+            "index" : 1,
+            "join_time" : 1508632740,
+            "leave_time" : 1508632761,
+            "name" : "eracerhead",
+            "participantid" : -1,
+            "setup" : {
+              "LiveryId" : 52,
+              "RaceStatFlags" : 0,
+              "VehicleId" : 1468371103
+            },
+            "steamid" : "76561198055470347"
+          }
+        },
+        "participants" : {},
+        "setup" : {
+          "AllowablePenaltyTime" : 0,
+          "AllowedViews" : 0,
+          "DamageType" : 3,
+          "DriveThroughPenalty" : 1,
+          "Flags" : -1617161192,
+          "FuelUsageType" : 0,
+          "GridLayout" : 0,
+          "GridSize" : 32,
+          "ManualPitStops" : 0,
+          "ManualRollingStarts" : 0,
+          "MaxPlayers" : 32,
+          "MinimumOnlineRank" : 1,
+          "MinimumOnlineStrength" : 100,
+          "MultiClassSlot1" : 1740243009,
+          "MultiClassSlot2" : -112887377,
+          "MultiClassSlot3" : -564539194,
+          "MultiClassSlots" : 3,
+          "OpponentDifficulty" : 50,
+          "PenaltiesType" : 1,
+          "PitWhiteLinePenalty" : 1,
+          "PracticeDateDay" : 8,
+          "PracticeDateHour" : 14,
+          "PracticeDateMonth" : 4,
+          "PracticeDateProgression" : 1,
+          "PracticeDateYear" : 2017,
+          "PracticeLength" : 45,
+          "PracticeWeatherProgression" : 0,
+          "PracticeWeatherSlot1" : -934211870,
+          "PracticeWeatherSlot2" : -934211870,
+          "PracticeWeatherSlot3" : -934211870,
+          "PracticeWeatherSlot4" : -934211870,
+          "PracticeWeatherSlots" : 1,
+          "QualifyDateDay" : 8,
+          "QualifyDateHour" : 15,
+          "QualifyDateMonth" : 4,
+          "QualifyDateProgression" : 1,
+          "QualifyDateYear" : 2017,
+          "QualifyLength" : 45,
+          "QualifyWeatherProgression" : 0,
+          "QualifyWeatherSlot1" : -934211870,
+          "QualifyWeatherSlot2" : -934211870,
+          "QualifyWeatherSlot3" : -934211870,
+          "QualifyWeatherSlot4" : -934211870,
+          "QualifyWeatherSlots" : 1,
+          "RaceDateDay" : 8,
+          "RaceDateHour" : 16,
+          "RaceDateMonth" : 4,
+          "RaceDateProgression" : 2,
+          "RaceDateYear" : 2017,
+          "RaceFormationLap" : 0,
+          "RaceLength" : 90,
+          "RaceMandatoryPitStops" : 0,
+          "RaceRollingStart" : 0,
+          "RaceWeatherProgression" : 0,
+          "RaceWeatherSlot1" : -934211870,
+          "RaceWeatherSlot2" : -934211870,
+          "RaceWeatherSlot3" : -934211870,
+          "RaceWeatherSlot4" : -934211870,
+          "RaceWeatherSlots" : 1,
+          "ServerControlsSetup" : 1,
+          "ServerControlsTrack" : 1,
+          "ServerControlsVehicle" : 0,
+          "ServerControlsVehicleClass" : 1,
+          "TireWearType" : 5,
+          "TrackId" : 1731699995,
+          "VehicleClassId" : -112887377,
+          "VehicleModelId" : -1856752594
+        },
+        "stages" : {},
+        "start_time" : 1508632426
+      },
+      {
+        "end_time" : 1508634036,
+        "finished" : false,
+        "index" : 6,
+        "members" : {},
+        "participants" : {},
+        "setup" : {
+          "AllowablePenaltyTime" : 0,
+          "AllowedViews" : 0,
+          "DamageType" : 3,
+          "DriveThroughPenalty" : 1,
+          "Flags" : -1617161192,
+          "FuelUsageType" : 0,
+          "GridLayout" : 0,
+          "GridSize" : 32,
+          "ManualPitStops" : 0,
+          "ManualRollingStarts" : 0,
+          "MaxPlayers" : 32,
+          "MinimumOnlineRank" : 1,
+          "MinimumOnlineStrength" : 100,
+          "MultiClassSlot1" : 1740243009,
+          "MultiClassSlot2" : -112887377,
+          "MultiClassSlot3" : -564539194,
+          "MultiClassSlots" : 3,
+          "OpponentDifficulty" : 50,
+          "PenaltiesType" : 1,
+          "PitWhiteLinePenalty" : 1,
+          "PracticeDateDay" : 8,
+          "PracticeDateHour" : 14,
+          "PracticeDateMonth" : 4,
+          "PracticeDateProgression" : 1,
+          "PracticeDateYear" : 2017,
+          "PracticeLength" : 45,
+          "PracticeWeatherProgression" : 0,
+          "PracticeWeatherSlot1" : -934211870,
+          "PracticeWeatherSlot2" : -934211870,
+          "PracticeWeatherSlot3" : -934211870,
+          "PracticeWeatherSlot4" : -934211870,
+          "PracticeWeatherSlots" : 1,
+          "QualifyDateDay" : 8,
+          "QualifyDateHour" : 15,
+          "QualifyDateMonth" : 4,
+          "QualifyDateProgression" : 1,
+          "QualifyDateYear" : 2017,
+          "QualifyLength" : 45,
+          "QualifyWeatherProgression" : 0,
+          "QualifyWeatherSlot1" : -934211870,
+          "QualifyWeatherSlot2" : -934211870,
+          "QualifyWeatherSlot3" : -934211870,
+          "QualifyWeatherSlot4" : -934211870,
+          "QualifyWeatherSlots" : 1,
+          "RaceDateDay" : 8,
+          "RaceDateHour" : 16,
+          "RaceDateMonth" : 4,
+          "RaceDateProgression" : 2,
+          "RaceDateYear" : 2017,
+          "RaceFormationLap" : 0,
+          "RaceLength" : 90,
+          "RaceMandatoryPitStops" : 0,
+          "RaceRollingStart" : 0,
+          "RaceWeatherProgression" : 0,
+          "RaceWeatherSlot1" : -934211870,
+          "RaceWeatherSlot2" : -934211870,
+          "RaceWeatherSlot3" : -934211870,
+          "RaceWeatherSlot4" : -934211870,
+          "RaceWeatherSlots" : 1,
+          "ServerControlsSetup" : 1,
+          "ServerControlsTrack" : 1,
+          "ServerControlsVehicle" : 0,
+          "ServerControlsVehicleClass" : 1,
+          "TireWearType" : 5,
+          "TrackId" : 1731699995,
+          "VehicleClassId" : -112887377,
+          "VehicleModelId" : -1856752594
+        },
+        "stages" : {},
+        "start_time" : 1508634024
+      },
+      {
+        "end_time" : 1508634092,
+        "finished" : false,
+        "index" : 7,
+        "members" : {},
+        "participants" : {
+          "0" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 67,
+            "Name" : "[CAV] F1_Racer68",
+            "RefId" : 23296,
+            "VehicleId" : -1856752594
+          }
+        },
+        "setup" : {
+          "AllowablePenaltyTime" : 0,
+          "AllowedViews" : 0,
+          "DamageType" : 3,
+          "DriveThroughPenalty" : 1,
+          "Flags" : -1617161192,
+          "FuelUsageType" : 0,
+          "GridLayout" : 0,
+          "GridSize" : 32,
+          "ManualPitStops" : 0,
+          "ManualRollingStarts" : 0,
+          "MaxPlayers" : 32,
+          "MinimumOnlineRank" : 1,
+          "MinimumOnlineStrength" : 100,
+          "MultiClassSlot1" : 1740243009,
+          "MultiClassSlot2" : -112887377,
+          "MultiClassSlot3" : -564539194,
+          "MultiClassSlots" : 3,
+          "OpponentDifficulty" : 50,
+          "PenaltiesType" : 1,
+          "PitWhiteLinePenalty" : 1,
+          "PracticeDateDay" : 8,
+          "PracticeDateHour" : 14,
+          "PracticeDateMonth" : 4,
+          "PracticeDateProgression" : 1,
+          "PracticeDateYear" : 2017,
+          "PracticeLength" : 45,
+          "PracticeWeatherProgression" : 0,
+          "PracticeWeatherSlot1" : -934211870,
+          "PracticeWeatherSlot2" : -934211870,
+          "PracticeWeatherSlot3" : -934211870,
+          "PracticeWeatherSlot4" : -934211870,
+          "PracticeWeatherSlots" : 1,
+          "QualifyDateDay" : 8,
+          "QualifyDateHour" : 15,
+          "QualifyDateMonth" : 4,
+          "QualifyDateProgression" : 1,
+          "QualifyDateYear" : 2017,
+          "QualifyLength" : 45,
+          "QualifyWeatherProgression" : 0,
+          "QualifyWeatherSlot1" : -934211870,
+          "QualifyWeatherSlot2" : -934211870,
+          "QualifyWeatherSlot3" : -934211870,
+          "QualifyWeatherSlot4" : -934211870,
+          "QualifyWeatherSlots" : 1,
+          "RaceDateDay" : 8,
+          "RaceDateHour" : 16,
+          "RaceDateMonth" : 4,
+          "RaceDateProgression" : 2,
+          "RaceDateYear" : 2017,
+          "RaceFormationLap" : 0,
+          "RaceLength" : 90,
+          "RaceMandatoryPitStops" : 0,
+          "RaceRollingStart" : 0,
+          "RaceWeatherProgression" : 0,
+          "RaceWeatherSlot1" : -934211870,
+          "RaceWeatherSlot2" : -934211870,
+          "RaceWeatherSlot3" : -934211870,
+          "RaceWeatherSlot4" : -934211870,
+          "RaceWeatherSlots" : 1,
+          "ServerControlsSetup" : 1,
+          "ServerControlsTrack" : 1,
+          "ServerControlsVehicle" : 0,
+          "ServerControlsVehicleClass" : 1,
+          "TireWearType" : 5,
+          "TrackId" : 1731699995,
+          "VehicleClassId" : -112887377,
+          "VehicleModelId" : -1856752594
+        },
+        "stages" : {
+          "practice1" : {
+            "end_time" : 1508634092,
+            "events" : {},
+            "results" : {},
+            "start_time" : 1508634090
+          }
+        },
+        "start_time" : 1508634059
+      },
+      {
+        "end_time" : 1508635586,
+        "finished" : false,
+        "index" : 8,
+        "members" : {
+          "64833" : {
+            "index" : 1,
+            "join_time" : 1508635362,
+            "leave_time" : 1508635579,
+            "name" : "[CAV] Kaladin",
+            "participantid" : -1,
+            "setup" : {
+              "LiveryId" : 52,
+              "RaceStatFlags" : 0,
+              "VehicleId" : -384044277
+            },
+            "steamid" : "76561198192405274"
+          }
+        },
+        "participants" : {},
+        "setup" : {
+          "AllowablePenaltyTime" : 0,
+          "AllowedViews" : 0,
+          "DamageType" : 3,
+          "DriveThroughPenalty" : 1,
+          "Flags" : -1617161192,
+          "FuelUsageType" : 0,
+          "GridLayout" : 0,
+          "GridSize" : 32,
+          "ManualPitStops" : 0,
+          "ManualRollingStarts" : 0,
+          "MaxPlayers" : 32,
+          "MinimumOnlineRank" : 1,
+          "MinimumOnlineStrength" : 100,
+          "MultiClassSlot1" : 1740243009,
+          "MultiClassSlot2" : -112887377,
+          "MultiClassSlot3" : -564539194,
+          "MultiClassSlots" : 3,
+          "OpponentDifficulty" : 50,
+          "PenaltiesType" : 1,
+          "PitWhiteLinePenalty" : 1,
+          "PracticeDateDay" : 8,
+          "PracticeDateHour" : 14,
+          "PracticeDateMonth" : 4,
+          "PracticeDateProgression" : 1,
+          "PracticeDateYear" : 2017,
+          "PracticeLength" : 45,
+          "PracticeWeatherProgression" : 0,
+          "PracticeWeatherSlot1" : -934211870,
+          "PracticeWeatherSlot2" : -934211870,
+          "PracticeWeatherSlot3" : -934211870,
+          "PracticeWeatherSlot4" : -934211870,
+          "PracticeWeatherSlots" : 1,
+          "QualifyDateDay" : 8,
+          "QualifyDateHour" : 15,
+          "QualifyDateMonth" : 4,
+          "QualifyDateProgression" : 1,
+          "QualifyDateYear" : 2017,
+          "QualifyLength" : 45,
+          "QualifyWeatherProgression" : 0,
+          "QualifyWeatherSlot1" : -934211870,
+          "QualifyWeatherSlot2" : -934211870,
+          "QualifyWeatherSlot3" : -934211870,
+          "QualifyWeatherSlot4" : -934211870,
+          "QualifyWeatherSlots" : 1,
+          "RaceDateDay" : 8,
+          "RaceDateHour" : 16,
+          "RaceDateMonth" : 4,
+          "RaceDateProgression" : 2,
+          "RaceDateYear" : 2017,
+          "RaceFormationLap" : 0,
+          "RaceLength" : 90,
+          "RaceMandatoryPitStops" : 0,
+          "RaceRollingStart" : 0,
+          "RaceWeatherProgression" : 0,
+          "RaceWeatherSlot1" : -934211870,
+          "RaceWeatherSlot2" : -934211870,
+          "RaceWeatherSlot3" : -934211870,
+          "RaceWeatherSlot4" : -934211870,
+          "RaceWeatherSlots" : 1,
+          "ServerControlsSetup" : 1,
+          "ServerControlsTrack" : 1,
+          "ServerControlsVehicle" : 0,
+          "ServerControlsVehicleClass" : 1,
+          "TireWearType" : 5,
+          "TrackId" : 1731699995,
+          "VehicleClassId" : -112887377,
+          "VehicleModelId" : -1856752594
+        },
+        "stages" : {},
+        "start_time" : 1508634120
+      },
+      {
+        "end_time" : 1508635792,
+        "finished" : false,
+        "index" : 9,
+        "members" : {},
+        "participants" : {
+          "0" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 67,
+            "Name" : "[CAV] F1_Racer68",
+            "RefId" : 56128,
+            "VehicleId" : -1856752594
+          },
+          "1" : {
+            "IsPlayer" : 0,
+            "LiveryId" : 61,
+            "Name" : "Darryl Mills",
+            "RefId" : 56128,
+            "VehicleId" : -1856752594
+          },
+          "10" : {
+            "IsPlayer" : 0,
+            "LiveryId" : 68,
+            "Name" : "Sascha Straub",
+            "RefId" : 56128,
+            "VehicleId" : -1856752594
+          },
+          "11" : {
+            "IsPlayer" : 0,
+            "LiveryId" : 65,
+            "Name" : "James Staples",
+            "RefId" : 56128,
+            "VehicleId" : -1856752594
+          },
+          "12" : {
+            "IsPlayer" : 0,
+            "LiveryId" : 52,
+            "Name" : "David Majidimehr",
+            "RefId" : 56128,
+            "VehicleId" : -1856752594
+          },
+          "13" : {
+            "IsPlayer" : 0,
+            "LiveryId" : 63,
+            "Name" : "Richard Cook",
+            "RefId" : 56128,
+            "VehicleId" : -1856752594
+          },
+          "14" : {
+            "IsPlayer" : 0,
+            "LiveryId" : 56,
+            "Name" : "Darren Muir",
+            "RefId" : 56128,
+            "VehicleId" : -1856752594
+          },
+          "2" : {
+            "IsPlayer" : 0,
+            "LiveryId" : 60,
+            "Name" : "Stella Lionel",
+            "RefId" : 56128,
+            "VehicleId" : -1856752594
+          },
+          "3" : {
+            "IsPlayer" : 0,
+            "LiveryId" : 55,
+            "Name" : "Ramiro Correa",
+            "RefId" : 56128,
+            "VehicleId" : -1856752594
+          },
+          "4" : {
+            "IsPlayer" : 0,
+            "LiveryId" : 69,
+            "Name" : "Marcus Meyer",
+            "RefId" : 56128,
+            "VehicleId" : -1856752594
+          },
+          "5" : {
+            "IsPlayer" : 0,
+            "LiveryId" : 67,
+            "Name" : "Thomas Mayrhofer",
+            "RefId" : 56128,
+            "VehicleId" : -1856752594
+          },
+          "6" : {
+            "IsPlayer" : 0,
+            "LiveryId" : 70,
+            "Name" : "Roel de Meulder",
+            "RefId" : 56128,
+            "VehicleId" : -1856752594
+          },
+          "7" : {
+            "IsPlayer" : 0,
+            "LiveryId" : 62,
+            "Name" : "Andy Edwards",
+            "RefId" : 56128,
+            "VehicleId" : -1856752594
+          },
+          "8" : {
+            "IsPlayer" : 0,
+            "LiveryId" : 54,
+            "Name" : "Christian Pabinger",
+            "RefId" : 56128,
+            "VehicleId" : -1856752594
+          },
+          "9" : {
+            "IsPlayer" : 0,
+            "LiveryId" : 64,
+            "Name" : "Aurelien Duval",
+            "RefId" : 56128,
+            "VehicleId" : -1856752594
+          }
+        },
+        "setup" : {
+          "AllowablePenaltyTime" : 0,
+          "AllowedViews" : 0,
+          "DamageType" : 3,
+          "DriveThroughPenalty" : 1,
+          "Flags" : -1617161192,
+          "FuelUsageType" : 0,
+          "GridLayout" : 0,
+          "GridSize" : 32,
+          "ManualPitStops" : 0,
+          "ManualRollingStarts" : 0,
+          "MaxPlayers" : 32,
+          "MinimumOnlineRank" : 0,
+          "MinimumOnlineStrength" : 100,
+          "MultiClassSlot1" : 1740243009,
+          "MultiClassSlot2" : -112887377,
+          "MultiClassSlot3" : -564539194,
+          "MultiClassSlots" : 3,
+          "OpponentDifficulty" : 50,
+          "PenaltiesType" : 1,
+          "PitWhiteLinePenalty" : 1,
+          "PracticeDateDay" : 8,
+          "PracticeDateHour" : 14,
+          "PracticeDateMonth" : 4,
+          "PracticeDateProgression" : 1,
+          "PracticeDateYear" : 2017,
+          "PracticeLength" : 45,
+          "PracticeWeatherProgression" : 0,
+          "PracticeWeatherSlot1" : -934211870,
+          "PracticeWeatherSlot2" : -934211870,
+          "PracticeWeatherSlot3" : -934211870,
+          "PracticeWeatherSlot4" : -934211870,
+          "PracticeWeatherSlots" : 1,
+          "QualifyDateDay" : 8,
+          "QualifyDateHour" : 15,
+          "QualifyDateMonth" : 4,
+          "QualifyDateProgression" : 1,
+          "QualifyDateYear" : 2017,
+          "QualifyLength" : 45,
+          "QualifyWeatherProgression" : 0,
+          "QualifyWeatherSlot1" : -934211870,
+          "QualifyWeatherSlot2" : -934211870,
+          "QualifyWeatherSlot3" : -934211870,
+          "QualifyWeatherSlot4" : -934211870,
+          "QualifyWeatherSlots" : 1,
+          "RaceDateDay" : 8,
+          "RaceDateHour" : 16,
+          "RaceDateMonth" : 4,
+          "RaceDateProgression" : 2,
+          "RaceDateYear" : 2017,
+          "RaceFormationLap" : 0,
+          "RaceLength" : 90,
+          "RaceMandatoryPitStops" : 0,
+          "RaceRollingStart" : 0,
+          "RaceWeatherProgression" : 0,
+          "RaceWeatherSlot1" : -934211870,
+          "RaceWeatherSlot2" : -934211870,
+          "RaceWeatherSlot3" : -934211870,
+          "RaceWeatherSlot4" : -934211870,
+          "RaceWeatherSlots" : 1,
+          "ServerControlsSetup" : 1,
+          "ServerControlsTrack" : 1,
+          "ServerControlsVehicle" : 0,
+          "ServerControlsVehicleClass" : 1,
+          "TireWearType" : 5,
+          "TrackId" : 1731699995,
+          "VehicleClassId" : -112887377,
+          "VehicleModelId" : -1856752594
+        },
+        "stages" : {
+          "practice1" : {
+            "end_time" : 1508635792,
+            "events" : {},
+            "results" : {},
+            "start_time" : 1508635790
+          }
+        },
+        "start_time" : 1508635751
+      },
+      {
+        "end_time" : 1508638669,
+        "finished" : true,
+        "index" : 10,
+        "members" : {
+          "11088" : {
+            "index" : 16,
+            "join_time" : 1508637531,
+            "leave_time" : 1508637666,
+            "name" : "Nurrec",
+            "participantid" : 36,
+            "setup" : {
+              "LiveryId" : 51,
+              "RaceStatFlags" : 1073763556,
+              "VehicleId" : -384044277
+            },
+            "steamid" : "76561197981425335"
+          },
+          "12424" : {
+            "index" : 8,
+            "join_time" : 1508637377,
+            "leave_time" : -1,
+            "name" : "impliedconsent",
+            "participantid" : 33,
+            "setup" : {
+              "LiveryId" : 64,
+              "RaceStatFlags" : 1073763404,
+              "VehicleId" : -384044277
+            },
+            "steamid" : "76561197961144889"
+          },
+          "16838" : {
+            "index" : 6,
+            "join_time" : 1508636197,
+            "leave_time" : 1508637576,
+            "name" : "eracerhead",
+            "participantid" : 26,
+            "setup" : {
+              "LiveryId" : 52,
+              "RaceStatFlags" : 1073745988,
+              "VehicleId" : 1468371103
+            },
+            "steamid" : "76561198055470347"
+          },
+          "18754" : {
+            "index" : 2,
+            "join_time" : 1508635890,
+            "leave_time" : -1,
+            "name" : "ECT CHEF UBoG",
+            "participantid" : 20,
+            "setup" : {
+              "LiveryId" : 52,
+              "RaceStatFlags" : 1073762532,
+              "VehicleId" : -1068716209
+            },
+            "steamid" : "76561197965249418"
+          },
+          "21062" : {
+            "index" : 6,
+            "join_time" : 1508637599,
+            "leave_time" : -1,
+            "name" : "LiveWire11C[CAV]",
+            "participantid" : 37,
+            "setup" : {
+              "LiveryId" : 52,
+              "RaceStatFlags" : 1073746404,
+              "VehicleId" : 405826415
+            },
+            "steamid" : "76561197962726630"
+          },
+          "21576" : {
+            "index" : 8,
+            "join_time" : 1508637324,
+            "leave_time" : 1508637347,
+            "name" : "LiveWire11C[CAV]",
+            "participantid" : -1,
+            "setup" : {
+              "LiveryId" : 52,
+              "RaceStatFlags" : 0,
+              "VehicleId" : 405826415
+            },
+            "steamid" : "76561197962726630"
+          },
+          "22739" : {
+            "index" : 19,
+            "join_time" : 1508638183,
+            "leave_time" : -1,
+            "name" : "Riverside",
+            "participantid" : 41,
+            "setup" : {
+              "LiveryId" : 53,
+              "RaceStatFlags" : 1073747436,
+              "VehicleId" : 1934199723
+            },
+            "steamid" : "76561198213325255"
+          },
+          "24587" : {
+            "index" : 11,
+            "join_time" : 1508637331,
+            "leave_time" : -1,
+            "name" : "Docslap",
+            "participantid" : 34,
+            "setup" : {
+              "LiveryId" : 55,
+              "RaceStatFlags" : 1073747428,
+              "VehicleId" : 405826415
+            },
+            "steamid" : "76561198020623583"
+          },
+          "24593" : {
+            "index" : 17,
+            "join_time" : 1508637652,
+            "leave_time" : -1,
+            "name" : "eracerhead",
+            "participantid" : 38,
+            "setup" : {
+              "LiveryId" : 52,
+              "RaceStatFlags" : 1073745988,
+              "VehicleId" : 1468371103
+            },
+            "steamid" : "76561198055470347"
+          },
+          "27789" : {
+            "index" : 13,
+            "join_time" : 1508636675,
+            "leave_time" : -1,
+            "name" : "Maximus Decimus Meridius",
+            "participantid" : 31,
+            "setup" : {
+              "LiveryId" : 54,
+              "RaceStatFlags" : 1073747204,
+              "VehicleId" : 405826415
+            },
+            "steamid" : "76561198026125999"
+          },
+          "29070" : {
+            "index" : 14,
+            "join_time" : 1508636717,
+            "leave_time" : -1,
+            "name" : "AOD_Dio [TKR]",
+            "participantid" : 32,
+            "setup" : {
+              "LiveryId" : 57,
+              "RaceStatFlags" : 1073746980,
+              "VehicleId" : 809291220
+            },
+            "steamid" : "76561198099239424"
+          },
+          "3019" : {
+            "index" : 11,
+            "join_time" : 1508636228,
+            "leave_time" : 1508636974,
+            "name" : "[AOD] 2112",
+            "participantid" : 28,
+            "setup" : {
+              "LiveryId" : 57,
+              "RaceStatFlags" : 1073762788,
+              "VehicleId" : 1468371103
+            },
+            "steamid" : "76561198221856044"
+          },
+          "3079" : {
+            "index" : 7,
+            "join_time" : 1508636424,
+            "leave_time" : -1,
+            "name" : "Phos4us",
+            "participantid" : 29,
+            "setup" : {
+              "LiveryId" : 53,
+              "RaceStatFlags" : 1073747172,
+              "VehicleId" : 820529698
+            },
+            "steamid" : "76561198034431456"
+          },
+          "33605" : {
+            "index" : 5,
+            "join_time" : 1508635901,
+            "leave_time" : -1,
+            "name" : "crowhop",
+            "participantid" : 17,
+            "setup" : {
+              "LiveryId" : 61,
+              "RaceStatFlags" : 1073747172,
+              "VehicleId" : -93033971
+            },
+            "steamid" : "76561198210909668"
+          },
+          "41158" : {
+            "index" : 6,
+            "join_time" : 1508635905,
+            "leave_time" : 1508636096,
+            "name" : "Mr.Smoke",
+            "participantid" : 18,
+            "setup" : {
+              "LiveryId" : 59,
+              "RaceStatFlags" : 1073747172,
+              "VehicleId" : 820529698
+            },
+            "steamid" : "76561198323319724"
+          },
+          "47108" : {
+            "index" : 4,
+            "join_time" : 1508636146,
+            "leave_time" : -1,
+            "name" : "Mr.Smoke",
+            "participantid" : 25,
+            "setup" : {
+              "LiveryId" : 59,
+              "RaceStatFlags" : 1073747172,
+              "VehicleId" : 820529698
+            },
+            "steamid" : "76561198323319724"
+          },
+          "47620" : {
+            "index" : 4,
+            "join_time" : 1508635901,
+            "leave_time" : 1508636127,
+            "name" : "eracerhead",
+            "participantid" : 21,
+            "setup" : {
+              "LiveryId" : 52,
+              "RaceStatFlags" : 1073745988,
+              "VehicleId" : 1468371103
+            },
+            "steamid" : "76561198055470347"
+          },
+          "49671" : {
+            "index" : 7,
+            "join_time" : 1508635943,
+            "leave_time" : 1508636375,
+            "name" : "[CAV] Ozzie123",
+            "participantid" : 19,
+            "setup" : {
+              "LiveryId" : 69,
+              "RaceStatFlags" : 1073763812,
+              "VehicleId" : -1856752594
+            },
+            "steamid" : "76561198201007478"
+          },
+          "53330" : {
+            "index" : 18,
+            "join_time" : 1508638062,
+            "leave_time" : -1,
+            "name" : "[AOD] 2112",
+            "participantid" : 40,
+            "setup" : {
+              "LiveryId" : 57,
+              "RaceStatFlags" : 1073762788,
+              "VehicleId" : 1468371103
+            },
+            "steamid" : "76561198221856044"
+          },
+          "55055" : {
+            "index" : 15,
+            "join_time" : 1508637464,
+            "leave_time" : -1,
+            "name" : "Lessen",
+            "participantid" : 35,
+            "setup" : {
+              "LiveryId" : 60,
+              "RaceStatFlags" : 1073747170,
+              "VehicleId" : 809291220
+            },
+            "steamid" : "76561198385020572"
+          },
+          "58569" : {
+            "index" : 9,
+            "join_time" : 1508635986,
+            "leave_time" : -1,
+            "name" : "Wayne Kerr",
+            "participantid" : 23,
+            "setup" : {
+              "LiveryId" : 52,
+              "RaceStatFlags" : 1073747012,
+              "VehicleId" : 820529698
+            },
+            "steamid" : "76561198229531792"
+          },
+          "62467" : {
+            "index" : 3,
+            "join_time" : 1508635901,
+            "leave_time" : -1,
+            "name" : "Fight-Test",
+            "participantid" : 22,
+            "setup" : {
+              "LiveryId" : 58,
+              "RaceStatFlags" : 1073747172,
+              "VehicleId" : 820529698
+            },
+            "steamid" : "76561198321222557"
+          },
+          "64336" : {
+            "index" : 16,
+            "join_time" : 1508637731,
+            "leave_time" : -1,
+            "name" : "Nurrec",
+            "participantid" : 39,
+            "setup" : {
+              "LiveryId" : 51,
+              "RaceStatFlags" : 1073747172,
+              "VehicleId" : -384044277
+            },
+            "steamid" : "76561197981425335"
+          },
+          "65228" : {
+            "index" : 12,
+            "join_time" : 1508636454,
+            "leave_time" : -1,
+            "name" : "[CAV] Ozzie123",
+            "participantid" : 30,
+            "setup" : {
+              "LiveryId" : 69,
+              "RaceStatFlags" : 1073747428,
+              "VehicleId" : -1856752594
+            },
+            "steamid" : "76561198201007478"
+          },
+          "6730" : {
+            "index" : 10,
+            "join_time" : 1508636201,
+            "leave_time" : -1,
+            "name" : "[CAV] Power",
+            "participantid" : 27,
+            "setup" : {
+              "LiveryId" : 53,
+              "RaceStatFlags" : 1073747940,
+              "VehicleId" : 405826415
+            },
+            "steamid" : "76561198205236405"
+          },
+          "9160" : {
+            "index" : 8,
+            "join_time" : 1508635982,
+            "leave_time" : 1508637058,
+            "name" : "impliedconsent",
+            "participantid" : 24,
+            "setup" : {
+              "LiveryId" : 64,
+              "RaceStatFlags" : 1073763404,
+              "VehicleId" : -384044277
+            },
+            "steamid" : "76561197961144889"
+          }
+        },
+        "participants" : {
+          "15" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 67,
+            "Name" : "[CAV] F1_Racer68",
+            "RefId" : 31552,
+            "VehicleId" : -1856752594
+          },
+          "16" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 52,
+            "Name" : "[CAV] Kaladin",
+            "RefId" : 48641,
+            "VehicleId" : -384044277
+          },
+          "17" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 61,
+            "Name" : "crowhop",
+            "RefId" : 33605,
+            "VehicleId" : -93033971
+          },
+          "18" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 59,
+            "Name" : "Mr.Smoke",
+            "RefId" : 41158,
+            "VehicleId" : 820529698
+          },
+          "19" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 69,
+            "Name" : "[CAV] Ozzie123",
+            "RefId" : 49671,
+            "VehicleId" : -1856752594
+          },
+          "20" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 52,
+            "Name" : "ECT CHEF UBoG",
+            "RefId" : 18754,
+            "VehicleId" : -1068716209
+          },
+          "21" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 52,
+            "Name" : "eracerhead",
+            "RefId" : 47620,
+            "VehicleId" : 1468371103
+          },
+          "22" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 58,
+            "Name" : "Fight-Test",
+            "RefId" : 62467,
+            "VehicleId" : 820529698
+          },
+          "23" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 52,
+            "Name" : "Wayne Kerr",
+            "RefId" : 58569,
+            "VehicleId" : 820529698
+          },
+          "24" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 64,
+            "Name" : "impliedconsent",
+            "RefId" : 9160,
+            "VehicleId" : -384044277
+          },
+          "25" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 59,
+            "Name" : "Mr.Smoke",
+            "RefId" : 47108,
+            "VehicleId" : 820529698
+          },
+          "26" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 52,
+            "Name" : "eracerhead",
+            "RefId" : 16838,
+            "VehicleId" : 1468371103
+          },
+          "27" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 53,
+            "Name" : "[CAV] Power",
+            "RefId" : 6730,
+            "VehicleId" : 405826415
+          },
+          "28" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 57,
+            "Name" : "[AOD] 2112",
+            "RefId" : 3019,
+            "VehicleId" : 1468371103
+          },
+          "29" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 53,
+            "Name" : "Phos4us",
+            "RefId" : 3079,
+            "VehicleId" : 820529698
+          },
+          "30" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 69,
+            "Name" : "[CAV] Ozzie123",
+            "RefId" : 65228,
+            "VehicleId" : -1856752594
+          },
+          "31" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 54,
+            "Name" : "Maximus Decimus Meridius",
+            "RefId" : 27789,
+            "VehicleId" : 405826415
+          },
+          "32" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 57,
+            "Name" : "AOD_Dio [TKR]",
+            "RefId" : 29070,
+            "VehicleId" : 809291220
+          },
+          "33" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 64,
+            "Name" : "impliedconsent",
+            "RefId" : 12424,
+            "VehicleId" : -384044277
+          },
+          "34" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 55,
+            "Name" : "Docslap",
+            "RefId" : 24587,
+            "VehicleId" : 405826415
+          },
+          "35" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 60,
+            "Name" : "Lessen",
+            "RefId" : 55055,
+            "VehicleId" : 809291220
+          },
+          "36" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 51,
+            "Name" : "Nurrec",
+            "RefId" : 11088,
+            "VehicleId" : -384044277
+          },
+          "37" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 52,
+            "Name" : "LiveWire11C[CAV]",
+            "RefId" : 21062,
+            "VehicleId" : 405826415
+          },
+          "38" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 52,
+            "Name" : "eracerhead",
+            "RefId" : 24593,
+            "VehicleId" : 1468371103
+          },
+          "39" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 51,
+            "Name" : "Nurrec",
+            "RefId" : 64336,
+            "VehicleId" : -384044277
+          },
+          "40" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 57,
+            "Name" : "[AOD] 2112",
+            "RefId" : 53330,
+            "VehicleId" : 1468371103
+          },
+          "41" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 53,
+            "Name" : "",
+            "RefId" : 22739,
+            "VehicleId" : 1934199723
+          }
+        },
+        "setup" : {
+          "AllowablePenaltyTime" : 0,
+          "AllowedViews" : 0,
+          "DamageType" : 3,
+          "DriveThroughPenalty" : 1,
+          "Flags" : -1617161192,
+          "FuelUsageType" : 0,
+          "GridLayout" : 0,
+          "GridSize" : 32,
+          "ManualPitStops" : 0,
+          "ManualRollingStarts" : 0,
+          "MaxPlayers" : 32,
+          "MinimumOnlineRank" : 0,
+          "MinimumOnlineStrength" : 100,
+          "MultiClassSlot1" : 1740243009,
+          "MultiClassSlot2" : -112887377,
+          "MultiClassSlot3" : -564539194,
+          "MultiClassSlots" : 3,
+          "OpponentDifficulty" : 50,
+          "PenaltiesType" : 1,
+          "PitWhiteLinePenalty" : 1,
+          "PracticeDateDay" : 8,
+          "PracticeDateHour" : 14,
+          "PracticeDateMonth" : 4,
+          "PracticeDateProgression" : 1,
+          "PracticeDateYear" : 2017,
+          "PracticeLength" : 45,
+          "PracticeWeatherProgression" : 0,
+          "PracticeWeatherSlot1" : -934211870,
+          "PracticeWeatherSlot2" : -934211870,
+          "PracticeWeatherSlot3" : -934211870,
+          "PracticeWeatherSlot4" : -934211870,
+          "PracticeWeatherSlots" : 1,
+          "QualifyDateDay" : 8,
+          "QualifyDateHour" : 15,
+          "QualifyDateMonth" : 4,
+          "QualifyDateProgression" : 1,
+          "QualifyDateYear" : 2017,
+          "QualifyLength" : 45,
+          "QualifyWeatherProgression" : 0,
+          "QualifyWeatherSlot1" : -934211870,
+          "QualifyWeatherSlot2" : -934211870,
+          "QualifyWeatherSlot3" : -934211870,
+          "QualifyWeatherSlot4" : -934211870,
+          "QualifyWeatherSlots" : 1,
+          "RaceDateDay" : 8,
+          "RaceDateHour" : 16,
+          "RaceDateMonth" : 4,
+          "RaceDateProgression" : 2,
+          "RaceDateYear" : 2017,
+          "RaceFormationLap" : 0,
+          "RaceLength" : 90,
+          "RaceMandatoryPitStops" : 0,
+          "RaceRollingStart" : 0,
+          "RaceWeatherProgression" : 0,
+          "RaceWeatherSlot1" : -934211870,
+          "RaceWeatherSlot2" : -934211870,
+          "RaceWeatherSlot3" : -934211870,
+          "RaceWeatherSlot4" : -934211870,
+          "RaceWeatherSlots" : 1,
+          "ServerControlsSetup" : 1,
+          "ServerControlsTrack" : 1,
+          "ServerControlsVehicle" : 0,
+          "ServerControlsVehicleClass" : 1,
+          "TireWearType" : 5,
+          "TrackId" : 1731699995,
+          "VehicleClassId" : -112887377,
+          "VehicleModelId" : -1856752594
+        },
+        "stages" : {
+          "practice1" : {
+            "end_time" : 1508638669,
+            "events" : {},
+            "results" : [
+              {
+                "attributes" : {
+                  "FastestLapTime" : 73008,
+                  "Lap" : 22,
+                  "RacePosition" : 1,
+                  "State" : "Finished",
+                  "TotalTime" : 1875226,
+                  "VehicleId" : 820529698
+                },
+                "is_player" : true,
+                "name" : "Wayne Kerr",
+                "participantid" : 23,
+                "refid" : 58569,
+                "time" : 1508638666
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 73606,
+                  "Lap" : 15,
+                  "RacePosition" : 2,
+                  "State" : "Finished",
+                  "TotalTime" : 2776578,
+                  "VehicleId" : -93033971
+                },
+                "is_player" : true,
+                "name" : "crowhop",
+                "participantid" : 17,
+                "refid" : 33605,
+                "time" : 1508638666
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 73708,
+                  "Lap" : 16,
+                  "RacePosition" : 3,
+                  "State" : "Finished",
+                  "TotalTime" : 2776948,
+                  "VehicleId" : 820529698
+                },
+                "is_player" : true,
+                "name" : "Fight-Test",
+                "participantid" : 22,
+                "refid" : 62467,
+                "time" : 1508638666
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 74249,
+                  "Lap" : 19,
+                  "RacePosition" : 4,
+                  "State" : "Finished",
+                  "TotalTime" : 1953051,
+                  "VehicleId" : -1068716209
+                },
+                "is_player" : true,
+                "name" : "ECT CHEF UBoG",
+                "participantid" : 20,
+                "refid" : 18754,
+                "time" : 1508638666
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 75249,
+                  "Lap" : 17,
+                  "RacePosition" : 5,
+                  "State" : "Finished",
+                  "TotalTime" : 2777132,
+                  "VehicleId" : 820529698
+                },
+                "is_player" : true,
+                "name" : "Phos4us",
+                "participantid" : 29,
+                "refid" : 3079,
+                "time" : 1508638666
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 75433,
+                  "Lap" : 5,
+                  "RacePosition" : 6,
+                  "State" : "Finished",
+                  "TotalTime" : 396970,
+                  "VehicleId" : 1468371103
+                },
+                "is_player" : true,
+                "name" : "[AOD] 2112",
+                "participantid" : 40,
+                "refid" : 53330,
+                "time" : 1508638666
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 75689,
+                  "Lap" : 8,
+                  "RacePosition" : 7,
+                  "State" : "Finished",
+                  "TotalTime" : 2776850,
+                  "VehicleId" : 820529698
+                },
+                "is_player" : true,
+                "name" : "Mr.Smoke",
+                "participantid" : 25,
+                "refid" : 47108,
+                "time" : 1508638666
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 76171,
+                  "Lap" : 9,
+                  "RacePosition" : 8,
+                  "State" : "Finished",
+                  "TotalTime" : 2777125,
+                  "VehicleId" : 1468371103
+                },
+                "is_player" : true,
+                "name" : "eracerhead",
+                "participantid" : 38,
+                "refid" : 24593,
+                "time" : 1508638666
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 77493,
+                  "Lap" : 6,
+                  "RacePosition" : 9,
+                  "State" : "Finished",
+                  "TotalTime" : 728139,
+                  "VehicleId" : -384044277
+                },
+                "is_player" : true,
+                "name" : "Nurrec",
+                "participantid" : 39,
+                "refid" : 64336,
+                "time" : 1508638666
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 78138,
+                  "Lap" : 8,
+                  "RacePosition" : 10,
+                  "State" : "Finished",
+                  "TotalTime" : 2776921,
+                  "VehicleId" : 405826415
+                },
+                "is_player" : true,
+                "name" : "[CAV] Power",
+                "participantid" : 27,
+                "refid" : 6730,
+                "time" : 1508638666
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 78265,
+                  "Lap" : 11,
+                  "RacePosition" : 11,
+                  "State" : "Finished",
+                  "TotalTime" : 1571816,
+                  "VehicleId" : -1856752594
+                },
+                "is_player" : true,
+                "name" : "[CAV] Ozzie123",
+                "participantid" : 30,
+                "refid" : 65228,
+                "time" : 1508638666
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 78495,
+                  "Lap" : 16,
+                  "RacePosition" : 12,
+                  "State" : "Finished",
+                  "TotalTime" : 2777118,
+                  "VehicleId" : -384044277
+                },
+                "is_player" : true,
+                "name" : "[CAV] Kaladin",
+                "participantid" : 16,
+                "refid" : 48641,
+                "time" : 1508638666
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 79840,
+                  "Lap" : 14,
+                  "RacePosition" : 13,
+                  "State" : "Finished",
+                  "TotalTime" : 1562680,
+                  "VehicleId" : 809291220
+                },
+                "is_player" : true,
+                "name" : "AOD_Dio [TKR]",
+                "participantid" : 32,
+                "refid" : 29070,
+                "time" : 1508638666
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 80865,
+                  "Lap" : 8,
+                  "RacePosition" : 14,
+                  "State" : "Finished",
+                  "TotalTime" : 2777132,
+                  "VehicleId" : -384044277
+                },
+                "is_player" : true,
+                "name" : "impliedconsent",
+                "participantid" : 33,
+                "refid" : 12424,
+                "time" : 1508638666
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 81445,
+                  "Lap" : 7,
+                  "RacePosition" : 15,
+                  "State" : "Finished",
+                  "TotalTime" : 604180,
+                  "VehicleId" : -1856752594
+                },
+                "is_player" : true,
+                "name" : "[CAV] F1_Racer68",
+                "participantid" : 15,
+                "refid" : 31552,
+                "time" : 1508638666
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 81940,
+                  "Lap" : 7,
+                  "RacePosition" : 16,
+                  "State" : "Finished",
+                  "TotalTime" : 2777132,
+                  "VehicleId" : 405826415
+                },
+                "is_player" : true,
+                "name" : "Docslap",
+                "participantid" : 34,
+                "refid" : 24587,
+                "time" : 1508638666
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 83414,
+                  "Lap" : 4,
+                  "RacePosition" : 17,
+                  "State" : "Finished",
+                  "TotalTime" : 2777132,
+                  "VehicleId" : 809291220
+                },
+                "is_player" : true,
+                "name" : "Lessen",
+                "participantid" : 35,
+                "refid" : 55055,
+                "time" : 1508638666
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 84717,
+                  "Lap" : 4,
+                  "RacePosition" : 18,
+                  "State" : "Finished",
+                  "TotalTime" : 2777132,
+                  "VehicleId" : 405826415
+                },
+                "is_player" : true,
+                "name" : "Maximus Decimus Meridius",
+                "participantid" : 31,
+                "refid" : 27789,
+                "time" : 1508638666
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 98316,
+                  "Lap" : 3,
+                  "RacePosition" : 19,
+                  "State" : "Finished",
+                  "TotalTime" : 747849,
+                  "VehicleId" : 405826415
+                },
+                "is_player" : true,
+                "name" : "LiveWire11C[CAV]",
+                "participantid" : 37,
+                "refid" : 21062,
+                "time" : 1508638666
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 112214,
+                  "Lap" : 2,
+                  "RacePosition" : 20,
+                  "State" : "Finished",
+                  "TotalTime" : 292827,
+                  "VehicleId" : 1934199723
+                },
+                "is_player" : true,
+                "name" : "",
+                "participantid" : 41,
+                "refid" : 22739,
+                "time" : 1508638666
+              }
+            ],
+            "start_time" : 1508635889
+          }
+        },
+        "start_time" : 1508635818
+      },
+      {
+        "end_time" : 1508998756,
+        "finished" : false,
+        "index" : 11,
+        "members" : {},
+        "participants" : [
+          {
+            "IsPlayer" : 1,
+            "LiveryId" : 54,
+            "Name" : "Maximus Decimus Meridius",
+            "RefId" : 4160,
+            "VehicleId" : 405826415
+          },
+          {
+            "IsPlayer" : 0,
+            "LiveryId" : 51,
+            "Name" : "Benjamin Winter",
+            "RefId" : 4160,
+            "VehicleId" : 405826415
+          },
+          {
+            "IsPlayer" : 0,
+            "LiveryId" : 55,
+            "Name" : "Paul Yeung",
+            "RefId" : 4160,
+            "VehicleId" : 405826415
+          },
+          {
+            "IsPlayer" : 0,
+            "LiveryId" : 54,
+            "Name" : "Nigel Teags",
+            "RefId" : 4160,
+            "VehicleId" : 405826415
+          },
+          {
+            "IsPlayer" : 0,
+            "LiveryId" : 53,
+            "Name" : "Kieran Poole",
+            "RefId" : 4160,
+            "VehicleId" : 405826415
+          },
+          {
+            "IsPlayer" : 0,
+            "LiveryId" : 52,
+            "Name" : "Michael Ball",
+            "RefId" : 4160,
+            "VehicleId" : 405826415
+          },
+          {
+            "IsPlayer" : 0,
+            "LiveryId" : 55,
+            "Name" : "Dean Welfare",
+            "RefId" : 4160,
+            "VehicleId" : 405826415
+          },
+          {
+            "IsPlayer" : 0,
+            "LiveryId" : 54,
+            "Name" : "James Boulton",
+            "RefId" : 4160,
+            "VehicleId" : 405826415
+          },
+          {
+            "IsPlayer" : 0,
+            "LiveryId" : 52,
+            "Name" : "Dirk Dietrich",
+            "RefId" : 4160,
+            "VehicleId" : 405826415
+          },
+          {
+            "IsPlayer" : 0,
+            "LiveryId" : 53,
+            "Name" : "Melinda Neil",
+            "RefId" : 4160,
+            "VehicleId" : 405826415
+          },
+          {
+            "IsPlayer" : 0,
+            "LiveryId" : 51,
+            "Name" : "Kai Lochbaum",
+            "RefId" : 4160,
+            "VehicleId" : 405826415
+          },
+          {
+            "IsPlayer" : 0,
+            "LiveryId" : 52,
+            "Name" : "Mads Krog Jensen",
+            "RefId" : 4160,
+            "VehicleId" : 405826415
+          },
+          {
+            "IsPlayer" : 0,
+            "LiveryId" : 53,
+            "Name" : "Richard Navone",
+            "RefId" : 4160,
+            "VehicleId" : 405826415
+          },
+          {
+            "IsPlayer" : 0,
+            "LiveryId" : 54,
+            "Name" : "G. Auriol",
+            "RefId" : 4160,
+            "VehicleId" : 405826415
+          },
+          {
+            "IsPlayer" : 0,
+            "LiveryId" : 51,
+            "Name" : "Oliver Kaiser",
+            "RefId" : 4160,
+            "VehicleId" : 405826415
+          }
+        ],
+        "setup" : {
+          "AllowablePenaltyTime" : 0,
+          "AllowedViews" : 0,
+          "DamageType" : 3,
+          "DriveThroughPenalty" : 1,
+          "Flags" : -1617165288,
+          "FuelUsageType" : 0,
+          "GridLayout" : 0,
+          "GridSize" : 32,
+          "ManualPitStops" : 0,
+          "ManualRollingStarts" : 0,
+          "MaxPlayers" : 32,
+          "MinimumOnlineRank" : 0,
+          "MinimumOnlineStrength" : 100,
+          "MultiClassSlot1" : 1740243009,
+          "MultiClassSlot2" : -112887377,
+          "MultiClassSlot3" : -564539194,
+          "MultiClassSlots" : 3,
+          "OpponentDifficulty" : 50,
+          "PenaltiesType" : 1,
+          "PitWhiteLinePenalty" : 1,
+          "PracticeDateDay" : 8,
+          "PracticeDateHour" : 14,
+          "PracticeDateMonth" : 4,
+          "PracticeDateProgression" : 1,
+          "PracticeDateYear" : 2017,
+          "PracticeLength" : 45,
+          "PracticeWeatherProgression" : 0,
+          "PracticeWeatherSlot1" : -934211870,
+          "PracticeWeatherSlot2" : -934211870,
+          "PracticeWeatherSlot3" : -934211870,
+          "PracticeWeatherSlot4" : -934211870,
+          "PracticeWeatherSlots" : 1,
+          "QualifyDateDay" : 8,
+          "QualifyDateHour" : 15,
+          "QualifyDateMonth" : 4,
+          "QualifyDateProgression" : 1,
+          "QualifyDateYear" : 2017,
+          "QualifyLength" : 45,
+          "QualifyWeatherProgression" : 0,
+          "QualifyWeatherSlot1" : -934211870,
+          "QualifyWeatherSlot2" : -934211870,
+          "QualifyWeatherSlot3" : -934211870,
+          "QualifyWeatherSlot4" : -934211870,
+          "QualifyWeatherSlots" : 1,
+          "RaceDateDay" : 8,
+          "RaceDateHour" : 16,
+          "RaceDateMonth" : 4,
+          "RaceDateProgression" : 2,
+          "RaceDateYear" : 2017,
+          "RaceFormationLap" : 0,
+          "RaceLength" : 90,
+          "RaceMandatoryPitStops" : 0,
+          "RaceRollingStart" : 0,
+          "RaceWeatherProgression" : 0,
+          "RaceWeatherSlot1" : -934211870,
+          "RaceWeatherSlot2" : -934211870,
+          "RaceWeatherSlot3" : -934211870,
+          "RaceWeatherSlot4" : -934211870,
+          "RaceWeatherSlots" : 1,
+          "ServerControlsSetup" : 1,
+          "ServerControlsTrack" : 1,
+          "ServerControlsVehicle" : 0,
+          "ServerControlsVehicleClass" : 1,
+          "TireWearType" : 5,
+          "TrackId" : 1731699995,
+          "VehicleClassId" : -1840922352,
+          "VehicleModelId" : -1856752594
+        },
+        "stages" : {
+          "practice1" : {
+            "end_time" : 1508998756,
+            "events" : {},
+            "results" : {},
+            "start_time" : 1508998747
+          }
+        },
+        "start_time" : 1508998681
+      },
+      {
+        "end_time" : 1508998837,
+        "finished" : false,
+        "index" : 12,
+        "members" : {},
+        "participants" : {},
+        "setup" : {
+          "AllowablePenaltyTime" : 0,
+          "AllowedViews" : 0,
+          "DamageType" : 3,
+          "DriveThroughPenalty" : 1,
+          "Flags" : -1617165288,
+          "FuelUsageType" : 0,
+          "GridLayout" : 0,
+          "GridSize" : 32,
+          "ManualPitStops" : 0,
+          "ManualRollingStarts" : 0,
+          "MaxPlayers" : 32,
+          "MinimumOnlineRank" : 0,
+          "MinimumOnlineStrength" : 100,
+          "MultiClassSlot1" : 1740243009,
+          "MultiClassSlot2" : -112887377,
+          "MultiClassSlot3" : -564539194,
+          "MultiClassSlots" : 3,
+          "OpponentDifficulty" : 50,
+          "PenaltiesType" : 1,
+          "PitWhiteLinePenalty" : 1,
+          "PracticeDateDay" : 8,
+          "PracticeDateHour" : 14,
+          "PracticeDateMonth" : 4,
+          "PracticeDateProgression" : 1,
+          "PracticeDateYear" : 2017,
+          "PracticeLength" : 45,
+          "PracticeWeatherProgression" : 0,
+          "PracticeWeatherSlot1" : -934211870,
+          "PracticeWeatherSlot2" : -934211870,
+          "PracticeWeatherSlot3" : -934211870,
+          "PracticeWeatherSlot4" : -934211870,
+          "PracticeWeatherSlots" : 1,
+          "QualifyDateDay" : 8,
+          "QualifyDateHour" : 15,
+          "QualifyDateMonth" : 4,
+          "QualifyDateProgression" : 1,
+          "QualifyDateYear" : 2017,
+          "QualifyLength" : 45,
+          "QualifyWeatherProgression" : 0,
+          "QualifyWeatherSlot1" : -934211870,
+          "QualifyWeatherSlot2" : -934211870,
+          "QualifyWeatherSlot3" : -934211870,
+          "QualifyWeatherSlot4" : -934211870,
+          "QualifyWeatherSlots" : 1,
+          "RaceDateDay" : 8,
+          "RaceDateHour" : 16,
+          "RaceDateMonth" : 4,
+          "RaceDateProgression" : 2,
+          "RaceDateYear" : 2017,
+          "RaceFormationLap" : 0,
+          "RaceLength" : 90,
+          "RaceMandatoryPitStops" : 0,
+          "RaceRollingStart" : 0,
+          "RaceWeatherProgression" : 0,
+          "RaceWeatherSlot1" : -934211870,
+          "RaceWeatherSlot2" : -934211870,
+          "RaceWeatherSlot3" : -934211870,
+          "RaceWeatherSlot4" : -934211870,
+          "RaceWeatherSlots" : 1,
+          "ServerControlsSetup" : 1,
+          "ServerControlsTrack" : 1,
+          "ServerControlsVehicle" : 0,
+          "ServerControlsVehicleClass" : 1,
+          "TireWearType" : 5,
+          "TrackId" : 1731699995,
+          "VehicleClassId" : -1840922352,
+          "VehicleModelId" : -1856752594
+        },
+        "stages" : {},
+        "start_time" : 1508998789
+      }
+    ],
+    "players" : {
+      "76561197961144889" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race_finishes" : 0,
+          "race_joins" : 5,
+          "race_loads" : 5,
+          "race_loads_done" : 5,
+          "track_distances" : {
+            "1731699995" : 60040
+          },
+          "tracks" : {},
+          "vehicle_distances" : {
+            "-384044277" : 60040
+          },
+          "vehicles" : {}
+        },
+        "last_joined" : 1508639739,
+        "name" : "impliedconsent"
+      },
+      "76561197962726630" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race_finishes" : 0,
+          "race_joins" : 3,
+          "race_loads" : 3,
+          "race_loads_done" : 3,
+          "track_distances" : {
+            "1731699995" : 22634
+          },
+          "tracks" : {},
+          "vehicle_distances" : {
+            "405826415" : 22634
+          },
+          "vehicles" : {}
+        },
+        "last_joined" : 1508638666,
+        "name" : "LiveWire11C[CAV]"
+      },
+      "76561197965249418" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race_finishes" : 0,
+          "race_joins" : 1,
+          "race_loads" : 1,
+          "race_loads_done" : 1,
+          "track_distances" : {
+            "1731699995" : 82818
+          },
+          "tracks" : {},
+          "vehicle_distances" : {
+            "-1068716209" : 82818
+          },
+          "vehicles" : {}
+        },
+        "last_joined" : 1508635890,
+        "name" : "ECT CHEF UBoG"
+      },
+      "76561197981425335" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race_finishes" : 0,
+          "race_joins" : 2,
+          "race_loads" : 2,
+          "race_loads_done" : 2,
+          "track_distances" : {
+            "1731699995" : 26329
+          },
+          "tracks" : {},
+          "vehicle_distances" : {
+            "-384044277" : 26329
+          },
+          "vehicles" : {}
+        },
+        "last_joined" : 1508637731,
+        "name" : "Nurrec"
+      },
+      "76561198020623583" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race_finishes" : 0,
+          "race_joins" : 3,
+          "race_loads" : 3,
+          "race_loads_done" : 3,
+          "track_distances" : {
+            "1731699995" : 28965
+          },
+          "tracks" : {},
+          "vehicle_distances" : {
+            "405826415" : 28965
+          },
+          "vehicles" : {}
+        },
+        "last_joined" : 1508639878,
+        "name" : "Docslap"
+      },
+      "76561198026125999" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race_finishes" : 0,
+          "race_joins" : 3,
+          "race_loads" : 1,
+          "race_loads_done" : 1,
+          "track_distances" : {
+            "1731699995" : 28328
+          },
+          "tracks" : {},
+          "vehicle_distances" : {
+            "405826415" : 28328
+          },
+          "vehicles" : {}
+        },
+        "last_joined" : 1508998788,
+        "name" : "Maximus Decimus Meridius"
+      },
+      "76561198034431456" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race_finishes" : 0,
+          "race_joins" : 1,
+          "race_loads" : 1,
+          "race_loads_done" : 1,
+          "track_distances" : {
+            "1731699995" : 60691
+          },
+          "tracks" : {},
+          "vehicle_distances" : {
+            "820529698" : 60691
+          },
+          "vehicles" : {}
+        },
+        "last_joined" : 1508636424,
+        "name" : "Phos4us"
+      },
+      "76561198055470347" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race_finishes" : 0,
+          "race_joins" : 4,
+          "race_loads" : 3,
+          "race_loads_done" : 3,
+          "track_distances" : {
+            "1731699995" : 78491
+          },
+          "tracks" : {},
+          "vehicle_distances" : {
+            "1468371103" : 78491
+          },
+          "vehicles" : {}
+        },
+        "last_joined" : 1508637652,
+        "name" : "eracerhead"
+      },
+      "76561198099239424" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race_finishes" : 0,
+          "race_joins" : 1,
+          "race_loads" : 1,
+          "race_loads_done" : 1,
+          "track_distances" : {
+            "1731699995" : 50867
+          },
+          "tracks" : {},
+          "vehicle_distances" : {
+            "809291220" : 50867
+          },
+          "vehicles" : {}
+        },
+        "last_joined" : 1508636717,
+        "name" : "AOD_Dio [TKR]"
+      },
+      "76561198151166420" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race_finishes" : 0,
+          "race_joins" : 10,
+          "race_loads" : 0,
+          "race_loads_done" : 0,
+          "track_distances" : {
+            "1731699995" : 33815
+          },
+          "tracks" : {},
+          "vehicle_distances" : {
+            "-1856752594" : 33815
+          },
+          "vehicles" : {}
+        },
+        "last_joined" : 1508635817,
+        "name" : "[CAV] F1_Racer68"
+      },
+      "76561198174702837" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race_finishes" : 0,
+          "race_joins" : 2,
+          "race_loads" : 2,
+          "race_loads_done" : 2,
+          "track_distances" : {},
+          "tracks" : {},
+          "vehicle_distances" : {},
+          "vehicles" : {}
+        },
+        "last_joined" : 1508639834,
+        "name" : "BionicDerp"
+      },
+      "76561198192405274" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race_finishes" : 0,
+          "race_joins" : 2,
+          "race_loads" : 0,
+          "race_loads_done" : 0,
+          "track_distances" : {
+            "1731699995" : 62304
+          },
+          "tracks" : {},
+          "vehicle_distances" : {
+            "-384044277" : 62304
+          },
+          "vehicles" : {}
+        },
+        "last_joined" : 1508635851,
+        "name" : "[CAV] Kaladin"
+      },
+      "76561198201007478" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race_finishes" : 0,
+          "race_joins" : 3,
+          "race_loads" : 2,
+          "race_loads_done" : 2,
+          "track_distances" : {
+            "1731699995" : 61972
+          },
+          "tracks" : {},
+          "vehicle_distances" : {
+            "-1856752594" : 61972
+          },
+          "vehicles" : {}
+        },
+        "last_joined" : 1508636454,
+        "name" : "[CAV] Ozzie123"
+      },
+      "76561198205236405" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race_finishes" : 0,
+          "race_joins" : 1,
+          "race_loads" : 1,
+          "race_loads_done" : 1,
+          "track_distances" : {
+            "1731699995" : 45943
+          },
+          "tracks" : {},
+          "vehicle_distances" : {
+            "405826415" : 45943
+          },
+          "vehicles" : {}
+        },
+        "last_joined" : 1508636201,
+        "name" : "[CAV] Power"
+      },
+      "76561198210909668" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race_finishes" : 0,
+          "race_joins" : 3,
+          "race_loads" : 3,
+          "race_loads_done" : 3,
+          "track_distances" : {
+            "1731699995" : 64518
+          },
+          "tracks" : {},
+          "vehicle_distances" : {
+            "-93033971" : 64518
+          },
+          "vehicles" : {}
+        },
+        "last_joined" : 1508639328,
+        "name" : "crowhop"
+      },
+      "76561198213325255" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race_finishes" : 0,
+          "race_joins" : 1,
+          "race_loads" : 1,
+          "race_loads_done" : 1,
+          "track_distances" : {
+            "1731699995" : 9299
+          },
+          "tracks" : {},
+          "vehicle_distances" : {
+            "1934199723" : 9299
+          },
+          "vehicles" : {}
+        },
+        "last_joined" : 1508638183,
+        "name" : "Riverside"
+      },
+      "76561198221856044" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race_finishes" : 0,
+          "race_joins" : 2,
+          "race_loads" : 2,
+          "race_loads_done" : 2,
+          "track_distances" : {
+            "1731699995" : 30610
+          },
+          "tracks" : {},
+          "vehicle_distances" : {
+            "1468371103" : 30610
+          },
+          "vehicles" : {}
+        },
+        "last_joined" : 1508638062,
+        "name" : "[AOD] 2112"
+      },
+      "76561198229531792" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race_finishes" : 0,
+          "race_joins" : 3,
+          "race_loads" : 3,
+          "race_loads_done" : 3,
+          "track_distances" : {
+            "1731699995" : 85587
+          },
+          "tracks" : {},
+          "vehicle_distances" : {
+            "820529698" : 85587
+          },
+          "vehicles" : {}
+        },
+        "last_joined" : 1508639149,
+        "name" : "Wayne Kerr"
+      },
+      "76561198321222557" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race_finishes" : 0,
+          "race_joins" : 3,
+          "race_loads" : 3,
+          "race_loads_done" : 3,
+          "track_distances" : {
+            "1731699995" : 68087
+          },
+          "tracks" : {},
+          "vehicle_distances" : {
+            "820529698" : 68087
+          },
+          "vehicles" : {}
+        },
+        "last_joined" : 1508639165,
+        "name" : "Fight-Test"
+      },
+      "76561198323319724" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race_finishes" : 0,
+          "race_joins" : 2,
+          "race_loads" : 2,
+          "race_loads_done" : 2,
+          "track_distances" : {
+            "1731699995" : 51762
+          },
+          "tracks" : {},
+          "vehicle_distances" : {
+            "820529698" : 51762
+          },
+          "vehicles" : {}
+        },
+        "last_joined" : 1508636146,
+        "name" : "Mr.Smoke"
+      },
+      "76561198385020572" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race_finishes" : 0,
+          "race_joins" : 2,
+          "race_loads" : 2,
+          "race_loads_done" : 2,
+          "track_distances" : {
+            "1731699995" : 18920
+          },
+          "tracks" : {},
+          "vehicle_distances" : {
+            "809291220" : 18920
+          },
+          "vehicles" : {}
+        },
+        "last_joined" : 1508638666,
+        "name" : "Lessen"
+      }
+    },
+    "server" : {
+      "name" : "CanAm VRL [www.canamvrl.com]",
+      "steam_disconnects" : 0,
+      "steam_downtime" : 0,
+      "total_steam_downtime" : 0,
+      "total_uptime" : "701696",
+      "uptime" : "671195"
+    },
+    "session" : {
+      "counts" : {
+        "lobbies" : 12,
+        "player_finishes" : 0,
+        "player_loads" : 0,
+        "player_loads_done" : 0,
+        "race_finishes" : 1,
+        "race_loads" : 6,
+        "race_loads_done" : 6,
+        "sessions" : 12,
+        "stage_counts" : {
+          "practice1" : 6,
+          "qualifying1" : 1
+        },
+        "stage_durations" : {
+          "practice1" : 2799936,
+          "qualifying1" : 1735859
+        },
+        "track_distances" : {
+          "1731699995" : 971980
+        },
+        "tracks" : {
+          "1731699995" : 6
+        },
+        "vehicle_distances" : {
+          "-1068716209" : 82818,
+          "-1856752594" : 95787,
+          "-384044277" : 148673,
+          "-93033971" : 64518,
+          "1468371103" : 109101,
+          "1934199723" : 9299,
+          "405826415" : 125870,
+          "809291220" : 69787,
+          "820529698" : 266127
+        },
+        "vehicles" : {}
+      }
+    }
+  }
+}
+
+// EOF //

@@ -1,0 +1,1920 @@
+{
+  "result" : "ok",
+  "response" : {
+    "vehicle_classes" : {
+      "description" : "All known vehicle classes",
+      "list" : [
+        {
+          "value" : -2104459828,
+          "name" : "Road C"
+        },
+        {
+          "value" : -112887377,
+          "name" : "GT3"
+        },
+        {
+          "value" : -420369734,
+          "name" : "Vintage Indycar"
+        },
+        {
+          "value" : 298754909,
+          "name" : "Road D"
+        },
+        {
+          "value" : -1972079196,
+          "name" : "Vintage Touring-GT C"
+        },
+        {
+          "value" : 1553262379,
+          "name" : "GT4"
+        },
+        {
+          "value" : 1740243009,
+          "name" : "GTE"
+        },
+        {
+          "value" : -1840922352,
+          "name" : "Track Day A"
+        },
+        {
+          "value" : -1796732671,
+          "name" : "GTO"
+        },
+        {
+          "value" : -2132031460,
+          "name" : "Road F"
+        },
+        {
+          "value" : -1289517523,
+          "name" : "LMP1"
+        },
+        {
+          "value" : 1543160927,
+          "name" : "LMP900"
+        },
+        {
+          "value" : -1270088329,
+          "name" : "Group A"
+        },
+        {
+          "value" : -1300724070,
+          "name" : "Road B"
+        },
+        {
+          "value" : 831252177,
+          "name" : "Road E"
+        },
+        {
+          "value" : 560967002,
+          "name" : "Vintage Touring-GT B"
+        },
+        {
+          "value" : 325949975,
+          "name" : "Road G"
+        },
+        {
+          "value" : 52697193,
+          "name" : "Touring Car"
+        },
+        {
+          "value" : -48135339,
+          "name" : "Group 5"
+        },
+        {
+          "value" : -718294614,
+          "name" : "Group 4"
+        },
+        {
+          "value" : -1578275110,
+          "name" : "Track Day B"
+        },
+        {
+          "value" : -278964219,
+          "name" : "Vintage Touring-GT A"
+        },
+        {
+          "value" : -1354623995,
+          "name" : "WRX"
+        },
+        {
+          "value" : 61661019,
+          "name" : "Indycar"
+        },
+        {
+          "value" : 1362248927,
+          "name" : "Vintage Prototype B"
+        },
+        {
+          "value" : -517378763,
+          "name" : "488 Challenge"
+        },
+        {
+          "value" : 1323122160,
+          "name" : "GT1"
+        },
+        {
+          "value" : 767810805,
+          "name" : "Road A"
+        },
+        {
+          "value" : -795647603,
+          "name" : "Vintage RX"
+        },
+        {
+          "value" : 1572999773,
+          "name" : "V8 Supercars"
+        },
+        {
+          "value" : 1992634946,
+          "name" : "Modern Stockcar"
+        },
+        {
+          "value" : 1212874744,
+          "name" : "Formula A"
+        },
+        {
+          "value" : -128176390,
+          "name" : "Formula C"
+        },
+        {
+          "value" : -1981841276,
+          "name" : "Formula Renault"
+        },
+        {
+          "value" : 1361234018,
+          "name" : "F5"
+        },
+        {
+          "value" : -14405160,
+          "name" : "Formula X"
+        },
+        {
+          "value" : -207872622,
+          "name" : "G40 Junior"
+        },
+        {
+          "value" : -1358908608,
+          "name" : "GT5"
+        },
+        {
+          "value" : 974854672,
+          "name" : "LMP3"
+        },
+        {
+          "value" : -1503297100,
+          "name" : "Group C1"
+        },
+        {
+          "value" : 2028372520,
+          "name" : "Kart1"
+        },
+        {
+          "value" : -911791795,
+          "name" : "Super Trofeo"
+        },
+        {
+          "value" : -564539194,
+          "name" : "LMP2"
+        },
+        {
+          "value" : 2095740485,
+          "name" : "Vintage F1 D"
+        },
+        {
+          "value" : -1741070546,
+          "name" : "Vintage F1 C"
+        },
+        {
+          "value" : -322104719,
+          "name" : "Vintage F3 A"
+        },
+        {
+          "value" : 1153998110,
+          "name" : "Vintage F1 B"
+        },
+        {
+          "value" : -541941989,
+          "name" : "Vintage F1 A"
+        },
+        {
+          "value" : 97638723,
+          "name" : "Drift"
+        },
+        {
+          "value" : -1722857081,
+          "name" : "Vintage Touring-GT D"
+        },
+        {
+          "value" : 1249367921,
+          "name" : "RXLites"
+        },
+        {
+          "value" : -427741350,
+          "name" : "Group 6"
+        },
+        {
+          "value" : -1529501352,
+          "name" : "TC1"
+        },
+        {
+          "value" : -824554870,
+          "name" : "Megane Trophy"
+        },
+        {
+          "value" : -4596059,
+          "name" : "RS01 Trophy"
+        }
+      ]
+    },
+    "vehicles" : {
+      "description" : "All known vehicles. Each structure contains the vehicle's id, name and (optionally) class.",
+      "list" : [
+        {
+          "id" : 9503224,
+          "name" : "BMW 320 TC (E90)",
+          "class" : "Touring Car"
+        },
+        {
+          "id" : 58065064,
+          "name" : "Ginetta G40 GT5",
+          "class" : "GT5"
+        },
+        {
+          "id" : 65306143,
+          "name" : "Sauber C9 Mercedes-Benz",
+          "class" : "Group C1"
+        },
+        {
+          "id" : 85063219,
+          "name" : "Nissan GT-R Nismo (R35)",
+          "class" : "Road C"
+        },
+        {
+          "id" : 143364290,
+          "name" : "BMW 2002 Turbo",
+          "class" : "Road G"
+        },
+        {
+          "id" : 152867459,
+          "name" : "Radical SR8-RX",
+          "class" : "Track Day A"
+        },
+        {
+          "id" : 161704608,
+          "name" : "Ford Mustang RTR GT4",
+          "class" : "GT4"
+        },
+        {
+          "id" : 178583869,
+          "name" : "Chevrolet Camaro ZL-1",
+          "class" : "Road D"
+        },
+        {
+          "id" : 185812116,
+          "name" : "Ferrari 488 GT3",
+          "class" : "GT3"
+        },
+        {
+          "id" : 262982797,
+          "name" : "Mercedes-Benz 190E 2.5-16 Evolution 2 DTM",
+          "class" : "Group A"
+        },
+        {
+          "id" : 266758367,
+          "name" : "Lamborghini Sesto Elemento",
+          "class" : "Track Day B"
+        },
+        {
+          "id" : 274862187,
+          "name" : "Mercedes-Benz SLS AMG GT3",
+          "class" : "GT3"
+        },
+        {
+          "id" : 307010432,
+          "name" : "McLaren F1",
+          "class" : "Road C"
+        },
+        {
+          "id" : 310900789,
+          "name" : "Ginetta G40 Junior",
+          "class" : "G40 Junior"
+        },
+        {
+          "id" : 366881611,
+          "name" : "Ford GT",
+          "class" : "Road B"
+        },
+        {
+          "id" : 373960596,
+          "name" : "Honda Civic Type-R",
+          "class" : "Road F"
+        },
+        {
+          "id" : 405826415,
+          "name" : "Ferrari 488 GTE",
+          "class" : "GTE"
+        },
+        {
+          "id" : 460478144,
+          "name" : "Mitsubishi Lancer Evolution VI T.M.E.",
+          "class" : "Road F"
+        },
+        {
+          "id" : 556202917,
+          "name" : "Renault Mégane R.S. SMS-R Rallycross",
+          "class" : "WRX"
+        },
+        {
+          "id" : 574354493,
+          "name" : "Mercedes-AMG A 45 SMS-R Rallycross",
+          "class" : "WRX"
+        },
+        {
+          "id" : 578969971,
+          "name" : "Lotus Type 49 Cosworth",
+          "class" : "Vintage F1 C"
+        },
+        {
+          "id" : 647968520,
+          "name" : "Ford Focus RS RX",
+          "class" : "WRX"
+        },
+        {
+          "id" : 675194619,
+          "name" : "Caterham SP/300.R",
+          "class" : "Track Day B"
+        },
+        {
+          "id" : 696555869,
+          "name" : "Ferrari 365 GTB4 Competizione",
+          "class" : "Vintage Touring-GT A"
+        },
+        {
+          "id" : 728095309,
+          "name" : "Chevrolet Camaro Z/28 '69 TransAm",
+          "class" : "Vintage Touring-GT A"
+        },
+        {
+          "id" : 728234598,
+          "name" : "Acura NSX",
+          "class" : "Road C"
+        },
+        {
+          "id" : 761457895,
+          "name" : "KTM X-Bow R",
+          "class" : "Road D"
+        },
+        {
+          "id" : 779111340,
+          "name" : "BMW 320 Turbo Group 5",
+          "class" : "Group 5"
+        },
+        {
+          "id" : 809291220,
+          "name" : "Porsche 911 GT3 R",
+          "class" : "GT3"
+        },
+        {
+          "id" : 820529698,
+          "name" : "Ligier JS P2 Nissan",
+          "class" : "LMP2"
+        },
+        {
+          "id" : 844159614,
+          "name" : "Kart",
+          "class" : "Kart1"
+        },
+        {
+          "id" : 851491257,
+          "name" : "Ford Fusion Stockcar",
+          "class" : "Modern Stockcar"
+        },
+        {
+          "id" : 951815226,
+          "name" : "Honda Civic Coupé GRC",
+          "class" : "WRX"
+        },
+        {
+          "id" : 957632269,
+          "name" : "Porsche 962C",
+          "class" : "Group C1"
+        },
+        {
+          "id" : 975104023,
+          "name" : "BMW V12 LMR",
+          "class" : "LMP900"
+        },
+        {
+          "id" : 980572679,
+          "name" : "McLaren 570S",
+          "class" : "Road C"
+        },
+        {
+          "id" : 987814806,
+          "name" : "Bentley Continental GT3 (2015)",
+          "class" : "GT3"
+        },
+        {
+          "id" : 998894988,
+          "name" : "Audi R8 LMS Endurance",
+          "class" : "GT3"
+        },
+        {
+          "id" : 998947753,
+          "name" : "Mitsubishi Lancer Evolution X FQ400",
+          "class" : "Road E"
+        },
+        {
+          "id" : 1015579264,
+          "name" : "Ferrari F40 LM",
+          "class" : "GTO"
+        },
+        {
+          "id" : 1061494025,
+          "name" : "Lotus Type 49C Cosworth",
+          "class" : "Vintage F1 C"
+        },
+        {
+          "id" : 1076438091,
+          "name" : "Porsche 911 GT1-98",
+          "class" : "GT1"
+        },
+        {
+          "id" : 1106819298,
+          "name" : "McLaren 720S",
+          "class" : "Road A"
+        },
+        {
+          "id" : 1111049682,
+          "name" : "Ford Mustang Boss 302R",
+          "class" : "GT4"
+        },
+        {
+          "id" : 1137321511,
+          "name" : "RWD P30 LMP1",
+          "class" : "LMP1"
+        },
+        {
+          "id" : 1141733552,
+          "name" : "Chevrolet Corvette Z06",
+          "class" : "Road C"
+        },
+        {
+          "id" : 1153746660,
+          "name" : "McLaren 650S GT3",
+          "class" : "GT3"
+        },
+        {
+          "id" : 1161219858,
+          "name" : "BMW Z4 GT3",
+          "class" : "GT3"
+        },
+        {
+          "id" : 1162971218,
+          "name" : "Lotus Type 38 Ford",
+          "class" : "Vintage Indycar"
+        },
+        {
+          "id" : 1187826685,
+          "name" : "Jaguar F-Type SVR Coupé",
+          "class" : "Road D"
+        },
+        {
+          "id" : 1213801406,
+          "name" : "Porsche 935/80",
+          "class" : "Group 5"
+        },
+        {
+          "id" : 1219511257,
+          "name" : "Audi R18 e-tron quattro (2014)",
+          "class" : "LMP1"
+        },
+        {
+          "id" : 1230061845,
+          "name" : "Ford Mustang GT",
+          "class" : "Road E"
+        },
+        {
+          "id" : 1231996358,
+          "name" : "Radical SR3-RS",
+          "class" : "Track Day B"
+        },
+        {
+          "id" : 1268015922,
+          "name" : "Aston Martin Vantage GT12",
+          "class" : "Road C"
+        },
+        {
+          "id" : 1278633095,
+          "name" : "Toyota GT-86 Rocket Bunny Street",
+          "class" : "Road C"
+        },
+        {
+          "id" : 1319185453,
+          "name" : "Porsche 935/77",
+          "class" : "Group 5"
+        },
+        {
+          "id" : 1352236476,
+          "name" : "RWD P20 LMP2",
+          "class" : "LMP2"
+        },
+        {
+          "id" : 1353949246,
+          "name" : "Mercedes-AMG GT3",
+          "class" : "GT3"
+        },
+        {
+          "id" : 1356687088,
+          "name" : "Pagani Huayra BC",
+          "class" : "Road A"
+        },
+        {
+          "id" : 1357515789,
+          "name" : "Ford Falcon FG V8 Supercar",
+          "class" : "V8 Supercars"
+        },
+        {
+          "id" : 1368036017,
+          "name" : "BMW M1 Procar",
+          "class" : "Group 4"
+        },
+        {
+          "id" : 1368545018,
+          "name" : "Sauber C9 LM Mercedes-Benz",
+          "class" : "Group C1"
+        },
+        {
+          "id" : 1397255601,
+          "name" : "Ford Mustang 2+2 Fastback",
+          "class" : "Road G"
+        },
+        {
+          "id" : 1400443574,
+          "name" : "BAC Mono",
+          "class" : "Road B"
+        },
+        {
+          "id" : 1401308680,
+          "name" : "Mercedes-Benz 300 SL (W194)",
+          "class" : "Vintage Touring-GT D"
+        },
+        {
+          "id" : 1401532035,
+          "name" : "Aston Martin Vantage GTE",
+          "class" : "GTE"
+        },
+        {
+          "id" : 1406411897,
+          "name" : "Lamborghini Huracán LP620-2 Super Trofeo",
+          "class" : "Super Trofeo"
+        },
+        {
+          "id" : 1433352906,
+          "name" : "Ginetta G57",
+          "class" : "Track Day A"
+        },
+        {
+          "id" : 1452261378,
+          "name" : "Aston Martin Vantage GT3",
+          "class" : "GT3"
+        },
+        {
+          "id" : 1464988033,
+          "name" : "Porsche Cayman GT4 Clubsport MR",
+          "class" : "GT4"
+        },
+        {
+          "id" : 1468371103,
+          "name" : "Ligier JS P2 Honda",
+          "class" : "LMP2"
+        },
+        {
+          "id" : 1469658023,
+          "name" : "Audi R8 V10 plus 5.2 FSI quattro",
+          "class" : "Road C"
+        },
+        {
+          "id" : 1470929381,
+          "name" : "Audi 90 quattro IMSA GTO",
+          "class" : "GTO"
+        },
+        {
+          "id" : 1481115672,
+          "name" : "Nissan Fairlady 240ZG GTS-II",
+          "class" : "Vintage Touring-GT A"
+        },
+        {
+          "id" : 1564669712,
+          "name" : "Lamborghini Veneno LP750-4",
+          "class" : "Road B"
+        },
+        {
+          "id" : 1574251638,
+          "name" : "KTM X-Bow GT4",
+          "class" : "GT4"
+        },
+        {
+          "id" : 1626504761,
+          "name" : "Formula Renault 3.5",
+          "class" : "Formula Renault"
+        },
+        {
+          "id" : 1637772163,
+          "name" : "Bentley Continental GT3 Endurance",
+          "class" : "GT3"
+        },
+        {
+          "id" : 1639105598,
+          "name" : "Ford Escort RS1600",
+          "class" : "Road G"
+        },
+        {
+          "id" : 1682144078,
+          "name" : "Aston Martin Vulcan",
+          "class" : "Track Day A"
+        },
+        {
+          "id" : 1716535504,
+          "name" : "Jaguar XJR-9",
+          "class" : "Group C1"
+        },
+        {
+          "id" : 1747257697,
+          "name" : "Nissan 300ZX Turbo LM",
+          "class" : "GTO"
+        },
+        {
+          "id" : 1764851930,
+          "name" : "Toyota GT-86 Rocket Bunny GT4",
+          "class" : "GT4"
+        },
+        {
+          "id" : 1810453820,
+          "name" : "Toyota TS040 Hybrid",
+          "class" : "LMP1"
+        },
+        {
+          "id" : 1817703058,
+          "name" : "Zakspeed Ford Capri Group 5",
+          "class" : "Group 5"
+        },
+        {
+          "id" : 1818067169,
+          "name" : "Dallara IR-12 Chevrolet (Speedway)",
+          "class" : "Indycar"
+        },
+        {
+          "id" : 1850232477,
+          "name" : "Lamborghini Huracán LP610-4",
+          "class" : "Road C"
+        },
+        {
+          "id" : 1864701845,
+          "name" : "Caterham Seven 620 R",
+          "class" : "Road D"
+        },
+        {
+          "id" : 1891730007,
+          "name" : "Nissan R89C",
+          "class" : "Group C1"
+        },
+        {
+          "id" : 1898954187,
+          "name" : "Marek RP 339H LMP1",
+          "class" : "LMP1"
+        },
+        {
+          "id" : 1909945073,
+          "name" : "Formula A",
+          "class" : "Formula A"
+        },
+        {
+          "id" : 1934199723,
+          "name" : "Audi R8 LMS",
+          "class" : "GT3"
+        },
+        {
+          "id" : 1959097924,
+          "name" : "Lotus Type 98T Renault Turbo",
+          "class" : "Vintage F1 A"
+        },
+        {
+          "id" : 1965567405,
+          "name" : "Ferrari LaFerrari",
+          "class" : "Road A"
+        },
+        {
+          "id" : 1972396515,
+          "name" : "Porsche 911 GT3 R Endurance",
+          "class" : "GT3"
+        },
+        {
+          "id" : 1977120176,
+          "name" : "Lamborghini Aventador LP700-4",
+          "class" : "Road B"
+        },
+        {
+          "id" : 1979398129,
+          "name" : "Mercedes-Benz CLK-LM",
+          "class" : "GT1"
+        },
+        {
+          "id" : 2037619631,
+          "name" : "Volkswagen Polo RX Supercar",
+          "class" : "WRX"
+        },
+        {
+          "id" : 2082176226,
+          "name" : "Audi A1 quattro",
+          "class" : "Road F"
+        },
+        {
+          "id" : 2086246081,
+          "name" : "Aston Martin Vantage GT4",
+          "class" : "GT4"
+        },
+        {
+          "id" : 2091910841,
+          "name" : "Ginetta G55 GT4",
+          "class" : "GT4"
+        },
+        {
+          "id" : 2136103830,
+          "name" : "Nissan Skyline GT-R (BNR32) Group A",
+          "class" : "Group A"
+        },
+        {
+          "id" : -2133597590,
+          "name" : "Porsche 911 GT3 RS",
+          "class" : "Road B"
+        },
+        {
+          "id" : -2075284877,
+          "name" : "Formula Rookie",
+          "class" : "F5"
+        },
+        {
+          "id" : -2064669470,
+          "name" : "Dallara IR-12 Honda (Speedway)",
+          "class" : "Indycar"
+        },
+        {
+          "id" : -2059595338,
+          "name" : "Mercedes-AMG GT R",
+          "class" : "Road C"
+        },
+        {
+          "id" : -2025231366,
+          "name" : "Cadillac ATS-V.R GT3",
+          "class" : "GT3"
+        },
+        {
+          "id" : -1966060946,
+          "name" : "Mazda MX-5 Radbul",
+          "class" : "Drift"
+        },
+        {
+          "id" : -1951461577,
+          "name" : "Ligier JS P3",
+          "class" : "LMP3"
+        },
+        {
+          "id" : -1902340407,
+          "name" : "Ferrari 288 GTO",
+          "class" : "Road E"
+        },
+        {
+          "id" : -1860886593,
+          "name" : "Renault Sport R.S. 01 GT3",
+          "class" : "GT3"
+        },
+        {
+          "id" : -1856998124,
+          "name" : "Renault Sport R.S. 01",
+          "class" : "RS01 Trophy"
+        },
+        {
+          "id" : -1856752594,
+          "name" : "Ford GT LM GTE",
+          "class" : "GTE"
+        },
+        {
+          "id" : -1835861548,
+          "name" : "Lotus Type 78 Cosworth",
+          "class" : "Vintage F1 B"
+        },
+        {
+          "id" : -1796949190,
+          "name" : "Ford Escort RS1600 (Rallycross)",
+          "class" : "Vintage RX"
+        },
+        {
+          "id" : -1796028503,
+          "name" : "Dallara IR-12 Honda (Road Course)",
+          "class" : "Indycar"
+        },
+        {
+          "id" : -1774335742,
+          "name" : "Ford MkIV",
+          "class" : "Vintage Prototype B"
+        },
+        {
+          "id" : -1761671051,
+          "name" : "Audi R8 (LMP900)",
+          "class" : "LMP900"
+        },
+        {
+          "id" : -1761080088,
+          "name" : "Nissan R89C LM",
+          "class" : "Group C1"
+        },
+        {
+          "id" : -1748676965,
+          "name" : "McLaren P1™",
+          "class" : "Road A"
+        },
+        {
+          "id" : -1728824001,
+          "name" : "Ferrari F50 GT",
+          "class" : "GT1"
+        },
+        {
+          "id" : -1695434771,
+          "name" : "Toyota GT-One (1998)",
+          "class" : "GT1"
+        },
+        {
+          "id" : -1617916111,
+          "name" : "Pagani Zonda Cinque Roadster",
+          "class" : "Road B"
+        },
+        {
+          "id" : -1548941295,
+          "name" : "Ford F-150 RTR Ultimate Funhaver",
+          "class" : "Road G"
+        },
+        {
+          "id" : -1545450182,
+          "name" : "BMW M3 GT4 (E92)",
+          "class" : "GT4"
+        },
+        {
+          "id" : -1522922538,
+          "name" : "Mercedes-AMG A 45 4MATIC",
+          "class" : "Road E"
+        },
+        {
+          "id" : -1488131398,
+          "name" : "Jaguar XJR-9 LM",
+          "class" : "Group C1"
+        },
+        {
+          "id" : -1459535564,
+          "name" : "Ferrari Enzo",
+          "class" : "Road B"
+        },
+        {
+          "id" : -1444632268,
+          "name" : "Renault Mégane R.S. SMS-R Touring",
+          "class" : "Touring Car"
+        },
+        {
+          "id" : -1443190363,
+          "name" : "Agajanian Watson Roadster",
+          "class" : "Vintage Indycar"
+        },
+        {
+          "id" : -1435057179,
+          "name" : "Lotus Type 51",
+          "class" : "Vintage F3 A"
+        },
+        {
+          "id" : -1416203489,
+          "name" : "Nissan GT-R Nismo GT3 (R35)",
+          "class" : "GT3"
+        },
+        {
+          "id" : -1411323812,
+          "name" : "BMW 1 Series M Coupé StanceWorks Edition",
+          "class" : "Road D"
+        },
+        {
+          "id" : -1339322144,
+          "name" : "McLaren P1™ GTR",
+          "class" : "Track Day A"
+        },
+        {
+          "id" : -1320616846,
+          "name" : "Lotus Type 72D Cosworth",
+          "class" : "Vintage F1 C"
+        },
+        {
+          "id" : -1303813490,
+          "name" : "Aston Martin DB11",
+          "class" : "Road D"
+        },
+        {
+          "id" : -1275144817,
+          "name" : "Mercedes-AMG A 45 SMS-R Touring",
+          "class" : "Touring Car"
+        },
+        {
+          "id" : -1273964900,
+          "name" : "Ferrari 333 SP",
+          "class" : "LMP900"
+        },
+        {
+          "id" : -1253474718,
+          "name" : "Ford Sierra Cosworth RS500 Group A",
+          "class" : "Group A"
+        },
+        {
+          "id" : -1226176940,
+          "name" : "BMW 1 Series M Coupé",
+          "class" : "Road E"
+        },
+        {
+          "id" : -1204688299,
+          "name" : "Lotus Type 40 Ford",
+          "class" : "Vintage Prototype B"
+        },
+        {
+          "id" : -1197419789,
+          "name" : "Lamborghini Diablo GTR",
+          "class" : "GTO"
+        },
+        {
+          "id" : -1187748261,
+          "name" : "BMW 2002 StanceWorks Edition",
+          "class" : "Vintage Touring-GT B"
+        },
+        {
+          "id" : -1170674276,
+          "name" : "Ginetta G55 GT3",
+          "class" : "GT3"
+        },
+        {
+          "id" : -1159965983,
+          "name" : "Mitsubishi Lancer Evolution VI SVA",
+          "class" : "Track Day A"
+        },
+        {
+          "id" : -1068716209,
+          "name" : "Ligier JS P2 Judd",
+          "class" : "LMP2"
+        },
+        {
+          "id" : -1048050877,
+          "name" : "Radical RXC Turbo",
+          "class" : "Road A"
+        },
+        {
+          "id" : -1041674971,
+          "name" : "Formula C",
+          "class" : "Formula C"
+        },
+        {
+          "id" : -1005942571,
+          "name" : "Jaguar E-Type V12 Group44",
+          "class" : "Vintage Touring-GT A"
+        },
+        {
+          "id" : -1001664988,
+          "name" : "Bentley Continental GT3 (2016)",
+          "class" : "GT3"
+        },
+        {
+          "id" : -1001569309,
+          "name" : "McLaren F1 GTR Long Tail",
+          "class" : "GT1"
+        },
+        {
+          "id" : -980019072,
+          "name" : "Marek RP 219D LMP2",
+          "class" : "LMP2"
+        },
+        {
+          "id" : -956881226,
+          "name" : "Renault Mégane R.S. 275 Trophy-R",
+          "class" : "Road F"
+        },
+        {
+          "id" : -934098507,
+          "name" : "BMW M3 Sport Evo Group A",
+          "class" : "Group A"
+        },
+        {
+          "id" : -931590477,
+          "name" : "Renault Mégane Trophy V6",
+          "class" : "Megane Trophy"
+        },
+        {
+          "id" : -888134359,
+          "name" : "Nissan 280ZX IMSA GTX",
+          "class" : "Group 5"
+        },
+        {
+          "id" : -878083866,
+          "name" : "Acura NSX GT3",
+          "class" : "GT3"
+        },
+        {
+          "id" : -871253931,
+          "name" : "Panoz Esperante GTR1",
+          "class" : "GT1"
+        },
+        {
+          "id" : -782532739,
+          "name" : "BMW M6 GTLM",
+          "class" : "GTE"
+        },
+        {
+          "id" : -713284494,
+          "name" : "Lotus Type 25 Climax",
+          "class" : "Vintage F1 D"
+        },
+        {
+          "id" : -704151830,
+          "name" : "Nissan 300ZX Turbo IMSA GTS",
+          "class" : "GTO"
+        },
+        {
+          "id" : -699643670,
+          "name" : "Renault Alpine A442B",
+          "class" : "Group 6"
+        },
+        {
+          "id" : -698401632,
+          "name" : "Porsche 918 Spyder Weissach",
+          "class" : "Road A"
+        },
+        {
+          "id" : -648709823,
+          "name" : "Renault Clio Cup",
+          "class" : "TC1"
+        },
+        {
+          "id" : -623946728,
+          "name" : "Ginetta LMP3",
+          "class" : "LMP3"
+        },
+        {
+          "id" : -615186701,
+          "name" : "Ford Escort RS1600 (Racing)",
+          "class" : "Vintage Touring-GT B"
+        },
+        {
+          "id" : -579256927,
+          "name" : "Olsbergs MSE RX Supercar Lite",
+          "class" : "RXLites"
+        },
+        {
+          "id" : -506272602,
+          "name" : "Porsche 936 Spyder",
+          "class" : "Group 6"
+        },
+        {
+          "id" : -494100071,
+          "name" : "Bentley Speed 8",
+          "class" : "LMP900"
+        },
+        {
+          "id" : -486674040,
+          "name" : "Pagani Zonda Revolución",
+          "class" : "Track Day A"
+        },
+        {
+          "id" : -448429240,
+          "name" : "Honda 2&4 Concept",
+          "class" : "Track Day B"
+        },
+        {
+          "id" : -439539835,
+          "name" : "Formula X",
+          "class" : "Formula X"
+        },
+        {
+          "id" : -387045855,
+          "name" : "Jaguar XJ220 S",
+          "class" : "Road B"
+        },
+        {
+          "id" : -384044277,
+          "name" : "Chevrolet Corvette C7.R",
+          "class" : "GTE"
+        },
+        {
+          "id" : -382513194,
+          "name" : "Dallara IR-12 Chevrolet (Road Course)",
+          "class" : "Indycar"
+        },
+        {
+          "id" : -370668051,
+          "name" : "Toyota GT-One (1999)",
+          "class" : "LMP900"
+        },
+        {
+          "id" : -344750627,
+          "name" : "Opel Astra TCR",
+          "class" : "Touring Car"
+        },
+        {
+          "id" : -343023508,
+          "name" : "Nissan R390 GT1",
+          "class" : "GT1"
+        },
+        {
+          "id" : -340376700,
+          "name" : "Audi V8 quattro DTM",
+          "class" : "Group A"
+        },
+        {
+          "id" : -335104961,
+          "name" : "Ferrari 330 P4",
+          "class" : "Vintage Prototype B"
+        },
+        {
+          "id" : -303591806,
+          "name" : "Nissan Skyline GT-R (R34) SMS-R",
+          "class" : "Track Day B"
+        },
+        {
+          "id" : -294770034,
+          "name" : "Lotus Type 56",
+          "class" : "Vintage Indycar"
+        },
+        {
+          "id" : -278306106,
+          "name" : "Nissan KDR30 Super Silhouette",
+          "class" : "Group 5"
+        },
+        {
+          "id" : -241187148,
+          "name" : "BMW M6 GT3",
+          "class" : "GT3"
+        },
+        {
+          "id" : -235751604,
+          "name" : "Toyota GT-86",
+          "class" : "Road G"
+        },
+        {
+          "id" : -149617068,
+          "name" : "Mitsubishi Lancer Evolution IX FQ360",
+          "class" : "Road E"
+        },
+        {
+          "id" : -98064499,
+          "name" : "Oreca 03 Nissan",
+          "class" : "LMP2"
+        },
+        {
+          "id" : -93033971,
+          "name" : "Lamborghini Huracán GT3",
+          "class" : "GT3"
+        },
+        {
+          "id" : -91815086,
+          "name" : "Aston Martin DBR1/300",
+          "class" : "Vintage Touring-GT C"
+        },
+        {
+          "id" : -85660500,
+          "name" : "Mercedes-Benz 300 SEL 6.8 AMG",
+          "class" : "Vintage Touring-GT B"
+        },
+        {
+          "id" : -78832007,
+          "name" : "Mercedes-AMG C 63 Coupé S",
+          "class" : "Road E"
+        },
+        {
+          "id" : -69155277,
+          "name" : "Mini Countryman RX",
+          "class" : "WRX"
+        },
+        {
+          "id" : -48442135,
+          "name" : "Porsche 962C Langheck",
+          "class" : "Group C1"
+        },
+        {
+          "id" : -41807622,
+          "name" : "Toyota 86",
+          "class" : "Road G"
+        },
+        {
+          "id" : -19222976,
+          "name" : "Nissan GTP ZX-Turbo",
+          "class" : "Group C1"
+        },
+        {
+          "id" : -11335215,
+          "name" : "Ford Mustang Cobra TransAm",
+          "class" : "GTO"
+        }
+      ]
+    },
+    "tracks" : {
+      "description" : "All known track ids",
+      "list" : [
+        {
+          "id" : 31280808,
+          "name" : "Mojave Cougar Ridge",
+          "gridsize" : 32
+        },
+        {
+          "id" : 35770107,
+          "name" : "Daytona International Speedway Rallycross",
+          "gridsize" : 6
+        },
+        {
+          "id" : 62242453,
+          "name" : "Indianapolis Motor Speedway Oval",
+          "gridsize" : 32
+        },
+        {
+          "id" : 211444010,
+          "name" : "Indianapolis Motor Speedway Road Course",
+          "gridsize" : 28
+        },
+        {
+          "id" : 328972919,
+          "name" : "Cadwell Park Club",
+          "gridsize" : 12
+        },
+        {
+          "id" : 354022214,
+          "name" : "Donington Park GP",
+          "gridsize" : 32
+        },
+        {
+          "id" : 368740158,
+          "name" : "Autodromo Nazionale Monza Short",
+          "gridsize" : 32
+        },
+        {
+          "id" : 369271528,
+          "name" : "Mojave Coyote Noose",
+          "gridsize" : 32
+        },
+        {
+          "id" : 458589160,
+          "name" : "Knockhill National Reverse",
+          "gridsize" : 12
+        },
+        {
+          "id" : 467707118,
+          "name" : "Daytona Road Course",
+          "gridsize" : 32
+        },
+        {
+          "id" : 521933422,
+          "name" : "Circuit de Barcelona-Catalunya GP",
+          "gridsize" : 32
+        },
+        {
+          "id" : 533066470,
+          "name" : "Texas Motor Speedway Road Course",
+          "gridsize" : 32
+        },
+        {
+          "id" : 545979690,
+          "name" : "Oulton Park International",
+          "gridsize" : 26
+        },
+        {
+          "id" : 550129415,
+          "name" : "Azure Coast Stage 1",
+          "gridsize" : 32
+        },
+        {
+          "id" : 560711985,
+          "name" : "Azure Coast",
+          "gridsize" : 32
+        },
+        {
+          "id" : 619694160,
+          "name" : "Ruapuna Park A Circuit",
+          "gridsize" : 28
+        },
+        {
+          "id" : 673609283,
+          "name" : "Lydden Hill Rallycross",
+          "gridsize" : 6
+        },
+        {
+          "id" : 697498609,
+          "name" : "Nürburgring Nordschleife",
+          "gridsize" : 32
+        },
+        {
+          "id" : 761864750,
+          "name" : "Hockenheim Rallycross",
+          "gridsize" : 6
+        },
+        {
+          "id" : 766599953,
+          "name" : "Glencairn East",
+          "gridsize" : 16
+        },
+        {
+          "id" : 802214179,
+          "name" : "Circuit of the Americas Club",
+          "gridsize" : 18
+        },
+        {
+          "id" : 816601966,
+          "name" : "Oschersleben B Course",
+          "gridsize" : 28
+        },
+        {
+          "id" : 832629329,
+          "name" : "Azure Circuit",
+          "gridsize" : 32
+        },
+        {
+          "id" : 904625875,
+          "name" : "Circuit de Spa-Francorchamps GP",
+          "gridsize" : 32
+        },
+        {
+          "id" : 920145926,
+          "name" : "Autodromo Internazionale Enzo E Dino Ferrari Imola",
+          "gridsize" : 32
+        },
+        {
+          "id" : 921120824,
+          "name" : "Bathurst Mount Panorama",
+          "gridsize" : 32
+        },
+        {
+          "id" : 928006536,
+          "name" : "California Highway Reverse",
+          "gridsize" : 32
+        },
+        {
+          "id" : 940391868,
+          "name" : "California Highway Stage 2",
+          "gridsize" : 32
+        },
+        {
+          "id" : 953639515,
+          "name" : "Lydden Hill GP",
+          "gridsize" : 16
+        },
+        {
+          "id" : 977699253,
+          "name" : "Knockhill Rallycross",
+          "gridsize" : 6
+        },
+        {
+          "id" : 980779751,
+          "name" : "DirtFish Boneyard Course",
+          "gridsize" : 6
+        },
+        {
+          "id" : 1035110721,
+          "name" : "Sonoma Raceway Short",
+          "gridsize" : 32
+        },
+        {
+          "id" : 1058872832,
+          "name" : "Snetterton 200",
+          "gridsize" : 26
+        },
+        {
+          "id" : 1101719627,
+          "name" : "Silverstone International",
+          "gridsize" : 32
+        },
+        {
+          "id" : 1128950148,
+          "name" : "Nürburgring Nordschleife Stage 3",
+          "gridsize" : 32
+        },
+        {
+          "id" : 1184596327,
+          "name" : "Autodromo Nazionale Monza GP Historic",
+          "gridsize" : 22
+        },
+        {
+          "id" : 1185954707,
+          "name" : "Texas Motor Speedway",
+          "gridsize" : 32
+        },
+        {
+          "id" : 1277693448,
+          "name" : "Ruapuna Park GP",
+          "gridsize" : 28
+        },
+        {
+          "id" : 1300627020,
+          "name" : "Brands Hatch Indy",
+          "gridsize" : 30
+        },
+        {
+          "id" : 1327182267,
+          "name" : "Autodromo Nazionale Monza Historic Oval + GP Mix",
+          "gridsize" : 22
+        },
+        {
+          "id" : 1408845203,
+          "name" : "Summerton National",
+          "gridsize" : 28
+        },
+        {
+          "id" : 1446378877,
+          "name" : "Ruapuna Park Club",
+          "gridsize" : 28
+        },
+        {
+          "id" : 1457129528,
+          "name" : "Le Mans International Karting Circuit",
+          "gridsize" : 20
+        },
+        {
+          "id" : 1459212514,
+          "name" : "Nürburgring Nordschleife Stage 1",
+          "gridsize" : 32
+        },
+        {
+          "id" : 1508903068,
+          "name" : "Snetterton 300",
+          "gridsize" : 26
+        },
+        {
+          "id" : 1552853772,
+          "name" : "Hockenheim Classic GP",
+          "gridsize" : 32
+        },
+        {
+          "id" : 1590386668,
+          "name" : "Watkins Glen International Short",
+          "gridsize" : 32
+        },
+        {
+          "id" : 1600840139,
+          "name" : "Silverstone Stowe",
+          "gridsize" : 8
+        },
+        {
+          "id" : 1629467388,
+          "name" : "Circuit of the Americas National",
+          "gridsize" : 32
+        },
+        {
+          "id" : 1641471184,
+          "name" : "Silverstone GP",
+          "gridsize" : 32
+        },
+        {
+          "id" : 1676943041,
+          "name" : "California Highway Stage 1",
+          "gridsize" : 32
+        },
+        {
+          "id" : 1695182971,
+          "name" : "Hockenheim GP",
+          "gridsize" : 30
+        },
+        {
+          "id" : 1719717729,
+          "name" : "Texas Motor Speedway Infield Course",
+          "gridsize" : 20
+        },
+        {
+          "id" : 1731699995,
+          "name" : "Long Beach Street Circuit",
+          "gridsize" : 32
+        },
+        {
+          "id" : 1735854797,
+          "name" : "Dubai Autodrome Club",
+          "gridsize" : 32
+        },
+        {
+          "id" : 1740968730,
+          "name" : "24 Hours of Le Mans Circuit",
+          "gridsize" : 32
+        },
+        {
+          "id" : 1768660198,
+          "name" : "Hockenheim Short",
+          "gridsize" : 30
+        },
+        {
+          "id" : 1836888499,
+          "name" : "Zhuhai International Circuit",
+          "gridsize" : 32
+        },
+        {
+          "id" : 1876749797,
+          "name" : "Cadwell Park GP",
+          "gridsize" : 12
+        },
+        {
+          "id" : 1887425815,
+          "name" : "Knockhill National",
+          "gridsize" : 12
+        },
+        {
+          "id" : 1892852585,
+          "name" : "Wildcrest Rallycross",
+          "gridsize" : 6
+        },
+        {
+          "id" : 1940584155,
+          "name" : "Ruapuna Park Outer Loop",
+          "gridsize" : 28
+        },
+        {
+          "id" : 1952936927,
+          "name" : "Silverstone National",
+          "gridsize" : 32
+        },
+        {
+          "id" : 1988984740,
+          "name" : "Brands Hatch GP",
+          "gridsize" : 30
+        },
+        {
+          "id" : 2015693491,
+          "name" : "Mojave Sidewinder",
+          "gridsize" : 32
+        },
+        {
+          "id" : 2050315946,
+          "name" : "Circuit of the Americas GP",
+          "gridsize" : 32
+        },
+        {
+          "id" : 2054003546,
+          "name" : "Daytona International Speedway Tri-Oval",
+          "gridsize" : 32
+        },
+        {
+          "id" : 2087662703,
+          "name" : "Lånkebanen Rallycross",
+          "gridsize" : 6
+        },
+        {
+          "id" : -2126387783,
+          "name" : "Knockhill International",
+          "gridsize" : 12
+        },
+        {
+          "id" : -2108341365,
+          "name" : "DirtFish Pro Rallycross Course",
+          "gridsize" : 6
+        },
+        {
+          "id" : -2046633090,
+          "name" : "Ruapuna Park B Circuit",
+          "gridsize" : 28
+        },
+        {
+          "id" : -2021024495,
+          "name" : "Oulton Park Fosters",
+          "gridsize" : 26
+        },
+        {
+          "id" : -2014223741,
+          "name" : "Red Bull Ring National",
+          "gridsize" : 32
+        },
+        {
+          "id" : -1977142985,
+          "name" : "Hockenheim National",
+          "gridsize" : 30
+        },
+        {
+          "id" : -1936790504,
+          "name" : "Azure Coast Westbound",
+          "gridsize" : 24
+        },
+        {
+          "id" : -1933253531,
+          "name" : "Red Bull Ring GP",
+          "gridsize" : 32
+        },
+        {
+          "id" : -1877699523,
+          "name" : "Oulton Park Island",
+          "gridsize" : 26
+        },
+        {
+          "id" : -1849531562,
+          "name" : "Willow Springs Horse Thief Mile",
+          "gridsize" : 24
+        },
+        {
+          "id" : -1804962581,
+          "name" : "Circuit de Spa-Francorchamps Historic",
+          "gridsize" : 20
+        },
+        {
+          "id" : -1785781495,
+          "name" : "Watkins Glen International GP",
+          "gridsize" : 32
+        },
+        {
+          "id" : -1759743046,
+          "name" : "Sakitto GP",
+          "gridsize" : 32
+        },
+        {
+          "id" : -1737261125,
+          "name" : "Azure Coast Stage 3",
+          "gridsize" : 32
+        },
+        {
+          "id" : -1735912413,
+          "name" : "Chesterfield Karting Circuit",
+          "gridsize" : 24
+        },
+        {
+          "id" : -1695214357,
+          "name" : "Fuji GP",
+          "gridsize" : 32
+        },
+        {
+          "id" : -1694936640,
+          "name" : "DirtFish Mill Run Course",
+          "gridsize" : 6
+        },
+        {
+          "id" : -1612023328,
+          "name" : "Mazda Raceway Laguna Seca",
+          "gridsize" : 26
+        },
+        {
+          "id" : -1605913568,
+          "name" : "Summerton Sprint",
+          "gridsize" : 28
+        },
+        {
+          "id" : -1593944167,
+          "name" : "California Highway Full",
+          "gridsize" : 32
+        },
+        {
+          "id" : -1520844580,
+          "name" : "Glencairn Reverse",
+          "gridsize" : 16
+        },
+        {
+          "id" : -1515473908,
+          "name" : "Rouen Les Essarts Short",
+          "gridsize" : 26
+        },
+        {
+          "id" : -1474170192,
+          "name" : "Sakitto International",
+          "gridsize" : 24
+        },
+        {
+          "id" : -1454279631,
+          "name" : "Sonoma Raceway GP",
+          "gridsize" : 32
+        },
+        {
+          "id" : -1408779593,
+          "name" : "Glencairn West",
+          "gridsize" : 16
+        },
+        {
+          "id" : -1408189041,
+          "name" : "Cadwell Park Woodland",
+          "gridsize" : 12
+        },
+        {
+          "id" : -1359299594,
+          "name" : "Oschersleben C Course",
+          "gridsize" : 24
+        },
+        {
+          "id" : -1260826266,
+          "name" : "Sakitto National",
+          "gridsize" : 24
+        },
+        {
+          "id" : -1194290828,
+          "name" : "Silverstone Classic GP",
+          "gridsize" : 18
+        },
+        {
+          "id" : -1194185720,
+          "name" : "Oschersleben A Course",
+          "gridsize" : 28
+        },
+        {
+          "id" : -1194019375,
+          "name" : "Donington Park National",
+          "gridsize" : 32
+        },
+        {
+          "id" : -1160443077,
+          "name" : "Greenwood Karting Circuit",
+          "gridsize" : 22
+        },
+        {
+          "id" : -1088073214,
+          "name" : "Knockhill International Reverse",
+          "gridsize" : 12
+        },
+        {
+          "id" : -1066742780,
+          "name" : "Glencairn GP",
+          "gridsize" : 16
+        },
+        {
+          "id" : -1042928898,
+          "name" : "Circuit de Barcelona-Catalunya Club",
+          "gridsize" : 32
+        },
+        {
+          "id" : -1031249929,
+          "name" : "Rouen Les Essarts",
+          "gridsize" : 26
+        },
+        {
+          "id" : -1027934689,
+          "name" : "Le Mans Bugatti Circuit",
+          "gridsize" : 32
+        },
+        {
+          "id" : -1024221192,
+          "name" : "Sportsland SUGO",
+          "gridsize" : 26
+        },
+        {
+          "id" : -998191994,
+          "name" : "Circuit de Barcelona-Catalunya National",
+          "gridsize" : 32
+        },
+        {
+          "id" : -995202729,
+          "name" : "Sonoma Raceway National",
+          "gridsize" : 32
+        },
+        {
+          "id" : -984009759,
+          "name" : "Mojave Boa Ascent",
+          "gridsize" : 32
+        },
+        {
+          "id" : -945967394,
+          "name" : "Nürburgring GP",
+          "gridsize" : 30
+        },
+        {
+          "id" : -941106232,
+          "name" : "Knockhill Tri-Oval",
+          "gridsize" : 10
+        },
+        {
+          "id" : -913625358,
+          "name" : "Glencairn West Reverse",
+          "gridsize" : 16
+        },
+        {
+          "id" : -907901266,
+          "name" : "Brno GP",
+          "gridsize" : 26
+        },
+        {
+          "id" : -891514248,
+          "name" : "Nürburgring Combined",
+          "gridsize" : 30
+        },
+        {
+          "id" : -879282119,
+          "name" : "Sakitto Sprint",
+          "gridsize" : 32
+        },
+        {
+          "id" : -867340010,
+          "name" : "Snetterton 100",
+          "gridsize" : 26
+        },
+        {
+          "id" : -823048021,
+          "name" : "Sampala Ice Circuit",
+          "gridsize" : 6
+        },
+        {
+          "id" : -810715843,
+          "name" : "Nürburgring Sprint Short",
+          "gridsize" : 30
+        },
+        {
+          "id" : -780879576,
+          "name" : "Azure Coast Stage 2",
+          "gridsize" : 24
+        },
+        {
+          "id" : -710712693,
+          "name" : "Dubai Autodrome International",
+          "gridsize" : 32
+        },
+        {
+          "id" : -709737101,
+          "name" : "Nürburgring Sprint",
+          "gridsize" : 30
+        },
+        {
+          "id" : -661887517,
+          "name" : "Dubai Autodrome GP",
+          "gridsize" : 32
+        },
+        {
+          "id" : -660300766,
+          "name" : "Road America",
+          "gridsize" : 32
+        },
+        {
+          "id" : -602684269,
+          "name" : "Bannochbrae Road Circuit",
+          "gridsize" : 20
+        },
+        {
+          "id" : -598879227,
+          "name" : "Rallycross of Loheac",
+          "gridsize" : 6
+        },
+        {
+          "id" : -446794969,
+          "name" : "Glencairn East Reverse",
+          "gridsize" : 16
+        },
+        {
+          "id" : -416617300,
+          "name" : "Autódromo Internacional do Algarve",
+          "gridsize" : 32
+        },
+        {
+          "id" : -360711057,
+          "name" : "Zolder",
+          "gridsize" : 32
+        },
+        {
+          "id" : -331502851,
+          "name" : "California Highway Stage 3",
+          "gridsize" : 32
+        },
+        {
+          "id" : -300387291,
+          "name" : "Nürburgring Nordschleife Stage 2",
+          "gridsize" : 32
+        },
+        {
+          "id" : -246966400,
+          "name" : "Nürburgring Müllenbach",
+          "gridsize" : 30
+        },
+        {
+          "id" : -232513374,
+          "name" : "Dubai Kartdrome",
+          "gridsize" : 22
+        },
+        {
+          "id" : -163046637,
+          "name" : "Autodromo Nazionale Monza Oval Historic",
+          "gridsize" : 22
+        },
+        {
+          "id" : -103312908,
+          "name" : "Willow Springs International Raceway",
+          "gridsize" : 32
+        },
+        {
+          "id" : -73186614,
+          "name" : "Red Bull Ring Club",
+          "gridsize" : 32
+        },
+        {
+          "id" : -60500434,
+          "name" : "Mojave Gila Crest",
+          "gridsize" : 32
+        },
+        {
+          "id" : -52972612,
+          "name" : "Autodromo Nazionale Monza GP",
+          "gridsize" : 32
+        },
+        {
+          "id" : -44748320,
+          "name" : "Summerton International",
+          "gridsize" : 28
+        },
+        {
+          "id" : -31727447,
+          "name" : "Dubai Autodrome National",
+          "gridsize" : 32
+        }
+      ]
+    }
+  }
+}
