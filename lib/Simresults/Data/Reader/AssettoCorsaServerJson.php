@@ -121,6 +121,7 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
         foreach ($players_data as $player_index => $player_data)
         {
             // No participant found
+            $participant_created = FALSE;
             if ( ! isset($participants_by_name[$player_data['DriverName']]))
             {
                 // Build participant
@@ -134,6 +135,7 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
 
                 // Add participant to collection
                 $participants_by_name[$name] = $participant;
+                $participant_created = TRUE;
             }
 
             $participant = $participants_by_name[$player_data['DriverName']];
@@ -143,10 +145,10 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
             {
                 $participant->setTotalTime(round($total_time / 1000, 4));
             }
-            // No total time
-            else
+            // No total time, only proceed if participant was newly created
+            // (ignore duplicate entries)
+            elseif ($participant_created)
             {
-                // DNF
                 $participant->setFinishStatus(Participant::FINISH_DNF);
             }
 

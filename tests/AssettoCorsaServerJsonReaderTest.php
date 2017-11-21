@@ -107,7 +107,22 @@ class AssettoCorsaServerJsonReaderTest extends PHPUnit_Framework_TestCase {
         $session = Data_Reader::factory($file_path)->getSession();
         $this->assertSame('Custom server', $session->getServer()->getName());
     }
+     /**
+     * Test ignoring duplicate result info
+     */
+    public function testIgnoringDuplicateResultInfo()
+    {
+        // The path to the data source
+        $file_path = realpath(
+            __DIR__.'/logs/assettocorsa-server-json/duplicate.result.info.for.miguel.json');
 
+        $session = Data_Reader::factory($file_path)->getSession();
+        $participants = $session->getParticipants();
+
+        // Make sure driver is not DNF anymore
+        $this->assertSame(Participant::FINISH_NORMAL,
+            $participants[4]->getFinishStatus());
+    }
 
 
 
