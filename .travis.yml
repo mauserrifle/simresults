@@ -1,6 +1,6 @@
 language: php
 
-dist: precise
+dist: trusty
 
 php:
   - 5.3
@@ -9,6 +9,10 @@ php:
   - 5.6
   - 7.0
   - hhvm
+matrix:
+  include:
+    - php: "5.3"
+      dist: precise
 
 install:
   - travis_retry composer install --no-interaction --prefer-source
