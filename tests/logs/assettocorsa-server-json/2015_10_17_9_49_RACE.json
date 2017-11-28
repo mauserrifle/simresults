@@ -1,6 +1,6 @@
 {
 	"TrackName": "monza",
-	"TrackConfig": "",
+	"TrackConfig": "full course",
 	"Type": "RACE",
 	"DurationSecs": 0,
 	"RaceLaps": 10,

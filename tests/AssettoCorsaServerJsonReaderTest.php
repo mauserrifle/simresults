@@ -180,6 +180,7 @@ class AssettoCorsaServerJsonReaderTest extends PHPUnit_Framework_TestCase {
 
         // Validate track
         $this->assertSame('monza', $track->getVenue());
+        $this->assertSame('full course', $track->getCourse());
     }
 
     /**
