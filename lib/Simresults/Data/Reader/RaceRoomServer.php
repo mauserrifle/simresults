@@ -225,12 +225,6 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
 
                         // Add lap to participant
                         $participant->addLap($lap);
-
-                        if ($lap->isPitLap())
-                        {
-                            // Count Pitstops
-                            $participant->setPitstops((int) $participant->getPitstops() + 1);
-                        }
                     }
 
                 }
