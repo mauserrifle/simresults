@@ -458,6 +458,14 @@ class Participant {
      */
     public function getPitstops()
     {
+        if ( ! $this->pitstops)
+        {
+            // Return number of pit laps
+            return count(array_filter($this->getLaps(), function($lap) {
+                return $lap->isPitLap();
+            }));
+        }
+
         return $this->pitstops;
     }
 

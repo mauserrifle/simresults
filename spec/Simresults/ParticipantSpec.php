@@ -74,6 +74,16 @@ class ParticipantSpec extends ObjectBehavior
         $this->getNumberOfCompletedLaps()->shouldReturn(1);
     }
 
+    function it_counts_number_of_pit_laps(Lap $lap1, Lap $lap2, Lap $lap3)
+    {
+        $lap1->isPitLap()->willReturn(true);
+        $lap2->isPitLap()->willReturn(true);
+        $lap3->isPitLap()->willReturn(false);
+
+        $this->setLaps(array($lap1, $lap2, $lap3));
+        $this->getPitstops()->shouldReturn(2);
+    }
+
     function it_has_best_lap(Helper $helper, Lap $lap1, Lap $lap2, Lap $lap3)
     {
         $this->beConstructedWith($helper);
@@ -337,5 +347,4 @@ class ParticipantSpec extends ObjectBehavior
         $lap2->setNumber(2)->shouldBeCalled();
         $this->addLap($lap2);
     }
-
 }
