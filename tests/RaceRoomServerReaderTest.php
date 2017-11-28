@@ -69,6 +69,25 @@ class RaceRoomReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertNull($participant->getLap(1));
     }
 
+
+    /**
+     * Test reading bestlap when times are missing for qualify
+     */
+    public function testBestQualifyLapOnMissingLapsData()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/raceroom-server/only.bestlap.for.qualy.json');
+
+        // Get session
+        $session = Data_Reader::factory($file_path)->getSession(2);
+        $participants = $session->getParticipants();
+
+        //-- Validate
+        $this->assertNotNull($participants[0]->getBestLap());
+    }
+
+
     /**
      * Test pit stop marking and skipping negative lap times
      */
