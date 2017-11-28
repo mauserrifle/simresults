@@ -368,6 +368,23 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
+     * Test ignoring empty driver names
+     */
+    public function testIgnoringEmptyDriverNames()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/projectcars-server/practice.causing.empty.AI.driver.json');
+
+        // Get sessions without error
+        $session = Data_Reader::factory($file_path)->getSession(1);
+        $participants = $session->getParticipants();
+
+        // Test number of participants (14th was driver with no name)
+        $this->assertCount(13, $participants);
+    }
+
+    /**
      * Project Cars 2 fixes
      */
     public function testProjectCars2Fixes()
