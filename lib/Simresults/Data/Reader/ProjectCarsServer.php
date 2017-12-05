@@ -636,10 +636,10 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
 
 
                 // Filter out participants without proper driver data
-                $participants = array_filter($participants, function($part){
+                $participants = array_values(array_filter($participants, function($part){
                     $driver = $part->getDriver();
                     return ($driver AND $driver->getName());
-                });
+                }));
 
 
                 // Set participants (sorted)

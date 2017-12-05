@@ -385,6 +385,19 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
+     * Undefined index 0 on participants fix
+     */
+    public function testFixUndefinedIndexParticipants()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/projectcars-server/log.causing.parts.offset.0.error.json');
+
+        // Get sessions without error
+        $sessions = Data_Reader::factory($file_path)->getSessions();
+    }
+
+    /**
      * Project Cars 2 fixes
      */
     public function testProjectCars2Fixes()
