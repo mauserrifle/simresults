@@ -43,9 +43,20 @@ class Driver {
      *
      * @return  string
      */
-    public function getName()
+    public function getName($shorten_lastname=FALSE)
     {
-        return $this->name;
+        $name = $this->name;
+
+        if ($shorten_lastname)
+        {
+            $names = explode(' ', $name);
+            if (count($names) > 1) {
+                $last_name = array_pop($names);
+                $name = $names[0]." ".$last_name[0];
+            }
+        }
+
+        return $name;
     }
 
     /**
@@ -54,10 +65,10 @@ class Driver {
      *
      * @return  string
      */
-    public function getNameWithAiMention()
+    public function getNameWithAiMention($shorten_lastname=FALSE)
     {
         // Get driver name
-        $driver_name = $this->getName();
+        $driver_name = $this->getName($shorten_lastname);
 
         // Driver is not human
         if ( ! $this->isHuman())

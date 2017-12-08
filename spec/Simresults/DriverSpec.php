@@ -26,4 +26,19 @@ class DriverSpec extends ObjectBehavior
         $this->setHuman(true);
         $this->getNameWithAiMention()->shouldReturn('mauserrifle');
     }
+
+    function it_can_return_a_shorten_lastname()
+    {
+        $this->setName('Maurice van der Star');
+        $this->getName()->shouldReturn('Maurice van der Star');
+        $this->getName(true)->shouldReturn('Maurice S');
+
+        $this->setName('Maurice Star');
+        $this->getName()->shouldReturn('Maurice Star');
+        $this->getName(true)->shouldReturn('Maurice S');
+
+        $this->setName('Maurice');
+        $this->getName()->shouldReturn('Maurice');
+        $this->getName(true)->shouldReturn('Maurice');
+    }
 }
