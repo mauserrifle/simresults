@@ -191,8 +191,8 @@ Create index.php:
     $session_best_lap = $session->getBestLap();
 
     // Format the gap between the two laps
-    $best_lap_gap = \Simresults\Helper::formatTime(
-        $session_best_lap->getGap($best_lap));
+    $helper = new \Simresults\Helper;
+    $best_lap_gap = $helper->formatTime($session_best_lap->getGap($best_lap));
     echo $best_lap_gap;
 
  Run server
@@ -244,14 +244,15 @@ The project is designed to be extended with new features and game support.
 Feel free to [fork Simresults on GitHub](https://github.com/mauserrifle/simresults)
 and submit a pull request!
 
-The project is fully unittested using PHPUnit. If you offer any changes, make
-sure all your new additions are tested.
+The project is tested using PHPUnit and phpspec. If you offer any changes,
+make sure all your new additions are tested.
 
 ## Running simresults tests
 
 To run the tests, use the following command:
 
     ./vendor/bin/phpunit
+    ./vendor/bin/phpspec run
 
 ## License
 

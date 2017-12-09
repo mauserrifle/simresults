@@ -16,9 +16,14 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
 
 
     /**
-     * @var  array  The attribute names
+     * @var  array  The attribute names of project cars 1
      */
     protected $attribute_names;
+
+    /**
+     * @var  array  The attribute names of project cars 2
+     */
+    protected $attribute_names2;
 
 
     /**
@@ -60,6 +65,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
 
         // Get attribute info of project cars to figure out vehicle names etc
         $this->attribute_names = $this->getAttributeNames();
+        $this->attribute_names2 = $this->getAttributeNames2();
 
         // Init sessions array
         $sessions = array();
@@ -141,6 +147,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
 
                 // Setup name for session type
                 $type_setup_name = ucfirst($type_key);
+                $type_setup_name2 = preg_replace('/[0-9]+/', '', $type_setup_name);
 
                 // Check session name to get type
                 // TODO: Could we prevent duplicate code for this with other readers?
@@ -158,6 +165,20 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                         break;
                 }
 
+                $max_laps = NULL;
+                // Setting key found
+                if (isset($history['setup'][$type_setup_name.'Length']))
+                {
+                    // Get max laps using the usual setting keys
+                   $max_laps = $history['setup'][$type_setup_name.'Length'];
+                }
+                // Setting key not found, probably Project Cars 2
+                elseif (isset($history['setup'][$type_setup_name2.'Length']))
+                {
+                    // Get max laps using alternative
+                   $max_laps = $history['setup'][$type_setup_name2.'Length'];
+                }
+
 
                 // Date of this session
                 $date = new \DateTime;
@@ -167,10 +188,12 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 // Set session values
                 $session->setType($type)
                         ->setName($type_key)
-                        ->setMaxLaps($history['setup'][$type_setup_name.'Length'])
                         ->setDate($date)
                         ->setOtherSettings($session_settings);
 
+                if ($max_laps) {
+                    $session->setMaxLaps($max_laps);
+                }
 
                 // Set game
                 $game = new Game; $game->setName('Project Cars');
@@ -189,6 +212,12 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                     ['setup']['TrackId']]))
                 {
                     $track->setVenue($this->attribute_names['tracks'][$history
+                        ['setup']['TrackId']]['name']);
+                }
+                elseif (isset($this->attribute_names2['tracks'][$history
+                    ['setup']['TrackId']]))
+                {
+                    $track->setVenue($this->attribute_names2['tracks'][$history
                         ['setup']['TrackId']]['name']);
                 }
                 else
@@ -502,7 +531,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 {
                     // Sort participants using our own sort
                     $tmp_sort =
-                        Helper::sortParticipantsByTotalTime($participants);
+                        $this->helper->sortParticipantsByTotalTime($participants);
 
                     // Find whether our leading participant using our own sort
                     // is in the result
@@ -558,7 +587,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
 
                         // Sort participants not sorted by result by total time
                         $participants =
-                            Helper::sortParticipantsByTotalTime($participants);
+                            $this->helper->sortParticipantsByTotalTime($participants);
 
 
                         // Merge the sorted participants result with normal sort
@@ -604,6 +633,13 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                     $this->sortParticipantsAndFixPositions(
                         $participants, $session, TRUE);
                 }
+
+
+                // Filter out participants without proper driver data
+                $participants = array_values(array_filter($participants, function($part){
+                    $driver = $part->getDriver();
+                    return ($driver AND $driver->getName());
+                }));
 
 
                 // Set participants (sorted)
@@ -689,6 +725,13 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
             $vehicle->setClass($this->attribute_names['vehicles']
                 [$part_data['setup']['VehicleId']]['class']);
         }
+        elseif (isset($this->attribute_names2['vehicles'][$vehicle_id]))
+        {
+            $vehicle->setName($this->attribute_names2['vehicles']
+                [$part_data['setup']['VehicleId']]['name']);
+            $vehicle->setClass($this->attribute_names2['vehicles']
+                [$part_data['setup']['VehicleId']]['class']);
+        }
         else
         {
             $vehicle->setName( (string) $vehicle_id);
@@ -719,34 +762,50 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
      *
      * @return array
      */
-    protected function getAttributeNames()
+    protected function getAttributeNames($file='ProjectCarsAttributes.json')
     {
         // Get attribute info of project cars to figure out vehicle names etc
         $attributes = json_decode(file_get_contents(
-            realpath(__DIR__.'/ProjectCarsAttributes.json')), true);
+            realpath(__DIR__.'/'.$file)), true);
 
         // Attributes we would like to have from config
         $attribute_names = array(
             'vehicles'        => array(),
-            'liveries'        => array(),
             'tracks'          => array(),
         );
 
         // Make easy readable array
         foreach ($attribute_names as $cat => &$values)
         {
+            if (isset($attributes['response'][$cat]))
             foreach($attributes['response'][$cat]['list'] as $item)
             {
-                $values[$item['id']]['name'] = $item['name'];
+                if (isset($item['id'])) {
+                    $id = $item['id'];
+                } else {
+                    $id = $item['value'];
+                }
+
+                $values[$id]['name'] = $item['name'];
 
                 if (isset($item['class']))
                 {
-                    $values[$item['id']]['class'] = $item['class'];
+                    $values[$id]['class'] = $item['class'];
                 }
             }
         }
 
         return $attribute_names;
+    }
+
+    /**
+     * Get the attribute names of the project cars 2 attributes json
+     *
+     * @return array
+     */
+    protected function getAttributeNames2()
+    {
+        return $this->getAttributeNames('ProjectCars2Attributes.json');
     }
 
 }

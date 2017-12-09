@@ -221,12 +221,12 @@ class Data_Reader_Race07 extends Data_Reader {
             // Create participant and add driver
             $participant = Participant::createInstance();
             $participant->setDrivers(array($driver))
-                        ->setTeam(Helper::arrayGet($driver_data, 'team'));
+                        ->setTeam($this->helper->arrayGet($driver_data, 'team'));
                         // Finish position will be set later using an special
                         // sort
 
             // We have laps and must set grid positions
-            if(Helper::arrayGet($driver_data, 'laps_collection') AND
+            if($this->helper->arrayGet($driver_data, 'laps_collection') AND
                 $set_grid_position)
             {
                 $participant->setGridPosition($driver_data['grid_position']);
@@ -234,11 +234,11 @@ class Data_Reader_Race07 extends Data_Reader {
 
             // Create vehicle and add to participant
             $vehicle = new Vehicle;
-            $vehicle->setName(Helper::arrayGet($driver_data, 'vehicle'));
+            $vehicle->setName($this->helper->arrayGet($driver_data, 'vehicle'));
             $participant->setVehicle($vehicle);
 
             // Has race time information
-            if ($race_time = Helper::arrayGet($driver_data, 'racetime'))
+            if ($race_time = $this->helper->arrayGet($driver_data, 'racetime'))
             {
                 // Not dnf by default if it's not 0:00:00.000 or dnf
                 $set_dnf = ($race_time === '0:00:00.000' OR
@@ -249,7 +249,7 @@ class Data_Reader_Race07 extends Data_Reader {
                 try
                 {
                     // Get seconds
-                    $seconds = Helper::secondsFromFormattedTime($race_time);
+                    $seconds = $this->helper->secondsFromFormattedTime($race_time);
 
                     // Set total time
                     $participant->setTotalTime($seconds);
@@ -272,7 +272,7 @@ class Data_Reader_Race07 extends Data_Reader {
                     $participant->setFinishStatus(Participant::FINISH_DNF);
 
                     // Has reason
-                    if (null !== $reason = Helper::arrayGet($driver_data, 'reason'))
+                    if (null !== $reason = $this->helper->arrayGet($driver_data, 'reason'))
                     {
                         $participant->setFinishComment("DNF (reason $reason)");
                     }
@@ -280,17 +280,17 @@ class Data_Reader_Race07 extends Data_Reader {
             }
 
             // Laps count not found
-            if (null === $laps_count = Helper::arrayGet($driver_data, 'laps'))
+            if (null === $laps_count = $this->helper->arrayGet($driver_data, 'laps'))
             {
                 // Try racelaps key
-                $laps_count = Helper::arrayGet($driver_data, 'racelaps');
+                $laps_count = $this->helper->arrayGet($driver_data, 'racelaps');
             }
 
             // Has run laps
             if ($laps_count !== null AND $laps_count > 0)
             {
                 // Get laps collection
-                $laps_collection = Helper::arrayGet($driver_data, 'laps_collection');
+                $laps_collection = $this->helper->arrayGet($driver_data, 'laps_collection');
 
                 // Loop laps by lap count due to missing laps in results
                 // so we can fill up the gaps
@@ -313,7 +313,7 @@ class Data_Reader_Race07 extends Data_Reader {
                     if ($lap->getNumber() === 1)
                     {
                         // Set grid position as lap position
-                        $lap->setPosition(Helper::arrayGet(
+                        $lap->setPosition($this->helper->arrayGet(
                             $driver_data, 'grid_position'));
                     }
 
@@ -336,12 +336,12 @@ class Data_Reader_Race07 extends Data_Reader {
 
                 // All laps missing but has best lap
                 if (sizeof($laps_collection) === 0 AND
-                    ($racebestlap = Helper::arrayGet($driver_data, 'racebestlap') OR
-                    $racebestlap = Helper::arrayGet($driver_data, 'bestlap')))
+                    ($racebestlap = $this->helper->arrayGet($driver_data, 'racebestlap') OR
+                    $racebestlap = $this->helper->arrayGet($driver_data, 'bestlap')))
                 {
                     // Get first lap and change time
                     $participant->getLap(1)->setTime(
-                        Helper::secondsFromFormattedTime($racebestlap));
+                        $this->helper->secondsFromFormattedTime($racebestlap));
                 }
             }
 
@@ -390,6 +390,8 @@ class Data_Reader_Race07 extends Data_Reader {
      */
     protected static function parse_data($full_data)
     {
+        $helper = new Helper;
+
         // Split data by sessions
         $data_sessions = explode('[END]', $full_data);
 
@@ -471,7 +473,7 @@ class Data_Reader_Race07 extends Data_Reader {
                         'lap_number'     => (int) $lap_number,
                         'elapsed_time'   => $elapsed_time,
                         'time'           =>
-                            Helper::secondsFromFormattedTime($lap_matches[3]),
+                            $helper->secondsFromFormattedTime($lap_matches[3]),
                     );
 
                 }

@@ -33,7 +33,7 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
         $data = json_decode($this->data, TRUE);
 
         // No session data
-        if ( ! $sessions_data = Helper::arrayGet($data, 'sessions'))
+        if ( ! $sessions_data = $this->helper->arrayGet($data, 'sessions'))
         {
             // Throw exception
             throw new Exception\Reader('Cannot read the session data');
@@ -45,10 +45,10 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
 
         // Get extra data for all sessions
         $extras = array();
-        foreach (Helper::arrayGet($data, 'extras', array()) as $extras_data)
+        foreach ($this->helper->arrayGet($data, 'extras', array()) as $extras_data)
         {
             // Get name
-            $name = Helper::arrayGet($extras_data, 'name');
+            $name = $this->helper->arrayGet($extras_data, 'name');
 
             // Loop all values and add as extra settings
             foreach ($extras_data as $extra_data_key => $extra_data_value)
@@ -75,12 +75,12 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
             // Get participants (do for each session to prevent re-used objects
             // between sessions)
             $participants = array();
-            $players_data = Helper::arrayGet($data, 'players', array());
+            $players_data = $this->helper->arrayGet($data, 'players', array());
             foreach ($players_data as $player_index => $player_data)
             {
                 // Create driver
                 $driver = new Driver;
-                $driver->setName(Helper::arrayGet($player_data, 'name'));
+                $driver->setName($this->helper->arrayGet($player_data, 'name'));
 
                 // Create participant and add driver
                 $participant = Participant::createInstance();
@@ -89,7 +89,7 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
 
                 // Create vehicle and add to participant
                 $vehicle = new Vehicle;
-                $vehicle->setName(Helper::arrayGet($player_data, 'car'));
+                $vehicle->setName($this->helper->arrayGet($player_data, 'car'));
                 $participant->setVehicle($vehicle);
 
                 // Add participant to collection
@@ -102,7 +102,7 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
             // Check session name to get type
             // TODO: Should be checked when full game is released. Also create
             //       tests for it!
-            switch(strtolower($name = Helper::arrayGet($session_data, 'name')))
+            switch(strtolower($name = $this->helper->arrayGet($session_data, 'name')))
             {
                 case 'qualify session':
                 case 'qualify':
@@ -122,32 +122,34 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
             $session->setType($type)
                     ->setName($name)
                     ->setMaxLaps(
-                        (int) Helper::arrayGet($session_data, 'lapsCount'))
+                        (int) $this->helper->arrayGet($session_data, 'lapsCount'))
                     ->setMaxMinutes(
-                        (int) Helper::arrayGet($session_data, 'duration'));
+                        (int) $this->helper->arrayGet($session_data, 'duration'));
 
             // Set game
             $game = new Game; $game->setName('Assetto Corsa');
             $session->setGame($game);
 
             // Set server (we do not know...)
-            $server = new Server; $server->setName('Unknown or offline');
+            $server = new Server;
+            $server->setName($this->helper->arrayGet(
+                $data, 'server', 'Unknown or offline'));
             $session->setServer($server);
 
             // Set track
             $track = new Track;
-            $track->setVenue(Helper::arrayGet($data, 'track'));
+            $track->setVenue($this->helper->arrayGet($data, 'track'));
             $session->setTrack($track);
 
 
             // Get the laps
-            $laps_data = Helper::arrayGet($session_data, 'laps', array());
+            $laps_data = $this->helper->arrayGet($session_data, 'laps', array());
 
             // No laps data
             if ( ! $laps_data)
             {
                 // Use best laps if possible
-                $laps_data = Helper::arrayGet($session_data, 'bestLaps', array());
+                $laps_data = $this->helper->arrayGet($session_data, 'bestLaps', array());
             }
 
             // Process laps
@@ -171,18 +173,24 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
                 $lap->setTime(round($lap_data['time'] / 1000, 4));
 
                 // Set sector times in seconds
-                foreach (Helper::arrayGet($lap_data, 'sectors', array())
+                foreach ($this->helper->arrayGet($lap_data, 'sectors', array())
                              as $sector_time)
                 {
                     $lap->addSectorTime(round($sector_time / 1000, 4));
                 }
+
+                // Set compound info
+                $lap->setFrontCompound(
+                    $this->helper->arrayGet($lap_data, 'tyre'));
+                $lap->setRearCompound(
+                    $this->helper->arrayGet($lap_data, 'tyre'));
 
                 // Add lap to participant
                 $lap_participant->addLap($lap);
             }
 
             // Session has predefined race result positions
-            if ($race_result = Helper::arrayGet($session_data, 'raceResult'))
+            if ($race_result = $this->helper->arrayGet($session_data, 'raceResult'))
             {
                 // Create new participants order
                 $participants_sorted = array();

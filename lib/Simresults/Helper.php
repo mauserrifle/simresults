@@ -18,7 +18,7 @@ class Helper {
      * @param   boolean  $force_hours  force hours format (even 00:)
      * @return  string
      */
-    public static function formatTime($seconds, $force_hours=false)
+    public function formatTime($seconds, $force_hours=false)
     {
         // Is negative?
         $is_negative = false;
@@ -80,7 +80,7 @@ class Helper {
      *                                           as micro. Format: (h:)i:s:u
      * @return  string
      */
-    public static function secondsFromFormattedTime(
+    public function secondsFromFormattedTime(
         $formatted_time,
         $colon_micro_separator=false)
     {
@@ -163,7 +163,7 @@ class Helper {
      *
      * @return  array  the laps
      */
-    public static function sortLapsBySector(array $laps, $sector)
+    public function sortLapsBySector(array $laps, $sector)
     {
         // Sort laps
         usort($laps, function($a,$b) use ($sector) {
@@ -215,7 +215,7 @@ class Helper {
      *
      * @return  array  the laps
      */
-    public static function sortLapsByTime(array $laps)
+    public function sortLapsByTime(array $laps)
     {
         // Sort laps
         usort($laps, function($a,$b) {
@@ -249,11 +249,9 @@ class Helper {
     /**
      * Returns the given laps sorted by elapsed time (ASC)
      *
-     * TODO: Unittest?
-     *
      * @return  array  the laps
      */
-    public static function sortLapsByElapsedTime(array $laps)
+    public function sortLapsByElapsedTime(array $laps)
     {
         usort($laps, function($a,$b) {
             // Same elapsed seconds
@@ -315,7 +313,7 @@ class Helper {
      * @param   array   $participants
      * @return  array   The sorted participants
      */
-    public static function sortParticipantsByTotalTime(array $participants)
+    public function sortParticipantsByTotalTime(array $participants)
     {
         // DNF statusses
         $dnf_statusses = array(
@@ -467,51 +465,29 @@ class Helper {
     /**
      * Sort participants by best lap
      *
-     * TODO: Unittest?
-     *
      * @param   array   $participants
      * @return  array   The sorted participants
      */
-    public static function sortParticipantsByBestLap(array $participants)
+    public function sortParticipantsByBestLap(array $participants)
     {
-        usort($participants, function($a, $b) {
+        $laps = array(); $parts = array(); $parts_without_best_lap = array();
 
-            // Get best laps
-            $a_best_lap = $a->getBestLap();
-            $b_best_lap = $b->getBestLap();
-
-            // Both participants have no best lap
-            if ( ! $a_best_lap AND ! $b_best_lap)
-            {
-                // Same
-                return 0;
+        foreach ($participants as $part) {
+            if ($best_lap = $part->getBestLap()) {
+                $laps[] = $best_lap;
             }
-
-            // a has no best lap
-            if ( ! $a_best_lap)
-            {
-                return 1;
+            else {
+                $parts_without_best_lap[] = $part;
             }
+        }
 
-            // b has no best lap
-            if ( ! $b_best_lap)
-            {
-                return -1;
-            }
+        $laps = $this->sortLapsByTime($laps);
 
-            // Same time
-             if ($a_best_lap->getTime() === $b_best_lap->getTime()) {
-                return 0;
-            }
+        foreach ($laps as $lap) {
+            $parts[] = $lap->getParticipant();
+        }
 
-            // Return normal comparison
-            return ((
-                $a_best_lap->getTime() <
-                    $b_best_lap->getTime())
-                ? -1 : 1);
-        });
-
-        return $participants;
+        return array_merge($parts, $parts_without_best_lap);
     }
 
     /**
@@ -520,7 +496,7 @@ class Helper {
      * @param   array   $participants
      * @return  array   The sorted participants
      */
-    public static function sortParticipantsByConsistency(array $participants)
+    public function sortParticipantsByConsistency(array $participants)
     {
         usort($participants, function($a, $b) {
 
@@ -562,12 +538,10 @@ class Helper {
     /**
      * Sort participants by last lap position
      *
-     * TODO: Unittest?
-     *
      * @param   array   $participants
      * @return  array   The sorted participants
      */
-    public static function sortParticipantsByLastLapPosition(
+    public function sortParticipantsByLastLapPosition(
         array $participants)
     {
         usort($participants, function($a, $b) {
@@ -669,7 +643,7 @@ class Helper {
      * @param   mixed   $default    default value
      * @return  mixed
      */
-    public static function arrayGet($array, $key, $default = NULL)
+    public function arrayGet($array, $key, $default = NULL)
     {
         return isset($array[$key]) ? $array[$key] : $default;
     }

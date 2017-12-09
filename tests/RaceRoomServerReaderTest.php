@@ -69,6 +69,25 @@ class RaceRoomReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertNull($participant->getLap(1));
     }
 
+
+    /**
+     * Test reading bestlap when times are missing for qualify
+     */
+    public function testBestQualifyLapOnMissingLapsData()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/raceroom-server/only.bestlap.for.qualy.json');
+
+        // Get session
+        $session = Data_Reader::factory($file_path)->getSession(2);
+        $participants = $session->getParticipants();
+
+        //-- Validate
+        $this->assertNotNull($participants[0]->getBestLap());
+    }
+
+
     /**
      * Test pit stop marking and skipping negative lap times
      */
@@ -86,6 +105,40 @@ class RaceRoomReaderTest extends PHPUnit_Framework_TestCase {
 
         $this->assertTrue($participant->getLap(3)->isPitLap());
         $this->assertNull($participant->getLap(4));
+    }
+
+    /**
+     * Test supporting race2
+     */
+    public function testRace2Session()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/raceroom-server/log.with.race2.json');
+
+        // Get session
+        $session = Data_Reader::factory($file_path)->getSession(3);
+
+        //-- Validate
+        $this->assertSame(Session::TYPE_RACE, $session->getType());
+    }
+
+    /**
+     * Test finish status "none"
+     */
+    public function testFinishStatusNone()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/raceroom-server/finish.status.none.json');
+
+        // Get session
+        $session = Data_Reader::factory($file_path)->getSession(1);
+        $participants = $session->getParticipants();
+
+        //-- Validate
+        $this->assertSame(Participant::FINISH_NORMAL,
+            $participants[0]->getFinishStatus());
     }
 
 

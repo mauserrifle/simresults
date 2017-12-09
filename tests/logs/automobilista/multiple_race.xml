@@ -1,0 +1,709 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE rF [
+<!ENTITY rFEnt "rFactor Entity">
+]>
+<rFactorXML version="1.0">
+<RaceResults>
+<Setting>Multiplayer</Setting>
+<ServerName>CSRC Round 4</ServerName>
+<PlayerFile>Tim Russell</PlayerFile>
+<DateTime>1489518002</DateTime>
+<TimeString>2017/03/14 19:00:02</TimeString>
+<Mod>CSRC.srs</Mod>
+<Season></Season>
+<TrackVenue>Brasilia</TrackVenue>
+<TrackCourse>Brasilia Full Circuit</TrackCourse>
+<TrackEvent>Brasilia Full Circuit</TrackEvent>
+<TrackLength>5492.2</TrackLength>
+<GameVersion>2.000</GameVersion>
+<Dedicated>0</Dedicated>
+<ConnectionType upload="64" download="64">ISDN</ConnectionType>
+<RaceLaps>0</RaceLaps>
+<RaceTime>10</RaceTime>
+<MechFailRate>1</MechFailRate>
+<DamageMult>55</DamageMult>
+<FuelMult>1</FuelMult>
+<TireMult>1</TireMult>
+<VehiclesAllowed>|CSRC17</VehiclesAllowed>
+<ParcFerme>3</ParcFerme>
+<FixedSetups>0</FixedSetups>
+<FreeSettings>2147483647</FreeSettings>
+<FixedUpgrades>0</FixedUpgrades>
+<Race3>
+<DateTime>1489524418</DateTime>
+<TimeString>2017/03/14 20:46:58</TimeString>
+<Laps>2147483647</Laps>
+<Minutes>9</Minutes>
+<Stream>
+<Incident et="72.5">Adrian(14) reported contact (0.13) with another vehicle Dominic Tranquille(11)</Incident>
+<Incident et="80.6">wanngs(5) reported contact (0.13) with another vehicle Chris Hill(9)</Incident>
+<Incident et="80.6">Chris Hill(9) reported contact (0.19) with another vehicle wanngs(5)</Incident>
+<Incident et="81.2">wanngs(5) reported contact (0.10) with another vehicle Chris Hill(9)</Incident>
+<Incident et="81.3">Chris Hill(9) reported contact (0.03) with another vehicle wanngs(5)</Incident>
+<Incident et="82.7">Adrian(14) reported contact (0.13) with another vehicle Chris Hill(9)</Incident>
+<Incident et="82.7">Chris Hill(9) reported contact (0.35) with another vehicle Adrian(14)</Incident>
+<Incident et="82.7">Adrian(14) reported contact (0.16) with another vehicle Chris Hill(9)</Incident>
+<Incident et="83.7">Tim Russell(4) reported contact (0.19) with another vehicle Dominic Tranquille(11)</Incident>
+<Incident et="83.8">Dominic Tranquille(11) reported contact (0.13) with another vehicle Tim Russell(4)</Incident>
+<Incident et="107.3">Chris Hill(9) reported contact (0.19) with another vehicle wanngs(5)</Incident>
+<Incident et="107.3">wanngs(5) reported contact (0.19) with another vehicle Chris Hill(9)</Incident>
+<Incident et="107.3">wanngs(5) reported contact (0.06) with another vehicle Chris Hill(9)</Incident>
+<Score et="116.3">Dominic Tranquille(11) lap=0 point=1 t=47.988 et=116.207</Score>
+<Score et="116.5">Tim Russell(4) lap=0 point=1 t=48.282 et=116.500</Score>
+<Score et="117.0">wanngs(5) lap=0 point=1 t=48.695 et=116.914</Score>
+<Score et="117.1">Chris Hill(9) lap=0 point=1 t=48.796 et=117.015</Score>
+<Score et="117.2">GSMITH(7) lap=0 point=1 t=48.882 et=117.100</Score>
+<Score et="118.0">Adrian(14) lap=0 point=1 t=49.683 et=117.901</Score>
+<Score et="118.0">Joseph Castle(8) lap=0 point=1 t=49.711 et=117.930</Score>
+<Score et="118.2">Sam Markovic(13) lap=0 point=1 t=49.854 et=118.072</Score>
+<Incident et="160.5">GSMITH(7) reported contact (0.84) with another vehicle Adrian(14)</Incident>
+<Incident et="160.5">Adrian(14) reported contact (0.71) with another vehicle GSMITH(7)</Incident>
+<Incident et="160.6">GSMITH(7) reported contact (0.45) with another vehicle Adrian(14)</Incident>
+<Incident et="160.6">Adrian(14) reported contact (0.39) with another vehicle GSMITH(7)</Incident>
+<Incident et="160.7">GSMITH(7) reported contact (0.32) with another vehicle Chris Hill(9)</Incident>
+<Incident et="160.8">GSMITH(7) reported contact (0.13) with another vehicle Chris Hill(9)</Incident>
+<Incident et="160.8">Chris Hill(9) reported contact (0.77) with another vehicle GSMITH(7)</Incident>
+<Incident et="160.9">Chris Hill(9) reported contact (0.26) with another vehicle GSMITH(7)</Incident>
+<Incident et="161.0">GSMITH(7) reported contact (0.19) with another vehicle Chris Hill(9)</Incident>
+<Incident et="161.3">Adrian(14) reported contact (0.71) with another vehicle Joseph Castle(8)</Incident>
+<Incident et="161.3">Adrian(14) reported contact (0.13) with another vehicle Joseph Castle(8)</Incident>
+<Incident et="161.4">Adrian(14) reported contact (0.29) with another vehicle Joseph Castle(8)</Incident>
+<Incident et="161.4">Joseph Castle(8) reported contact (0.42) with another vehicle Adrian(14)</Incident>
+<Incident et="161.7">Adrian(14) reported contact (0.19) with another vehicle Joseph Castle(8)</Incident>
+<Incident et="161.7">Joseph Castle(8) reported contact (0.10) with another vehicle Adrian(14)</Incident>
+<Incident et="161.8">Joseph Castle(8) reported contact (0.10) with another vehicle Adrian(14)</Incident>
+<Score et="172.6">Tim Russell(4) lap=0 point=2 t=104.371 et=172.589</Score>
+<Score et="172.9">Dominic Tranquille(11) lap=0 point=2 t=-1.000 et=172.807</Score>
+<Score et="173.1">wanngs(5) lap=0 point=2 t=104.723 et=172.942</Score>
+<Score et="174.6">GSMITH(7) lap=0 point=2 t=106.216 et=174.435</Score>
+<Incident et="174.8">wanngs(5) reported contact (0.35) with another vehicle Dominic Tranquille(11)</Incident>
+<Incident et="174.8">wanngs(5) reported contact (0.16) with another vehicle Dominic Tranquille(11)</Incident>
+<Incident et="174.8">Dominic Tranquille(11) reported contact (0.42) with another vehicle wanngs(5)</Incident>
+<Incident et="174.8">Tim Russell(4) reported contact (0.10) with another vehicle Dominic Tranquille(11)</Incident>
+<Incident et="174.9">Dominic Tranquille(11) reported contact (0.45) with another vehicle Tim Russell(4)</Incident>
+<Incident et="174.9">Dominic Tranquille(11) reported contact (0.10) with another vehicle wanngs(5)</Incident>
+<Score et="174.9">Sam Markovic(13) lap=0 point=2 t=106.570 et=174.789</Score>
+<Incident et="174.9">Dominic Tranquille(11) reported contact (0.19) with another vehicle Tim Russell(4)</Incident>
+<Incident et="175.1">wanngs(5) reported contact (0.77) with another vehicle Dominic Tranquille(11)</Incident>
+<Incident et="175.1">wanngs(5) reported contact (0.26) with another vehicle Dominic Tranquille(11)</Incident>
+<Incident et="175.1">wanngs(5) reported contact (0.10) with another vehicle Dominic Tranquille(11)</Incident>
+<Incident et="175.1">wanngs(5) reported contact (0.03) with another vehicle Dominic Tranquille(11)</Incident>
+<Incident et="176.3">Dominic Tranquille(11) reported contact (0.13) with Track</Incident>
+<Incident et="176.4">Dominic Tranquille(11) reported contact (0.10) with Track</Incident>
+<Incident et="176.6">Dominic Tranquille(11) reported contact (0.35) with Track</Incident>
+<Incident et="176.8">Dominic Tranquille(11) reported contact (0.10) with Track</Incident>
+<Score et="177.9">Chris Hill(9) lap=0 point=2 t=109.471 et=177.690</Score>
+<Incident et="178.0">Dominic Tranquille(11) reported contact (1.00) with Immovable</Incident>
+<Incident et="178.0">Dominic Tranquille(11) reported contact (0.13) with Wing</Incident>
+<Incident et="178.1">Dominic Tranquille(11) reported contact (1.00) with Immovable</Incident>
+<Incident et="178.5">Dominic Tranquille(11) reported contact (0.23) with Immovable</Incident>
+<Incident et="178.5">Dominic Tranquille(11) reported contact (1.00) with Immovable</Incident>
+<Incident et="178.6">Dominic Tranquille(11) reported contact (0.06) with Track</Incident>
+<Incident et="178.8">Dominic Tranquille(11) reported contact (0.35) with Track</Incident>
+<Incident et="179.4">Dominic Tranquille(11) reported contact (0.06) with Track</Incident>
+<Incident et="179.6">Dominic Tranquille(11) reported contact (0.03) with Track</Incident>
+<Incident et="182.1">Dominic Tranquille(11) reported contact (0.26) with Immovable</Incident>
+<Score et="183.3">Joseph Castle(8) lap=0 point=2 t=114.841 et=183.059</Score>
+<Score et="188.3">Adrian(14) lap=0 point=2 t=119.914 et=188.132</Score>
+<Score et="207.3">Tim Russell(4) lap=1 point=0 t=139.039 et=207.258</Score>
+<Score et="207.9">wanngs(5) lap=1 point=0 t=139.547 et=207.766</Score>
+<Score et="209.1">GSMITH(7) lap=1 point=0 t=140.770 et=208.988</Score>
+<Score et="209.6">Sam Markovic(13) lap=1 point=0 t=141.309 et=209.528</Score>
+<Score et="212.8">Chris Hill(9) lap=1 point=0 t=144.459 et=212.678</Score>
+<Score et="218.7">Joseph Castle(8) lap=1 point=0 t=150.429 et=218.647</Score>
+<Score et="220.9">Dominic Tranquille(11) lap=1 point=0 t=-1.000 et=220.757</Score>
+<Score et="224.4">Adrian(14) lap=1 point=0 t=156.030 et=224.249</Score>
+<Score et="247.9">Tim Russell(4) lap=1 point=1 t=40.652 et=247.910</Score>
+<Score et="248.4">wanngs(5) lap=1 point=1 t=40.505 et=248.271</Score>
+<Score et="249.5">GSMITH(7) lap=1 point=1 t=40.405 et=249.393</Score>
+<Score et="250.0">Sam Markovic(13) lap=1 point=1 t=40.351 et=249.878</Score>
+<Score et="254.1">Chris Hill(9) lap=1 point=1 t=41.255 et=253.933</Score>
+<Score et="259.8">Joseph Castle(8) lap=1 point=1 t=41.013 et=259.660</Score>
+<Score et="261.9">Dominic Tranquille(11) lap=1 point=1 t=41.025 et=261.782</Score>
+<Score et="265.4">Adrian(14) lap=1 point=1 t=41.009 et=265.257</Score>
+<Score et="302.7">Tim Russell(4) lap=1 point=2 t=95.435 et=302.692</Score>
+<Score et="303.9">wanngs(5) lap=1 point=2 t=95.975 et=303.741</Score>
+<Score et="304.9">GSMITH(7) lap=1 point=2 t=95.786 et=304.775</Score>
+<Score et="305.7">Sam Markovic(13) lap=1 point=2 t=96.045 et=305.572</Score>
+<Score et="310.3">Chris Hill(9) lap=1 point=2 t=97.512 et=310.190</Score>
+<Score et="315.3">Joseph Castle(8) lap=1 point=2 t=96.551 et=315.199</Score>
+<Score et="320.7">Dominic Tranquille(11) lap=1 point=2 t=-1.000 et=320.607</Score>
+<Score et="321.8">Adrian(14) lap=1 point=2 t=97.434 et=321.682</Score>
+<Score et="336.7">Tim Russell(4) lap=2 point=0 t=129.445 et=336.703</Score>
+<Score et="338.0">wanngs(5) lap=2 point=0 t=130.112 et=337.877</Score>
+<Score et="339.1">GSMITH(7) lap=2 point=0 t=130.021 et=339.010</Score>
+<Score et="340.6">Sam Markovic(13) lap=2 point=0 t=130.936 et=340.464</Score>
+<Score et="344.7">Chris Hill(9) lap=2 point=0 t=131.881 et=344.559</Score>
+<Score et="349.4">Joseph Castle(8) lap=2 point=0 t=130.679 et=349.326</Score>
+<Score et="354.9">Dominic Tranquille(11) lap=2 point=0 t=-1.000 et=354.832</Score>
+<Score et="356.5">Adrian(14) lap=2 point=0 t=132.141 et=356.390</Score>
+<Incident et="371.6">Sam Markovic(13) reported contact (0.45) with Immovable</Incident>
+<Incident et="371.6">Sam Markovic(13) reported contact (1.00) with Immovable</Incident>
+<Score et="376.8">Tim Russell(4) lap=2 point=1 t=40.072 et=376.775</Score>
+<Score et="378.5">wanngs(5) lap=2 point=1 t=40.461 et=378.339</Score>
+<Score et="379.8">GSMITH(7) lap=2 point=1 t=40.614 et=379.624</Score>
+<Score et="382.0">Sam Markovic(13) lap=2 point=1 t=41.379 et=381.843</Score>
+<Score et="385.4">Chris Hill(9) lap=2 point=1 t=40.756 et=385.316</Score>
+<Score et="390.3">Joseph Castle(8) lap=2 point=1 t=40.898 et=390.225</Score>
+<Score et="395.8">Dominic Tranquille(11) lap=2 point=1 t=40.800 et=395.632</Score>
+<Score et="397.1">Adrian(14) lap=2 point=1 t=40.543 et=396.932</Score>
+<Score et="431.5">Tim Russell(4) lap=2 point=2 t=-1.000 et=431.430</Score>
+<Score et="434.0">wanngs(5) lap=2 point=2 t=95.997 et=433.874</Score>
+<Score et="434.9">GSMITH(7) lap=2 point=2 t=95.757 et=434.767</Score>
+<Score et="438.6">Sam Markovic(13) lap=2 point=2 t=98.000 et=438.464</Score>
+<Score et="441.2">Chris Hill(9) lap=2 point=2 t=96.541 et=441.100</Score>
+<Score et="445.5">Joseph Castle(8) lap=2 point=2 t=96.035 et=445.361</Score>
+<Score et="452.1">Dominic Tranquille(11) lap=2 point=2 t=97.075 et=451.907</Score>
+<Score et="452.8">Adrian(14) lap=2 point=2 t=96.265 et=452.655</Score>
+<Score et="465.4">Tim Russell(4) lap=3 point=0 t=-1.000 et=465.325</Score>
+<Score et="468.5">wanngs(5) lap=3 point=0 t=130.517 et=468.394</Score>
+<Score et="469.2">GSMITH(7) lap=3 point=0 t=130.083 et=469.093</Score>
+<Score et="472.8">Sam Markovic(13) lap=3 point=0 t=132.257 et=472.721</Score>
+<Score et="475.6">Chris Hill(9) lap=3 point=0 t=130.930 et=475.490</Score>
+<Score et="480.1">Joseph Castle(8) lap=3 point=0 t=130.682 et=480.008</Score>
+<Score et="486.6">Dominic Tranquille(11) lap=3 point=0 t=131.654 et=486.486</Score>
+<Score et="488.1">Adrian(14) lap=3 point=0 t=131.559 et=487.949</Score>
+<Incident et="503.2">Sam Markovic(13) reported contact (1.00) with Immovable</Incident>
+<Incident et="503.2">Sam Markovic(13) reported contact (1.00) with Immovable</Incident>
+<Incident et="503.2">Sam Markovic(13) reported contact (0.23) with Immovable</Incident>
+<Score et="505.6">Tim Russell(4) lap=3 point=1 t=40.290 et=505.615</Score>
+<Score et="509.6">wanngs(5) lap=3 point=1 t=41.020 et=509.414</Score>
+<Score et="509.7">GSMITH(7) lap=3 point=1 t=-1.000 et=509.546</Score>
+<Score et="514.3">Sam Markovic(13) lap=3 point=1 t=41.429 et=514.150</Score>
+<Score et="516.6">Chris Hill(9) lap=3 point=1 t=40.942 et=516.431</Score>
+<Score et="520.7">Joseph Castle(8) lap=3 point=1 t=40.602 et=520.610</Score>
+<Score et="527.2">Dominic Tranquille(11) lap=3 point=1 t=40.525 et=527.011</Score>
+<Score et="528.8">Adrian(14) lap=3 point=1 t=40.750 et=528.699</Score>
+<Score et="560.5">Tim Russell(4) lap=3 point=2 t=95.101 et=560.426</Score>
+<Score et="565.7">wanngs(5) lap=3 point=2 t=97.108 et=565.502</Score>
+<Score et="565.8">GSMITH(7) lap=3 point=2 t=-1.000 et=565.700</Score>
+<Score et="569.8">Sam Markovic(13) lap=3 point=2 t=96.973 et=569.694</Score>
+<Score et="572.2">Chris Hill(9) lap=3 point=2 t=96.537 et=572.027</Score>
+<Score et="576.4">Joseph Castle(8) lap=3 point=2 t=96.247 et=576.255</Score>
+<Score et="583.0">Dominic Tranquille(11) lap=3 point=2 t=96.354 et=582.840</Score>
+<Score et="584.5">Adrian(14) lap=3 point=2 t=96.405 et=584.353</Score>
+<Score et="594.4">Tim Russell(4) lap=4 point=0 t=129.033 et=594.358</Score>
+<Score et="600.2">wanngs(5) lap=4 point=0 t=131.703 et=600.097</Score>
+<Score et="600.4">GSMITH(7) lap=4 point=0 t=-1.000 et=600.242</Score>
+<Score et="604.4">Sam Markovic(13) lap=4 point=0 t=131.523 et=604.244</Score>
+<Score et="606.3">Chris Hill(9) lap=4 point=0 t=130.691 et=606.180</Score>
+<Score et="610.4">Joseph Castle(8) lap=4 point=0 t=130.314 et=610.322</Score>
+<Score et="617.4">Dominic Tranquille(11) lap=4 point=0 t=130.796 et=617.282</Score>
+<Score et="618.5">Adrian(14) lap=4 point=0 t=130.431 et=618.379</Score>
+<Score et="634.7">Tim Russell(4) lap=4 point=1 t=40.357 et=634.715</Score>
+<Score et="641.2">wanngs(5) lap=4 point=1 t=40.949 et=641.046</Score>
+<Score et="641.2">GSMITH(7) lap=4 point=1 t=40.835 et=641.076</Score>
+<Score et="645.3">Sam Markovic(13) lap=4 point=1 t=40.957 et=645.201</Score>
+<Score et="647.2">Chris Hill(9) lap=4 point=1 t=40.822 et=647.002</Score>
+<Score et="651.3">Joseph Castle(8) lap=4 point=1 t=40.852 et=651.175</Score>
+<Score et="658.1">Dominic Tranquille(11) lap=4 point=1 t=40.662 et=657.944</Score>
+<Score et="658.9">Adrian(14) lap=4 point=1 t=40.395 et=658.775</Score>
+<Score et="689.8">Tim Russell(4) lap=4 point=2 t=95.380 et=689.739</Score>
+<Score et="696.9">wanngs(5) lap=4 point=2 t=96.683 et=696.780</Score>
+<Score et="697.7">GSMITH(7) lap=4 point=2 t=97.346 et=697.588</Score>
+<Score et="701.5">Sam Markovic(13) lap=4 point=2 t=97.133 et=701.376</Score>
+<Score et="702.9">Chris Hill(9) lap=4 point=2 t=96.551 et=702.731</Score>
+<Score et="706.9">Joseph Castle(8) lap=4 point=2 t=96.450 et=706.772</Score>
+<Penalty et="708.5">Dominic Tranquille received Drive Thru penalty, 0s, 0laps. Result: penalties=1, 1st=Drive Thru,0s</Penalty>
+<Score et="715.2">Dominic Tranquille(11) lap=4 point=2 t=-1.000 et=715.072</Score>
+<Score et="716.2">Adrian(14) lap=4 point=2 t=97.658 et=716.037</Score>
+<Score et="724.2">Checkered for Tim Russell, laps=5/5, endET=724.150024/608.218567, crossedAfterTime=0</Score>
+<Score et="724.2">Tim Russell(4) lap=5 point=0 t=129.792 et=724.150</Score>
+<Score et="731.2">wanngs(5) lap=5 point=0 t=130.954 et=731.051</Score>
+<Score et="731.6">GSMITH(7) lap=5 point=0 t=131.253 et=731.495</Score>
+<Score et="736.5">Sam Markovic(13) lap=5 point=0 t=132.177 et=736.420</Score>
+<Score et="737.2">Chris Hill(9) lap=5 point=0 t=130.870 et=737.050</Score>
+<Incident et="738.3">wanngs(5) reported contact (1.00) with another vehicle GSMITH(7)</Incident>
+<Incident et="738.3">GSMITH(7) reported contact (0.77) with another vehicle wanngs(5)</Incident>
+<Incident et="738.3">GSMITH(7) reported contact (1.00) with another vehicle wanngs(5)</Incident>
+<Incident et="738.3">wanngs(5) reported contact (0.42) with another vehicle GSMITH(7)</Incident>
+<Incident et="738.3">GSMITH(7) reported contact (0.32) with another vehicle wanngs(5)</Incident>
+<Incident et="738.4">GSMITH(7) reported contact (0.65) with another vehicle wanngs(5)</Incident>
+<Incident et="738.4">GSMITH(7) reported contact (0.06) with another vehicle wanngs(5)</Incident>
+<Incident et="738.5">GSMITH(7) reported contact (0.71) with another vehicle wanngs(5)</Incident>
+<Incident et="738.5">GSMITH(7) reported contact (0.03) with another vehicle wanngs(5)</Incident>
+<Incident et="738.5">wanngs(5) reported contact (0.26) with another vehicle GSMITH(7)</Incident>
+<Incident et="738.5">wanngs(5) reported contact (0.74) with another vehicle GSMITH(7)</Incident>
+<Incident et="738.5">wanngs(5) reported contact (1.00) with Immovable</Incident>
+<Incident et="738.5">wanngs(5) reported contact (0.00) with another vehicle GSMITH(7)</Incident>
+<Incident et="738.6">wanngs(5) reported contact (0.06) with another vehicle GSMITH(7)</Incident>
+<Incident et="738.6">wanngs(5) reported contact (0.13) with another vehicle GSMITH(7)</Incident>
+<Incident et="738.6">wanngs(5) reported contact (0.13) with another vehicle GSMITH(7)</Incident>
+<Incident et="738.7">GSMITH(7) reported contact (1.00) with Immovable</Incident>
+<Incident et="738.7">GSMITH(7) reported contact (0.39) with Immovable</Incident>
+<Incident et="738.7">wanngs(5) reported contact (1.00) with Immovable</Incident>
+<Incident et="738.8">wanngs(5) reported contact (0.29) with Immovable</Incident>
+<Incident et="738.9">GSMITH(7) reported contact (1.00) with Immovable</Incident>
+<Incident et="739.0">wanngs(5) reported contact (0.74) with Immovable</Incident>
+<Incident et="739.0">wanngs(5) reported contact (0.06) with Immovable</Incident>
+<Incident et="739.0">wanngs(5) reported contact (0.13) with Immovable</Incident>
+<Incident et="739.0">GSMITH(7) reported contact (0.39) with Immovable</Incident>
+<Incident et="739.1">wanngs(5) reported contact (0.77) with Immovable</Incident>
+<Incident et="739.1">wanngs(5) reported contact (0.16) with Immovable</Incident>
+<Incident et="739.1">wanngs(5) reported contact (0.29) with Immovable</Incident>
+<Incident et="739.1">wanngs(5) reported contact (0.65) with Immovable</Incident>
+<Incident et="739.1">wanngs(5) reported contact (0.03) with Immovable</Incident>
+<Incident et="739.2">GSMITH(7) reported contact (0.23) with Immovable</Incident>
+<Incident et="739.2">wanngs(5) reported contact (0.23) with Immovable</Incident>
+<Incident et="739.2">GSMITH(7) reported contact (1.00) with Immovable</Incident>
+<Incident et="739.2">GSMITH(7) reported contact (0.16) with Immovable</Incident>
+<Incident et="739.3">wanngs(5) reported contact (1.00) with Immovable</Incident>
+<Incident et="739.4">GSMITH(7) reported contact (0.32) with Immovable</Incident>
+<Incident et="739.5">wanngs(5) reported contact (0.23) with Track</Incident>
+<Incident et="739.5">wanngs(5) reported contact (0.32) with Immovable</Incident>
+<Incident et="739.6">GSMITH(7) reported contact (0.06) with Immovable</Incident>
+<Incident et="739.6">GSMITH(7) reported contact (0.68) with Immovable</Incident>
+<Incident et="739.6">wanngs(5) reported contact (0.06) with Track</Incident>
+<Incident et="739.7">wanngs(5) reported contact (0.68) with Immovable</Incident>
+<Incident et="739.7">wanngs(5) reported contact (0.13) with Immovable</Incident>
+<Incident et="739.8">GSMITH(7) reported contact (0.35) with Immovable</Incident>
+<Incident et="739.9">GSMITH(7) reported contact (0.87) with Immovable</Incident>
+<Incident et="740.1">wanngs(5) reported contact (0.16) with Immovable</Incident>
+<Score et="741.2">Joseph Castle(8) lap=5 point=0 t=130.757 et=741.079</Score>
+<Incident et="741.6">wanngs(5) reported contact (0.45) with Immovable</Incident>
+<Incident et="741.6">wanngs(5) reported contact (1.00) with Immovable</Incident>
+<Incident et="742.0">Tim Russell(4) reported contact (1.00) with another vehicle wanngs(5)</Incident>
+<Incident et="742.1">Tim Russell(4) reported contact (0.81) with another vehicle wanngs(5)</Incident>
+<Incident et="742.1">Tim Russell(4) reported contact (0.94) with another vehicle wanngs(5)</Incident>
+<Incident et="742.1">Tim Russell(4) reported contact (0.13) with another vehicle wanngs(5)</Incident>
+<Incident et="742.2">wanngs(5) reported contact (1.00) with another vehicle Tim Russell(4)</Incident>
+<Incident et="742.2">wanngs(5) reported contact (0.19) with another vehicle Tim Russell(4)</Incident>
+<Incident et="742.2">wanngs(5) reported contact (0.58) with Immovable</Incident>
+<Incident et="742.2">wanngs(5) reported contact (0.55) with another vehicle Tim Russell(4)</Incident>
+<Incident et="742.2">wanngs(5) reported contact (0.16) with Immovable</Incident>
+<Incident et="742.2">wanngs(5) reported contact (0.19) with another vehicle Tim Russell(4)</Incident>
+<Incident et="742.3">wanngs(5) reported contact (0.03) with another vehicle Tim Russell(4)</Incident>
+<Incident et="742.3">wanngs(5) reported contact (0.23) with another vehicle Tim Russell(4)</Incident>
+<Incident et="742.3">wanngs(5) reported contact (0.03) with Immovable</Incident>
+<Incident et="742.8">GSMITH(7) reported contact (1.00) with another vehicle Tim Russell(4)</Incident>
+<Incident et="742.8">GSMITH(7) reported contact (0.77) with another vehicle Tim Russell(4)</Incident>
+<Incident et="743.3">GSMITH(7) reported contact (0.65) with Immovable</Incident>
+<Incident et="743.3">GSMITH(7) reported contact (1.00) with Immovable</Incident>
+<Incident et="745.1">Chris Hill(9) reported contact (1.00) with Immovable</Incident>
+<Incident et="745.1">Chris Hill(9) reported contact (0.55) with Wing</Incident>
+<Incident et="745.1">Chris Hill(9) reported contact (1.00) with Wing</Incident>
+<Incident et="745.2">Chris Hill(9) reported contact (0.94) with Immovable</Incident>
+<Incident et="745.2">Chris Hill(9) reported contact (1.00) with Immovable</Incident>
+<Incident et="745.2">Chris Hill(9) reported contact (0.42) with Immovable</Incident>
+<Incident et="746.1">Sam Markovic(13) reported contact (1.00) with Immovable</Incident>
+<Incident et="746.1">Sam Markovic(13) reported contact (0.13) with Part</Incident>
+<Incident et="746.1">Sam Markovic(13) reported contact (0.10) with Part</Incident>
+<Incident et="746.2">Sam Markovic(13) reported contact (0.94) with Immovable</Incident>
+<Incident et="746.2">Sam Markovic(13) reported contact (1.00) with Immovable</Incident>
+<Incident et="746.2">Sam Markovic(13) reported contact (0.42) with Immovable</Incident>
+<Incident et="746.5">Sam Markovic(13) reported contact (0.06) with Immovable</Incident>
+<Incident et="746.5">Sam Markovic(13) reported contact (0.52) with Immovable</Incident>
+<Incident et="746.5">Chris Hill(9) reported contact (1.00) with Immovable</Incident>
+<Incident et="746.6">Chris Hill(9) reported contact (1.00) with Immovable</Incident>
+<Incident et="746.7">Chris Hill(9) reported contact (0.03) with Immovable</Incident>
+<Incident et="746.7">Chris Hill(9) reported contact (0.03) with Immovable</Incident>
+<Incident et="746.8">Sam Markovic(13) reported contact (0.39) with Immovable</Incident>
+<Incident et="746.8">Sam Markovic(13) reported contact (1.00) with another vehicle wanngs(5)</Incident>
+<Incident et="746.8">Sam Markovic(13) reported contact (0.13) with Wing</Incident>
+<Incident et="746.8">Sam Markovic(13) reported contact (0.35) with another vehicle wanngs(5)</Incident>
+<Incident et="746.9">wanngs(5) reported contact (1.00) with another vehicle Sam Markovic(13)</Incident>
+<Incident et="746.9">Sam Markovic(13) reported contact (0.06) with Wing</Incident>
+<Incident et="746.9">Sam Markovic(13) reported contact (0.55) with another vehicle wanngs(5)</Incident>
+<Incident et="746.9">Sam Markovic(13) reported contact (0.13) with Immovable</Incident>
+<Incident et="746.9">wanngs(5) reported contact (0.35) with another vehicle Sam Markovic(13)</Incident>
+<Incident et="746.9">Sam Markovic(13) reported contact (0.58) with Wing</Incident>
+<Incident et="746.9">Sam Markovic(13) reported contact (0.06) with another vehicle wanngs(5)</Incident>
+<Incident et="746.9">Sam Markovic(13) reported contact (0.16) with another vehicle wanngs(5)</Incident>
+<Incident et="746.9">Sam Markovic(13) reported contact (0.39) with Wing</Incident>
+<Incident et="747.0">Sam Markovic(13) reported contact (0.10) with another vehicle wanngs(5)</Incident>
+<Incident et="747.0">Sam Markovic(13) reported contact (0.19) with another vehicle wanngs(5)</Incident>
+<Incident et="747.0">wanngs(5) reported contact (1.00) with another vehicle Sam Markovic(13)</Incident>
+<Incident et="747.0">wanngs(5) reported contact (0.13) with another vehicle Sam Markovic(13)</Incident>
+<Incident et="747.1">Sam Markovic(13) reported contact (0.84) with another vehicle Chris Hill(9)</Incident>
+<Incident et="747.2">Sam Markovic(13) reported contact (0.65) with another vehicle Chris Hill(9)</Incident>
+<Incident et="747.2">Sam Markovic(13) reported contact (0.06) with another vehicle Chris Hill(9)</Incident>
+<Incident et="747.2">Chris Hill(9) reported contact (0.58) with Immovable</Incident>
+<Incident et="747.2">Sam Markovic(13) reported contact (0.00) with Immovable</Incident>
+<Incident et="747.2">Chris Hill(9) reported contact (0.26) with Wing</Incident>
+<Incident et="747.2">Chris Hill(9) reported contact (1.00) with another vehicle Sam Markovic(13)</Incident>
+<Incident et="747.4">Sam Markovic(13) reported contact (0.42) with another vehicle Chris Hill(9)</Incident>
+<Incident et="747.4">Chris Hill(9) reported contact (0.42) with Immovable</Incident>
+<Incident et="747.4">Chris Hill(9) reported contact (0.13) with Wing</Incident>
+<Incident et="747.4">Chris Hill(9) reported contact (0.03) with Wing</Incident>
+<Incident et="747.6">Sam Markovic(13) reported contact (0.10) with Immovable</Incident>
+<Incident et="747.8">Chris Hill(9) reported contact (0.39) with Immovable</Incident>
+<Incident et="747.8">Sam Markovic(13) reported contact (0.19) with Immovable</Incident>
+<Incident et="748.0">Chris Hill(9) reported contact (0.06) with Immovable</Incident>
+<Incident et="748.4">GSMITH(7) reported contact (1.00) with another vehicle Sam Markovic(13)</Incident>
+<Incident et="748.4">Sam Markovic(13) reported contact (0.74) with another vehicle GSMITH(7)</Incident>
+<Incident et="748.4">Sam Markovic(13) reported contact (1.00) with another vehicle GSMITH(7)</Incident>
+<Incident et="748.4">Sam Markovic(13) reported contact (0.61) with another vehicle GSMITH(7)</Incident>
+<Incident et="748.4">GSMITH(7) reported contact (0.55) with another vehicle Sam Markovic(13)</Incident>
+<Incident et="748.5">GSMITH(7) reported contact (0.03) with another vehicle Sam Markovic(13)</Incident>
+<Incident et="748.5">Sam Markovic(13) reported contact (1.00) with another vehicle GSMITH(7)</Incident>
+<Incident et="748.5">GSMITH(7) reported contact (1.00) with another vehicle Sam Markovic(13)</Incident>
+<Incident et="748.6">GSMITH(7) reported contact (0.10) with another vehicle Sam Markovic(13)</Incident>
+<Incident et="748.6">Sam Markovic(13) reported contact (1.00) with another vehicle Chris Hill(9)</Incident>
+<Incident et="748.6">Sam Markovic(13) reported contact (0.29) with another vehicle GSMITH(7)</Incident>
+<Incident et="748.6">Sam Markovic(13) reported contact (0.06) with another vehicle Chris Hill(9)</Incident>
+<Incident et="748.6">Sam Markovic(13) reported contact (0.03) with another vehicle GSMITH(7)</Incident>
+<Incident et="748.6">Sam Markovic(13) reported contact (0.03) with another vehicle Chris Hill(9)</Incident>
+<Incident et="748.7">Sam Markovic(13) reported contact (0.42) with another vehicle Chris Hill(9)</Incident>
+<Incident et="748.7">Sam Markovic(13) reported contact (0.87) with another vehicle Chris Hill(9)</Incident>
+<Incident et="748.7">Sam Markovic(13) reported contact (0.16) with another vehicle Chris Hill(9)</Incident>
+<Incident et="748.7">Chris Hill(9) reported contact (0.19) with Wing</Incident>
+<Incident et="748.8">Sam Markovic(13) reported contact (0.29) with another vehicle Chris Hill(9)</Incident>
+<Incident et="748.9">Chris Hill(9) reported contact (0.90) with another vehicle Sam Markovic(13)</Incident>
+<Incident et="748.9">Chris Hill(9) reported contact (0.03) with another vehicle Sam Markovic(13)</Incident>
+<Incident et="748.9">Chris Hill(9) reported contact (0.06) with another vehicle Sam Markovic(13)</Incident>
+<Incident et="748.9">Sam Markovic(13) reported contact (0.10) with another vehicle GSMITH(7)</Incident>
+<Penalty et="749.5">Dominic Tranquille finished before serving penalty, added 25 seconds to totalET</Penalty>
+<Score et="749.5">Dominic Tranquille(11) lap=5 point=0 t=-1.000 et=749.442</Score>
+<Score et="750.8">Adrian(14) lap=5 point=0 t=132.270 et=750.649</Score>
+<Incident et="753.9">Joseph Castle(8) reported contact (1.00) with another vehicle Chris Hill(9)</Incident>
+<Incident et="753.9">Chris Hill(9) reported contact (1.00) with another vehicle Joseph Castle(8)</Incident>
+<Incident et="753.9">Joseph Castle(8) reported contact (0.13) with Wing</Incident>
+<Incident et="753.9">Joseph Castle(8) reported contact (1.00) with another vehicle Chris Hill(9)</Incident>
+<Incident et="754.0">Joseph Castle(8) reported contact (0.10) with Wing</Incident>
+<Incident et="754.0">Joseph Castle(8) reported contact (0.19) with another vehicle Chris Hill(9)</Incident>
+<Incident et="754.0">Joseph Castle(8) reported contact (1.00) with another vehicle Chris Hill(9)</Incident>
+<Incident et="754.0">Joseph Castle(8) reported contact (0.84) with Wing</Incident>
+<Incident et="754.0">Joseph Castle(8) reported contact (0.03) with another vehicle Chris Hill(9)</Incident>
+<Incident et="754.0">Joseph Castle(8) reported contact (0.58) with Wing</Incident>
+<Incident et="754.0">Chris Hill(9) reported contact (0.55) with another vehicle Sam Markovic(13)</Incident>
+<Incident et="754.0">Chris Hill(9) reported contact (1.00) with another vehicle Joseph Castle(8)</Incident>
+<Incident et="754.1">Joseph Castle(8) reported contact (0.48) with Wing</Incident>
+<Incident et="754.1">Joseph Castle(8) reported contact (0.65) with another vehicle Chris Hill(9)</Incident>
+<Incident et="754.1">Joseph Castle(8) reported contact (0.58) with another vehicle Chris Hill(9)</Incident>
+<Incident et="754.1">Sam Markovic(13) reported contact (1.00) with another vehicle Joseph Castle(8)</Incident>
+<Incident et="754.1">Sam Markovic(13) reported contact (1.00) with another vehicle Joseph Castle(8)</Incident>
+<Incident et="754.2">Sam Markovic(13) reported contact (0.32) with another vehicle Joseph Castle(8)</Incident>
+<Incident et="754.2">Chris Hill(9) reported contact (0.16) with another vehicle Sam Markovic(13)</Incident>
+<Incident et="754.2">Chris Hill(9) reported contact (0.97) with Immovable</Incident>
+<Incident et="754.2">Chris Hill(9) reported contact (1.00) with Immovable</Incident>
+<Incident et="754.2">Chris Hill(9) reported contact (0.19) with another vehicle Sam Markovic(13)</Incident>
+<Incident et="754.3">Joseph Castle(8) reported contact (0.65) with another vehicle Chris Hill(9)</Incident>
+<Incident et="754.3">Joseph Castle(8) reported contact (0.06) with another vehicle Chris Hill(9)</Incident>
+<Incident et="754.3">Chris Hill(9) reported contact (0.00) with another vehicle Sam Markovic(13)</Incident>
+<Incident et="754.3">Chris Hill(9) reported contact (0.55) with Immovable</Incident>
+<Incident et="754.3">Chris Hill(9) reported contact (0.16) with Wing</Incident>
+<Incident et="754.3">Chris Hill(9) reported contact (0.10) with another vehicle Sam Markovic(13)</Incident>
+<Incident et="754.5">Chris Hill(9) reported contact (0.23) with Immovable</Incident>
+<Incident et="754.5">Chris Hill(9) reported contact (0.26) with Immovable</Incident>
+<Incident et="754.5">Chris Hill(9) reported contact (0.03) with Immovable</Incident>
+<Incident et="756.7">Dominic Tranquille(11) reported contact (1.00) with Immovable</Incident>
+<Incident et="756.7">Dominic Tranquille(11) reported contact (1.00) with Immovable</Incident>
+<Incident et="756.7">Dominic Tranquille(11) reported contact (1.00) with Immovable</Incident>
+<Incident et="756.7">Dominic Tranquille(11) reported contact (0.52) with Immovable</Incident>
+<Incident et="756.7">Dominic Tranquille(11) reported contact (0.87) with Immovable</Incident>
+<Incident et="756.7">Dominic Tranquille(11) reported contact (0.03) with Immovable</Incident>
+<Incident et="756.8">Dominic Tranquille(11) reported contact (0.35) with Immovable</Incident>
+<Incident et="759.2">wanngs(5) reported contact (1.00) with another vehicle Sam Markovic(13)</Incident>
+<Incident et="759.3">Sam Markovic(13) reported contact (1.00) with another vehicle wanngs(5)</Incident>
+<Incident et="759.3">Sam Markovic(13) reported contact (0.16) with another vehicle wanngs(5)</Incident>
+<Incident et="759.3">wanngs(5) reported contact (0.26) with another vehicle Sam Markovic(13)</Incident>
+<Incident et="759.3">wanngs(5) reported contact (0.81) with another vehicle Sam Markovic(13)</Incident>
+<Incident et="759.3">wanngs(5) reported contact (0.16) with another vehicle Sam Markovic(13)</Incident>
+<Incident et="759.3">wanngs(5) reported contact (0.74) with another vehicle Sam Markovic(13)</Incident>
+<Incident et="759.4">wanngs(5) reported contact (0.35) with another vehicle Sam Markovic(13)</Incident>
+<Incident et="760.2">wanngs(5) reported contact (0.42) with Immovable</Incident>
+<Incident et="760.2">wanngs(5) reported contact (1.00) with Immovable</Incident>
+<Incident et="760.2">wanngs(5) reported contact (0.29) with Immovable</Incident>
+<Incident et="760.7">Adrian(14) reported contact (1.00) with Immovable</Incident>
+<Incident et="760.7">Adrian(14) reported contact (0.13) with Wing</Incident>
+<Incident et="760.7">Adrian(14) reported contact (0.19) with Wing</Incident>
+<Incident et="763.3">Tim Russell(4) reported contact (1.00) with another vehicle Joseph Castle(8)</Incident>
+<Incident et="763.3">Tim Russell(4) reported contact (0.13) with Wing</Incident>
+<Incident et="763.3">Tim Russell(4) reported contact (1.00) with another vehicle Joseph Castle(8)</Incident>
+<Incident et="763.4">Tim Russell(4) reported contact (0.26) with another vehicle Joseph Castle(8)</Incident>
+<Incident et="763.4">Tim Russell(4) reported contact (0.55) with another vehicle Joseph Castle(8)</Incident>
+<Incident et="763.4">Tim Russell(4) reported contact (0.03) with another vehicle Joseph Castle(8)</Incident>
+<Incident et="763.5">Joseph Castle(8) reported contact (1.00) with another vehicle Tim Russell(4)</Incident>
+<Incident et="763.5">Joseph Castle(8) reported contact (0.90) with another vehicle Tim Russell(4)</Incident>
+<Incident et="763.5">Joseph Castle(8) reported contact (0.71) with another vehicle Tim Russell(4)</Incident>
+<Incident et="763.5">Joseph Castle(8) reported contact (0.55) with another vehicle Tim Russell(4)</Incident>
+<Incident et="763.5">Joseph Castle(8) reported contact (0.13) with another vehicle Tim Russell(4)</Incident>
+<Incident et="763.6">Joseph Castle(8) reported contact (0.68) with another vehicle Tim Russell(4)</Incident>
+<Incident et="763.6">Joseph Castle(8) reported contact (0.06) with another vehicle Tim Russell(4)</Incident>
+<Incident et="765.8">wanngs(5) reported contact (1.00) with Immovable</Incident>
+<Incident et="765.8">wanngs(5) reported contact (0.10) with Immovable</Incident>
+<Incident et="765.8">wanngs(5) reported contact (0.00) with Part</Incident>
+<Incident et="766.3">wanngs(5) reported contact (0.13) with Immovable</Incident>
+<Incident et="769.7">GSMITH(7) reported contact (1.00) with Immovable</Incident>
+<Incident et="769.7">GSMITH(7) reported contact (0.00) with Immovable</Incident>
+<Incident et="771.2">wanngs(5) reported contact (1.00) with Immovable</Incident>
+<Incident et="771.2">wanngs(5) reported contact (1.00) with Immovable</Incident>
+<Incident et="774.2">Joseph Castle(8) reported contact (0.19) with another vehicle GSMITH(7)</Incident>
+<Incident et="774.3">Joseph Castle(8) reported contact (0.13) with another vehicle GSMITH(7)</Incident>
+<Incident et="774.3">GSMITH(7) reported contact (0.23) with another vehicle Joseph Castle(8)</Incident>
+<Incident et="777.6">Joseph Castle(8) reported contact (1.00) with Immovable</Incident>
+<Incident et="777.7">Sam Markovic(13) reported contact (0.58) with another vehicle Joseph Castle(8)</Incident>
+<Incident et="777.7">Joseph Castle(8) reported contact (0.61) with another vehicle Sam Markovic(13)</Incident>
+<Incident et="777.8">Joseph Castle(8) reported contact (0.06) with another vehicle Sam Markovic(13)</Incident>
+<Incident et="778.8">Joseph Castle(8) reported contact (0.03) with Immovable</Incident>
+<Incident et="780.0">Sam Markovic(13) reported contact (1.00) with another vehicle GSMITH(7)</Incident>
+<Incident et="780.0">GSMITH(7) reported contact (0.94) with another vehicle Sam Markovic(13)</Incident>
+<Incident et="780.0">GSMITH(7) reported contact (1.00) with another vehicle Sam Markovic(13)</Incident>
+<Incident et="780.0">Sam Markovic(13) reported contact (0.61) with another vehicle GSMITH(7)</Incident>
+<Incident et="780.1">GSMITH(7) reported contact (0.03) with another vehicle Sam Markovic(13)</Incident>
+<Incident et="780.1">GSMITH(7) reported contact (0.26) with another vehicle Sam Markovic(13)</Incident>
+<Incident et="780.1">Sam Markovic(13) reported contact (1.00) with another vehicle GSMITH(7)</Incident>
+<Incident et="780.1">GSMITH(7) reported contact (0.52) with another vehicle Sam Markovic(13)</Incident>
+<Incident et="780.1">GSMITH(7) reported contact (0.03) with another vehicle Sam Markovic(13)</Incident>
+<Incident et="780.1">Sam Markovic(13) reported contact (0.16) with another vehicle GSMITH(7)</Incident>
+<Incident et="780.1">GSMITH(7) reported contact (0.19) with another vehicle Sam Markovic(13)</Incident>
+<Incident et="780.2">Sam Markovic(13) reported contact (0.10) with another vehicle GSMITH(7)</Incident>
+<Incident et="780.2">Sam Markovic(13) reported contact (0.13) with Immovable</Incident>
+<Incident et="780.3">Sam Markovic(13) reported contact (1.00) with Immovable</Incident>
+<Incident et="780.3">Sam Markovic(13) reported contact (0.55) with Immovable</Incident>
+<Incident et="781.3">GSMITH(7) reported contact (0.90) with Immovable</Incident>
+<Incident et="785.7">Adrian(14) reported contact (0.03) with Sign</Incident>
+<Chat et="864.8">GSMITH: Have a good one guys! i&apos;m off</Chat>
+</Stream>
+<MostLapsCompleted>5</MostLapsCompleted>
+<Driver>
+<Name>Tim Russell</Name>
+<Connected>1</Connected>
+<VehFile>TRUSSELL.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>EvoRS: Tim Russell #88</VehName>
+<CarType>CSRC17</CarType>
+<CarClass>CSRC17</CarClass>
+<CarNumber>88</CarNumber>
+<TeamName>Stone Age Motorsports</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>1</GridPos>
+<Position>1</Position>
+<ClassGridPos>1</ClassGridPos>
+<ClassPosition>1</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>1</LapRankIncludingDiscos>
+<Lap num="1" p="1" et="68.2185" s1="48.2819" s2="56.0888" s3="34.6685" fuel="0.337">139.0392</Lap>
+<Lap num="2" p="1" et="207.2578" s1="40.6523" s2="54.7824" s3="34.0107" fuel="0.282">129.4454</Lap>
+<Lap num="3" p="1" et="336.7032" s1="40.0718" fuel="0.224">--.----</Lap>
+<Lap num="4" p="1" et="465.3250" s1="40.2899" s2="54.8107" s3="33.9326" fuel="0.165">129.0332</Lap>
+<Lap num="5" p="1" et="594.3582" s1="40.3566" s2="55.0237" s3="34.4115" fuel="0.106">129.7918</Lap>
+<BestLapTime>129.0332</BestLapTime>
+<FinishTime>655.9315</FinishTime>
+<Laps>5</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="5">PlayerControl,TC=1,ABS=1,Clutch</ControlAndAids>
+</Driver>
+<Driver>
+<Name>GSMITH</Name>
+<Connected>1</Connected>
+<VehFile>GSMITH.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>EvoRS: Glenn Smith #19</VehName>
+<CarType>CSRC17</CarType>
+<CarClass>CSRC17</CarClass>
+<CarNumber>19</CarNumber>
+<TeamName>GRD Racing</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>8</GridPos>
+<Position>3</Position>
+<ClassGridPos>8</ClassGridPos>
+<ClassPosition>3</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>2</LapRankIncludingDiscos>
+<Lap num="1" p="3" et="68.2185" s1="48.8817" s2="57.3345" s3="34.5537" fuel="0.337">140.7698</Lap>
+<Lap num="2" p="3" et="208.9884" s1="40.4050" s2="55.3814" s3="34.2350" fuel="0.278">130.0213</Lap>
+<Lap num="3" p="3" et="339.0097" s1="40.6141" s2="55.1431" s3="34.3261" fuel="0.220">130.0834</Lap>
+<Lap num="4" p="3" et="469.0931" fuel="0.161">--.----</Lap>
+<Lap num="5" p="3" et="600.2418" s1="40.8345" s2="56.5117" s3="33.9071" fuel="0.106">131.2534</Lap>
+<BestLapTime>130.0213</BestLapTime>
+<FinishTime>663.2766</FinishTime>
+<Laps>5</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="5">PlayerControl,ABS=1,Clutch</ControlAndAids>
+</Driver>
+<Driver>
+<Name>wanngs</Name>
+<Connected>1</Connected>
+<VehFile>GONE.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>EvoRS: Guest One #69</VehName>
+<CarType>CSRC17</CarType>
+<CarClass>CSRC17</CarClass>
+<CarNumber>69</CarNumber>
+<TeamName>Guest Drivers</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>3</GridPos>
+<Position>2</Position>
+<ClassGridPos>3</ClassGridPos>
+<ClassPosition>2</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>3</LapRankIncludingDiscos>
+<Lap num="1" p="2" et="68.2185" s1="48.6954" s2="56.0276" s3="34.8244" fuel="0.424">139.5474</Lap>
+<Lap num="2" p="2" et="207.7659" s1="40.5047" s2="55.4702" s3="34.1366" fuel="0.365">130.1115</Lap>
+<Lap num="3" p="2" et="337.8774" s1="40.4615" s2="55.5354" s3="34.5199" fuel="0.306">130.5168</Lap>
+<Lap num="4" p="2" et="468.3942" s1="41.0197" s2="56.0881" s3="34.5954" fuel="0.243">131.7032</Lap>
+<Lap num="5" p="2" et="600.0974" s1="40.9485" s2="55.7346" s3="34.2706" fuel="0.188">130.9537</Lap>
+<BestLapTime>130.1115</BestLapTime>
+<FinishTime>662.8325</FinishTime>
+<Laps>5</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="5">PlayerControl,ABS=1,Clutch,AutoLift,AutoBlip</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Joseph Castle</Name>
+<Connected>1</Connected>
+<VehFile>JCASTLE.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>EvoRS: Joseph Castle #15</VehName>
+<CarType>CSRC17</CarType>
+<CarClass>CSRC17</CarClass>
+<CarNumber>15</CarNumber>
+<TeamName>Castle GP</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>7</GridPos>
+<Position>6</Position>
+<ClassGridPos>7</ClassGridPos>
+<ClassPosition>6</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>4</LapRankIncludingDiscos>
+<Lap num="1" p="6" et="68.2185" s1="49.7113" s2="65.1296" s3="35.5878" fuel="0.388">150.4287</Lap>
+<Lap num="2" p="6" et="218.6472" s1="41.0132" s2="55.5382" s3="34.1277" fuel="0.329">130.6791</Lap>
+<Lap num="3" p="6" et="349.3263" s1="40.8982" s2="55.1366" s3="34.6472" fuel="0.271">130.6820</Lap>
+<Lap num="4" p="6" et="480.0083" s1="40.6020" s2="55.6451" s3="34.0667" fuel="0.212">130.3139</Lap>
+<Lap num="5" p="6" et="610.3222" s1="40.8524" s2="55.5976" s3="34.3070" fuel="0.153">130.7570</Lap>
+<BestLapTime>130.3139</BestLapTime>
+<FinishTime>672.8607</FinishTime>
+<Laps>5</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="5">PlayerControl,ABS=1,Clutch,AutoLift,AutoBlip</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Adrian</Name>
+<Connected>1</Connected>
+<VehFile>GONE.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>EvoRS: Guest One #69</VehName>
+<CarType>CSRC17</CarType>
+<CarClass>CSRC17</CarClass>
+<CarNumber>69</CarNumber>
+<TeamName>Guest Drivers</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>4</GridPos>
+<Position>7</Position>
+<ClassGridPos>4</ClassGridPos>
+<ClassPosition>7</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>5</LapRankIncludingDiscos>
+<Lap num="1" p="8" et="68.2185" s1="49.6827" s2="70.2310" s3="36.1164" fuel="0.435">156.0301</Lap>
+<Lap num="2" p="8" et="224.2486" s1="41.0087" s2="56.4252" s3="34.7072" fuel="0.380">132.1410</Lap>
+<Lap num="3" p="8" et="356.3896" s1="40.5428" s2="55.7223" s3="35.2939" fuel="0.322">131.5590</Lap>
+<Lap num="4" p="8" et="487.9486" s1="40.7500" s2="55.6547" s3="34.0258" fuel="0.267">130.4305</Lap>
+<Lap num="5" p="8" et="618.3792" s1="40.3954" s2="57.2626" s3="34.6118" fuel="0.212">132.2698</Lap>
+<BestLapTime>130.4305</BestLapTime>
+<FinishTime>682.4304</FinishTime>
+<Laps>5</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="5">PlayerControl,TC=1,ABS=1</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Chris Hill</Name>
+<Connected>1</Connected>
+<VehFile>CHILL.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>EvoRS: Chris Hill #14</VehName>
+<CarType>CSRC17</CarType>
+<CarClass>CSRC17</CarClass>
+<CarNumber>14</CarNumber>
+<TeamName>SRD Lightnings</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>5</GridPos>
+<Position>5</Position>
+<ClassGridPos>5</ClassGridPos>
+<ClassPosition>5</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>6</LapRankIncludingDiscos>
+<Lap num="1" p="5" et="68.2185" s1="48.7962" s2="60.6751" s3="34.9880" fuel="0.369">144.4594</Lap>
+<Lap num="2" p="5" et="212.6779" s1="41.2548" s2="56.2570" s3="34.3697" fuel="0.314">131.8815</Lap>
+<Lap num="3" p="5" et="344.5594" s1="40.7563" s2="55.7843" s3="34.3897" fuel="0.255">130.9303</Lap>
+<Lap num="4" p="5" et="475.4897" s1="40.9418" s2="55.5952" s3="34.1537" fuel="0.196">130.6907</Lap>
+<Lap num="5" p="5" et="606.1804" s1="40.8218" s2="55.7292" s3="34.3186" fuel="0.137">130.8696</Lap>
+<BestLapTime>130.6907</BestLapTime>
+<FinishTime>668.8314</FinishTime>
+<Laps>5</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="5">PlayerControl,TC=1,ABS=2</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Dominic Tranquille</Name>
+<Connected>1</Connected>
+<VehFile>DTRANQUILLE.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>EvoRS: Dominic Tranquille #53</VehName>
+<CarType>CSRC17</CarType>
+<CarClass>CSRC17</CarClass>
+<CarNumber>53</CarNumber>
+<TeamName>SRD Lightnings</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>2</GridPos>
+<Position>8</Position>
+<ClassGridPos>2</ClassGridPos>
+<ClassPosition>8</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>7</LapRankIncludingDiscos>
+<Lap num="1" p="7" et="68.2185" s1="47.9884" fuel="0.337">--.----</Lap>
+<Lap num="2" p="7" et="220.7574" s1="41.0246" fuel="0.282">--.----</Lap>
+<Lap num="3" p="7" et="354.8319" s1="40.8000" s2="56.2750" s3="34.5790" fuel="0.224">131.6540</Lap>
+<Lap num="4" p="7" et="486.4859" s1="40.5253" s2="55.8289" s3="34.4418" fuel="0.169">130.7960</Lap>
+<Lap num="5" p="7" et="617.2819" s1="40.6622" fuel="0.110">--.----</Lap>
+<BestLapTime>130.7960</BestLapTime>
+<FinishTime>706.2230</FinishTime>
+<Laps>5</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="5">PlayerControl,TC=1,ABS=1,Clutch</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Sam Markovic</Name>
+<Connected>1</Connected>
+<VehFile>SMARKOVIC.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>EvoRS: Sam Markovic #36</VehName>
+<CarType>CSRC17</CarType>
+<CarClass>CSRC17</CarClass>
+<CarNumber>36</CarNumber>
+<TeamName>SM Racing</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>6</GridPos>
+<Position>4</Position>
+<ClassGridPos>6</ClassGridPos>
+<ClassPosition>4</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>8</LapRankIncludingDiscos>
+<Lap num="1" p="4" et="68.2185" s1="49.8535" s2="56.7169" s3="34.7387" fuel="0.431">141.3091</Lap>
+<Lap num="2" p="4" et="209.5277" s1="40.3507" s2="55.6938" s3="34.8917" fuel="0.376">130.9362</Lap>
+<Lap num="3" p="4" et="340.4639" s1="41.3790" s2="56.6213" s3="34.2568" fuel="0.318">132.2571</Lap>
+<Lap num="4" p="4" et="472.7210" s1="41.4286" s2="55.5440" s3="34.5501" fuel="0.259">131.5228</Lap>
+<Lap num="5" p="4" et="604.2438" s1="40.9572" s2="56.1754" s3="35.0440" fuel="0.200">132.1766</Lap>
+<BestLapTime>130.9362</BestLapTime>
+<FinishTime>668.2018</FinishTime>
+<Laps>5</Laps>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="5">PlayerControl</ControlAndAids>
+</Driver>
+</Race3>
+</RaceResults>
+</rFactorXML>

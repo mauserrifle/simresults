@@ -69,7 +69,11 @@ class Data_Reader_Rfactor2 extends Data_Reader {
         $session = Session::createInstance();
 
         // Is race session
-        if ($xml_session = $this->dom->getElementsByTagName('Race')->item(0))
+        if (
+            $xml_session = $this->dom->getElementsByTagName('Race')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('Race2')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('Race3')->item(0)
+        	)
         {
             // Set type to race
             $session->setType(Session::TYPE_RACE);
@@ -95,14 +99,10 @@ class Data_Reader_Rfactor2 extends Data_Reader {
         }
         // Is practice session
         elseif (
-            $xml_session =
-                $this->dom->getElementsByTagName('Practice1')->item(0)
-            OR
-            $xml_session =
-                $this->dom->getElementsByTagName('Practice2')->item(0)
-            OR
-            $xml_session =
-                $this->dom->getElementsByTagName('Practice3')->item(0))
+        		$xml_session = $this->dom->getElementsByTagName('Practice1')->item(0) OR
+        		$xml_session = $this->dom->getElementsByTagName('Practice2')->item(0) OR
+        		$xml_session = $this->dom->getElementsByTagName('Practice3')->item(0)
+        		)
         {
             // Set type to practice
             $session->setType(Session::TYPE_PRACTICE);
@@ -211,7 +211,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
             if ($position_corruption)
             {
                 // Sort participants by total time
-                $participants = Helper::sortParticipantsByTotalTime($participants);
+                $participants = $this->helper->sortParticipantsByTotalTime($participants);
             }
         }
         // Other session
@@ -250,7 +250,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
             {
                 // Sort by best lap instead of position
                 $participants =
-                    Helper::sortParticipantsByBestLap($participants);
+                    $this->helper->sortParticipantsByBestLap($participants);
             }
         }
 
@@ -348,7 +348,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
             $game_name = 'Game Stock Car Extreme';
         }
         // Mod is from automobilista
-        elseif (preg_match('/reiza[0-9]+\.srs/i', $this->dom_value('Mod')))
+        elseif (preg_match('/.*?\.srs/i', $this->dom_value('Mod')))
         {
             $game_name = 'Automobilista';
         }
@@ -969,7 +969,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                 }
 
                 // Sort the laps by elapsed time
-                $laps = Helper::sortLapsByElapsedTime($laps);
+                $laps = $this->helper->sortLapsByElapsedTime($laps);
 
                 // Fix the positions
                 foreach ($laps as $lap_key => $lap)

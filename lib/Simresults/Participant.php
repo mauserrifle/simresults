@@ -94,6 +94,21 @@ class Participant {
      */
     protected $finish_status_comment;
 
+
+    /**
+     * @var  Helper  The helper for sorting
+     */
+    protected $helper;
+
+
+    public function __construct(Helper $helper=null)
+    {
+        if ( ! $helper) $helper = new Helper;
+
+        $this->helper = $helper;
+    }
+
+
     /**
      * Create a participant instance. Returns cached version.
      *
@@ -381,8 +396,11 @@ class Participant {
             // Has laps, get last added lap and use as number
             else
             {
-                $lap->setNumber($this->laps[count($this->laps)-1]
-                    ->getNumber()+1);
+                $lap->setNumber(
+                    $this->laps[count($this->laps)-1]->getNumber()
+                    +
+                    1
+                );
             }
         }
 
@@ -440,6 +458,14 @@ class Participant {
      */
     public function getPitstops()
     {
+        if ( ! $this->pitstops)
+        {
+            // Return number of pit laps
+            return count(array_filter($this->getLaps(), function($lap) {
+                return $lap->isPitLap();
+            }));
+        }
+
         return $this->pitstops;
     }
 
@@ -611,7 +637,7 @@ class Participant {
     public function getLapsSortedByTime()
     {
         // Return laps sorted by time
-        return Helper::sortLapsByTime($this->getLaps());
+        return $this->helper->sortLapsByTime($this->getLaps());
     }
 
     /**
@@ -684,7 +710,7 @@ class Participant {
     public function getLapsSortedBySector($sector)
     {
         // Return laps sorted by sector
-        return Helper::sortLapsBySector($this->getLaps(), $sector);
+        return $this->helper->sortLapsBySector($this->getLaps(), $sector);
     }
 
     /**

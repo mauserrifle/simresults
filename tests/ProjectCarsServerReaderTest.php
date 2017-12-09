@@ -367,6 +367,55 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertSame(6, count($sessions[9]->getParticipants()));
     }
 
+    /**
+     * Test ignoring empty driver names
+     */
+    public function testIgnoringEmptyDriverNames()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/projectcars-server/practice.causing.empty.AI.driver.json');
+
+        // Get sessions without error
+        $session = Data_Reader::factory($file_path)->getSession(1);
+        $participants = $session->getParticipants();
+
+        // Test number of participants (14th was driver with no name)
+        $this->assertCount(13, $participants);
+    }
+
+    /**
+     * Undefined index 0 on participants fix
+     */
+    public function testFixUndefinedIndexParticipants()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/projectcars-server/log.causing.parts.offset.0.error.json');
+
+        // Get sessions without error
+        $sessions = Data_Reader::factory($file_path)->getSessions();
+    }
+
+    /**
+     * Project Cars 2 fixes
+     */
+    public function testProjectCars2Fixes()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/projectcars2-server/aborted.race.json');
+
+        // Get sessions without error
+        $sessions = Data_Reader::factory($file_path)->getSessions();
+
+        $participants = $sessions[4]->getParticipants();
+
+        // Test vehicle friendly name
+        $this->assertSame('Ligier JS P2 Nissan',
+                          $participants[0]->getVehicle()->getName());
+    }
+
 
 
     /***

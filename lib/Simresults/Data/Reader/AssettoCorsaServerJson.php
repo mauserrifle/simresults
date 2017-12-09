@@ -42,7 +42,7 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
 
         // Check session name to get type
         // TODO: Could we prevent duplicate code for this with other readers?
-        switch(strtolower($name = Helper::arrayGet($data, 'Type')))
+        switch(strtolower($name = $this->helper->arrayGet($data, 'Type')))
         {
             case 'qualify session':
             case 'qualify':
@@ -63,10 +63,10 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
         $session->setType($type)
                 ->setName($name)
                 ->setMaxLaps(
-                    (int) Helper::arrayGet($data, 'RaceLaps'));
+                    (int) $this->helper->arrayGet($data, 'RaceLaps'));
 
         // Has Duration
-        if ($seconds = (int) Helper::arrayGet($data, 'DurationSecs'))
+        if ($seconds = (int) $this->helper->arrayGet($data, 'DurationSecs'))
         {
             $session->setMaxMinutes(round($seconds / 60));
         }
@@ -81,12 +81,14 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
         $session->setGame($game);
 
         // Set server (we do not know...)
-        $server = new Server; $server->setName('Unknown');
+        $server = new Server;
+        $server->setName($this->helper->arrayGet($data, 'Server', 'Unknown'));
         $session->setServer($server);
 
         // Set track
         $track = new Track;
-        $track->setVenue(Helper::arrayGet($data, 'TrackName'));
+        $track->setVenue($this->helper->arrayGet($data, 'TrackName'));
+        $track->setCourse($this->helper->arrayGet($data, 'TrackConfig'));
         $session->setTrack($track);
 
 
@@ -94,7 +96,7 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
 
         // Get participants from Cars data
         $participants_by_name = array();
-        $players_data = Helper::arrayGet($data, 'Cars', array());
+        $players_data = $this->helper->arrayGet($data, 'Cars', array());
         foreach ($players_data as $player_index => $player_data)
         {
             // Build participant
@@ -116,10 +118,11 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
         // Get participants from result data.
         // WARNING: This should be orded by position but these logs are BUGGED.
         //          DO NOT TRUST!
-        $players_data = Helper::arrayGet($data, 'Result', array());
+        $players_data = $this->helper->arrayGet($data, 'Result', array());
         foreach ($players_data as $player_index => $player_data)
         {
             // No participant found
+            $participant_created = FALSE;
             if ( ! isset($participants_by_name[$player_data['DriverName']]))
             {
                 // Build participant
@@ -133,6 +136,7 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
 
                 // Add participant to collection
                 $participants_by_name[$name] = $participant;
+                $participant_created = TRUE;
             }
 
             $participant = $participants_by_name[$player_data['DriverName']];
@@ -142,10 +146,10 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
             {
                 $participant->setTotalTime(round($total_time / 1000, 4));
             }
-            // No total time
-            else
+            // No total time, only proceed if participant was newly created
+            // (ignore duplicate entries)
+            elseif ($participant_created)
             {
-                // DNF
                 $participant->setFinishStatus(Participant::FINISH_DNF);
             }
 
@@ -194,11 +198,17 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
             }
 
             // Set sector times in seconds
-            foreach (Helper::arrayGet($lap_data, 'Sectors', array())
+            foreach ($this->helper->arrayGet($lap_data, 'Sectors', array())
                          as $sector_time)
             {
                 $lap->addSectorTime(round($sector_time / 1000, 4));
             }
+
+                // Set compound info
+                $lap->setFrontCompound(
+                    $this->helper->arrayGet($lap_data, 'Tyre'));
+                $lap->setRearCompound(
+                    $this->helper->arrayGet($lap_data, 'Tyre'));
 
             // Add lap to participant
             $lap_participant->addLap($lap);

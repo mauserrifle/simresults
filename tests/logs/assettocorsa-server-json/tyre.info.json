@@ -1,0 +1,6322 @@
+{
+	"TrackName": "gilles-villeneuve",
+	"TrackConfig": "",
+	"Type": "RACE",
+	"DurationSecs": 0,
+	"RaceLaps": 0,
+	"Server": "Custom server",
+	"Cars": [
+		{
+			"CarId": 0,
+			"Driver": {
+				"Name": "Rob Milliken",
+				"Team": "",
+				"Guid": "76561198019028790",
+				"GuidsList": [
+					""
+				]
+			},
+			"Model": "bmw_z4_gt3",
+			"Skin": "marc_vds_2013",
+			"BallastKG": 0
+		},
+		{
+			"CarId": 1,
+			"Driver": {
+				"Name": "Flaviu Bozga",
+				"Team": "",
+				"Guid": "76561197973043342",
+				"GuidsList": [
+					""
+				]
+			},
+			"Model": "bmw_z4_gt3",
+			"Skin": "0_bmw_motorsport_2013_black",
+			"BallastKG": 0
+		},
+		{
+			"CarId": 2,
+			"Driver": {
+				"Name": "nigel middleton",
+				"Team": "",
+				"Guid": "76561198007017883",
+				"GuidsList": [
+					""
+				]
+			},
+			"Model": "ks_nissan_gtr_gt3",
+			"Skin": "2t_94",
+			"BallastKG": 0
+		},
+		{
+			"CarId": 3,
+			"Driver": {
+				"Name": "",
+				"Team": "",
+				"Guid": "",
+				"GuidsList": [
+					""
+				]
+			},
+			"Model": "ks_nissan_gtr_gt3",
+			"Skin": "2t_97",
+			"BallastKG": 0
+		},
+		{
+			"CarId": 4,
+			"Driver": {
+				"Name": "Federico Strazzullo",
+				"Team": "",
+				"Guid": "76561198363732850",
+				"GuidsList": [
+					""
+				]
+			},
+			"Model": "mclaren_mp412c_gt3",
+			"Skin": "2012-g_racing",
+			"BallastKG": 0
+		},
+		{
+			"CarId": 5,
+			"Driver": {
+				"Name": "",
+				"Team": "",
+				"Guid": "",
+				"GuidsList": [
+					""
+				]
+			},
+			"Model": "mclaren_mp412c_gt3",
+			"Skin": "2012-United_Autosports",
+			"BallastKG": 0
+		},
+		{
+			"CarId": 6,
+			"Driver": {
+				"Name": "",
+				"Team": "",
+				"Guid": "",
+				"GuidsList": [
+					""
+				]
+			},
+			"Model": "ks_lamborghini_huracan_gt3",
+			"Skin": "Racing_blue",
+			"BallastKG": 0
+		},
+		{
+			"CarId": 7,
+			"Driver": {
+				"Name": "",
+				"Team": "",
+				"Guid": "",
+				"GuidsList": [
+					""
+				]
+			},
+			"Model": "ks_lamborghini_huracan_gt3",
+			"Skin": "Racing_Lime",
+			"BallastKG": 0
+		},
+		{
+			"CarId": 8,
+			"Driver": {
+				"Name": "",
+				"Team": "",
+				"Guid": "",
+				"GuidsList": [
+					""
+				]
+			},
+			"Model": "ks_mercedes_amg_gt3",
+			"Skin": "racing_69",
+			"BallastKG": 0
+		},
+		{
+			"CarId": 9,
+			"Driver": {
+				"Name": "",
+				"Team": "",
+				"Guid": "",
+				"GuidsList": [
+					""
+				]
+			},
+			"Model": "ks_mercedes_amg_gt3",
+			"Skin": "0_0fficial",
+			"BallastKG": 0
+		},
+		{
+			"CarId": 10,
+			"Driver": {
+				"Name": "",
+				"Team": "",
+				"Guid": "",
+				"GuidsList": [
+					""
+				]
+			},
+			"Model": "ks_audi_r8_lms",
+			"Skin": "2015_WRT_2",
+			"BallastKG": 0
+		},
+		{
+			"CarId": 11,
+			"Driver": {
+				"Name": "",
+				"Team": "",
+				"Guid": "",
+				"GuidsList": [
+					""
+				]
+			},
+			"Model": "ks_audi_r8_lms",
+			"Skin": "2015_WRT_1",
+			"BallastKG": 0
+		},
+		{
+			"CarId": 12,
+			"Driver": {
+				"Name": "",
+				"Team": "",
+				"Guid": "",
+				"GuidsList": [
+					""
+				]
+			},
+			"Model": "ks_ferrari_488_gt3",
+			"Skin": "07_racing_501",
+			"BallastKG": 0
+		},
+		{
+			"CarId": 13,
+			"Driver": {
+				"Name": "",
+				"Team": "",
+				"Guid": "",
+				"GuidsList": [
+					""
+				]
+			},
+			"Model": "ks_ferrari_488_gt3",
+			"Skin": "16_racing_498",
+			"BallastKG": 0
+		},
+		{
+			"CarId": 14,
+			"Driver": {
+				"Name": "Wayne  Reed",
+				"Team": "",
+				"Guid": "76561198002371986",
+				"GuidsList": [
+					"76561198002371986"
+				]
+			},
+			"Model": "ks_porsche_911_gt3_r_2016",
+			"Skin": "25_wayne_reed",
+			"BallastKG": 0
+		},
+		{
+			"CarId": 15,
+			"Driver": {
+				"Name": "Roger Hinds",
+				"Team": "",
+				"Guid": "76561198026194002",
+				"GuidsList": [
+					""
+				]
+			},
+			"Model": "ks_porsche_911_gt3_r_2016",
+			"Skin": "31_Racing_099",
+			"BallastKG": 0
+		},
+		{
+			"CarId": 16,
+			"Driver": {
+				"Name": "",
+				"Team": "",
+				"Guid": "",
+				"GuidsList": [
+					""
+				]
+			},
+			"Model": "ks_porsche_911_gt3_r_2016",
+			"Skin": "camouflage",
+			"BallastKG": 0
+		},
+		{
+			"CarId": 17,
+			"Driver": {
+				"Name": "",
+				"Team": "",
+				"Guid": "",
+				"GuidsList": [
+					""
+				]
+			},
+			"Model": "ks_porsche_911_gt3_r_2016",
+			"Skin": "Martini",
+			"BallastKG": 0
+		}
+	],
+	"Result": [
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"BestLap": 97838,
+			"TotalTime": 5480437,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"BestLap": 99545,
+			"TotalTime": 5490712,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"BestLap": 99872,
+			"TotalTime": 5508844,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"BestLap": 100093,
+			"TotalTime": 5541278,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"BestLap": 100375,
+			"TotalTime": 5308781,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "Federico Strazzullo",
+			"DriverGuid": "76561198363732850",
+			"CarId": 4,
+			"CarModel": "mclaren_mp412c_gt3",
+			"BestLap": 102438,
+			"TotalTime": 5525628,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "",
+			"DriverGuid": "",
+			"CarId": 5,
+			"CarModel": "mclaren_mp412c_gt3",
+			"BestLap": 999999999,
+			"TotalTime": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "",
+			"DriverGuid": "",
+			"CarId": 7,
+			"CarModel": "ks_lamborghini_huracan_gt3",
+			"BestLap": 999999999,
+			"TotalTime": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "",
+			"DriverGuid": "",
+			"CarId": 8,
+			"CarModel": "ks_mercedes_amg_gt3",
+			"BestLap": 999999999,
+			"TotalTime": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "",
+			"DriverGuid": "",
+			"CarId": 6,
+			"CarModel": "ks_lamborghini_huracan_gt3",
+			"BestLap": 999999999,
+			"TotalTime": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "",
+			"DriverGuid": "",
+			"CarId": 10,
+			"CarModel": "ks_audi_r8_lms",
+			"BestLap": 999999999,
+			"TotalTime": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "",
+			"DriverGuid": "",
+			"CarId": 11,
+			"CarModel": "ks_audi_r8_lms",
+			"BestLap": 999999999,
+			"TotalTime": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "",
+			"DriverGuid": "",
+			"CarId": 12,
+			"CarModel": "ks_ferrari_488_gt3",
+			"BestLap": 999999999,
+			"TotalTime": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "",
+			"DriverGuid": "",
+			"CarId": 13,
+			"CarModel": "ks_ferrari_488_gt3",
+			"BestLap": 999999999,
+			"TotalTime": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "",
+			"DriverGuid": "",
+			"CarId": 9,
+			"CarModel": "ks_mercedes_amg_gt3",
+			"BestLap": 999999999,
+			"TotalTime": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "",
+			"DriverGuid": "",
+			"CarId": 3,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"BestLap": 999999999,
+			"TotalTime": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "",
+			"DriverGuid": "",
+			"CarId": 16,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"BestLap": 999999999,
+			"TotalTime": 0,
+			"BallastKG": 0
+		},
+		{
+			"DriverName": "",
+			"DriverGuid": "",
+			"CarId": 17,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"BestLap": 999999999,
+			"TotalTime": 0,
+			"BallastKG": 0
+		}
+	],
+	"Laps": [
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 66664334,
+			"LapTime": 106854,
+			"Sectors": [
+				46162,
+				32377,
+				28315
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 66665418,
+			"LapTime": 107941,
+			"Sectors": [
+				45909,
+				33380,
+				28652
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 66667283,
+			"LapTime": 109800,
+			"Sectors": [
+				47767,
+				32886,
+				29147
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 66668457,
+			"LapTime": 110981,
+			"Sectors": [
+				48908,
+				33256,
+				28817
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 66670986,
+			"LapTime": 113428,
+			"Sectors": [
+				48830,
+				34682,
+				29916
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Federico Strazzullo",
+			"DriverGuid": "76561198363732850",
+			"CarId": 4,
+			"CarModel": "mclaren_mp412c_gt3",
+			"Timestamp": 66680892,
+			"LapTime": 123426,
+			"Sectors": [
+				55134,
+				36679,
+				31613
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 66766562,
+			"LapTime": 102230,
+			"Sectors": [
+				41570,
+				31653,
+				29007
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 66767228,
+			"LapTime": 101822,
+			"Sectors": [
+				41090,
+				31932,
+				28800
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 66768338,
+			"LapTime": 101060,
+			"Sectors": [
+				40054,
+				32175,
+				28831
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 66769912,
+			"LapTime": 101459,
+			"Sectors": [
+				40048,
+				32657,
+				28754
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 66774492,
+			"LapTime": 103496,
+			"Sectors": [
+				41126,
+				33206,
+				29164
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Federico Strazzullo",
+			"DriverGuid": "76561198363732850",
+			"CarId": 4,
+			"CarModel": "mclaren_mp412c_gt3",
+			"Timestamp": 66795825,
+			"LapTime": 114939,
+			"Sectors": [
+				47915,
+				35334,
+				31690
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 66865906,
+			"LapTime": 99345,
+			"Sectors": [
+				38932,
+				31518,
+				28895
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 66868235,
+			"LapTime": 101010,
+			"Sectors": [
+				39972,
+				32237,
+				28801
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 66868886,
+			"LapTime": 100551,
+			"Sectors": [
+				39683,
+				32166,
+				28702
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 66870848,
+			"LapTime": 100937,
+			"Sectors": [
+				40106,
+				32283,
+				28548
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 66877624,
+			"LapTime": 103133,
+			"Sectors": [
+				40930,
+				33147,
+				29056
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Federico Strazzullo",
+			"DriverGuid": "76561198363732850",
+			"CarId": 4,
+			"CarModel": "mclaren_mp412c_gt3",
+			"Timestamp": 66907867,
+			"LapTime": 112050,
+			"Sectors": [
+				46930,
+				34349,
+				30771
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 66964536,
+			"LapTime": 98631,
+			"Sectors": [
+				38258,
+				31595,
+				28778
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 66969103,
+			"LapTime": 100871,
+			"Sectors": [
+				40126,
+				31914,
+				28831
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 66972249,
+			"LapTime": 103369,
+			"Sectors": [
+				39865,
+				34501,
+				29003
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 66972782,
+			"LapTime": 101937,
+			"Sectors": [
+				40106,
+				33166,
+				28665
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 66979603,
+			"LapTime": 101990,
+			"Sectors": [
+				40089,
+				32787,
+				29114
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Federico Strazzullo",
+			"DriverGuid": "76561198363732850",
+			"CarId": 4,
+			"CarModel": "mclaren_mp412c_gt3",
+			"Timestamp": 67017909,
+			"LapTime": 110047,
+			"Sectors": [
+				44397,
+				35144,
+				30506
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 67063867,
+			"LapTime": 99328,
+			"Sectors": [
+				38929,
+				31680,
+				28719
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 67069911,
+			"LapTime": 100811,
+			"Sectors": [
+				40107,
+				31977,
+				28727
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 67073544,
+			"LapTime": 101300,
+			"Sectors": [
+				40186,
+				32414,
+				28700
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 67074898,
+			"LapTime": 102122,
+			"Sectors": [
+				40576,
+				32746,
+				28800
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 67082483,
+			"LapTime": 102864,
+			"Sectors": [
+				41196,
+				32913,
+				28755
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Federico Strazzullo",
+			"DriverGuid": "76561198363732850",
+			"CarId": 4,
+			"CarModel": "mclaren_mp412c_gt3",
+			"Timestamp": 67125859,
+			"LapTime": 107960,
+			"Sectors": [
+				42818,
+				34925,
+				30217
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 67162668,
+			"LapTime": 98807,
+			"Sectors": [
+				38732,
+				31654,
+				28421
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 67170432,
+			"LapTime": 100524,
+			"Sectors": [
+				39828,
+				32174,
+				28522
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 67173768,
+			"LapTime": 100227,
+			"Sectors": [
+				39431,
+				31978,
+				28818
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 67175420,
+			"LapTime": 100523,
+			"Sectors": [
+				39607,
+				32225,
+				28691
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 67184871,
+			"LapTime": 102402,
+			"Sectors": [
+				40824,
+				32526,
+				29052
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Federico Strazzullo",
+			"DriverGuid": "76561198363732850",
+			"CarId": 4,
+			"CarModel": "mclaren_mp412c_gt3",
+			"Timestamp": 67233998,
+			"LapTime": 108146,
+			"Sectors": [
+				42644,
+				34407,
+				31095
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 67261109,
+			"LapTime": 98440,
+			"Sectors": [
+				38478,
+				31522,
+				28440
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 67270831,
+			"LapTime": 100395,
+			"Sectors": [
+				40301,
+				31527,
+				28567
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 67274453,
+			"LapTime": 100691,
+			"Sectors": [
+				39775,
+				32116,
+				28800
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 67277303,
+			"LapTime": 101891,
+			"Sectors": [
+				40376,
+				32509,
+				29006
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 67287101,
+			"LapTime": 102230,
+			"Sectors": [
+				40049,
+				32153,
+				30028
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Federico Strazzullo",
+			"DriverGuid": "76561198363732850",
+			"CarId": 4,
+			"CarModel": "mclaren_mp412c_gt3",
+			"Timestamp": 67340475,
+			"LapTime": 106482,
+			"Sectors": [
+				42032,
+				34232,
+				30218
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 67359493,
+			"LapTime": 98384,
+			"Sectors": [
+				38507,
+				31370,
+				28507
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 67370691,
+			"LapTime": 99872,
+			"Sectors": [
+				39878,
+				31519,
+				28475
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 67375171,
+			"LapTime": 100722,
+			"Sectors": [
+				39333,
+				32026,
+				29363
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 67378757,
+			"LapTime": 101451,
+			"Sectors": [
+				40399,
+				32288,
+				28764
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 67389309,
+			"LapTime": 102207,
+			"Sectors": [
+				40592,
+				32868,
+				28747
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Federico Strazzullo",
+			"DriverGuid": "76561198363732850",
+			"CarId": 4,
+			"CarModel": "mclaren_mp412c_gt3",
+			"Timestamp": 67446275,
+			"LapTime": 105803,
+			"Sectors": [
+				41508,
+				34280,
+				30015
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 67457571,
+			"LapTime": 98084,
+			"Sectors": [
+				38662,
+				31127,
+				28295
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 67476380,
+			"LapTime": 101214,
+			"Sectors": [
+				39383,
+				32513,
+				29318
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 67481271,
+			"LapTime": 102518,
+			"Sectors": [
+				41291,
+				32639,
+				28588
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 67483863,
+			"LapTime": 113177,
+			"Sectors": [
+				40080,
+				44154,
+				28943
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 67491608,
+			"LapTime": 102289,
+			"Sectors": [
+				40320,
+				32989,
+				28980
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 67556688,
+			"LapTime": 99119,
+			"Sectors": [
+				38738,
+				31721,
+				28660
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 67576888,
+			"LapTime": 100511,
+			"Sectors": [
+				39608,
+				32301,
+				28602
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 67583355,
+			"LapTime": 102081,
+			"Sectors": [
+				40962,
+				32602,
+				28517
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 67584497,
+			"LapTime": 100636,
+			"Sectors": [
+				40170,
+				31833,
+				28633
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 67593593,
+			"LapTime": 101998,
+			"Sectors": [
+				40506,
+				32431,
+				29061
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Federico Strazzullo",
+			"DriverGuid": "76561198363732850",
+			"CarId": 4,
+			"CarModel": "mclaren_mp412c_gt3",
+			"Timestamp": 67605281,
+			"LapTime": 159023,
+			"Sectors": [
+				41339,
+				34119,
+				83565
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 67656040,
+			"LapTime": 99353,
+			"Sectors": [
+				39103,
+				31631,
+				28619
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 67677276,
+			"LapTime": 100393,
+			"Sectors": [
+				39746,
+				31833,
+				28814
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 67684381,
+			"LapTime": 101033,
+			"Sectors": [
+				40401,
+				32161,
+				28471
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 67686417,
+			"LapTime": 101921,
+			"Sectors": [
+				41216,
+				31838,
+				28867
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 67695635,
+			"LapTime": 102034,
+			"Sectors": [
+				40595,
+				32302,
+				29137
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Federico Strazzullo",
+			"DriverGuid": "76561198363732850",
+			"CarId": 4,
+			"CarModel": "mclaren_mp412c_gt3",
+			"Timestamp": 67717772,
+			"LapTime": 112498,
+			"Sectors": [
+				47163,
+				34614,
+				30721
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 67755268,
+			"LapTime": 99228,
+			"Sectors": [
+				38793,
+				31418,
+				29017
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 67777828,
+			"LapTime": 100554,
+			"Sectors": [
+				39813,
+				31999,
+				28742
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 67785540,
+			"LapTime": 101167,
+			"Sectors": [
+				40008,
+				32543,
+				28616
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 67787061,
+			"LapTime": 100649,
+			"Sectors": [
+				39638,
+				32283,
+				28728
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 67796731,
+			"LapTime": 101085,
+			"Sectors": [
+				40010,
+				32486,
+				28589
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 67855121,
+			"LapTime": 99854,
+			"Sectors": [
+				39168,
+				31851,
+				28835
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 67877486,
+			"LapTime": 99665,
+			"Sectors": [
+				39239,
+				31901,
+				28525
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 67888163,
+			"LapTime": 102619,
+			"Sectors": [
+				41950,
+				32260,
+				28409
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 67889336,
+			"LapTime": 102279,
+			"Sectors": [
+				40826,
+				32526,
+				28927
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 67897563,
+			"LapTime": 100845,
+			"Sectors": [
+				39824,
+				32131,
+				28890
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 67954351,
+			"LapTime": 99228,
+			"Sectors": [
+				38856,
+				31459,
+				28913
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 67978640,
+			"LapTime": 101158,
+			"Sectors": [
+				39657,
+				32697,
+				28804
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 67988577,
+			"LapTime": 100418,
+			"Sectors": [
+				40082,
+				32005,
+				28331
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 67990027,
+			"LapTime": 100691,
+			"Sectors": [
+				39761,
+				32428,
+				28502
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 67998654,
+			"LapTime": 101092,
+			"Sectors": [
+				39793,
+				32657,
+				28642
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 68054065,
+			"LapTime": 99715,
+			"Sectors": [
+				38925,
+				31747,
+				29043
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 68079662,
+			"LapTime": 101026,
+			"Sectors": [
+				39443,
+				33022,
+				28561
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 68088947,
+			"LapTime": 100375,
+			"Sectors": [
+				39908,
+				32009,
+				28458
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Federico Strazzullo",
+			"DriverGuid": "76561198363732850",
+			"CarId": 4,
+			"CarModel": "mclaren_mp412c_gt3",
+			"Timestamp": 68098856,
+			"LapTime": 381102,
+			"Sectors": [
+				47692,
+				35073,
+				298337
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 68102896,
+			"LapTime": 104230,
+			"Sectors": [
+				42112,
+				33097,
+				29021
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 68113540,
+			"LapTime": 123519,
+			"Sectors": [
+				62719,
+				32288,
+				28512
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 68153780,
+			"LapTime": 99721,
+			"Sectors": [
+				39408,
+				31540,
+				28773
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 68180341,
+			"LapTime": 100684,
+			"Sectors": [
+				40042,
+				32099,
+				28543
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 68190278,
+			"LapTime": 101336,
+			"Sectors": [
+				40326,
+				32417,
+				28593
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 68204459,
+			"LapTime": 101575,
+			"Sectors": [
+				39938,
+				32198,
+				29439
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 68215063,
+			"LapTime": 101524,
+			"Sectors": [
+				40212,
+				32013,
+				29299
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Federico Strazzullo",
+			"DriverGuid": "76561198363732850",
+			"CarId": 4,
+			"CarModel": "mclaren_mp412c_gt3",
+			"Timestamp": 68222499,
+			"LapTime": 123651,
+			"Sectors": [
+				49004,
+				37157,
+				37490
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 68253650,
+			"LapTime": 99869,
+			"Sectors": [
+				39542,
+				31649,
+				28678
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 68280444,
+			"LapTime": 100108,
+			"Sectors": [
+				39367,
+				32306,
+				28435
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 68292338,
+			"LapTime": 102063,
+			"Sectors": [
+				40934,
+				32643,
+				28486
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 68307212,
+			"LapTime": 102745,
+			"Sectors": [
+				40542,
+				32652,
+				29551
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 68315669,
+			"LapTime": 100608,
+			"Sectors": [
+				39795,
+				31958,
+				28855
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Federico Strazzullo",
+			"DriverGuid": "76561198363732850",
+			"CarId": 4,
+			"CarModel": "mclaren_mp412c_gt3",
+			"Timestamp": 68328181,
+			"LapTime": 105687,
+			"Sectors": [
+				42020,
+				33913,
+				29754
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 68353856,
+			"LapTime": 100208,
+			"Sectors": [
+				39490,
+				32022,
+				28696
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 68380576,
+			"LapTime": 100135,
+			"Sectors": [
+				39619,
+				32126,
+				28390
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 68393266,
+			"LapTime": 100930,
+			"Sectors": [
+				40040,
+				32491,
+				28399
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 68410488,
+			"LapTime": 103272,
+			"Sectors": [
+				41559,
+				32665,
+				29048
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 68417342,
+			"LapTime": 101664,
+			"Sectors": [
+				39923,
+				32293,
+				29448
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Federico Strazzullo",
+			"DriverGuid": "76561198363732850",
+			"CarId": 4,
+			"CarModel": "mclaren_mp412c_gt3",
+			"Timestamp": 68434624,
+			"LapTime": 106452,
+			"Sectors": [
+				42030,
+				34348,
+				30074
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 68452526,
+			"LapTime": 98674,
+			"Sectors": [
+				38739,
+				31401,
+				28534
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 68480116,
+			"LapTime": 99545,
+			"Sectors": [
+				39255,
+				32004,
+				28286
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 68494185,
+			"LapTime": 100927,
+			"Sectors": [
+				39741,
+				32454,
+				28732
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 68515203,
+			"LapTime": 104715,
+			"Sectors": [
+				41157,
+				34343,
+				29215
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 68518119,
+			"LapTime": 100791,
+			"Sectors": [
+				40266,
+				31851,
+				28674
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Federico Strazzullo",
+			"DriverGuid": "76561198363732850",
+			"CarId": 4,
+			"CarModel": "mclaren_mp412c_gt3",
+			"Timestamp": 68540014,
+			"LapTime": 105394,
+			"Sectors": [
+				41323,
+				33745,
+				30326
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 68551063,
+			"LapTime": 98537,
+			"Sectors": [
+				38858,
+				31473,
+				28206
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 68579825,
+			"LapTime": 99714,
+			"Sectors": [
+				38892,
+				32309,
+				28513
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 68595954,
+			"LapTime": 101768,
+			"Sectors": [
+				40776,
+				32620,
+				28372
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 68616003,
+			"LapTime": 100808,
+			"Sectors": [
+				40032,
+				32337,
+				28439
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 68619449,
+			"LapTime": 101330,
+			"Sectors": [
+				40401,
+				32012,
+				28917
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Federico Strazzullo",
+			"DriverGuid": "76561198363732850",
+			"CarId": 4,
+			"CarModel": "mclaren_mp412c_gt3",
+			"Timestamp": 68645852,
+			"LapTime": 105846,
+			"Sectors": [
+				41658,
+				33912,
+				30276
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 68650088,
+			"LapTime": 99025,
+			"Sectors": [
+				38770,
+				31738,
+				28517
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 68681217,
+			"LapTime": 101393,
+			"Sectors": [
+				40140,
+				32296,
+				28957
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 68696748,
+			"LapTime": 100802,
+			"Sectors": [
+				40088,
+				32095,
+				28619
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 68716880,
+			"LapTime": 100856,
+			"Sectors": [
+				39846,
+				32121,
+				28889
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 68721313,
+			"LapTime": 101869,
+			"Sectors": [
+				40259,
+				32788,
+				28822
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 68749700,
+			"LapTime": 99608,
+			"Sectors": [
+				39376,
+				31644,
+				28588
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Federico Strazzullo",
+			"DriverGuid": "76561198363732850",
+			"CarId": 4,
+			"CarModel": "mclaren_mp412c_gt3",
+			"Timestamp": 68757236,
+			"LapTime": 111388,
+			"Sectors": [
+				47420,
+				33922,
+				30046
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 68797154,
+			"LapTime": 115945,
+			"Sectors": [
+				55375,
+				32134,
+				28436
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 68798906,
+			"LapTime": 102153,
+			"Sectors": [
+				40818,
+				32580,
+				28755
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 68818343,
+			"LapTime": 101491,
+			"Sectors": [
+				40286,
+				32473,
+				28732
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 68821776,
+			"LapTime": 100464,
+			"Sectors": [
+				40046,
+				31771,
+				28647
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 68849209,
+			"LapTime": 99515,
+			"Sectors": [
+				39166,
+				31676,
+				28673
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Federico Strazzullo",
+			"DriverGuid": "76561198363732850",
+			"CarId": 4,
+			"CarModel": "mclaren_mp412c_gt3",
+			"Timestamp": 68863839,
+			"LapTime": 106610,
+			"Sectors": [
+				42621,
+				34361,
+				29628
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 68897329,
+			"LapTime": 100180,
+			"Sectors": [
+				39614,
+				31946,
+				28620
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 68900265,
+			"LapTime": 101367,
+			"Sectors": [
+				40153,
+				32657,
+				28557
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 68919332,
+			"LapTime": 100968,
+			"Sectors": [
+				39871,
+				32296,
+				28801
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 68921890,
+			"LapTime": 100120,
+			"Sectors": [
+				39932,
+				31658,
+				28530
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 68948792,
+			"LapTime": 99579,
+			"Sectors": [
+				39144,
+				31752,
+				28683
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Federico Strazzullo",
+			"DriverGuid": "76561198363732850",
+			"CarId": 4,
+			"CarModel": "mclaren_mp412c_gt3",
+			"Timestamp": 68969520,
+			"LapTime": 105689,
+			"Sectors": [
+				41654,
+				34290,
+				29745
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 68998174,
+			"LapTime": 100850,
+			"Sectors": [
+				39596,
+				32644,
+				28610
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 69001869,
+			"LapTime": 101605,
+			"Sectors": [
+				40437,
+				32310,
+				28858
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 69020084,
+			"LapTime": 100763,
+			"Sectors": [
+				39798,
+				31976,
+				28989
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 69022931,
+			"LapTime": 101044,
+			"Sectors": [
+				40568,
+				31824,
+				28652
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 69048163,
+			"LapTime": 99377,
+			"Sectors": [
+				39024,
+				31648,
+				28705
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Federico Strazzullo",
+			"DriverGuid": "76561198363732850",
+			"CarId": 4,
+			"CarModel": "mclaren_mp412c_gt3",
+			"Timestamp": 69075727,
+			"LapTime": 106216,
+			"Sectors": [
+				41321,
+				34021,
+				30874
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 69098447,
+			"LapTime": 100280,
+			"Sectors": [
+				39620,
+				32306,
+				28354
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 69103984,
+			"LapTime": 102119,
+			"Sectors": [
+				40425,
+				33138,
+				28556
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 69121221,
+			"LapTime": 101109,
+			"Sectors": [
+				40008,
+				32426,
+				28675
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 69124099,
+			"LapTime": 101170,
+			"Sectors": [
+				39939,
+				32463,
+				28768
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 69148058,
+			"LapTime": 99894,
+			"Sectors": [
+				39522,
+				31729,
+				28643
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Federico Strazzullo",
+			"DriverGuid": "76561198363732850",
+			"CarId": 4,
+			"CarModel": "mclaren_mp412c_gt3",
+			"Timestamp": 69181583,
+			"LapTime": 105863,
+			"Sectors": [
+				41482,
+				34303,
+				30078
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 69199234,
+			"LapTime": 100793,
+			"Sectors": [
+				39427,
+				32674,
+				28692
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 69205166,
+			"LapTime": 101181,
+			"Sectors": [
+				40264,
+				32440,
+				28477
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 69222017,
+			"LapTime": 100817,
+			"Sectors": [
+				39771,
+				32328,
+				28718
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 69224921,
+			"LapTime": 100824,
+			"Sectors": [
+				40010,
+				31946,
+				28868
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 69247926,
+			"LapTime": 99872,
+			"Sectors": [
+				39465,
+				31756,
+				28651
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Federico Strazzullo",
+			"DriverGuid": "76561198363732850",
+			"CarId": 4,
+			"CarModel": "mclaren_mp412c_gt3",
+			"Timestamp": 69286070,
+			"LapTime": 104492,
+			"Sectors": [
+				41106,
+				33506,
+				29880
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 69300655,
+			"LapTime": 101424,
+			"Sectors": [
+				40363,
+				32314,
+				28747
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 69306594,
+			"LapTime": 101438,
+			"Sectors": [
+				40446,
+				32274,
+				28718
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 69323113,
+			"LapTime": 101099,
+			"Sectors": [
+				39728,
+				32436,
+				28935
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 69326503,
+			"LapTime": 101583,
+			"Sectors": [
+				40203,
+				32598,
+				28782
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 69348297,
+			"LapTime": 100371,
+			"Sectors": [
+				39324,
+				31896,
+				29151
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Federico Strazzullo",
+			"DriverGuid": "76561198363732850",
+			"CarId": 4,
+			"CarModel": "mclaren_mp412c_gt3",
+			"Timestamp": 69391287,
+			"LapTime": 105226,
+			"Sectors": [
+				41101,
+				34069,
+				30056
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 69401183,
+			"LapTime": 100530,
+			"Sectors": [
+				39438,
+				32328,
+				28764
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 69411130,
+			"LapTime": 104537,
+			"Sectors": [
+				40156,
+				35609,
+				28772
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 69423670,
+			"LapTime": 100564,
+			"Sectors": [
+				39530,
+				32270,
+				28764
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 69427292,
+			"LapTime": 100786,
+			"Sectors": [
+				39950,
+				32054,
+				28782
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 69448799,
+			"LapTime": 100502,
+			"Sectors": [
+				39428,
+				31851,
+				29223
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Federico Strazzullo",
+			"DriverGuid": "76561198363732850",
+			"CarId": 4,
+			"CarModel": "mclaren_mp412c_gt3",
+			"Timestamp": 69496414,
+			"LapTime": 105134,
+			"Sectors": [
+				41617,
+				33764,
+				29753
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 69501657,
+			"LapTime": 100476,
+			"Sectors": [
+				39577,
+				32233,
+				28666
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 69513281,
+			"LapTime": 102157,
+			"Sectors": [
+				40593,
+				32552,
+				29012
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 69525613,
+			"LapTime": 101939,
+			"Sectors": [
+				40136,
+				33076,
+				28727
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 69529106,
+			"LapTime": 101823,
+			"Sectors": [
+				40308,
+				32386,
+				29129
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 69549980,
+			"LapTime": 101185,
+			"Sectors": [
+				40534,
+				31900,
+				28751
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 69602376,
+			"LapTime": 100727,
+			"Sectors": [
+				39739,
+				32135,
+				28853
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Federico Strazzullo",
+			"DriverGuid": "76561198363732850",
+			"CarId": 4,
+			"CarModel": "mclaren_mp412c_gt3",
+			"Timestamp": 69607357,
+			"LapTime": 110950,
+			"Sectors": [
+				47630,
+				33607,
+				29713
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 69614810,
+			"LapTime": 101530,
+			"Sectors": [
+				40551,
+				32521,
+				28458
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 69626114,
+			"LapTime": 100505,
+			"Sectors": [
+				39827,
+				32203,
+				28475
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 69631766,
+			"LapTime": 102663,
+			"Sectors": [
+				40706,
+				33107,
+				28850
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 69650563,
+			"LapTime": 100585,
+			"Sectors": [
+				39516,
+				32300,
+				28769
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 69703803,
+			"LapTime": 101432,
+			"Sectors": [
+				40395,
+				32314,
+				28723
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 69717330,
+			"LapTime": 102524,
+			"Sectors": [
+				40415,
+				32374,
+				29735
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Federico Strazzullo",
+			"DriverGuid": "76561198363732850",
+			"CarId": 4,
+			"CarModel": "mclaren_mp412c_gt3",
+			"Timestamp": 69721166,
+			"LapTime": 113815,
+			"Sectors": [
+				41550,
+				34915,
+				37350
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 69727391,
+			"LapTime": 101288,
+			"Sectors": [
+				39728,
+				32247,
+				29313
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 69732107,
+			"LapTime": 100341,
+			"Sectors": [
+				39707,
+				31689,
+				28945
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 69751886,
+			"LapTime": 101323,
+			"Sectors": [
+				39475,
+				32616,
+				29232
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 69806049,
+			"LapTime": 102251,
+			"Sectors": [
+				40737,
+				32683,
+				28831
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 69819154,
+			"LapTime": 101828,
+			"Sectors": [
+				40804,
+				32548,
+				28476
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 69828598,
+			"LapTime": 101207,
+			"Sectors": [
+				39863,
+				32162,
+				29182
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 69833063,
+			"LapTime": 100917,
+			"Sectors": [
+				39905,
+				32346,
+				28666
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Federico Strazzullo",
+			"DriverGuid": "76561198363732850",
+			"CarId": 4,
+			"CarModel": "mclaren_mp412c_gt3",
+			"Timestamp": 69840352,
+			"LapTime": 119193,
+			"Sectors": [
+				41513,
+				36532,
+				41148
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 69852292,
+			"LapTime": 100401,
+			"Sectors": [
+				39704,
+				32023,
+				28674
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 69906360,
+			"LapTime": 100316,
+			"Sectors": [
+				39342,
+				32287,
+				28687
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 69920422,
+			"LapTime": 101271,
+			"Sectors": [
+				40282,
+				32359,
+				28630
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 69930437,
+			"LapTime": 101820,
+			"Sectors": [
+				40264,
+				32306,
+				29250
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 69933445,
+			"LapTime": 100426,
+			"Sectors": [
+				39644,
+				32500,
+				28282
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 69952781,
+			"LapTime": 100462,
+			"Sectors": [
+				39311,
+				31879,
+				29272
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Federico Strazzullo",
+			"DriverGuid": "76561198363732850",
+			"CarId": 4,
+			"CarModel": "mclaren_mp412c_gt3",
+			"Timestamp": 69962631,
+			"LapTime": 122287,
+			"Sectors": [
+				46845,
+				44914,
+				30528
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 70007288,
+			"LapTime": 100933,
+			"Sectors": [
+				40044,
+				32121,
+				28768
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 70022158,
+			"LapTime": 101736,
+			"Sectors": [
+				40392,
+				32782,
+				28562
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 70030825,
+			"LapTime": 100381,
+			"Sectors": [
+				39708,
+				31945,
+				28728
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 70033699,
+			"LapTime": 100248,
+			"Sectors": [
+				39894,
+				31756,
+				28598
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 70053755,
+			"LapTime": 101003,
+			"Sectors": [
+				39470,
+				32733,
+				28800
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Federico Strazzullo",
+			"DriverGuid": "76561198363732850",
+			"CarId": 4,
+			"CarModel": "mclaren_mp412c_gt3",
+			"Timestamp": 70068619,
+			"LapTime": 105994,
+			"Sectors": [
+				42549,
+				33363,
+				30082
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 70108467,
+			"LapTime": 101183,
+			"Sectors": [
+				40064,
+				32378,
+				28741
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 70123513,
+			"LapTime": 101349,
+			"Sectors": [
+				40499,
+				32508,
+				28342
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 70131865,
+			"LapTime": 101058,
+			"Sectors": [
+				39830,
+				32427,
+				28801
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 70135758,
+			"LapTime": 102069,
+			"Sectors": [
+				40949,
+				32387,
+				28733
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 70154883,
+			"LapTime": 101136,
+			"Sectors": [
+				39485,
+				32684,
+				28967
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Federico Strazzullo",
+			"DriverGuid": "76561198363732850",
+			"CarId": 4,
+			"CarModel": "mclaren_mp412c_gt3",
+			"Timestamp": 70177303,
+			"LapTime": 108690,
+			"Sectors": [
+				42013,
+				35734,
+				30943
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 70209127,
+			"LapTime": 100667,
+			"Sectors": [
+				39521,
+				32576,
+				28570
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 70224573,
+			"LapTime": 101069,
+			"Sectors": [
+				40482,
+				32201,
+				28386
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 70232422,
+			"LapTime": 100552,
+			"Sectors": [
+				39676,
+				32242,
+				28634
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 70236935,
+			"LapTime": 101178,
+			"Sectors": [
+				40360,
+				32193,
+				28625
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 70285435,
+			"LapTime": 130549,
+			"Sectors": [
+				39487,
+				31964,
+				59098
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Federico Strazzullo",
+			"DriverGuid": "76561198363732850",
+			"CarId": 4,
+			"CarModel": "mclaren_mp412c_gt3",
+			"Timestamp": 70301308,
+			"LapTime": 124011,
+			"Sectors": [
+				44491,
+				37256,
+				42264
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 70310751,
+			"LapTime": 101630,
+			"Sectors": [
+				39998,
+				32913,
+				28719
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 70326275,
+			"LapTime": 101711,
+			"Sectors": [
+				40611,
+				32688,
+				28412
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 70333101,
+			"LapTime": 100680,
+			"Sectors": [
+				39250,
+				32441,
+				28989
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 70337817,
+			"LapTime": 100885,
+			"Sectors": [
+				40086,
+				32053,
+				28746
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 70387878,
+			"LapTime": 102435,
+			"Sectors": [
+				41324,
+				32490,
+				28621
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 70411909,
+			"LapTime": 101162,
+			"Sectors": [
+				40044,
+				32553,
+				28565
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Federico Strazzullo",
+			"DriverGuid": "76561198363732850",
+			"CarId": 4,
+			"CarModel": "mclaren_mp412c_gt3",
+			"Timestamp": 70415966,
+			"LapTime": 114664,
+			"Sectors": [
+				43155,
+				36954,
+				34555
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 70428439,
+			"LapTime": 102166,
+			"Sectors": [
+				41097,
+				32526,
+				28543
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 70434889,
+			"LapTime": 101790,
+			"Sectors": [
+				40338,
+				32480,
+				28972
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 70438249,
+			"LapTime": 100432,
+			"Sectors": [
+				39686,
+				32036,
+				28710
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 70487706,
+			"LapTime": 99837,
+			"Sectors": [
+				39761,
+				31640,
+				28436
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 70513262,
+			"LapTime": 101352,
+			"Sectors": [
+				39764,
+				32643,
+				28945
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Federico Strazzullo",
+			"DriverGuid": "76561198363732850",
+			"CarId": 4,
+			"CarModel": "mclaren_mp412c_gt3",
+			"Timestamp": 70520477,
+			"LapTime": 104518,
+			"Sectors": [
+				41478,
+				33264,
+				29776
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 70529826,
+			"LapTime": 101386,
+			"Sectors": [
+				40510,
+				32423,
+				28453
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 70535531,
+			"LapTime": 100638,
+			"Sectors": [
+				39636,
+				32067,
+				28935
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 70538137,
+			"LapTime": 99896,
+			"Sectors": [
+				39516,
+				31851,
+				28529
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 70615368,
+			"LapTime": 102114,
+			"Sectors": [
+				40477,
+				32918,
+				28719
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 70624049,
+			"LapTime": 136340,
+			"Sectors": [
+				39073,
+				33408,
+				63859
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 70631753,
+			"LapTime": 101935,
+			"Sectors": [
+				40605,
+				32417,
+				28913
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 70637577,
+			"LapTime": 102033,
+			"Sectors": [
+				40144,
+				33183,
+				28706
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 70638186,
+			"LapTime": 100051,
+			"Sectors": [
+				39386,
+				31906,
+				28759
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Federico Strazzullo",
+			"DriverGuid": "76561198363732850",
+			"CarId": 4,
+			"CarModel": "mclaren_mp412c_gt3",
+			"Timestamp": 70675153,
+			"LapTime": 154688,
+			"Sectors": [
+				41698,
+				35919,
+				77071
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 70716419,
+			"LapTime": 101056,
+			"Sectors": [
+				40117,
+				32526,
+				28413
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 70723700,
+			"LapTime": 99655,
+			"Sectors": [
+				38838,
+				32103,
+				28714
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 70734263,
+			"LapTime": 102515,
+			"Sectors": [
+				40515,
+				32499,
+				29501
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 70738134,
+			"LapTime": 100557,
+			"Sectors": [
+				39788,
+				32239,
+				28530
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 70739215,
+			"LapTime": 101030,
+			"Sectors": [
+				40442,
+				31807,
+				28781
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Federico Strazzullo",
+			"DriverGuid": "76561198363732850",
+			"CarId": 4,
+			"CarModel": "mclaren_mp412c_gt3",
+			"Timestamp": 70803790,
+			"LapTime": 128648,
+			"Sectors": [
+				63660,
+				34649,
+				30339
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 70816313,
+			"LapTime": 99897,
+			"Sectors": [
+				39421,
+				32081,
+				28395
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 70822653,
+			"LapTime": 98952,
+			"Sectors": [
+				39047,
+				31374,
+				28531
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 70835909,
+			"LapTime": 101649,
+			"Sectors": [
+				40547,
+				32527,
+				28575
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 70838213,
+			"LapTime": 100093,
+			"Sectors": [
+				39586,
+				32018,
+				28489
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 70840672,
+			"LapTime": 101464,
+			"Sectors": [
+				40304,
+				32472,
+				28688
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Federico Strazzullo",
+			"DriverGuid": "76561198363732850",
+			"CarId": 4,
+			"CarModel": "mclaren_mp412c_gt3",
+			"Timestamp": 70910786,
+			"LapTime": 107003,
+			"Sectors": [
+				43450,
+				33484,
+				30069
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 70920487,
+			"LapTime": 97838,
+			"Sectors": [
+				38456,
+				31006,
+				28376
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 70931056,
+			"LapTime": 114749,
+			"Sectors": [
+				39330,
+				32822,
+				42597
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 70938490,
+			"LapTime": 102582,
+			"Sectors": [
+				41012,
+				32846,
+				28724
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 70938987,
+			"LapTime": 100774,
+			"Sectors": [
+				39678,
+				32111,
+				28985
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 70941297,
+			"LapTime": 100630,
+			"Sectors": [
+				40218,
+				31860,
+				28552
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Federico Strazzullo",
+			"DriverGuid": "76561198363732850",
+			"CarId": 4,
+			"CarModel": "mclaren_mp412c_gt3",
+			"Timestamp": 71014701,
+			"LapTime": 103917,
+			"Sectors": [
+				39810,
+				34064,
+				30043
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 71019387,
+			"LapTime": 98903,
+			"Sectors": [
+				38882,
+				31519,
+				28502
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 71033283,
+			"LapTime": 102233,
+			"Sectors": [
+				41191,
+				32404,
+				28638
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 71039848,
+			"LapTime": 101357,
+			"Sectors": [
+				40513,
+				32441,
+				28403
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 71040692,
+			"LapTime": 101679,
+			"Sectors": [
+				40550,
+				32346,
+				28783
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 71041793,
+			"LapTime": 100499,
+			"Sectors": [
+				40308,
+				31580,
+				28611
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 71117605,
+			"LapTime": 98219,
+			"Sectors": [
+				38729,
+				31145,
+				28345
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Federico Strazzullo",
+			"DriverGuid": "76561198363732850",
+			"CarId": 4,
+			"CarModel": "mclaren_mp412c_gt3",
+			"Timestamp": 71124807,
+			"LapTime": 110115,
+			"Sectors": [
+				46323,
+				33929,
+				29863
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 71134026,
+			"LapTime": 100748,
+			"Sectors": [
+				39706,
+				32535,
+				28507
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 71141241,
+			"LapTime": 101397,
+			"Sectors": [
+				40291,
+				32495,
+				28611
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 71141782,
+			"LapTime": 101114,
+			"Sectors": [
+				39986,
+				32234,
+				28894
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 71142901,
+			"LapTime": 101104,
+			"Sectors": [
+				40012,
+				32612,
+				28480
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 71215828,
+			"LapTime": 98224,
+			"Sectors": [
+				38896,
+				31194,
+				28134
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Federico Strazzullo",
+			"DriverGuid": "76561198363732850",
+			"CarId": 4,
+			"CarModel": "mclaren_mp412c_gt3",
+			"Timestamp": 71228058,
+			"LapTime": 103256,
+			"Sectors": [
+				40247,
+				33337,
+				29672
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 71238413,
+			"LapTime": 104393,
+			"Sectors": [
+				39688,
+				32638,
+				32067
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 71243079,
+			"LapTime": 101839,
+			"Sectors": [
+				40711,
+				32657,
+				28471
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 71243464,
+			"LapTime": 101671,
+			"Sectors": [
+				40943,
+				32103,
+				28625
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 71244030,
+			"LapTime": 101134,
+			"Sectors": [
+				39988,
+				32378,
+				28768
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 71314458,
+			"LapTime": 98632,
+			"Sectors": [
+				38868,
+				31725,
+				28039
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Federico Strazzullo",
+			"DriverGuid": "76561198363732850",
+			"CarId": 4,
+			"CarModel": "mclaren_mp412c_gt3",
+			"Timestamp": 71331428,
+			"LapTime": 103377,
+			"Sectors": [
+				40395,
+				33831,
+				29151
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 71339431,
+			"LapTime": 101023,
+			"Sectors": [
+				40093,
+				32386,
+				28544
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 71345090,
+			"LapTime": 102012,
+			"Sectors": [
+				40829,
+				32702,
+				28481
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 71345841,
+			"LapTime": 101809,
+			"Sectors": [
+				41361,
+				31796,
+				28652
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 71369724,
+			"LapTime": 126266,
+			"Sectors": [
+				61593,
+				35581,
+				29092
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 71412947,
+			"LapTime": 98492,
+			"Sectors": [
+				38643,
+				31657,
+				28192
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Federico Strazzullo",
+			"DriverGuid": "76561198363732850",
+			"CarId": 4,
+			"CarModel": "mclaren_mp412c_gt3",
+			"Timestamp": 71433858,
+			"LapTime": 102438,
+			"Sectors": [
+				40171,
+				32877,
+				29390
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 71440539,
+			"LapTime": 101112,
+			"Sectors": [
+				40019,
+				32373,
+				28720
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 71449937,
+			"LapTime": 104858,
+			"Sectors": [
+				42218,
+				33530,
+				29110
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 71456212,
+			"LapTime": 110372,
+			"Sectors": [
+				48254,
+				33318,
+				28800
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 71470578,
+			"LapTime": 100848,
+			"Sectors": [
+				40143,
+				32165,
+				28540
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 71512722,
+			"LapTime": 99772,
+			"Sectors": [
+				38878,
+				31532,
+				29362
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Federico Strazzullo",
+			"DriverGuid": "76561198363732850",
+			"CarId": 4,
+			"CarModel": "mclaren_mp412c_gt3",
+			"Timestamp": 71536532,
+			"LapTime": 102680,
+			"Sectors": [
+				40342,
+				33025,
+				29313
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 71541958,
+			"LapTime": 101421,
+			"Sectors": [
+				39640,
+				33017,
+				28764
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 71554302,
+			"LapTime": 104367,
+			"Sectors": [
+				41672,
+				33359,
+				29336
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 71557930,
+			"LapTime": 101721,
+			"Sectors": [
+				40930,
+				32229,
+				28562
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 71571856,
+			"LapTime": 101281,
+			"Sectors": [
+				40270,
+				31865,
+				29146
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 71613149,
+			"LapTime": 100428,
+			"Sectors": [
+				39277,
+				32567,
+				28584
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 71643477,
+			"LapTime": 101524,
+			"Sectors": [
+				39874,
+				32719,
+				28931
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Federico Strazzullo",
+			"DriverGuid": "76561198363732850",
+			"CarId": 4,
+			"CarModel": "mclaren_mp412c_gt3",
+			"Timestamp": 71647047,
+			"LapTime": 110522,
+			"Sectors": [
+				40399,
+				33845,
+				36278
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 71657436,
+			"LapTime": 103135,
+			"Sectors": [
+				41075,
+				33017,
+				29043
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 71659339,
+			"LapTime": 101420,
+			"Sectors": [
+				40270,
+				32557,
+				28593
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 71673825,
+			"LapTime": 101975,
+			"Sectors": [
+				40056,
+				32782,
+				29137
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 71722920,
+			"LapTime": 109772,
+			"Sectors": [
+				38979,
+				33786,
+				37007
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 71745197,
+			"LapTime": 101724,
+			"Sectors": [
+				40280,
+				32855,
+				28589
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Federico Strazzullo",
+			"DriverGuid": "76561198363732850",
+			"CarId": 4,
+			"CarModel": "mclaren_mp412c_gt3",
+			"Timestamp": 71750144,
+			"LapTime": 103106,
+			"Sectors": [
+				40529,
+				32886,
+				29691
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 71760162,
+			"LapTime": 100830,
+			"Sectors": [
+				39630,
+				32373,
+				28827
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 71761474,
+			"LapTime": 104037,
+			"Sectors": [
+				41248,
+				33917,
+				28872
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 71791063,
+			"LapTime": 117228,
+			"Sectors": [
+				54632,
+				33391,
+				29205
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 71826326,
+			"LapTime": 103408,
+			"Sectors": [
+				40863,
+				31968,
+				30577
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 71846374,
+			"LapTime": 101182,
+			"Sectors": [
+				39964,
+				32693,
+				28525
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 71862647,
+			"LapTime": 102437,
+			"Sectors": [
+				41409,
+				32246,
+				28782
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "nigel middleton",
+			"DriverGuid": "76561198007017883",
+			"CarId": 2,
+			"CarModel": "ks_nissan_gtr_gt3",
+			"Timestamp": 71866257,
+			"LapTime": 104787,
+			"Sectors": [
+				42349,
+				32463,
+				29975
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Federico Strazzullo",
+			"DriverGuid": "76561198363732850",
+			"CarId": 4,
+			"CarModel": "mclaren_mp412c_gt3",
+			"Timestamp": 71867876,
+			"LapTime": 117740,
+			"Sectors": [
+				53998,
+				34088,
+				29654
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 71893634,
+			"LapTime": 102581,
+			"Sectors": [
+				40724,
+				32482,
+				29375
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 71937880,
+			"LapTime": 111552,
+			"Sectors": [
+				46293,
+				36594,
+				28665
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 71947511,
+			"LapTime": 101139,
+			"Sectors": [
+				39772,
+				32715,
+				28652
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 71964725,
+			"LapTime": 102130,
+			"Sectors": [
+				40412,
+				32828,
+				28890
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Federico Strazzullo",
+			"DriverGuid": "76561198363732850",
+			"CarId": 4,
+			"CarModel": "mclaren_mp412c_gt3",
+			"Timestamp": 71971395,
+			"LapTime": 103525,
+			"Sectors": [
+				41308,
+				32778,
+				29439
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 71995437,
+			"LapTime": 101797,
+			"Sectors": [
+				40399,
+				32467,
+				28931
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Wayne  Reed",
+			"DriverGuid": "76561198002371986",
+			"CarId": 14,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 72037913,
+			"LapTime": 100039,
+			"Sectors": [
+				39478,
+				31918,
+				28643
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Flaviu Bozga",
+			"DriverGuid": "76561197973043342",
+			"CarId": 1,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 72048200,
+			"LapTime": 100692,
+			"Sectors": [
+				39600,
+				32129,
+				28963
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Roger Hinds",
+			"DriverGuid": "76561198026194002",
+			"CarId": 15,
+			"CarModel": "ks_porsche_911_gt3_r_2016",
+			"Timestamp": 72066321,
+			"LapTime": 101597,
+			"Sectors": [
+				40362,
+				32197,
+				29038
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		},
+		{
+			"DriverName": "Federico Strazzullo",
+			"DriverGuid": "76561198363732850",
+			"CarId": 4,
+			"CarModel": "mclaren_mp412c_gt3",
+			"Timestamp": 72083101,
+			"LapTime": 111713,
+			"Sectors": [
+				44475,
+				37269,
+				29969
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "S"
+		},
+		{
+			"DriverName": "Rob Milliken",
+			"DriverGuid": "76561198019028790",
+			"CarId": 0,
+			"CarModel": "bmw_z4_gt3",
+			"Timestamp": 72098838,
+			"LapTime": 103407,
+			"Sectors": [
+				41302,
+				32679,
+				29426
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "M"
+		}
+	],
+	"Events": [
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 15,
+			"Driver": {
+				"Name": "Roger Hinds",
+				"Team": "",
+				"Guid": "76561198026194002",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": "",
+				"GuidsList": null
+			},
+			"ImpactSpeed": 45.47348,
+			"WorldPosition": {
+				"X": -50.616337,
+				"Y": 91.92135,
+				"Z": 160.02792
+			},
+			"RelPosition": {
+				"X": 0.9931993,
+				"Y": 0.8454794,
+				"Z": -2.1165156
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 2,
+			"Driver": {
+				"Name": "nigel middleton",
+				"Team": "",
+				"Guid": "76561198007017883",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": "",
+				"GuidsList": null
+			},
+			"ImpactSpeed": 13.428774,
+			"WorldPosition": {
+				"X": -20.203451,
+				"Y": 88.04765,
+				"Z": 1077.0714
+			},
+			"RelPosition": {
+				"X": -1.0739667,
+				"Y": 0.34655544,
+				"Z": -1.5459266
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 2,
+			"Driver": {
+				"Name": "nigel middleton",
+				"Team": "",
+				"Guid": "76561198007017883",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": "",
+				"GuidsList": null
+			},
+			"ImpactSpeed": 14.861587,
+			"WorldPosition": {
+				"X": 103.90333,
+				"Y": 88.188225,
+				"Z": 1204.2081
+			},
+			"RelPosition": {
+				"X": -1.0777621,
+				"Y": 0.34645724,
+				"Z": -1.545741
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 2,
+			"Driver": {
+				"Name": "nigel middleton",
+				"Team": "",
+				"Guid": "76561198007017883",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": "",
+				"GuidsList": null
+			},
+			"ImpactSpeed": 27.843695,
+			"WorldPosition": {
+				"X": 100.16957,
+				"Y": 88.4445,
+				"Z": 1199.8936
+			},
+			"RelPosition": {
+				"X": -1.060201,
+				"Y": 0.6032984,
+				"Z": -1.8187431
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 1,
+			"Driver": {
+				"Name": "Flaviu Bozga",
+				"Team": "",
+				"Guid": "76561197973043342",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": "",
+				"GuidsList": null
+			},
+			"ImpactSpeed": 57.790165,
+			"WorldPosition": {
+				"X": 56.779724,
+				"Y": 87.90462,
+				"Z": 1171.1234
+			},
+			"RelPosition": {
+				"X": 0.7451602,
+				"Y": 0.08098971,
+				"Z": 1.9213011
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 1,
+			"Driver": {
+				"Name": "Flaviu Bozga",
+				"Team": "",
+				"Guid": "76561197973043342",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": "",
+				"GuidsList": null
+			},
+			"ImpactSpeed": 35.82399,
+			"WorldPosition": {
+				"X": 43.42861,
+				"Y": 87.49795,
+				"Z": 1155.1836
+			},
+			"RelPosition": {
+				"X": -0.000077962875,
+				"Y": -0.31899002,
+				"Z": 2.093586
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 1,
+			"Driver": {
+				"Name": "Flaviu Bozga",
+				"Team": "",
+				"Guid": "76561197973043342",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": "",
+				"GuidsList": null
+			},
+			"ImpactSpeed": 10.140489,
+			"WorldPosition": {
+				"X": 53.374027,
+				"Y": 88.60868,
+				"Z": 1144.1211
+			},
+			"RelPosition": {
+				"X": -1.0027716,
+				"Y": 0.82233787,
+				"Z": -2.189701
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 4,
+			"Driver": {
+				"Name": "Federico Strazzullo",
+				"Team": "",
+				"Guid": "76561198363732850",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": "",
+				"GuidsList": null
+			},
+			"ImpactSpeed": 35.15614,
+			"WorldPosition": {
+				"X": -171.06705,
+				"Y": 89.97045,
+				"Z": 745.30646
+			},
+			"RelPosition": {
+				"X": -0.54344153,
+				"Y": -0.22298725,
+				"Z": 2.4966538
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 0,
+			"Driver": {
+				"Name": "Rob Milliken",
+				"Team": "",
+				"Guid": "76561198019028790",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": "",
+				"GuidsList": null
+			},
+			"ImpactSpeed": 34.667076,
+			"WorldPosition": {
+				"X": 273.32764,
+				"Y": 89.1062,
+				"Z": 461.9498
+			},
+			"RelPosition": {
+				"X": 1.043159,
+				"Y": 0.36460707,
+				"Z": -1.3650571
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 4,
+			"Driver": {
+				"Name": "Federico Strazzullo",
+				"Team": "",
+				"Guid": "76561198363732850",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": "",
+				"GuidsList": null
+			},
+			"ImpactSpeed": 17.389658,
+			"WorldPosition": {
+				"X": 97.39808,
+				"Y": 88.6671,
+				"Z": 1196.6862
+			},
+			"RelPosition": {
+				"X": -0.9974334,
+				"Y": 0.85141295,
+				"Z": -1.7537203
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 4,
+			"Driver": {
+				"Name": "Federico Strazzullo",
+				"Team": "",
+				"Guid": "76561198363732850",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": "",
+				"GuidsList": null
+			},
+			"ImpactSpeed": 10.186753,
+			"WorldPosition": {
+				"X": 25.210674,
+				"Y": 96.481804,
+				"Z": -436.94415
+			},
+			"RelPosition": {
+				"X": 0.978607,
+				"Y": -0.16047303,
+				"Z": 2.1018085
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 4,
+			"Driver": {
+				"Name": "Federico Strazzullo",
+				"Team": "",
+				"Guid": "76561198363732850",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": "",
+				"GuidsList": null
+			},
+			"ImpactSpeed": 8.380936,
+			"WorldPosition": {
+				"X": 25.825716,
+				"Y": 96.45301,
+				"Z": -434.37323
+			},
+			"RelPosition": {
+				"X": 0.9749585,
+				"Y": -0.22298478,
+				"Z": 2.1397054
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 15,
+			"Driver": {
+				"Name": "Roger Hinds",
+				"Team": "",
+				"Guid": "76561198026194002",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": "",
+				"GuidsList": null
+			},
+			"ImpactSpeed": 25.33065,
+			"WorldPosition": {
+				"X": 26.662193,
+				"Y": 97.35602,
+				"Z": -430.84787
+			},
+			"RelPosition": {
+				"X": 0.99448824,
+				"Y": 0.6398503,
+				"Z": -2.121788
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 0,
+			"Driver": {
+				"Name": "Rob Milliken",
+				"Team": "",
+				"Guid": "76561198019028790",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": "",
+				"GuidsList": null
+			},
+			"ImpactSpeed": 3.6101606,
+			"WorldPosition": {
+				"X": 290.88144,
+				"Y": 88.06767,
+				"Z": 785.3944
+			},
+			"RelPosition": {
+				"X": -1.0504974,
+				"Y": 0.36473292,
+				"Z": -1.3643057
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 1,
+			"Driver": {
+				"Name": "Flaviu Bozga",
+				"Team": "",
+				"Guid": "76561197973043342",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": "",
+				"GuidsList": null
+			},
+			"ImpactSpeed": 16.983513,
+			"WorldPosition": {
+				"X": 46.86393,
+				"Y": 96.03549,
+				"Z": -270.04462
+			},
+			"RelPosition": {
+				"X": -1.0224694,
+				"Y": -0.041940182,
+				"Z": -1.0933913
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 0,
+			"Driver": {
+				"Name": "Rob Milliken",
+				"Team": "",
+				"Guid": "76561198019028790",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": "",
+				"GuidsList": null
+			},
+			"ImpactSpeed": 93.353584,
+			"WorldPosition": {
+				"X": -169.13118,
+				"Y": 90.2943,
+				"Z": 754.0261
+			},
+			"RelPosition": {
+				"X": -0.6962081,
+				"Y": 0.13854815,
+				"Z": 1.9337002
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 0,
+			"Driver": {
+				"Name": "Rob Milliken",
+				"Team": "",
+				"Guid": "76561198019028790",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": "",
+				"GuidsList": null
+			},
+			"ImpactSpeed": 6.628048,
+			"WorldPosition": {
+				"X": -174.7055,
+				"Y": 89.85778,
+				"Z": 722.2258
+			},
+			"RelPosition": {
+				"X": 0.7213726,
+				"Y": -0.3191819,
+				"Z": 1.9808502
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 2,
+			"Driver": {
+				"Name": "nigel middleton",
+				"Team": "",
+				"Guid": "76561198007017883",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": 15,
+			"OtherDriver": {
+				"Name": "Roger Hinds",
+				"Team": "",
+				"Guid": "76561198026194002",
+				"GuidsList": [
+					""
+				]
+			},
+			"ImpactSpeed": 16.825626,
+			"WorldPosition": {
+				"X": 126.89929,
+				"Y": 90.220634,
+				"Z": 1318.118
+			},
+			"RelPosition": {
+				"X": -1.0381622,
+				"Y": -0.33624542,
+				"Z": 0.23733756
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 15,
+			"Driver": {
+				"Name": "Roger Hinds",
+				"Team": "",
+				"Guid": "76561198026194002",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": 2,
+			"OtherDriver": {
+				"Name": "nigel middleton",
+				"Team": "",
+				"Guid": "76561198007017883",
+				"GuidsList": [
+					""
+				]
+			},
+			"ImpactSpeed": 10.528263,
+			"WorldPosition": {
+				"X": 126.65471,
+				"Y": 90.21969,
+				"Z": 1317.7731
+			},
+			"RelPosition": {
+				"X": 1.0133526,
+				"Y": -0.25605562,
+				"Z": 1.8290329
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 15,
+			"Driver": {
+				"Name": "Roger Hinds",
+				"Team": "",
+				"Guid": "76561198026194002",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": "",
+				"GuidsList": null
+			},
+			"ImpactSpeed": 40.7465,
+			"WorldPosition": {
+				"X": -169.97919,
+				"Y": 89.929375,
+				"Z": 750.2839
+			},
+			"RelPosition": {
+				"X": -0.84451985,
+				"Y": -0.26219505,
+				"Z": 2.3442593
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 0,
+			"Driver": {
+				"Name": "Rob Milliken",
+				"Team": "",
+				"Guid": "76561198019028790",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": "",
+				"GuidsList": null
+			},
+			"ImpactSpeed": 29.129387,
+			"WorldPosition": {
+				"X": 86.03105,
+				"Y": 90.10375,
+				"Z": 1279.2328
+			},
+			"RelPosition": {
+				"X": -0.00006520748,
+				"Y": -0.31898957,
+				"Z": 2.093726
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 2,
+			"Driver": {
+				"Name": "nigel middleton",
+				"Team": "",
+				"Guid": "76561198007017883",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": 15,
+			"OtherDriver": {
+				"Name": "Roger Hinds",
+				"Team": "",
+				"Guid": "76561198026194002",
+				"GuidsList": [
+					""
+				]
+			},
+			"ImpactSpeed": 10.55752,
+			"WorldPosition": {
+				"X": -13.116562,
+				"Y": 96.375336,
+				"Z": -416.40204
+			},
+			"RelPosition": {
+				"X": -0.9940459,
+				"Y": -0.26191908,
+				"Z": 1.9752352
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 15,
+			"Driver": {
+				"Name": "Roger Hinds",
+				"Team": "",
+				"Guid": "76561198026194002",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": 2,
+			"OtherDriver": {
+				"Name": "nigel middleton",
+				"Team": "",
+				"Guid": "76561198007017883",
+				"GuidsList": [
+					""
+				]
+			},
+			"ImpactSpeed": 8.783803,
+			"WorldPosition": {
+				"X": -13.131526,
+				"Y": 96.36513,
+				"Z": -416.43335
+			},
+			"RelPosition": {
+				"X": 1.0119013,
+				"Y": -0.24545811,
+				"Z": -0.6732279
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 0,
+			"Driver": {
+				"Name": "Rob Milliken",
+				"Team": "",
+				"Guid": "76561198019028790",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": "",
+				"GuidsList": null
+			},
+			"ImpactSpeed": 50.503613,
+			"WorldPosition": {
+				"X": 450.45007,
+				"Y": 88.09204,
+				"Z": 1446.3132
+			},
+			"RelPosition": {
+				"X": -0.000040769577,
+				"Y": 0.13990687,
+				"Z": 2.0579019
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 15,
+			"Driver": {
+				"Name": "Roger Hinds",
+				"Team": "",
+				"Guid": "76561198026194002",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": "",
+				"GuidsList": null
+			},
+			"ImpactSpeed": 44.579456,
+			"WorldPosition": {
+				"X": -185.18918,
+				"Y": 89.89835,
+				"Z": 528.9041
+			},
+			"RelPosition": {
+				"X": -0.9970584,
+				"Y": -0.28245148,
+				"Z": 1.8387654
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 1,
+			"Driver": {
+				"Name": "Flaviu Bozga",
+				"Team": "",
+				"Guid": "76561197973043342",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Guid": "",
+				"GuidsList": null
+			},
+			"ImpactSpeed": 33.10002,
+			"WorldPosition": {
+				"X": 22.06802,
+				"Y": 96.24982,
+				"Z": -451.18973
+			},
+			"RelPosition": {
+				"X": 0.9383226,
+				"Y": -0.3195096,
+				"Z": 1.7924467
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 1,
+			"Driver": {
+				"Name": "Flaviu Bozga",
+				"Team": "",
+				"Guid": "76561197973043342",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": 4,
+			"OtherDriver": {
+				"Name": "Federico Strazzullo",
+				"Team": "",
+				"Guid": "76561198363732850",
+				"GuidsList": [
+					""
+				]
+			},
+			"ImpactSpeed": 35.01331,
+			"WorldPosition": {
+				"X": 19.795467,
+				"Y": 96.444824,
+				"Z": -440.47665
+			},
+			"RelPosition": {
+				"X": -0.90970105,
+				"Y": -0.25356007,
+				"Z": 0.81005585
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 4,
+			"Driver": {
+				"Name": "Federico Strazzullo",
+				"Team": "",
+				"Guid": "76561198363732850",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": 1,
+			"OtherDriver": {
+				"Name": "Flaviu Bozga",
+				"Team": "",
+				"Guid": "76561197973043342",
+				"GuidsList": [
+					""
+				]
+			},
+			"ImpactSpeed": 31.020765,
+			"WorldPosition": {
+				"X": 19.756067,
+				"Y": 96.442085,
+				"Z": -440.31085
+			},
+			"RelPosition": {
+				"X": 0.54345256,
+				"Y": -0.22298683,
+				"Z": 2.496644
+			}
+		}
+	]
+}

@@ -77,6 +77,52 @@ class AssettoCorsaServerJsonReaderTest extends PHPUnit_Framework_TestCase {
         $session = Data_Reader::factory($file_path)->getSession();
     }
 
+     /**
+     * Test tyre info
+     */
+    public function testReadingTyreInfo()
+    {
+        // The path to the data source
+        $file_path = realpath(
+            __DIR__.'/logs/assettocorsa-server-json/tyre.info.json');
+
+        // Get the data reader for the given data source
+        $session = Data_Reader::factory($file_path)->getSession(1);
+
+        $participants = $session->getParticipants();
+
+        $this->assertSame('S', $participants[0]->getLap(1)->getFrontCompound());
+        $this->assertSame('M', $participants[1]->getLap(1)->getRearCompound());
+    }
+
+     /**
+     * Test servername
+     */
+    public function testReadingServer()
+    {
+        // The path to the data source
+        $file_path = realpath(
+            __DIR__.'/logs/assettocorsa-server-json/tyre.info.json');
+
+        $session = Data_Reader::factory($file_path)->getSession();
+        $this->assertSame('Custom server', $session->getServer()->getName());
+    }
+     /**
+     * Test ignoring duplicate result info
+     */
+    public function testIgnoringDuplicateResultInfo()
+    {
+        // The path to the data source
+        $file_path = realpath(
+            __DIR__.'/logs/assettocorsa-server-json/duplicate.result.info.for.miguel.json');
+
+        $session = Data_Reader::factory($file_path)->getSession();
+        $participants = $session->getParticipants();
+
+        // Make sure driver is not DNF anymore
+        $this->assertSame(Participant::FINISH_NORMAL,
+            $participants[4]->getFinishStatus());
+    }
 
 
 
@@ -134,6 +180,7 @@ class AssettoCorsaServerJsonReaderTest extends PHPUnit_Framework_TestCase {
 
         // Validate track
         $this->assertSame('monza', $track->getVenue());
+        $this->assertSame('full course', $track->getCourse());
     }
 
     /**
