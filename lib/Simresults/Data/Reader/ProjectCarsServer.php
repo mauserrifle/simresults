@@ -693,6 +693,14 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
             $driver->setHuman(true);
         }
 
+        // Human check
+        if (isset($part_data['IsPlayer'])) {
+            $driver->setHuman($part_data['IsPlayer']);
+        }
+        if (isset($part_data['is_player'])) {
+            $driver->setHuman($part_data['is_player']);
+        }
+
         // Create participant and add driver
         $participant = Participant::createInstance();
         $participant->setDrivers(array($driver))

@@ -414,6 +414,18 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
         // Test vehicle friendly name
         $this->assertSame('Ligier JS P2 Nissan',
                           $participants[0]->getVehicle()->getName());
+
+
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/projectcars2-server/'.
+            'multiple.races.from.modified.dsms_stats.lua.file.json');
+
+        $sessions = Data_Reader::factory($file_path)->getSessions();
+        $participants = $sessions[0]->getParticipants();
+
+        // Test driver being human
+        $this->assertTrue($participants[0]->getDriver()->isHuman());
     }
 
 
