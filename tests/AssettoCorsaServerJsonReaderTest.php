@@ -107,6 +107,24 @@ class AssettoCorsaServerJsonReaderTest extends PHPUnit_Framework_TestCase {
         $session = Data_Reader::factory($file_path)->getSession();
         $this->assertSame('Custom server', $session->getServer()->getName());
     }
+
+
+     /**
+     * Test filtering empty driver name
+     */
+    public function testFilteringEmptyDriverName()
+    {
+        // The path to the data source
+        $file_path = realpath(
+            __DIR__.'/logs/assettocorsa-server-json/tyre.info.json');
+
+        $session = Data_Reader::factory($file_path)->getSession();
+        $participants = $session->getParticipants();
+
+        $this->assertCount(6, $participants);
+    }
+
+
      /**
      * Test ignoring duplicate result info
      */

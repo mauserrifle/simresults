@@ -235,7 +235,13 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
         }
 
 
+        // Filter out participants without proper driver data
+        $participants_by_name = array_values(
+                array_filter($participants_by_name, function($part){
 
+            $driver = $part->getDriver();
+            return ($driver AND $driver->getName());
+        }));
 
 
         /**
