@@ -412,8 +412,8 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
         $participants = $sessions[4]->getParticipants();
 
         // Test vehicle friendly name
-        $this->assertSame('Ligier JS P2 Nissan',
-                          $participants[0]->getVehicle()->getName());
+        $this->assertSame('Ligier JS P2 Nissan (LMP2)',
+                          $participants[0]->getVehicle()->getFriendlyName());
 
 
         // The path to the data source
@@ -426,6 +426,10 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
 
         // Test driver being human
         $this->assertTrue($participants[0]->getDriver()->isHuman());
+
+        // Test vehicle friendly name
+        $this->assertSame('Mitsubishi Lancer Evolution IX FQ360 (Road C1)',
+                          $participants[0]->getVehicle()->getFriendlyName());
     }
 
 
