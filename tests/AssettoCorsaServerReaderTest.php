@@ -83,6 +83,34 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertSame('iSimRace.de', $participants[0]->getTeam());
     }
 
+
+    /**
+     * Test reading tyre info
+     */
+    public function testReadingTyreInfo()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__. '/logs/assettocorsa-server/'.
+            'different.connecting.format.update.1.2.txt');
+
+        // Get the data reader for the given data source
+        $session = Data_Reader::factory($file_path)->getSession();
+        $participants = $session->getParticipants();
+        $this->assertSame('H', $participants[0]->getLap(1)->getFrontCompound());
+        $this->assertSame('H', $participants[2]->getLap(1)->getRearCompound());
+
+        // The path to the data source
+        $file_path = realpath(__DIR__. '/logs/assettocorsa-server/'.
+            'tyre.info.multiple.txt');
+
+        // Get the data reader for the given data source
+        $session = Data_Reader::factory($file_path)->getSession();
+        $participants = $session->getParticipants();
+        $this->assertSame('SM', $participants[0]->getLap(1)->getFrontCompound());
+        $this->assertSame('SM', $participants[2]->getLap(10)->getRearCompound());
+    }
+
+
     /**
      * Test reading laps data with different format regarding the ":]" chars:
      *
