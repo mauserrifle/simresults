@@ -1034,29 +1034,51 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             {
                 $tyre_unique = array_unique($tyre_matches[1]);
 
-                // Just 1 compound
+                // Just 1 tyre
                 if (count($tyre_unique) === 1)
                 {
                     // Force it as default
                     $tyre_for_all = array_pop($tyre_unique);
                 }
-
-                // Remember last tyre per driver
-                // The last because its only used as last resort. So if we
-                // fail to detect later on. The changes are probably been
-                // after connecting and before the race. So in that case
-                // the last tyre is the best match
-                foreach ($tyre_matches[1] as $tyre_match_key => $tyre_match_driver)
+                // Not 1 tyre. Find unique tyres per driver
+                else
                 {
-                    $name = trim($tyre_match_driver);
-                    $name_key = $this->getDriverKey($name);
+                    // Collection of tyres per driver
+                    $driver_tyres = array();
 
-                    $last_known_tyre_driver[$name_key] = $tyre_matches[2][$tyre_match_key];
+                    // Remember last tyre per driver
+                    // The last because its only used as last resort. So if we
+                    // fail to detect later on. The changes are probably been
+                    // after connecting and before the race. So in that case
+                    // the last tyre is the best match
+                    foreach ($tyre_matches[1] as $tyre_match_key => $tyre_match_driver)
+                    {
+                        $name = trim($tyre_match_driver);
+                        $name_key = $this->getDriverKey($name);
+
+                        $last_known_tyre_driver[$name_key] = $tyre_matches[2][$tyre_match_key];
+
+                        // Collect tyres
+                        $driver_tyres[$name_key][] = $tyre_matches[2][$tyre_match_key];
+                    }
+
+                    // Check for unique tyres per driver so we can just force
+                    // for better performance
+                    foreach ($driver_tyres as $driver_key => $driver_tyres)
+                    {
+                        $tyre_unique = array_unique($driver_tyres);
+
+                        // Just 1 tyre
+                        if (count($tyre_unique) === 1)
+                        {
+                            $force_tyre_driver[$driver_key] = array_pop($tyre_unique);
+                        }
+                    }
                 }
+
+
             }
         }
-
-
 
 
 
@@ -1154,25 +1176,6 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             if ( $search_tyre_info AND
                  ! $tyre = $this->helper->arrayGet($force_tyre_driver, $name_key))
             {
-                // Has tyre matches in full sessions data, we will check for unique
-                // matches
-                // if(preg_match_all($tyres_regex =
-                // '/'.preg_quote($name, '/').".*? changed tyres to (.*?)\n"
-                // .'/i', $all_data, $tyre_matches))
-                // {
-                //     // All matches are the same! This driver never changes,
-                //     // so lets force this tyre type and never do any more regexes
-                //     // for this driver
-                //     $tyre_unique = array_unique($tyre_matches[1]);
-                //     if (count($tyre_unique) === 1)
-                //     {
-                //         $tyre = array_pop($tyre_matches[1]);
-
-                //         // Force tyre
-                //         $force_tyre_driver[$name_key] = $tyre;
-                //     }
-                // }
-
                 // Driver tyre type is not forced yet above in full log check
                 if ( ! isset($force_tyre_driver[$name_key]))
                 {
