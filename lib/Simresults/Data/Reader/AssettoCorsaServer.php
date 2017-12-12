@@ -1021,8 +1021,8 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
         // Should we search tyre info within this session data? (improve performance)
         $search_tyre_info = FALSE;
 
-        // Fill last known tyre driver with first tyre change across the
-        // full log
+        // // Fill last known tyre driver with first tyre change across the
+        // // full log
         if ($last_known_tyre_driver === NULL)
         {
             $last_known_tyre_driver = array();
@@ -1056,8 +1056,6 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             }
         }
 
-        // var_dump('Last known tyre driver: ');
-        // print_r($last_known_tyre_driver);
 
 
 
@@ -1158,62 +1156,43 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             {
                 // Has tyre matches in full sessions data, we will check for unique
                 // matches
-                if(preg_match_all($tyres_regex =
-                '/'.preg_quote($name, '/').".*? changed tyres to (.*?)\n"
-                .'/i', $all_sessions_data, $tyre_matches))
-                {
-                    // All matches are the same! This driver never changes,
-                    // so lets force this tyre type and never do any more regexes
-                    // for this driver
-                    // var_dump('origineel');
-                    // print_r($tyre_matches[1]);
-                    // var_dump('unique');
-                    $tyre_unique = array_unique($tyre_matches[1]);
-                    // print_r($tyre_unique);
-                    if (count($tyre_unique) === 1)
-                    {
-                        $tyre = array_pop($tyre_matches[1]);
+                // if(preg_match_all($tyres_regex =
+                // '/'.preg_quote($name, '/').".*? changed tyres to (.*?)\n"
+                // .'/i', $all_data, $tyre_matches))
+                // {
+                //     // All matches are the same! This driver never changes,
+                //     // so lets force this tyre type and never do any more regexes
+                //     // for this driver
+                //     $tyre_unique = array_unique($tyre_matches[1]);
+                //     if (count($tyre_unique) === 1)
+                //     {
+                //         $tyre = array_pop($tyre_matches[1]);
 
-                        // Force tyre
-                        $force_tyre_driver[$name_key] = $tyre;
-                    }
-                }
+                //         // Force tyre
+                //         $force_tyre_driver[$name_key] = $tyre;
+                //     }
+                // }
 
                 // Driver tyre type is not forced yet above in full log check
                 if ( ! isset($force_tyre_driver[$name_key]))
                 {
-                    // Found tyre info in current race data
-                    if (preg_match_all(
-                        $tyres_regex =
-                        '/'.preg_quote($name, '/').".*? changed tyres to (.*?)\n"
-                        .'/i', $data, $tyre_matches))
+                    // Split full log data with lap data as delimiter
+                    $data_session2_split = explode($lap_data, $all_data);
+
+                    // Get first part
+                    $data_session2_split = $data_session2_split[0];
+
+                    // Tyre info found
+                    if(preg_match_all($tyres_regex =
+                    '/'.preg_quote($name, '/').".*? changed tyres to (.*?)\n"
+                    .'/i', $data_session2_split, $tyre_matches))
                     {
+                        $tyre_unique = array_unique($tyre_matches[1]);
                         $tyre = array_pop($tyre_matches[1]);
-                    }
-                    // Find tyre data in full log
-                    else  {
-                        // Split data with lap data as delimiter
-                        $data_session2_split = explode($lap_data, $all_sessions_data);
-
-                        // Get first part
-                        $data_session2_split = $data_session2_split[0];
-
-                        // Tyre info found
-                        if(preg_match_all($tyres_regex =
-                        '/'.preg_quote($name, '/').".*? changed tyres to (.*?)\n"
-                        .'/i', $all_sessions_data, $tyre_matches))
-                        {
-                            $tyre_unique = array_unique($tyre_matches[1]);
-                            $tyre = array_pop($tyre_matches[1]);
-
-                            if (count($tyre_unique) === 1)
-                            {
-                                $force_tyre_driver[$name_key] = $tyre;
-                            }
-                        }
                     }
                 }
             }
+
 
             // Tyre found
             if ($tyre)
@@ -1228,7 +1207,6 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 $tyre = $this->helper->arrayGet(
                     $last_known_tyre_driver, $name_key);
             }
-
 
             // Add lap
             $participants_copy[$name_key]['laps'][] = array(
