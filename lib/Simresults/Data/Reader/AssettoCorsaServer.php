@@ -1012,8 +1012,8 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
         // Force tyre info when its all the same for the driver
         $force_tyre_driver = array();
 
-        // Default tyre to use
-        $default_tyre = null;
+        // Tyre to force for all
+        $tyre_for_all = null;
 
         // Remember last known tyre for a driver
         $last_known_tyre_driver = $this->last_known_tyre_driver;
@@ -1038,7 +1038,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 if (count($tyre_unique) === 1)
                 {
                     // Force it as default
-                    $default_tyre = array_pop($tyre_unique);
+                    $tyre_for_all = array_pop($tyre_unique);
                 }
 
                 // Remember first tyre per driver for other situations
@@ -1060,7 +1060,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
         // Should we search tyre info within this session data? (improve performance)
         // Only check if we have not got a default tyre already
         if(
-            ! $default_tyre AND
+            ! $tyre_for_all AND
             preg_match_all(
                 "/.*? changed tyres to (.*?)\n"
                 .'/i', $all_sessions_data, $tyre_matches))
@@ -1072,7 +1072,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             if (count($tyre_unique) === 1)
             {
                 // Force it as default
-                $default_tyre = array_pop($tyre_unique);
+                $tyre_for_all = array_pop($tyre_unique);
             }
             // Multiple compounds
             else
@@ -1143,7 +1143,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
 
 
             // Tyre is defaulted
-            $tyre = $default_tyre;
+            $tyre = $tyre_for_all;
 
             // Tyre info should be searched
             //  TODO / WARNING : Tyre type matching is very heavy on
