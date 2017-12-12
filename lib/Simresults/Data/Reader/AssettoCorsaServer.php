@@ -1058,7 +1058,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
 
                         $last_known_tyre_driver[$name_key] = $tyre_matches[2][$tyre_match_key];
 
-                        // Collect tyres
+                        // Collect all tyres
                         $driver_tyres[$name_key][] = $tyre_matches[2][$tyre_match_key];
                     }
 
@@ -1087,8 +1087,8 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
         if(
             ! $tyre_for_all AND
             preg_match_all(
-                "/.*? changed tyres to (.*?)\n"
-                .'/i', $all_sessions_data, $tyre_matches))
+                "/(.*?) \[.*? changed tyres to (.*?)\n"
+                .'/i', $data, $tyre_matches))
         {
 
             $tyre_unique = array_unique($tyre_matches[1]);
