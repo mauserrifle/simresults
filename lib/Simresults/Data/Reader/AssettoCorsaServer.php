@@ -1012,8 +1012,14 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
         // Force tyre info when its all the same for the driver
         $force_tyre_driver = array();
 
+        // Default tyre to use
+        $default_tyre = null;
+
         // Remember last known tyre for a driver
         $last_known_tyre_driver = $this->last_known_tyre_driver;
+
+        // Should we search tyre info within this session data? (improve performance)
+        $search_tyre_info = FALSE;
 
         // Fill last known tyre driver with first tyre change across the
         // full log
@@ -1026,13 +1032,22 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                     "/(.*?) \[.*? changed tyres to (.*?)\n"
                     .'/i', $all_data, $tyre_matches))
             {
+                $tyre_unique = array_unique($tyre_matches[1]);
 
+                // Just 1 compound
+                if (count($tyre_unique) === 1)
+                {
+                    // Force it as default
+                    $default_tyre = array_pop($tyre_unique);
+                }
+
+                // Remember first tyre per driver for other situations
                 foreach ($tyre_matches[1] as $tyre_match_key => $tyre_match_driver)
                 {
                     $name = trim($tyre_match_driver);
                     $name_key = $this->getDriverKey($name);
 
-                    if (! isset($last_known_tyre_driver[$name_key]))
+                    if ( ! isset($last_known_tyre_driver[$name_key]))
                     {
                         $last_known_tyre_driver[$name_key] = $tyre_matches[2][$tyre_match_key];
                     }
@@ -1041,12 +1056,12 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
         }
 
 
-        // Default tyre to use
-        $default_tyre = null;
 
         // Should we search tyre info within this session data? (improve performance)
-        $search_tyre_info = FALSE;
-        if(preg_match_all(
+        // Only check if we have not got a default tyre already
+        if(
+            ! $default_tyre AND
+            preg_match_all(
                 "/.*? changed tyres to (.*?)\n"
                 .'/i', $all_sessions_data, $tyre_matches))
         {
