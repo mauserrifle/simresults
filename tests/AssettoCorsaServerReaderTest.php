@@ -90,6 +90,8 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
     public function testReadingTyreInfo()
     {
         // The path to the data source
+        // Log file with all tyres the same
+        // TODO: Use third session to test?
         $file_path = realpath(__DIR__. '/logs/assettocorsa-server/'.
             'different.connecting.format.update.1.2.txt');
 
@@ -100,14 +102,40 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertSame('H', $participants[2]->getLap(1)->getRearCompound());
 
         // The path to the data source
+        //
+        // Log file has been modified. Emanuele Petri has a tyre change from
+        // lap X
+        //
+        // Alberto Rubert first changes to S, after that to SM (before race start)
+        // So we test that its SM in the race.
+        //
+        //
         $file_path = realpath(__DIR__. '/logs/assettocorsa-server/'.
-            'tyre.info.multiple.txt');
+            'tyre.info.multiple.modified.change.during.race.txt');
 
         // Get the data reader for the given data source
         $session = Data_Reader::factory($file_path)->getSession();
         $participants = $session->getParticipants();
-        $this->assertSame('SM', $participants[0]->getLap(1)->getFrontCompound());
-        $this->assertSame('SM', $participants[2]->getLap(10)->getRearCompound());
+        // $this->assertSame('SM', $participants[0]->getLap(1)->getFrontCompound());
+
+        // Emanuele Petri
+        $this->assertSame('SM', $participants[1]->getLap(1)->getRearCompound());
+        // $this->assertSame('H', $participants[1]->getLap(6)->getRearCompound());
+
+        // Alberto Rubert
+        $this->assertSame('SM', $participants[1]->getLap(1)->getRearCompound());
+
+        // // The path to the data source
+        // $file_path = realpath(__DIR__. '/logs/assettocorsa-server/'.
+        //     'driver.fabio.guarezi.crossed.finish.twice.after.RACE.OVER.DETECTED.txt');
+
+        // // Get the data reader for the given data source
+        // $session = Data_Reader::factory($file_path)->getSession(3);
+        // $participants = $session->getParticipants();
+        // $this->assertSame('Rafael Bervanger',
+        //     $participants[5]->getDriver()->getName());
+        // $this->assertSame('S', $participants[5]->getLap(1)->getFrontCompound());
+        // $this->assertSame('M', $participants[5]->getLap(20)->getRearCompound());
     }
 
 

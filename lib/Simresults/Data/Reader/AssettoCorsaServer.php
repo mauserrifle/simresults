@@ -1027,7 +1027,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
         {
             $last_known_tyre_driver = array();
 
-            // Note: Added newline match, otherwise somehow it didn't work
+            // Note: Added newline match, improved performance
             if(preg_match_all(
                     "/(.*?) \[.*? changed tyres to (.*?)\n"
                     .'/i', $all_data, $tyre_matches))
@@ -1041,19 +1041,24 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                     $tyre_for_all = array_pop($tyre_unique);
                 }
 
-                // Remember first tyre per driver for other situations
+                // Remember last tyre per driver
+                // The last because its only used as last resort. So if we
+                // fail to detect later on. The changes are probably been
+                // after connecting and before the race. So in that case
+                // the last tyre is the best match
                 foreach ($tyre_matches[1] as $tyre_match_key => $tyre_match_driver)
                 {
                     $name = trim($tyre_match_driver);
                     $name_key = $this->getDriverKey($name);
 
-                    if ( ! isset($last_known_tyre_driver[$name_key]))
-                    {
-                        $last_known_tyre_driver[$name_key] = $tyre_matches[2][$tyre_match_key];
-                    }
+                    $last_known_tyre_driver[$name_key] = $tyre_matches[2][$tyre_match_key];
                 }
             }
         }
+
+        // var_dump('Last known tyre driver: ');
+        // print_r($last_known_tyre_driver);
+
 
 
 
