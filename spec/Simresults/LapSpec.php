@@ -103,6 +103,7 @@ class LapSpec extends ObjectBehavior
 
     function its_pit_lap_is_mutable()
     {
+        $this->isPitLap()->shouldReturn(false);
         $this->setPitLap(true)->isPitLap()->shouldReturn(true);
         $this->setPitLap(false)->isPitLap()->shouldReturn(false);
     }
