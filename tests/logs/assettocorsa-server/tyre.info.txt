@@ -1,0 +1,3098 @@
+Server CFG Path :  cfg/server_cfg.ini
+Entry List Path :  cfg/entry_list.ini
+Assetto Corsa Dedicated Server v1.8
+Protocol version: 171
+2016-09-13 21:02:42.3373201 +0200 CEST
+Num CPU: 4
+LOCAL IP 0: fe80::15e0:3aa5:d8a8:6fd1%Ethernet
+LOCAL IP 1: fe80::2469:13ef:a75b:b4d7%Teredo Tunneling Pseudo-Interface
+LOCAL IP 2: 192.168.0.10
+LOCAL IP 3: 2001:0:5ef5:79fd:2469:13ef:a75b:b4d7
+Using cfg path:  cfg/server_cfg.ini
+Car list:
+_ks_praga_r1_
+Client interval HZ: 18
+AUTH_PLUGIN_ADDRESS 
+Initialising UDP Plugin with target: 127.0.0.1:12000 on the local port 11000
+TRACK=ks_silverstone
+CARS=["ks_praga_r1"]
+Loading QUALIFY sessionSESSION: Qualify
+TYPE=QUALIFY
+TIME=10
+LAPS=0
+OPEN=1
+WAIT TIME=0
+
+SESSION: Race
+TYPE=RACE
+TIME=0
+LAPS=13
+OPEN=1
+WAIT TIME=40
+
+DynamicTrack: first session, resetting grip
+Trying to load DRS zones from: content/tracks/ks_silverstone/international/data/drs_zones.ini
+open content/tracks/ks_silverstone/international/data/drs_zones.ini: The system cannot find the path specified.
+Weather update. Ambient: 23.205952 Road: 28.681862 Graphics: 3_clear
+CHECKSUM: system/data/surfaces.ini=41949b9f7045cad2af3f5eb951d170a9
+Initializing checksum for track config international
+WARNING: Cannot open file  content/tracks/ks_silverstone/international/data/surfaces.ini  for checksum, the client check will be disabled for this file
+Calculating checksum for folder content/cars/ks_praga_r1/data
+Error calculating checksum: Folder not found
+Loading blacklist
+Opening entry list:  cfg/entry_list.ini
+Found car  CAR_0
+CAR: 0 ks_praga_r1 (0) [Bibi []] Bibi [] 76561198255756791 0 kg
+Fixed setup from entry list:last.ini
+Found car  CAR_1
+CAR: 1 ks_praga_r1 (1) [Ben_thedriver []] Ben_thedriver [] 76561197971734957 0 kg
+Fixed setup from entry list:last.ini
+Found car  CAR_2
+CAR: 2 ks_praga_r1 (2) [Alonso02_fr []] Alonso02_fr [] 76561198165298274 0 kg
+Fixed setup from entry list:last.ini
+Found car  CAR_3
+CAR: 3 ks_praga_r1 (3) [lamaug []] lamaug [] 76561197997446465 0 kg
+Fixed setup from entry list:last.ini
+Found car  CAR_4
+CAR: 4 ks_praga_r1 (4) [Greg []] Greg [] 76561197983596752 0 kg
+Fixed setup from entry list:last.ini
+Found car  CAR_5
+CAR: 5 ks_praga_r1 (5) [Ragnar []] Ragnar [] 76561198178646358 0 kg
+Fixed setup from entry list:last.ini
+Found car  CAR_6
+CAR: 6 ks_praga_r1 (6) [GaelTeam []] GaelTeam [] 76561198166570425 0 kg
+Fixed setup from entry list:last.ini
+Found car  CAR_7
+CAR: 7 ks_praga_r1 (7) [Cedcirdec []] Cedcirdec [] 76561198160647077 0 kg
+open setups/ks_praga_r1.ini: The system cannot find the file specified.
+Random seed: 2638272209
+Starting TCP listener at port 9600
+Session has 0 laps, will not save json
+NextSession
+SESSION: Qualify
+TYPE=QUALIFY
+TIME=10
+LAPS=0
+OPEN=1
+WAIT TIME=0
+
+DynamicTrack: first session, resetting grip
+Weather update. Ambient: 23.824617 Road: 29.672426 Graphics: 3_clear
+SENDING session name : Qualify
+SENDING session index : 0
+SENDING session type : 2
+SENDING session time : 10
+SENDING session laps : 0
+Starting HTTP server on port  8081
+Server started
+Registering to AC central server
+CALLING http://93.57.10.21/lobby.ashx/register?name=lamaug_Praga_R1&port=9600&tcp_port=9600&max_clients=8&track=ks_silverstone-international&cars=ks_praga_r1&timeofday=0&sessions=2,3&durations=600,13&password=1&version=171&pickup=1&autoclutch=1&abs=2&tc=1&stability=0&legal_tyres=M&fixed_setup=1
+RESPONSE: OK,2884422,8081
+CONNECTED TO LOBBY
+RESTARTING FROM SESSION 0
+Session has 0 laps, will not save json
+NextSession
+SESSION: Qualify
+TYPE=QUALIFY
+TIME=10
+LAPS=0
+OPEN=1
+WAIT TIME=0
+
+DynamicTrack: first session, resetting grip
+Weather update. Ambient: 26.448908 Road: 32.923477 Graphics: 3_clear
+SENDING session name : Qualify
+SENDING session index : 0
+SENDING session type : 2
+SENDING session time : 10
+SENDING session laps : 0
+SENDING http://93.57.10.21/lobby.ashx/ping?session=2&timeleft=600&port=9600&clients=0&track=ks_silverstone-international&pickup=1
+OK
+PAGE: /JSON|76561197971734957
+Serve JSON took 47 ms
+PAGE: /JSON|76561198178646358
+Serve JSON took 10 ms
+PAGE: /JSON|76561197997446465
+Serve JSON took 33 ms
+PAGE: /JSON|76561197971734957
+Serve JSON took 25 ms
+New connection from &{{2125444300}}
+SOCKET NO DELAY SET
+TCP packet 61
+ACP_REQUEST_CONNECTION via TCP
+
+NEW PICKUP CONNECTION from  90.127.234.243:57100
+VERSION 171
+Greg
+REQUESTED CAR: ks_praga_r1*
+ENTRY LIST OPEN MODE 1
+Looking for available slot by name
+Slot found by name at index 4
+DRIVER ACCEPTED FOR CAR 4
+DRIVER ACCEPTED FOR CAR Greg
+Tyre blankets: true
+Sending SESSION ID : 4
+Sending type 2
+Sending type 3
+Sending ID : 0
+Sending type 2
+FIND AND SEND PLAYER'S POSITION
+ELAPSED=8395
+Seding 1 checksum requests
+SERVER TIME: 9655
+DRIVER: Greg []
+OK
+New connection from &{{2126772400}}
+SOCKET NO DELAY SET
+TCP packet 61
+ACP_REQUEST_CONNECTION via TCP
+
+NEW PICKUP CONNECTION from  192.168.0.254:55686
+VERSION 171
+lamaug
+REQUESTED CAR: ks_praga_r1*
+ENTRY LIST OPEN MODE 1
+Looking for available slot by name
+Slot found by name at index 3
+DRIVER ACCEPTED FOR CAR 3
+DRIVER ACCEPTED FOR CAR lamaug
+Tyre blankets: true
+Sending SESSION ID : 3
+Sending type 2
+Sending type 3
+Sending ID : 0
+Sending type 2
+FIND AND SEND PLAYER'S POSITION
+ELAPSED=11435
+Seding 1 checksum requests
+SERVER TIME: 12695
+DRIVER: lamaug []
+OK
+Warning, server CPU overload, last step: 121 ms, UDP:0 TCP:0 packets, times rcv:0 hndl:0 select:0 step:0
+TCP packet 63
+Dispatching TCP message to ks_praga_r1 (4) [Greg []]
+Sending car list from index:0
+PAGE: /JSON|76561197971734957
+Serve JSON took 0 ms
+TCP packet 63
+Dispatching TCP message to ks_praga_r1 (3) [lamaug []]
+Sending car list from index:0
+TCP packet 80
+Dispatching TCP message to ks_praga_r1 (4) [Greg []]
+Greg [] changed tyres to M
+Sending weather  26.448908 32.923477
+Sending first leaderboard to car: ks_praga_r1 (4) [Greg []]
+SendLapCompletedMessage
+1) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+2) Ben_thedriver BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:1 HasFinished:false
+3) Alonso02_fr BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2 HasFinished:false
+4) lamaug BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:3 HasFinished:false
+5) Greg BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:4 HasFinished:false
+6) Ragnar BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:5 HasFinished:false
+7) GaelTeam BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:6 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+SETUP FILE IS: 48
+TCP packet 68
+Dispatching TCP message to ks_praga_r1 (4) [Greg []]
+Checksums received from  Greg []
+system/data/surfaces.ini  ok
+Car checksum  ks_praga_r1 true
+Reset time offset for Greg diff: 6498
+TCP packet 80
+Dispatching TCP message to ks_praga_r1 (4) [Greg []]
+Greg [] changed tyres to M
+New connection from &{{2125440340}}
+SOCKET NO DELAY SET
+TCP packet 61
+ACP_REQUEST_CONNECTION via TCP
+
+NEW PICKUP CONNECTION from  176.156.100.101:52669
+VERSION 171
+Ben_thedriver
+REQUESTED CAR: ks_praga_r1*
+ENTRY LIST OPEN MODE 1
+Looking for available slot by name
+Slot found by name at index 1
+DRIVER ACCEPTED FOR CAR 1
+DRIVER ACCEPTED FOR CAR Ben_thedriver
+Tyre blankets: true
+Sending SESSION ID : 1
+Sending type 2
+Sending type 3
+Sending ID : 0
+Sending type 2
+FIND AND SEND PLAYER'S POSITION
+ELAPSED=21373
+Seding 1 checksum requests
+SERVER TIME: 22633
+DRIVER: Ben_thedriver []
+OK
+TCP packet 80
+Dispatching TCP message to ks_praga_r1 (3) [lamaug []]
+lamaug [] changed tyres to M
+Sending weather  26.448908 32.923477
+Sending first leaderboard to car: ks_praga_r1 (3) [lamaug []]
+SendLapCompletedMessage
+1) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+2) Ben_thedriver BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:1 HasFinished:false
+3) Alonso02_fr BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2 HasFinished:false
+4) lamaug BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:3 HasFinished:false
+5) Greg BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:4 HasFinished:false
+6) Ragnar BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:5 HasFinished:false
+7) GaelTeam BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:6 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+SETUP FILE IS: 48
+Reset time offset for lamaug diff: 10645
+TCP packet 68
+Dispatching TCP message to ks_praga_r1 (3) [lamaug []]
+Checksums received from  lamaug []
+system/data/surfaces.ini  ok
+Car checksum  ks_praga_r1 true
+TCP packet 80
+Dispatching TCP message to ks_praga_r1 (3) [lamaug []]
+lamaug [] changed tyres to M
+PAGE: /JSON|76561198178646358
+Serve JSON took 1 ms
+PAGE: /JSON|76561198166570425
+Serve JSON took 1 ms
+New connection from &{{2125442140}}
+SOCKET NO DELAY SET
+TCP packet 61
+ACP_REQUEST_CONNECTION via TCP
+
+NEW PICKUP CONNECTION from  92.155.69.227:49304
+VERSION 171
+Ragnar01
+REQUESTED CAR: ks_praga_r1*
+ENTRY LIST OPEN MODE 1
+Looking for available slot by name
+Slot found by name at index 5
+DRIVER ACCEPTED FOR CAR 5
+DRIVER ACCEPTED FOR CAR Ragnar01
+Tyre blankets: true
+Sending SESSION ID : 5
+Sending type 2
+Sending type 3
+Sending ID : 0
+Sending type 2
+FIND AND SEND PLAYER'S POSITION
+ELAPSED=31182
+Seding 1 checksum requests
+SERVER TIME: 32442
+DRIVER: Ragnar01 []
+OK
+TCP packet 63
+Dispatching TCP message to ks_praga_r1 (5) [Ragnar01 []]
+Sending car list from index:0
+TCP packet 63
+Dispatching TCP message to ks_praga_r1 (1) [Ben_thedriver []]
+Sending car list from index:0
+New connection from &{{2125443400}}
+SOCKET NO DELAY SET
+TCP packet 61
+ACP_REQUEST_CONNECTION via TCP
+
+NEW PICKUP CONNECTION from  90.34.200.101:56907
+VERSION 171
+GaelTeam
+REQUESTED CAR: ks_praga_r1*
+ENTRY LIST OPEN MODE 1
+Looking for available slot by name
+Slot found by name at index 6
+DRIVER ACCEPTED FOR CAR 6
+DRIVER ACCEPTED FOR CAR GaelTeam
+Tyre blankets: true
+Sending SESSION ID : 6
+Sending type 2
+Sending type 3
+Sending ID : 0
+Sending type 2
+FIND AND SEND PLAYER'S POSITION
+ELAPSED=40244
+Seding 1 checksum requests
+SERVER TIME: 41504
+DRIVER: GaelTeam []
+OK
+TCP packet 80
+Dispatching TCP message to ks_praga_r1 (5) [Ragnar01 []]
+Ragnar01 [] changed tyres to M
+Sending weather  26.448908 32.923477
+Sending first leaderboard to car: ks_praga_r1 (5) [Ragnar01 []]
+SendLapCompletedMessage
+1) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+2) Ben_thedriver BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:1 HasFinished:false
+3) Alonso02_fr BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2 HasFinished:false
+4) lamaug BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:3 HasFinished:false
+5) Greg BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:4 HasFinished:false
+6) Ragnar01 BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:5 HasFinished:false
+7) GaelTeam BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:6 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+SETUP FILE IS: 48
+TCP packet 68
+Dispatching TCP message to ks_praga_r1 (5) [Ragnar01 []]
+Checksums received from  Ragnar01 []
+system/data/surfaces.ini  ok
+Car checksum  ks_praga_r1 true
+TCP packet 71
+CHAT
+CHAT [Ragnar01]: PLP: running version 0.9,3-50-3-True-1.3-0.9-3|Ragnar01
+Reset time offset for Ragnar01 diff: 31562
+TCP packet 80
+Dispatching TCP message to ks_praga_r1 (5) [Ragnar01 []]
+Ragnar01 [] changed tyres to M
+TCP packet 63
+Dispatching TCP message to ks_praga_r1 (6) [GaelTeam []]
+Sending car list from index:0
+TCP packet 80
+Dispatching TCP message to ks_praga_r1 (6) [GaelTeam []]
+GaelTeam [] changed tyres to M
+TCP packet 68
+Dispatching TCP message to ks_praga_r1 (6) [GaelTeam []]
+Checksums received from  GaelTeam []
+system/data/surfaces.ini  ok
+Car checksum  ks_praga_r1 true
+TCP packet 71
+CHAT
+CHAT [GaelTeam]: PLP: running version 0.9,3-50-3-True-1.3-0.9-3|GaelTeam
+Sending weather  26.448908 32.923477
+Sending first leaderboard to car: ks_praga_r1 (6) [GaelTeam []]
+SendLapCompletedMessage
+1) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+2) Ben_thedriver BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:1 HasFinished:false
+3) Alonso02_fr BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2 HasFinished:false
+4) lamaug BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:3 HasFinished:false
+5) Greg BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:4 HasFinished:false
+6) Ragnar01 BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:5 HasFinished:false
+7) GaelTeam BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:6 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+SETUP FILE IS: 48
+TCP packet 80
+Dispatching TCP message to ks_praga_r1 (6) [GaelTeam []]
+GaelTeam [] changed tyres to M
+Reset time offset for GaelTeam diff: 39736
+TCP packet 80
+Dispatching TCP message to ks_praga_r1 (1) [Ben_thedriver []]
+Ben_thedriver [] changed tyres to M
+TCP packet 68
+Dispatching TCP message to ks_praga_r1 (1) [Ben_thedriver []]
+Checksums received from  Ben_thedriver []
+system/data/surfaces.ini  ok
+Car checksum  ks_praga_r1 true
+Sending weather  26.448908 32.923477
+Sending first leaderboard to car: ks_praga_r1 (1) [Ben_thedriver []]
+SendLapCompletedMessage
+1) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+2) Ben_thedriver BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:1 HasFinished:false
+3) Alonso02_fr BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2 HasFinished:false
+4) lamaug BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:3 HasFinished:false
+5) Greg BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:4 HasFinished:false
+6) Ragnar01 BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:5 HasFinished:false
+7) GaelTeam BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:6 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+SETUP FILE IS: 48
+Reset time offset for Ben_thedriver diff: 19373
+TCP packet 80
+Dispatching TCP message to ks_praga_r1 (1) [Ben_thedriver []]
+Ben_thedriver [] changed tyres to M
+PAGE: /JSON|76561198058246694
+Serve JSON took 1 ms
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (4) [Greg []]
+Car.onLapCompleted
+LAP Greg 1:20:979
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) Greg BEST: 1:20:979 TOTAL: 1:39:238 Laps:1 SesID:4 HasFinished:false
+2) GaelTeam BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:6 HasFinished:false
+3) Ben_thedriver BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:1 HasFinished:false
+4) lamaug BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:3 HasFinished:false
+5) Ragnar01 BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:5 HasFinished:false
+6) Alonso02_fr BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (3) [lamaug []]
+Car.onLapCompleted
+LAP lamaug 1:17:621
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) lamaug BEST: 1:17:621 TOTAL: 1:41:123 Laps:1 SesID:3 HasFinished:false
+2) Greg BEST: 1:20:979 TOTAL: 1:39:238 Laps:1 SesID:4 HasFinished:false
+3) GaelTeam BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:6 HasFinished:false
+4) Ben_thedriver BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:1 HasFinished:false
+5) Ragnar01 BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:5 HasFinished:false
+6) Alonso02_fr BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (5) [Ragnar01 []]
+Car.onLapCompleted
+LAP Ragnar01 1:18:629
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) lamaug BEST: 1:17:621 TOTAL: 1:41:123 Laps:1 SesID:3 HasFinished:false
+2) Ragnar01 BEST: 1:18:629 TOTAL: 1:59:889 Laps:1 SesID:5 HasFinished:false
+3) Greg BEST: 1:20:979 TOTAL: 1:39:238 Laps:1 SesID:4 HasFinished:false
+4) GaelTeam BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:6 HasFinished:false
+5) Ben_thedriver BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:1 HasFinished:false
+6) Alonso02_fr BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (6) [GaelTeam []]
+Car.onLapCompleted
+LAP GaelTeam 1:25:686
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) lamaug BEST: 1:17:621 TOTAL: 1:41:123 Laps:1 SesID:3 HasFinished:false
+2) Ragnar01 BEST: 1:18:629 TOTAL: 1:59:889 Laps:1 SesID:5 HasFinished:false
+3) Greg BEST: 1:20:979 TOTAL: 1:39:238 Laps:1 SesID:4 HasFinished:false
+4) GaelTeam BEST: 1:25:686 TOTAL: 2:16:298 Laps:1 SesID:6 HasFinished:false
+5) Ben_thedriver BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:1 HasFinished:false
+6) Alonso02_fr BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (1) [Ben_thedriver []]
+Car.onLapCompleted
+LAP Ben_thedriver 1:17:936
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) lamaug BEST: 1:17:621 TOTAL: 1:41:123 Laps:1 SesID:3 HasFinished:false
+2) Ben_thedriver BEST: 1:17:936 TOTAL: 2:17:264 Laps:1 SesID:1 HasFinished:false
+3) Ragnar01 BEST: 1:18:629 TOTAL: 1:59:889 Laps:1 SesID:5 HasFinished:false
+4) Greg BEST: 1:20:979 TOTAL: 1:39:238 Laps:1 SesID:4 HasFinished:false
+5) GaelTeam BEST: 1:25:686 TOTAL: 2:16:298 Laps:1 SesID:6 HasFinished:false
+6) Alonso02_fr BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+PAGE: /ENTRY
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (4) [Greg []]
+Car.onLapCompleted
+LAP Greg 1:08:044
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) Greg BEST: 1:08:044 TOTAL: 2:47:286 Laps:2 SesID:4 HasFinished:false
+2) lamaug BEST: 1:17:621 TOTAL: 1:41:123 Laps:1 SesID:3 HasFinished:false
+3) Ben_thedriver BEST: 1:17:936 TOTAL: 2:17:264 Laps:1 SesID:1 HasFinished:false
+4) Ragnar01 BEST: 1:18:629 TOTAL: 1:59:889 Laps:1 SesID:5 HasFinished:false
+5) GaelTeam BEST: 1:25:686 TOTAL: 2:16:298 Laps:1 SesID:6 HasFinished:false
+6) Alonso02_fr BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (3) [lamaug []]
+Car.onLapCompleted
+LAP lamaug 1:07:822
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) lamaug BEST: 1:07:822 TOTAL: 2:48:943 Laps:2 SesID:3 HasFinished:false
+2) Greg BEST: 1:08:044 TOTAL: 2:47:286 Laps:2 SesID:4 HasFinished:false
+3) Ben_thedriver BEST: 1:17:936 TOTAL: 2:17:264 Laps:1 SesID:1 HasFinished:false
+4) Ragnar01 BEST: 1:18:629 TOTAL: 1:59:889 Laps:1 SesID:5 HasFinished:false
+5) GaelTeam BEST: 1:25:686 TOTAL: 2:16:298 Laps:1 SesID:6 HasFinished:false
+6) Alonso02_fr BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (5) [Ragnar01 []]
+Car.onLapCompleted
+LAP Ragnar01 1:08:596
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) lamaug BEST: 1:07:822 TOTAL: 2:48:943 Laps:2 SesID:3 HasFinished:false
+2) Greg BEST: 1:08:044 TOTAL: 2:47:286 Laps:2 SesID:4 HasFinished:false
+3) Ragnar01 BEST: 1:08:596 TOTAL: 3:08:484 Laps:2 SesID:5 HasFinished:false
+4) Ben_thedriver BEST: 1:17:936 TOTAL: 2:17:264 Laps:1 SesID:1 HasFinished:false
+5) GaelTeam BEST: 1:25:686 TOTAL: 2:16:298 Laps:1 SesID:6 HasFinished:false
+6) Alonso02_fr BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (6) [GaelTeam []]
+Car.onLapCompleted
+LAP GaelTeam 1:06:816
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:816 TOTAL: 3:23:111 Laps:2 SesID:6 HasFinished:false
+2) lamaug BEST: 1:07:822 TOTAL: 2:48:943 Laps:2 SesID:3 HasFinished:false
+3) Greg BEST: 1:08:044 TOTAL: 2:47:286 Laps:2 SesID:4 HasFinished:false
+4) Ragnar01 BEST: 1:08:596 TOTAL: 3:08:484 Laps:2 SesID:5 HasFinished:false
+5) Ben_thedriver BEST: 1:17:936 TOTAL: 2:17:264 Laps:1 SesID:1 HasFinished:false
+6) Alonso02_fr BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (1) [Ben_thedriver []]
+Car.onLapCompleted
+LAP Ben_thedriver 1:07:246
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:816 TOTAL: 3:23:111 Laps:2 SesID:6 HasFinished:false
+2) Ben_thedriver BEST: 1:07:246 TOTAL: 3:24:505 Laps:2 SesID:1 HasFinished:false
+3) lamaug BEST: 1:07:822 TOTAL: 2:48:943 Laps:2 SesID:3 HasFinished:false
+4) Greg BEST: 1:08:044 TOTAL: 2:47:286 Laps:2 SesID:4 HasFinished:false
+5) Ragnar01 BEST: 1:08:596 TOTAL: 3:08:484 Laps:2 SesID:5 HasFinished:false
+6) Alonso02_fr BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (4) [Greg []]
+Car.onLapCompleted
+LAP Greg 1:07:505
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:816 TOTAL: 3:23:111 Laps:2 SesID:6 HasFinished:false
+2) Ben_thedriver BEST: 1:07:246 TOTAL: 3:24:505 Laps:2 SesID:1 HasFinished:false
+3) Greg BEST: 1:07:505 TOTAL: 3:54:796 Laps:3 SesID:4 HasFinished:false
+4) lamaug BEST: 1:07:822 TOTAL: 2:48:943 Laps:2 SesID:3 HasFinished:false
+5) Ragnar01 BEST: 1:08:596 TOTAL: 3:08:484 Laps:2 SesID:5 HasFinished:false
+6) Alonso02_fr BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (3) [lamaug []]
+Car.onLapCompleted
+LAP lamaug 1:07:416
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:816 TOTAL: 3:23:111 Laps:2 SesID:6 HasFinished:false
+2) Ben_thedriver BEST: 1:07:246 TOTAL: 3:24:505 Laps:2 SesID:1 HasFinished:false
+3) lamaug BEST: 1:07:416 TOTAL: 3:56:360 Laps:3 SesID:3 HasFinished:false
+4) Greg BEST: 1:07:505 TOTAL: 3:54:796 Laps:3 SesID:4 HasFinished:false
+5) Ragnar01 BEST: 1:08:596 TOTAL: 3:08:484 Laps:2 SesID:5 HasFinished:false
+6) Alonso02_fr BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (5) [Ragnar01 []]
+Car.onLapCompleted
+LAP Ragnar01 1:09:035
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:816 TOTAL: 3:23:111 Laps:2 SesID:6 HasFinished:false
+2) Ben_thedriver BEST: 1:07:246 TOTAL: 3:24:505 Laps:2 SesID:1 HasFinished:false
+3) lamaug BEST: 1:07:416 TOTAL: 3:56:360 Laps:3 SesID:3 HasFinished:false
+4) Greg BEST: 1:07:505 TOTAL: 3:54:796 Laps:3 SesID:4 HasFinished:false
+5) Ragnar01 BEST: 1:08:596 TOTAL: 4:17:518 Laps:3 SesID:5 HasFinished:false
+6) Alonso02_fr BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (6) [GaelTeam []]
+Car.onLapCompleted
+LAP GaelTeam 1:06:307
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:307 TOTAL: 4:29:419 Laps:3 SesID:6 HasFinished:false
+2) Ben_thedriver BEST: 1:07:246 TOTAL: 3:24:505 Laps:2 SesID:1 HasFinished:false
+3) lamaug BEST: 1:07:416 TOTAL: 3:56:360 Laps:3 SesID:3 HasFinished:false
+4) Greg BEST: 1:07:505 TOTAL: 3:54:796 Laps:3 SesID:4 HasFinished:false
+5) Ragnar01 BEST: 1:08:596 TOTAL: 4:17:518 Laps:3 SesID:5 HasFinished:false
+6) Alonso02_fr BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (1) [Ben_thedriver []]
+Car.onLapCompleted
+LAP Ben_thedriver 1:06:407
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:307 TOTAL: 4:29:419 Laps:3 SesID:6 HasFinished:false
+2) Ben_thedriver BEST: 1:06:407 TOTAL: 4:30:919 Laps:3 SesID:1 HasFinished:false
+3) lamaug BEST: 1:07:416 TOTAL: 3:56:360 Laps:3 SesID:3 HasFinished:false
+4) Greg BEST: 1:07:505 TOTAL: 3:54:796 Laps:3 SesID:4 HasFinished:false
+5) Ragnar01 BEST: 1:08:596 TOTAL: 4:17:518 Laps:3 SesID:5 HasFinished:false
+6) Alonso02_fr BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+PAGE: /JSON|76561198011047838
+Serve JSON took 0 ms
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (4) [Greg []]
+Car.onLapCompleted
+LAP Greg 1:07:471
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:307 TOTAL: 4:29:419 Laps:3 SesID:6 HasFinished:false
+2) Ben_thedriver BEST: 1:06:407 TOTAL: 4:30:919 Laps:3 SesID:1 HasFinished:false
+3) lamaug BEST: 1:07:416 TOTAL: 3:56:360 Laps:3 SesID:3 HasFinished:false
+4) Greg BEST: 1:07:471 TOTAL: 5:02:266 Laps:4 SesID:4 HasFinished:false
+5) Ragnar01 BEST: 1:08:596 TOTAL: 4:17:518 Laps:3 SesID:5 HasFinished:false
+6) Alonso02_fr BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (3) [lamaug []]
+Car.onLapCompleted
+LAP lamaug 1:07:117
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:307 TOTAL: 4:29:419 Laps:3 SesID:6 HasFinished:false
+2) Ben_thedriver BEST: 1:06:407 TOTAL: 4:30:919 Laps:3 SesID:1 HasFinished:false
+3) lamaug BEST: 1:07:117 TOTAL: 5:03:476 Laps:4 SesID:3 HasFinished:false
+4) Greg BEST: 1:07:471 TOTAL: 5:02:266 Laps:4 SesID:4 HasFinished:false
+5) Ragnar01 BEST: 1:08:596 TOTAL: 4:17:518 Laps:3 SesID:5 HasFinished:false
+6) Alonso02_fr BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (5) [Ragnar01 []]
+Car.onLapCompleted
+LAP Ragnar01 1:08:241
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:307 TOTAL: 4:29:419 Laps:3 SesID:6 HasFinished:false
+2) Ben_thedriver BEST: 1:06:407 TOTAL: 4:30:919 Laps:3 SesID:1 HasFinished:false
+3) lamaug BEST: 1:07:117 TOTAL: 5:03:476 Laps:4 SesID:3 HasFinished:false
+4) Greg BEST: 1:07:471 TOTAL: 5:02:266 Laps:4 SesID:4 HasFinished:false
+5) Ragnar01 BEST: 1:08:241 TOTAL: 5:25:760 Laps:4 SesID:5 HasFinished:false
+6) Alonso02_fr BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (6) [GaelTeam []]
+Car.onLapCompleted
+LAP GaelTeam 1:06:461
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:307 TOTAL: 5:35:880 Laps:4 SesID:6 HasFinished:false
+2) Ben_thedriver BEST: 1:06:407 TOTAL: 4:30:919 Laps:3 SesID:1 HasFinished:false
+3) lamaug BEST: 1:07:117 TOTAL: 5:03:476 Laps:4 SesID:3 HasFinished:false
+4) Greg BEST: 1:07:471 TOTAL: 5:02:266 Laps:4 SesID:4 HasFinished:false
+5) Ragnar01 BEST: 1:08:241 TOTAL: 5:25:760 Laps:4 SesID:5 HasFinished:false
+6) Alonso02_fr BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (1) [Ben_thedriver []]
+Car.onLapCompleted
+LAP Ben_thedriver 1:05:981
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) Ben_thedriver BEST: 1:05:981 TOTAL: 5:36:884 Laps:4 SesID:1 HasFinished:false
+2) GaelTeam BEST: 1:06:307 TOTAL: 5:35:880 Laps:4 SesID:6 HasFinished:false
+3) lamaug BEST: 1:07:117 TOTAL: 5:03:476 Laps:4 SesID:3 HasFinished:false
+4) Greg BEST: 1:07:471 TOTAL: 5:02:266 Laps:4 SesID:4 HasFinished:false
+5) Ragnar01 BEST: 1:08:241 TOTAL: 5:25:760 Laps:4 SesID:5 HasFinished:false
+6) Alonso02_fr BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (1) [Ben_thedriver []]
+RECEIVED 1 CLIENT EVENTS
+COLLISION BETWEEN: Ben_thedriver [] AND ENVIRONMENT SPEED: 58.037632 WORLD POS: [222.539108,2.504284,-56.655643] REL POS: [0.755536,-0.311923,2.310990]
+PAGE: /JSON|76561198011047838
+Serve JSON took 0 ms
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (3) [lamaug []]
+Car.onLapCompleted
+LAP lamaug 1:07:038
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) Ben_thedriver BEST: 1:05:981 TOTAL: 5:36:884 Laps:4 SesID:1 HasFinished:false
+2) GaelTeam BEST: 1:06:307 TOTAL: 5:35:880 Laps:4 SesID:6 HasFinished:false
+3) lamaug BEST: 1:07:038 TOTAL: 6:10:515 Laps:5 SesID:3 HasFinished:false
+4) Greg BEST: 1:07:471 TOTAL: 5:02:266 Laps:4 SesID:4 HasFinished:false
+5) Ragnar01 BEST: 1:08:241 TOTAL: 5:25:760 Laps:4 SesID:5 HasFinished:false
+6) Alonso02_fr BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (4) [Greg []]
+Car.onLapCompleted
+LAP Greg 1:09:612
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) Ben_thedriver BEST: 1:05:981 TOTAL: 5:36:884 Laps:4 SesID:1 HasFinished:false
+2) GaelTeam BEST: 1:06:307 TOTAL: 5:35:880 Laps:4 SesID:6 HasFinished:false
+3) lamaug BEST: 1:07:038 TOTAL: 6:10:515 Laps:5 SesID:3 HasFinished:false
+4) Greg BEST: 1:07:471 TOTAL: 6:11:881 Laps:5 SesID:4 HasFinished:false
+5) Ragnar01 BEST: 1:08:241 TOTAL: 5:25:760 Laps:4 SesID:5 HasFinished:false
+6) Alonso02_fr BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+New connection from &{{2125443740}}
+SOCKET NO DELAY SET
+TCP packet 61
+ACP_REQUEST_CONNECTION via TCP
+
+NEW PICKUP CONNECTION from  89.156.146.54:50055
+VERSION 171
+Yacinof777
+REQUESTED CAR: ks_praga_r1*
+Password check failed, client refused
+read tcp 192.168.0.10:9600->89.156.146.54:50055: use of closed network connection
+TCP connection <nil> terminated
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (5) [Ragnar01 []]
+Car.onLapCompleted
+LAP Ragnar01 1:08:516
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) Ben_thedriver BEST: 1:05:981 TOTAL: 5:36:884 Laps:4 SesID:1 HasFinished:false
+2) GaelTeam BEST: 1:06:307 TOTAL: 5:35:880 Laps:4 SesID:6 HasFinished:false
+3) lamaug BEST: 1:07:038 TOTAL: 6:10:515 Laps:5 SesID:3 HasFinished:false
+4) Greg BEST: 1:07:471 TOTAL: 6:11:881 Laps:5 SesID:4 HasFinished:false
+5) Ragnar01 BEST: 1:08:241 TOTAL: 6:34:271 Laps:5 SesID:5 HasFinished:false
+6) Alonso02_fr BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (6) [GaelTeam []]
+Car.onLapCompleted
+LAP GaelTeam 1:15:130
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) Ben_thedriver BEST: 1:05:981 TOTAL: 5:36:884 Laps:4 SesID:1 HasFinished:false
+2) GaelTeam BEST: 1:06:307 TOTAL: 6:51:008 Laps:5 SesID:6 HasFinished:false
+3) lamaug BEST: 1:07:038 TOTAL: 6:10:515 Laps:5 SesID:3 HasFinished:false
+4) Greg BEST: 1:07:471 TOTAL: 6:11:881 Laps:5 SesID:4 HasFinished:false
+5) Ragnar01 BEST: 1:08:241 TOTAL: 6:34:271 Laps:5 SesID:5 HasFinished:false
+6) Alonso02_fr BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+PAGE: /JSON|76561198031804282
+Serve JSON took 1 ms
+PAGE: /JSON|76561198165298274
+Serve JSON took 0 ms
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (3) [lamaug []]
+Car.onLapCompleted
+LAP lamaug 1:06:753
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) Ben_thedriver BEST: 1:05:981 TOTAL: 5:36:884 Laps:4 SesID:1 HasFinished:false
+2) GaelTeam BEST: 1:06:307 TOTAL: 6:51:008 Laps:5 SesID:6 HasFinished:false
+3) lamaug BEST: 1:06:753 TOTAL: 7:17:267 Laps:6 SesID:3 HasFinished:false
+4) Greg BEST: 1:07:471 TOTAL: 6:11:881 Laps:5 SesID:4 HasFinished:false
+5) Ragnar01 BEST: 1:08:241 TOTAL: 6:34:271 Laps:5 SesID:5 HasFinished:false
+6) Alonso02_fr BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (4) [Greg []]
+Car.onLapCompleted
+LAP Greg 1:08:593
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) Ben_thedriver BEST: 1:05:981 TOTAL: 5:36:884 Laps:4 SesID:1 HasFinished:false
+2) GaelTeam BEST: 1:06:307 TOTAL: 6:51:008 Laps:5 SesID:6 HasFinished:false
+3) lamaug BEST: 1:06:753 TOTAL: 7:17:267 Laps:6 SesID:3 HasFinished:false
+4) Greg BEST: 1:07:471 TOTAL: 7:20:476 Laps:6 SesID:4 HasFinished:false
+5) Ragnar01 BEST: 1:08:241 TOTAL: 6:34:271 Laps:5 SesID:5 HasFinished:false
+6) Alonso02_fr BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+New connection from &{{2126762140}}
+SOCKET NO DELAY SET
+TCP packet 61
+ACP_REQUEST_CONNECTION via TCP
+
+NEW PICKUP CONNECTION from  85.117.157.14:52911
+VERSION 171
+Alonso02_fr
+REQUESTED CAR: ks_praga_r1*
+ENTRY LIST OPEN MODE 1
+Looking for available slot by name
+Slot found by name at index 2
+DRIVER ACCEPTED FOR CAR 2
+DRIVER ACCEPTED FOR CAR Alonso02_fr
+Tyre blankets: true
+Sending SESSION ID : 2
+Sending type 2
+Sending type 3
+Sending ID : 0
+Sending type 2
+FIND AND SEND PLAYER'S POSITION
+ELAPSED=441738
+Seding 1 checksum requests
+SERVER TIME: 442998
+DRIVER: Alonso02_fr []
+OK
+TCP packet 63
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+Sending car list from index:0
+TCP packet 71
+CHAT
+CHAT [GaelTeam]: PLP: Cut the track on lap 6|GaelTeam
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (5) [Ragnar01 []]
+Car.onLapCompleted
+LAP Ragnar01 1:08:186
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) Ben_thedriver BEST: 1:05:981 TOTAL: 5:36:884 Laps:4 SesID:1 HasFinished:false
+2) GaelTeam BEST: 1:06:307 TOTAL: 6:51:008 Laps:5 SesID:6 HasFinished:false
+3) lamaug BEST: 1:06:753 TOTAL: 7:17:267 Laps:6 SesID:3 HasFinished:false
+4) Greg BEST: 1:07:471 TOTAL: 7:20:476 Laps:6 SesID:4 HasFinished:false
+5) Ragnar01 BEST: 1:08:186 TOTAL: 7:42:457 Laps:6 SesID:5 HasFinished:false
+6) Alonso02_fr BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 80
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+Alonso02_fr [] changed tyres to M
+Sending weather  26.448908 32.923477
+Sending first leaderboard to car: ks_praga_r1 (2) [Alonso02_fr []]
+SendLapCompletedMessage
+1) Ben_thedriver BEST: 1:05:981 TOTAL: 5:36:884 Laps:4 SesID:1 HasFinished:false
+2) GaelTeam BEST: 1:06:307 TOTAL: 6:51:008 Laps:5 SesID:6 HasFinished:false
+3) lamaug BEST: 1:06:753 TOTAL: 7:17:267 Laps:6 SesID:3 HasFinished:false
+4) Greg BEST: 1:07:471 TOTAL: 7:20:476 Laps:6 SesID:4 HasFinished:false
+5) Ragnar01 BEST: 1:08:186 TOTAL: 7:42:457 Laps:6 SesID:5 HasFinished:false
+6) Alonso02_fr BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+SETUP FILE IS: 48
+TCP packet 68
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+Checksums received from  Alonso02_fr []
+system/data/surfaces.ini  ok
+Car checksum  ks_praga_r1 true
+TCP packet 80
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+Alonso02_fr [] changed tyres to M
+Reset time offset for Alonso02_fr diff: 441429
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (6) [GaelTeam []]
+Car.onLapCompleted
+LAP GaelTeam 1:06:309
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) Ben_thedriver BEST: 1:05:981 TOTAL: 5:36:884 Laps:4 SesID:1 HasFinished:false
+2) GaelTeam BEST: 1:06:307 TOTAL: 7:57:315 Laps:6 SesID:6 HasFinished:false
+3) lamaug BEST: 1:06:753 TOTAL: 7:17:267 Laps:6 SesID:3 HasFinished:false
+4) Greg BEST: 1:07:471 TOTAL: 7:20:476 Laps:6 SesID:4 HasFinished:false
+5) Ragnar01 BEST: 1:08:186 TOTAL: 7:42:457 Laps:6 SesID:5 HasFinished:false
+6) Alonso02_fr BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (3) [lamaug []]
+Car.onLapCompleted
+LAP lamaug 1:07:855
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) Ben_thedriver BEST: 1:05:981 TOTAL: 5:36:884 Laps:4 SesID:1 HasFinished:false
+2) GaelTeam BEST: 1:06:307 TOTAL: 7:57:315 Laps:6 SesID:6 HasFinished:false
+3) lamaug BEST: 1:06:753 TOTAL: 8:25:121 Laps:7 SesID:3 HasFinished:false
+4) Greg BEST: 1:07:471 TOTAL: 7:20:476 Laps:6 SesID:4 HasFinished:false
+5) Ragnar01 BEST: 1:08:186 TOTAL: 7:42:457 Laps:6 SesID:5 HasFinished:false
+6) Alonso02_fr BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (4) [Greg []]
+Car.onLapCompleted
+LAP Greg 1:10:732
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) Ben_thedriver BEST: 1:05:981 TOTAL: 5:36:884 Laps:4 SesID:1 HasFinished:false
+2) GaelTeam BEST: 1:06:307 TOTAL: 7:57:315 Laps:6 SesID:6 HasFinished:false
+3) lamaug BEST: 1:06:753 TOTAL: 8:25:121 Laps:7 SesID:3 HasFinished:false
+4) Greg BEST: 1:07:471 TOTAL: 8:31:209 Laps:7 SesID:4 HasFinished:false
+5) Ragnar01 BEST: 1:08:186 TOTAL: 7:42:457 Laps:6 SesID:5 HasFinished:false
+6) Alonso02_fr BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (1) [Ben_thedriver []]
+Car.onLapCompleted
+LAP Ben_thedriver 3:00:668
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) Ben_thedriver BEST: 1:05:981 TOTAL: 8:37:550 Laps:5 SesID:1 HasFinished:false
+2) GaelTeam BEST: 1:06:307 TOTAL: 7:57:315 Laps:6 SesID:6 HasFinished:false
+3) lamaug BEST: 1:06:753 TOTAL: 8:25:121 Laps:7 SesID:3 HasFinished:false
+4) Greg BEST: 1:07:471 TOTAL: 8:31:209 Laps:7 SesID:4 HasFinished:false
+5) Ragnar01 BEST: 1:08:186 TOTAL: 7:42:457 Laps:6 SesID:5 HasFinished:false
+6) Alonso02_fr BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (5) [Ragnar01 []]
+Car.onLapCompleted
+LAP Ragnar01 1:07:624
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) Ben_thedriver BEST: 1:05:981 TOTAL: 8:37:550 Laps:5 SesID:1 HasFinished:false
+2) GaelTeam BEST: 1:06:307 TOTAL: 7:57:315 Laps:6 SesID:6 HasFinished:false
+3) lamaug BEST: 1:06:753 TOTAL: 8:25:121 Laps:7 SesID:3 HasFinished:false
+4) Greg BEST: 1:07:471 TOTAL: 8:31:209 Laps:7 SesID:4 HasFinished:false
+5) Ragnar01 BEST: 1:07:624 TOTAL: 8:50:081 Laps:7 SesID:5 HasFinished:false
+6) Alonso02_fr BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (6) [GaelTeam []]
+Car.onLapCompleted
+LAP GaelTeam 1:06:689
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) Ben_thedriver BEST: 1:05:981 TOTAL: 8:37:550 Laps:5 SesID:1 HasFinished:false
+2) GaelTeam BEST: 1:06:307 TOTAL: 9:04:003 Laps:7 SesID:6 HasFinished:false
+3) lamaug BEST: 1:06:753 TOTAL: 8:25:121 Laps:7 SesID:3 HasFinished:false
+4) Greg BEST: 1:07:471 TOTAL: 8:31:209 Laps:7 SesID:4 HasFinished:false
+5) Ragnar01 BEST: 1:07:624 TOTAL: 8:50:081 Laps:7 SesID:5 HasFinished:false
+6) Alonso02_fr BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (3) [lamaug []]
+RECEIVED 1 CLIENT EVENTS
+COLLISION BETWEEN: lamaug [] AND ENVIRONMENT SPEED: 220.51572 WORLD POS: [-197.051834,-4.594634,670.107483] REL POS: [-0.856159,-0.313903,2.290032]
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+Car.onLapCompleted
+LAP Alonso02_fr 1:34:956
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) Ben_thedriver BEST: 1:05:981 TOTAL: 8:37:550 Laps:5 SesID:1 HasFinished:false
+2) GaelTeam BEST: 1:06:307 TOTAL: 9:04:003 Laps:7 SesID:6 HasFinished:false
+3) lamaug BEST: 1:06:753 TOTAL: 8:25:121 Laps:7 SesID:3 HasFinished:false
+4) Greg BEST: 1:07:471 TOTAL: 8:31:209 Laps:7 SesID:4 HasFinished:false
+5) Ragnar01 BEST: 1:07:624 TOTAL: 8:50:081 Laps:7 SesID:5 HasFinished:false
+6) Alonso02_fr BEST: 1:34:956 TOTAL: 9:21:861 Laps:1 SesID:2 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (1) [Ben_thedriver []]
+Car.onLapCompleted
+LAP Ben_thedriver 1:07:197
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) Ben_thedriver BEST: 1:05:981 TOTAL: 9:44:777 Laps:6 SesID:1 HasFinished:false
+2) GaelTeam BEST: 1:06:307 TOTAL: 9:04:003 Laps:7 SesID:6 HasFinished:false
+3) lamaug BEST: 1:06:753 TOTAL: 8:25:121 Laps:7 SesID:3 HasFinished:false
+4) Greg BEST: 1:07:471 TOTAL: 8:31:209 Laps:7 SesID:4 HasFinished:false
+5) Ragnar01 BEST: 1:07:624 TOTAL: 8:50:081 Laps:7 SesID:5 HasFinished:false
+6) Alonso02_fr BEST: 1:34:956 TOTAL: 9:21:861 Laps:1 SesID:2 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (3) [lamaug []]
+Car.onLapCompleted
+LAP lamaug 1:21:019
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) Ben_thedriver BEST: 1:05:981 TOTAL: 9:44:777 Laps:6 SesID:1 HasFinished:false
+2) GaelTeam BEST: 1:06:307 TOTAL: 9:04:003 Laps:7 SesID:6 HasFinished:false
+3) lamaug BEST: 1:06:753 TOTAL: 9:46:138 Laps:8 SesID:3 HasFinished:false
+4) Greg BEST: 1:07:471 TOTAL: 8:31:209 Laps:7 SesID:4 HasFinished:false
+5) Ragnar01 BEST: 1:07:624 TOTAL: 8:50:081 Laps:7 SesID:5 HasFinished:false
+6) Alonso02_fr BEST: 1:34:956 TOTAL: 9:21:861 Laps:1 SesID:2 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (5) [Ragnar01 []]
+Car.onLapCompleted
+LAP Ragnar01 1:07:150
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) Ben_thedriver BEST: 1:05:981 TOTAL: 9:44:777 Laps:6 SesID:1 HasFinished:false
+2) GaelTeam BEST: 1:06:307 TOTAL: 9:04:003 Laps:7 SesID:6 HasFinished:false
+3) lamaug BEST: 1:06:753 TOTAL: 9:46:138 Laps:8 SesID:3 HasFinished:false
+4) Ragnar01 BEST: 1:07:150 TOTAL: 9:57:229 Laps:8 SesID:5 HasFinished:false
+5) Greg BEST: 1:07:471 TOTAL: 8:31:209 Laps:7 SesID:4 HasFinished:false
+6) Alonso02_fr BEST: 1:34:956 TOTAL: 9:21:861 Laps:1 SesID:2 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (6) [GaelTeam []]
+Car.onLapCompleted
+LAP GaelTeam 1:06:598
+SPLIT COUNT: 2
+Dynamic track ok
+GaelTeam [] has finished
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) Ben_thedriver BEST: 1:05:981 TOTAL: 9:44:777 Laps:6 SesID:1 HasFinished:false
+2) GaelTeam BEST: 1:06:307 TOTAL: 10:10:602 Laps:8 SesID:6 HasFinished:true
+3) lamaug BEST: 1:06:753 TOTAL: 9:46:138 Laps:8 SesID:3 HasFinished:false
+4) Ragnar01 BEST: 1:07:150 TOTAL: 9:57:229 Laps:8 SesID:5 HasFinished:false
+5) Greg BEST: 1:07:471 TOTAL: 8:31:209 Laps:7 SesID:4 HasFinished:false
+6) Alonso02_fr BEST: 1:34:956 TOTAL: 9:21:861 Laps:1 SesID:2 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+Car.onLapCompleted
+LAP Alonso02_fr 1:14:160
+SPLIT COUNT: 2
+Dynamic track ok
+Alonso02_fr [] has finished
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) Ben_thedriver BEST: 1:05:981 TOTAL: 9:44:777 Laps:6 SesID:1 HasFinished:false
+2) GaelTeam BEST: 1:06:307 TOTAL: 10:10:602 Laps:8 SesID:6 HasFinished:true
+3) lamaug BEST: 1:06:753 TOTAL: 9:46:138 Laps:8 SesID:3 HasFinished:false
+4) Ragnar01 BEST: 1:07:150 TOTAL: 9:57:229 Laps:8 SesID:5 HasFinished:false
+5) Greg BEST: 1:07:471 TOTAL: 8:31:209 Laps:7 SesID:4 HasFinished:false
+6) Alonso02_fr BEST: 1:14:160 TOTAL: 10:36:028 Laps:2 SesID:2 HasFinished:true
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (3) [lamaug []]
+Car.onLapCompleted
+LAP lamaug 1:06:804
+SPLIT COUNT: 2
+Dynamic track ok
+lamaug [] has finished
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) Ben_thedriver BEST: 1:05:981 TOTAL: 9:44:777 Laps:6 SesID:1 HasFinished:false
+2) GaelTeam BEST: 1:06:307 TOTAL: 10:10:602 Laps:8 SesID:6 HasFinished:true
+3) lamaug BEST: 1:06:753 TOTAL: 10:52:942 Laps:9 SesID:3 HasFinished:true
+4) Ragnar01 BEST: 1:07:150 TOTAL: 9:57:229 Laps:8 SesID:5 HasFinished:false
+5) Greg BEST: 1:07:471 TOTAL: 8:31:209 Laps:7 SesID:4 HasFinished:false
+6) Alonso02_fr BEST: 1:14:160 TOTAL: 10:36:028 Laps:2 SesID:2 HasFinished:true
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (5) [Ragnar01 []]
+Car.onLapCompleted
+LAP Ragnar01 1:08:568
+SPLIT COUNT: 2
+Dynamic track ok
+Ragnar01 [] has finished
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) Ben_thedriver BEST: 1:05:981 TOTAL: 9:44:777 Laps:6 SesID:1 HasFinished:false
+2) GaelTeam BEST: 1:06:307 TOTAL: 10:10:602 Laps:8 SesID:6 HasFinished:true
+3) lamaug BEST: 1:06:753 TOTAL: 10:52:942 Laps:9 SesID:3 HasFinished:true
+4) Ragnar01 BEST: 1:07:150 TOTAL: 11:05:795 Laps:9 SesID:5 HasFinished:true
+5) Greg BEST: 1:07:471 TOTAL: 8:31:209 Laps:7 SesID:4 HasFinished:false
+6) Alonso02_fr BEST: 1:14:160 TOTAL: 10:36:028 Laps:2 SesID:2 HasFinished:true
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+Saving session json file: results/2016_9_13_21_13_QUALIFY.json
+NextSession
+SESSION: Race
+TYPE=RACE
+TIME=0
+LAPS=13
+OPEN=1
+WAIT TIME=40
+
+RACE, WaitTime: 40000 START TIME: 707082
+DynamicTrack: current_grip= 1  transfer= 1  sessiongrip= 1
+Weather update. Ambient: 26.641659 Road: 33.36247 Graphics: 3_clear
+SENDING session name : Race
+SENDING session index : 1
+SENDING session type : 3
+SENDING session time : 0
+SENDING session laps : 13
+SENDING remote time : 687682 now:667082 start_time:707082
+Sending weather  26.641659 33.36247
+SENDING remote time : 265593 now:667083 start_time:707082
+Sending weather  26.641659 33.36247
+SENDING remote time : 696436 now:667083 start_time:707082
+Sending weather  26.641659 33.36247
+SENDING remote time : 700554 now:667083 start_time:707082
+Sending weather  26.641659 33.36247
+SENDING remote time : 675514 now:667083 start_time:707082
+Sending weather  26.641659 33.36247
+SENDING remote time : 667345 now:667083 start_time:707082
+Sending weather  26.641659 33.36247
+SENDING http://93.57.10.21/lobby.ashx/ping?session=3&timeleft=13&port=9600&clients=6&track=ks_silverstone-international&pickup=1
+Session non in sync for Ben_thedriver [] 2 3
+SENDING remote time : 687682 now:667113 start_time:707082
+OK
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 0 CLIENT EVENTS
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (5) [Ragnar01 []]
+RECEIVED 1 CLIENT EVENTS
+COLLISION BETWEEN: Ragnar01 [] AND Alonso02_fr [] SPEED: 31.226322 WORLD POS: [-387.324615,-6.286918,250.522614] REL POS: [-0.000004,-0.176709,-1.730902]
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 1 CLIENT EVENTS
+COLLISION BETWEEN: Alonso02_fr [] AND Ragnar01 [] SPEED: 43.27761 WORLD POS: [-387.280823,-6.291057,250.463348] REL POS: [0.614631,-0.197253,2.264842]
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (3) [lamaug []]
+RECEIVED 1 CLIENT EVENTS
+COLLISION BETWEEN: lamaug [] AND Greg [] SPEED: 287.25195 WORLD POS: [-316.367676,-4.682959,140.429855] REL POS: [0.620892,-0.303692,-1.611824]
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (5) [Ragnar01 []]
+RECEIVED 1 CLIENT EVENTS
+COLLISION BETWEEN: Ragnar01 [] AND Alonso02_fr [] SPEED: 137.72661 WORLD POS: [-254.575485,-3.018042,61.301094] REL POS: [-0.000006,-0.156915,-1.748733]
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 1 CLIENT EVENTS
+COLLISION BETWEEN: Alonso02_fr [] AND Ragnar01 [] SPEED: 100.21814 WORLD POS: [-254.510620,-3.010483,61.240417] REL POS: [0.067288,-0.127951,2.233717]
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (4) [Greg []]
+RECEIVED 1 CLIENT EVENTS
+COLLISION BETWEEN: Greg [] AND lamaug [] SPEED: 287.555 WORLD POS: [-316.274109,-4.656106,139.806107] REL POS: [-0.671951,-0.265267,2.217257]
+TCP packet 71
+CHAT
+ADMIN COMMAND: /admin lamaug received from lamaug []
+Making lamaug [] admin
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (5) [Ragnar01 []]
+RECEIVED 1 CLIENT EVENTS
+COLLISION BETWEEN: Ragnar01 [] AND ENVIRONMENT SPEED: 69.805374 WORLD POS: [-231.022995,-2.714488,43.243618] REL POS: [0.856165,-0.313903,2.290048]
+TCP packet 71
+CHAT
+ADMIN COMMAND: /restart_session received from lamaug []
+Admin command: /restart_session
+RESTARTING SESSION
+SENDING session name : Race
+SENDING session index : 1
+SENDING session type : 3
+SENDING session time : 0
+SENDING session laps : 13
+SENDING remote time : 745104 now:724543 start_time:764543
+Sending weather  26.641659 33.36247
+SENDING remote time : 323048 now:724543 start_time:764543
+Sending weather  26.641659 33.36247
+SENDING remote time : 753896 now:724543 start_time:764543
+Sending weather  26.641659 33.36247
+SENDING remote time : 758012 now:724544 start_time:764543
+Sending weather  26.641659 33.36247
+SENDING remote time : 732976 now:724544 start_time:764543
+Sending weather  26.641659 33.36247
+SENDING remote time : 724805 now:724544 start_time:764543
+Sending weather  26.641659 33.36247
+SENDING http://93.57.10.21/lobby.ashx/ping?session=3&timeleft=13&port=9600&clients=6&track=ks_silverstone-international&pickup=1
+OK
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (4) [Greg []]
+RECEIVED 2 CLIENT EVENTS
+COLLISION BETWEEN: Greg [] AND Alonso02_fr [] SPEED: 38.933243 WORLD POS: [-271.939270,-3.216200,71.186501] REL POS: [0.896554,0.002683,-0.018249]
+COLLISION BETWEEN: Greg [] AND Ragnar01 [] SPEED: 290.6543 WORLD POS: [-269.137512,-3.479901,70.457550] REL POS: [-0.856962,-0.302148,2.280760]
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (5) [Ragnar01 []]
+RECEIVED 1 CLIENT EVENTS
+COLLISION BETWEEN: Ragnar01 [] AND Greg [] SPEED: 297.8646 WORLD POS: [-269.350708,-3.474252,70.229218] REL POS: [-0.647337,-0.309795,2.333493]
+PAGE: /ENTRY
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (5) [Ragnar01 []]
+RECEIVED 1 CLIENT EVENTS
+COLLISION BETWEEN: Ragnar01 [] AND Greg [] SPEED: 62.942635 WORLD POS: [295.438477,3.135246,-31.386963] REL POS: [0.856172,-0.313904,2.290064]
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (4) [Greg []]
+RECEIVED 1 CLIENT EVENTS
+COLLISION BETWEEN: Greg [] AND Ragnar01 [] SPEED: 23.633024 WORLD POS: [295.722015,3.121702,-31.139923] REL POS: [-0.886891,-0.282385,-0.063044]
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (5) [Ragnar01 []]
+RECEIVED 1 CLIENT EVENTS
+COLLISION BETWEEN: Ragnar01 [] AND Greg [] SPEED: 30.046648 WORLD POS: [-339.837006,-5.656128,543.104431] REL POS: [0.321583,-0.264100,2.330110]
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (4) [Greg []]
+RECEIVED 1 CLIENT EVENTS
+COLLISION BETWEEN: Greg [] AND Ragnar01 [] SPEED: 43.214207 WORLD POS: [-339.465820,-5.648641,543.369934] REL POS: [0.621571,-0.290559,-1.591841]
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (1) [Ben_thedriver []]
+RECEIVED 1 CLIENT EVENTS
+COLLISION BETWEEN: Ben_thedriver [] AND Ragnar01 [] SPEED: 26.109707 WORLD POS: [-370.388947,-5.540038,533.064270] REL POS: [0.870442,-0.107172,2.126806]
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (5) [Ragnar01 []]
+RECEIVED 1 CLIENT EVENTS
+COLLISION BETWEEN: Ragnar01 [] AND Ben_thedriver [] SPEED: 94.01476 WORLD POS: [-369.373444,-5.708390,532.742859] REL POS: [0.613654,-0.273996,-1.614255]
+TCP packet 71
+CHAT
+CHAT [Ragnar01]: PLP: Cut the track on lap 1|Ragnar01
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (6) [GaelTeam []]
+Car.onLapCompleted
+LAP GaelTeam 1:13:075
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:13:075 TOTAL: 1:13:073 Laps:1 SesID:6 HasFinished:false
+2) Ben_thedriver BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:1 HasFinished:false
+3) lamaug BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:3 HasFinished:false
+4) Ragnar01 BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:5 HasFinished:false
+5) Greg BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:4 HasFinished:false
+6) Alonso02_fr BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (3) [lamaug []]
+Car.onLapCompleted
+LAP lamaug 1:14:402
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:13:075 TOTAL: 1:13:073 Laps:1 SesID:6 HasFinished:false
+2) lamaug BEST: 1:14:402 TOTAL: 1:14:400 Laps:1 SesID:3 HasFinished:false
+3) Ben_thedriver BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:1 HasFinished:false
+4) Ragnar01 BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:5 HasFinished:false
+5) Greg BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:4 HasFinished:false
+6) Alonso02_fr BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (4) [Greg []]
+Car.onLapCompleted
+LAP Greg 1:16:488
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:13:075 TOTAL: 1:13:073 Laps:1 SesID:6 HasFinished:false
+2) lamaug BEST: 1:14:402 TOTAL: 1:14:400 Laps:1 SesID:3 HasFinished:false
+3) Greg BEST: 1:16:488 TOTAL: 1:16:490 Laps:1 SesID:4 HasFinished:false
+4) Ben_thedriver BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:1 HasFinished:false
+5) Ragnar01 BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:5 HasFinished:false
+6) Alonso02_fr BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (1) [Ben_thedriver []]
+Car.onLapCompleted
+LAP Ben_thedriver 1:16:925
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:13:075 TOTAL: 1:13:073 Laps:1 SesID:6 HasFinished:false
+2) lamaug BEST: 1:14:402 TOTAL: 1:14:400 Laps:1 SesID:3 HasFinished:false
+3) Greg BEST: 1:16:488 TOTAL: 1:16:490 Laps:1 SesID:4 HasFinished:false
+4) Ben_thedriver BEST: 1:16:925 TOTAL: 1:16:936 Laps:1 SesID:1 HasFinished:false
+5) Ragnar01 BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:5 HasFinished:false
+6) Alonso02_fr BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:2 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+Car.onLapCompleted
+LAP Alonso02_fr 1:18:137
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:13:075 TOTAL: 1:13:073 Laps:1 SesID:6 HasFinished:false
+2) lamaug BEST: 1:14:402 TOTAL: 1:14:400 Laps:1 SesID:3 HasFinished:false
+3) Greg BEST: 1:16:488 TOTAL: 1:16:490 Laps:1 SesID:4 HasFinished:false
+4) Ben_thedriver BEST: 1:16:925 TOTAL: 1:16:936 Laps:1 SesID:1 HasFinished:false
+5) Alonso02_fr BEST: 1:18:137 TOTAL: 1:18:126 Laps:1 SesID:2 HasFinished:false
+6) Ragnar01 BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:5 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (5) [Ragnar01 []]
+Car.onLapCompleted
+LAP Ragnar01 1:24:229
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:13:075 TOTAL: 1:13:073 Laps:1 SesID:6 HasFinished:false
+2) lamaug BEST: 1:14:402 TOTAL: 1:14:400 Laps:1 SesID:3 HasFinished:false
+3) Greg BEST: 1:16:488 TOTAL: 1:16:490 Laps:1 SesID:4 HasFinished:false
+4) Ben_thedriver BEST: 1:16:925 TOTAL: 1:16:936 Laps:1 SesID:1 HasFinished:false
+5) Alonso02_fr BEST: 1:18:137 TOTAL: 1:18:126 Laps:1 SesID:2 HasFinished:false
+6) Ragnar01 BEST: 1:24:229 TOTAL: 1:24:226 Laps:1 SesID:5 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (6) [GaelTeam []]
+Car.onLapCompleted
+LAP GaelTeam 1:06:624
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 2:19:696 Laps:2 SesID:6 HasFinished:false
+2) lamaug BEST: 1:14:402 TOTAL: 1:14:400 Laps:1 SesID:3 HasFinished:false
+3) Greg BEST: 1:16:488 TOTAL: 1:16:490 Laps:1 SesID:4 HasFinished:false
+4) Ben_thedriver BEST: 1:16:925 TOTAL: 1:16:936 Laps:1 SesID:1 HasFinished:false
+5) Alonso02_fr BEST: 1:18:137 TOTAL: 1:18:126 Laps:1 SesID:2 HasFinished:false
+6) Ragnar01 BEST: 1:24:229 TOTAL: 1:24:226 Laps:1 SesID:5 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (3) [lamaug []]
+Car.onLapCompleted
+LAP lamaug 1:06:670
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 2:19:696 Laps:2 SesID:6 HasFinished:false
+2) lamaug BEST: 1:06:670 TOTAL: 2:21:070 Laps:2 SesID:3 HasFinished:false
+3) Greg BEST: 1:16:488 TOTAL: 1:16:490 Laps:1 SesID:4 HasFinished:false
+4) Ben_thedriver BEST: 1:16:925 TOTAL: 1:16:936 Laps:1 SesID:1 HasFinished:false
+5) Alonso02_fr BEST: 1:18:137 TOTAL: 1:18:126 Laps:1 SesID:2 HasFinished:false
+6) Ragnar01 BEST: 1:24:229 TOTAL: 1:24:226 Laps:1 SesID:5 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (4) [Greg []]
+Car.onLapCompleted
+LAP Greg 1:07:707
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 2:19:696 Laps:2 SesID:6 HasFinished:false
+2) lamaug BEST: 1:06:670 TOTAL: 2:21:070 Laps:2 SesID:3 HasFinished:false
+3) Greg BEST: 1:07:707 TOTAL: 2:24:199 Laps:2 SesID:4 HasFinished:false
+4) Ben_thedriver BEST: 1:16:925 TOTAL: 1:16:936 Laps:1 SesID:1 HasFinished:false
+5) Alonso02_fr BEST: 1:18:137 TOTAL: 1:18:126 Laps:1 SesID:2 HasFinished:false
+6) Ragnar01 BEST: 1:24:229 TOTAL: 1:24:226 Laps:1 SesID:5 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (1) [Ben_thedriver []]
+Car.onLapCompleted
+LAP Ben_thedriver 1:07:669
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 2:19:696 Laps:2 SesID:6 HasFinished:false
+2) lamaug BEST: 1:06:670 TOTAL: 2:21:070 Laps:2 SesID:3 HasFinished:false
+3) Greg BEST: 1:07:707 TOTAL: 2:24:199 Laps:2 SesID:4 HasFinished:false
+4) Ben_thedriver BEST: 1:07:669 TOTAL: 2:24:577 Laps:2 SesID:1 HasFinished:false
+5) Alonso02_fr BEST: 1:18:137 TOTAL: 1:18:126 Laps:1 SesID:2 HasFinished:false
+6) Ragnar01 BEST: 1:24:229 TOTAL: 1:24:226 Laps:1 SesID:5 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+Car.onLapCompleted
+LAP Alonso02_fr 1:08:637
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 2:19:696 Laps:2 SesID:6 HasFinished:false
+2) lamaug BEST: 1:06:670 TOTAL: 2:21:070 Laps:2 SesID:3 HasFinished:false
+3) Greg BEST: 1:07:707 TOTAL: 2:24:199 Laps:2 SesID:4 HasFinished:false
+4) Ben_thedriver BEST: 1:07:669 TOTAL: 2:24:577 Laps:2 SesID:1 HasFinished:false
+5) Alonso02_fr BEST: 1:08:637 TOTAL: 2:26:770 Laps:2 SesID:2 HasFinished:false
+6) Ragnar01 BEST: 1:24:229 TOTAL: 1:24:226 Laps:1 SesID:5 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (5) [Ragnar01 []]
+Car.onLapCompleted
+LAP Ragnar01 1:07:555
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 2:19:696 Laps:2 SesID:6 HasFinished:false
+2) lamaug BEST: 1:06:670 TOTAL: 2:21:070 Laps:2 SesID:3 HasFinished:false
+3) Greg BEST: 1:07:707 TOTAL: 2:24:199 Laps:2 SesID:4 HasFinished:false
+4) Ben_thedriver BEST: 1:07:669 TOTAL: 2:24:577 Laps:2 SesID:1 HasFinished:false
+5) Alonso02_fr BEST: 1:08:637 TOTAL: 2:26:770 Laps:2 SesID:2 HasFinished:false
+6) Ragnar01 BEST: 1:07:555 TOTAL: 2:31:780 Laps:2 SesID:5 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (6) [GaelTeam []]
+Car.onLapCompleted
+LAP GaelTeam 1:06:721
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 3:26:411 Laps:3 SesID:6 HasFinished:false
+2) lamaug BEST: 1:06:670 TOTAL: 2:21:070 Laps:2 SesID:3 HasFinished:false
+3) Greg BEST: 1:07:707 TOTAL: 2:24:199 Laps:2 SesID:4 HasFinished:false
+4) Ben_thedriver BEST: 1:07:669 TOTAL: 2:24:577 Laps:2 SesID:1 HasFinished:false
+5) Alonso02_fr BEST: 1:08:637 TOTAL: 2:26:770 Laps:2 SesID:2 HasFinished:false
+6) Ragnar01 BEST: 1:07:555 TOTAL: 2:31:780 Laps:2 SesID:5 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (3) [lamaug []]
+Car.onLapCompleted
+LAP lamaug 1:06:826
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 3:26:411 Laps:3 SesID:6 HasFinished:false
+2) lamaug BEST: 1:06:670 TOTAL: 3:27:894 Laps:3 SesID:3 HasFinished:false
+3) Greg BEST: 1:07:707 TOTAL: 2:24:199 Laps:2 SesID:4 HasFinished:false
+4) Ben_thedriver BEST: 1:07:669 TOTAL: 2:24:577 Laps:2 SesID:1 HasFinished:false
+5) Alonso02_fr BEST: 1:08:637 TOTAL: 2:26:770 Laps:2 SesID:2 HasFinished:false
+6) Ragnar01 BEST: 1:07:555 TOTAL: 2:31:780 Laps:2 SesID:5 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (4) [Greg []]
+Car.onLapCompleted
+LAP Greg 1:07:738
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 3:26:411 Laps:3 SesID:6 HasFinished:false
+2) lamaug BEST: 1:06:670 TOTAL: 3:27:894 Laps:3 SesID:3 HasFinished:false
+3) Greg BEST: 1:07:707 TOTAL: 3:31:932 Laps:3 SesID:4 HasFinished:false
+4) Ben_thedriver BEST: 1:07:669 TOTAL: 2:24:577 Laps:2 SesID:1 HasFinished:false
+5) Alonso02_fr BEST: 1:08:637 TOTAL: 2:26:770 Laps:2 SesID:2 HasFinished:false
+6) Ragnar01 BEST: 1:07:555 TOTAL: 2:31:780 Laps:2 SesID:5 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+Car.onLapCompleted
+LAP Alonso02_fr 1:08:840
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 3:26:411 Laps:3 SesID:6 HasFinished:false
+2) lamaug BEST: 1:06:670 TOTAL: 3:27:894 Laps:3 SesID:3 HasFinished:false
+3) Greg BEST: 1:07:707 TOTAL: 3:31:932 Laps:3 SesID:4 HasFinished:false
+4) Alonso02_fr BEST: 1:08:637 TOTAL: 3:35:618 Laps:3 SesID:2 HasFinished:false
+5) Ben_thedriver BEST: 1:07:669 TOTAL: 2:24:577 Laps:2 SesID:1 HasFinished:false
+6) Ragnar01 BEST: 1:07:555 TOTAL: 2:31:780 Laps:2 SesID:5 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (5) [Ragnar01 []]
+Car.onLapCompleted
+LAP Ragnar01 1:07:550
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 3:26:411 Laps:3 SesID:6 HasFinished:false
+2) lamaug BEST: 1:06:670 TOTAL: 3:27:894 Laps:3 SesID:3 HasFinished:false
+3) Greg BEST: 1:07:707 TOTAL: 3:31:932 Laps:3 SesID:4 HasFinished:false
+4) Alonso02_fr BEST: 1:08:637 TOTAL: 3:35:618 Laps:3 SesID:2 HasFinished:false
+5) Ragnar01 BEST: 1:07:550 TOTAL: 3:39:321 Laps:3 SesID:5 HasFinished:false
+6) Ben_thedriver BEST: 1:07:669 TOTAL: 2:24:577 Laps:2 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (1) [Ben_thedriver []]
+Car.onLapCompleted
+LAP Ben_thedriver 1:18:197
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 3:26:411 Laps:3 SesID:6 HasFinished:false
+2) lamaug BEST: 1:06:670 TOTAL: 3:27:894 Laps:3 SesID:3 HasFinished:false
+3) Greg BEST: 1:07:707 TOTAL: 3:31:932 Laps:3 SesID:4 HasFinished:false
+4) Alonso02_fr BEST: 1:08:637 TOTAL: 3:35:618 Laps:3 SesID:2 HasFinished:false
+5) Ragnar01 BEST: 1:07:550 TOTAL: 3:39:321 Laps:3 SesID:5 HasFinished:false
+6) Ben_thedriver BEST: 1:07:669 TOTAL: 3:42:770 Laps:3 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (6) [GaelTeam []]
+Car.onLapCompleted
+LAP GaelTeam 1:06:633
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 4:33:053 Laps:4 SesID:6 HasFinished:false
+2) lamaug BEST: 1:06:670 TOTAL: 3:27:894 Laps:3 SesID:3 HasFinished:false
+3) Greg BEST: 1:07:707 TOTAL: 3:31:932 Laps:3 SesID:4 HasFinished:false
+4) Alonso02_fr BEST: 1:08:637 TOTAL: 3:35:618 Laps:3 SesID:2 HasFinished:false
+5) Ragnar01 BEST: 1:07:550 TOTAL: 3:39:321 Laps:3 SesID:5 HasFinished:false
+6) Ben_thedriver BEST: 1:07:669 TOTAL: 3:42:770 Laps:3 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (3) [lamaug []]
+Car.onLapCompleted
+LAP lamaug 1:06:646
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 4:33:053 Laps:4 SesID:6 HasFinished:false
+2) lamaug BEST: 1:06:646 TOTAL: 4:34:539 Laps:4 SesID:3 HasFinished:false
+3) Greg BEST: 1:07:707 TOTAL: 3:31:932 Laps:3 SesID:4 HasFinished:false
+4) Alonso02_fr BEST: 1:08:637 TOTAL: 3:35:618 Laps:3 SesID:2 HasFinished:false
+5) Ragnar01 BEST: 1:07:550 TOTAL: 3:39:321 Laps:3 SesID:5 HasFinished:false
+6) Ben_thedriver BEST: 1:07:669 TOTAL: 3:42:770 Laps:3 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (4) [Greg []]
+Car.onLapCompleted
+LAP Greg 1:07:155
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 4:33:053 Laps:4 SesID:6 HasFinished:false
+2) lamaug BEST: 1:06:646 TOTAL: 4:34:539 Laps:4 SesID:3 HasFinished:false
+3) Greg BEST: 1:07:155 TOTAL: 4:39:090 Laps:4 SesID:4 HasFinished:false
+4) Alonso02_fr BEST: 1:08:637 TOTAL: 3:35:618 Laps:3 SesID:2 HasFinished:false
+5) Ragnar01 BEST: 1:07:550 TOTAL: 3:39:321 Laps:3 SesID:5 HasFinished:false
+6) Ben_thedriver BEST: 1:07:669 TOTAL: 3:42:770 Laps:3 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+Car.onLapCompleted
+LAP Alonso02_fr 1:08:974
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 4:33:053 Laps:4 SesID:6 HasFinished:false
+2) lamaug BEST: 1:06:646 TOTAL: 4:34:539 Laps:4 SesID:3 HasFinished:false
+3) Greg BEST: 1:07:155 TOTAL: 4:39:090 Laps:4 SesID:4 HasFinished:false
+4) Alonso02_fr BEST: 1:08:637 TOTAL: 4:44:595 Laps:4 SesID:2 HasFinished:false
+5) Ragnar01 BEST: 1:07:550 TOTAL: 3:39:321 Laps:3 SesID:5 HasFinished:false
+6) Ben_thedriver BEST: 1:07:669 TOTAL: 3:42:770 Laps:3 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (5) [Ragnar01 []]
+Car.onLapCompleted
+LAP Ragnar01 1:07:593
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 4:33:053 Laps:4 SesID:6 HasFinished:false
+2) lamaug BEST: 1:06:646 TOTAL: 4:34:539 Laps:4 SesID:3 HasFinished:false
+3) Greg BEST: 1:07:155 TOTAL: 4:39:090 Laps:4 SesID:4 HasFinished:false
+4) Alonso02_fr BEST: 1:08:637 TOTAL: 4:44:595 Laps:4 SesID:2 HasFinished:false
+5) Ragnar01 BEST: 1:07:550 TOTAL: 4:46:921 Laps:4 SesID:5 HasFinished:false
+6) Ben_thedriver BEST: 1:07:669 TOTAL: 3:42:770 Laps:3 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (1) [Ben_thedriver []]
+Car.onLapCompleted
+LAP Ben_thedriver 1:05:945
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 4:33:053 Laps:4 SesID:6 HasFinished:false
+2) lamaug BEST: 1:06:646 TOTAL: 4:34:539 Laps:4 SesID:3 HasFinished:false
+3) Greg BEST: 1:07:155 TOTAL: 4:39:090 Laps:4 SesID:4 HasFinished:false
+4) Alonso02_fr BEST: 1:08:637 TOTAL: 4:44:595 Laps:4 SesID:2 HasFinished:false
+5) Ragnar01 BEST: 1:07:550 TOTAL: 4:46:921 Laps:4 SesID:5 HasFinished:false
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 4:48:697 Laps:4 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+PAGE: /ENTRY
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (6) [GaelTeam []]
+Car.onLapCompleted
+LAP GaelTeam 1:06:753
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 5:39:795 Laps:5 SesID:6 HasFinished:false
+2) lamaug BEST: 1:06:646 TOTAL: 4:34:539 Laps:4 SesID:3 HasFinished:false
+3) Greg BEST: 1:07:155 TOTAL: 4:39:090 Laps:4 SesID:4 HasFinished:false
+4) Alonso02_fr BEST: 1:08:637 TOTAL: 4:44:595 Laps:4 SesID:2 HasFinished:false
+5) Ragnar01 BEST: 1:07:550 TOTAL: 4:46:921 Laps:4 SesID:5 HasFinished:false
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 4:48:697 Laps:4 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (3) [lamaug []]
+Car.onLapCompleted
+LAP lamaug 1:06:597
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 5:39:795 Laps:5 SesID:6 HasFinished:false
+2) lamaug BEST: 1:06:597 TOTAL: 5:41:136 Laps:5 SesID:3 HasFinished:false
+3) Greg BEST: 1:07:155 TOTAL: 4:39:090 Laps:4 SesID:4 HasFinished:false
+4) Alonso02_fr BEST: 1:08:637 TOTAL: 4:44:595 Laps:4 SesID:2 HasFinished:false
+5) Ragnar01 BEST: 1:07:550 TOTAL: 4:46:921 Laps:4 SesID:5 HasFinished:false
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 4:48:697 Laps:4 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (4) [Greg []]
+Car.onLapCompleted
+LAP Greg 1:07:176
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 5:39:795 Laps:5 SesID:6 HasFinished:false
+2) lamaug BEST: 1:06:597 TOTAL: 5:41:136 Laps:5 SesID:3 HasFinished:false
+3) Greg BEST: 1:07:155 TOTAL: 5:46:272 Laps:5 SesID:4 HasFinished:false
+4) Alonso02_fr BEST: 1:08:637 TOTAL: 4:44:595 Laps:4 SesID:2 HasFinished:false
+5) Ragnar01 BEST: 1:07:550 TOTAL: 4:46:921 Laps:4 SesID:5 HasFinished:false
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 4:48:697 Laps:4 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+Car.onLapCompleted
+LAP Alonso02_fr 1:08:063
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 5:39:795 Laps:5 SesID:6 HasFinished:false
+2) lamaug BEST: 1:06:597 TOTAL: 5:41:136 Laps:5 SesID:3 HasFinished:false
+3) Greg BEST: 1:07:155 TOTAL: 5:46:272 Laps:5 SesID:4 HasFinished:false
+4) Alonso02_fr BEST: 1:08:063 TOTAL: 5:52:657 Laps:5 SesID:2 HasFinished:false
+5) Ragnar01 BEST: 1:07:550 TOTAL: 4:46:921 Laps:4 SesID:5 HasFinished:false
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 4:48:697 Laps:4 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (5) [Ragnar01 []]
+Car.onLapCompleted
+LAP Ragnar01 1:08:089
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 5:39:795 Laps:5 SesID:6 HasFinished:false
+2) lamaug BEST: 1:06:597 TOTAL: 5:41:136 Laps:5 SesID:3 HasFinished:false
+3) Greg BEST: 1:07:155 TOTAL: 5:46:272 Laps:5 SesID:4 HasFinished:false
+4) Alonso02_fr BEST: 1:08:063 TOTAL: 5:52:657 Laps:5 SesID:2 HasFinished:false
+5) Ragnar01 BEST: 1:07:550 TOTAL: 5:55:010 Laps:5 SesID:5 HasFinished:false
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 4:48:697 Laps:4 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (1) [Ben_thedriver []]
+Car.onLapCompleted
+LAP Ben_thedriver 1:07:021
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 5:39:795 Laps:5 SesID:6 HasFinished:false
+2) lamaug BEST: 1:06:597 TOTAL: 5:41:136 Laps:5 SesID:3 HasFinished:false
+3) Greg BEST: 1:07:155 TOTAL: 5:46:272 Laps:5 SesID:4 HasFinished:false
+4) Alonso02_fr BEST: 1:08:063 TOTAL: 5:52:657 Laps:5 SesID:2 HasFinished:false
+5) Ragnar01 BEST: 1:07:550 TOTAL: 5:55:010 Laps:5 SesID:5 HasFinished:false
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 5:55:717 Laps:5 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+PAGE: /JSON|76561198088033800
+Serve JSON took 0 ms
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (6) [GaelTeam []]
+Car.onLapCompleted
+LAP GaelTeam 1:06:716
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 6:46:512 Laps:6 SesID:6 HasFinished:false
+2) lamaug BEST: 1:06:597 TOTAL: 5:41:136 Laps:5 SesID:3 HasFinished:false
+3) Greg BEST: 1:07:155 TOTAL: 5:46:272 Laps:5 SesID:4 HasFinished:false
+4) Alonso02_fr BEST: 1:08:063 TOTAL: 5:52:657 Laps:5 SesID:2 HasFinished:false
+5) Ragnar01 BEST: 1:07:550 TOTAL: 5:55:010 Laps:5 SesID:5 HasFinished:false
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 5:55:717 Laps:5 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (4) [Greg []]
+Car.onLapCompleted
+LAP Greg 1:09:803
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 6:46:512 Laps:6 SesID:6 HasFinished:false
+2) Greg BEST: 1:07:155 TOTAL: 6:56:082 Laps:6 SesID:4 HasFinished:false
+3) lamaug BEST: 1:06:597 TOTAL: 5:41:136 Laps:5 SesID:3 HasFinished:false
+4) Alonso02_fr BEST: 1:08:063 TOTAL: 5:52:657 Laps:5 SesID:2 HasFinished:false
+5) Ragnar01 BEST: 1:07:550 TOTAL: 5:55:010 Laps:5 SesID:5 HasFinished:false
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 5:55:717 Laps:5 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (3) [lamaug []]
+Car.onLapCompleted
+LAP lamaug 1:19:253
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 6:46:512 Laps:6 SesID:6 HasFinished:false
+2) Greg BEST: 1:07:155 TOTAL: 6:56:082 Laps:6 SesID:4 HasFinished:false
+3) lamaug BEST: 1:06:597 TOTAL: 7:00:387 Laps:6 SesID:3 HasFinished:false
+4) Alonso02_fr BEST: 1:08:063 TOTAL: 5:52:657 Laps:5 SesID:2 HasFinished:false
+5) Ragnar01 BEST: 1:07:550 TOTAL: 5:55:010 Laps:5 SesID:5 HasFinished:false
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 5:55:717 Laps:5 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+Car.onLapCompleted
+LAP Alonso02_fr 1:09:005
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 6:46:512 Laps:6 SesID:6 HasFinished:false
+2) Greg BEST: 1:07:155 TOTAL: 6:56:082 Laps:6 SesID:4 HasFinished:false
+3) lamaug BEST: 1:06:597 TOTAL: 7:00:387 Laps:6 SesID:3 HasFinished:false
+4) Alonso02_fr BEST: 1:08:063 TOTAL: 7:01:661 Laps:6 SesID:2 HasFinished:false
+5) Ragnar01 BEST: 1:07:550 TOTAL: 5:55:010 Laps:5 SesID:5 HasFinished:false
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 5:55:717 Laps:5 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (5) [Ragnar01 []]
+Car.onLapCompleted
+LAP Ragnar01 1:06:799
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 6:46:512 Laps:6 SesID:6 HasFinished:false
+2) Greg BEST: 1:07:155 TOTAL: 6:56:082 Laps:6 SesID:4 HasFinished:false
+3) lamaug BEST: 1:06:597 TOTAL: 7:00:387 Laps:6 SesID:3 HasFinished:false
+4) Alonso02_fr BEST: 1:08:063 TOTAL: 7:01:661 Laps:6 SesID:2 HasFinished:false
+5) Ragnar01 BEST: 1:06:799 TOTAL: 7:01:810 Laps:6 SesID:5 HasFinished:false
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 5:55:717 Laps:5 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (1) [Ben_thedriver []]
+Car.onLapCompleted
+LAP Ben_thedriver 1:07:127
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 6:46:512 Laps:6 SesID:6 HasFinished:false
+2) Greg BEST: 1:07:155 TOTAL: 6:56:082 Laps:6 SesID:4 HasFinished:false
+3) lamaug BEST: 1:06:597 TOTAL: 7:00:387 Laps:6 SesID:3 HasFinished:false
+4) Alonso02_fr BEST: 1:08:063 TOTAL: 7:01:661 Laps:6 SesID:2 HasFinished:false
+5) Ragnar01 BEST: 1:06:799 TOTAL: 7:01:810 Laps:6 SesID:5 HasFinished:false
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 7:02:842 Laps:6 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (6) [GaelTeam []]
+Car.onLapCompleted
+LAP GaelTeam 1:07:017
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 7:53:543 Laps:7 SesID:6 HasFinished:false
+2) Greg BEST: 1:07:155 TOTAL: 6:56:082 Laps:6 SesID:4 HasFinished:false
+3) lamaug BEST: 1:06:597 TOTAL: 7:00:387 Laps:6 SesID:3 HasFinished:false
+4) Alonso02_fr BEST: 1:08:063 TOTAL: 7:01:661 Laps:6 SesID:2 HasFinished:false
+5) Ragnar01 BEST: 1:06:799 TOTAL: 7:01:810 Laps:6 SesID:5 HasFinished:false
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 7:02:842 Laps:6 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (4) [Greg []]
+Car.onLapCompleted
+LAP Greg 1:07:242
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 7:53:543 Laps:7 SesID:6 HasFinished:false
+2) Greg BEST: 1:07:155 TOTAL: 8:03:317 Laps:7 SesID:4 HasFinished:false
+3) lamaug BEST: 1:06:597 TOTAL: 7:00:387 Laps:6 SesID:3 HasFinished:false
+4) Alonso02_fr BEST: 1:08:063 TOTAL: 7:01:661 Laps:6 SesID:2 HasFinished:false
+5) Ragnar01 BEST: 1:06:799 TOTAL: 7:01:810 Laps:6 SesID:5 HasFinished:false
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 7:02:842 Laps:6 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (3) [lamaug []]
+Car.onLapCompleted
+LAP lamaug 1:09:329
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 7:53:543 Laps:7 SesID:6 HasFinished:false
+2) Greg BEST: 1:07:155 TOTAL: 8:03:317 Laps:7 SesID:4 HasFinished:false
+3) lamaug BEST: 1:06:597 TOTAL: 8:09:714 Laps:7 SesID:3 HasFinished:false
+4) Alonso02_fr BEST: 1:08:063 TOTAL: 7:01:661 Laps:6 SesID:2 HasFinished:false
+5) Ragnar01 BEST: 1:06:799 TOTAL: 7:01:810 Laps:6 SesID:5 HasFinished:false
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 7:02:842 Laps:6 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+Car.onLapCompleted
+LAP Alonso02_fr 1:09:109
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 7:53:543 Laps:7 SesID:6 HasFinished:false
+2) Greg BEST: 1:07:155 TOTAL: 8:03:317 Laps:7 SesID:4 HasFinished:false
+3) lamaug BEST: 1:06:597 TOTAL: 8:09:714 Laps:7 SesID:3 HasFinished:false
+4) Alonso02_fr BEST: 1:08:063 TOTAL: 8:10:765 Laps:7 SesID:2 HasFinished:false
+5) Ragnar01 BEST: 1:06:799 TOTAL: 7:01:810 Laps:6 SesID:5 HasFinished:false
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 7:02:842 Laps:6 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (5) [Ragnar01 []]
+Car.onLapCompleted
+LAP Ragnar01 1:09:256
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 7:53:543 Laps:7 SesID:6 HasFinished:false
+2) Greg BEST: 1:07:155 TOTAL: 8:03:317 Laps:7 SesID:4 HasFinished:false
+3) lamaug BEST: 1:06:597 TOTAL: 8:09:714 Laps:7 SesID:3 HasFinished:false
+4) Alonso02_fr BEST: 1:08:063 TOTAL: 8:10:765 Laps:7 SesID:2 HasFinished:false
+5) Ragnar01 BEST: 1:06:799 TOTAL: 8:11:054 Laps:7 SesID:5 HasFinished:false
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 7:02:842 Laps:6 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (1) [Ben_thedriver []]
+Car.onLapCompleted
+LAP Ben_thedriver 1:08:479
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 7:53:543 Laps:7 SesID:6 HasFinished:false
+2) Greg BEST: 1:07:155 TOTAL: 8:03:317 Laps:7 SesID:4 HasFinished:false
+3) lamaug BEST: 1:06:597 TOTAL: 8:09:714 Laps:7 SesID:3 HasFinished:false
+4) Alonso02_fr BEST: 1:08:063 TOTAL: 8:10:765 Laps:7 SesID:2 HasFinished:false
+5) Ragnar01 BEST: 1:06:799 TOTAL: 8:11:054 Laps:7 SesID:5 HasFinished:false
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 8:11:312 Laps:7 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (5) [Ragnar01 []]
+RECEIVED 1 CLIENT EVENTS
+COLLISION BETWEEN: Ragnar01 [] AND Ben_thedriver [] SPEED: 27.222137 WORLD POS: [249.516357,-1.910462,412.012482] REL POS: [-0.609206,-0.287595,-1.614188]
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (6) [GaelTeam []]
+Car.onLapCompleted
+LAP GaelTeam 1:07:090
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 9:00:619 Laps:8 SesID:6 HasFinished:false
+2) Greg BEST: 1:07:155 TOTAL: 8:03:317 Laps:7 SesID:4 HasFinished:false
+3) lamaug BEST: 1:06:597 TOTAL: 8:09:714 Laps:7 SesID:3 HasFinished:false
+4) Alonso02_fr BEST: 1:08:063 TOTAL: 8:10:765 Laps:7 SesID:2 HasFinished:false
+5) Ragnar01 BEST: 1:06:799 TOTAL: 8:11:054 Laps:7 SesID:5 HasFinished:false
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 8:11:312 Laps:7 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (5) [Ragnar01 []]
+RECEIVED 1 CLIENT EVENTS
+COLLISION BETWEEN: Ragnar01 [] AND Ben_thedriver [] SPEED: 77.226456 WORLD POS: [-335.914948,-5.607418,546.857239] REL POS: [0.620659,-0.303657,-1.616494]
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (4) [Greg []]
+Car.onLapCompleted
+LAP Greg 1:07:545
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 9:00:619 Laps:8 SesID:6 HasFinished:false
+2) Greg BEST: 1:07:155 TOTAL: 9:10:870 Laps:8 SesID:4 HasFinished:false
+3) lamaug BEST: 1:06:597 TOTAL: 8:09:714 Laps:7 SesID:3 HasFinished:false
+4) Alonso02_fr BEST: 1:08:063 TOTAL: 8:10:765 Laps:7 SesID:2 HasFinished:false
+5) Ragnar01 BEST: 1:06:799 TOTAL: 8:11:054 Laps:7 SesID:5 HasFinished:false
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 8:11:312 Laps:7 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (3) [lamaug []]
+Car.onLapCompleted
+LAP lamaug 1:07:601
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 9:00:619 Laps:8 SesID:6 HasFinished:false
+2) Greg BEST: 1:07:155 TOTAL: 9:10:870 Laps:8 SesID:4 HasFinished:false
+3) lamaug BEST: 1:06:597 TOTAL: 9:17:313 Laps:8 SesID:3 HasFinished:false
+4) Alonso02_fr BEST: 1:08:063 TOTAL: 8:10:765 Laps:7 SesID:2 HasFinished:false
+5) Ragnar01 BEST: 1:06:799 TOTAL: 8:11:054 Laps:7 SesID:5 HasFinished:false
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 8:11:312 Laps:7 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+Car.onLapCompleted
+LAP Alonso02_fr 1:07:884
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 9:00:619 Laps:8 SesID:6 HasFinished:false
+2) Greg BEST: 1:07:155 TOTAL: 9:10:870 Laps:8 SesID:4 HasFinished:false
+3) lamaug BEST: 1:06:597 TOTAL: 9:17:313 Laps:8 SesID:3 HasFinished:false
+4) Alonso02_fr BEST: 1:07:884 TOTAL: 9:18:651 Laps:8 SesID:2 HasFinished:false
+5) Ragnar01 BEST: 1:06:799 TOTAL: 8:11:054 Laps:7 SesID:5 HasFinished:false
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 8:11:312 Laps:7 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (5) [Ragnar01 []]
+Car.onLapCompleted
+LAP Ragnar01 1:08:563
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 9:00:619 Laps:8 SesID:6 HasFinished:false
+2) Greg BEST: 1:07:155 TOTAL: 9:10:870 Laps:8 SesID:4 HasFinished:false
+3) lamaug BEST: 1:06:597 TOTAL: 9:17:313 Laps:8 SesID:3 HasFinished:false
+4) Alonso02_fr BEST: 1:07:884 TOTAL: 9:18:651 Laps:8 SesID:2 HasFinished:false
+5) Ragnar01 BEST: 1:06:799 TOTAL: 9:19:630 Laps:8 SesID:5 HasFinished:false
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 8:11:312 Laps:7 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (1) [Ben_thedriver []]
+Car.onLapCompleted
+LAP Ben_thedriver 1:19:565
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 9:00:619 Laps:8 SesID:6 HasFinished:false
+2) Greg BEST: 1:07:155 TOTAL: 9:10:870 Laps:8 SesID:4 HasFinished:false
+3) lamaug BEST: 1:06:597 TOTAL: 9:17:313 Laps:8 SesID:3 HasFinished:false
+4) Alonso02_fr BEST: 1:07:884 TOTAL: 9:18:651 Laps:8 SesID:2 HasFinished:false
+5) Ragnar01 BEST: 1:06:799 TOTAL: 9:19:630 Laps:8 SesID:5 HasFinished:false
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 9:30:836 Laps:8 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+PAGE: /ENTRY
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (6) [GaelTeam []]
+Car.onLapCompleted
+LAP GaelTeam 1:06:875
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 10:07:503 Laps:9 SesID:6 HasFinished:false
+2) Greg BEST: 1:07:155 TOTAL: 9:10:870 Laps:8 SesID:4 HasFinished:false
+3) lamaug BEST: 1:06:597 TOTAL: 9:17:313 Laps:8 SesID:3 HasFinished:false
+4) Alonso02_fr BEST: 1:07:884 TOTAL: 9:18:651 Laps:8 SesID:2 HasFinished:false
+5) Ragnar01 BEST: 1:06:799 TOTAL: 9:19:630 Laps:8 SesID:5 HasFinished:false
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 9:30:836 Laps:8 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (4) [Greg []]
+Car.onLapCompleted
+LAP Greg 1:07:806
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 10:07:503 Laps:9 SesID:6 HasFinished:false
+2) Greg BEST: 1:07:155 TOTAL: 10:18:676 Laps:9 SesID:4 HasFinished:false
+3) lamaug BEST: 1:06:597 TOTAL: 9:17:313 Laps:8 SesID:3 HasFinished:false
+4) Alonso02_fr BEST: 1:07:884 TOTAL: 9:18:651 Laps:8 SesID:2 HasFinished:false
+5) Ragnar01 BEST: 1:06:799 TOTAL: 9:19:630 Laps:8 SesID:5 HasFinished:false
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 9:30:836 Laps:8 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (3) [lamaug []]
+Car.onLapCompleted
+LAP lamaug 1:07:498
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 10:07:503 Laps:9 SesID:6 HasFinished:false
+2) Greg BEST: 1:07:155 TOTAL: 10:18:676 Laps:9 SesID:4 HasFinished:false
+3) lamaug BEST: 1:06:597 TOTAL: 10:24:811 Laps:9 SesID:3 HasFinished:false
+4) Alonso02_fr BEST: 1:07:884 TOTAL: 9:18:651 Laps:8 SesID:2 HasFinished:false
+5) Ragnar01 BEST: 1:06:799 TOTAL: 9:19:630 Laps:8 SesID:5 HasFinished:false
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 9:30:836 Laps:8 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+Car.onLapCompleted
+LAP Alonso02_fr 1:08:444
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 10:07:503 Laps:9 SesID:6 HasFinished:false
+2) Greg BEST: 1:07:155 TOTAL: 10:18:676 Laps:9 SesID:4 HasFinished:false
+3) lamaug BEST: 1:06:597 TOTAL: 10:24:811 Laps:9 SesID:3 HasFinished:false
+4) Alonso02_fr BEST: 1:07:884 TOTAL: 10:27:100 Laps:9 SesID:2 HasFinished:false
+5) Ragnar01 BEST: 1:06:799 TOTAL: 9:19:630 Laps:8 SesID:5 HasFinished:false
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 9:30:836 Laps:8 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (5) [Ragnar01 []]
+Car.onLapCompleted
+LAP Ragnar01 1:07:973
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 10:07:503 Laps:9 SesID:6 HasFinished:false
+2) Greg BEST: 1:07:155 TOTAL: 10:18:676 Laps:9 SesID:4 HasFinished:false
+3) lamaug BEST: 1:06:597 TOTAL: 10:24:811 Laps:9 SesID:3 HasFinished:false
+4) Alonso02_fr BEST: 1:07:884 TOTAL: 10:27:100 Laps:9 SesID:2 HasFinished:false
+5) Ragnar01 BEST: 1:06:799 TOTAL: 10:27:591 Laps:9 SesID:5 HasFinished:false
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 9:30:836 Laps:8 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (6) [GaelTeam []]
+Car.onLapCompleted
+LAP GaelTeam 1:06:953
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 11:14:439 Laps:10 SesID:6 HasFinished:false
+2) Greg BEST: 1:07:155 TOTAL: 10:18:676 Laps:9 SesID:4 HasFinished:false
+3) lamaug BEST: 1:06:597 TOTAL: 10:24:811 Laps:9 SesID:3 HasFinished:false
+4) Alonso02_fr BEST: 1:07:884 TOTAL: 10:27:100 Laps:9 SesID:2 HasFinished:false
+5) Ragnar01 BEST: 1:06:799 TOTAL: 10:27:591 Laps:9 SesID:5 HasFinished:false
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 9:30:836 Laps:8 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (5) [Ragnar01 []]
+RECEIVED 1 CLIENT EVENTS
+COLLISION BETWEEN: Ragnar01 [] AND Alonso02_fr [] SPEED: 120.443016 WORLD POS: [-155.215607,-1.047826,775.517395] REL POS: [-0.835689,-0.313667,2.275063]
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 1 CLIENT EVENTS
+COLLISION BETWEEN: Alonso02_fr [] AND Ragnar01 [] SPEED: 138.29832 WORLD POS: [-154.755081,-1.022595,776.239258] REL POS: [0.896856,-0.322762,0.906503]
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+RECEIVED 1 CLIENT EVENTS
+COLLISION BETWEEN: Alonso02_fr [] AND ENVIRONMENT SPEED: 97.08709 WORLD POS: [-183.861160,-4.350469,682.055969] REL POS: [-0.856140,-0.313904,2.290036]
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (4) [Greg []]
+Car.onLapCompleted
+LAP Greg 1:08:512
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 11:14:439 Laps:10 SesID:6 HasFinished:false
+2) Greg BEST: 1:07:155 TOTAL: 11:27:192 Laps:10 SesID:4 HasFinished:false
+3) lamaug BEST: 1:06:597 TOTAL: 10:24:811 Laps:9 SesID:3 HasFinished:false
+4) Alonso02_fr BEST: 1:07:884 TOTAL: 10:27:100 Laps:9 SesID:2 HasFinished:false
+5) Ragnar01 BEST: 1:06:799 TOTAL: 10:27:591 Laps:9 SesID:5 HasFinished:false
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 9:30:836 Laps:8 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (3) [lamaug []]
+Car.onLapCompleted
+LAP lamaug 1:07:082
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 11:14:439 Laps:10 SesID:6 HasFinished:false
+2) Greg BEST: 1:07:155 TOTAL: 11:27:192 Laps:10 SesID:4 HasFinished:false
+3) lamaug BEST: 1:06:597 TOTAL: 11:31:890 Laps:10 SesID:3 HasFinished:false
+4) Alonso02_fr BEST: 1:07:884 TOTAL: 10:27:100 Laps:9 SesID:2 HasFinished:false
+5) Ragnar01 BEST: 1:06:799 TOTAL: 10:27:591 Laps:9 SesID:5 HasFinished:false
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 9:30:836 Laps:8 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (5) [Ragnar01 []]
+Car.onLapCompleted
+LAP Ragnar01 1:10:297
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 11:14:439 Laps:10 SesID:6 HasFinished:false
+2) Greg BEST: 1:07:155 TOTAL: 11:27:192 Laps:10 SesID:4 HasFinished:false
+3) lamaug BEST: 1:06:597 TOTAL: 11:31:890 Laps:10 SesID:3 HasFinished:false
+4) Ragnar01 BEST: 1:06:799 TOTAL: 11:37:885 Laps:10 SesID:5 HasFinished:false
+5) Alonso02_fr BEST: 1:07:884 TOTAL: 10:27:100 Laps:9 SesID:2 HasFinished:false
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 9:30:836 Laps:8 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+Car.onLapCompleted
+LAP Alonso02_fr 1:16:502
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 11:14:439 Laps:10 SesID:6 HasFinished:false
+2) Greg BEST: 1:07:155 TOTAL: 11:27:192 Laps:10 SesID:4 HasFinished:false
+3) lamaug BEST: 1:06:597 TOTAL: 11:31:890 Laps:10 SesID:3 HasFinished:false
+4) Ragnar01 BEST: 1:06:799 TOTAL: 11:37:885 Laps:10 SesID:5 HasFinished:false
+5) Alonso02_fr BEST: 1:07:884 TOTAL: 11:43:596 Laps:10 SesID:2 HasFinished:false
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 9:30:836 Laps:8 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (6) [GaelTeam []]
+Car.onLapCompleted
+LAP GaelTeam 1:06:679
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 12:21:127 Laps:11 SesID:6 HasFinished:false
+2) Greg BEST: 1:07:155 TOTAL: 11:27:192 Laps:10 SesID:4 HasFinished:false
+3) lamaug BEST: 1:06:597 TOTAL: 11:31:890 Laps:10 SesID:3 HasFinished:false
+4) Ragnar01 BEST: 1:06:799 TOTAL: 11:37:885 Laps:10 SesID:5 HasFinished:false
+5) Alonso02_fr BEST: 1:07:884 TOTAL: 11:43:596 Laps:10 SesID:2 HasFinished:false
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 9:30:836 Laps:8 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (4) [Greg []]
+Car.onLapCompleted
+LAP Greg 1:07:344
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 12:21:127 Laps:11 SesID:6 HasFinished:false
+2) Greg BEST: 1:07:155 TOTAL: 12:34:536 Laps:11 SesID:4 HasFinished:false
+3) lamaug BEST: 1:06:597 TOTAL: 11:31:890 Laps:10 SesID:3 HasFinished:false
+4) Ragnar01 BEST: 1:06:799 TOTAL: 11:37:885 Laps:10 SesID:5 HasFinished:false
+5) Alonso02_fr BEST: 1:07:884 TOTAL: 11:43:596 Laps:10 SesID:2 HasFinished:false
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 9:30:836 Laps:8 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (3) [lamaug []]
+Car.onLapCompleted
+LAP lamaug 1:07:417
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 12:21:127 Laps:11 SesID:6 HasFinished:false
+2) Greg BEST: 1:07:155 TOTAL: 12:34:536 Laps:11 SesID:4 HasFinished:false
+3) lamaug BEST: 1:06:597 TOTAL: 12:39:306 Laps:11 SesID:3 HasFinished:false
+4) Ragnar01 BEST: 1:06:799 TOTAL: 11:37:885 Laps:10 SesID:5 HasFinished:false
+5) Alonso02_fr BEST: 1:07:884 TOTAL: 11:43:596 Laps:10 SesID:2 HasFinished:false
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 9:30:836 Laps:8 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (5) [Ragnar01 []]
+Car.onLapCompleted
+LAP Ragnar01 1:07:397
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 12:21:127 Laps:11 SesID:6 HasFinished:false
+2) Greg BEST: 1:07:155 TOTAL: 12:34:536 Laps:11 SesID:4 HasFinished:false
+3) lamaug BEST: 1:06:597 TOTAL: 12:39:306 Laps:11 SesID:3 HasFinished:false
+4) Ragnar01 BEST: 1:06:799 TOTAL: 12:45:284 Laps:11 SesID:5 HasFinished:false
+5) Alonso02_fr BEST: 1:07:884 TOTAL: 11:43:596 Laps:10 SesID:2 HasFinished:false
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 9:30:836 Laps:8 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+Car.onLapCompleted
+LAP Alonso02_fr 1:08:933
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:624 TOTAL: 12:21:127 Laps:11 SesID:6 HasFinished:false
+2) Greg BEST: 1:07:155 TOTAL: 12:34:536 Laps:11 SesID:4 HasFinished:false
+3) lamaug BEST: 1:06:597 TOTAL: 12:39:306 Laps:11 SesID:3 HasFinished:false
+4) Ragnar01 BEST: 1:06:799 TOTAL: 12:45:284 Laps:11 SesID:5 HasFinished:false
+5) Alonso02_fr BEST: 1:07:884 TOTAL: 12:52:514 Laps:11 SesID:2 HasFinished:false
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 9:30:836 Laps:8 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (6) [GaelTeam []]
+Car.onLapCompleted
+LAP GaelTeam 1:06:484
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:484 TOTAL: 13:27:608 Laps:12 SesID:6 HasFinished:false
+2) Greg BEST: 1:07:155 TOTAL: 12:34:536 Laps:11 SesID:4 HasFinished:false
+3) lamaug BEST: 1:06:597 TOTAL: 12:39:306 Laps:11 SesID:3 HasFinished:false
+4) Ragnar01 BEST: 1:06:799 TOTAL: 12:45:284 Laps:11 SesID:5 HasFinished:false
+5) Alonso02_fr BEST: 1:07:884 TOTAL: 12:52:514 Laps:11 SesID:2 HasFinished:false
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 9:30:836 Laps:8 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (4) [Greg []]
+Car.onLapCompleted
+LAP Greg 1:08:156
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:484 TOTAL: 13:27:608 Laps:12 SesID:6 HasFinished:false
+2) Greg BEST: 1:07:155 TOTAL: 13:42:702 Laps:12 SesID:4 HasFinished:false
+3) lamaug BEST: 1:06:597 TOTAL: 12:39:306 Laps:11 SesID:3 HasFinished:false
+4) Ragnar01 BEST: 1:06:799 TOTAL: 12:45:284 Laps:11 SesID:5 HasFinished:false
+5) Alonso02_fr BEST: 1:07:884 TOTAL: 12:52:514 Laps:11 SesID:2 HasFinished:false
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 9:30:836 Laps:8 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (3) [lamaug []]
+Car.onLapCompleted
+LAP lamaug 1:07:631
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:484 TOTAL: 13:27:608 Laps:12 SesID:6 HasFinished:false
+2) Greg BEST: 1:07:155 TOTAL: 13:42:702 Laps:12 SesID:4 HasFinished:false
+3) lamaug BEST: 1:06:597 TOTAL: 13:46:934 Laps:12 SesID:3 HasFinished:false
+4) Ragnar01 BEST: 1:06:799 TOTAL: 12:45:284 Laps:11 SesID:5 HasFinished:false
+5) Alonso02_fr BEST: 1:07:884 TOTAL: 12:52:514 Laps:11 SesID:2 HasFinished:false
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 9:30:836 Laps:8 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (5) [Ragnar01 []]
+Car.onLapCompleted
+LAP Ragnar01 1:07:053
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:484 TOTAL: 13:27:608 Laps:12 SesID:6 HasFinished:false
+2) Greg BEST: 1:07:155 TOTAL: 13:42:702 Laps:12 SesID:4 HasFinished:false
+3) lamaug BEST: 1:06:597 TOTAL: 13:46:934 Laps:12 SesID:3 HasFinished:false
+4) Ragnar01 BEST: 1:06:799 TOTAL: 13:52:342 Laps:12 SesID:5 HasFinished:false
+5) Alonso02_fr BEST: 1:07:884 TOTAL: 12:52:514 Laps:11 SesID:2 HasFinished:false
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 9:30:836 Laps:8 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+Car.onLapCompleted
+LAP Alonso02_fr 1:08:835
+SPLIT COUNT: 2
+Dynamic track ok
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:484 TOTAL: 13:27:608 Laps:12 SesID:6 HasFinished:false
+2) Greg BEST: 1:07:155 TOTAL: 13:42:702 Laps:12 SesID:4 HasFinished:false
+3) lamaug BEST: 1:06:597 TOTAL: 13:46:934 Laps:12 SesID:3 HasFinished:false
+4) Ragnar01 BEST: 1:06:799 TOTAL: 13:52:342 Laps:12 SesID:5 HasFinished:false
+5) Alonso02_fr BEST: 1:07:884 TOTAL: 14:01:373 Laps:12 SesID:2 HasFinished:false
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 9:30:836 Laps:8 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (6) [GaelTeam []]
+Car.onLapCompleted
+LAP GaelTeam 1:06:988
+SPLIT COUNT: 2
+Dynamic track ok
+GaelTeam [] has finished
+RACE OVER DETECTED!
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:484 TOTAL: 14:34:594 Laps:13 SesID:6 HasFinished:true
+2) Greg BEST: 1:07:155 TOTAL: 13:42:702 Laps:12 SesID:4 HasFinished:false
+3) lamaug BEST: 1:06:597 TOTAL: 13:46:934 Laps:12 SesID:3 HasFinished:false
+4) Ragnar01 BEST: 1:06:799 TOTAL: 13:52:342 Laps:12 SesID:5 HasFinished:false
+5) Alonso02_fr BEST: 1:07:884 TOTAL: 14:01:373 Laps:12 SesID:2 HasFinished:false
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 9:30:836 Laps:8 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+PAGE: /JSON|76561198120839453
+Serve JSON took 1 ms
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (4) [Greg []]
+Car.onLapCompleted
+LAP Greg 1:08:312
+SPLIT COUNT: 2
+Dynamic track ok
+Greg [] has finished
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:484 TOTAL: 14:34:594 Laps:13 SesID:6 HasFinished:true
+2) Greg BEST: 1:07:155 TOTAL: 14:51:015 Laps:13 SesID:4 HasFinished:true
+3) lamaug BEST: 1:06:597 TOTAL: 13:46:934 Laps:12 SesID:3 HasFinished:false
+4) Ragnar01 BEST: 1:06:799 TOTAL: 13:52:342 Laps:12 SesID:5 HasFinished:false
+5) Alonso02_fr BEST: 1:07:884 TOTAL: 14:01:373 Laps:12 SesID:2 HasFinished:false
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 9:30:836 Laps:8 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+PAGE: /JSON|76561198120839453
+Serve JSON took 0 ms
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (3) [lamaug []]
+Car.onLapCompleted
+LAP lamaug 1:08:582
+SPLIT COUNT: 2
+Dynamic track ok
+lamaug [] has finished
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:484 TOTAL: 14:34:594 Laps:13 SesID:6 HasFinished:true
+2) Greg BEST: 1:07:155 TOTAL: 14:51:015 Laps:13 SesID:4 HasFinished:true
+3) lamaug BEST: 1:06:597 TOTAL: 14:55:515 Laps:13 SesID:3 HasFinished:true
+4) Ragnar01 BEST: 1:06:799 TOTAL: 13:52:342 Laps:12 SesID:5 HasFinished:false
+5) Alonso02_fr BEST: 1:07:884 TOTAL: 14:01:373 Laps:12 SesID:2 HasFinished:false
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 9:30:836 Laps:8 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+PAGE: /ENTRY
+TCP packet 130
+Dispatching TCP message to ks_praga_r1 (5) [Ragnar01 []]
+RECEIVED 1 CLIENT EVENTS
+COLLISION BETWEEN: Ragnar01 [] AND ENVIRONMENT SPEED: 70.70561 WORLD POS: [-469.239899,-7.122520,376.964355] REL POS: [-0.856154,-0.313904,2.290056]
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+Car.onLapCompleted
+LAP Alonso02_fr 1:08:886
+SPLIT COUNT: 2
+Dynamic track ok
+Alonso02_fr [] has finished
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:484 TOTAL: 14:34:594 Laps:13 SesID:6 HasFinished:true
+2) Greg BEST: 1:07:155 TOTAL: 14:51:015 Laps:13 SesID:4 HasFinished:true
+3) lamaug BEST: 1:06:597 TOTAL: 14:55:515 Laps:13 SesID:3 HasFinished:true
+4) Alonso02_fr BEST: 1:07:884 TOTAL: 15:10:259 Laps:13 SesID:2 HasFinished:true
+5) Ragnar01 BEST: 1:06:799 TOTAL: 13:52:342 Laps:12 SesID:5 HasFinished:false
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 9:30:836 Laps:8 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 73
+Dispatching TCP message to ks_praga_r1 (5) [Ragnar01 []]
+Car.onLapCompleted
+LAP Ragnar01 1:18:578
+SPLIT COUNT: 2
+Dynamic track ok
+Ragnar01 [] has finished
+Result.OnLapCompleted. Cuts: 0
+SendLapCompletedMessage
+1) GaelTeam BEST: 1:06:484 TOTAL: 14:34:594 Laps:13 SesID:6 HasFinished:true
+2) Greg BEST: 1:07:155 TOTAL: 14:51:015 Laps:13 SesID:4 HasFinished:true
+3) lamaug BEST: 1:06:597 TOTAL: 14:55:515 Laps:13 SesID:3 HasFinished:true
+4) Alonso02_fr BEST: 1:07:884 TOTAL: 15:10:259 Laps:13 SesID:2 HasFinished:true
+5) Ragnar01 BEST: 1:06:799 TOTAL: 15:10:919 Laps:13 SesID:5 HasFinished:true
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 9:30:836 Laps:8 SesID:1 HasFinished:false
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0 HasFinished:false
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7 HasFinished:false
+Car.onLapCompleted END
+TCP packet 67
+Dispatching TCP message to ks_praga_r1 (3) [lamaug []]
+Clean exit, driver disconnected:  lamaug []
+OK
+EOF
+TCP packet 67
+Dispatching TCP message to ks_praga_r1 (5) [Ragnar01 []]
+Clean exit, driver disconnected:  Ragnar01 []
+OK
+EOF
+TCP packet 67
+Dispatching TCP message to ks_praga_r1 (2) [Alonso02_fr []]
+Clean exit, driver disconnected:  Alonso02_fr []
+OK
+TCP packet 67
+Dispatching TCP message to ks_praga_r1 (4) [Greg []]
+Clean exit, driver disconnected:  Greg []
+OK
+EOF
+EOF
+TCP packet 67
+Dispatching TCP message to ks_praga_r1 (1) [Ben_thedriver []]
+Clean exit, driver disconnected:  Ben_thedriver []
+OK
+EOF
+RACE OVER PACKET, FINAL RANK
+1) GaelTeam BEST: 1:06:484 TOTAL: 14:34:594 Laps:13 SesID:6
+2) Greg BEST: 1:07:155 TOTAL: 14:51:015 Laps:13 SesID:4
+3) lamaug BEST: 1:06:597 TOTAL: 14:55:515 Laps:13 SesID:3
+4) Alonso02_fr BEST: 1:07:884 TOTAL: 15:10:259 Laps:13 SesID:2
+5) Ragnar01 BEST: 1:06:799 TOTAL: 15:10:919 Laps:13 SesID:5
+6) Ben_thedriver BEST: 1:05:945 TOTAL: 9:30:836 Laps:8 SesID:1
+7) Bibi BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:0
+8) Cedcirdec BEST: 16666:39:999 TOTAL: 0:00:000 Laps:0 SesID:7
+HasSentRaceoverPacket, move to the next session
+Saving session json file: results/2016_9_13_21_32_RACE.json
+Server looping
+NextSession
+SESSION: Qualify
+TYPE=QUALIFY
+TIME=10
+LAPS=0
+OPEN=1
+WAIT TIME=0
+
+DynamicTrack: first session, resetting grip
+Weather update. Ambient: 26.580072 Road: 33.624065 Graphics: 3_clear
+SENDING session name : Qualify
+SENDING session index : 0
+SENDING session type : 2
+SENDING session time : 10
+SENDING session laps : 0
+SENDING remote time : 1719424 now:1759165 start_time:1759165
+Sending weather  26.580072 33.624065
+SENDING http://93.57.10.21/lobby.ashx/ping?session=2&timeleft=600&port=9600&clients=1&track=ks_silverstone-international&pickup=1
+OK
+TCP packet 67
+Dispatching TCP message to ks_praga_r1 (6) [GaelTeam []]
+Clean exit, driver disconnected:  GaelTeam []
+OK
+EOF

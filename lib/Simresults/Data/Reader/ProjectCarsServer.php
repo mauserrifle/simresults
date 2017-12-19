@@ -80,6 +80,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
 
             $initial_participants_by_ref = array(); // Depricated! TODO: Remove
             $initial_participants_by_id = array();
+            $initial_participants_by_name = array();
 
             // Loop all member entries and create participants
             foreach ($history['members'] as $part_ref => $part_data)
@@ -91,21 +92,10 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 // $initial_participants_by_ref[$part_ref] = $participant;
                 $initial_participants_by_id[$part_data['participantid']] =
                     $participant;
+
+                $initial_participants_by_name[$part_data['name']] =
+                    $participant;
             }
-
-
-            // Get additional info from participants entries
-            // Disabled due to duplicate refids bugs 2015-12-14
-            // foreach ($history['participants'] as $part_data)
-            // {
-            //     // Get previously parsed participant
-            //     $participant = $initial_participants_by_ref[
-            //         $part_data['RefId']];
-
-            //     // Set whether participant is human
-            //     $participant->getDriver()->setHuman(
-            //         (bool) $part_data['IsPlayer']);
-            // }
 
 
             // Get server configuration
@@ -130,13 +120,15 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 // issues across multiple sessions
                 $participants_by_ref = array();
                 $participants_by_id = array();
-                foreach ($initial_participants_by_ref as $part_key => $part )
-                {
+                $participants_by_name = array();
+                foreach ($initial_participants_by_ref as $part_key => $part ) {
                     $participants_by_ref[$part_key] = clone $part;
                 }
-                foreach ($initial_participants_by_id as $part_key => $part )
-                {
+                foreach ($initial_participants_by_id as $part_key => $part ) {
                     $participants_by_id[$part_key] = clone $part;
+                }
+                foreach ($initial_participants_by_name as $part_key => $part ) {
+                    $participants_by_name[$part_key] = clone $part;
                 }
 
                 // Init session
@@ -242,6 +234,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                         // Build it and fallback to less info
                         $part = $this->getParticipant($event);
                         $participants_by_id[$event['participantid']] = $part;
+                        $participants_by_name[$event['name']] = $part;
                     }
                 }
 
@@ -497,6 +490,35 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 }
 
 
+
+                /**
+                 * Last resort missing data fixing
+                 */
+
+                // Get additional info from participants entries
+                foreach ($history['participants'] as $part_data)
+                {
+                    // Driver not known
+                    if ( ! isset($participants_by_name[
+                        $part_data['Name']])) {
+                        continue;
+                    }
+
+                    // Get previously parsed participant
+                    $participant = $participants_by_name[
+                        $part_data['Name']];
+
+                    // Vehicle unknown, fix it
+                    if ( ! $participant->getVehicle()->getName() AND
+                         isset($part_data['VehicleId']))
+                    {
+                        $this->setVehicleName($part_data['VehicleId'],
+                                              $participant->getVehicle());
+                    }
+                }
+
+
+
                 /**
                  * Cleanup
                  */
@@ -693,6 +715,14 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
             $driver->setHuman(true);
         }
 
+        // Human check
+        if (isset($part_data['IsPlayer'])) {
+            $driver->setHuman($part_data['IsPlayer']);
+        }
+        if (isset($part_data['is_player'])) {
+            $driver->setHuman($part_data['is_player']);
+        }
+
         // Create participant and add driver
         $participant = Participant::createInstance();
         $participant->setDrivers(array($driver))
@@ -717,25 +747,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
         }
 
 
-        // Have friendly vehicle name
-        if (isset($this->attribute_names['vehicles'][$vehicle_id]))
-        {
-            $vehicle->setName($this->attribute_names['vehicles']
-                [$part_data['setup']['VehicleId']]['name']);
-            $vehicle->setClass($this->attribute_names['vehicles']
-                [$part_data['setup']['VehicleId']]['class']);
-        }
-        elseif (isset($this->attribute_names2['vehicles'][$vehicle_id]))
-        {
-            $vehicle->setName($this->attribute_names2['vehicles']
-                [$part_data['setup']['VehicleId']]['name']);
-            $vehicle->setClass($this->attribute_names2['vehicles']
-                [$part_data['setup']['VehicleId']]['class']);
-        }
-        else
-        {
-            $vehicle->setName( (string) $vehicle_id);
-        }
+        $this->setVehicleName($vehicle_id, $vehicle);
 
         $participant->setVehicle($vehicle);
 
@@ -754,6 +766,37 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
     {
         // Remove comments which are not supported by json syntax
         return preg_replace('#// .*#', '', $json);
+    }
+
+
+    /**
+     * Set vehicle name by vehicle id and vehicle object
+     *
+     * @param   int  $vehicle_id
+     * @return  string
+     */
+    protected function setVehicleName($vehicle_id, Vehicle $vehicle)
+    {
+        // Have friendly vehicle name
+        if (isset($this->attribute_names['vehicles'][$vehicle_id]))
+        {
+            $vehicle->setName($this->attribute_names['vehicles']
+                [$vehicle_id]['name']);
+            $vehicle->setClass($this->attribute_names['vehicles']
+                [$vehicle_id]['class']);
+        }
+        elseif (isset($this->attribute_names2['vehicles'][$vehicle_id]))
+        {
+            $vehicle->setName($this->attribute_names2['vehicles']
+                [$vehicle_id]['name']);
+            $vehicle->setClass($this->attribute_names2['vehicles']
+                [$vehicle_id]['class']);
+        }
+        else
+        {
+            $vehicle->setName( (string) $vehicle_id);
+        }
+
     }
 
 
