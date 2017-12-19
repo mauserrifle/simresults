@@ -240,6 +240,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
 
                 // Parse event data such as laps
                 $cut_data = array();
+                $driver_has_entered_pit = array();
                 foreach ($session_data['events'] as $event)
                 {
                     // Get participant
@@ -279,6 +280,13 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
 
                         // Set number
                         $lap->setNumber($event['attributes']['Lap']+1);
+
+                        // Has entered pit
+                        if (isset($driver_has_entered_pit[$event['name']]))
+                        {
+                            $lap->setPitLap(TRUE);
+                            unset($driver_has_entered_pit[$event['name']]);
+                        }
 
                         // Add lap to participant
                         $part->addLap($lap);
@@ -336,6 +344,12 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                             $event['attributes']['NewState'] === 'Retired')
                     {
                         $part->setFinishStatus(Participant::FINISH_DNF);
+                    }
+                    elseif ($event['event_name'] === 'State' AND
+                            $event['attributes']['NewState'] === 'EnteringPits' AND
+                            $event['attributes']['PreviousState'] === 'Racing' )
+                    {
+                       $driver_has_entered_pit[$event['name']] = TRUE;
                     }
 
                 }

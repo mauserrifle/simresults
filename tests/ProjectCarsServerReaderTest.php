@@ -397,6 +397,26 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
         $sessions = Data_Reader::factory($file_path)->getSessions();
     }
 
+
+    /**
+     * Test reading pit stops
+     */
+    public function testReadingPitStops()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/projectcars-server/race.without.finish.json');
+
+        // Get the data reader for the given data source
+        $session = Data_Reader::factory($file_path)->getSession(5);
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Validate pitstop lap
+        $this->assertTrue($participants[6]->getLap(10)->isPitLap());
+    }
+
     /**
      * Project Cars 2 fixes
      */
