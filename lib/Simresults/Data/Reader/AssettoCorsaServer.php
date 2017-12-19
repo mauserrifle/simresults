@@ -1016,7 +1016,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
         $tyre_for_all = null;
 
         // Remember last known tyre for a driver
-        $last_known_tyre_driver = $this->last_known_tyre_driver;
+        $last_known_tyre_driver = &$this->last_known_tyre_driver;
 
         // Should we search tyre info within this session data? (improve performance)
         $search_tyre_info = FALSE;
@@ -1192,6 +1192,36 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                     {
                         $tyre_unique = array_unique($tyre_matches[1]);
                         $tyre = array_pop($tyre_matches[1]);
+                    }
+
+
+                    /**
+                     * MAJOR PERFORMANCE FIX BELOW!!
+                     */
+
+                    // Split session log data with lap data as delimiter
+                    $data_session2_split2 = explode(
+                        $lap_data, $data);
+
+                    // Get second part (so after this lap)
+                    $data_session2_split2 = $data_session2_split[1];
+
+                    // No more tyre info found in rest of log
+                    if( ! preg_match_all($tyres_regex =
+                    '/'.preg_quote($name, '/').".*? changed tyres to (.*?)\n"
+                    .'/i', $data_session2_split2, $tyre_matches))
+                    {
+                        // So we stop all regexes for this driver and force
+                        // last known
+                        if (isset($last_known_tyre_driver[$name_key]))
+                        {
+                            $force_tyre_driver[$name_key] =
+                                $last_known_tyre_driver[$name_key];
+                        }
+                        else
+                        {
+                            $force_tyre_driver[$name_key] = NULL;
+                        }
                     }
                 }
             }
