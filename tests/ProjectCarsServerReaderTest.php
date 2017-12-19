@@ -414,7 +414,9 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
         $participants = $session->getParticipants();
 
         // Validate pitstop lap
+        $this->assertFalse($participants[6]->getLap(9)->isPitLap());
         $this->assertTrue($participants[6]->getLap(10)->isPitLap());
+        $this->assertFalse($participants[6]->getLap(11)->isPitLap());
     }
 
     /**
