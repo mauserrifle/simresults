@@ -1168,74 +1168,72 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             // Tyre is defaulted
             $tyre = $tyre_for_all;
 
-            // Tyre info should be searched
-            if ( $search_tyre_info AND
-                 ! $tyre = $this->helper->arrayGet($force_tyre_driver, $name_key))
+
+            // Forced tyre
+            if (array_key_exists($name_key, $force_tyre_driver))
             {
-                // Driver tyre type is not forced yet above in full log check
-                if ( ! isset($force_tyre_driver[$name_key]))
+                $tyre = $force_tyre_driver[$name_key];
+                $last_known_tyre_driver[$name_key] = $tyre;
+            }
+            // Tyre info should be searched
+            elseif ($search_tyre_info)
+            {
+                // Split full log data with lap data as delimiter
+                $data_session2_split = explode($lap_data, $all_data);
+
+                // Get first part
+                $data_session2_split = $data_session2_split[0];
+
+                // Tyre info found
+                if(preg_match_all($tyres_regex =
+                '/'.preg_quote($name, '/').".*? changed tyres to (.*?)\n"
+                .'/i', $data_session2_split, $tyre_matches))
                 {
-                    // Split full log data with lap data as delimiter
-                    $data_session2_split = explode($lap_data, $all_data);
+                    $tyre_unique = array_unique($tyre_matches[1]);
+                    $tyre = array_pop($tyre_matches[1]);
+                }
 
-                    // Get first part
-                    $data_session2_split = $data_session2_split[0];
 
-                    // Tyre info found
-                    if(preg_match_all($tyres_regex =
-                    '/'.preg_quote($name, '/').".*? changed tyres to (.*?)\n"
-                    .'/i', $data_session2_split, $tyre_matches))
+                /**
+                 * MAJOR PERFORMANCE FIX BELOW!!
+                 */
+
+                // Split session log data with lap data as delimiter
+                $data_session2_split2 = explode(
+                    $lap_data, $data);
+
+                // Get second part (so after this lap)
+                $data_session2_split2 = $data_session2_split[1];
+
+                // No more tyre info found in rest of log
+                if( ! preg_match_all($tyres_regex =
+                '/'.preg_quote($name, '/').".*? changed tyres to (.*?)\n"
+                .'/i', $data_session2_split2, $tyre_matches))
+                {
+                    // So we stop all regexes for this driver and force
+                    // last known
+                    if (isset($last_known_tyre_driver[$name_key]))
                     {
-                        $tyre_unique = array_unique($tyre_matches[1]);
-                        $tyre = array_pop($tyre_matches[1]);
+                        $force_tyre_driver[$name_key] =
+                            $last_known_tyre_driver[$name_key];
                     }
-
-
-                    /**
-                     * MAJOR PERFORMANCE FIX BELOW!!
-                     */
-
-                    // Split session log data with lap data as delimiter
-                    $data_session2_split2 = explode(
-                        $lap_data, $data);
-
-                    // Get second part (so after this lap)
-                    $data_session2_split2 = $data_session2_split[1];
-
-                    // No more tyre info found in rest of log
-                    if( ! preg_match_all($tyres_regex =
-                    '/'.preg_quote($name, '/').".*? changed tyres to (.*?)\n"
-                    .'/i', $data_session2_split2, $tyre_matches))
+                    else
                     {
-                        // So we stop all regexes for this driver and force
-                        // last known
-                        if (isset($last_known_tyre_driver[$name_key]))
-                        {
-                            $force_tyre_driver[$name_key] =
-                                $last_known_tyre_driver[$name_key];
-                        }
-                        else
-                        {
-                            $force_tyre_driver[$name_key] = NULL;
-                        }
+                        $force_tyre_driver[$name_key] = NULL;
                     }
                 }
             }
 
-
-            // Tyre found
-            if ($tyre)
-            {
-                // Remember
-                $last_known_tyre_driver[$name_key] = $tyre;
-            }
-            // Tyre not found
-            else
+            // Tyre is NULL
+            if ( ! $tyre)
             {
                 // Last restort known tyre per driver
                 $tyre = $this->helper->arrayGet(
                     $last_known_tyre_driver, $name_key);
             }
+
+            // Remember
+            $last_known_tyre_driver[$name_key] = $tyre;
 
             // Add lap
             $participants_copy[$name_key]['laps'][] = array(
