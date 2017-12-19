@@ -1163,17 +1163,18 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 // on the entire log (containing all sessions).
             }
 
+            // Tyre NULL by default
+            $tyre = NULL;
 
-
-            // Tyre is defaulted
-            $tyre = $tyre_for_all;
-
-
+            // All the same tyre
+            if ($tyre_for_all)
+            {
+                $tyre = $tyre_for_all;
+            }
             // Forced tyre
-            if (array_key_exists($name_key, $force_tyre_driver))
+            elseif (array_key_exists($name_key, $force_tyre_driver))
             {
                 $tyre = $force_tyre_driver[$name_key];
-                $last_known_tyre_driver[$name_key] = $tyre;
             }
             // Tyre info should be searched
             elseif ($search_tyre_info)
