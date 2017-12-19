@@ -983,8 +983,6 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
      * @param   array     $participants_regex    Regex to match participants
      * @param   array     $participant_regex_vehicle_match_key
      * @param   boolean   $only_one_lap_per_driver
-
-     * TODO / WARNING : Tyre type matching is very heavy on performance!!! Fix?
      *
      * @return  boolean  success or not
      */
@@ -1171,8 +1169,6 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             $tyre = $tyre_for_all;
 
             // Tyre info should be searched
-            //  TODO / WARNING : Tyre type matching is very heavy on
-            //                   performance!!! Fix?
             if ( $search_tyre_info AND
                  ! $tyre = $this->helper->arrayGet($force_tyre_driver, $name_key))
             {
