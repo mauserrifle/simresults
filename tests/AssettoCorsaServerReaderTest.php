@@ -444,6 +444,22 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
+     * Test fix for bad track matching
+     */
+    public function testFixBadTrackMatching()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__
+            .'/logs/assettocorsa-server/log.causing.bad.track.parsing.txt');
+
+        // Get the session
+        $session = Data_Reader::factory($file_path)->getSession();
+
+        // Validate track
+        $this->assertSame('imola', $session->getTrack()->getVenue());
+    }
+
+    /**
      * Test fix for a bug that car names were missing or incorrect because
      * drivers were not properly parsed from connect info
      */
