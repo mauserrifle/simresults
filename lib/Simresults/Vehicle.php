@@ -36,6 +36,11 @@ class Vehicle {
     private $ballast = 0;
 
     /**
+     * @var  int  The restrictor percentage (less power)
+     */
+    private $restrictor = 0;
+
+    /**
      * @var  string  The skin of the vehicle
      */
     private $skin;
@@ -148,6 +153,28 @@ class Vehicle {
     public function getBallast()
     {
         return $this->ballast;
+    }
+
+    /**
+     * Set the restrictor percentage (less power)
+     *
+     * @param  int  $restrictor
+     * @return  Vehicle
+     */
+    public function setRestrictor($restrictor)
+    {
+        $this->restrictor = $restrictor;
+        return $this;
+    }
+
+    /**
+     * Get the restrictor percentage (less power)
+     *
+     * @return  int
+     */
+    public function getRestrictor()
+    {
+        return $this->restrictor;
     }
 
     /**

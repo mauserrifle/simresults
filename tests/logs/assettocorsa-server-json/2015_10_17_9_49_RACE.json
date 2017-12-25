@@ -113,7 +113,8 @@
 			},
 			"Model": "lotus_exos_125",
 			"Skin": "0_Lotus",
-			"BallastKG": 20
+			"BallastKG": 20,
+			"Restrictor": 15
 		},
 		{
 			"CarId": 10,

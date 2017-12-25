@@ -106,6 +106,7 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
                 $player_data['Model'],
                 $player_data['Driver']['Team'],
                 $player_data['BallastKG'],
+                $this->helper->arrayGet($player_data, 'Restrictor'),
                 $player_data['Skin']
             );
 
@@ -131,7 +132,8 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
                     $player_data['DriverGuid'],
                     $player_data['CarModel'],
                     null,
-                    $player_data['BallastKG']
+                    $player_data['BallastKG'],
+                    $this->helper->arrayGet($player_data, 'Restrictor')
                 );
 
                 // Add participant to collection
@@ -176,7 +178,8 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
                     $lap_data['DriverGuid'],
                     $lap_data['CarModel'],
                     null,
-                    $lap_data['BallastKG']
+                    $lap_data['BallastKG'],
+                    $this->helper->arrayGet($lap_data, 'Restrictor')
                 );
 
                 // Add participant to collection
@@ -271,10 +274,13 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
      * @param  string        $car
      * @param  string        $team
      * @param  int           $vehicle_ballast
+     * @param  int           $vehicle_restrictor
+     * @param  string        $vehicle_skin
      * @return Participant
      */
     protected function getParticipant($name, $guid, $car, $team=null,
                                       $vehicle_ballast=null,
+                                      $vehicle_restrictor=null,
                                       $vehicle_skin=null)
     {
         // Create driver
@@ -299,6 +305,12 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
         if ($vehicle_ballast)
         {
             $vehicle->setBallast($vehicle_ballast);
+        }
+
+        // Has restrictor
+        if ($vehicle_restrictor)
+        {
+            $vehicle->setRestrictor($vehicle_restrictor);
         }
 
         // Has skin
