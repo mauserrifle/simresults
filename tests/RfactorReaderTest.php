@@ -107,6 +107,17 @@ class RfactorReaderTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
+     * Test reading without errors on incidents with safety car
+     */
+    public function testReadingWithoutErrorsOnSafetyCarIncidents()
+    {
+        $file_path = realpath(
+            __DIR__.'/logs/automobilista/race.with.safety.car.incidents.xml');
+        $reader = Data_Reader::factory($file_path);
+        $session = $reader->getSession();
+    }
+
+    /**
      * Test reading the game of a session
      */
     public function testReadingSessionGame()
