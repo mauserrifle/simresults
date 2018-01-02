@@ -44,14 +44,14 @@ class Incident {
     /**
      * The participant causing the incident
      *
-     * @var  Driver|null
+     * @var  Participant|null
      */
     protected $participant;
 
     /**
      * The other participant (if any)
      *
-     * @var  Driver|null
+     * @var  Participant|null
      */
     protected $other_participant;
 
