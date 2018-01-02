@@ -1115,8 +1115,15 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                 );
 
                 $incident->setType(Incident::TYPE_CAR);
-                $incident->setParticipant($parts_by_name[$matches[1]]);
-                $incident->setOtherParticipant($parts_by_name[$matches[3]]);
+
+                // Participant known
+                if (isset($parts_by_name[$matches[1]])) {
+                    $incident->setParticipant($parts_by_name[$matches[1]]);
+                }
+                // Other participant known
+                if (isset($parts_by_name[$matches[3]])) {
+                    $incident->setOtherParticipant($parts_by_name[$matches[3]]);
+                }
             }
 
             // Add incident to incidents
