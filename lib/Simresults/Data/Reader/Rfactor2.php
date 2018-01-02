@@ -1063,6 +1063,15 @@ class Data_Reader_Rfactor2 extends Data_Reader {
             return;
         }
 
+        $parts_by_name = array();
+        foreach ($session->getParticipants() as $part)
+        {
+            foreach ($part->getDrivers() as $driver)
+            {
+                $parts_by_name[$driver->getName()] = $part;
+            }
+        }
+
         // Loop each incident (if any)
         /* @var $incident_xml \DOMNode */
         foreach ($incidents_dom as $incident_xml)
@@ -1087,18 +1096,27 @@ class Data_Reader_Rfactor2 extends Data_Reader {
             // Add date to incident
             $incident->setDate($date);
 
+            // Default to environment incident
+            $incident->setType(Incident::TYPE_ENV);
+
+
             // Is incident with another vehicle
             if (strpos(strtolower($incident->getMessage()),
                 'with another vehicle'))
             {
                 // Match impact
-                preg_match('/reported contact \((.*)\) with another vehicle/i',
-                           $incident->getMessage(), $matches);
+                preg_match('/(.*?)\(.*?reported contact \((.*)\) with '.
+                           'another vehicle (.*?)\(/i',
+                    $incident->getMessage(), $matches);
 
                 // Worth reviewing when impact is >= 60%
                 $incident->setForReview(
-                    (isset($matches[1]) AND ((float) $matches[1]) >= 0.60)
+                    (isset($matches[2]) AND ((float) $matches[2]) >= 0.60)
                 );
+
+                $incident->setType(Incident::TYPE_CAR);
+                $incident->setParticipant($parts_by_name[$matches[1]]);
+                $incident->setOtherParticipant($parts_by_name[$matches[3]]);
             }
 
             // Add incident to incidents
