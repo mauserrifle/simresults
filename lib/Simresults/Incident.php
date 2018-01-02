@@ -10,6 +10,16 @@ namespace Simresults;
  */
 class Incident {
 
+    // The incident types
+    const TYPE_UNKNOWN = NULL;
+    const TYPE_CAR = 'car';
+    const TYPE_ENV = 'env';
+
+    /**
+     * @var  string  The type based on constants. Defaults to unknown
+     */
+    protected $type = self::TYPE_UNKNOWN;
+
     /**
      * @var  string  The incident message
      */
@@ -30,6 +40,20 @@ class Incident {
      * @var  boolean  Whether this incident is worth reviewing
      */
     protected $for_review = false;
+
+    /**
+     * The participant causing the incident
+     *
+     * @var  Participant|null
+     */
+    protected $participant;
+
+    /**
+     * The other participant (if any)
+     *
+     * @var  Participant|null
+     */
+    protected $other_participant;
 
 
     /**
@@ -123,4 +147,71 @@ class Incident {
     {
         return $this->for_review;
     }
+
+    /**
+     * Set the incident type based on the constants
+     *
+     * @param   string      $type
+     * @return  Incident
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
+        return $this;
+    }
+
+    /**
+     * Get the incident type based on the constants
+     *
+     * @return  string
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * Set the participant
+     *
+     * @param   Participant  $participant
+     * @return  Incident
+     */
+    public function setParticipant(Participant $participant)
+    {
+        $this->participant = $participant;
+        return $this;
+    }
+
+    /**
+     * Get the participant
+     *
+     * @return  Participant
+     */
+    public function getParticipant()
+    {
+        return $this->participant;
+    }
+
+    /**
+     * Set the other participant
+     *
+     * @param   Participant  $participant
+     * @return  Incident
+     */
+    public function setOtherParticipant(Participant $participant)
+    {
+        $this->other_participant = $participant;
+        return $this;
+    }
+
+    /**
+     * Get the other participant
+     *
+     * @return  Participant
+     */
+    public function getOtherParticipant()
+    {
+        return $this->other_participant;
+    }
+
 }

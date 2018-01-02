@@ -223,10 +223,27 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
         if ($data['Events'])
         foreach ($data['Events'] as $event)
         {
-            // Not car collision. continue to next
-            if ($event['Type'] !== 'COLLISION_WITH_CAR') continue;
+            $type_events = array(
+                'COLLISION_WITH_CAR' => Incident::TYPE_CAR,
+                'COLLISION_WITH_ENV' => Incident::TYPE_ENV,
+            );
+
+            // Not collision. continue to next
+            if ( ! in_array($event['Type'], array_keys($type_events))) {
+                continue;
+            }
+
+            // No participant found
+            if ( ! isset($participants_by_name[$event['Driver']['Name']]) OR
+                 ! isset($participants_by_name[$event['OtherDriver']['Name']])) {
+                continue;
+            }
+
+            $part = $participants_by_name[$event['Driver']['Name']];
+            $other_part = $participants_by_name[$event['OtherDriver']['Name']];
 
             $incident = new Incident;
+
             $incident->setMessage(sprintf(
                '%s reported contact with another vehicle '.
                 '%s. Impact speed: %s' ,
@@ -234,6 +251,11 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
                 $event['OtherDriver']['Name'],
                 $event['ImpactSpeed']
             ));
+
+            $incident->setType($type_events[$event['Type']]);
+            $incident->setParticipant($part);
+            $incident->setOtherParticipant($other_part);
+
             $session->addIncident($incident);
         }
 
