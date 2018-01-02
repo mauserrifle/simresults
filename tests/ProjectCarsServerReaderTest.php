@@ -3,6 +3,7 @@ use Simresults\Data_Reader_AssettoCorsaServerJson;
 use Simresults\Data_Reader;
 use Simresults\Session;
 use Simresults\Participant;
+use Simresults\Incident;
 
 /**
  * Tests for the Project Cars Server reader
@@ -695,18 +696,22 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
      */
     public function testIncidents()
     {
-        // Get participants
-        $incidents = $this->getWorkingReader()->getSession(5)
-            ->getIncidents();
+        $session = $this->getWorkingReader()->getSession(5);
+
+        $participants = $session->getParticipants();
+        $incidents = $session->getIncidents();
 
         // Validate first incident
         $this->assertSame(
-            'Seb Solo reported contact with another vehicle '
-           .'Trey. CollisionMagnitude: 1000',
-            $incidents[0]->getMessage());
-        $this->assertSame(1446150056,
-            $incidents[0]->getDate()->getTimestamp());
-        $this->assertSame(34, $incidents[0]->getElapsedSeconds());
+            'JarZon reported contact with another vehicle '
+           .'Seb Solo. CollisionMagnitude: 780',
+            $incidents[4]->getMessage());
+        $this->assertSame(1446150075,
+            $incidents[4]->getDate()->getTimestamp());
+        $this->assertSame(53, $incidents[4]->getElapsedSeconds());
+        $this->assertSame(Incident::TYPE_CAR, $incidents[4]->getType());
+        $this->assertSame($participants[4], $incidents[4]->getParticipant());
+        $this->assertSame($participants[9], $incidents[4]->getOtherParticipant());
 
         // Validate incident that would have a unknown participant. But now
         // it should not because we ignore these

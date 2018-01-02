@@ -293,18 +293,16 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                     }
                     elseif ($event['event_name'] === 'Impact')
                     {
-                        // Other participant is unknown by default
-                        $other_participant_name = 'unknown';
+                        $type = Incident::TYPE_ENV;
+                        $other_part = NULL;
 
                         // Other participant known
                         if ((-1 != $other_id =
                                 $event['attributes']['OtherParticipantId']
                              ) AND isset($participants_by_id[$other_id]))
                         {
-                            // Set other name
-                            $other_participant_name =
-                                $participants_by_id[$other_id]
-                                    ->getDriver()->getName();
+                            $other_part = $participants_by_id[$other_id];
+                            $type = Incident::TYPE_CAR;
 
                         }
                         // Participant not known
@@ -319,7 +317,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                            '%s reported contact with another vehicle '.
                             '%s. CollisionMagnitude: %s' ,
                             $part->getDriver()->getName(),
-                            $other_participant_name,
+                            $other_part ? $other_part->getDriver()->getName() : 'unknown',
                             $event['attributes']['CollisionMagnitude']
                         ));
 
@@ -332,6 +330,9 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                             -
                             $session->getDate()->getTimestamp()
                         );
+                        $incident->setParticipant($part);
+                        $incident->setOtherParticipant($other_part);
+                        $incident->setType($type);
 
                         $session->addIncident($incident);
                     }
