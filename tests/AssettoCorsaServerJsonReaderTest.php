@@ -3,6 +3,7 @@ use Simresults\Data_Reader_AssettoCorsaServerJson;
 use Simresults\Data_Reader;
 use Simresults\Session;
 use Simresults\Participant;
+use Simresults\Incident;
 
 /**
  * Tests for the Assetto Corsa Server JSON reader
@@ -312,10 +313,15 @@ class AssettoCorsaServerJsonReaderTest extends PHPUnit_Framework_TestCase {
     public function testIncidents()
     {
         // Get participants
-        $incidents = $this->getWorkingReader()->getSession()
-            ->getIncidents();
+        $session = $this->getWorkingReader()->getSession();
+
+        $incidents = $session->getIncidents();
+        $participants = $session->getParticipants();
 
         // Validate first incident
+        $this->assertSame(Incident::TYPE_CAR, $incidents[0]->getType());
+        $this->assertSame($participants[10], $incidents[0]->getParticipant());
+        $this->assertSame($participants[7], $incidents[0]->getOtherParticipant());
         $this->assertSame(
             'PPolaina reported contact with another vehicle '
            .'Tabak. Impact speed: 7.37918',
