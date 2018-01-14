@@ -397,11 +397,13 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                     // Loop each result and process the lap
                     foreach ($results as $result)
                     {
-                        // Participant not found, continue to next
+                        // Participant not found, build it
                         if ( ! isset($participants_by_id[
                                          $result['participantid']]))
                         {
-                            continue;
+                            $part = $this->getParticipant($result);
+                            $participants_by_id[$result['participantid']] = $part;
+                            $participants_by_name[$result['name']] = $part;
                         }
 
                         // Get participant
@@ -759,6 +761,11 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
         elseif (isset($part_data['setup']) AND
             isset($part_data['setup']['VehicleId'])) {
             $vehicle_id = $part_data['setup']['VehicleId'];
+        }
+        // Has vehicle in attributes data
+        elseif (isset($part_data['attributes']) AND
+            isset($part_data['attributes']['VehicleId'])) {
+            $vehicle_id = $part_data['attributes']['VehicleId'];
         }
 
 

@@ -453,6 +453,41 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
         // Test vehicle friendly name
         $this->assertSame('Mitsubishi Lancer Evolution IX FQ360 (Road C1)',
                           $participants[0]->getVehicle()->getFriendlyName());
+
+
+
+        /**
+         * Test fixing missing admin driver and missing vehicle name
+         */
+
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/projectcars2-server/'.
+            'admin.driver.missing.from.results.json');
+
+        // Find Race 4 to test
+        $sessions = Data_Reader::factory($file_path)->getSessions();
+
+        $races_looped = 0;
+        $race_session = null;
+        foreach ($sessions as $session)
+        {
+            if ($session->getType() === Session::TYPE_RACE AND
+                $participants = $session->getParticipants())
+            {
+                $races_looped++;
+
+                if ($races_looped === 4) {
+                    $race_session = $session;
+                }
+            }
+        }
+
+        $participants = $race_session->getParticipants();
+        $this->assertSame(
+            'Rob Milliken', $participants[5]->getDriver()->getName());
+        $this->assertSame(
+            'Formula Renault 3.5', $participants[5]->getVehicle()->getName());
     }
 
 
