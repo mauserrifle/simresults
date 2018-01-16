@@ -1181,6 +1181,12 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                 {
                     $penalty->setType(Penalty::TYPE_STOPGO);
                 }
+
+                // We only know served status when served or received
+                if (in_array($matches[2], array('served','received')))
+                {
+                    $penalty->setServed(strtolower($matches[2]) === 'served');
+                }
             }
 
             // Clone session date

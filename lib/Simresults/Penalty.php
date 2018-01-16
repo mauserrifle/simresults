@@ -44,6 +44,13 @@ class Penalty {
      */
     protected $participant;
 
+    /**
+     * Whether this penalty is served in this message instance
+     *
+     * @var  boolean|null
+     */
+    protected $served = null;
+
 
     /**
      * Set the penalty message
@@ -157,6 +164,29 @@ class Penalty {
     public function getParticipant()
     {
         return $this->participant;
+    }
+
+    /**
+     * Set whether this penalty is served in this message instance
+     *
+     * @param   boolean      $served
+     * @return  Penalty
+     */
+    public function setServed($served)
+    {
+        $this->served = $served;
+        return $this;
+    }
+
+    /**
+     * Get whether this penalty is served in this message instance. Returns
+     * NULL if unknown
+     *
+     * @return  boolean|null
+     */
+    public function isServed()
+    {
+        return $this->served;
     }
 
 }

@@ -632,6 +632,9 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
         // Type and participant
         $this->assertSame(Penalty::TYPE_STOPGO, $penalties[0]->getType());
         $this->assertSame($participants[2], $penalties[0]->getParticipant());
+        $this->assertFalse($penalties[0]->isServed());
+        $this->assertTrue($penalties[1]->isServed());
+        $this->assertNull($penalties[3]->isServed());
     }
 
 
