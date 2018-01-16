@@ -45,7 +45,10 @@ class Penalty {
     protected $participant;
 
     /**
-     * Whether this penalty is served in this message instance
+     * Whether this penalty is served in this message instance.
+     * Quickfix so we ignore served messages in rFactor 2
+     *
+     * TODO: Refactor when supporting more sims?
      *
      * @var  boolean|null
      */

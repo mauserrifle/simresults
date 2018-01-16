@@ -599,6 +599,7 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
 
     /**
      * Test reading the penalty messages
+     * TODO: Test drive through!
      */
     public function testReadingSessionPenalties()
     {
