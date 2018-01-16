@@ -3,6 +3,7 @@ use Simresults\Data_Reader_Rfactor2;
 use Simresults\Data_Reader;
 use Simresults\Session;
 use Simresults\Participant;
+use Simresults\Penalty;
 
 /**
  * Tests for the rfactor2 reader.
@@ -607,6 +608,7 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
 
         // Get session
         $session = $reader->getSession();
+        $participants = $session->getParticipants();
 
         // Get penalties
         $penalties = $session->getPenalties();
@@ -626,6 +628,10 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
 
         // Validate the real estimated time including miliseconds
         $this->assertSame(1001.6, $penalties[0]->getElapsedSeconds());
+
+        // Type and participant
+        $this->assertSame(Penalty::TYPE_STOPGO, $penalties[0]->getType());
+        $this->assertSame($participants[2], $penalties[0]->getParticipant());
     }
 
 
@@ -771,7 +777,7 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertSame(Session::TYPE_QUALIFY,
             $reader->getSession()->getType());
     }
-    
+
     /**
      * Test reading result file generated from multiple race sessions
      */
@@ -780,10 +786,10 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
     	// Get the data reader for the given data source
     	$reader = Data_Reader::factory(
     			realpath(__DIR__.'/logs/automobilista/multiple_race.xml'));
-    
+
     	// Get session
     	$session = $reader->getSession();
-    
+
     	// Validate session type
     	$this->assertSame(Session::TYPE_RACE,
     			$reader->getSession()->getType());

@@ -1143,6 +1143,19 @@ class Data_Reader_Rfactor2 extends Data_Reader {
         // No penalties by default
         $penalties = array();
 
+        // Participants by name so we can map
+        $parts_by_name = array();
+        foreach ($session->getParticipants() as $part)
+        {
+            foreach ($part->getDrivers() as $driver)
+            {
+                $parts_by_name[$driver->getName()] = $part;
+            }
+        }
+
+        // Example:
+        // <Penalty et="1001.6">mauserrifle received Stop/Go penalty, 10s, 0laps. Result: penalties=1, 1st=Stop/Go,10s</Penalty>
+
         // Loop each penalty (if any)
         /* @var $penalty_xml \DOMNode */
         foreach ($this->dom->getElementsByTagName('Penalty') as $penalty_xml)
@@ -1152,6 +1165,23 @@ class Data_Reader_Rfactor2 extends Data_Reader {
 
             // Set message
             $penalty->setMessage($penalty_xml->nodeValue);
+
+            if (preg_match('/^(.*?) (received|served|finished) (.*?) penalty.*/i', $penalty_xml->nodeValue, $matches))
+            {
+                // Participant known
+                if (isset($parts_by_name[$matches[1]])) {
+                    $penalty->setParticipant($parts_by_name[$matches[1]]);
+                }
+
+                if (strtolower($matches[3]) === 'drive thru')
+                {
+                    $penalty->setType(Penalty::TYPE_DRIVETHROUGH);
+                }
+                elseif (strtolower($matches[3]) === 'stop/go')
+                {
+                    $penalty->setType(Penalty::TYPE_STOPGO);
+                }
+            }
 
             // Clone session date
             $date = clone $session->getDate();
