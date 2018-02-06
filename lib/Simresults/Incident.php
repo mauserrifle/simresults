@@ -12,8 +12,9 @@ class Incident {
 
     // The incident types
     const TYPE_UNKNOWN = NULL;
-    const TYPE_CAR = 'car';
-    const TYPE_ENV = 'env';
+    const TYPE_CAR   = 'car';
+    const TYPE_ENV   = 'env';
+    const TYPE_OTHER = 'other';
 
     /**
      * @var  string  The type based on constants. Defaults to unknown

@@ -221,10 +221,69 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
                         $lap->setNumber($lap_key+1);
                         $lap->setPosition($lap_data['Position']);
                         $lap->setPitLap($lap_data['PitStopOccured']);
-                        $lap->setTime(round($lap_data['Time'] / 1000, 4));
+                        $lap->setTime($time=(round($lap_data['Time'] / 1000, 4)));
 
                         // Add lap to participant
                         $participant->addLap($lap);
+
+
+                        // Has incidents
+                        if ($incidents = $this->helper->arrayGet($lap_data, 'Incidents'))
+                        {
+                            // Type 0 = Car to car collision
+                            // Type 1 = Collision with a track object
+                            // Type 2 = Going the wrong way
+                            // Type 3 = Going off track
+                            // Type 4 = Staying stationary on the track
+                            // Type 5 = Losing control of the vehicle
+                            // Type 6 = Not serving a penalty
+                            // Type 7 = Disconnecting / Giving up before the end of a race
+                            // Type 8 = Missing the race start
+
+                            $types = array(
+                                0 => Incident::TYPE_CAR,
+                                1 => Incident::TYPE_ENV,
+                                // Defaults to other
+                            );
+
+                            $type_messages = array(
+                                0 => 'Car to car collision',
+                                1 => 'Collision with a track object',
+                                2 => 'Going the wrong way',
+                                3 => 'Going off track',
+                                4 => 'Staying stationary on the track',
+                                5 => 'Losing control of the vehicle',
+                                6 => 'Not serving a penalty',
+                                7 => 'Disconnecting / Giving up before the end of a race',
+                                8 => 'Missing the race start',
+                            );
+
+                            foreach ($incidents as $incident_data)
+                            {
+                                $type = $this->helper->arrayGet(
+                                    $types, $incident_data['Type'], Incident::TYPE_OTHER);
+
+                                $type_message = $this->helper->arrayGet(
+                                    $type_messages, $incident_data['Type'], 'Unknown');
+
+                                $incident = new Incident;
+                                $incident->setMessage(sprintf(
+                                   'LAP %s, %s, %s, Points: %s',
+                                    $lap->getNumber(),
+                                    $participant->getDriver()->getName(),
+                                    $type_message,
+                                    $incident_data['Points']
+                                ));
+
+
+                                $incident->setParticipant($participant);
+                                $incident->setType($type);
+
+                                $session->addIncident($incident);
+                            }
+
+                        }
+
                     }
 
                 }
@@ -254,6 +313,11 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
                 // Add participant to collection
                 $participants[] = $participant;
             }
+
+
+
+
+
 
             // Add participants to session
             $session->setParticipants($participants);
