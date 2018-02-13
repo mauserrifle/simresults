@@ -31,6 +31,9 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
      */
     public static function canRead($data)
     {
+        if (FALSE === strpos($data, 'next_history_index')) {
+            return false;
+        }
         // Clean json so we can parse it without errors
         $data = self::cleanJSON($data);
 
@@ -786,8 +789,28 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
      */
     protected static function cleanJSON($json)
     {
-        // Remove comments which are not supported by json syntax
-        return preg_replace('#// .*#', '', $json);
+        /**
+         * Remove the following lines
+         *
+         *     // Persistent data for addon 'sms_stats', addon version 2.0
+         *
+         *     // Automatically maintained by the addon, do not edit!
+         *
+         *     // EOF //
+         *
+         * Make sure the following lines are not removed partly:
+         *
+         *     "name" : "LEAGUE-NAME // GT3 MASTERS #02",
+         */
+
+        // Filter out comments above json
+        $json_parts = explode('{', $json, 2);
+        $new_json = '{ '.$json_parts[1];
+
+        // Filter oout last comment
+        $new_json = str_replace('// EOF //', '', $new_json);
+
+        return $new_json;
     }
 
 

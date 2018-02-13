@@ -490,6 +490,25 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
             'Formula Renault 3.5', $participants[5]->getVehicle()->getName());
     }
 
+    /**
+     * Test reading log that did not parse due bad comment cleaning.
+     *
+     * The following was badly replaced due the 2 slashes breaking the json:
+     *
+     *     "name" : "WWW.GEF-GAMING.DE // GT3 MASTERS #02",
+     *
+     */
+    public function testReadingLogThatDidNotParseDueBadCommentCleaning()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/projectcars2-server/not.parsing.due.slashes.in.server.name.json');
+
+        // Get sessions without error
+        $sessions = Data_Reader::factory($file_path)->getSessions();
+    }
+
+
 
 
     /***
