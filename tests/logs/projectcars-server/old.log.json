@@ -1,0 +1,1590 @@
+// Persistent data for addon 'sms_stats', addon version 1.2
+// Automatically maintained by the addon, do not edit!
+
+{
+  "stats" : {
+    "history" : [
+      {
+        "end_time" : 1447100109,
+        "finished" : true,
+        "members" : {
+          "1985" : {
+            "index" : 1,
+            "join_time" : 1447099252,
+            "leave_time" : -1,
+            "name" : "Markus Walter",
+            "participantid" : 1,
+            "setup" : {
+              "LiveryId" : 61,
+              "RaceStatFlags" : 1073766437,
+              "VehicleId" : 1161219858
+            },
+            "steamid" : "76561197987621408"
+          },
+          "60992" : {
+            "index" : 0,
+            "join_time" : 1447099252,
+            "leave_time" : -1,
+            "name" : "Alex Bräutigam",
+            "participantid" : 0,
+            "setup" : {
+              "LiveryId" : 60,
+              "RaceStatFlags" : 1073767589,
+              "VehicleId" : 1452261378
+            },
+            "steamid" : "76561198184982967"
+          }
+        },
+        "participants" : {
+          "0" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 60,
+            "Name" : "Alex Bräutigam",
+            "RefId" : 60992,
+            "VehicleId" : 1452261378
+          },
+          "1" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 61,
+            "Name" : "Markus Walter",
+            "RefId" : 1985,
+            "VehicleId" : 1161219858
+          }
+        },
+        "setup" : {
+          "AllowedViews" : 0,
+          "DamageType" : 3,
+          "DateDay" : 15,
+          "DateHour" : 13,
+          "DateMinute" : 0,
+          "DateMonth" : 11,
+          "DateProgression" : 1,
+          "DateYear" : 2015,
+          "Flags" : 804328,
+          "ForecastProgression" : 0,
+          "FuelUsageType" : 0,
+          "GridSize" : 32,
+          "MaxPlayers" : 32,
+          "PenaltiesType" : 1,
+          "Practice1Length" : 0,
+          "Practice2Length" : 0,
+          "QualifyLength" : 5,
+          "Race1Length" : 12,
+          "ServerControlsSetup" : 0,
+          "ServerControlsTrack" : 0,
+          "ServerControlsVehicle" : 0,
+          "ServerControlsVehicleClass" : 0,
+          "TireWearType" : 6,
+          "TrackId" : -52972612,
+          "VehicleClassId" : -112887377,
+          "VehicleModelId" : 1452261378,
+          "WarmupLength" : 0,
+          "WeatherSlot1" : -934211870,
+          "WeatherSlot2" : -934211870,
+          "WeatherSlot3" : -934211870,
+          "WeatherSlot4" : -934211870,
+          "WeatherSlots" : 1
+        },
+        "stages" : {
+          "qualifying" : {
+            "end_time" : 1447099587,
+            "events" : [
+              {
+                "attributes" : {
+                  "NewState" : "ExitingPits",
+                  "PreviousState" : "InGarage"
+                },
+                "event_name" : "State",
+                "is_player" : true,
+                "name" : "Alex Bräutigam",
+                "participantid" : 0,
+                "refid" : 60992,
+                "time" : 1447099274
+              },
+              {
+                "attributes" : {
+                  "NewState" : "ExitingPits",
+                  "PreviousState" : "InGarage"
+                },
+                "event_name" : "State",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099274
+              },
+              {
+                "attributes" : {
+                  "NewState" : "Racing",
+                  "PreviousState" : "ExitingPits"
+                },
+                "event_name" : "State",
+                "is_player" : true,
+                "name" : "Alex Bräutigam",
+                "participantid" : 0,
+                "refid" : 60992,
+                "time" : 1447099279
+              },
+              {
+                "attributes" : {
+                  "NewState" : "Racing",
+                  "PreviousState" : "ExitingPits"
+                },
+                "event_name" : "State",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099279
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 0,
+                  "LapTime" : 13730,
+                  "RacePosition" : 1
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099303
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 1000,
+                  "OtherParticipantId" : -1
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099303
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 1000,
+                  "OtherParticipantId" : -1
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099303
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 1000,
+                  "OtherParticipantId" : -1
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099303
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 340,
+                  "OtherParticipantId" : -1
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099303
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 2887,
+                  "PenaltyThreshold" : 423,
+                  "PenaltyValue" : -1754,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 1139
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099305
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 0,
+                  "LapTime" : 14901,
+                  "RacePosition" : 1
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099306
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 112,
+                  "PenaltyThreshold" : 977,
+                  "PenaltyValue" : 805,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 20
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099306
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 0,
+                  "LapTime" : 31907,
+                  "RacePosition" : 1
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099328
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 555,
+                  "PenaltyThreshold" : 890,
+                  "PenaltyValue" : 4944,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 1436
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099328
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 0,
+                  "LapTime" : 33714,
+                  "RacePosition" : 1
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099328
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 670,
+                  "PenaltyThreshold" : 866,
+                  "PenaltyValue" : 4798,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 1530
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099329
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 1000,
+                  "OtherParticipantId" : -1
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099331
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 1000,
+                  "OtherParticipantId" : -1
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099331
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 1000,
+                  "OtherParticipantId" : -1
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099347
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 0,
+                  "LapTime" : 67058,
+                  "RacePosition" : 2
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "Alex Bräutigam",
+                "participantid" : 0,
+                "refid" : 60992,
+                "time" : 1447099367
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 1178,
+                  "PenaltyThreshold" : 763,
+                  "PenaltyValue" : 415,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 787
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "Alex Bräutigam",
+                "participantid" : 0,
+                "refid" : 60992,
+                "time" : 1447099368
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 0,
+                  "LapTime" : 67270,
+                  "RacePosition" : 1
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099374
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 2285,
+                  "PenaltyThreshold" : 543,
+                  "PenaltyValue" : 3188,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 3112
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099376
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 0,
+                  "LapTime" : 70470,
+                  "RacePosition" : 1
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099377
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 51,
+                  "PenaltyThreshold" : 990,
+                  "PenaltyValue" : 743,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 16
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099377
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 0,
+                  "LapTime" : 70552,
+                  "RacePosition" : 1
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099377
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 35,
+                  "PenaltyThreshold" : 993,
+                  "PenaltyValue" : 1000,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 26
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099377
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 0,
+                  "LapTime" : 9827,
+                  "RacePosition" : 1
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099422
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 422,
+                  "OtherParticipantId" : -1
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099422
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 1223,
+                  "PenaltyThreshold" : 755,
+                  "PenaltyValue" : 11779,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 5036
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099423
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 0,
+                  "LapTime" : 33212,
+                  "RacePosition" : 1
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099440
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 1460,
+                  "PenaltyThreshold" : 709,
+                  "PenaltyValue" : 4411,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 2985
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099441
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 0,
+                  "LapTime" : 36211,
+                  "RacePosition" : 1
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099441
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 37,
+                  "PenaltyThreshold" : 993,
+                  "PenaltyValue" : 1618,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 48
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099441
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 0,
+                  "LapTime" : 36327,
+                  "RacePosition" : 1
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099441
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 15,
+                  "PenaltyThreshold" : 996,
+                  "PenaltyValue" : 1374,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 13
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099441
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 849,
+                  "OtherParticipantId" : -1
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099442
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 1000,
+                  "OtherParticipantId" : -1
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099442
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 0,
+                  "LapTime" : 67316,
+                  "RacePosition" : 1
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099477
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 2270,
+                  "PenaltyThreshold" : 546,
+                  "PenaltyValue" : 3184,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 3171
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099480
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 0,
+                  "LapTime" : 70559,
+                  "RacePosition" : 1
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099480
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 51,
+                  "PenaltyThreshold" : 990,
+                  "PenaltyValue" : 941,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 35
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099480
+              },
+              {
+                "attributes" : {
+                  "CountThisLapTimes" : 1,
+                  "DistanceTravelled" : 11601,
+                  "Lap" : 0,
+                  "LapTime" : 105434,
+                  "RacePosition" : 2,
+                  "Sector1Time" : 36060,
+                  "Sector2Time" : 38147,
+                  "Sector3Time" : 31227
+                },
+                "event_name" : "Lap",
+                "is_player" : true,
+                "name" : "Alex Bräutigam",
+                "participantid" : 0,
+                "refid" : 60992,
+                "time" : 1447099511
+              },
+              {
+                "attributes" : {
+                  "CountThisLapTimes" : 0,
+                  "DistanceTravelled" : 11550,
+                  "Lap" : 0,
+                  "LapTime" : 103027,
+                  "RacePosition" : 2,
+                  "Sector1Time" : 28213,
+                  "Sector2Time" : 40459,
+                  "Sector3Time" : 34355
+                },
+                "event_name" : "Lap",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099515
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 1,
+                  "LapTime" : 9849,
+                  "RacePosition" : 2
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099525
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 1180,
+                  "PenaltyThreshold" : 764,
+                  "PenaltyValue" : 12072,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 4976
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099526
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 1,
+                  "LapTime" : 14822,
+                  "RacePosition" : 2
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099526
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 35,
+                  "PenaltyThreshold" : 993,
+                  "PenaltyValue" : 2044,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 47
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099526
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 1,
+                  "LapTime" : 32630,
+                  "RacePosition" : 1
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "Alex Bräutigam",
+                "participantid" : 0,
+                "refid" : 60992,
+                "time" : 1447099543
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 1,
+                  "LapTime" : 33281,
+                  "RacePosition" : 2
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099543
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 461,
+                  "OtherParticipantId" : -1
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "Alex Bräutigam",
+                "participantid" : 0,
+                "refid" : 60992,
+                "time" : 1447099544
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 1000,
+                  "OtherParticipantId" : -1
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "Alex Bräutigam",
+                "participantid" : 0,
+                "refid" : 60992,
+                "time" : 1447099544
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 1165,
+                  "PenaltyThreshold" : 770,
+                  "PenaltyValue" : 7118,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 3209
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "Alex Bräutigam",
+                "participantid" : 0,
+                "refid" : 60992,
+                "time" : 1447099544
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 1000,
+                  "OtherParticipantId" : -1
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "Alex Bräutigam",
+                "participantid" : 0,
+                "refid" : 60992,
+                "time" : 1447099544
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 1593,
+                  "PenaltyThreshold" : 681,
+                  "PenaltyValue" : 4611,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 2916
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099545
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 1000,
+                  "OtherParticipantId" : -1
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099558
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 1000,
+                  "OtherParticipantId" : -1
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099568
+              }
+            ],
+            "results" : [
+              {
+                "attributes" : {
+                  "FastestLapTime" : 105434,
+                  "Lap" : 1,
+                  "RacePosition" : 1,
+                  "State" : "Racing",
+                  "TotalTime" : 0,
+                  "VehicleId" : 1452261378
+                },
+                "is_player" : true,
+                "name" : "Alex Bräutigam",
+                "participantid" : 0,
+                "refid" : 60992,
+                "time" : 1447099567
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 0,
+                  "Lap" : 1,
+                  "RacePosition" : 2,
+                  "State" : "Racing",
+                  "TotalTime" : 0,
+                  "VehicleId" : 1161219858
+                },
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099567
+              }
+            ],
+            "start_time" : 1447099267
+          },
+          "race1" : {
+            "end_time" : 1447100109,
+            "events" : [
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 1000,
+                  "OtherParticipantId" : -1
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099627
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 392,
+                  "OtherParticipantId" : -1
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099628
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 395,
+                  "OtherParticipantId" : -1
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099648
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 781,
+                  "OtherParticipantId" : -1
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099649
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 570,
+                  "OtherParticipantId" : -1
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099649
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 542,
+                  "OtherParticipantId" : -1
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099729
+              },
+              {
+                "attributes" : {
+                  "CountThisLapTimes" : 0,
+                  "DistanceTravelled" : 5832,
+                  "Lap" : 0,
+                  "LapTime" : 135721,
+                  "RacePosition" : 1,
+                  "Sector1Time" : 59018,
+                  "Sector2Time" : 42907,
+                  "Sector3Time" : 33796
+                },
+                "event_name" : "Lap",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099735
+              },
+              {
+                "attributes" : {
+                  "CountThisLapTimes" : 1,
+                  "DistanceTravelled" : 6018,
+                  "Lap" : 0,
+                  "LapTime" : 139740,
+                  "RacePosition" : 2,
+                  "Sector1Time" : 68219,
+                  "Sector2Time" : 40180,
+                  "Sector3Time" : 31341
+                },
+                "event_name" : "Lap",
+                "is_player" : true,
+                "name" : "Alex Bräutigam",
+                "participantid" : 0,
+                "refid" : 60992,
+                "time" : 1447099739
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 407,
+                  "OtherParticipantId" : -1
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099761
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 866,
+                  "OtherParticipantId" : -1
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099761
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 700,
+                  "OtherParticipantId" : 0
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099807
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 353,
+                  "OtherParticipantId" : 1
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "Alex Bräutigam",
+                "participantid" : 0,
+                "refid" : 60992,
+                "time" : 1447099807
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 607,
+                  "OtherParticipantId" : -1
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "Alex Bräutigam",
+                "participantid" : 0,
+                "refid" : 60992,
+                "time" : 1447099808
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 1000,
+                  "OtherParticipantId" : 1
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "Alex Bräutigam",
+                "participantid" : 0,
+                "refid" : 60992,
+                "time" : 1447099808
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 1000,
+                  "OtherParticipantId" : -1
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "Alex Bräutigam",
+                "participantid" : 0,
+                "refid" : 60992,
+                "time" : 1447099808
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 1000,
+                  "OtherParticipantId" : 1
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "Alex Bräutigam",
+                "participantid" : 0,
+                "refid" : 60992,
+                "time" : 1447099808
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 1000,
+                  "OtherParticipantId" : 1
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "Alex Bräutigam",
+                "participantid" : 0,
+                "refid" : 60992,
+                "time" : 1447099808
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 491,
+                  "OtherParticipantId" : -1
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "Alex Bräutigam",
+                "participantid" : 0,
+                "refid" : 60992,
+                "time" : 1447099808
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 663,
+                  "OtherParticipantId" : -1
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099810
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 1000,
+                  "OtherParticipantId" : -1
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099810
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 1000,
+                  "OtherParticipantId" : 0
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099824
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 1000,
+                  "OtherParticipantId" : 1
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "Alex Bräutigam",
+                "participantid" : 0,
+                "refid" : 60992,
+                "time" : 1447099824
+              },
+              {
+                "attributes" : {
+                  "CountThisLapTimes" : 0,
+                  "DistanceTravelled" : 5817,
+                  "Lap" : 1,
+                  "LapTime" : 134568,
+                  "RacePosition" : 1,
+                  "Sector1Time" : 49033,
+                  "Sector2Time" : 50500,
+                  "Sector3Time" : 35035
+                },
+                "event_name" : "Lap",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099869
+              },
+              {
+                "attributes" : {
+                  "CountThisLapTimes" : 0,
+                  "DistanceTravelled" : 5764,
+                  "Lap" : 1,
+                  "LapTime" : 133646,
+                  "RacePosition" : 2,
+                  "Sector1Time" : 45423,
+                  "Sector2Time" : 42792,
+                  "Sector3Time" : 45432
+                },
+                "event_name" : "Lap",
+                "is_player" : true,
+                "name" : "Alex Bräutigam",
+                "participantid" : 0,
+                "refid" : 60992,
+                "time" : 1447099872
+              },
+              {
+                "attributes" : {
+                  "CountThisLapTimes" : 1,
+                  "DistanceTravelled" : 5777,
+                  "Lap" : 2,
+                  "LapTime" : 113932,
+                  "RacePosition" : 1,
+                  "Sector1Time" : 38939,
+                  "Sector2Time" : 41460,
+                  "Sector3Time" : 33532
+                },
+                "event_name" : "Lap",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447099983
+              },
+              {
+                "attributes" : {
+                  "CountThisLapTimes" : 1,
+                  "DistanceTravelled" : 5756,
+                  "Lap" : 2,
+                  "LapTime" : 110890,
+                  "RacePosition" : 2,
+                  "Sector1Time" : 37773,
+                  "Sector2Time" : 40493,
+                  "Sector3Time" : 32624
+                },
+                "event_name" : "Lap",
+                "is_player" : true,
+                "name" : "Alex Bräutigam",
+                "participantid" : 0,
+                "refid" : 60992,
+                "time" : 1447099983
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 1000,
+                  "OtherParticipantId" : -1
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447100004
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 678,
+                  "OtherParticipantId" : 1
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "Alex Bräutigam",
+                "participantid" : 0,
+                "refid" : 60992,
+                "time" : 1447100064
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 701,
+                  "OtherParticipantId" : 0
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447100064
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 398,
+                  "OtherParticipantId" : 1
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "Alex Bräutigam",
+                "participantid" : 0,
+                "refid" : 60992,
+                "time" : 1447100066
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 476,
+                  "OtherParticipantId" : 0
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447100066
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 406,
+                  "OtherParticipantId" : 1
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "Alex Bräutigam",
+                "participantid" : 0,
+                "refid" : 60992,
+                "time" : 1447100074
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 475,
+                  "OtherParticipantId" : 1
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "Alex Bräutigam",
+                "participantid" : 0,
+                "refid" : 60992,
+                "time" : 1447100076
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 355,
+                  "OtherParticipantId" : 0
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447100076
+              },
+              {
+                "attributes" : {
+                  "CollisionMagnitude" : 1000,
+                  "OtherParticipantId" : -1
+                },
+                "event_name" : "Impact",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447100089
+              },
+              {
+                "attributes" : {
+                  "NewState" : "Retired",
+                  "PreviousState" : "Racing"
+                },
+                "event_name" : "State",
+                "is_player" : true,
+                "name" : "Alex Bräutigam",
+                "participantid" : 0,
+                "refid" : 60992,
+                "time" : 1447100105
+              },
+              {
+                "attributes" : {
+                  "NewState" : "InGarage",
+                  "PreviousState" : "Racing"
+                },
+                "event_name" : "State",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447100109
+              },
+              {
+                "attributes" : {
+                  "NewState" : "Disqualified",
+                  "PreviousState" : "InGarage"
+                },
+                "event_name" : "State",
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447100109
+              }
+            ],
+            "results" : [
+              {
+                "attributes" : {
+                  "FastestLapTime" : 113932,
+                  "Lap" : 3,
+                  "RacePosition" : 1,
+                  "State" : "Disqualified",
+                  "TotalTime" : 510391,
+                  "VehicleId" : 1161219858
+                },
+                "is_player" : true,
+                "name" : "Markus Walter",
+                "participantid" : 1,
+                "refid" : 1985,
+                "time" : 1447100109
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 110890,
+                  "Lap" : 3,
+                  "RacePosition" : 2,
+                  "State" : "Retired",
+                  "TotalTime" : 0,
+                  "VehicleId" : 1452261378
+                },
+                "is_player" : true,
+                "name" : "Alex Bräutigam",
+                "participantid" : 0,
+                "refid" : 60992,
+                "time" : 1447100109
+              }
+            ],
+            "start_time" : 1447099587
+          }
+        },
+        "start_time" : 1447099209
+      }
+    ],
+    "players" : {
+      "76561197987621408" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {
+              "2" : 1
+            },
+            "positions_per_size" : {
+              "2" : {
+                "2" : 1
+              }
+            },
+            "states" : {
+              "racing" : 1
+            }
+          },
+          "race" : {
+            "positions" : [
+              1
+            ],
+            "positions_per_size" : {
+              "2" : [
+                1
+              ]
+            },
+            "states" : {
+              "disqualified" : 1
+            }
+          },
+          "race_finishes" : 1,
+          "race_joins" : 1,
+          "race_loads" : 1,
+          "race_loads_done" : 1,
+          "track_distances" : {
+            "-52972612" : 28976
+          },
+          "tracks" : {
+            "-52972612" : 1
+          },
+          "vehicle_distances" : {
+            "1161219858" : 28976
+          },
+          "vehicles" : {
+            "1161219858" : 1
+          }
+        },
+        "last_joined" : 1447099230,
+        "name" : "Markus Walter"
+      },
+      "76561198184982967" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : [
+              1
+            ],
+            "positions_per_size" : {
+              "2" : [
+                1
+              ]
+            },
+            "states" : {
+              "racing" : 1
+            }
+          },
+          "race" : {
+            "positions" : {
+              "2" : 1
+            },
+            "positions_per_size" : {
+              "2" : {
+                "2" : 1
+              }
+            },
+            "states" : {
+              "retired" : 1
+            }
+          },
+          "race_finishes" : 1,
+          "race_joins" : 1,
+          "race_loads" : 1,
+          "race_loads_done" : 1,
+          "track_distances" : {
+            "-52972612" : 29139
+          },
+          "tracks" : {
+            "-52972612" : 1
+          },
+          "vehicle_distances" : {
+            "1452261378" : 29139
+          },
+          "vehicles" : {
+            "1452261378" : 1
+          }
+        },
+        "last_joined" : 1447099208,
+        "name" : "Alex Bräutigam"
+      }
+    },
+    "server" : {
+      "name" : "RLC1 GT3 Pro Series",
+      "steam_disconnects" : 0,
+      "steam_downtime" : 0,
+      "total_steam_downtime" : 0,
+      "total_uptime" : "603995",
+      "uptime" : "603995"
+    },
+    "session" : {
+      "counts" : {
+        "lobbies" : 1,
+        "player_finishes" : 2,
+        "player_loads" : 2,
+        "player_loads_done" : 2,
+        "race_finishes" : 1,
+        "race_loads" : 1,
+        "race_loads_done" : 1,
+        "sessions" : 1,
+        "stage_counts" : {
+          "qualifying" : 1,
+          "race1" : 1
+        },
+        "stage_durations" : {
+          "qualifying" : 320072,
+          "race1" : 522607
+        },
+        "track_distances" : {
+          "-52972612" : 58115
+        },
+        "tracks" : {
+          "-52972612" : 1
+        },
+        "vehicle_distances" : {
+          "1161219858" : 28976,
+          "1452261378" : 29139
+        },
+        "vehicles" : {
+          "1161219858" : 1,
+          "1452261378" : 1
+        }
+      }
+    }
+  }
+}
+
+// EOF //

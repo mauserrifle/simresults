@@ -31,7 +31,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
      */
     public static function canRead($data)
     {
-        if (FALSE === strpos($data, 'next_history_index')) {
+        if (FALSE === strpos($data, '"stages"')) {
             return false;
         }
         // Clean json so we can parse it without errors

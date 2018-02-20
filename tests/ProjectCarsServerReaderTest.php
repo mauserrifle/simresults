@@ -509,6 +509,22 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
     }
 
 
+    /**
+     * Test reading log that did not parse anymore due changes in above test.
+     * Fixed by testing on "stages" in reader whether it is a PC log.
+     *
+     */
+    public function testOldLog()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/projectcars-server/old.log.json');
+
+        // Get sessions without error
+        $sessions = Data_Reader::factory($file_path)->getSessions();
+    }
+
+
 
 
     /***
