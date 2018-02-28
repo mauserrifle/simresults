@@ -53,6 +53,14 @@
           "name" : "LMP900"
         },
         {
+          "value" : -1354623995,
+          "name" : "WRX"
+        },
+        {
+          "value" : 675684900,
+          "name" : "Group B"
+        },
+        {
           "value" : -1270088329,
           "name" : "Group A"
         },
@@ -93,10 +101,6 @@
           "name" : "Vintage Touring-GT A"
         },
         {
-          "value" : -1354623995,
-          "name" : "WRX"
-        },
-        {
           "value" : 61661019,
           "name" : "Indycar"
         },
@@ -105,16 +109,16 @@
           "name" : "Vintage Prototype B"
         },
         {
-          "value" : -517378763,
-          "name" : "488 Challenge"
-        },
-        {
           "value" : 1323122160,
           "name" : "GT1"
         },
         {
           "value" : 767810805,
           "name" : "Road A"
+        },
+        {
+          "value" : -1062040284,
+          "name" : "Trophy Truck"
         },
         {
           "value" : -795647603,
@@ -127,6 +131,10 @@
         {
           "value" : 1992634946,
           "name" : "Modern Stockcar"
+        },
+        {
+          "value" : 97638723,
+          "name" : "Drift"
         },
         {
           "value" : 1212874744,
@@ -195,10 +203,6 @@
         {
           "value" : -541941989,
           "name" : "Vintage F1 A"
-        },
-        {
-          "value" : 97638723,
-          "name" : "Drift"
         },
         {
           "value" : -1722857081,
@@ -308,6 +312,11 @@
           "id" : 373960596,
           "name" : "Honda Civic Type-R",
           "class" : "Road F"
+        },
+        {
+          "id" : 375801487,
+          "name" : "Ford RS200 Evolution Group B",
+          "class" : "Group B"
         },
         {
           "id" : 405826415,
@@ -665,6 +674,11 @@
           "class" : "Indycar"
         },
         {
+          "id" : 1830085946,
+          "name" : "Ford Bronco Brocky",
+          "class" : "Trophy Truck"
+        },
+        {
           "id" : 1850232477,
           "name" : "Lamborghini Huracán LP610-4",
           "class" : "Road C"
@@ -743,6 +757,11 @@
           "id" : 2136103830,
           "name" : "Nissan Skyline GT-R (BNR32) Group A",
           "class" : "Group A"
+        },
+        {
+          "id" : -2139807191,
+          "name" : "Audi S1 EKS RX quattro",
+          "class" : "WRX"
         },
         {
           "id" : -2133597590,
@@ -831,7 +850,7 @@
         },
         {
           "id" : -1748676965,
-          "name" : "McLaren P1™",
+          "name" : "McLaren P1 ™",
           "class" : "Road A"
         },
         {
@@ -848,6 +867,11 @@
           "id" : -1617916111,
           "name" : "Pagani Zonda Cinque Roadster",
           "class" : "Road B"
+        },
+        {
+          "id" : -1592901367,
+          "name" : "Audi Sport quattro S1",
+          "class" : "Group B"
         },
         {
           "id" : -1548941295,
@@ -901,7 +925,7 @@
         },
         {
           "id" : -1339322144,
-          "name" : "McLaren P1™ GTR",
+          "name" : "McLaren P1 ™ GTR",
           "class" : "Track Day A"
         },
         {
@@ -990,6 +1014,11 @@
           "class" : "GT1"
         },
         {
+          "id" : -983006067,
+          "name" : "Citroen DS3 RX Supercar",
+          "class" : "WRX"
+        },
+        {
           "id" : -980019072,
           "name" : "Marek RP 219D LMP2",
           "class" : "LMP2"
@@ -1011,7 +1040,7 @@
         },
         {
           "id" : -888134359,
-          "name" : "Nissan 280ZX IMSA GTX",
+          "name" : "Datsun 280ZX IMSA GTX",
           "class" : "Group 5"
         },
         {
@@ -1048,6 +1077,11 @@
           "id" : -698401632,
           "name" : "Porsche 918 Spyder Weissach",
           "class" : "Road A"
+        },
+        {
+          "id" : -667842301,
+          "name" : "Renault 5 Maxi Turbo",
+          "class" : "Group B"
         },
         {
           "id" : -648709823,
@@ -1110,9 +1144,19 @@
           "class" : "Indycar"
         },
         {
+          "id" : -373393516,
+          "name" : "Ford Mustang '66 RTR TransAm",
+          "class" : "Vintage Touring-GT A"
+        },
+        {
           "id" : -370668051,
           "name" : "Toyota GT-One (1999)",
           "class" : "LMP900"
+        },
+        {
+          "id" : -353748333,
+          "name" : "Ford Mustang RTR Spec - 5D",
+          "class" : "Drift"
         },
         {
           "id" : -344750627,
@@ -1146,7 +1190,7 @@
         },
         {
           "id" : -278306106,
-          "name" : "Nissan KDR30 Super Silhouette",
+          "name" : "Nissan Skyline Super Silhouette",
           "class" : "Group 5"
         },
         {
@@ -1505,6 +1549,11 @@
           "gridsize" : 30
         },
         {
+          "id" : 1828877100,
+          "name" : "Barcelona Rallycross",
+          "gridsize" : 6
+        },
+        {
           "id" : 1836888499,
           "name" : "Zhuhai International Circuit",
           "gridsize" : 32
@@ -1567,6 +1616,11 @@
         {
           "id" : -2108341365,
           "name" : "DirtFish Pro Rallycross Course",
+          "gridsize" : 6
+        },
+        {
+          "id" : -2055158240,
+          "name" : "Classic Brands Hatch Rallycross",
           "gridsize" : 6
         },
         {
