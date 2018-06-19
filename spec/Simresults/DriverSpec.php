@@ -32,6 +32,7 @@ class DriverSpec extends ObjectBehavior
         $this->setName('Maurice van der Star');
         $this->getName()->shouldReturn('Maurice van der Star');
         $this->getName(true)->shouldReturn('Maurice S');
+        $this->getName(true)->shouldReturn('Maurice S'); // Test cache
 
         $this->setName('Maurice Star');
         $this->getName()->shouldReturn('Maurice Star');
