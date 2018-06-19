@@ -41,7 +41,7 @@ class Driver {
      */
     public function setName($name)
     {
-        $this->name = $name;
+        $this->name = trim($name);
         $this->cache_shorten_name = NULL;
         return $this;
     }
