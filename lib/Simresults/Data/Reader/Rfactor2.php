@@ -99,10 +99,15 @@ class Data_Reader_Rfactor2 extends Data_Reader {
         }
         // Is practice session
         elseif (
-        		$xml_session = $this->dom->getElementsByTagName('Practice1')->item(0) OR
-        		$xml_session = $this->dom->getElementsByTagName('Practice2')->item(0) OR
-        		$xml_session = $this->dom->getElementsByTagName('Practice3')->item(0)
-        		)
+            $xml_session = $this->dom->getElementsByTagName('Practice')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('Practice1')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('Practice2')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('Practice3')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('TestDay')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('TestDay1')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('TestDay2')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('TestDay3')->item(0)
+            )
         {
             // Set type to practice
             $session->setType(Session::TYPE_PRACTICE);

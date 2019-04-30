@@ -801,6 +801,25 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
 
 
 
+    /**
+     * Test reading test day session to be practice
+     */
+    public function testReadingTestDay()
+    {
+        // Get the data reader for the given data source
+        $reader = Data_Reader::factory(
+                realpath(__DIR__.'/logs/automobilista/test.day.xml'));
+
+        // Get session
+        $session = $reader->getSession();
+
+        // Validate session type
+        $this->assertSame(Session::TYPE_PRACTICE,
+                $reader->getSession()->getType());
+    }
+
+
+
     //---------------------------------------------------------------
 
 
