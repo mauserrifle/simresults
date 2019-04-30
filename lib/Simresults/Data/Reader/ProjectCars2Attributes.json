@@ -1,7 +1,7 @@
 {
   "result" : "ok",
   "response" : {
-    "vehicle_classes" : {
+      "vehicle_classes" : {
       "description" : "All known vehicle classes",
       "list" : [
         {
@@ -45,12 +45,24 @@
           "name" : "Road F"
         },
         {
+          "value" : 2019185901,
+          "name" : "LMP1 2016"
+        },
+        {
           "value" : -1289517523,
           "name" : "LMP1"
         },
         {
           "value" : 1543160927,
           "name" : "LMP900"
+        },
+        {
+          "value" : -1354623995,
+          "name" : "WRX"
+        },
+        {
+          "value" : 675684900,
+          "name" : "Group B"
         },
         {
           "value" : -1270088329,
@@ -93,10 +105,6 @@
           "name" : "Vintage Touring-GT A"
         },
         {
-          "value" : -1354623995,
-          "name" : "WRX"
-        },
-        {
           "value" : 61661019,
           "name" : "Indycar"
         },
@@ -105,8 +113,12 @@
           "name" : "Vintage Prototype B"
         },
         {
-          "value" : -517378763,
-          "name" : "488 Challenge"
+          "value" : 381475579,
+          "name" : "Ferrari Series"
+        },
+        {
+          "value" : -1371894278,
+          "name" : "Vintage Prototype A"
         },
         {
           "value" : 1323122160,
@@ -115,6 +127,10 @@
         {
           "value" : 767810805,
           "name" : "Road A"
+        },
+        {
+          "value" : -1062040284,
+          "name" : "Trophy Truck"
         },
         {
           "value" : -795647603,
@@ -127,6 +143,10 @@
         {
           "value" : 1992634946,
           "name" : "Modern Stockcar"
+        },
+        {
+          "value" : 97638723,
+          "name" : "Drift"
         },
         {
           "value" : 1212874744,
@@ -197,16 +217,16 @@
           "name" : "Vintage F1 A"
         },
         {
-          "value" : 97638723,
-          "name" : "Drift"
-        },
-        {
           "value" : -1722857081,
           "name" : "Vintage Touring-GT D"
         },
         {
           "value" : 1249367921,
           "name" : "RXLites"
+        },
+        {
+          "value" : 349979920,
+          "name" : "CanAm"
         },
         {
           "value" : -427741350,
@@ -300,6 +320,11 @@
           "class" : "G40 Junior"
         },
         {
+          "id" : 345014385,
+          "name" : "Ferrari 488 Challenge (NA)",
+          "class" : "Ferrari Series"
+        },
+        {
           "id" : 366881611,
           "name" : "Ford GT",
           "class" : "Road B"
@@ -308,6 +333,11 @@
           "id" : 373960596,
           "name" : "Honda Civic Type-R",
           "class" : "Road F"
+        },
+        {
+          "id" : 375801487,
+          "name" : "Ford RS200 Evolution Group B",
+          "class" : "Group B"
         },
         {
           "id" : 405826415,
@@ -358,6 +388,11 @@
           "id" : 728234598,
           "name" : "Acura NSX",
           "class" : "Road C"
+        },
+        {
+          "id" : 754463374,
+          "name" : "Ferrari 488 Challenge (APAC)",
+          "class" : "Ferrari Series"
         },
         {
           "id" : 761457895,
@@ -440,6 +475,11 @@
           "class" : "GT1"
         },
         {
+          "id" : 1083119012,
+          "name" : "Toyota TS050 Hybrid",
+          "class" : "LMP1 2016"
+        },
+        {
           "id" : 1106819298,
           "name" : "McLaren 720S",
           "class" : "Road A"
@@ -483,6 +523,11 @@
           "id" : 1213801406,
           "name" : "Porsche 935/80",
           "class" : "Group 5"
+        },
+        {
+          "id" : 1218201782,
+          "name" : "Porsche 908/03 Spyder",
+          "class" : "Vintage Prototype B"
         },
         {
           "id" : 1219511257,
@@ -600,6 +645,11 @@
           "class" : "GTO"
         },
         {
+          "id" : 1471547500,
+          "name" : "Ferrari 488 Challenge (EU)",
+          "class" : "Ferrari Series"
+        },
+        {
           "id" : 1481115672,
           "name" : "Nissan Fairlady 240ZG GTS-II",
           "class" : "Vintage Touring-GT A"
@@ -663,6 +713,11 @@
           "id" : 1818067169,
           "name" : "Dallara IR-12 Chevrolet (Speedway)",
           "class" : "Indycar"
+        },
+        {
+          "id" : 1830085946,
+          "name" : "Ford Bronco Brocky",
+          "class" : "Trophy Truck"
         },
         {
           "id" : 1850232477,
@@ -745,6 +800,11 @@
           "class" : "Group A"
         },
         {
+          "id" : -2139807191,
+          "name" : "Audi S1 EKS RX quattro",
+          "class" : "WRX"
+        },
+        {
           "id" : -2133597590,
           "name" : "Porsche 911 GT3 RS",
           "class" : "Road B"
@@ -805,6 +865,16 @@
           "class" : "Vintage F1 B"
         },
         {
+          "id" : -1835136516,
+          "name" : "Porsche 917K",
+          "class" : "Vintage Prototype A"
+        },
+        {
+          "id" : -1831147854,
+          "name" : "Ferrari 512 M",
+          "class" : "Vintage Prototype A"
+        },
+        {
           "id" : -1796949190,
           "name" : "Ford Escort RS1600 (Rallycross)",
           "class" : "Vintage RX"
@@ -831,7 +901,7 @@
         },
         {
           "id" : -1748676965,
-          "name" : "McLaren P1™",
+          "name" : "McLaren P1 ™",
           "class" : "Road A"
         },
         {
@@ -850,6 +920,11 @@
           "class" : "Road B"
         },
         {
+          "id" : -1592901367,
+          "name" : "Audi Sport quattro S1",
+          "class" : "Group B"
+        },
+        {
           "id" : -1548941295,
           "name" : "Ford F-150 RTR Ultimate Funhaver",
           "class" : "Road G"
@@ -860,6 +935,16 @@
           "class" : "GT4"
         },
         {
+          "id" : -1529264129,
+          "name" : "Porsche 917 LH",
+          "class" : "Vintage Prototype A"
+        },
+        {
+          "id" : -1523189681,
+          "name" : "Porsche 917/10",
+          "class" : "CanAm"
+        },
+        {
           "id" : -1522922538,
           "name" : "Mercedes-AMG A 45 4MATIC",
           "class" : "Road E"
@@ -868,6 +953,11 @@
           "id" : -1488131398,
           "name" : "Jaguar XJR-9 LM",
           "class" : "Group C1"
+        },
+        {
+          "id" : -1470867259,
+          "name" : "Porsche Carrera GT",
+          "class" : "Road C"
         },
         {
           "id" : -1459535564,
@@ -901,7 +991,7 @@
         },
         {
           "id" : -1339322144,
-          "name" : "McLaren P1™ GTR",
+          "name" : "McLaren P1 ™ GTR",
           "class" : "Track Day A"
         },
         {
@@ -915,6 +1005,11 @@
           "class" : "Road D"
         },
         {
+          "id" : -1295853198,
+          "name" : "Porsche 911 RSR",
+          "class" : "GTE"
+        },
+        {
           "id" : -1275144817,
           "name" : "Mercedes-AMG A 45 SMS-R Touring",
           "class" : "Touring Car"
@@ -925,6 +1020,16 @@
           "class" : "LMP900"
         },
         {
+          "id" : -1270234648,
+          "name" : "Porsche 935/78",
+          "class" : "Group 5"
+        },
+        {
+          "id" : -1268030897,
+          "name" : "Porsche 959 S",
+          "class" : "Road E"
+        },
+        {
           "id" : -1253474718,
           "name" : "Ford Sierra Cosworth RS500 Group A",
           "class" : "Group A"
@@ -933,6 +1038,16 @@
           "id" : -1226176940,
           "name" : "BMW 1 Series M Coupé",
           "class" : "Road E"
+        },
+        {
+          "id" : -1218483247,
+          "name" : "Porsche 919 Hybrid",
+          "class" : "LMP1 2016"
+        },
+        {
+          "id" : -1206681923,
+          "name" : "Audi R18 (Fuji 2016)",
+          "class" : "LMP1 2016"
         },
         {
           "id" : -1204688299,
@@ -990,6 +1105,11 @@
           "class" : "GT1"
         },
         {
+          "id" : -983006067,
+          "name" : "Citroen DS3 RX Supercar",
+          "class" : "WRX"
+        },
+        {
           "id" : -980019072,
           "name" : "Marek RP 219D LMP2",
           "class" : "LMP2"
@@ -1011,7 +1131,7 @@
         },
         {
           "id" : -888134359,
-          "name" : "Nissan 280ZX IMSA GTX",
+          "name" : "Datsun 280ZX IMSA GTX",
           "class" : "Group 5"
         },
         {
@@ -1023,6 +1143,11 @@
           "id" : -871253931,
           "name" : "Panoz Esperante GTR1",
           "class" : "GT1"
+        },
+        {
+          "id" : -807187208,
+          "name" : "Porsche 911 Carrera RSR 2.8",
+          "class" : "Vintage Touring-GT A"
         },
         {
           "id" : -782532739,
@@ -1050,9 +1175,19 @@
           "class" : "Road A"
         },
         {
+          "id" : -667842301,
+          "name" : "Renault 5 Maxi Turbo",
+          "class" : "Group B"
+        },
+        {
           "id" : -648709823,
           "name" : "Renault Clio Cup",
           "class" : "TC1"
+        },
+        {
+          "id" : -640190447,
+          "name" : "Ferrari 512 S",
+          "class" : "Vintage Prototype A"
         },
         {
           "id" : -623946728,
@@ -1095,6 +1230,11 @@
           "class" : "Formula X"
         },
         {
+          "id" : -424432241,
+          "name" : "Porsche 935/78-81",
+          "class" : "Group 5"
+        },
+        {
           "id" : -387045855,
           "name" : "Jaguar XJ220 S",
           "class" : "Road B"
@@ -1110,9 +1250,19 @@
           "class" : "Indycar"
         },
         {
+          "id" : -373393516,
+          "name" : "Ford Mustang '66 RTR TransAm",
+          "class" : "Vintage Touring-GT A"
+        },
+        {
           "id" : -370668051,
           "name" : "Toyota GT-One (1999)",
           "class" : "LMP900"
+        },
+        {
+          "id" : -353748333,
+          "name" : "Ford Mustang RTR Spec - 5D",
+          "class" : "Drift"
         },
         {
           "id" : -344750627,
@@ -1135,6 +1285,11 @@
           "class" : "Vintage Prototype B"
         },
         {
+          "id" : -327947155,
+          "name" : "Porsche 961",
+          "class" : "GTO"
+        },
+        {
           "id" : -303591806,
           "name" : "Nissan Skyline GT-R (R34) SMS-R",
           "class" : "Track Day B"
@@ -1146,7 +1301,7 @@
         },
         {
           "id" : -278306106,
-          "name" : "Nissan KDR30 Super Silhouette",
+          "name" : "Nissan Skyline Super Silhouette",
           "class" : "Group 5"
         },
         {
@@ -1155,9 +1310,19 @@
           "class" : "GT3"
         },
         {
+          "id" : -240743205,
+          "name" : "Audi R18 (Le Mans 2016)",
+          "class" : "LMP1 2016"
+        },
+        {
           "id" : -235751604,
           "name" : "Toyota GT-86",
           "class" : "Road G"
+        },
+        {
+          "id" : -211582477,
+          "name" : "Porsche 924 Carrera GTP",
+          "class" : "Group 4"
         },
         {
           "id" : -149617068,
@@ -1233,6 +1398,16 @@
           "id" : 62242453,
           "name" : "Indianapolis Motor Speedway Oval",
           "gridsize" : 32
+        },
+        {
+          "id" : 167552033,
+          "name" : "Le Mans Vintage Track",
+          "gridsize" : 32
+        },
+        {
+          "id" : 169281142,
+          "name" : "Porsche Leipzig Short Circuit",
+          "gridsize" : 26
         },
         {
           "id" : 211444010,
@@ -1505,6 +1680,11 @@
           "gridsize" : 30
         },
         {
+          "id" : 1828877100,
+          "name" : "Barcelona Rallycross",
+          "gridsize" : 6
+        },
+        {
           "id" : 1836888499,
           "name" : "Zhuhai International Circuit",
           "gridsize" : 32
@@ -1567,6 +1747,11 @@
         {
           "id" : -2108341365,
           "name" : "DirtFish Pro Rallycross Course",
+          "gridsize" : 6
+        },
+        {
+          "id" : -2055158240,
+          "name" : "Classic Brands Hatch Rallycross",
           "gridsize" : 6
         },
         {
@@ -1883,6 +2068,16 @@
           "id" : -163046637,
           "name" : "Autodromo Nazionale Monza Oval Historic",
           "gridsize" : 22
+        },
+        {
+          "id" : -158843644,
+          "name" : "Porsche Leipzig Full Circuit",
+          "gridsize" : 26
+        },
+        {
+          "id" : -105902772,
+          "name" : "Porsche Leipzig Dynamic Circuit",
+          "gridsize" : 20
         },
         {
           "id" : -103312908,

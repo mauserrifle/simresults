@@ -10,6 +10,16 @@ namespace Simresults;
  */
 class Penalty {
 
+    // The penalty types
+    const TYPE_UNKNOWN = NULL;
+    const TYPE_STOPGO = 'stopgo';
+    const TYPE_DRIVETHROUGH = 'drivethrough';
+
+    /**
+     * @var  string  The type based on constants. Defaults to unknown
+     */
+    protected $type = self::TYPE_UNKNOWN;
+
     /**
      * @var  string  The penalty message
      */
@@ -26,6 +36,23 @@ class Penalty {
      *              a precise time including miliseconds.
      */
     protected $elapsed_seconds;
+
+    /**
+     * The participant causing the penalty
+     *
+     * @var  Participant|null
+     */
+    protected $participant;
+
+    /**
+     * Whether this penalty is served in this message instance.
+     * Quickfix so we ignore served messages in rFactor 2
+     *
+     * TODO: Refactor when supporting more sims?
+     *
+     * @var  boolean|null
+     */
+    protected $served = null;
 
 
     /**
@@ -96,6 +123,73 @@ class Penalty {
     public function getElapsedSeconds()
     {
         return $this->elapsed_seconds;
+    }
+
+    /**
+     * Set the penalty type based on the constants
+     *
+     * @param   string      $type
+     * @return  Penalty
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
+        return $this;
+    }
+
+    /**
+     * Get the penalty type based on the constants
+     *
+     * @return  string
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * Set the participant
+     *
+     * @param   Participant  $participant
+     * @return  Penalty
+     */
+    public function setParticipant(Participant $participant)
+    {
+        $this->participant = $participant;
+        return $this;
+    }
+
+    /**
+     * Get the participant
+     *
+     * @return  Participant
+     */
+    public function getParticipant()
+    {
+        return $this->participant;
+    }
+
+    /**
+     * Set whether this penalty is served in this message instance
+     *
+     * @param   boolean      $served
+     * @return  Penalty
+     */
+    public function setServed($served)
+    {
+        $this->served = $served;
+        return $this;
+    }
+
+    /**
+     * Get whether this penalty is served in this message instance. Returns
+     * NULL if unknown
+     *
+     * @return  boolean|null
+     */
+    public function isServed()
+    {
+        return $this->served;
     }
 
 }

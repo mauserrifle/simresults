@@ -31,6 +31,9 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
      */
     public static function canRead($data)
     {
+        if (FALSE === strpos($data, '"stages"')) {
+            return false;
+        }
         // Clean json so we can parse it without errors
         $data = self::cleanJSON($data);
 
@@ -240,6 +243,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
 
                 // Parse event data such as laps
                 $cut_data = array();
+                $driver_has_entered_pit = array();
                 foreach ($session_data['events'] as $event)
                 {
                     // Get participant
@@ -280,23 +284,28 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                         // Set number
                         $lap->setNumber($event['attributes']['Lap']+1);
 
+                        // Has entered pit
+                        if (isset($driver_has_entered_pit[$event['name']]))
+                        {
+                            $lap->setPitLap(TRUE);
+                            unset($driver_has_entered_pit[$event['name']]);
+                        }
+
                         // Add lap to participant
                         $part->addLap($lap);
                     }
                     elseif ($event['event_name'] === 'Impact')
                     {
-                        // Other participant is unknown by default
-                        $other_participant_name = 'unknown';
+                        $type = Incident::TYPE_ENV;
+                        $other_part = NULL;
 
                         // Other participant known
                         if ((-1 != $other_id =
                                 $event['attributes']['OtherParticipantId']
                              ) AND isset($participants_by_id[$other_id]))
                         {
-                            // Set other name
-                            $other_participant_name =
-                                $participants_by_id[$other_id]
-                                    ->getDriver()->getName();
+                            $other_part = $participants_by_id[$other_id];
+                            $type = Incident::TYPE_CAR;
 
                         }
                         // Participant not known
@@ -311,7 +320,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                            '%s reported contact with another vehicle '.
                             '%s. CollisionMagnitude: %s' ,
                             $part->getDriver()->getName(),
-                            $other_participant_name,
+                            $other_part ? $other_part->getDriver()->getName() : 'unknown',
                             $event['attributes']['CollisionMagnitude']
                         ));
 
@@ -324,6 +333,9 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                             -
                             $session->getDate()->getTimestamp()
                         );
+                        $incident->setParticipant($part);
+                        $incident->setOtherParticipant($other_part);
+                        $incident->setType($type);
 
                         $session->addIncident($incident);
                     }
@@ -336,6 +348,12 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                             $event['attributes']['NewState'] === 'Retired')
                     {
                         $part->setFinishStatus(Participant::FINISH_DNF);
+                    }
+                    elseif ($event['event_name'] === 'State' AND
+                            $event['attributes']['NewState'] === 'EnteringPits' AND
+                            $event['attributes']['PreviousState'] === 'Racing' )
+                    {
+                       $driver_has_entered_pit[$event['name']] = TRUE;
                     }
 
                 }
@@ -382,11 +400,13 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                     // Loop each result and process the lap
                     foreach ($results as $result)
                     {
-                        // Participant not found, continue to next
+                        // Participant not found, build it
                         if ( ! isset($participants_by_id[
                                          $result['participantid']]))
                         {
-                            continue;
+                            $part = $this->getParticipant($result);
+                            $participants_by_id[$result['participantid']] = $part;
+                            $participants_by_name[$result['name']] = $part;
                         }
 
                         // Get participant
@@ -745,6 +765,11 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
             isset($part_data['setup']['VehicleId'])) {
             $vehicle_id = $part_data['setup']['VehicleId'];
         }
+        // Has vehicle in attributes data
+        elseif (isset($part_data['attributes']) AND
+            isset($part_data['attributes']['VehicleId'])) {
+            $vehicle_id = $part_data['attributes']['VehicleId'];
+        }
 
 
         $this->setVehicleName($vehicle_id, $vehicle);
@@ -764,8 +789,28 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
      */
     protected static function cleanJSON($json)
     {
-        // Remove comments which are not supported by json syntax
-        return preg_replace('#// .*#', '', $json);
+        /**
+         * Remove the following lines
+         *
+         *     // Persistent data for addon 'sms_stats', addon version 2.0
+         *
+         *     // Automatically maintained by the addon, do not edit!
+         *
+         *     // EOF //
+         *
+         * Make sure the following lines are not removed partly:
+         *
+         *     "name" : "LEAGUE-NAME // GT3 MASTERS #02",
+         */
+
+        // Filter out comments above json
+        $json_parts = explode('{', $json, 2);
+        $new_json = '{ '.$json_parts[1];
+
+        // Filter oout last comment
+        $new_json = str_replace('// EOF //', '', $new_json);
+
+        return $new_json;
     }
 
 

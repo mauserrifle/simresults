@@ -3,6 +3,7 @@ use Simresults\Data_Reader_AssettoCorsaServerJson;
 use Simresults\Data_Reader;
 use Simresults\Session;
 use Simresults\Participant;
+use Simresults\Incident;
 
 /**
  * Tests for the Assetto Corsa Server JSON reader
@@ -142,6 +143,20 @@ class AssettoCorsaServerJsonReaderTest extends PHPUnit_Framework_TestCase {
             $participants[4]->getFinishStatus());
     }
 
+     /**
+     * Test no exceptions when BallastKG is missing
+     */
+    public function testFixingBallastExceptions()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-server-json/'.
+            'no.ballastkg.json');
+
+        // Get the race session
+        $session = Data_Reader::factory($file_path)->getSession();
+    }
+
 
 
 
@@ -216,6 +231,7 @@ class AssettoCorsaServerJsonReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertSame('lotus_exos_125',
                           $participant->getVehicle()->getName());
         $this->assertSame(20, $participant->getVehicle()->getBallast());
+        $this->assertSame(15, $participant->getVehicle()->getRestrictor());
         $this->assertSame('0_Lotus', $participant->getVehicle()->getSkin());
         $this->assertSame('TEST TEAM',
                           $participant->getTeam());
@@ -236,6 +252,7 @@ class AssettoCorsaServerJsonReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertSame('lotus_exos_125',
                           $participant->getVehicle()->getName());
         $this->assertSame(0, $participant->getVehicle()->getBallast());
+        $this->assertSame(0, $participant->getVehicle()->getRestrictor());
         $this->assertSame('0_Lotus', $participant->getVehicle()->getSkin());
         $this->assertSame('',
                           $participant->getTeam());
@@ -310,10 +327,15 @@ class AssettoCorsaServerJsonReaderTest extends PHPUnit_Framework_TestCase {
     public function testIncidents()
     {
         // Get participants
-        $incidents = $this->getWorkingReader()->getSession()
-            ->getIncidents();
+        $session = $this->getWorkingReader()->getSession();
+
+        $incidents = $session->getIncidents();
+        $participants = $session->getParticipants();
 
         // Validate first incident
+        $this->assertSame(Incident::TYPE_CAR, $incidents[0]->getType());
+        $this->assertSame($participants[10], $incidents[0]->getParticipant());
+        $this->assertSame($participants[7], $incidents[0]->getOtherParticipant());
         $this->assertSame(
             'PPolaina reported contact with another vehicle '
            .'Tabak. Impact speed: 7.37918',

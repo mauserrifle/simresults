@@ -3,6 +3,7 @@ use Simresults\Data_Reader_AssettoCorsaServerJson;
 use Simresults\Data_Reader;
 use Simresults\Session;
 use Simresults\Participant;
+use Simresults\Incident;
 
 /**
  * Tests for the Project Cars Server reader
@@ -397,6 +398,28 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
         $sessions = Data_Reader::factory($file_path)->getSessions();
     }
 
+
+    /**
+     * Test reading pit stops
+     */
+    public function testReadingPitStops()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/projectcars-server/race.without.finish.json');
+
+        // Get the data reader for the given data source
+        $session = Data_Reader::factory($file_path)->getSession(5);
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Validate pitstop lap
+        $this->assertFalse($participants[6]->getLap(9)->isPitLap());
+        $this->assertTrue($participants[6]->getLap(10)->isPitLap());
+        $this->assertFalse($participants[6]->getLap(11)->isPitLap());
+    }
+
     /**
      * Project Cars 2 fixes
      */
@@ -430,7 +453,77 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
         // Test vehicle friendly name
         $this->assertSame('Mitsubishi Lancer Evolution IX FQ360 (Road C1)',
                           $participants[0]->getVehicle()->getFriendlyName());
+
+
+
+        /**
+         * Test fixing missing admin driver and missing vehicle name
+         */
+
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/projectcars2-server/'.
+            'admin.driver.missing.from.results.json');
+
+        // Find Race 4 to test
+        $sessions = Data_Reader::factory($file_path)->getSessions();
+
+        $races_looped = 0;
+        $race_session = null;
+        foreach ($sessions as $session)
+        {
+            if ($session->getType() === Session::TYPE_RACE AND
+                $participants = $session->getParticipants())
+            {
+                $races_looped++;
+
+                if ($races_looped === 4) {
+                    $race_session = $session;
+                }
+            }
+        }
+
+        $participants = $race_session->getParticipants();
+        $this->assertSame(
+            'Rob Milliken', $participants[5]->getDriver()->getName());
+        $this->assertSame(
+            'Formula Renault 3.5', $participants[5]->getVehicle()->getName());
     }
+
+    /**
+     * Test reading log that did not parse due bad comment cleaning.
+     *
+     * The following was badly replaced due the 2 slashes breaking the json:
+     *
+     *     "name" : "WWW.GEF-GAMING.DE // GT3 MASTERS #02",
+     *
+     */
+    public function testReadingLogThatDidNotParseDueBadCommentCleaning()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/projectcars2-server/not.parsing.due.slashes.in.server.name.json');
+
+        // Get sessions without error
+        $sessions = Data_Reader::factory($file_path)->getSessions();
+    }
+
+
+    /**
+     * Test reading log that did not parse anymore due changes in above test.
+     * Fixed by testing on "stages" in reader whether it is a PC log.
+     *
+     */
+    public function testOldLog()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/projectcars-server/old.log.json');
+
+        // Get sessions without error
+        $sessions = Data_Reader::factory($file_path)->getSessions();
+    }
+
 
 
 
@@ -673,18 +766,22 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
      */
     public function testIncidents()
     {
-        // Get participants
-        $incidents = $this->getWorkingReader()->getSession(5)
-            ->getIncidents();
+        $session = $this->getWorkingReader()->getSession(5);
+
+        $participants = $session->getParticipants();
+        $incidents = $session->getIncidents();
 
         // Validate first incident
         $this->assertSame(
-            'Seb Solo reported contact with another vehicle '
-           .'Trey. CollisionMagnitude: 1000',
-            $incidents[0]->getMessage());
-        $this->assertSame(1446150056,
-            $incidents[0]->getDate()->getTimestamp());
-        $this->assertSame(34, $incidents[0]->getElapsedSeconds());
+            'JarZon reported contact with another vehicle '
+           .'Seb Solo. CollisionMagnitude: 780',
+            $incidents[4]->getMessage());
+        $this->assertSame(1446150075,
+            $incidents[4]->getDate()->getTimestamp());
+        $this->assertSame(53, $incidents[4]->getElapsedSeconds());
+        $this->assertSame(Incident::TYPE_CAR, $incidents[4]->getType());
+        $this->assertSame($participants[4], $incidents[4]->getParticipant());
+        $this->assertSame($participants[9], $incidents[4]->getOtherParticipant());
 
         // Validate incident that would have a unknown participant. But now
         // it should not because we ignore these

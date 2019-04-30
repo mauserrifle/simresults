@@ -105,7 +105,8 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
                 $player_data['Driver']['Guid'],
                 $player_data['Model'],
                 $player_data['Driver']['Team'],
-                $player_data['BallastKG'],
+                $this->helper->arrayGet($player_data, 'BallastKG'),
+                $this->helper->arrayGet($player_data, 'Restrictor'),
                 $player_data['Skin']
             );
 
@@ -131,7 +132,8 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
                     $player_data['DriverGuid'],
                     $player_data['CarModel'],
                     null,
-                    $player_data['BallastKG']
+                    $this->helper->arrayGet($player_data, 'BallastKG'),
+                    $this->helper->arrayGet($player_data, 'Restrictor')
                 );
 
                 // Add participant to collection
@@ -176,7 +178,8 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
                     $lap_data['DriverGuid'],
                     $lap_data['CarModel'],
                     null,
-                    $lap_data['BallastKG']
+                    $this->helper->arrayGet($lap_data, 'BallastKG'),
+                    $this->helper->arrayGet($lap_data, 'Restrictor')
                 );
 
                 // Add participant to collection
@@ -220,10 +223,27 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
         if ($data['Events'])
         foreach ($data['Events'] as $event)
         {
-            // Not car collision. continue to next
-            if ($event['Type'] !== 'COLLISION_WITH_CAR') continue;
+            $type_events = array(
+                'COLLISION_WITH_CAR' => Incident::TYPE_CAR,
+                'COLLISION_WITH_ENV' => Incident::TYPE_ENV,
+            );
+
+            // Not collision. continue to next
+            if ( ! in_array($event['Type'], array_keys($type_events))) {
+                continue;
+            }
+
+            // No participant found
+            if ( ! isset($participants_by_name[$event['Driver']['Name']]) OR
+                 ! isset($participants_by_name[$event['OtherDriver']['Name']])) {
+                continue;
+            }
+
+            $part = $participants_by_name[$event['Driver']['Name']];
+            $other_part = $participants_by_name[$event['OtherDriver']['Name']];
 
             $incident = new Incident;
+
             $incident->setMessage(sprintf(
                '%s reported contact with another vehicle '.
                 '%s. Impact speed: %s' ,
@@ -231,6 +251,11 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
                 $event['OtherDriver']['Name'],
                 $event['ImpactSpeed']
             ));
+
+            $incident->setType($type_events[$event['Type']]);
+            $incident->setParticipant($part);
+            $incident->setOtherParticipant($other_part);
+
             $session->addIncident($incident);
         }
 
@@ -271,10 +296,13 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
      * @param  string        $car
      * @param  string        $team
      * @param  int           $vehicle_ballast
+     * @param  int           $vehicle_restrictor
+     * @param  string        $vehicle_skin
      * @return Participant
      */
     protected function getParticipant($name, $guid, $car, $team=null,
                                       $vehicle_ballast=null,
+                                      $vehicle_restrictor=null,
                                       $vehicle_skin=null)
     {
         // Create driver
@@ -299,6 +327,12 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
         if ($vehicle_ballast)
         {
             $vehicle->setBallast($vehicle_ballast);
+        }
+
+        // Has restrictor
+        if ($vehicle_restrictor)
+        {
+            $vehicle->setRestrictor($vehicle_restrictor);
         }
 
         // Has skin

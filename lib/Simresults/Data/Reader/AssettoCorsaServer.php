@@ -383,7 +383,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             }
 
             // Get track (from server register info)
-            preg_match('/TRACK=(.*)&/i', $data_session, $matches);
+            preg_match('/track=(.*?)&/i', $data_session, $matches);
             if (isset($matches[1]))
             {
                 $session['track'] = $matches[1];

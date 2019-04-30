@@ -32,6 +32,7 @@ class DriverSpec extends ObjectBehavior
         $this->setName('Maurice van der Star');
         $this->getName()->shouldReturn('Maurice van der Star');
         $this->getName(true)->shouldReturn('Maurice S');
+        $this->getName(true)->shouldReturn('Maurice S'); // Test cache
 
         $this->setName('Maurice Star');
         $this->getName()->shouldReturn('Maurice Star');
@@ -40,5 +41,10 @@ class DriverSpec extends ObjectBehavior
         $this->setName('Maurice');
         $this->getName()->shouldReturn('Maurice');
         $this->getName(true)->shouldReturn('Maurice');
+
+        // Test offset 0 error by trimming spaces at setting the name
+        $this->setName('A name with a space at the end ');
+        $this->getName()->shouldReturn('A name with a space at the end');
+        $this->getName(true)->shouldReturn('A e');
     }
 }

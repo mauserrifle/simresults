@@ -290,7 +290,8 @@ class Data_Reader_Race07 extends Data_Reader {
             if ($laps_count !== null AND $laps_count > 0)
             {
                 // Get laps collection
-                $laps_collection = $this->helper->arrayGet($driver_data, 'laps_collection');
+                $laps_collection = $this->helper->arrayGet(
+                    $driver_data, 'laps_collection', array());
 
                 // Loop laps by lap count due to missing laps in results
                 // so we can fill up the gaps

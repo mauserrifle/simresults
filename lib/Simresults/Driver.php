@@ -26,6 +26,13 @@ class Driver {
     protected $driver_id;
 
 
+
+    /**
+     * @var  string  Cache shorten lastname for performance improvements
+     */
+    protected $cache_shorten_name;
+
+
     /**
      * Set the name of the driver
      *
@@ -34,7 +41,8 @@ class Driver {
      */
     public function setName($name)
     {
-        $this->name = $name;
+        $this->name = trim($name);
+        $this->cache_shorten_name = NULL;
         return $this;
     }
 
@@ -49,11 +57,18 @@ class Driver {
 
         if ($shorten_lastname)
         {
+            if ($this->cache_shorten_name !== NULL)
+            {
+                return $this->cache_shorten_name;
+            }
+
             $names = explode(' ', $name);
             if (count($names) > 1) {
                 $last_name = array_pop($names);
                 $name = $names[0]." ".$last_name[0];
             }
+
+            $this->cache_shorten_name = $name;
         }
 
         return $name;

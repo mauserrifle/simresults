@@ -1,6 +1,7 @@
 <?php
 
 use Simresults\Data_Reader;
+use Simresults\Incident;
 
 /**
  * Tests for the rfactor2 reader using some rFactor 1 differences.
@@ -33,7 +34,7 @@ class RfactorReaderTest extends PHPUnit_Framework_TestCase {
         // Get session
         $session = $this->getWorkingReader()->getSession();
 
-        // Get incidents
+        $participants = $session->getParticipants();
         $incidents = $session->getIncidents();
 
         // Validate first incident
@@ -51,6 +52,11 @@ class RfactorReaderTest extends PHPUnit_Framework_TestCase {
 
         // Validate the real estimated time including miliseconds
         $this->assertSame(195.5, $incidents[0]->getElapsedSeconds());
+
+        // Type and participants
+        $this->assertSame(Incident::TYPE_CAR, $incidents[0]->getType());
+        $this->assertSame($participants[3], $incidents[0]->getParticipant());
+        $this->assertSame($participants[1], $incidents[0]->getOtherParticipant());
 
         // Validate that we have no incidents for reviewing
         $this->assertSame(array(), $session->getIncidentsForReview());
@@ -98,6 +104,17 @@ class RfactorReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertSame(1, count($incidents = $session->getIncidents()));
         $this->assertSame('Sorry, way too many incidents to show!',
             $incidents[0]->getMessage());
+    }
+
+    /**
+     * Test reading without errors on incidents with safety car
+     */
+    public function testReadingWithoutErrorsOnSafetyCarIncidents()
+    {
+        $file_path = realpath(
+            __DIR__.'/logs/automobilista/race.with.safety.car.incidents.xml');
+        $reader = Data_Reader::factory($file_path);
+        $session = $reader->getSession();
     }
 
     /**

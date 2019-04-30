@@ -99,10 +99,15 @@ class Data_Reader_Rfactor2 extends Data_Reader {
         }
         // Is practice session
         elseif (
-        		$xml_session = $this->dom->getElementsByTagName('Practice1')->item(0) OR
-        		$xml_session = $this->dom->getElementsByTagName('Practice2')->item(0) OR
-        		$xml_session = $this->dom->getElementsByTagName('Practice3')->item(0)
-        		)
+            $xml_session = $this->dom->getElementsByTagName('Practice')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('Practice1')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('Practice2')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('Practice3')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('TestDay')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('TestDay1')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('TestDay2')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('TestDay3')->item(0)
+            )
         {
             // Set type to practice
             $session->setType(Session::TYPE_PRACTICE);
@@ -1063,6 +1068,15 @@ class Data_Reader_Rfactor2 extends Data_Reader {
             return;
         }
 
+        $parts_by_name = array();
+        foreach ($session->getParticipants() as $part)
+        {
+            foreach ($part->getDrivers() as $driver)
+            {
+                $parts_by_name[$driver->getName()] = $part;
+            }
+        }
+
         // Loop each incident (if any)
         /* @var $incident_xml \DOMNode */
         foreach ($incidents_dom as $incident_xml)
@@ -1087,18 +1101,34 @@ class Data_Reader_Rfactor2 extends Data_Reader {
             // Add date to incident
             $incident->setDate($date);
 
+            // Default to environment incident
+            $incident->setType(Incident::TYPE_ENV);
+
+
             // Is incident with another vehicle
             if (strpos(strtolower($incident->getMessage()),
                 'with another vehicle'))
             {
                 // Match impact
-                preg_match('/reported contact \((.*)\) with another vehicle/i',
-                           $incident->getMessage(), $matches);
+                preg_match('/(.*?)\(.*?reported contact \((.*)\) with '.
+                           'another vehicle (.*?)\(/i',
+                    $incident->getMessage(), $matches);
 
                 // Worth reviewing when impact is >= 60%
                 $incident->setForReview(
-                    (isset($matches[1]) AND ((float) $matches[1]) >= 0.60)
+                    (isset($matches[2]) AND ((float) $matches[2]) >= 0.60)
                 );
+
+                $incident->setType(Incident::TYPE_CAR);
+
+                // Participant known
+                if (isset($parts_by_name[$matches[1]])) {
+                    $incident->setParticipant($parts_by_name[$matches[1]]);
+                }
+                // Other participant known
+                if (isset($parts_by_name[$matches[3]])) {
+                    $incident->setOtherParticipant($parts_by_name[$matches[3]]);
+                }
             }
 
             // Add incident to incidents
@@ -1118,6 +1148,19 @@ class Data_Reader_Rfactor2 extends Data_Reader {
         // No penalties by default
         $penalties = array();
 
+        // Participants by name so we can map
+        $parts_by_name = array();
+        foreach ($session->getParticipants() as $part)
+        {
+            foreach ($part->getDrivers() as $driver)
+            {
+                $parts_by_name[$driver->getName()] = $part;
+            }
+        }
+
+        // Example:
+        // <Penalty et="1001.6">mauserrifle received Stop/Go penalty, 10s, 0laps. Result: penalties=1, 1st=Stop/Go,10s</Penalty>
+
         // Loop each penalty (if any)
         /* @var $penalty_xml \DOMNode */
         foreach ($this->dom->getElementsByTagName('Penalty') as $penalty_xml)
@@ -1127,6 +1170,29 @@ class Data_Reader_Rfactor2 extends Data_Reader {
 
             // Set message
             $penalty->setMessage($penalty_xml->nodeValue);
+
+            if (preg_match('/^(.*?) (received|served|finished) (.*?) penalty.*/i', $penalty_xml->nodeValue, $matches))
+            {
+                // Participant known
+                if (isset($parts_by_name[$matches[1]])) {
+                    $penalty->setParticipant($parts_by_name[$matches[1]]);
+                }
+
+                if (strtolower($matches[3]) === 'drive thru')
+                {
+                    $penalty->setType(Penalty::TYPE_DRIVETHROUGH);
+                }
+                elseif (strtolower($matches[3]) === 'stop/go')
+                {
+                    $penalty->setType(Penalty::TYPE_STOPGO);
+                }
+
+                // We only know served status when served or received
+                if (in_array($matches[2], array('served','received')))
+                {
+                    $penalty->setServed(strtolower($matches[2]) === 'served');
+                }
+            }
 
             // Clone session date
             $date = clone $session->getDate();

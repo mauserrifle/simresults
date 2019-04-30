@@ -3,6 +3,7 @@ use Simresults\Data_Reader_RaceRoom;
 use Simresults\Data_Reader;
 use Simresults\Session;
 use Simresults\Participant;
+use Simresults\Incident;
 
 /**
  * Tests for the RaceRoom reader
@@ -139,6 +140,35 @@ class RaceRoomReaderTest extends PHPUnit_Framework_TestCase {
         //-- Validate
         $this->assertSame(Participant::FINISH_NORMAL,
             $participants[0]->getFinishStatus());
+    }
+
+    /**
+     * Test reading incidents
+     */
+    public function testReadingIncidents()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/raceroom-server/log.with.incidents.json');
+
+        // Get session
+        $session = Data_Reader::factory($file_path)->getSession(3);
+        $participants = $session->getParticipants();
+        $incidents = $session->getIncidents();
+
+        // Validate first incident
+        $this->assertSame(
+            'LAP 1, Magnus Stjerneby, Going off track, Points: 1',
+            $incidents[0]->getMessage());
+        $this->assertSame(Incident::TYPE_OTHER, $incidents[0]->getType());
+        $this->assertSame($participants[0], $incidents[0]->getParticipant());
+
+        $this->assertSame(
+            'LAP 1, Jason Monds, Car to car collision, Points: 3',
+            $incidents[1]->getMessage());
+        $this->assertSame(Incident::TYPE_CAR, $incidents[1]->getType());
+        $this->assertSame($participants[1], $incidents[1]->getParticipant());
+
     }
 
 

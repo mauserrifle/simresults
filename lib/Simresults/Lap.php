@@ -96,7 +96,7 @@ class Lap {
     /**
      * @var  boolean  Whether there was a pitstop on this lap
      */
-    protected $pit_lap;
+    protected $pit_lap = FALSE;
 
     /**
      * @var  float  The time spend on pitting
