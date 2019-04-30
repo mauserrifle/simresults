@@ -1,0 +1,1584 @@
+{
+	"TrackName": "monza",
+	"TrackConfig": "",
+	"Type": "RACE",
+	"DurationSecs": 0,
+	"RaceLaps": 10,
+	"Cars": [
+		{
+			"CarId": 0,
+			"Driver": {
+				"Name": "Lwi",
+				"Team": "",
+				"Guid": "76561198078712985"
+			},
+			"Model": "lotus_exos_125",
+			"Skin": "carbon",
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"CarId": 1,
+			"Driver": {
+				"Name": "YoloAtGames",
+				"Team": "",
+				"Guid": "76561198156462312"
+			},
+			"Model": "lotus_exos_125",
+			"Skin": "0_Lotus",
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"CarId": 2,
+			"Driver": {
+				"Name": "blackbird0011",
+				"Team": "",
+				"Guid": "76561198082218037"
+			},
+			"Model": "lotus_exos_125",
+			"Skin": "Lotus_Legends",
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"CarId": 3,
+			"Driver": {
+				"Name": "paperofolle",
+				"Team": "",
+				"Guid": "76561198019959369"
+			},
+			"Model": "lotus_exos_125",
+			"Skin": "Premiere",
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"CarId": 4,
+			"Driver": {
+				"Name": "Timo Haapala",
+				"Team": "",
+				"Guid": "76561198058894972"
+			},
+			"Model": "lotus_exos_125",
+			"Skin": "carbon",
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"CarId": 5,
+			"Driver": {
+				"Name": "fabi",
+				"Team": "",
+				"Guid": "76561198146893693"
+			},
+			"Model": "lotus_exos_125",
+			"Skin": "0_Lotus",
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"CarId": 6,
+			"Driver": {
+				"Name": "Lucas Canalda Sorribas",
+				"Team": "",
+				"Guid": "76561198128959212"
+			},
+			"Model": "lotus_exos_125",
+			"Skin": "Lotus_Legends",
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"CarId": 7,
+			"Driver": {
+				"Name": "End 222",
+				"Team": "",
+				"Guid": "76561198054038946"
+			},
+			"Model": "lotus_exos_125",
+			"Skin": "Premiere",
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"CarId": 8,
+			"Driver": {
+				"Name": "Adriano",
+				"Team": "",
+				"Guid": "76561198014424034"
+			},
+			"Model": "lotus_exos_125",
+			"Skin": "carbon",
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"CarId": 9,
+			"Driver": {
+				"Name": "Andrea Sorlini",
+				"Team": "TEST TEAM",
+				"Guid": "76561198213775428"
+			},
+			"Model": "lotus_exos_125",
+			"Skin": "0_Lotus",
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"CarId": 10,
+			"Driver": {
+				"Name": "Rad Rides",
+				"Team": "",
+				"Guid": "76561197994297759"
+			},
+			"Model": "lotus_exos_125",
+			"Skin": "Lotus_Legends",
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"CarId": 11,
+			"Driver": {
+				"Name": "jmalonda",
+				"Team": "",
+				"Guid": "76561198041531726"
+			},
+			"Model": "lotus_exos_125",
+			"Skin": "Premiere",
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"CarId": 12,
+			"Driver": {
+				"Name": "-V!0C- TheDoctorMay",
+				"Team": "",
+				"Guid": "76561197981493293"
+			},
+			"Model": "lotus_exos_125",
+			"Skin": "carbon",
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"CarId": 13,
+			"Driver": {
+				"Name": "Balazs Nemeth",
+				"Team": "",
+				"Guid": "76561198077772378"
+			},
+			"Model": "lotus_exos_125",
+			"Skin": "0_Lotus",
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"CarId": 14,
+			"Driver": {
+				"Name": "Ric",
+				"Team": "",
+				"Guid": "76561197962401923"
+			},
+			"Model": "lotus_exos_125",
+			"Skin": "Lotus_Legends",
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"CarId": 15,
+			"Driver": {
+				"Name": "PPolaina",
+				"Team": "",
+				"Guid": "76561198073627782"
+			},
+			"Model": "lotus_exos_125",
+			"Skin": "Lotus_Legends",
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"CarId": 16,
+			"Driver": {
+				"Name": "Thomas Boissel",
+				"Team": "",
+				"Guid": "76561198066283907"
+			},
+			"Model": "lotus_exos_125",
+			"Skin": "Premiere",
+			"BallastKGRenamedForErrors": 0
+		}
+	],
+	"Result": [
+		{
+			"DriverName": "Andrea Sorlini",
+			"DriverGuid": "76561198213775428",
+			"CarId": 9,
+			"CarModel": "lotus_exos_125",
+			"BestLap": 98907,
+			"TotalTime": 1003035,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "End 222",
+			"DriverGuid": "76561198054038946",
+			"CarId": 7,
+			"CarModel": "lotus_exos_125",
+			"BestLap": 100687,
+			"TotalTime": 972763,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Timo Haapala",
+			"DriverGuid": "76561198058894972",
+			"CarId": 4,
+			"CarModel": "lotus_exos_125",
+			"BestLap": 99369,
+			"TotalTime": 823824,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "blackbird0011",
+			"DriverGuid": "76561198082218037",
+			"CarId": 2,
+			"CarModel": "lotus_exos_125",
+			"BestLap": 100594,
+			"TotalTime": 965975,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Lwi",
+			"DriverGuid": "76561198078712985",
+			"CarId": 0,
+			"CarModel": "lotus_exos_125",
+			"BestLap": 100607,
+			"TotalTime": 1002096,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "paperofolle",
+			"DriverGuid": "76561198019959369",
+			"CarId": 3,
+			"CarModel": "lotus_exos_125",
+			"BestLap": 105360,
+			"TotalTime": 1017644,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "fabi",
+			"DriverGuid": "76561198146893693",
+			"CarId": 5,
+			"CarModel": "lotus_exos_125",
+			"BestLap": 101385,
+			"TotalTime": 1030512,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "PPolaina",
+			"DriverGuid": "76561198073627782",
+			"CarId": 15,
+			"CarModel": "lotus_exos_125",
+			"BestLap": 133463,
+			"TotalTime": 1023011,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Thomas Boissel",
+			"DriverGuid": "76561198066283907",
+			"CarId": 16,
+			"CarModel": "lotus_exos_125",
+			"BestLap": 257378,
+			"TotalTime": 629283,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "-V!0C- TheDoctorMay",
+			"DriverGuid": "76561197981493293",
+			"CarId": 12,
+			"CarModel": "lotus_exos_125",
+			"BestLap": 138768,
+			"TotalTime": 1046174,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Balazs Nemeth",
+			"DriverGuid": "76561198077772378",
+			"CarId": 13,
+			"CarModel": "lotus_exos_125",
+			"BestLap": 999999999,
+			"TotalTime": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "jmalonda",
+			"DriverGuid": "76561198041531726",
+			"CarId": 11,
+			"CarModel": "lotus_exos_125",
+			"BestLap": 999999999,
+			"TotalTime": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Adriano",
+			"DriverGuid": "76561198014424034",
+			"CarId": 8,
+			"CarModel": "lotus_exos_125",
+			"BestLap": 999999999,
+			"TotalTime": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Rad Rides",
+			"DriverGuid": "76561197994297759",
+			"CarId": 10,
+			"CarModel": "lotus_exos_125",
+			"BestLap": 999999999,
+			"TotalTime": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Lucas Canalda Sorribas",
+			"DriverGuid": "76561198128959212",
+			"CarId": 6,
+			"CarModel": "lotus_exos_125",
+			"BestLap": 999999999,
+			"TotalTime": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "YoloAtGames",
+			"DriverGuid": "76561198156462312",
+			"CarId": 1,
+			"CarModel": "lotus_exos_125",
+			"BestLap": 999999999,
+			"TotalTime": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Ric",
+			"DriverGuid": "76561197962401923",
+			"CarId": 14,
+			"CarModel": "lotus_exos_125",
+			"BestLap": 999999999,
+			"TotalTime": 0,
+			"BallastKGRenamedForErrors": 0
+		}
+	],
+	"Laps": [
+		{
+			"DriverName": "Andrea Sorlini",
+			"DriverGuid": "76561198213775428",
+			"CarId": 9,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 12934204,
+			"LapTime": 104357,
+			"Sectors": [
+				38437,
+				34564,
+				31356
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Manolo Polonioli",
+			"DriverGuid": "76561198043611338",
+			"CarId": 10,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 12935777,
+			"LapTime": 105967,
+			"Sectors": [
+				39520,
+				32999,
+				33448
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Tabak",
+			"DriverGuid": "76561197995596796",
+			"CarId": 12,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 12937870,
+			"LapTime": 108041,
+			"Sectors": [
+				40649,
+				34484,
+				32908
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Timo Haapala",
+			"DriverGuid": "76561198058894972",
+			"CarId": 4,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 12950602,
+			"LapTime": 120773,
+			"Sectors": [
+				38298,
+				38079,
+				44396
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "blackbird0011",
+			"DriverGuid": "76561198082218037",
+			"CarId": 2,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 12952834,
+			"LapTime": 123012,
+			"Sectors": [
+				39870,
+				49252,
+				33890
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Sam Jones",
+			"DriverGuid": "76561198168087892",
+			"CarId": 8,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 12970293,
+			"LapTime": 140507,
+			"Sectors": [
+				76018,
+				32625,
+				31864
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "End 222",
+			"DriverGuid": "76561198054038946",
+			"CarId": 7,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 12991613,
+			"LapTime": 161793,
+			"Sectors": [
+				93244,
+				35622,
+				32927
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Peter Mac",
+			"DriverGuid": "76561198016578481",
+			"CarId": 3,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13018072,
+			"LapTime": 188254,
+			"Sectors": [
+				105913,
+				34110,
+				48231
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Andrea Sorlini",
+			"DriverGuid": "76561198213775428",
+			"CarId": 9,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13034935,
+			"LapTime": 100735,
+			"Sectors": [
+				35876,
+				33165,
+				31694
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Tabak",
+			"DriverGuid": "76561197995596796",
+			"CarId": 12,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13039242,
+			"LapTime": 101374,
+			"Sectors": [
+				36619,
+				33197,
+				31558
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Manolo Polonioli",
+			"DriverGuid": "76561198043611338",
+			"CarId": 10,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13040807,
+			"LapTime": 105027,
+			"Sectors": [
+				40802,
+				32284,
+				31941
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Timo Haapala",
+			"DriverGuid": "76561198058894972",
+			"CarId": 4,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13051027,
+			"LapTime": 100416,
+			"Sectors": [
+				35886,
+				32602,
+				31928
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "PPolaina",
+			"DriverGuid": "76561198073627782",
+			"CarId": 15,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13068611,
+			"LapTime": 238706,
+			"Sectors": [
+				160137,
+				45859,
+				32710
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Sam Jones",
+			"DriverGuid": "76561198168087892",
+			"CarId": 8,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13070228,
+			"LapTime": 99695,
+			"Sectors": [
+				35647,
+				32508,
+				31540
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "End 222",
+			"DriverGuid": "76561198054038946",
+			"CarId": 7,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13093633,
+			"LapTime": 102001,
+			"Sectors": [
+				37277,
+				33004,
+				31720
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Lwi",
+			"DriverGuid": "76561198078712985",
+			"CarId": 0,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13115686,
+			"LapTime": 134492,
+			"Sectors": [
+				61723,
+				35275,
+				37494
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Hille1980",
+			"DriverGuid": "76561197970405503",
+			"CarId": 5,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13117693,
+			"LapTime": 132710,
+			"Sectors": [
+				67924,
+				32927,
+				31859
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Andrea Sorlini",
+			"DriverGuid": "76561198213775428",
+			"CarId": 9,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13134458,
+			"LapTime": 99501,
+			"Sectors": [
+				35794,
+				32485,
+				31222
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "blackbird0011",
+			"DriverGuid": "76561198082218037",
+			"CarId": 2,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13136770,
+			"LapTime": 183910,
+			"Sectors": [
+				119834,
+				32693,
+				31383
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Manolo Polonioli",
+			"DriverGuid": "76561198043611338",
+			"CarId": 10,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13141747,
+			"LapTime": 100935,
+			"Sectors": [
+				37151,
+				32302,
+				31482
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Tabak",
+			"DriverGuid": "76561197995596796",
+			"CarId": 12,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13143675,
+			"LapTime": 104428,
+			"Sectors": [
+				36636,
+				35694,
+				32098
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Timo Haapala",
+			"DriverGuid": "76561198058894972",
+			"CarId": 4,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13151000,
+			"LapTime": 99999,
+			"Sectors": [
+				35855,
+				33071,
+				31073
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Sam Jones",
+			"DriverGuid": "76561198168087892",
+			"CarId": 8,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13174334,
+			"LapTime": 104340,
+			"Sectors": [
+				35890,
+				36464,
+				31986
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Dansav1746",
+			"DriverGuid": "76561198117348944",
+			"CarId": 14,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13184870,
+			"LapTime": 355060,
+			"Sectors": [
+				290899,
+				32594,
+				31567
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "End 222",
+			"DriverGuid": "76561198054038946",
+			"CarId": 7,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13195317,
+			"LapTime": 101683,
+			"Sectors": [
+				37500,
+				32561,
+				31622
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Thomas Boissel",
+			"DriverGuid": "76561198066283907",
+			"CarId": 16,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13201688,
+			"LapTime": 371884,
+			"Sectors": [
+				276623,
+				42228,
+				53033
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "PPolaina",
+			"DriverGuid": "76561198073627782",
+			"CarId": 15,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13202068,
+			"LapTime": 133463,
+			"Sectors": [
+				37546,
+				42201,
+				53716
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Lwi",
+			"DriverGuid": "76561198078712985",
+			"CarId": 0,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13220081,
+			"LapTime": 104389,
+			"Sectors": [
+				37289,
+				35263,
+				31837
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Andrea Sorlini",
+			"DriverGuid": "76561198213775428",
+			"CarId": 9,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13234943,
+			"LapTime": 100511,
+			"Sectors": [
+				36305,
+				32594,
+				31612
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "blackbird0011",
+			"DriverGuid": "76561198082218037",
+			"CarId": 2,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13237363,
+			"LapTime": 100594,
+			"Sectors": [
+				36366,
+				32543,
+				31685
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Tabak",
+			"DriverGuid": "76561197995596796",
+			"CarId": 12,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13246149,
+			"LapTime": 102484,
+			"Sectors": [
+				37198,
+				33304,
+				31982
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Manolo Polonioli",
+			"DriverGuid": "76561198043611338",
+			"CarId": 10,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13248454,
+			"LapTime": 106708,
+			"Sectors": [
+				43415,
+				32257,
+				31036
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Timo Haapala",
+			"DriverGuid": "76561198058894972",
+			"CarId": 4,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13252277,
+			"LapTime": 101263,
+			"Sectors": [
+				36085,
+				32522,
+				32656
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Sam Jones",
+			"DriverGuid": "76561198168087892",
+			"CarId": 8,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13274859,
+			"LapTime": 100521,
+			"Sectors": [
+				35649,
+				33043,
+				31829
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "paperofolle",
+			"DriverGuid": "76561198019959369",
+			"CarId": 3,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13288700,
+			"LapTime": 132692,
+			"Sectors": [
+				65615,
+				35118,
+				31959
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Dansav1746",
+			"DriverGuid": "76561198117348944",
+			"CarId": 14,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13292254,
+			"LapTime": 107371,
+			"Sectors": [
+				36609,
+				32706,
+				38056
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "End 222",
+			"DriverGuid": "76561198054038946",
+			"CarId": 7,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13296851,
+			"LapTime": 101552,
+			"Sectors": [
+				36910,
+				33048,
+				31594
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Lwi",
+			"DriverGuid": "76561198078712985",
+			"CarId": 0,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13321694,
+			"LapTime": 101620,
+			"Sectors": [
+				37216,
+				33080,
+				31324
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Andrea Sorlini",
+			"DriverGuid": "76561198213775428",
+			"CarId": 9,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13334469,
+			"LapTime": 99506,
+			"Sectors": [
+				35597,
+				32698,
+				31211
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "blackbird0011",
+			"DriverGuid": "76561198082218037",
+			"CarId": 2,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13341327,
+			"LapTime": 103951,
+			"Sectors": [
+				36483,
+				36292,
+				31176
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Tabak",
+			"DriverGuid": "76561197995596796",
+			"CarId": 12,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13348252,
+			"LapTime": 102097,
+			"Sectors": [
+				36995,
+				33139,
+				31963
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Manolo Polonioli",
+			"DriverGuid": "76561198043611338",
+			"CarId": 10,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13348647,
+			"LapTime": 100189,
+			"Sectors": [
+				36374,
+				32778,
+				31037
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Timo Haapala",
+			"DriverGuid": "76561198058894972",
+			"CarId": 4,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13352531,
+			"LapTime": 100261,
+			"Sectors": [
+				35898,
+				32561,
+				31802
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "paperofolle",
+			"DriverGuid": "76561198019959369",
+			"CarId": 3,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13396624,
+			"LapTime": 107917,
+			"Sectors": [
+				36210,
+				39302,
+				32405
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "End 222",
+			"DriverGuid": "76561198054038946",
+			"CarId": 7,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13398179,
+			"LapTime": 101315,
+			"Sectors": [
+				37182,
+				32436,
+				31697
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Lwi",
+			"DriverGuid": "76561198078712985",
+			"CarId": 0,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13425964,
+			"LapTime": 104266,
+			"Sectors": [
+				36815,
+				33472,
+				33979
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Sam Jones",
+			"DriverGuid": "76561198168087892",
+			"CarId": 8,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13427853,
+			"LapTime": 152990,
+			"Sectors": [
+				88762,
+				32234,
+				31994
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Andrea Sorlini",
+			"DriverGuid": "76561198213775428",
+			"CarId": 9,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13434937,
+			"LapTime": 100488,
+			"Sectors": [
+				36295,
+				31986,
+				32207
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "blackbird0011",
+			"DriverGuid": "76561198082218037",
+			"CarId": 2,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13442868,
+			"LapTime": 101539,
+			"Sectors": [
+				36455,
+				32446,
+				32638
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "fabi",
+			"DriverGuid": "76561198146893693",
+			"CarId": 5,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13449234,
+			"LapTime": 167869,
+			"Sectors": [
+				102381,
+				32854,
+				32634
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Manolo Polonioli",
+			"DriverGuid": "76561198043611338",
+			"CarId": 10,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13450972,
+			"LapTime": 102326,
+			"Sectors": [
+				37770,
+				32755,
+				31801
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Tabak",
+			"DriverGuid": "76561197995596796",
+			"CarId": 12,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13451030,
+			"LapTime": 102781,
+			"Sectors": [
+				37139,
+				33098,
+				32544
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Timo Haapala",
+			"DriverGuid": "76561198058894972",
+			"CarId": 4,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13452405,
+			"LapTime": 99869,
+			"Sectors": [
+				36051,
+				32130,
+				31688
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Thomas Boissel",
+			"DriverGuid": "76561198066283907",
+			"CarId": 16,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13459071,
+			"LapTime": 257378,
+			"Sectors": [
+				195243,
+				31491,
+				30644
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "End 222",
+			"DriverGuid": "76561198054038946",
+			"CarId": 7,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13500027,
+			"LapTime": 101838,
+			"Sectors": [
+				36749,
+				32270,
+				32819
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "paperofolle",
+			"DriverGuid": "76561198019959369",
+			"CarId": 3,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13508734,
+			"LapTime": 112105,
+			"Sectors": [
+				41513,
+				34525,
+				36067
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Lwi",
+			"DriverGuid": "76561198078712985",
+			"CarId": 0,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13527495,
+			"LapTime": 101530,
+			"Sectors": [
+				37140,
+				33277,
+				31113
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Sam Jones",
+			"DriverGuid": "76561198168087892",
+			"CarId": 8,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13529120,
+			"LapTime": 101266,
+			"Sectors": [
+				36093,
+				33542,
+				31631
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Andrea Sorlini",
+			"DriverGuid": "76561198213775428",
+			"CarId": 9,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13534354,
+			"LapTime": 99409,
+			"Sectors": [
+				35986,
+				32360,
+				31063
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "blackbird0011",
+			"DriverGuid": "76561198082218037",
+			"CarId": 2,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13545034,
+			"LapTime": 102169,
+			"Sectors": [
+				36869,
+				32999,
+				32301
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "fabi",
+			"DriverGuid": "76561198146893693",
+			"CarId": 5,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13551169,
+			"LapTime": 101931,
+			"Sectors": [
+				36573,
+				33646,
+				31712
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Timo Haapala",
+			"DriverGuid": "76561198058894972",
+			"CarId": 4,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13554254,
+			"LapTime": 101856,
+			"Sectors": [
+				37087,
+				33332,
+				31437
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "End 222",
+			"DriverGuid": "76561198054038946",
+			"CarId": 7,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13601100,
+			"LapTime": 101088,
+			"Sectors": [
+				36715,
+				32656,
+				31717
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Lwi",
+			"DriverGuid": "76561198078712985",
+			"CarId": 0,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13628098,
+			"LapTime": 100607,
+			"Sectors": [
+				36316,
+				32701,
+				31590
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Sam Jones",
+			"DriverGuid": "76561198168087892",
+			"CarId": 8,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13629048,
+			"LapTime": 99924,
+			"Sectors": [
+				35335,
+				33183,
+				31406
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Andrea Sorlini",
+			"DriverGuid": "76561198213775428",
+			"CarId": 9,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13633261,
+			"LapTime": 98907,
+			"Sectors": [
+				35506,
+				32324,
+				31077
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Timo Haapala",
+			"DriverGuid": "76561198058894972",
+			"CarId": 4,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13653623,
+			"LapTime": 99369,
+			"Sectors": [
+				35640,
+				32661,
+				31068
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "fabi",
+			"DriverGuid": "76561198146893693",
+			"CarId": 5,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13656220,
+			"LapTime": 105048,
+			"Sectors": [
+				37318,
+				35789,
+				31941
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "blackbird0011",
+			"DriverGuid": "76561198082218037",
+			"CarId": 2,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13680611,
+			"LapTime": 135564,
+			"Sectors": [
+				69720,
+				34033,
+				31811
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "End 222",
+			"DriverGuid": "76561198054038946",
+			"CarId": 7,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13701849,
+			"LapTime": 100746,
+			"Sectors": [
+				36701,
+				32536,
+				31509
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Lwi",
+			"DriverGuid": "76561198078712985",
+			"CarId": 0,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13730526,
+			"LapTime": 102431,
+			"Sectors": [
+				37582,
+				33799,
+				31050
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Andrea Sorlini",
+			"DriverGuid": "76561198213775428",
+			"CarId": 9,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13733210,
+			"LapTime": 99940,
+			"Sectors": [
+				35860,
+				31986,
+				32094
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "paperofolle",
+			"DriverGuid": "76561198019959369",
+			"CarId": 3,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13742084,
+			"LapTime": 233371,
+			"Sectors": [
+				165484,
+				34816,
+				33071
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "fabi",
+			"DriverGuid": "76561198146893693",
+			"CarId": 5,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13757606,
+			"LapTime": 101385,
+			"Sectors": [
+				36800,
+				32679,
+				31906
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "blackbird0011",
+			"DriverGuid": "76561198082218037",
+			"CarId": 2,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13795780,
+			"LapTime": 115163,
+			"Sectors": [
+				36846,
+				46120,
+				32197
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "End 222",
+			"DriverGuid": "76561198054038946",
+			"CarId": 7,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13802565,
+			"LapTime": 100687,
+			"Sectors": [
+				37359,
+				32332,
+				30996
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Lwi",
+			"DriverGuid": "76561198078712985",
+			"CarId": 0,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13831884,
+			"LapTime": 101360,
+			"Sectors": [
+				37271,
+				32000,
+				32089
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "Andrea Sorlini",
+			"DriverGuid": "76561198213775428",
+			"CarId": 9,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13832859,
+			"LapTime": 99618,
+			"Sectors": [
+				36397,
+				32188,
+				31033
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "paperofolle",
+			"DriverGuid": "76561198019959369",
+			"CarId": 3,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13847457,
+			"LapTime": 105360,
+			"Sectors": [
+				36766,
+				34897,
+				33697
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "PPolaina",
+			"DriverGuid": "76561198073627782",
+			"CarId": 15,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13852896,
+			"LapTime": 377051,
+			"Sectors": [
+				303782,
+				35515,
+				37754
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "fabi",
+			"DriverGuid": "76561198146893693",
+			"CarId": 5,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13860307,
+			"LapTime": 102694,
+			"Sectors": [
+				38393,
+				32527,
+				31774
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		},
+		{
+			"DriverName": "-V!0C- TheDoctorMay",
+			"DriverGuid": "76561197981493293",
+			"CarId": 12,
+			"CarModel": "lotus_exos_125",
+			"Timestamp": 13875974,
+			"LapTime": 138768,
+			"Sectors": [
+				60522,
+				32850,
+				45396
+			],
+			"Cuts": 0,
+			"BallastKGRenamedForErrors": 0
+		}
+	],
+	"Events": null
+}

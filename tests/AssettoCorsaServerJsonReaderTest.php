@@ -143,6 +143,20 @@ class AssettoCorsaServerJsonReaderTest extends PHPUnit_Framework_TestCase {
             $participants[4]->getFinishStatus());
     }
 
+     /**
+     * Test no exceptions when BallastKG is missing
+     */
+    public function testFixingBallastExceptions()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-server-json/'.
+            'no.ballastkg.json');
+
+        // Get the race session
+        $session = Data_Reader::factory($file_path)->getSession();
+    }
+
 
 
 

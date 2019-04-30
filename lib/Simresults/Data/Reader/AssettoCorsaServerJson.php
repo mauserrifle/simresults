@@ -105,7 +105,7 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
                 $player_data['Driver']['Guid'],
                 $player_data['Model'],
                 $player_data['Driver']['Team'],
-                $player_data['BallastKG'],
+                $this->helper->arrayGet($player_data, 'BallastKG'),
                 $this->helper->arrayGet($player_data, 'Restrictor'),
                 $player_data['Skin']
             );
@@ -132,7 +132,7 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
                     $player_data['DriverGuid'],
                     $player_data['CarModel'],
                     null,
-                    $player_data['BallastKG'],
+                    $this->helper->arrayGet($player_data, 'BallastKG'),
                     $this->helper->arrayGet($player_data, 'Restrictor')
                 );
 
@@ -178,7 +178,7 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
                     $lap_data['DriverGuid'],
                     $lap_data['CarModel'],
                     null,
-                    $lap_data['BallastKG'],
+                    $this->helper->arrayGet($lap_data, 'BallastKG'),
                     $this->helper->arrayGet($lap_data, 'Restrictor')
                 );
 
