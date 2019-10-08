@@ -31,6 +31,7 @@ Simresults supports a wide range of games:
 * rFactor 2
 * Project Cars
 * Assetto Corsa
+* Assetto Corsa Competizione
 * Automobilista
 * Game Stock Car 2012
 * Game Stock Car 2013
@@ -113,6 +114,10 @@ lap.
 ### Assetto Corsa Server reader JSON
 
 `lib/Data/Reader/AssettoCorsaServerJson.php`
+
+### Assetto Corsa Competizione
+
+`lib/Data/Reader/AssettoCorsaCompetizione.php`
 
 ### RaceRoom Server reader
 
