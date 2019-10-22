@@ -250,7 +250,7 @@ class Lap {
      * @param   float  $time
      * @return  Lap
      */
-    public function setTime($time)
+    public function setTime($time=null)
     {
         $this->time = $time;
         return $this;
