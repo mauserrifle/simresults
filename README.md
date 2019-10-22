@@ -20,8 +20,13 @@ to any framework.
 This project is created and maintained by
 [Maurice van der Star](http://twitter.com/mauserrifleNL)
 
+Please consider [donating](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=L9L982XNK7DAA&lc=US&item_name=Simresults&item_number=Simresults&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted)
+to cover future development.
+
 * Website: <http://simresults.net>
 * Twitter: [@simresults](http://twitter.com/simresults)
+* Email: <mauserrifle@gmail.com>
+* Donate: [Paypal](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=L9L982XNK7DAA&lc=US&item_name=Simresults&item_number=Simresults&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted)
 
 ## Supported games
 
