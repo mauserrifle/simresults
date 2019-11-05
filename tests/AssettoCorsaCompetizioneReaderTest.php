@@ -39,6 +39,7 @@ class AssettoCorsaCompetizioneReaderTest extends PHPUnit_Framework_TestCase {
 
 
 
+
     /**
      * Test qualify sessions
      */
@@ -232,7 +233,7 @@ class AssettoCorsaCompetizioneReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertSame(1, $participant->getPosition());
         $this->assertSame(Participant::FINISH_NORMAL,
             $participant->getFinishStatus());
-        $this->assertSame(2921.887, $participant->getTotalTime());
+        $this->assertSame(2329.129, $participant->getTotalTime());
     }
 
 
