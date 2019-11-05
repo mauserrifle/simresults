@@ -124,11 +124,10 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
                         ->setTeam($lead['car']['teamName']);
 
             // Total time available
-            // Can't rely on total time. Because lapped cars jump in the result graph
-            // if ($total_time=$lead['timing']['totalTime'])
-            // {
-            //     $participant->setTotalTime(round($total_time / 1000, 4));
-            // }
+            if ($total_time=$lead['timing']['totalTime'])
+            {
+                $participant->setTotalTime(round($total_time / 1000, 4));
+            }
 
             // Create vehicle and add to participant
             $vehicle = new Vehicle;
@@ -236,9 +235,6 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
 
         // Get participant with normal array keys
         $participants = array_values($participants_by_car_id);
-
-        // Sort participants
-        $this->sortParticipantsAndFixPositions($participants, $session);
 
         // Set participants (sorted)
         $session->setParticipants($participants);
