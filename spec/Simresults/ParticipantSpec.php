@@ -213,17 +213,24 @@ class ParticipantSpec extends ObjectBehavior
     }
 
     public function it_calculates_the_percentage_a_driver_has_driven(
-        Driver $driver1, Driver $driver2, Lap $lap1, Lap $lap2, Lap $lap3)
+        Driver $driver1, Driver $driver2, Driver $driver3, Driver $driver4,
+        Lap $lap1, Lap $lap2, Lap $lap3)
     {
         $lap1->getDriver()->willReturn($driver1);
         $lap2->getDriver()->willReturn($driver1);
         $lap3->getDriver()->willReturn($driver2);
 
-        $this->setDrivers(array($driver1, $driver2));
+        $this->setDrivers(array($driver1, $driver2, $driver3));
         $this->setLaps(array($lap1, $lap2, $lap3));
 
         $this->getDriverPercentage($driver1)->shouldReturn(66.67);
         $this->getDriverPercentage($driver2)->shouldReturn(33.33);
+        $this->getDriverPercentage($driver3)->shouldReturn(0.00);
+
+        // No division by zero error
+        $this->setDrivers(array($driver4));
+        $this->setLaps(array());
+        $this->getDriverPercentage($driver4)->shouldReturn(0.00);
     }
 
     function it_calculates_how_much_laps_led(Lap $lap1, Lap $lap2, Lap $lap3)
