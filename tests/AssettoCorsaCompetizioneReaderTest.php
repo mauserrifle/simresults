@@ -38,6 +38,26 @@ class AssettoCorsaCompetizioneReaderTest extends PHPUnit_Framework_TestCase {
 
 
 
+    public function testFixingProperPositions()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-competizione/'.
+            'race.to.fix.positions.json');
+
+        // Get the race session
+        $session = Data_Reader::factory($file_path)->getSession();
+
+        //-- Validate
+        // Get participants
+        $participants = $session->getParticipants();
+        $participant = $participants[5];
+
+        // Assert driver
+        $this->assertSame('Kevin',
+            $participant->getDriver()->getName());
+    }
+
 
 
     /**
@@ -64,6 +84,24 @@ class AssettoCorsaCompetizioneReaderTest extends PHPUnit_Framework_TestCase {
             $participants[0]->getDriver()->getName());
         $this->assertSame('Andrea Mel',
             $participants[2]->getDriver()->getName());
+    }
+
+
+    /**
+     * Test numbers in session names, such as Q2
+     */
+    public function testNumericSessions()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-competizione/'.
+            'numeric.session.type.json');
+
+        // Get the race session
+        $session = Data_Reader::factory($file_path)->getSession();
+
+        //-- Validate
+        $this->assertSame(Session::TYPE_QUALIFY, $session->getType());
     }
 
 

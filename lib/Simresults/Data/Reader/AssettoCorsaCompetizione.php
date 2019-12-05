@@ -51,22 +51,27 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
 
         // Check session name to get type
         // TODO: Could we prevent duplicate code for this with other readers?
-        switch(strtolower($this->helper->arrayGet($data, 'sessionType')))
+        switch(strtolower(preg_replace(
+            '/\d/', '' ,$this->helper->arrayGet($data, 'sessionType'))))
         {
             case 'p':
             case 'fp':
+            case 'practice':
                 $type = Session::TYPE_PRACTICE;
                 $name = 'Practice';
                 break;
             case 'q':
+            case 'qualify':
                 $type = Session::TYPE_QUALIFY;
                 $name = 'Qualify';
                 break;
             case 'r':
+            case 'race':
                 $type = Session::TYPE_RACE;
                 $name = 'Race';
                 break;
             case 'w':
+            case 'warmup':
                 $type = Session::TYPE_WARMUP;
                 $name = 'Warmup';
                 break;

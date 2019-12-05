@@ -984,6 +984,10 @@ class Participant {
             }
         }
 
+        if (!$lap_count) {
+            return 0.00;
+        }
+
         return round((100 / $this->getNumberOfLaps()) * $lap_count, 2);
     }
 }
