@@ -215,6 +215,10 @@ Open <http://localhost:8000> and all should work!
 For further usage please read the classes code within the `lib` folder. They
 are carefully documented.
 
+## Sponsors
+
+Simresults development is sponsored by [Coach Dave - David Perel](https://www.davidperel.net/coaching/?ref=simresults).
+
 ## Bugs
 
 Have a bug or a feature request?
