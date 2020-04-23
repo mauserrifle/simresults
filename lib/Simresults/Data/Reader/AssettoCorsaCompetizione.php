@@ -10,6 +10,33 @@ namespace Simresults;
  */
 class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
 
+    protected $cars = array(
+        0 => 'Porsche 991 GT3',
+        1 => 'Mercedes AMG GT3',
+        2 => 'Ferrari 488 GT3',
+        3 => 'Audi R8 LMS 2015',
+        4 => 'Lamborghini Huracan GT3 2015',
+        5 => 'Mclaren 650s GT3',
+        6 => 'Nissan GT R Nismo GT3 2018',
+        7 => 'BMW M6 GT3',
+        8 => 'Bentley Continental GT3 2018',
+        9 => 'Porsche 991 II GT3 Cup ',
+        10 => 'Nissan GT-R Nismo GT3 2015',
+        11 => 'Bentley Continental GT3 2016',
+        12 => 'Aston Martin Vantage V12 GT3',
+        13 => 'Lamborghini Gallardo R-EX',
+        14 => 'Jaguar G3',
+        15 => 'Lexus RC F GT3',
+        16 => 'Lamborghini Huracan Evo 2019',
+        17 => 'Honda NSX GT3 2016',
+        18 => 'Lamborghini Huracan SuperTrofeo (Gen1)',
+        19 => 'Audi R8 LMS Evo 2019',
+        20 => 'AMR V8 Vantage 2019',
+        21 => 'Honda NSX Evo 2019 ',
+        22 => 'McLaren 720S GT3 2019',
+        23 => 'Porsche 911 II GT3 R 2019',
+    );
+
     /**
      * @see Simresults\Data_Reader::canRead()
      */
@@ -134,9 +161,14 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
                 $participant->setTotalTime(round($total_time / 1000, 4));
             }
 
+            // Find vehicle name
+            $vehicle_name = 'Car model '.$lead['car']['carModel'];
+            if (isset($this->cars[(int)$lead['car']['carModel']])) {
+                $vehicle_name = $this->cars[(int)$lead['car']['carModel']];
+            }
             // Create vehicle and add to participant
             $vehicle = new Vehicle;
-            $vehicle->setName('Car model '.$lead['car']['carModel']);
+            $vehicle->setName($vehicle_name);
 
             $participant->setVehicle($vehicle);
             $participants_by_car_id[$lead['car']['carId']] = $participant;

@@ -264,7 +264,7 @@ class AssettoCorsaCompetizioneReaderTest extends PHPUnit_Framework_TestCase {
 
         $this->assertSame('Andrea Mel',
                           $participant->getDriver()->getName());
-        $this->assertSame('Car model 1',
+        $this->assertSame('Mercedes AMG GT3',
                           $participant->getVehicle()->getName());
         $this->assertSame('',
                           $participant->getTeam());
