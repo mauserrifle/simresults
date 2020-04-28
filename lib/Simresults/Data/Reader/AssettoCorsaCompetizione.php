@@ -168,7 +168,8 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
             }
             // Create vehicle and add to participant
             $vehicle = new Vehicle;
-            $vehicle->setName($vehicle_name);
+            $vehicle->setName($vehicle_name)
+                    ->setNumber((int)$lead['car']['raceNumber']);
 
             $participant->setVehicle($vehicle);
             $participants_by_car_id[$lead['car']['carId']] = $participant;
