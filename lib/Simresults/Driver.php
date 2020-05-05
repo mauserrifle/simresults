@@ -51,11 +51,11 @@ class Driver {
      *
      * @return  string
      */
-    public function getName($shorten_lastname=FALSE)
+    public function getName($shorten_lastname=FALSE, $shorten_firstname=FALSE)
     {
         $name = $this->name;
 
-        if ($shorten_lastname)
+        if ($shorten_lastname OR $shorten_firstname)
         {
             if ($this->cache_shorten_name !== NULL)
             {
@@ -63,11 +63,18 @@ class Driver {
             }
 
             $names = explode(' ', $name);
-            if (count($names) > 1) {
+            if (count($names) > 1 AND $shorten_lastname) {
                 $last_name = array_pop($names);
                 $name = $names[0]." ".$last_name[0];
             }
 
+            $names = explode(' ', $name);
+            if (count($names) > 0 AND $shorten_firstname) {
+                $first_name = array_shift($names);
+                $name = $first_name[0].'. '.implode(' ', $names);
+            }
+
+            $name = trim($name);
             $this->cache_shorten_name = $name;
         }
 
@@ -80,10 +87,10 @@ class Driver {
      *
      * @return  string
      */
-    public function getNameWithAiMention($shorten_lastname=FALSE)
+    public function getNameWithAiMention($shorten_lastname=FALSE, $shorten_firstname=FALSE)
     {
         // Get driver name
-        $driver_name = $this->getName($shorten_lastname);
+        $driver_name = $this->getName($shorten_lastname, $shorten_firstname);
 
         // Driver is not human
         if ( ! $this->isHuman())
