@@ -48,7 +48,7 @@ class DriverSpec extends ObjectBehavior
         $this->getName(true)->shouldReturn('A e');
     }
 
-    function it_can_return_a_shorten_firstnames()
+    function it_can_return_a_shorten_firstname()
     {
         $this->setName('Maurice van der Star');
         $this->getName()->shouldReturn('Maurice van der Star');
@@ -69,7 +69,7 @@ class DriverSpec extends ObjectBehavior
         $this->getName(false, true)->shouldReturn('A. with a space at the end');
     }
 
-    function it_can_return_a_shorten_firstnames_and_lastnames()
+    function it_can_return_a_shorten_firstname_and_lastname()
     {
         $this->setName('Maurice van der Star');
         $this->getName()->shouldReturn('Maurice van der Star');
