@@ -246,17 +246,42 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
                                 // Defaults to other
                             );
 
-                            $type_messages = array(
-                                0 => 'Car to car collision',
-                                1 => 'Collision with a track object',
-                                2 => 'Going the wrong way',
-                                3 => 'Going off track',
-                                4 => 'Staying stationary on the track',
-                                5 => 'Losing control of the vehicle',
-                                6 => 'Not serving a penalty',
-                                7 => 'Disconnecting / Giving up before the end of a race',
-                                8 => 'Missing the race start',
-                            );
+                            // Game update date with incident index changes
+                            $game_update_date = new \DateTime('2020-05-06');
+                            $game_update_date->setTimezone(new \DateTimeZone(self::$default_timezone));
+
+                            // This log uses the new game update
+                            if ($date > $game_update_date) {
+                                // Use newer indexes
+                                $type_messages = array(
+                                    0 => 'Car to car collision',
+                                    1 => 'Collision with a track object',
+                                    2 => 'Going the wrong way',
+                                    3 => 'Going off track',
+                                    4 => 'Staying stationary on the track',
+                                    5 => 'Losing control of the vehicle',
+                                    6 => 'Invalid Lap',
+                                    7 => 'Not serving a penalty',
+                                    8 => 'Disconnecting / Giving up before the end of a race',
+
+                                    // Not confirmed key! But I guessed it should be included
+                                    9 => 'Missing the race start',
+                                );
+                            } else {
+                                $type_messages = array(
+                                    0 => 'Car to car collision',
+                                    1 => 'Collision with a track object',
+                                    2 => 'Going the wrong way',
+                                    3 => 'Going off track',
+                                    4 => 'Staying stationary on the track',
+                                    5 => 'Losing control of the vehicle',
+                                    6 => 'Not serving a penalty',
+                                    7 => 'Disconnecting / Giving up before the end of a race',
+                                    8 => 'Missing the race start',
+                                );
+                            }
+
+
 
                             foreach ($incidents as $incident_data)
                             {
