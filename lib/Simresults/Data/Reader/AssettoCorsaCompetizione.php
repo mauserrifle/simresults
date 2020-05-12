@@ -55,6 +55,15 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
             }
         } catch(\Exception $ex) {}
 
+        // Try windows fallback (untested and provided by community user)
+        try {
+           if ($dataParsed = json_decode(
+                preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $data), TRUE)) {
+
+                return isset($dataParsed['sessionType']);
+            }
+        } catch(\Exception $ex) {}
+
         return false;
     }
 
