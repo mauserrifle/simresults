@@ -202,7 +202,7 @@ class AssettoCorsaCompetizioneReaderTest extends PHPUnit_Framework_TestCase {
             '/logs/assettocorsa-competizione/'.
             'laps.with.unknown.carid.json');
 
-        // Get the race session
+        // Get the session
         $session = Data_Reader::factory($file_path)->getSession();
 
         // Get participants
@@ -211,9 +211,6 @@ class AssettoCorsaCompetizioneReaderTest extends PHPUnit_Framework_TestCase {
         // Assert drivers
         $this->assertSame('Alberto For',
             $participants[0]->getDriver()->getName());
-
-        // Get the race session
-        $session = Data_Reader::factory($file_path)->getSession();
     }
 
 
