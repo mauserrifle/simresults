@@ -195,6 +195,10 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
         // Process laps
         foreach ($data['laps'] as $lap_data)
         {
+            if (!isset($participants_by_car_id[$lap_data['carId']])) {
+                continue;
+            }
+
             // Init new lap
             $lap = new Lap;
 
