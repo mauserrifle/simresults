@@ -210,6 +210,7 @@ class Data_Reader_Race07 extends Data_Reader {
 
         // All participants are dnf by default
         $all_dnf = true;
+        $force_race = false;
 
         // Loop each driver
         foreach ($driver_data_array as $driver_data)
@@ -244,10 +245,21 @@ class Data_Reader_Race07 extends Data_Reader {
                 $set_dnf = ($race_time === '0:00:00.000' OR
                             $race_time === 'DNF');
 
+                // Bugged race time. But we assume it's a race
+                if ($race_time[0] === '-') {
+                    $force_race = true;
+                }
+
                 // Try setting seconds if not dnf
                 if ( ! $set_dnf)
                 try
                 {
+                    // Bugged race time. Set to zero again.
+                    if ($race_time[0] === '-') {
+                        $race_time = '0:00:00.000';
+                        $set_dnf = true;
+                    }
+
                     // Get seconds
                     $seconds = $this->helper->secondsFromFormattedTime($race_time);
 
@@ -353,7 +365,7 @@ class Data_Reader_Race07 extends Data_Reader {
 
 
         // All participants are dnf
-        if ($all_dnf)
+        if ($all_dnf AND !$force_race)
         {
             // Assume we're dealing with qualify session
             $session->setType(Session::TYPE_QUALIFY);

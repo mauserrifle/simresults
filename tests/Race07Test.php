@@ -231,6 +231,48 @@ class Race07Test extends PHPUnit_Framework_TestCase {
     }
 
     /**
+     * Test race room log differences.
+     *
+     * BUG REPORT:
+     * Paul B didn't finish Race 1 (race2.txt) and won Race 2 (race3.txt).
+     * The race 2 results showed Ma H won but Paul B won that race.
+     *
+     * Paul B is not in the race3.txt log file :(
+     */
+    public function testRaceroomLogDifferences2()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__
+            .'/logs/raceroom/race2.txt');
+
+        // Get the data reader for the given data source
+        $reader = Data_Reader::factory($file_path);
+
+        // Get sessions
+        $sessions = $reader->getSessions();
+
+        $this->assertSame(Session::TYPE_RACE, $sessions[0]->getType());
+
+        $participants = $sessions[0]->getParticipants();
+        $this->assertSame('Nicky Catsburg',
+            $participants[0]->getDriver()->getName());
+        $this->assertSame('Ma Qing Hua',
+            $participants[16]->getDriver()->getName());
+        $this->assertSame('Paul B',
+            $participants[25]->getDriver()->getName());
+
+        // Fix strange race time values:
+        // -2147483648:-2147483648:-340282346638528860000000000000000000000.000
+        $this->assertSame(0.0, $participants[0]->getTotalTime());
+
+        $this->assertSame(Participant::FINISH_DNF,
+            $participants[16]->getFinishStatus());
+        $this->assertSame(Participant::FINISH_DNF,
+            $participants[25]->getFinishStatus());
+
+    }
+
+    /**
      * Test whether there are no errors when the TimeString is missing from
      * the file
      */

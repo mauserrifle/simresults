@@ -1,0 +1,513 @@
+[Header]
+Game=RaceRoom Racing Experience
+Version=0.9.0.959
+TimeString=2020/05/24 15:43:16
+
+[Race]
+RaceMode=1
+Scene=Grand Prix
+AIDB=Grand Prix.AIW
+Track Length=6113.2666
+
+[END]
+[Slot001]
+Driver=Tom Chilton
+Vehicle=Chevrolet RML Cruze TC1 2015
+Team=Roal Motorsport
+Penalty=0
+Laps=13
+LapDistanceTravelled=4.079242
+BestLap=1:36.059
+RaceTime=0:20:53.526
+
+[Slot002]
+Driver=Sébastien Loeb
+Vehicle=Citroen C Elysee WTCC 2015
+Team=Citroen Total WTCC
+Penalty=0
+Laps=13
+LapDistanceTravelled=3110.579346
+BestLap=1:36.900
+RaceTime=0:20:54.994
+
+[Slot003]
+Driver=Rob Huff
+Vehicle=Lada Vesta WTCC 2015
+Team=Lada Sport Rosneft
+Penalty=0
+Laps=13
+LapDistanceTravelled=3099.610352
+BestLap=1:35.554
+RaceTime=0:20:52.206
+
+[Slot004]
+Driver=Mikhail Kozlovskiy
+Vehicle=Lada Vesta WTCC 2015
+Team=Lada Sport Rosneft
+Penalty=0
+Laps=13
+LapDistanceTravelled=3088.928223
+BestLap=1:35.791
+RaceTime=0:20:53.363
+
+[Slot005]
+Driver=Jaap van Lagen
+Vehicle=Lada Vesta WTCC 2015
+Team=Lada Sport Rosneft
+Penalty=0
+Laps=13
+LapDistanceTravelled=3078.203369
+BestLap=1:35.785
+RaceTime=0:20:54.032
+
+[Slot006]
+Driver=Grégoire Demoustier
+Vehicle=Chevrolet RML Cruze TC1 2015
+Team=Craft Bamboo
+Penalty=0
+Laps=13
+LapDistanceTravelled=3067.613525
+BestLap=1:35.863
+RaceTime=0:20:52.858
+
+[Slot007]
+Driver=Stefano d'Aste
+Vehicle=Chevrolet RML Cruze TC1 2015
+Team=Munnich Motorsport
+Penalty=0
+Laps=13
+LapDistanceTravelled=3056.557373
+BestLap=1:36.357
+RaceTime=0:20:52.530
+
+[Slot008]
+Driver=John Filippi
+Vehicle=Chevrolet RML Cruze TC1 2015
+Team=Campos Racing
+Penalty=0
+Laps=13
+LapDistanceTravelled=3045.796387
+BestLap=1:36.027
+RaceTime=0:20:56.805
+
+[Slot009]
+Driver=Mehdi Bennani
+Vehicle=Citroen C Elysee WTCC 2015
+Team=Sébastien Loeb Racing
+Penalty=0
+Laps=13
+LapDistanceTravelled=3035.043701
+BestLap=1:36.573
+RaceTime=0:20:53.621
+
+[Slot010]
+Driver=Ma Qing Hua
+Vehicle=Citroen C Elysee WTCC 2015
+Team=Citroen Total WTCC
+Penalty=0
+Laps=13
+LapDistanceTravelled=3024.066162
+BestLap=1:35.590
+RaceTime=0:20:52.026
+
+[Slot011]
+Driver=José María López
+Vehicle=Citroen C Elysee WTCC 2015
+Team=Citroen Total WTCC
+Penalty=0
+Laps=13
+LapDistanceTravelled=3013.056152
+BestLap=1:35.514
+RaceTime=0:20:54.520
+
+[Slot012]
+Driver=Yvan Muller
+Vehicle=Citroen C Elysee WTCC 2015
+Team=Citroen Total WTCC
+Penalty=0
+Laps=13
+LapDistanceTravelled=3002.067871
+BestLap=1:36.360
+RaceTime=0:20:55.571
+
+[Slot013]
+Driver=Fredrik Ekblom
+Vehicle=Volvo S60 Polestar TC1
+Team=Polestar Cyan Racing
+Penalty=0
+Laps=13
+LapDistanceTravelled=2991.687500
+BestLap=1:35.177
+RaceTime=0:20:53.197
+
+[Slot014]
+Driver=Thed Björk
+Vehicle=Volvo S60 Polestar TC1
+Team=Polestar Cyan Racing
+Penalty=0
+Laps=13
+LapDistanceTravelled=2981.189453
+BestLap=1:35.573
+RaceTime=0:20:53.882
+
+[Slot015]
+Driver=Néstor Girolami
+Vehicle=Volvo S60 Polestar TC1
+Team=Polestar Cyan Racing
+Penalty=0
+Laps=13
+LapDistanceTravelled=2970.235840
+BestLap=1:36.408
+RaceTime=0:20:58.000
+
+[Slot016]
+Driver=James Thompson
+Vehicle=Chevrolet RML Cruze TC1 2016
+Team=All-Inkl.com Münnich Motorsport
+Penalty=0
+Laps=13
+LapDistanceTravelled=2958.880127
+BestLap=1:35.595
+RaceTime=0:20:52.616
+
+[Slot017]
+Driver=Sabine Schmitz
+Vehicle=Chevrolet RML Cruze TC1 2016
+Team=All-Inkl.com Münnich Motorsport
+Penalty=0
+Laps=13
+LapDistanceTravelled=2948.615479
+BestLap=1:36.842
+RaceTime=0:20:55.761
+
+[Slot018]
+Driver=Tom Coronel
+Vehicle=Chevrolet RML Cruze TC1 2017
+Team=Roal Motorsport
+Penalty=0
+Laps=13
+LapDistanceTravelled=9.568516
+BestLap=1:36.942
+RaceTime=0:20:57.889
+
+[Slot019]
+Driver=Esteban Guerrieri
+Vehicle=Chevrolet RML Cruze TC1 2017
+Team=Campos Racing
+Penalty=0
+Laps=13
+LapDistanceTravelled=3110.931885
+BestLap=1:36.863
+RaceTime=0:20:55.269
+
+[Slot020]
+Driver=Norbert Michelisz
+Vehicle=Honda Civic WTCC 2017
+Team=Honda Racing Team JAS
+Penalty=0
+Laps=13
+LapDistanceTravelled=3105.987305
+BestLap=1:36.585
+RaceTime=0:20:56.633
+
+[Slot021]
+Driver=Tiago Monteiro
+Vehicle=Honda Civic WTCC 2017
+Team=Honda Racing Team JAS
+Penalty=0
+Laps=13
+LapDistanceTravelled=3094.670654
+BestLap=1:36.078
+RaceTime=0:20:54.122
+
+[Slot022]
+Driver=Ryo Michigami
+Vehicle=Honda Civic WTCC 2017
+Team=Honda Racing Team JAS
+Penalty=0
+Laps=13
+LapDistanceTravelled=3083.949707
+BestLap=1:36.360
+RaceTime=0:20:54.810
+
+[Slot023]
+Driver=Kevin Gleason
+Vehicle=Lada Vesta WTCC 2017
+Team=RC Motorsport
+Penalty=0
+Laps=13
+LapDistanceTravelled=3073.081055
+BestLap=1:36.918
+RaceTime=0:20:56.768
+
+[Slot024]
+Driver=Yann Ehrlacher
+Vehicle=Lada Vesta WTCC 2017
+Team=RC Motorsport
+Penalty=0
+Laps=13
+LapDistanceTravelled=3062.530029
+BestLap=1:35.571
+RaceTime=0:20:52.151
+
+[Slot025]
+Driver=Nicky Catsburg
+Vehicle=Volvo S60 Polestar TC1
+Team=Polestar Cyan Racing
+Penalty=0
+Laps=13
+LapDistanceTravelled=3051.627686
+BestLap=1:36.192
+RaceTime=0:20:52.662
+
+[Slot001]
+Driver=Tom Chilton
+Vehicle=Chevrolet RML Cruze TC1 2015
+Team=Roal Motorsport
+Penalty=0
+Laps=13
+LapDistanceTravelled=4.079242
+BestLap=1:36.059
+RaceTime=0:20:53.526
+
+[Slot002]
+Driver=Sébastien Loeb
+Vehicle=Citroen C Elysee WTCC 2015
+Team=Citroen Total WTCC
+Penalty=0
+Laps=13
+LapDistanceTravelled=3110.579346
+BestLap=1:36.900
+RaceTime=0:20:54.994
+
+[Slot003]
+Driver=Rob Huff
+Vehicle=Lada Vesta WTCC 2015
+Team=Lada Sport Rosneft
+Penalty=0
+Laps=13
+LapDistanceTravelled=3099.610352
+BestLap=1:35.554
+RaceTime=0:20:52.206
+
+[Slot004]
+Driver=Mikhail Kozlovskiy
+Vehicle=Lada Vesta WTCC 2015
+Team=Lada Sport Rosneft
+Penalty=0
+Laps=13
+LapDistanceTravelled=3088.928223
+BestLap=1:35.791
+RaceTime=0:20:53.363
+
+[Slot005]
+Driver=Jaap van Lagen
+Vehicle=Lada Vesta WTCC 2015
+Team=Lada Sport Rosneft
+Penalty=0
+Laps=13
+LapDistanceTravelled=3078.203369
+BestLap=1:35.785
+RaceTime=0:20:54.032
+
+[Slot006]
+Driver=Grégoire Demoustier
+Vehicle=Chevrolet RML Cruze TC1 2015
+Team=Craft Bamboo
+Penalty=0
+Laps=13
+LapDistanceTravelled=3067.613525
+BestLap=1:35.863
+RaceTime=0:20:52.858
+
+[Slot007]
+Driver=Stefano d'Aste
+Vehicle=Chevrolet RML Cruze TC1 2015
+Team=Munnich Motorsport
+Penalty=0
+Laps=13
+LapDistanceTravelled=3056.557373
+BestLap=1:36.357
+RaceTime=0:20:52.530
+
+[Slot008]
+Driver=John Filippi
+Vehicle=Chevrolet RML Cruze TC1 2015
+Team=Campos Racing
+Penalty=0
+Laps=13
+LapDistanceTravelled=3045.796387
+BestLap=1:36.027
+RaceTime=0:20:56.805
+
+[Slot009]
+Driver=Mehdi Bennani
+Vehicle=Citroen C Elysee WTCC 2015
+Team=Sébastien Loeb Racing
+Penalty=0
+Laps=13
+LapDistanceTravelled=3035.043701
+BestLap=1:36.573
+RaceTime=0:20:53.621
+
+[Slot010]
+Driver=Ma Qing Hua
+Vehicle=Citroen C Elysee WTCC 2015
+Team=Citroen Total WTCC
+Penalty=0
+Laps=13
+LapDistanceTravelled=3024.066162
+BestLap=1:35.590
+RaceTime=0:20:52.026
+
+[Slot011]
+Driver=José María López
+Vehicle=Citroen C Elysee WTCC 2015
+Team=Citroen Total WTCC
+Penalty=0
+Laps=13
+LapDistanceTravelled=3013.056152
+BestLap=1:35.514
+RaceTime=0:20:54.520
+
+[Slot012]
+Driver=Yvan Muller
+Vehicle=Citroen C Elysee WTCC 2015
+Team=Citroen Total WTCC
+Penalty=0
+Laps=13
+LapDistanceTravelled=3002.067871
+BestLap=1:36.360
+RaceTime=0:20:55.571
+
+[Slot013]
+Driver=Fredrik Ekblom
+Vehicle=Volvo S60 Polestar TC1
+Team=Polestar Cyan Racing
+Penalty=0
+Laps=13
+LapDistanceTravelled=2991.687500
+BestLap=1:35.177
+RaceTime=0:20:53.197
+
+[Slot014]
+Driver=Thed Björk
+Vehicle=Volvo S60 Polestar TC1
+Team=Polestar Cyan Racing
+Penalty=0
+Laps=13
+LapDistanceTravelled=2981.189453
+BestLap=1:35.573
+RaceTime=0:20:53.882
+
+[Slot015]
+Driver=Néstor Girolami
+Vehicle=Volvo S60 Polestar TC1
+Team=Polestar Cyan Racing
+Penalty=0
+Laps=13
+LapDistanceTravelled=2970.235840
+BestLap=1:36.408
+RaceTime=0:20:58.000
+
+[Slot016]
+Driver=James Thompson
+Vehicle=Chevrolet RML Cruze TC1 2016
+Team=All-Inkl.com Münnich Motorsport
+Penalty=0
+Laps=13
+LapDistanceTravelled=2958.880127
+BestLap=1:35.595
+RaceTime=0:20:52.616
+
+[Slot017]
+Driver=Sabine Schmitz
+Vehicle=Chevrolet RML Cruze TC1 2016
+Team=All-Inkl.com Münnich Motorsport
+Penalty=0
+Laps=13
+LapDistanceTravelled=2948.615479
+BestLap=1:36.842
+RaceTime=0:20:55.761
+
+[Slot018]
+Driver=Tom Coronel
+Vehicle=Chevrolet RML Cruze TC1 2017
+Team=Roal Motorsport
+Penalty=0
+Laps=13
+LapDistanceTravelled=9.568516
+BestLap=1:36.942
+RaceTime=0:20:57.889
+
+[Slot019]
+Driver=Esteban Guerrieri
+Vehicle=Chevrolet RML Cruze TC1 2017
+Team=Campos Racing
+Penalty=0
+Laps=13
+LapDistanceTravelled=3110.931885
+BestLap=1:36.863
+RaceTime=0:20:55.269
+
+[Slot020]
+Driver=Norbert Michelisz
+Vehicle=Honda Civic WTCC 2017
+Team=Honda Racing Team JAS
+Penalty=0
+Laps=13
+LapDistanceTravelled=3105.987305
+BestLap=1:36.585
+RaceTime=0:20:56.633
+
+[Slot021]
+Driver=Tiago Monteiro
+Vehicle=Honda Civic WTCC 2017
+Team=Honda Racing Team JAS
+Penalty=0
+Laps=13
+LapDistanceTravelled=3094.670654
+BestLap=1:36.078
+RaceTime=0:20:54.122
+
+[Slot022]
+Driver=Ryo Michigami
+Vehicle=Honda Civic WTCC 2017
+Team=Honda Racing Team JAS
+Penalty=0
+Laps=13
+LapDistanceTravelled=3083.949707
+BestLap=1:36.360
+RaceTime=0:20:54.810
+
+[Slot023]
+Driver=Kevin Gleason
+Vehicle=Lada Vesta WTCC 2017
+Team=RC Motorsport
+Penalty=0
+Laps=13
+LapDistanceTravelled=3073.081055
+BestLap=1:36.918
+RaceTime=0:20:56.768
+
+[Slot024]
+Driver=Yann Ehrlacher
+Vehicle=Lada Vesta WTCC 2017
+Team=RC Motorsport
+Penalty=0
+Laps=13
+LapDistanceTravelled=3062.530029
+BestLap=1:35.571
+RaceTime=0:20:52.151
+
+[Slot025]
+Driver=Nicky Catsburg
+Vehicle=Volvo S60 Polestar TC1
+Team=Polestar Cyan Racing
+Penalty=0
+Laps=13
+LapDistanceTravelled=3051.627686
+BestLap=1:36.192
+RaceTime=0:20:52.662
+
+[END]
