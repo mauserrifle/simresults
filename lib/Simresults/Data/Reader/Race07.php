@@ -211,6 +211,7 @@ class Data_Reader_Race07 extends Data_Reader {
         // All participants are dnf by default
         $all_dnf = true;
         $force_race = false;
+        $fix_positions = true;
 
         // Loop each driver
         foreach ($driver_data_array as $driver_data)
@@ -255,21 +256,24 @@ class Data_Reader_Race07 extends Data_Reader {
                 try
                 {
                     // Bugged race time. Set to zero again.
+                    // The player probably quit the session before finish
                     if ($race_time[0] === '-') {
-                        $race_time = '0:00:00.000';
                         $set_dnf = true;
+                        // Do not fix positions either. It's useless
+                        $fix_positions = false;
+                    } else {
+                        // Get seconds
+                        $seconds = $this->helper->secondsFromFormattedTime($race_time);
+
+                        // Set total time
+                        $participant->setTotalTime($seconds);
+
+                        // Is finished
+                        $participant->setFinishStatus(Participant::FINISH_NORMAL);
+
+                        $all_dnf = false;
                     }
 
-                    // Get seconds
-                    $seconds = $this->helper->secondsFromFormattedTime($race_time);
-
-                    // Set total time
-                    $participant->setTotalTime($seconds);
-
-                    // Is finished
-                    $participant->setFinishStatus(Participant::FINISH_NORMAL);
-
-                    $all_dnf = false;
 
                 }
                 // Catch invalid argument, probably a string status like DNF
@@ -379,7 +383,9 @@ class Data_Reader_Race07 extends Data_Reader {
         }
 
         // Sort participants
-        $this->sortParticipantsAndFixPositions($participants, $session);
+        if ($fix_positions) {
+            $this->sortParticipantsAndFixPositions($participants, $session);
+        }
 
         // Set participants on session
         $session->setParticipants($participants);
