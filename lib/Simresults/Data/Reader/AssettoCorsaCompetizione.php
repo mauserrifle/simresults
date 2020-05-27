@@ -119,8 +119,10 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
                 $type = Session::TYPE_PRACTICE;
                 $name = 'Practice';
                 break;
+            // TODO: Create test
             case 'q':
             case 'qualify':
+            case 4:
                 $type = Session::TYPE_QUALIFY;
                 $name = 'Qualify';
                 break;
