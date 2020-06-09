@@ -35,6 +35,7 @@ Simresults supports a wide range of games:
 * rFactor
 * rFactor 2
 * Project Cars
+* Project Cars 2
 * Assetto Corsa
 * Assetto Corsa Competizione
 * Automobilista
