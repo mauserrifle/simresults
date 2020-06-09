@@ -121,12 +121,16 @@
           "name" : "Vintage Prototype A"
         },
         {
-          "value" : 1323122160,
-          "name" : "GT1"
-        },
-        {
           "value" : 767810805,
           "name" : "Road A"
+        },
+        {
+          "value" : 1669341529,
+          "name" : "Ferrari F355 Series"
+        },
+        {
+          "value" : 1323122160,
+          "name" : "GT1"
         },
         {
           "value" : -1062040284,
@@ -293,6 +297,11 @@
           "id" : 185812116,
           "name" : "Ferrari 488 GT3",
           "class" : "GT3"
+        },
+        {
+          "id" : 220908396,
+          "name" : "Ferrari FXX K",
+          "class" : "Track Day A"
         },
         {
           "id" : 262982797,
@@ -555,6 +564,11 @@
           "class" : "Road C"
         },
         {
+          "id" : 1317086096,
+          "name" : "Ferrari 512 BB LM",
+          "class" : "Group 4"
+        },
+        {
           "id" : 1319185453,
           "name" : "Porsche 935/77",
           "class" : "Group 5"
@@ -775,6 +789,11 @@
           "class" : "GT1"
         },
         {
+          "id" : 2006190056,
+          "name" : "Ferrari 458 Speciale A",
+          "class" : "Road B"
+        },
+        {
           "id" : 2037619631,
           "name" : "Volkswagen Polo RX Supercar",
           "class" : "WRX"
@@ -828,6 +847,11 @@
           "id" : -2025231366,
           "name" : "Cadillac ATS-V.R GT3",
           "class" : "GT3"
+        },
+        {
+          "id" : -1967832633,
+          "name" : "Ferrari F40",
+          "class" : "Road D"
         },
         {
           "id" : -1966060946,
@@ -908,6 +932,11 @@
           "id" : -1728824001,
           "name" : "Ferrari F50 GT",
           "class" : "GT1"
+        },
+        {
+          "id" : -1720596633,
+          "name" : "Ferrari F355 Challenge",
+          "class" : "Ferrari F355 Series"
         },
         {
           "id" : -1695434771,
@@ -1155,6 +1184,11 @@
           "class" : "GTE"
         },
         {
+          "id" : -752781428,
+          "name" : "Ferrari 250 Testa Rossa",
+          "class" : "Vintage Touring-GT C"
+        },
+        {
           "id" : -713284494,
           "name" : "Lotus Type 25 Climax",
           "class" : "Vintage F1 D"
@@ -1210,6 +1244,11 @@
           "class" : "Group 6"
         },
         {
+          "id" : -505616410,
+          "name" : "Ferrari F12tdf",
+          "class" : "Road A"
+        },
+        {
           "id" : -494100071,
           "name" : "Bentley Speed 8",
           "class" : "LMP900"
@@ -1233,6 +1272,11 @@
           "id" : -424432241,
           "name" : "Porsche 935/78-81",
           "class" : "Group 5"
+        },
+        {
+          "id" : -405013350,
+          "name" : "Ferrari 250 GT Berlinetta",
+          "class" : "Vintage Touring-GT C"
         },
         {
           "id" : -387045855,
@@ -1595,6 +1639,11 @@
           "gridsize" : 22
         },
         {
+          "id" : 1371913179,
+          "name" : "Pista di Fiorano",
+          "gridsize" : 20
+        },
+        {
           "id" : 1408845203,
           "name" : "Summerton National",
           "gridsize" : 28
@@ -1658,6 +1707,11 @@
           "id" : 1719717729,
           "name" : "Texas Motor Speedway Infield Course",
           "gridsize" : 20
+        },
+        {
+          "id" : 1730519219,
+          "name" : "Mugello GP",
+          "gridsize" : 40
         },
         {
           "id" : 1731699995,
@@ -1743,6 +1797,11 @@
           "id" : -2126387783,
           "name" : "Knockhill International",
           "gridsize" : 12
+        },
+        {
+          "id" : -2110554879,
+          "name" : "Mugello Short",
+          "gridsize" : 40
         },
         {
           "id" : -2108341365,

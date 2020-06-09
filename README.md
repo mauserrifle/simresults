@@ -35,6 +35,7 @@ Simresults supports a wide range of games:
 * rFactor
 * rFactor 2
 * Project Cars
+* Project Cars 2
 * Assetto Corsa
 * Assetto Corsa Competizione
 * Automobilista
@@ -140,7 +141,7 @@ lap.
 
 ## Requirements
 
-- PHP 5.3
+- PHP >= 5.3
 - Composer (for easy installing and autoloading)
 
 ## Installation and example
@@ -214,6 +215,10 @@ Open <http://localhost:8000> and all should work!
 
 For further usage please read the classes code within the `lib` folder. They
 are carefully documented.
+
+## Sponsors
+
+Simresults development is sponsored by [Coach Dave - David Perel](https://www.davidperel.net/coaching/?ref=simresults).
 
 ## Bugs
 

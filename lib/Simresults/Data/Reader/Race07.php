@@ -210,6 +210,8 @@ class Data_Reader_Race07 extends Data_Reader {
 
         // All participants are dnf by default
         $all_dnf = true;
+        $force_race = false;
+        $fix_positions = true;
 
         // Loop each driver
         foreach ($driver_data_array as $driver_data)
@@ -244,20 +246,34 @@ class Data_Reader_Race07 extends Data_Reader {
                 $set_dnf = ($race_time === '0:00:00.000' OR
                             $race_time === 'DNF');
 
+                // Bugged race time. But we assume it's a race
+                if ($race_time[0] === '-') {
+                    $force_race = true;
+                }
+
                 // Try setting seconds if not dnf
                 if ( ! $set_dnf)
                 try
                 {
-                    // Get seconds
-                    $seconds = $this->helper->secondsFromFormattedTime($race_time);
+                    // Bugged race time. Set to zero again.
+                    // The player probably quit the session before finish
+                    if ($race_time[0] === '-') {
+                        $set_dnf = true;
+                        // Do not fix positions either. It's useless
+                        $fix_positions = false;
+                    } else {
+                        // Get seconds
+                        $seconds = $this->helper->secondsFromFormattedTime($race_time);
 
-                    // Set total time
-                    $participant->setTotalTime($seconds);
+                        // Set total time
+                        $participant->setTotalTime($seconds);
 
-                    // Is finished
-                    $participant->setFinishStatus(Participant::FINISH_NORMAL);
+                        // Is finished
+                        $participant->setFinishStatus(Participant::FINISH_NORMAL);
 
-                    $all_dnf = false;
+                        $all_dnf = false;
+                    }
+
 
                 }
                 // Catch invalid argument, probably a string status like DNF
@@ -353,7 +369,7 @@ class Data_Reader_Race07 extends Data_Reader {
 
 
         // All participants are dnf
-        if ($all_dnf)
+        if ($all_dnf AND !$force_race)
         {
             // Assume we're dealing with qualify session
             $session->setType(Session::TYPE_QUALIFY);
@@ -367,7 +383,9 @@ class Data_Reader_Race07 extends Data_Reader {
         }
 
         // Sort participants
-        $this->sortParticipantsAndFixPositions($participants, $session);
+        if ($fix_positions) {
+            $this->sortParticipantsAndFixPositions($participants, $session);
+        }
 
         // Set participants on session
         $session->setParticipants($participants);

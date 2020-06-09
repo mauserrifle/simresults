@@ -171,6 +171,28 @@ class RaceRoomReaderTest extends PHPUnit_Framework_TestCase {
 
     }
 
+    /**
+     * Test reading new incident indexes in json
+     */
+    public function testReadingNewIncidentIndexes()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/raceroom-server/race.with.new.incident.indexes.json');
+
+        // Get session
+        $session = Data_Reader::factory($file_path)->getSession(3);
+        $participants = $session->getParticipants();
+        $incidents = $session->getIncidents();
+
+        // Validate first incident
+        $this->assertSame(
+            'LAP 1, Bence, Invalid Lap, Points: 1',
+            $incidents[0]->getMessage());
+        $this->assertSame(Incident::TYPE_OTHER, $incidents[0]->getType());
+        $this->assertSame($participants[0], $incidents[0]->getParticipant());
+    }
+
 
 
 

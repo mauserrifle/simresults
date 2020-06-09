@@ -192,6 +192,79 @@ class AssettoCorsaCompetizioneReaderTest extends PHPUnit_Framework_TestCase {
     }
 
 
+    /**
+     * Test no exception on missing driver id used in laps
+     */
+    public function testNoExceptionOnMissingDriverIdUsedInLaps()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-competizione/'.
+            'laps.with.unknown.carid.json');
+
+        // Get the session
+        $session = Data_Reader::factory($file_path)->getSession();
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Assert drivers
+        $this->assertSame('Alberto For',
+            $participants[0]->getDriver()->getName());
+    }
+
+
+    /**
+     * Test client log file differences
+     */
+    public function testClientRaceLog()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-competizione-client/'.
+            'race.json');
+
+        // Get the session
+        $session = Data_Reader::factory($file_path)->getSession();
+
+        // Is race
+        $this->assertSame(Session::TYPE_RACE, $session->getType());
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Assert drivers
+        $this->assertSame('Rob R',
+            $participants[0]->getDriver()->getName());
+        $this->assertSame(23,
+            $participants[0]->getNumberOfLaps());
+
+        // Validate track
+        $track = $session->getTrack();
+        $this->assertSame('Unknown', $track->getVenue());
+
+        // Other settings
+        $this->assertSame(array(
+            'isWetSession' => 0,
+            'dateHour' => '14',
+            'dateMinute' => '0',
+            'raceDay' => '2',
+            'timeMultiplier' => '1.5',
+            'preSessionDuration' => '1',
+            'sessionDuration' => '2400',
+            'overtimeDuration' => '180',
+            'round' => '1',
+            'sessionType' => '10',
+            'dynamicTrackMultiplier' => '1',
+            'idealLineGrip' => '0.98000001907349',
+            'outsideLineGrip' => '0.5',
+            'marblesLevel' => '0',
+            'puddlesLevel' => '0',
+            'wetDryLineLevel' => '0',
+            'wetLevel' => '0',
+        ), $session->getOtherSettings());
+    }
+
 
 
     /***
@@ -264,8 +337,9 @@ class AssettoCorsaCompetizioneReaderTest extends PHPUnit_Framework_TestCase {
 
         $this->assertSame('Andrea Mel',
                           $participant->getDriver()->getName());
-        $this->assertSame('Car model 1',
+        $this->assertSame('Mercedes AMG GT3',
                           $participant->getVehicle()->getName());
+        $this->assertSame(82, $participant->getVehicle()->getNumber());
         $this->assertSame('',
                           $participant->getTeam());
         $this->assertSame(1, $participant->getPosition());
