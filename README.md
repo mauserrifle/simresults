@@ -141,7 +141,7 @@ lap.
 
 ## Requirements
 
-- PHP 5.3
+- PHP >= 5.3
 - Composer (for easy installing and autoloading)
 
 ## Installation and example
