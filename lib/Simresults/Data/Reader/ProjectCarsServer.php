@@ -134,30 +134,18 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                     $participants_by_name[$part_key] = clone $part;
                 }
 
-                // Init session
-                $session = Session::createInstance();
-
-                // Practice session by default
-                $type = Session::TYPE_PRACTICE;
 
                 // Setup name for session type
                 $type_setup_name = ucfirst($type_key);
                 $type_setup_name2 = preg_replace('/[0-9]+/', '', $type_setup_name);
 
-                // Check session name to get type
-                // TODO: Could we prevent duplicate code for this with other readers?
-                switch(strtolower(preg_replace('#\d#', '', $type_key)))
-                {
-                    case 'qualifying':
-                        $type = Session::TYPE_QUALIFY;
-                        $type_setup_name = 'Qualify';
-                        break;
-                    case 'warmup':
-                        $type = Session::TYPE_WARMUP;
-                        break;
-                    case 'race':
-                        $type = Session::TYPE_RACE;
-                        break;
+                // Init session
+                $session = $this->helper->detectSession(strtolower(
+                    preg_replace('#\d#', '', $type_key)));
+
+                // Different setup name for quality
+                if ($session->getType() === Session::TYPE_QUALIFY) {
+                    $type_setup_name = 'Qualify';
                 }
 
                 $max_laps = NULL;
@@ -175,14 +163,15 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 }
 
 
+
+
                 // Date of this session
                 $date = new \DateTime;
                 $date->setTimestamp($session_data['start_time']);
                 $date->setTimezone(new \DateTimeZone(self::$default_timezone));
 
                 // Set session values
-                $session->setType($type)
-                        ->setName($type_key)
+                $session->setName($type_key)
                         ->setDate($date)
                         ->setOtherSettings($session_settings);
 

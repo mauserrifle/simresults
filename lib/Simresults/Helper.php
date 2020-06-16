@@ -647,4 +647,73 @@ class Helper {
     {
         return isset($array[$key]) ? $array[$key] : $default;
     }
+
+    /**
+     * Detect a session. Returns the session with proper session type and
+     * default ucfirst name
+     *
+     * @param   string  $value
+     * @param   array   $custom_values_to_type
+     * @return  Session
+     */
+    public function detectSession($session_value, $custom_values_to_type=array())
+    {
+        $session_value = trim(strtolower($session_value));
+
+        $type = null;
+        $name = null;
+
+        // Preg matches that catch most types
+        if (preg_match('/(prac|test)/i', $session_value)) {
+            $type = Session::TYPE_PRACTICE;
+        }
+        elseif (preg_match('/qual/i', $session_value)) {
+            $type = Session::TYPE_QUALIFY;
+        }
+        elseif (preg_match('/rac/i', $session_value)) {
+            $type = Session::TYPE_RACE;
+        }
+        elseif (preg_match('/warm/i', $session_value)) {
+            $type = Session::TYPE_WARMUP;
+        }
+
+        if (!$type)
+        {
+            // Any fallback values like short names
+            $values_to_type =
+                array(
+                    'p' => Session::TYPE_PRACTICE,
+                    'fp' => Session::TYPE_PRACTICE,
+
+                    'q' => Session::TYPE_QUALIFY,
+
+                    'r' => Session::TYPE_RACE,
+
+                    'w' => Session::TYPE_WARMUP,
+                )
+                +
+                $custom_values_to_type
+            ;
+
+            $type = $this->arrayGet($values_to_type, $session_value);
+        }
+
+        if (!$type) {
+            $type = Session::TYPE_PRACTICE;
+            $name = 'Unknown';
+        }
+
+        if (!$name) {
+            $name = ucfirst($type);
+        }
+
+        // Init session
+        $session = Session::createInstance();
+
+        // Set session values
+        $session->setType($type)
+                ->setName($name);
+
+        return $session;
+    }
 }

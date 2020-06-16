@@ -3,6 +3,7 @@
 namespace spec\Simresults;
 
 use Simresults\Helper;
+use Simresults\Session;
 use Simresults\Participant;
 use Simresults\Lap;
 use PhpSpec\ObjectBehavior;
@@ -167,5 +168,56 @@ class HelperSpec extends ObjectBehavior
         $this->sortParticipantsByLastLapPosition(array($part1, $part2, $part3,
                                                        $part4, $part5))
              ->shouldReturn(array($part4, $part3, $part5, $part1, $part2));
+    }
+
+    function it_detects_session_by_session_value()
+    {
+        // Does not exist
+        $session = $this->detectSession('4');
+        $session->getType()->shouldReturn(SESSION::TYPE_PRACTICE);
+        $session->getName()->shouldReturn('Unknown');
+
+        // Existing tests
+        $tests = array(
+            'p' => Session::TYPE_PRACTICE,
+            'fp' => Session::TYPE_PRACTICE,
+            'practice' => Session::TYPE_PRACTICE,
+            'practicing' => Session::TYPE_PRACTICE,
+            'test' => Session::TYPE_PRACTICE,
+
+            'q' => Session::TYPE_QUALIFY,
+            'qualify' => Session::TYPE_QUALIFY,
+            'qualify2' => Session::TYPE_QUALIFY,
+            'qualify3' => Session::TYPE_QUALIFY,
+            'qualify session' => Session::TYPE_QUALIFY,
+            'qualifying' => Session::TYPE_QUALIFY,
+
+            'r' => Session::TYPE_RACE,
+            'race' => Session::TYPE_RACE,
+            'race2' => Session::TYPE_RACE,
+            'race3' => Session::TYPE_RACE,
+            'quick race' => Session::TYPE_RACE,
+            'racing' => Session::TYPE_RACE,
+
+            'w' => Session::TYPE_WARMUP,
+            'warmup' => Session::TYPE_WARMUP,
+            'warmup session' => Session::TYPE_WARMUP,
+            'warm up' => Session::TYPE_WARMUP,
+            'warming' => Session::TYPE_WARMUP,
+        );
+
+        foreach ($tests as $session_value => $session_type) {
+            $session = $this->detectSession($session_value);
+            $session->getType()->shouldReturn($session_type);
+            $session->getName()->shouldReturn(ucfirst($session_type));
+        }
+    }
+
+    function it_detects_session_by_custom_session_value()
+    {
+        // Exists by custom type value
+        $session = $this->detectSession('4', array('4' => SESSION::TYPE_RACE));
+        $session->getType()->shouldReturn(SESSION::TYPE_RACE);
+        $session->getName()->shouldReturn('Race');
     }
 }

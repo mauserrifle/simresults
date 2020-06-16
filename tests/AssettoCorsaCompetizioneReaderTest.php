@@ -75,6 +75,7 @@ class AssettoCorsaCompetizioneReaderTest extends PHPUnit_Framework_TestCase {
 
         //-- Validate
         $this->assertSame(Session::TYPE_QUALIFY, $session->getType());
+        $this->assertSame('Qualify', $session->getName());
 
         // Get participants
         $participants = $session->getParticipants();
@@ -120,6 +121,7 @@ class AssettoCorsaCompetizioneReaderTest extends PHPUnit_Framework_TestCase {
 
         //-- Validate
         $this->assertSame(Session::TYPE_PRACTICE, $session->getType());
+        $this->assertSame('Practice', $session->getName());
 
         // Get participants
         $participants = $session->getParticipants();

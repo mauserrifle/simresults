@@ -47,27 +47,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
             $vehicle_names = array();
 
             // Init session
-            $session = Session::createInstance();
-
-            // Set session type
-            $type = null;
-
-            switch($session_data['type'])
-            {
-                case 'qualify':
-                    $type = Session::TYPE_QUALIFY;
-                    break;
-                case 'practice':
-                    $type = Session::TYPE_PRACTICE;
-                    break;
-                case 'warmup':
-                    $type = Session::TYPE_PRACTICE;
-                    break;
-                case 'race':
-                    $type = Session::TYPE_RACE;
-                    break;
-            }
-            $session->setType($type);
+            $session = $this->helper->detectSession($session_data['type']);
 
             // Set session name
             if (isset($session_data['name']))

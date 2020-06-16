@@ -82,12 +82,6 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
         }
 
 
-        // Init session
-        $session = Session::createInstance();
-
-        // Practice session by default
-        $type = Session::TYPE_PRACTICE;
-
         $session_data = $data;
         $parse_settings = false;
 
@@ -109,45 +103,14 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
                 '/\d/', '' ,$session_type_value));
         }
 
-        // Check session name to get type
-        // TODO: Could we prevent duplicate code for this with other readers?
-        switch($session_type_value)
-        {
-            case 'p':
-            case 'fp':
-            case 'practice':
-            case '0':
-                $type = Session::TYPE_PRACTICE;
-                $name = 'Practice';
-                break;
-            // TODO: Create test
-            case 'q':
-            case 'qualify':
-            case 4:
-                $type = Session::TYPE_QUALIFY;
-                $name = 'Qualify';
-                break;
-            case 'r':
-            case 'race':
-            case 10:
-                $type = Session::TYPE_RACE;
-                $name = 'Race';
-                break;
-            case 'w':
-            case 'warmup':
-                $type = Session::TYPE_WARMUP;
-                $name = 'Warmup';
-                break;
-            default:
-                $type = Session::TYPE_PRACTICE;
-                $name = 'Unknown';
-                break;
-        }
 
+        // Init session
+        $session = $this->helper->detectSession($session_type_value, array(
+            '0' => Session::TYPE_PRACTICE,
+            '4' => Session::TYPE_QUALIFY,
+            '10' => Session::TYPE_RACE,
+        ));
 
-        // Set session values
-        $session->setType($type)
-                ->setName($name);
 
         if ($max_laps = (int) $this->helper->arrayGet($session_data, 'RaceLaps')) {
             $session->setMaxLaps($max_laps);
