@@ -116,6 +116,7 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
             case 'p':
             case 'fp':
             case 'practice':
+            case '0':
                 $type = Session::TYPE_PRACTICE;
                 $name = 'Practice';
                 break;
