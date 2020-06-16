@@ -53,7 +53,10 @@ class Driver {
      */
     public function getName($shorten_lastname=FALSE, $shorten_firstname=FALSE)
     {
-        $name = $this->name;
+        // No name, just return the empty value
+        if (!$name = $this->name) {
+            return $name;
+        }
 
         if ($shorten_lastname OR $shorten_firstname)
         {
