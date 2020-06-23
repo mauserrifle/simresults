@@ -539,7 +539,7 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
         $tests = array(
             array(
                 'type'     => Session::TYPE_PRACTICE,
-                'name'     => 'Practice1',
+                'name'     => null,
                 'max_laps' => 15,
                 'time'     => 1446146942,
             ),
@@ -563,7 +563,7 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
             ),
             array(
                 'type'     => Session::TYPE_RACE,
-                'name'     => 'Race1',
+                'name'     => null,
                 'max_laps' => 7,
                 'time'     => 1446150022,
             ),

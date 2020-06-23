@@ -660,6 +660,7 @@ class Helper {
     public function detectSession($session_value, $custom_values_to_type=array())
     {
         $session_value_cleaned = trim(strtolower($session_value));
+        $session_value_cleaned = preg_replace('#1$#', '', $session_value_cleaned);
 
         $type = null;
         $name = null;

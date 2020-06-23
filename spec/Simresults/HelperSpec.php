@@ -192,6 +192,7 @@ class HelperSpec extends ObjectBehavior
 
             'q' => Session::TYPE_QUALIFY,
             'qualify' => Session::TYPE_QUALIFY,
+            'qualify1' => Session::TYPE_QUALIFY,
             'qualify2' => Session::TYPE_QUALIFY,
             'qualify3' => Session::TYPE_QUALIFY,
             'qualify session' => Session::TYPE_QUALIFY,
@@ -216,7 +217,9 @@ class HelperSpec extends ObjectBehavior
             $session->getType()->shouldReturn($session_type);
 
             // Session value is the same as type, thus we expect no custom name
-            if ($session_type === $session_value) {
+            // Also tests whether any numbering with "1" is not considered
+            // as custom value
+            if ($session_type === preg_replace('#1$#', '', $session_value)) {
                 $session->getName()->shouldReturn(null);
             }
             // Session value is just too short. We expect no custom name
