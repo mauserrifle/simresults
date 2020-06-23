@@ -140,8 +140,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 $type_setup_name2 = preg_replace('/[0-9]+/', '', $type_setup_name);
 
                 // Init session
-                $session = $this->helper->detectSession(strtolower(
-                    preg_replace('#\d#', '', $type_key)));
+                $session = $this->helper->detectSession($type_key);
 
                 // Different setup name for quality
                 if ($session->getType() === Session::TYPE_QUALIFY) {
@@ -171,8 +170,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 $date->setTimezone(new \DateTimeZone(self::$default_timezone));
 
                 // Set session values
-                $session->setName($type_key)
-                        ->setDate($date)
+                $session->setDate($date)
                         ->setOtherSettings($session_settings);
 
                 if ($max_laps) {

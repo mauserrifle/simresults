@@ -108,14 +108,14 @@ class AssettoCorsaReaderTest extends PHPUnit_Framework_TestCase {
 
         //-- Validate
         $this->assertSame(Session::TYPE_QUALIFY, $session->getType());
-        $this->assertSame('Qualify', $session->getName());
+        $this->assertNull($session->getName());
 
         // Get second session
         $session = $reader->getSession(2);
 
         //-- Validate
         $this->assertSame(Session::TYPE_RACE, $session->getType());
-        $this->assertSame('Race', $session->getName());
+        $this->assertNull($session->getName());
     }
 
      /**

@@ -649,8 +649,9 @@ class Helper {
     }
 
     /**
-     * Detect a session. Returns the session with proper session type and
-     * default ucfirst name
+     * Detect a session. Returns a Session object with proper session type.
+     * If the session value differs from the session type detected, it will
+     * be stored as session name.
      *
      * @param   string  $value
      * @param   array   $custom_values_to_type
@@ -658,22 +659,22 @@ class Helper {
      */
     public function detectSession($session_value, $custom_values_to_type=array())
     {
-        $session_value = trim(strtolower($session_value));
+        $session_value_cleaned = trim(strtolower($session_value));
 
         $type = null;
         $name = null;
 
         // Preg matches that catch most types
-        if (preg_match('/(prac|test)/i', $session_value)) {
+        if (preg_match('/(prac|test)/i', $session_value_cleaned)) {
             $type = Session::TYPE_PRACTICE;
         }
-        elseif (preg_match('/qual/i', $session_value)) {
+        elseif (preg_match('/qual/i', $session_value_cleaned)) {
             $type = Session::TYPE_QUALIFY;
         }
-        elseif (preg_match('/rac/i', $session_value)) {
+        elseif (preg_match('/rac/i', $session_value_cleaned)) {
             $type = Session::TYPE_RACE;
         }
-        elseif (preg_match('/warm/i', $session_value)) {
+        elseif (preg_match('/warm/i', $session_value_cleaned)) {
             $type = Session::TYPE_WARMUP;
         }
 
@@ -695,7 +696,7 @@ class Helper {
                 $custom_values_to_type
             ;
 
-            $type = $this->arrayGet($values_to_type, $session_value);
+            $type = $this->arrayGet($values_to_type, $session_value_cleaned);
         }
 
         if (!$type) {
@@ -703,8 +704,24 @@ class Helper {
             $name = 'Unknown';
         }
 
-        if (!$name) {
-            $name = ucfirst($type);
+        // No name and the session value is different than the type. So
+        // we are dealing with a custom session name
+        if (!$name AND
+            strlen($session_value_cleaned) > 4 AND
+            strtolower($type) !== $session_value_cleaned)
+        {
+            $custom_name = trim($session_value);
+            // Everything is lowercase
+            if (strtolower($custom_name) === $custom_name) {
+                $custom_name = ucfirst($custom_name);
+            }
+
+            // Everything is uppercase. Just use our cleaned value with ucifrst
+            if (strtoupper($custom_name) === $custom_name) {
+                $custom_name = ucfirst($session_value_cleaned);
+            }
+
+            $name = $custom_name;
         }
 
         // Init session

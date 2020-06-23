@@ -122,6 +122,7 @@ class RaceRoomReaderTest extends PHPUnit_Framework_TestCase {
 
         //-- Validate
         $this->assertSame(Session::TYPE_RACE, $session->getType());
+        $this->assertSame('Race2', $session->getName());
     }
 
     /**

@@ -96,8 +96,7 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
             // Init session
             $name = $this->helper->arrayGet($session_data, 'name');
             $session = $this->helper->detectSession($name);
-            $session->setName($name)
-                    ->setMaxLaps(
+            $session->setMaxLaps(
                         (int) $this->helper->arrayGet($session_data, 'lapsCount'))
                     ->setMaxMinutes(
                         (int) $this->helper->arrayGet($session_data, 'duration'));

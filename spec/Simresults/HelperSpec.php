@@ -183,6 +183,11 @@ class HelperSpec extends ObjectBehavior
             'fp' => Session::TYPE_PRACTICE,
             'practice' => Session::TYPE_PRACTICE,
             'practicing' => Session::TYPE_PRACTICE,
+            ' practicing ' => Session::TYPE_PRACTICE, // With extra white space
+            'PRACTICING' => Session::TYPE_PRACTICE, // All uppercase
+
+            // Test short name not being used as session name
+            'pract' => Session::TYPE_PRACTICE,
             'test' => Session::TYPE_PRACTICE,
 
             'q' => Session::TYPE_QUALIFY,
@@ -209,7 +214,21 @@ class HelperSpec extends ObjectBehavior
         foreach ($tests as $session_value => $session_type) {
             $session = $this->detectSession($session_value);
             $session->getType()->shouldReturn($session_type);
-            $session->getName()->shouldReturn(ucfirst($session_type));
+
+            // Session value is the same as type, thus we expect no custom name
+            if ($session_type === $session_value) {
+                $session->getName()->shouldReturn(null);
+            }
+            // Session value is just too short. We expect no custom name
+            elseif (strlen($session_value) < 5) {
+                $session->getName()->shouldReturn(null);
+            }
+            // Clearly a custom session name that differs from our library
+            // naming. We expect this custom name
+            else {
+                $session->getName()->shouldReturn(
+                    ucfirst(trim(strtolower($session_value))));
+            }
         }
     }
 
@@ -218,6 +237,6 @@ class HelperSpec extends ObjectBehavior
         // Exists by custom type value
         $session = $this->detectSession('4', array('4' => SESSION::TYPE_RACE));
         $session->getType()->shouldReturn(SESSION::TYPE_RACE);
-        $session->getName()->shouldReturn('Race');
+        $session->getName()->shouldReturn(null);
     }
 }

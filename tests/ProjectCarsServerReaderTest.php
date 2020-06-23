@@ -539,26 +539,31 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
         $tests = array(
             array(
                 'type'     => Session::TYPE_PRACTICE,
+                'name'     => 'Practice1',
                 'max_laps' => 15,
                 'time'     => 1446146942,
             ),
             array(
                 'type'     => Session::TYPE_PRACTICE,
+                'name'     => 'Practice2',
                 'max_laps' => 15,
                 'time'     => 1446147862,
             ),
             array(
                 'type'     => Session::TYPE_QUALIFY,
+                'name'     => 'Qualifying',
                 'max_laps' => 15,
                 'time'     => 1446148782,
             ),
             array(
                 'type'     => Session::TYPE_WARMUP,
+                'name'     => null,
                 'max_laps' => 5,
                 'time'     => 1446149702,
             ),
             array(
                 'type'     => Session::TYPE_RACE,
+                'name'     => 'Race1',
                 'max_laps' => 7,
                 'time'     => 1446150022,
             ),
@@ -573,6 +578,7 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
 
             //-- Validate
             $this->assertSame($test['type'], $session->getType());
+            $this->assertSame($test['name'], $session->getName());
             $this->assertSame($test['max_laps'], $session->getMaxLaps());
             $this->assertSame($test['time'],
                 $session->getDate()->getTimestamp());
