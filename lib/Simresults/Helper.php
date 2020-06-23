@@ -659,23 +659,23 @@ class Helper {
      */
     public function detectSession($session_value, $custom_values_to_type=array())
     {
-        $session_value_cleaned = trim(strtolower($session_value));
-        $session_value_cleaned = preg_replace('#1$#', '', $session_value_cleaned);
+        $session_value = trim(preg_replace('#1$#', '', $session_value));
+        $session_value_lower = strtolower($session_value);
 
         $type = null;
         $name = null;
 
         // Preg matches that catch most types
-        if (preg_match('/(prac|test)/i', $session_value_cleaned)) {
+        if (preg_match('/(prac|test)/i', $session_value_lower)) {
             $type = Session::TYPE_PRACTICE;
         }
-        elseif (preg_match('/qual/i', $session_value_cleaned)) {
+        elseif (preg_match('/qual/i', $session_value_lower)) {
             $type = Session::TYPE_QUALIFY;
         }
-        elseif (preg_match('/rac/i', $session_value_cleaned)) {
+        elseif (preg_match('/rac/i', $session_value_lower)) {
             $type = Session::TYPE_RACE;
         }
-        elseif (preg_match('/warm/i', $session_value_cleaned)) {
+        elseif (preg_match('/warm/i', $session_value_lower)) {
             $type = Session::TYPE_WARMUP;
         }
 
@@ -697,7 +697,7 @@ class Helper {
                 $custom_values_to_type
             ;
 
-            $type = $this->arrayGet($values_to_type, $session_value_cleaned);
+            $type = $this->arrayGet($values_to_type, $session_value_lower);
         }
 
         if (!$type) {
@@ -708,18 +708,18 @@ class Helper {
         // No name and the session value is different than the type. So
         // we are dealing with a custom session name
         if (!$name AND
-            strlen($session_value_cleaned) > 4 AND
-            strtolower($type) !== $session_value_cleaned)
+            strlen($session_value_lower) > 4 AND
+            strtolower($type) !== $session_value_lower)
         {
-            $custom_name = trim($session_value);
+            $custom_name = $session_value;
             // Everything is lowercase
             if (strtolower($custom_name) === $custom_name) {
                 $custom_name = ucfirst($custom_name);
             }
 
-            // Everything is uppercase. Just use our cleaned value with ucifrst
+            // Everything is uppercase. Just use our lowercase value with ucifrst
             if (strtoupper($custom_name) === $custom_name) {
-                $custom_name = ucfirst($session_value_cleaned);
+                $custom_name = ucfirst($session_value_lower);
             }
 
             $name = $custom_name;

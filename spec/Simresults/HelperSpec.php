@@ -192,11 +192,14 @@ class HelperSpec extends ObjectBehavior
 
             'q' => Session::TYPE_QUALIFY,
             'qualify' => Session::TYPE_QUALIFY,
-            'qualify1' => Session::TYPE_QUALIFY,
+            'qualify1' => Session::TYPE_QUALIFY, // Numbering 1 should not happen
             'qualify2' => Session::TYPE_QUALIFY,
             'qualify3' => Session::TYPE_QUALIFY,
             'qualify session' => Session::TYPE_QUALIFY,
             'qualifying' => Session::TYPE_QUALIFY,
+
+            // Numbering 1 on different spelling than type should not happen too
+            'qualifying1' => Session::TYPE_QUALIFY,
 
             'r' => Session::TYPE_RACE,
             'race' => Session::TYPE_RACE,
@@ -212,14 +215,19 @@ class HelperSpec extends ObjectBehavior
             'warming' => Session::TYPE_WARMUP,
         );
 
+        // TODO: Should compare hardvalues instead of if/elses
         foreach ($tests as $session_value => $session_type) {
+            // Get session with original session value
             $session = $this->detectSession($session_value);
             $session->getType()->shouldReturn($session_type);
+
+            // Change session value to value we expect
+            $session_value = preg_replace('#1$#', '', $session_value);
 
             // Session value is the same as type, thus we expect no custom name
             // Also tests whether any numbering with "1" is not considered
             // as custom value
-            if ($session_type === preg_replace('#1$#', '', $session_value)) {
+            if ($session_type === $session_value) {
                 $session->getName()->shouldReturn(null);
             }
             // Session value is just too short. We expect no custom name
