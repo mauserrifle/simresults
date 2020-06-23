@@ -39,8 +39,7 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
         $session = $this->helper->detectSession($name);
 
         // Set session values
-        $session->setName($name)
-                ->setMaxLaps(
+        $session->setMaxLaps(
                     (int) $this->helper->arrayGet($data, 'RaceLaps'));
 
         // Has Duration
