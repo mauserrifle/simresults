@@ -849,6 +849,7 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
 
         //-- Validate other
         $this->assertSame(Session::TYPE_RACE, $session->getType());
+        $this->assertNull($session->getName());
         $this->assertSame(0, $session->getMaxLaps());
         $this->assertSame(20, $session->getMaxMinutes());
         $this->assertSame(10, $session->getLastedLaps());

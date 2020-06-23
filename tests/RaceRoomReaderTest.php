@@ -231,6 +231,7 @@ class RaceRoomReaderTest extends PHPUnit_Framework_TestCase {
 
         //-- Validate
         $this->assertSame(Session::TYPE_RACE, $session->getType());
+        $this->assertNull($session->getName());
         $this->assertSame(1459003463, $date->getTimestamp());
         $this->assertSame('UTC', $date->getTimezone()->getName());
     }
