@@ -205,6 +205,8 @@ class HelperSpec extends ObjectBehavior
             'race' => [Session::TYPE_RACE, null],
             'race2' => [Session::TYPE_RACE, 'Race2'],
             'race3' => [Session::TYPE_RACE, 'Race3'],
+            'race11' => [Session::TYPE_RACE, 'Race11'], // Test fix because it returned race1
+            'race01' => [Session::TYPE_RACE, 'Race01'],
             'quick race' => [Session::TYPE_RACE, 'Quick race'],
             'racing' => [Session::TYPE_RACE, 'Racing'],
 
