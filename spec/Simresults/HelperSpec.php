@@ -179,67 +179,47 @@ class HelperSpec extends ObjectBehavior
 
         // Existing tests
         $tests = array(
-            'p' => Session::TYPE_PRACTICE,
-            'fp' => Session::TYPE_PRACTICE,
-            'practice' => Session::TYPE_PRACTICE,
-            'practicing' => Session::TYPE_PRACTICE,
-            ' practicing ' => Session::TYPE_PRACTICE, // With extra white space
-            'PRACTICING' => Session::TYPE_PRACTICE, // All uppercase
+            'p' => [Session::TYPE_PRACTICE, null],
+            'fp' => [Session::TYPE_PRACTICE, null],
+            'practice' => [Session::TYPE_PRACTICE, null],
+            'practicing' => [Session::TYPE_PRACTICE, 'Practicing'],
+            ' practicing ' => [Session::TYPE_PRACTICE, 'Practicing'], // With extra white space
+            'PRACTICING' => [Session::TYPE_PRACTICE, 'Practicing'], // All uppercase ],
 
             // Test short name not being used as session name
-            'pract' => Session::TYPE_PRACTICE,
-            'test' => Session::TYPE_PRACTICE,
+            'pract' => [Session::TYPE_PRACTICE, 'Pract'],
+            'test' => [Session::TYPE_PRACTICE, null],
 
-            'q' => Session::TYPE_QUALIFY,
-            'qualify' => Session::TYPE_QUALIFY,
-            'qualify1' => Session::TYPE_QUALIFY, // Numbering 1 should not happen
-            'qualify2' => Session::TYPE_QUALIFY,
-            'qualify3' => Session::TYPE_QUALIFY,
-            'qualify session' => Session::TYPE_QUALIFY,
-            'qualifying' => Session::TYPE_QUALIFY,
+            'q' => [Session::TYPE_QUALIFY, null],
+            'qualify' => [Session::TYPE_QUALIFY, null],
+            'qualify1' => [Session::TYPE_QUALIFY, null], // Numbering 1 should not happen ],
+            'qualify2' => [Session::TYPE_QUALIFY, 'Qualify2'],
+            'qualify3' => [Session::TYPE_QUALIFY, 'Qualify3'],
+            'qualify session' => [Session::TYPE_QUALIFY, 'Qualify session'],
+            'qualifying' => [Session::TYPE_QUALIFY, 'Qualifying'],
 
             // Numbering 1 on different spelling than type should not happen too
-            'qualifying1' => Session::TYPE_QUALIFY,
+            'qualifying1' => [Session::TYPE_QUALIFY, 'Qualifying'],
 
-            'r' => Session::TYPE_RACE,
-            'race' => Session::TYPE_RACE,
-            'race2' => Session::TYPE_RACE,
-            'race3' => Session::TYPE_RACE,
-            'quick race' => Session::TYPE_RACE,
-            'racing' => Session::TYPE_RACE,
+            'r' => [Session::TYPE_RACE, null],
+            'race' => [Session::TYPE_RACE, null],
+            'race2' => [Session::TYPE_RACE, 'Race2'],
+            'race3' => [Session::TYPE_RACE, 'Race3'],
+            'quick race' => [Session::TYPE_RACE, 'Quick race'],
+            'racing' => [Session::TYPE_RACE, 'Racing'],
 
-            'w' => Session::TYPE_WARMUP,
-            'warmup' => Session::TYPE_WARMUP,
-            'warmup session' => Session::TYPE_WARMUP,
-            'warm up' => Session::TYPE_WARMUP,
-            'warming' => Session::TYPE_WARMUP,
+            'w' => [Session::TYPE_WARMUP, null],
+            'warmup' => [Session::TYPE_WARMUP, null],
+            'warmup session' => [Session::TYPE_WARMUP, 'Warmup session'],
+            'warm up' => [Session::TYPE_WARMUP, 'Warm up'],
+            'warming' => [Session::TYPE_WARMUP, 'Warming'],
         );
 
         // TODO: Should compare hardvalues instead of if/elses
-        foreach ($tests as $session_value => $session_type) {
-            // Get session with original session value
+        foreach ($tests as $session_value => $expected_values) {
             $session = $this->detectSession($session_value);
-            $session->getType()->shouldReturn($session_type);
-
-            // Change session value to value we expect
-            $session_value = preg_replace('#1$#', '', $session_value);
-
-            // Session value is the same as type, thus we expect no custom name
-            // Also tests whether any numbering with "1" is not considered
-            // as custom value
-            if ($session_type === $session_value) {
-                $session->getName()->shouldReturn(null);
-            }
-            // Session value is just too short. We expect no custom name
-            elseif (strlen($session_value) < 5) {
-                $session->getName()->shouldReturn(null);
-            }
-            // Clearly a custom session name that differs from our library
-            // naming. We expect this custom name
-            else {
-                $session->getName()->shouldReturn(
-                    ucfirst(trim(strtolower($session_value))));
-            }
+            $session->getType()->shouldReturn($expected_values[0]);
+            $session->getName()->shouldReturn($expected_values[1]);
         }
     }
 
