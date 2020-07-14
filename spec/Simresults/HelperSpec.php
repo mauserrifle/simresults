@@ -179,42 +179,42 @@ class HelperSpec extends ObjectBehavior
 
         // Existing tests
         $tests = array(
-            'p' => [Session::TYPE_PRACTICE, null],
-            'fp' => [Session::TYPE_PRACTICE, null],
-            'practice' => [Session::TYPE_PRACTICE, null],
-            'practicing' => [Session::TYPE_PRACTICE, 'Practicing'],
-            ' practicing ' => [Session::TYPE_PRACTICE, 'Practicing'], // With extra white space
-            'PRACTICING' => [Session::TYPE_PRACTICE, 'Practicing'], // All uppercase ],
+            'p' => array(Session::TYPE_PRACTICE, null),
+            'fp' => array(Session::TYPE_PRACTICE, null),
+            'practice' => array(Session::TYPE_PRACTICE, null),
+            'practicing' => array(Session::TYPE_PRACTICE, 'Practicing'),
+            ' practicing ' => array(Session::TYPE_PRACTICE, 'Practicing'), // With extra white space
+            'PRACTICING' => array(Session::TYPE_PRACTICE, 'Practicing'), // All uppercase
 
             // Test short name not being used as session name
-            'pract' => [Session::TYPE_PRACTICE, 'Pract'],
-            'test' => [Session::TYPE_PRACTICE, null],
+            'pract' => array(Session::TYPE_PRACTICE, 'Pract'),
+            'test' => array(Session::TYPE_PRACTICE, null),
 
-            'q' => [Session::TYPE_QUALIFY, null],
-            'qualify' => [Session::TYPE_QUALIFY, null],
-            'qualify1' => [Session::TYPE_QUALIFY, null], // Numbering 1 should not happen ],
-            'qualify2' => [Session::TYPE_QUALIFY, 'Qualify2'],
-            'qualify3' => [Session::TYPE_QUALIFY, 'Qualify3'],
-            'qualify session' => [Session::TYPE_QUALIFY, 'Qualify session'],
-            'qualifying' => [Session::TYPE_QUALIFY, 'Qualifying'],
+            'q' => array(Session::TYPE_QUALIFY, null),
+            'qualify' => array(Session::TYPE_QUALIFY, null),
+            'qualify1' => array(Session::TYPE_QUALIFY, null), // Numbering 1 should not happen
+            'qualify2' => array(Session::TYPE_QUALIFY, 'Qualify2'),
+            'qualify3' => array(Session::TYPE_QUALIFY, 'Qualify3'),
+            'qualify session' => array(Session::TYPE_QUALIFY, 'Qualify session'),
+            'qualifying' => array(Session::TYPE_QUALIFY, 'Qualifying'),
 
             // Numbering 1 on different spelling than type should not happen too
-            'qualifying1' => [Session::TYPE_QUALIFY, 'Qualifying'],
+            'qualifying1' => array(Session::TYPE_QUALIFY, 'Qualifying'),
 
-            'r' => [Session::TYPE_RACE, null],
-            'race' => [Session::TYPE_RACE, null],
-            'race2' => [Session::TYPE_RACE, 'Race2'],
-            'race3' => [Session::TYPE_RACE, 'Race3'],
-            'race11' => [Session::TYPE_RACE, 'Race11'], // Test fix because it returned race1
-            'race01' => [Session::TYPE_RACE, 'Race01'],
-            'quick race' => [Session::TYPE_RACE, 'Quick race'],
-            'racing' => [Session::TYPE_RACE, 'Racing'],
+            'r' => array(Session::TYPE_RACE, null),
+            'race' => array(Session::TYPE_RACE, null),
+            'race2' => array(Session::TYPE_RACE, 'Race2'),
+            'race3' => array(Session::TYPE_RACE, 'Race3'),
+            'race11' => array(Session::TYPE_RACE, 'Race11'), // Test fix because it returned race1
+            'race01' => array(Session::TYPE_RACE, 'Race01'),
+            'quick race' => array(Session::TYPE_RACE, 'Quick race'),
+            'racing' => array(Session::TYPE_RACE, 'Racing'),
 
-            'w' => [Session::TYPE_WARMUP, null],
-            'warmup' => [Session::TYPE_WARMUP, null],
-            'warmup session' => [Session::TYPE_WARMUP, 'Warmup session'],
-            'warm up' => [Session::TYPE_WARMUP, 'Warm up'],
-            'warming' => [Session::TYPE_WARMUP, 'Warming'],
+            'w' => array(Session::TYPE_WARMUP, null),
+            'warmup' => array(Session::TYPE_WARMUP, null),
+            'warmup session' => array(Session::TYPE_WARMUP, 'Warmup session'),
+            'warm up' => array(Session::TYPE_WARMUP, 'Warm up'),
+            'warming' => array(Session::TYPE_WARMUP, 'Warming'),
         );
 
         // TODO: Should compare hardvalues instead of if/elses
