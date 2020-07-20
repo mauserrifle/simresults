@@ -35,6 +35,18 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
         21 => 'Honda NSX Evo 2019 ',
         22 => 'McLaren 720S GT3 2019',
         23 => 'Porsche 911 II GT3 R 2019',
+        // GT4 DLC
+        50 => 'Alpine A1110 GT4',
+        51 => 'Aston Martin Vantage GT4',
+        52 => 'Audi R8 LMS GT4',
+        53 => 'BMW M4 GT4',
+        55 => 'Chevrolet Camaro GT4',
+        56 => 'Ginetta G55 GT4',
+        57 => 'KTM X-Bow GT4',
+        58 => 'Maserati MC GT4',
+        59 => 'McLaren 570S GT4',
+        60 => 'Mercedes AMG GT4',
+        61 => 'Porsche 718 Cayman GT4',
     );
 
     /**
