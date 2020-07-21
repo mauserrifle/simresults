@@ -186,7 +186,7 @@ Create index.php:
     // Get a reader using the source file
     $reader = \Simresults\Data_Reader::factory($file);
 
-    // Get the session
+    // Get the first session. Note: Use `getSessions()` to get all sessions
     $session = $reader->getSession();
 
     // Get participants sorted by their position
