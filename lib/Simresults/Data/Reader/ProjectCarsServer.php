@@ -28,7 +28,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
     /**
      * @var array Some Automobilista 2 vehicle ids so we can detect the game
      */
-    const AUTOMOBILISTA2_VEHICLE_IDS = array(
+    public static $automobilista2_vehicle_ids = array(
         1932261404,
         306371028,
         -494068343,
@@ -852,7 +852,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
     protected function setVehicleName($vehicle_id, Vehicle $vehicle)
     {
         // Is Automobilista2
-        if (in_array($vehicle_id, self::AUTOMOBILISTA2_VEHICLE_IDS))
+        if (in_array($vehicle_id, self::$automobilista2_vehicle_ids))
         {
             $this->current_game->setName('Automobilista 2');
             $vehicle->setName( (string) $vehicle_id);

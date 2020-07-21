@@ -564,7 +564,7 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
 
         // Make sure the defined vehicle ids are not shared with Project Cars
         // attribute files to prevent bad detection
-        foreach (PcReader::AUTOMOBILISTA2_VEHICLE_IDS as $vehicleId)
+        foreach (PcReader::$automobilista2_vehicle_ids as $vehicleId)
         {
             // Get attribute json files from server api
             $attribute_names = json_encode($reader->getAttributeNames());
