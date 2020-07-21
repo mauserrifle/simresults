@@ -1,5 +1,4 @@
     <?php
-use Simresults\Data_Reader_AssettoCorsaServerJson;
 use Simresults\Data_Reader_ProjectCarsServer as PcReader;
 use Simresults\Data_Reader;
 use Simresults\Session;
@@ -32,9 +31,9 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
      *
      * @expectedException Simresults\Exception\CannotReadData
      */
-    public function testCreatingNewAssettoCorsaReaderWithInvalidData()
+    public function testCreatingNewProjectCarsReaderWithInvalidData()
     {
-        $reader = new Data_Reader_AssettoCorsaServerJson('Unknown data for reader');
+        $reader = new PcReader('Unknown data for reader');
     }
 
 
