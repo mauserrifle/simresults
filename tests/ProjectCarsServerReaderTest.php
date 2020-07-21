@@ -1,5 +1,6 @@
     <?php
 use Simresults\Data_Reader_AssettoCorsaServerJson;
+use Simresults\Data_Reader_ProjectCarsServer as PcReader;
 use Simresults\Data_Reader;
 use Simresults\Session;
 use Simresults\Participant;
@@ -432,6 +433,14 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
         // Get sessions without error
         $sessions = Data_Reader::factory($file_path)->getSessions();
 
+        // Validate game name for all sessions
+        foreach ($sessions as $session)
+        {
+            $game = $session->getGame();
+            $this->assertSame('Project Cars 2', $game->getName());
+        }
+
+
         $participants = $sessions[4]->getParticipants();
 
         // Test vehicle friendly name
@@ -522,6 +531,58 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
 
         // Get sessions without error
         $sessions = Data_Reader::factory($file_path)->getSessions();
+    }
+
+    /**
+     * Test whether we can detect Automobilista2
+     *
+     */
+    public function testAutomobilista2Fixes()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/automobilista2/practice.and.race.json');
+
+        // Get sessions
+        $reader = Data_Reader::factory($file_path);
+        $sessions = $reader->getSessions();
+
+        foreach ($sessions as $session)
+        {
+            // Validate game name
+            $game = $session->getGame();
+            $this->assertSame('Automobilista 2', $game->getName());
+
+            // Test whether all vehicle names are numeric becasue
+            // we do not have a attributes json file (yet)
+            foreach ($session->getParticipants() as $part)
+            {
+                $vehicle = $part->getVehicle();
+                $this->assertTrue(is_numeric($vehicle->getName()));
+            }
+        }
+
+
+        // Make sure the defined vehicle ids are not shared with Project Cars
+        // attribute files to prevent bad detection
+        foreach (PcReader::AUTOMOBILISTA2_VEHICLE_IDS as $vehicleId)
+        {
+            // Get attribute json files from server api
+            $attribute_names = json_encode($reader->getAttributeNames());
+            $attribute_names2 = json_encode($reader->getAttributeNames2());
+
+            // Cast to string otherwise strpos won't work as expected
+            $vehicleId = (string) $vehicleId;
+
+            // Test whether vehicleId is in in attribute files
+            $vehicleIdShared = (
+                strpos($attribute_names, $vehicleId) !== FALSE OR
+                strpos($attribute_names2, $vehicleId) !== FALSE
+            );
+            $this->assertFalse($vehicleIdShared,
+                'Automobilista2 vehicle id '.
+                $vehicleId.' is shared with Project Cars');
+        }
     }
 
 

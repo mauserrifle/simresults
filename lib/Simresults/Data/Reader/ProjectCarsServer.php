@@ -25,6 +25,44 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
      */
     protected $attribute_names2;
 
+    /**
+     * @var array Some Automobilista 2 vehicle ids so we can detect the game
+     */
+    const AUTOMOBILISTA2_VEHICLE_IDS = array(
+        1932261404,
+        306371028,
+        -494068343,
+        306785397,
+        -739789710,
+        -532210519,
+        553963368,
+        619110280,
+        1836524676,
+        95104745,
+        -1870819346,
+        703591920,
+        65202613,
+        1437730287,
+        575788923,
+        -93205368,
+        374810616,
+        -487937394,
+        253111186,
+        851522805,
+        -2053858829,
+        -1660644383,
+        -1404228714,
+        523915852,
+        1323381033,
+        -1834081784,
+        802736208,
+    );
+
+    /**
+     * Game object of the current session we are looping
+     */
+    protected $current_game;
+
 
     /**
      * @see Simresults\Data_Reader::canRead()
@@ -69,6 +107,11 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
         // Get attribute info of project cars to figure out vehicle names etc
         $this->attribute_names = $this->getAttributeNames();
         $this->attribute_names2 = $this->getAttributeNames2();
+
+
+        // Initial game. But might be changed later based on data
+        $this->current_game = new Game;
+        $this->current_game->setName('Project Cars');
 
         // Init sessions array
         $sessions = array();
@@ -177,9 +220,8 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                     $session->setMaxLaps($max_laps);
                 }
 
-                // Set game
-                $game = new Game; $game->setName('Project Cars');
-                $session->setGame($game);
+                // Set current game object
+                $session->setGame($this->current_game);
 
                 // Set server
                 // TODO: Set configurations
@@ -670,7 +712,6 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                     return ($driver AND $driver->getName());
                 }));
 
-
                 // Set participants (sorted)
                 $session->setParticipants($participants);
 
@@ -805,25 +846,36 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
      * Set vehicle name by vehicle id and vehicle object
      *
      * @param   int  $vehicle_id
+     * @param   Vehicle  $vehicle
      * @return  string
      */
     protected function setVehicleName($vehicle_id, Vehicle $vehicle)
     {
-        // Have friendly vehicle name
-        if (isset($this->attribute_names['vehicles'][$vehicle_id]))
+        // Is Automobilista2
+        if (in_array($vehicle_id, self::AUTOMOBILISTA2_VEHICLE_IDS))
         {
+            $this->current_game->setName('Automobilista 2');
+            $vehicle->setName( (string) $vehicle_id);
+        }
+        // Have friendly vehicle name from Project Cars
+        elseif (isset($this->attribute_names['vehicles'][$vehicle_id]))
+        {
+            $this->current_game->setName('Project Cars');
             $vehicle->setName($this->attribute_names['vehicles']
                 [$vehicle_id]['name']);
             $vehicle->setClass($this->attribute_names['vehicles']
                 [$vehicle_id]['class']);
         }
+        // Have friendly vehicle name from Project Cars 2
         elseif (isset($this->attribute_names2['vehicles'][$vehicle_id]))
         {
+            $this->current_game->setName('Project Cars 2');
             $vehicle->setName($this->attribute_names2['vehicles']
                 [$vehicle_id]['name']);
             $vehicle->setClass($this->attribute_names2['vehicles']
                 [$vehicle_id]['class']);
         }
+        // Fallback to vehicle id
         else
         {
             $vehicle->setName( (string) $vehicle_id);
@@ -837,7 +889,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
      *
      * @return array
      */
-    protected function getAttributeNames($file='ProjectCarsAttributes.json')
+    public function getAttributeNames($file='ProjectCarsAttributes.json')
     {
         // Get attribute info of project cars to figure out vehicle names etc
         $attributes = json_decode(file_get_contents(
@@ -878,7 +930,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
      *
      * @return array
      */
-    protected function getAttributeNames2()
+    public function getAttributeNames2()
     {
         return $this->getAttributeNames('ProjectCars2Attributes.json');
     }
