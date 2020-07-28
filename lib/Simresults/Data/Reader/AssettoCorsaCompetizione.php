@@ -55,6 +55,7 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
     public static function canRead($data)
     {
 
+        // TODO: Fix duplicate code with readSessions
         if ($dataParsed = json_decode($data, TRUE)) {
             return (isset($dataParsed['sessionType']) OR
                     isset($dataParsed['sessionDef']));
@@ -87,10 +88,17 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
      */
     protected function readSessions()
     {
-
+        // TODO: Fix duplicate code with canRead
         if ( ! $data = json_decode($this->data, TRUE)) {
-            $data = iconv("UTF-16", "UTF-8", $this->data);
-            $data = json_decode($data, TRUE);
+
+            try {
+                $data = iconv("UTF-16", "UTF-8", $this->data);
+                $data = json_decode($data, TRUE);
+            } catch(\Exception $ex) {}
+
+            if ( ! $data) {
+                $data = json_decode(preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $data), TRUE);
+            }
         }
 
 
