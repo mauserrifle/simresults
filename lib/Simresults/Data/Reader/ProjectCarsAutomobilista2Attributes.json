@@ -1,0 +1,604 @@
+{
+  "result" : "ok",
+  "response" : {
+      "vehicle_classes" : {
+    "description" : "All known vehicle classes",
+    "list" : [
+      {
+        "value" : 1043219688,
+        "name" : "F-3"
+      },
+      {
+        "value" : 1106030381,
+        "name" : "F-Ultimate"
+      },
+      {
+        "value" : 1183960633,
+        "name" : "StockCarV8_2020"
+      },
+      {
+        "value" : 1217280833,
+        "name" : "OldStock"
+      },
+      {
+        "value" : 122211381,
+        "name" : "Cat_Academy"
+      },
+      {
+        "value" : 1242038633,
+        "name" : "F-V10_Gen2"
+      },
+      {
+        "value" : 1242485147,
+        "name" : "KartShifter"
+      },
+      {
+        "value" : 1255629241,
+        "name" : "F-Classic_Gen3"
+      },
+      {
+        "value" : 1260887313,
+        "name" : "Opala79"
+      },
+      {
+        "value" : 1342781418,
+        "name" : "F-Trainer_A"
+      },
+      {
+        "value" : 1347575036,
+        "name" : "P1"
+      },
+      {
+        "value" : 1559064669,
+        "name" : "F-Vee"
+      },
+      {
+        "value" : 1754258698,
+        "name" : "F-Trainer"
+      },
+      {
+        "value" : 227192681,
+        "name" : "F-Vintage_Gen2"
+      },
+      {
+        "value" : -1989076874,
+        "name" : "Kart125cc"
+      },
+      {
+        "value" : -1774345913,
+        "name" : "CopaUno"
+      },
+      {
+        "value" : -1773220174,
+        "name" : "CopaClassicFL"
+      },
+      {
+        "value" : -1710882048,
+        "name" : "P4"
+      },
+      {
+        "value" : -1689111246,
+        "name" : "KartRental"
+      },
+      {
+        "value" : -1614293342,
+        "name" : "KartGX390"
+      },
+      {
+        "value" : -1388199464,
+        "name" : "Hot Cars"
+      },
+      {
+        "value" : -1358908608,
+        "name" : "GT5"
+      },
+      {
+        "value" : -1338470134,
+        "name" : "ARC_Cam"
+      },
+      {
+        "value" : -1276839914,
+        "name" : "CopaClassicB"
+      },
+      {
+        "value" : -1165550561,
+        "name" : "CopaFusca"
+      },
+      {
+        "value" : -1097982207,
+        "name" : "SuperV8"
+      },
+      {
+        "value" : 341043806,
+        "name" : "SuperKart"
+      },
+      {
+        "value" : -859240302,
+        "name" : "CopaTruck"
+      },
+      {
+        "value" : -553893888,
+        "name" : "P2"
+      },
+      {
+        "value" : 374379774,
+        "name" : "Montana"
+      },
+      {
+        "value" : 382290110,
+        "name" : "G55Supercup"
+      },
+      {
+        "value" : -382267785,
+        "name" : "Cat_Superlight"
+      },
+      {
+        "value" : -299585121,
+        "name" : "F-V12"
+      },
+      {
+        "value" : -72151851,
+        "name" : "Cat_Supersport"
+      },
+      {
+        "value" : -4032086,
+        "name" : "F-Reiza"
+      },
+      {
+        "value" : 430049282,
+        "name" : "Street"
+      },
+      {
+        "value" : 492525831,
+        "name" : "StockCarV8"
+      },
+      {
+        "value" : 4952537,
+        "name" : "LancerCup"
+      },
+      {
+        "value" : 520250275,
+        "name" : "F-Vintage_Gen1"
+      },
+      {
+        "value" : 538991900,
+        "name" : "Cat620R"
+      },
+      {
+        "value" : 6496832,
+        "name" : "Opala86"
+      },
+      {
+        "value" : 801463365,
+        "name" : "GTOpen"
+      },
+      {
+        "value" : 829452122,
+        "name" : "P3"
+      },
+      {
+        "value" : 843858811,
+        "name" : "F-Classic_Gen2"
+      },
+      {
+        "value" : 891493676,
+        "name" : "SprintRace"
+      },
+      {
+        "value" : 913480074,
+        "name" : "F-Classic_Gen1"
+      },
+      {
+        "value" : 974213152,
+        "name" : "F-Retro"
+      }
+    ]
+  },
+    "vehicles" : {},
+    "tracks" : {
+    "description" : "All known track ids",
+    "list" : [
+      {
+        "id" : -559709709,
+        "name" : "Adelaide_Historic",
+        "gridsize" : 28
+      },
+      {
+        "id" : 827815091,
+        "name" : "Adelaide_Modern",
+        "gridsize" : 30
+      },
+      {
+        "id" : 832629329,
+        "name" : "Azure_Circuit",
+        "gridsize" : 21
+      },
+      {
+        "id" : 1080325116,
+        "name" : "Bathurst_2020",
+        "gridsize" : 36
+      },
+      {
+        "id" : 1534602052,
+        "name" : "BrandsHatch_GP",
+        "gridsize" : 30
+      },
+      {
+        "id" : -572148012,
+        "name" : "BrandsHatch_Indy",
+        "gridsize" : 30
+      },
+      {
+        "id" : 202837760,
+        "name" : "Brasilia_Full",
+        "gridsize" : 30
+      },
+      {
+        "id" : 1828328431,
+        "name" : "Brasilia_Outer",
+        "gridsize" : 30
+      },
+      {
+        "id" : 1910889511,
+        "name" : "CadwellPark",
+        "gridsize" : 30
+      },
+      {
+        "id" : 2135405654,
+        "name" : "CampoGrande1",
+        "gridsize" : 46
+      },
+      {
+        "id" : -916478809,
+        "name" : "Cascavel2",
+        "gridsize" : 39
+      },
+      {
+        "id" : 844082431,
+        "name" : "CuritibaInternacional",
+        "gridsize" : 30
+      },
+      {
+        "id" : -549646259,
+        "name" : "Curitiba_outer",
+        "gridsize" : 30
+      },
+      {
+        "id" : -923996694,
+        "name" : "CurveloLong",
+        "gridsize" : 30
+      },
+      {
+        "id" : -203742941,
+        "name" : "CurveloShort",
+        "gridsize" : 30
+      },
+      {
+        "id" : 1497365379,
+        "name" : "Donington_GP",
+        "gridsize" : 39
+      },
+      {
+        "id" : -865646115,
+        "name" : "Donington_Nat",
+        "gridsize" : 39
+      },
+      {
+        "id" : 1650761166,
+        "name" : "Cascais",
+        "gridsize" : 30
+      },
+      {
+        "id" : -438882031,
+        "name" : "GoianiaMixed",
+        "gridsize" : 30
+      },
+      {
+        "id" : 693994049,
+        "name" : "GoianiaOuter",
+        "gridsize" : 30
+      },
+      {
+        "id" : -916412256,
+        "name" : "GoianiaShort",
+        "gridsize" : 30
+      },
+      {
+        "id" : -939269561,
+        "name" : "CopaSaoPauloStage2",
+        "gridsize" : 28
+      },
+      {
+        "id" : -844021865,
+        "name" : "GranjaVianaKart101",
+        "gridsize" : 28
+      },
+      {
+        "id" : 553029608,
+        "name" : "GranjaVianaKart102",
+        "gridsize" : 28
+      },
+      {
+        "id" : 1153901510,
+        "name" : "GranjaVianaKart121",
+        "gridsize" : 28
+      },
+      {
+        "id" : 2058166835,
+        "name" : "Guapore",
+        "gridsize" : 34
+      },
+      {
+        "id" : 2111076703,
+        "name" : "Ibarra2",
+        "gridsize" : 30
+      },
+      {
+        "id" : 731129913,
+        "name" : "Imola_GP_2018",
+        "gridsize" : 30
+      },
+      {
+        "id" : 1003427592,
+        "name" : "Imola_GP_1972",
+        "gridsize" : 30
+      },
+      {
+        "id" : 1544603199,
+        "name" : "Imola_GP_1988",
+        "gridsize" : 26
+      },
+      {
+        "id" : -29732804,
+        "name" : "Imola_GP_2001",
+        "gridsize" : 30
+      },
+      {
+        "id" : -1478712571,
+        "name" : "Interlagos_GP",
+        "gridsize" : 30
+      },
+      {
+        "id" : 1312214486,
+        "name" : "Interlagos_Historic",
+        "gridsize" : 30
+      },
+      {
+        "id" : -1704124105,
+        "name" : "Interlagos_Historic_Outer",
+        "gridsize" : 30
+      },
+      {
+        "id" : 228315736,
+        "name" : "InterlagosKart1",
+        "gridsize" : 30
+      },
+      {
+        "id" : 870961348,
+        "name" : "InterlagosKart2",
+        "gridsize" : 30
+      },
+      {
+        "id" : 1869056157,
+        "name" : "InterlagosKart3",
+        "gridsize" : 30
+      },
+      {
+        "id" : -89774641,
+        "name" : "Jacarepagua_Historic",
+        "gridsize" : 30
+      },
+      {
+        "id" : 1406264747,
+        "name" : "Jerez_GP2019",
+        "gridsize" : 30
+      },
+      {
+        "id" : -1602971785,
+        "name" : "Jerez_Standard",
+        "gridsize" : 30
+      },
+      {
+        "id" : 1261622488,
+        "name" : "Kansai_GP",
+        "gridsize" : 30
+      },
+      {
+        "id" : 1035236174,
+        "name" : "Kansai_Classic",
+        "gridsize" : 30
+      },
+      {
+        "id" : 530399487,
+        "name" : "Kansai_East",
+        "gridsize" : 30
+      },
+      {
+        "id" : 85029775,
+        "name" : "Kansai_West",
+        "gridsize" : 16
+      },
+      {
+        "id" : 2018595322,
+        "name" : "Kyalami_2019",
+        "gridsize" : 40
+      },
+      {
+        "id" : -1384297883,
+        "name" : "Kyalami_Historic",
+        "gridsize" : 25
+      },
+      {
+        "id" : -1540556268,
+        "name" : "Londrina_short",
+        "gridsize" : 46
+      },
+      {
+        "id" : -1959616750,
+        "name" : "Londrina_long",
+        "gridsize" : 46
+      },
+      {
+        "id" : 1373891276,
+        "name" : "LondrinaKart1",
+        "gridsize" : 30
+      },
+      {
+        "id" : 16295271,
+        "name" : "LondrinaKart2",
+        "gridsize" : 30
+      },
+      {
+        "id" : -696853932,
+        "name" : "Montreal_Historic",
+        "gridsize" : 40
+      },
+      {
+        "id" : -1239363445,
+        "name" : "Montreal_Modern",
+        "gridsize" : 30
+      },
+      {
+        "id" : 809214670,
+        "name" : "Ortona1",
+        "gridsize" : 30
+      },
+      {
+        "id" : 1549441566,
+        "name" : "Ortona2",
+        "gridsize" : 30
+      },
+      {
+        "id" : -1213903939,
+        "name" : "Ortona3",
+        "gridsize" : 30
+      },
+      {
+        "id" : 59749392,
+        "name" : "Ortona4",
+        "gridsize" : 30
+      },
+      {
+        "id" : -498735748,
+        "name" : "OultonPark_International",
+        "gridsize" : 28
+      },
+      {
+        "id" : -914088887,
+        "name" : "OultonPark_Classic",
+        "gridsize" : 28
+      },
+      {
+        "id" : -92069206,
+        "name" : "OultonPark_Fosters",
+        "gridsize" : 28
+      },
+      {
+        "id" : 1820168870,
+        "name" : "OultonPark_Island",
+        "gridsize" : 28
+      },
+      {
+        "id" : 1932830334,
+        "name" : "SantaCruzDoSul",
+        "gridsize" : 36
+      },
+      {
+        "id" : -1470317805,
+        "name" : "Snetterton_100",
+        "gridsize" : 20
+      },
+      {
+        "id" : -1338478783,
+        "name" : "Snetterton_200",
+        "gridsize" : 26
+      },
+      {
+        "id" : 987592900,
+        "name" : "Snetterton_300",
+        "gridsize" : 26
+      },
+      {
+        "id" : -100668052,
+        "name" : "Spielberg_Historic",
+        "gridsize" : 17
+      },
+      {
+        "id" : -213305159,
+        "name" : "Spielberg_Vintage",
+        "gridsize" : 17
+      },
+      {
+        "id" : 735562025,
+        "name" : "Spielberg_Modern",
+        "gridsize" : 32
+      },
+      {
+        "id" : 1819432538,
+        "name" : "Spielberg_Short",
+        "gridsize" : 32
+      },
+      {
+        "id" : 2074495683,
+        "name" : "Taruma_Internacional",
+        "gridsize" : 32
+      },
+      {
+        "id" : -108853074,
+        "name" : "Taruma_Chicane",
+        "gridsize" : 32
+      },
+      {
+        "id" : 1882187011,
+        "name" : "VeloCitta1",
+        "gridsize" : 34
+      },
+      {
+        "id" : 1557615576,
+        "name" : "VeloCittaTD",
+        "gridsize" : 34
+      },
+      {
+        "id" : 1956507207,
+        "name" : "VeloCittaClubDay",
+        "gridsize" : 34
+      },
+      {
+        "id" : 193535285,
+        "name" : "Velopark_2010",
+        "gridsize" : 34
+      },
+      {
+        "id" : -1642426225,
+        "name" : "Velopark_2017",
+        "gridsize" : 34
+      },
+      {
+        "id" : 1063112912,
+        "name" : "Virginia_Full",
+        "gridsize" : 28
+      },
+      {
+        "id" : -1592912773,
+        "name" : "Virginia_Grand",
+        "gridsize" : 28
+      },
+      {
+        "id" : 2134032188,
+        "name" : "Virginia_North",
+        "gridsize" : 28
+      },
+      {
+        "id" : 1284894334,
+        "name" : "Virginia_Patriot",
+        "gridsize" : 14
+      },
+      {
+        "id" : -1235504884,
+        "name" : "Virginia_South",
+        "gridsize" : 16
+      }
+    ]
+  }
+  }
+}

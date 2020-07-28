@@ -552,6 +552,9 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
             $game = $session->getGame();
             $this->assertSame('Automobilista 2', $game->getName());
 
+            $track = $session->getTrack();
+            $this->assertSame('Imola_GP_2018', $track->getVenue());
+
             // Test whether all vehicle names are numeric becasue
             // we do not have a attributes json file (yet)
             foreach ($session->getParticipants() as $part)
