@@ -1,0 +1,155 @@
+{
+    "sessionType": "R",
+    "trackName": "brands_hatch",
+    "sessionIndex": 2,
+    "sessionResult": {
+        "bestlap": 90462,
+        "bestSplits": [
+            28944,
+            22815,
+            37677
+        ],
+        "isWetSession": 1,
+        "type": 1,
+        "leaderBoardLines": [
+            {
+                "car": {
+                    "carId": 1004,
+                    "raceNumber": 82,
+                    "carModel": 1,
+                    "cupCategory": 0,
+                    "teamName": "",
+                    "nationality": 0,
+                    "drivers": [
+                        {
+                            "firstName": "Andrea",
+                            "lastName": "Mel",
+                            "shortName": "Mel",
+                            "playerId": ""
+                        }
+                    ]
+                },
+                "currentDriver": {
+                    "firstName": "Andrea",
+                    "lastName": "Mel",
+                    "shortName": "Mel",
+                    "playerId": ""
+                },
+                "currentDriverIndex": 0,
+                "timing": {
+                    "lastLap": 93816,
+                    "lastSplits": [
+                        33330,
+                        22836,
+                        37650
+                    ],
+                    "bestLap": 90837,
+                    "bestSplits": [
+                        29181,
+                        22815,
+                        37713
+                    ],
+                    "totalTime": 2329129,
+                    "lapCount": 23,
+                    "lastSplitId": 0
+                },
+                "missingMandatoryPitstop": 0,
+                "driverTotalTimes": [
+                    0.0
+                ]
+            },
+            {
+                "car": {
+                    "carId": 1002,
+                    "raceNumber": 107,
+                    "carModel": 3,
+                    "cupCategory": 0,
+                    "teamName": "",
+                    "nationality": 0,
+                    "drivers": [
+                        {
+                            "firstName": "Alberto",
+                            "lastName": "For",
+                            "shortName": "For",
+                            "playerId": ""
+                        }
+                    ]
+                },
+                "currentDriver": {
+                    "firstName": "Alberto",
+                    "lastName": "For",
+                    "shortName": "For",
+                    "playerId": ""
+                },
+                "currentDriverIndex": 0,
+                "timing": {
+                    "lastLap": 154953,
+                    "lastSplits": [
+                        34176,
+                        22995,
+                        97782
+                    ],
+                    "bestLap": 90930,
+                    "bestSplits": [
+                        28944,
+                        23148,
+                        37731
+                    ],
+                    "totalTime": 2181760,
+                    "lapCount": 21,
+                    "lastSplitId": 2
+                },
+                "missingMandatoryPitstop": 0,
+                "driverTotalTimes": [
+                    0.0
+                ]
+            },
+            {
+                "car": {
+                    "carId": 1001,
+                    "raceNumber": 17,
+                    "carModel": 3,
+                    "cupCategory": 0,
+                    "teamName": "",
+                    "nationality": 0,
+                    "drivers": [
+                        {
+                            "firstName": "Federico",
+                            "lastName": "Siv",
+                            "shortName": "Siv",
+                            "playerId": ""
+                        }
+                    ]
+                },
+                "currentDriver": {
+                    "firstName": "Federico",
+                    "lastName": "Siv",
+                    "shortName": "Siv",
+                    "playerId": ""
+                },
+                "currentDriverIndex": 0,
+                "timing": {
+                    "lastLap": 94356,
+                    "lastSplits": [
+                        33342,
+                        23109,
+                        37905
+                    ],
+                    "bestLap": 90462,
+                    "bestSplits": [
+                        29064,
+                        23019,
+                        37677
+                    ],
+                    "totalTime": 2236216,
+                    "lapCount": 21,
+                    "lastSplitId": 2
+                },
+                "missingMandatoryPitstop": 0,
+                "driverTotalTimes": [
+                    0.0
+                ]
+            }
+        ]
+    }
+}

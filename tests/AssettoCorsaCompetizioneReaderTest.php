@@ -217,6 +217,21 @@ class AssettoCorsaCompetizioneReaderTest extends PHPUnit_Framework_TestCase {
 
 
     /**
+     * Test no exception on missing laps attribute
+     */
+    public function testNoExceptionOnMissingLaps()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-competizione/'.
+            'no.laps.json');
+
+        // Get the session
+        $session = Data_Reader::factory($file_path)->getSession();
+    }
+
+
+    /**
      * Test client log file differences
      */
     public function testClientRaceLog()
