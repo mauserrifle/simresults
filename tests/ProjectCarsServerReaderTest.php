@@ -554,16 +554,16 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
 
             $track = $session->getTrack();
             $this->assertSame('Imola_GP_2018', $track->getVenue());
-
-            // Test whether all vehicle names are numeric becasue
-            // we do not have a attributes json file (yet)
-            foreach ($session->getParticipants() as $part)
-            {
-                $vehicle = $part->getVehicle();
-                $this->assertTrue(is_numeric($vehicle->getName()));
-            }
         }
 
+        // Test vehicle names
+        foreach (array('Roco 001', 'MetalMoro MRX Duratec Turbo P3') as $key => $name)
+        {
+            foreach ($sessions[$key]->getParticipants() as $part) {
+                $vehicle = $part->getVehicle();
+                $this->assertSame($name, $vehicle->getName());
+            }
+        }
 
         // Make sure the defined vehicle ids are not shared with Project Cars
         // attribute files to prevent bad detection
