@@ -251,6 +251,19 @@ class AssettoCorsaCompetizioneReaderTest extends PHPUnit_Framework_TestCase {
         $session = Data_Reader::factory($file_path)->getSession();
     }
 
+    /**
+     * Test no exception on missing leaderBoardLines
+     */
+    public function testNoExceptionOnMissingLeaderBoardLines()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-competizione/'.
+            'race.without.leaderBoardLines,attribute.json');
+
+        // Get the session
+        $session = Data_Reader::factory($file_path)->getSession();
+    }
 
     /**
      * Test client log file differences

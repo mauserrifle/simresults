@@ -183,6 +183,7 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
          */
 
         $participants_by_car_id = array();
+        if (isset($session_result['leaderBoardLines']))
         foreach ($session_result['leaderBoardLines'] as $lead)
         {
             // Create drivers
