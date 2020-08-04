@@ -185,6 +185,20 @@ class AssettoCorsaReaderTest extends PHPUnit_Framework_TestCase {
     }
 
 
+     /**
+     * Test exception that occurs on bad race result driver index -1
+     */
+    public function testNoExceptionOnBadRaceResultDriverIndex()
+    {
+        // The path to the data source
+        $file_path = realpath(
+            __DIR__.'/logs/assettocorsa/'
+            .'qualify.and.race.modified.with.-1.result.position.json');
+
+        $session = Data_Reader::factory($file_path)->getSession();
+    }
+
+
 
     /***
     **** Below tests use 1 race log file

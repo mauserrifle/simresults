@@ -171,6 +171,10 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
                 $participants_sorted = array();
                 foreach ($race_result as $race_position => $race_position_driver)
                 {
+                    if ( ! isset($participants[$race_position_driver])) {
+                        continue;
+                    }
+
                     $participants_sorted[] =
                         $participants[$race_position_driver];
                 }
