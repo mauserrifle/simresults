@@ -246,8 +246,8 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
             $lap->setParticipant($lap_participant);
 
             $driverIndex = 0;
-            if (isset($penalty_data['driverIndex'])) {
-                $driverIndex = $penalty_data['driverIndex'];
+            if (isset($lap_data['driverIndex'])) {
+                $driverIndex = $lap_data['driverIndex'];
             } elseif (isset($lap_data['driverId'])) {
                 $driverIndex = $lap_data['driverId'];;
             }

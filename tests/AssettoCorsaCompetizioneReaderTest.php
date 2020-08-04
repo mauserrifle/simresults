@@ -59,6 +59,27 @@ class AssettoCorsaCompetizioneReaderTest extends PHPUnit_Framework_TestCase {
     }
 
 
+    public function testDriverSwapping()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-competizione/'.
+            'race.modified.with.swaps.json');
+
+        // Get the race session
+        $session = Data_Reader::factory($file_path)->getSession();
+
+        // Get first participant we modified with extra driver
+        $participants = $session->getParticipants();
+        $participant = $participants[0];
+
+        // Assert driver of first and second lap
+        $this->assertSame('Second Driver',
+            $participant->getLap(1)->getDriver()->getName());
+        $this->assertSame('Andrea Mel',
+            $participant->getLap(2)->getDriver()->getName());
+    }
+
 
     /**
      * Test qualify sessions
