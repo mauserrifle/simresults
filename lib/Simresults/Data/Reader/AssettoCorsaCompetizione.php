@@ -200,7 +200,8 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
             $participant = Participant::createInstance();
             $participant->setDrivers($drivers)
                         ->setFinishStatus(Participant::FINISH_NORMAL)
-                        ->setTeam($lead['car']['teamName']);
+                        ->setTeam($this->helper->arrayGet(
+                            $lead['car'], 'teamName'));
 
             // Total time available
             if ($total_time=$lead['timing']['totalTime'])

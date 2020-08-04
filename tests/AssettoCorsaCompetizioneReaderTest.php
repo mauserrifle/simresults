@@ -266,6 +266,20 @@ class AssettoCorsaCompetizioneReaderTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
+     * Test no exception on missing teamName
+     */
+    public function testNoExceptionOnMissingTeamName()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-competizione/'.
+            'race.with.missing.driver.teamName.attribute.json');
+
+        // Get the session
+        $session = Data_Reader::factory($file_path)->getSession();
+    }
+
+    /**
      * Test client log file differences
      */
     public function testClientRaceLog()
