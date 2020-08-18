@@ -280,6 +280,22 @@ class AssettoCorsaCompetizioneReaderTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
+     * Test no exception and name unknown on missing carModel
+     */
+    public function testNoExceptionAndNameUnknownOnMissingCarModel()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-competizione/'.
+            'race.with.missing.carModel.attribute.json');
+
+        // Assert vehicle name
+        $session = Data_Reader::factory($file_path)->getSession();
+        $participants = $session->getParticipants();
+        $this->assertSame('Unknown', $participants[0]->getVehicle()->getName());
+    }
+
+    /**
      * Test client log file differences
      */
     public function testClientRaceLog()

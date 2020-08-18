@@ -209,15 +209,28 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
                 $participant->setTotalTime(round($total_time / 1000, 4));
             }
 
+
             // Find vehicle name
-            $vehicle_name = 'Car model '.$lead['car']['carModel'];
-            if (isset($this->cars[(int)$lead['car']['carModel']])) {
-                $vehicle_name = $this->cars[(int)$lead['car']['carModel']];
+            $vehicle_name = 'Unknown';
+            $car_model = $this->helper->arrayGet($lead['car'], 'carModel');
+            if (is_numeric($car_model))
+            {
+                $vehicle_name = 'Car model '.$car_model;
+                if (isset($this->cars[(int)$car_model])) {
+                    $vehicle_name = $this->cars[(int)$car_model];
+                }
             }
+
             // Create vehicle and add to participant
             $vehicle = new Vehicle;
-            $vehicle->setName($vehicle_name)
-                    ->setNumber((int)$lead['car']['raceNumber']);
+            $vehicle->setName($vehicle_name);
+
+            // Has vehicle number
+            if (NULL !==
+                $race_number = $this->helper->arrayGet($lead['car'], 'raceNumber'))
+            {
+                $vehicle->setNumber((int)$lead['car']['raceNumber']);
+            }
 
             $participant->setVehicle($vehicle);
             $participants_by_car_id[$lead['car']['carId']] = $participant;
