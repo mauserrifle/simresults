@@ -35,6 +35,18 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
         21 => 'Honda NSX Evo 2019 ',
         22 => 'McLaren 720S GT3 2019',
         23 => 'Porsche 911 II GT3 R 2019',
+        // GT4 DLC
+        50 => 'Alpine A1110 GT4',
+        51 => 'Aston Martin Vantage GT4',
+        52 => 'Audi R8 LMS GT4',
+        53 => 'BMW M4 GT4',
+        55 => 'Chevrolet Camaro GT4',
+        56 => 'Ginetta G55 GT4',
+        57 => 'KTM X-Bow GT4',
+        58 => 'Maserati MC GT4',
+        59 => 'McLaren 570S GT4',
+        60 => 'Mercedes AMG GT4',
+        61 => 'Porsche 718 Cayman GT4',
     );
 
     /**
@@ -43,6 +55,7 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
     public static function canRead($data)
     {
 
+        // TODO: Fix duplicate code with readSessions
         if ($dataParsed = json_decode($data, TRUE)) {
             return (isset($dataParsed['sessionType']) OR
                     isset($dataParsed['sessionDef']));
@@ -75,18 +88,19 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
      */
     protected function readSessions()
     {
-
+        // TODO: Fix duplicate code with canRead
         if ( ! $data = json_decode($this->data, TRUE)) {
-            $data = iconv("UTF-16", "UTF-8", $this->data);
-            $data = json_decode($data, TRUE);
+
+            try {
+                $data = iconv("UTF-16", "UTF-8", $this->data);
+                $data = json_decode($data, TRUE);
+            } catch(\Exception $ex) {}
+
+            if ( ! $data) {
+                $data = json_decode(preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $data), TRUE);
+            }
         }
 
-
-        // Init session
-        $session = Session::createInstance();
-
-        // Practice session by default
-        $type = Session::TYPE_PRACTICE;
 
         $session_data = $data;
         $parse_settings = false;
@@ -109,44 +123,14 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
                 '/\d/', '' ,$session_type_value));
         }
 
-        // Check session name to get type
-        // TODO: Could we prevent duplicate code for this with other readers?
-        switch($session_type_value)
-        {
-            case 'p':
-            case 'fp':
-            case 'practice':
-                $type = Session::TYPE_PRACTICE;
-                $name = 'Practice';
-                break;
-            // TODO: Create test
-            case 'q':
-            case 'qualify':
-            case 4:
-                $type = Session::TYPE_QUALIFY;
-                $name = 'Qualify';
-                break;
-            case 'r':
-            case 'race':
-            case 10:
-                $type = Session::TYPE_RACE;
-                $name = 'Race';
-                break;
-            case 'w':
-            case 'warmup':
-                $type = Session::TYPE_WARMUP;
-                $name = 'Warmup';
-                break;
-            default:
-                $type = Session::TYPE_PRACTICE;
-                $name = 'Unknown';
-                break;
-        }
 
+        // Init session
+        $session = $this->helper->detectSession($session_type_value, array(
+            '0' => Session::TYPE_PRACTICE,
+            '4' => Session::TYPE_QUALIFY,
+            '10' => Session::TYPE_RACE,
+        ));
 
-        // Set session values
-        $session->setType($type)
-                ->setName($name);
 
         if ($max_laps = (int) $this->helper->arrayGet($session_data, 'RaceLaps')) {
             $session->setMaxLaps($max_laps);
@@ -199,6 +183,7 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
          */
 
         $participants_by_car_id = array();
+        if (isset($session_result['leaderBoardLines']))
         foreach ($session_result['leaderBoardLines'] as $lead)
         {
             // Create drivers
@@ -215,7 +200,8 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
             $participant = Participant::createInstance();
             $participant->setDrivers($drivers)
                         ->setFinishStatus(Participant::FINISH_NORMAL)
-                        ->setTeam($lead['car']['teamName']);
+                        ->setTeam($this->helper->arrayGet(
+                            $lead['car'], 'teamName'));
 
             // Total time available
             if ($total_time=$lead['timing']['totalTime'])
@@ -223,15 +209,28 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
                 $participant->setTotalTime(round($total_time / 1000, 4));
             }
 
+
             // Find vehicle name
-            $vehicle_name = 'Car model '.$lead['car']['carModel'];
-            if (isset($this->cars[(int)$lead['car']['carModel']])) {
-                $vehicle_name = $this->cars[(int)$lead['car']['carModel']];
+            $vehicle_name = 'Unknown';
+            $car_model = $this->helper->arrayGet($lead['car'], 'carModel');
+            if (is_numeric($car_model))
+            {
+                $vehicle_name = 'Car model '.$car_model;
+                if (isset($this->cars[(int)$car_model])) {
+                    $vehicle_name = $this->cars[(int)$car_model];
+                }
             }
+
             // Create vehicle and add to participant
             $vehicle = new Vehicle;
-            $vehicle->setName($vehicle_name)
-                    ->setNumber((int)$lead['car']['raceNumber']);
+            $vehicle->setName($vehicle_name);
+
+            // Has vehicle number
+            if (NULL !==
+                $race_number = $this->helper->arrayGet($lead['car'], 'raceNumber'))
+            {
+                $vehicle->setNumber((int)$lead['car']['raceNumber']);
+            }
 
             $participant->setVehicle($vehicle);
             $participants_by_car_id[$lead['car']['carId']] = $participant;
@@ -246,6 +245,7 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
          */
 
         // Process laps
+        if (isset($data['laps']))
         foreach ($data['laps'] as $lap_data)
         {
             if (!isset($participants_by_car_id[$lap_data['carId']])) {
@@ -261,8 +261,8 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
             $lap->setParticipant($lap_participant);
 
             $driverIndex = 0;
-            if (isset($penalty_data['driverIndex'])) {
-                $driverIndex = $penalty_data['driverIndex'];
+            if (isset($lap_data['driverIndex'])) {
+                $driverIndex = $lap_data['driverIndex'];
             } elseif (isset($lap_data['driverId'])) {
                 $driverIndex = $lap_data['driverId'];;
             }

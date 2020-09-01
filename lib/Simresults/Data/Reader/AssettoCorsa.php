@@ -69,9 +69,6 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
         // Gather all sessions
         foreach ($sessions_data as $session_data)
         {
-            // Init session
-            $session = Session::createInstance();
-
             // Get participants (do for each session to prevent re-used objects
             // between sessions)
             $participants = array();
@@ -96,32 +93,10 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
                 $participants[] = $participant;
             }
 
-            // Practice session by default
-            $type = Session::TYPE_PRACTICE;
-
-            // Check session name to get type
-            // TODO: Should be checked when full game is released. Also create
-            //       tests for it!
-            switch(strtolower($name = $this->helper->arrayGet($session_data, 'name')))
-            {
-                case 'qualify session':
-                case 'qualify':
-                    $type = Session::TYPE_QUALIFY;
-                    break;
-                case 'warmup session':
-                    $type = Session::TYPE_WARMUP;
-                    break;
-                case 'race session':
-                case 'quick race':
-                case 'race':
-                    $type = Session::TYPE_RACE;
-                    break;
-            }
-
-            // Set session values
-            $session->setType($type)
-                    ->setName($name)
-                    ->setMaxLaps(
+            // Init session
+            $name = $this->helper->arrayGet($session_data, 'name');
+            $session = $this->helper->detectSession($name);
+            $session->setMaxLaps(
                         (int) $this->helper->arrayGet($session_data, 'lapsCount'))
                     ->setMaxMinutes(
                         (int) $this->helper->arrayGet($session_data, 'duration'));
@@ -196,6 +171,10 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
                 $participants_sorted = array();
                 foreach ($race_result as $race_position => $race_position_driver)
                 {
+                    if ( ! isset($participants[$race_position_driver])) {
+                        continue;
+                    }
+
                     $participants_sorted[] =
                         $participants[$race_position_driver];
                 }

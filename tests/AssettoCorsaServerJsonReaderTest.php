@@ -53,6 +53,7 @@ class AssettoCorsaServerJsonReaderTest extends PHPUnit_Framework_TestCase {
 
         //-- Validate
         $this->assertSame(Session::TYPE_QUALIFY, $session->getType());
+        $this->assertNull($session->getName());
 
         // Get participants
         $participants = $session->getParticipants();
@@ -174,6 +175,7 @@ class AssettoCorsaServerJsonReaderTest extends PHPUnit_Framework_TestCase {
 
         //-- Validate
         $this->assertSame(Session::TYPE_RACE, $session->getType());
+        $this->assertNull($session->getName());
         $this->assertSame(10, $session->getMaxLaps());
         $this->assertSame(0, $session->getMaxMinutes());
         $this->assertSame(10, $session->getLastedLaps());

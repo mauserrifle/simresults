@@ -59,6 +59,27 @@ class AssettoCorsaCompetizioneReaderTest extends PHPUnit_Framework_TestCase {
     }
 
 
+    public function testDriverSwapping()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-competizione/'.
+            'race.modified.with.swaps.json');
+
+        // Get the race session
+        $session = Data_Reader::factory($file_path)->getSession();
+
+        // Get first participant we modified with extra driver
+        $participants = $session->getParticipants();
+        $participant = $participants[0];
+
+        // Assert driver of first and second lap
+        $this->assertSame('Second Driver',
+            $participant->getLap(1)->getDriver()->getName());
+        $this->assertSame('Andrea Mel',
+            $participant->getLap(2)->getDriver()->getName());
+    }
+
 
     /**
      * Test qualify sessions
@@ -75,6 +96,7 @@ class AssettoCorsaCompetizioneReaderTest extends PHPUnit_Framework_TestCase {
 
         //-- Validate
         $this->assertSame(Session::TYPE_QUALIFY, $session->getType());
+        $this->assertNull($session->getName());
 
         // Get participants
         $participants = $session->getParticipants();
@@ -120,6 +142,7 @@ class AssettoCorsaCompetizioneReaderTest extends PHPUnit_Framework_TestCase {
 
         //-- Validate
         $this->assertSame(Session::TYPE_PRACTICE, $session->getType());
+        $this->assertNull($session->getName());
 
         // Get participants
         $participants = $session->getParticipants();
@@ -213,6 +236,64 @@ class AssettoCorsaCompetizioneReaderTest extends PHPUnit_Framework_TestCase {
             $participants[0]->getDriver()->getName());
     }
 
+
+    /**
+     * Test no exception on missing laps attribute
+     */
+    public function testNoExceptionOnMissingLaps()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-competizione/'.
+            'no.laps.json');
+
+        // Get the session
+        $session = Data_Reader::factory($file_path)->getSession();
+    }
+
+    /**
+     * Test no exception on missing leaderBoardLines
+     */
+    public function testNoExceptionOnMissingLeaderBoardLines()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-competizione/'.
+            'race.without.leaderBoardLines,attribute.json');
+
+        // Get the session
+        $session = Data_Reader::factory($file_path)->getSession();
+    }
+
+    /**
+     * Test no exception on missing teamName
+     */
+    public function testNoExceptionOnMissingTeamName()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-competizione/'.
+            'race.with.missing.driver.teamName.attribute.json');
+
+        // Get the session
+        $session = Data_Reader::factory($file_path)->getSession();
+    }
+
+    /**
+     * Test no exception and name unknown on missing carModel
+     */
+    public function testNoExceptionAndNameUnknownOnMissingCarModel()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-competizione/'.
+            'race.with.missing.carModel.attribute.json');
+
+        // Assert vehicle name
+        $session = Data_Reader::factory($file_path)->getSession();
+        $participants = $session->getParticipants();
+        $this->assertSame('Unknown', $participants[0]->getVehicle()->getName());
+    }
 
     /**
      * Test client log file differences

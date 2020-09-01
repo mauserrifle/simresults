@@ -25,6 +25,49 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
      */
     protected $attribute_names2;
 
+    /**
+     * @var  array  The attribute names of Automobilista 2
+     */
+    protected $attribute_names_automobilista2;
+
+    /**
+     * @var array Some Automobilista 2 vehicle ids so we can detect the game
+     */
+    public static $automobilista2_vehicle_ids = array(
+        1932261404,
+        306371028,
+        -494068343,
+        306785397,
+        -739789710,
+        -532210519,
+        553963368,
+        619110280,
+        1836524676,
+        95104745,
+        -1870819346,
+        703591920,
+        65202613,
+        1437730287,
+        575788923,
+        -93205368,
+        374810616,
+        -487937394,
+        253111186,
+        851522805,
+        -2053858829,
+        -1660644383,
+        -1404228714,
+        523915852,
+        1323381033,
+        -1834081784,
+        802736208,
+    );
+
+    /**
+     * Game object of the current session we are looping
+     */
+    protected $current_game;
+
 
     /**
      * @see Simresults\Data_Reader::canRead()
@@ -69,6 +112,12 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
         // Get attribute info of project cars to figure out vehicle names etc
         $this->attribute_names = $this->getAttributeNames();
         $this->attribute_names2 = $this->getAttributeNames2();
+        $this->attribute_names_automobilista2 = $this->getAttributeNamesAutomobilista2();
+
+
+        // Initial game. But might be changed later based on data
+        $this->current_game = new Game;
+        $this->current_game->setName('Project Cars');
 
         // Init sessions array
         $sessions = array();
@@ -134,30 +183,17 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                     $participants_by_name[$part_key] = clone $part;
                 }
 
-                // Init session
-                $session = Session::createInstance();
-
-                // Practice session by default
-                $type = Session::TYPE_PRACTICE;
 
                 // Setup name for session type
                 $type_setup_name = ucfirst($type_key);
                 $type_setup_name2 = preg_replace('/[0-9]+/', '', $type_setup_name);
 
-                // Check session name to get type
-                // TODO: Could we prevent duplicate code for this with other readers?
-                switch(strtolower(preg_replace('#\d#', '', $type_key)))
-                {
-                    case 'qualifying':
-                        $type = Session::TYPE_QUALIFY;
-                        $type_setup_name = 'Qualify';
-                        break;
-                    case 'warmup':
-                        $type = Session::TYPE_WARMUP;
-                        break;
-                    case 'race':
-                        $type = Session::TYPE_RACE;
-                        break;
+                // Init session
+                $session = $this->helper->detectSession($type_key);
+
+                // Different setup name for quality
+                if ($session->getType() === Session::TYPE_QUALIFY) {
+                    $type_setup_name = 'Qualify';
                 }
 
                 $max_laps = NULL;
@@ -175,24 +211,23 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 }
 
 
+
+
                 // Date of this session
                 $date = new \DateTime;
                 $date->setTimestamp($session_data['start_time']);
                 $date->setTimezone(new \DateTimeZone(self::$default_timezone));
 
                 // Set session values
-                $session->setType($type)
-                        ->setName($type_key)
-                        ->setDate($date)
+                $session->setDate($date)
                         ->setOtherSettings($session_settings);
 
                 if ($max_laps) {
                     $session->setMaxLaps($max_laps);
                 }
 
-                // Set game
-                $game = new Game; $game->setName('Project Cars');
-                $session->setGame($game);
+                // Set current game object
+                $session->setGame($this->current_game);
 
                 // Set server
                 // TODO: Set configurations
@@ -213,6 +248,12 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                     ['setup']['TrackId']]))
                 {
                     $track->setVenue($this->attribute_names2['tracks'][$history
+                        ['setup']['TrackId']]['name']);
+                }
+                elseif (isset($this->attribute_names_automobilista2['tracks'][$history
+                    ['setup']['TrackId']]))
+                {
+                    $track->setVenue($this->attribute_names_automobilista2['tracks'][$history
                         ['setup']['TrackId']]['name']);
                 }
                 else
@@ -683,7 +724,6 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                     return ($driver AND $driver->getName());
                 }));
 
-
                 // Set participants (sorted)
                 $session->setParticipants($participants);
 
@@ -818,25 +858,46 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
      * Set vehicle name by vehicle id and vehicle object
      *
      * @param   int  $vehicle_id
+     * @param   Vehicle  $vehicle
      * @return  string
      */
     protected function setVehicleName($vehicle_id, Vehicle $vehicle)
     {
-        // Have friendly vehicle name
+        // Is Automobilista2 based on hardcoded unique ids
+        if (in_array($vehicle_id, self::$automobilista2_vehicle_ids))
+        {
+            $this->current_game->setName('Automobilista 2');
+            $vehicle->setName( (string) $vehicle_id);
+        }
+
+        // Have friendly vehicle name from Project Cars
         if (isset($this->attribute_names['vehicles'][$vehicle_id]))
         {
+            $this->current_game->setName('Project Cars');
             $vehicle->setName($this->attribute_names['vehicles']
                 [$vehicle_id]['name']);
             $vehicle->setClass($this->attribute_names['vehicles']
                 [$vehicle_id]['class']);
         }
+        // Have friendly vehicle name from Project Cars 2
         elseif (isset($this->attribute_names2['vehicles'][$vehicle_id]))
         {
+            $this->current_game->setName('Project Cars 2');
             $vehicle->setName($this->attribute_names2['vehicles']
                 [$vehicle_id]['name']);
             $vehicle->setClass($this->attribute_names2['vehicles']
                 [$vehicle_id]['class']);
         }
+        // Have friendly vehicle name from Automobilista 2
+        elseif (isset($this->attribute_names_automobilista2['vehicles'][$vehicle_id]))
+        {
+            $this->current_game->setName('Automobilista 2');
+            $vehicle->setName($this->attribute_names_automobilista2['vehicles']
+                [$vehicle_id]['name']);
+            $vehicle->setClass($this->attribute_names_automobilista2['vehicles']
+                [$vehicle_id]['class']);
+        }
+        // Fallback to vehicle id
         else
         {
             $vehicle->setName( (string) $vehicle_id);
@@ -850,7 +911,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
      *
      * @return array
      */
-    protected function getAttributeNames($file='ProjectCarsAttributes.json')
+    public function getAttributeNames($file='ProjectCarsAttributes.json')
     {
         // Get attribute info of project cars to figure out vehicle names etc
         $attributes = json_decode(file_get_contents(
@@ -865,20 +926,23 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
         // Make easy readable array
         foreach ($attribute_names as $cat => &$values)
         {
-            if (isset($attributes['response'][$cat]))
-            foreach($attributes['response'][$cat]['list'] as $item)
+            if (isset($attributes['response'][$cat]) AND
+                isset($attributes['response'][$cat]['list']))
             {
-                if (isset($item['id'])) {
-                    $id = $item['id'];
-                } else {
-                    $id = $item['value'];
-                }
-
-                $values[$id]['name'] = $item['name'];
-
-                if (isset($item['class']))
+                foreach($attributes['response'][$cat]['list'] as $item)
                 {
-                    $values[$id]['class'] = $item['class'];
+                    if (isset($item['id'])) {
+                        $id = $item['id'];
+                    } else {
+                        $id = $item['value'];
+                    }
+
+                    $values[$id]['name'] = $item['name'];
+
+                    if (isset($item['class']))
+                    {
+                        $values[$id]['class'] = $item['class'];
+                    }
                 }
             }
         }
@@ -891,9 +955,19 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
      *
      * @return array
      */
-    protected function getAttributeNames2()
+    public function getAttributeNames2()
     {
         return $this->getAttributeNames('ProjectCars2Attributes.json');
+    }
+
+    /**
+     * Get the attribute names of the Automobilista 2 attributes json
+     *
+     * @return array
+     */
+    public function getAttributeNamesAutomobilista2()
+    {
+        return $this->getAttributeNames('ProjectCarsAutomobilista2Attributes.json');
     }
 
 }

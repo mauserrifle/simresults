@@ -39,6 +39,7 @@ Simresults supports a wide range of games:
 * Assetto Corsa
 * Assetto Corsa Competizione
 * Automobilista
+* Automobilista 2
 * Game Stock Car 2012
 * Game Stock Car 2013
 * Game Stock Car Extreme
@@ -186,7 +187,7 @@ Create index.php:
     // Get a reader using the source file
     $reader = \Simresults\Data_Reader::factory($file);
 
-    // Get the session
+    // Get the first session. Note: Use `getSessions()` to get all sessions
     $session = $reader->getSession();
 
     // Get participants sorted by their position

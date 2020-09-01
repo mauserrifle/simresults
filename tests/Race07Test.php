@@ -252,6 +252,7 @@ class Race07Test extends PHPUnit_Framework_TestCase {
         $sessions = $reader->getSessions();
 
         $this->assertSame(Session::TYPE_RACE, $sessions[0]->getType());
+        $this->assertNull($sessions[0]->getName());
 
 
         $participants = $sessions[0]->getParticipants();

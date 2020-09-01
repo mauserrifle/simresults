@@ -3,6 +3,7 @@
 namespace spec\Simresults;
 
 use Simresults\Helper;
+use Simresults\Session;
 use Simresults\Participant;
 use Simresults\Lap;
 use PhpSpec\ObjectBehavior;
@@ -167,5 +168,68 @@ class HelperSpec extends ObjectBehavior
         $this->sortParticipantsByLastLapPosition(array($part1, $part2, $part3,
                                                        $part4, $part5))
              ->shouldReturn(array($part4, $part3, $part5, $part1, $part2));
+    }
+
+    function it_detects_session_by_session_value()
+    {
+        // Does not exist
+        $session = $this->detectSession('4');
+        $session->getType()->shouldReturn(SESSION::TYPE_PRACTICE);
+        $session->getName()->shouldReturn('Unknown');
+
+        // Existing tests
+        $tests = array(
+            'p' => array(Session::TYPE_PRACTICE, null),
+            'fp' => array(Session::TYPE_PRACTICE, null),
+            'practice' => array(Session::TYPE_PRACTICE, null),
+            'practicing' => array(Session::TYPE_PRACTICE, 'Practicing'),
+            ' practicing ' => array(Session::TYPE_PRACTICE, 'Practicing'), // With extra white space
+            'PRACTICING' => array(Session::TYPE_PRACTICE, 'Practicing'), // All uppercase
+
+            // Test short name not being used as session name
+            'pract' => array(Session::TYPE_PRACTICE, 'Pract'),
+            'test' => array(Session::TYPE_PRACTICE, null),
+
+            'q' => array(Session::TYPE_QUALIFY, null),
+            'qualify' => array(Session::TYPE_QUALIFY, null),
+            'qualify1' => array(Session::TYPE_QUALIFY, null), // Numbering 1 should not happen
+            'qualify2' => array(Session::TYPE_QUALIFY, 'Qualify2'),
+            'qualify3' => array(Session::TYPE_QUALIFY, 'Qualify3'),
+            'qualify session' => array(Session::TYPE_QUALIFY, 'Qualify session'),
+            'qualifying' => array(Session::TYPE_QUALIFY, 'Qualifying'),
+
+            // Numbering 1 on different spelling than type should not happen too
+            'qualifying1' => array(Session::TYPE_QUALIFY, 'Qualifying'),
+
+            'r' => array(Session::TYPE_RACE, null),
+            'race' => array(Session::TYPE_RACE, null),
+            'race2' => array(Session::TYPE_RACE, 'Race2'),
+            'race3' => array(Session::TYPE_RACE, 'Race3'),
+            'race11' => array(Session::TYPE_RACE, 'Race11'), // Test fix because it returned race1
+            'race01' => array(Session::TYPE_RACE, 'Race01'),
+            'quick race' => array(Session::TYPE_RACE, 'Quick race'),
+            'racing' => array(Session::TYPE_RACE, 'Racing'),
+
+            'w' => array(Session::TYPE_WARMUP, null),
+            'warmup' => array(Session::TYPE_WARMUP, null),
+            'warmup session' => array(Session::TYPE_WARMUP, 'Warmup session'),
+            'warm up' => array(Session::TYPE_WARMUP, 'Warm up'),
+            'warming' => array(Session::TYPE_WARMUP, 'Warming'),
+        );
+
+        // TODO: Should compare hardvalues instead of if/elses
+        foreach ($tests as $session_value => $expected_values) {
+            $session = $this->detectSession($session_value);
+            $session->getType()->shouldReturn($expected_values[0]);
+            $session->getName()->shouldReturn($expected_values[1]);
+        }
+    }
+
+    function it_detects_session_by_custom_session_value()
+    {
+        // Exists by custom type value
+        $session = $this->detectSession('4', array('4' => SESSION::TYPE_RACE));
+        $session->getType()->shouldReturn(SESSION::TYPE_RACE);
+        $session->getName()->shouldReturn(null);
     }
 }

@@ -108,14 +108,14 @@ class AssettoCorsaReaderTest extends PHPUnit_Framework_TestCase {
 
         //-- Validate
         $this->assertSame(Session::TYPE_QUALIFY, $session->getType());
-        $this->assertSame('Qualify', $session->getName());
+        $this->assertNull($session->getName());
 
         // Get second session
         $session = $reader->getSession(2);
 
         //-- Validate
         $this->assertSame(Session::TYPE_RACE, $session->getType());
-        $this->assertSame('Race', $session->getName());
+        $this->assertNull($session->getName());
     }
 
      /**
@@ -182,6 +182,20 @@ class AssettoCorsaReaderTest extends PHPUnit_Framework_TestCase {
 
         $session = Data_Reader::factory($file_path)->getSession();
         $this->assertSame('Custom server', $session->getServer()->getName());
+    }
+
+
+     /**
+     * Test exception that occurs on bad race result driver index -1
+     */
+    public function testNoExceptionOnBadRaceResultDriverIndex()
+    {
+        // The path to the data source
+        $file_path = realpath(
+            __DIR__.'/logs/assettocorsa/'
+            .'qualify.and.race.modified.with.-1.result.position.json');
+
+        $session = Data_Reader::factory($file_path)->getSession();
     }
 
 

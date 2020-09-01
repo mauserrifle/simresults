@@ -647,4 +647,91 @@ class Helper {
     {
         return isset($array[$key]) ? $array[$key] : $default;
     }
+
+    /**
+     * Detect a session. Returns a Session object with proper session type.
+     * If the session value differs from the session type detected, it will
+     * be stored as session name.
+     *
+     * @param   string  $value
+     * @param   array   $custom_values_to_type
+     * @return  Session
+     */
+    public function detectSession($session_value, $custom_values_to_type=array())
+    {
+        $session_value = trim(preg_replace('#([^0-9])1$#', '$1', $session_value));
+        $session_value_lower = strtolower($session_value);
+
+        $type = null;
+        $name = null;
+
+        // Preg matches that catch most types
+        if (preg_match('/(prac|test)/i', $session_value_lower)) {
+            $type = Session::TYPE_PRACTICE;
+        }
+        elseif (preg_match('/qual/i', $session_value_lower)) {
+            $type = Session::TYPE_QUALIFY;
+        }
+        elseif (preg_match('/rac/i', $session_value_lower)) {
+            $type = Session::TYPE_RACE;
+        }
+        elseif (preg_match('/warm/i', $session_value_lower)) {
+            $type = Session::TYPE_WARMUP;
+        }
+
+        if (!$type)
+        {
+            // Any fallback values like short names
+            $values_to_type =
+                array(
+                    'p' => Session::TYPE_PRACTICE,
+                    'fp' => Session::TYPE_PRACTICE,
+
+                    'q' => Session::TYPE_QUALIFY,
+
+                    'r' => Session::TYPE_RACE,
+
+                    'w' => Session::TYPE_WARMUP,
+                )
+                +
+                $custom_values_to_type
+            ;
+
+            $type = $this->arrayGet($values_to_type, $session_value_lower);
+        }
+
+        if (!$type) {
+            $type = Session::TYPE_PRACTICE;
+            $name = 'Unknown';
+        }
+
+        // No name and the session value is different than the type. So
+        // we are dealing with a custom session name
+        if (!$name AND
+            strlen($session_value_lower) > 4 AND
+            strtolower($type) !== $session_value_lower)
+        {
+            $custom_name = $session_value;
+            // Everything is lowercase
+            if (strtolower($custom_name) === $custom_name) {
+                $custom_name = ucfirst($custom_name);
+            }
+
+            // Everything is uppercase. Just use our lowercase value with ucifrst
+            if (strtoupper($custom_name) === $custom_name) {
+                $custom_name = ucfirst($session_value_lower);
+            }
+
+            $name = $custom_name;
+        }
+
+        // Init session
+        $session = Session::createInstance();
+
+        // Set session values
+        $session->setType($type)
+                ->setName($name);
+
+        return $session;
+    }
 }

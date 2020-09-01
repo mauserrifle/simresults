@@ -67,6 +67,10 @@ class DriverSpec extends ObjectBehavior
         $this->setName('Aname with a space at the end ');
         $this->getName()->shouldReturn('Aname with a space at the end');
         $this->getName(false, true)->shouldReturn('A. with a space at the end');
+
+        // Test no exception undefined string offset
+        $this->setName('');
+        $this->getName(false, true)->shouldReturn('');
     }
 
     function it_can_return_a_shorten_firstname_and_lastname()

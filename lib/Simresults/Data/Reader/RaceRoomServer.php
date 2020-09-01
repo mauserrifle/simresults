@@ -64,41 +64,12 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
         // Gather all sessions
         foreach ($data['Sessions'] as $session_data)
         {
+
             // Init session
-            $session = Session::createInstance();
-
-            // Practice session by default
-            $type = Session::TYPE_PRACTICE;
-
-            // Check session type
-            switch(strtolower($name = $session_data['Type']))
-            {
-                case 'qualify':
-                    $type = Session::TYPE_QUALIFY;
-                    break;
-                case 'qualify2':
-                    $type = Session::TYPE_QUALIFY;
-                    break;
-                case 'qualify3':
-                    $type = Session::TYPE_QUALIFY;
-                    break;
-                case 'warmup':
-                    $type = Session::TYPE_WARMUP;
-                    break;
-                case 'race':
-                    $type = Session::TYPE_RACE;
-                    break;
-                case 'race2':
-                    $type = Session::TYPE_RACE;
-                    break;
-                case 'race3':
-                    $type = Session::TYPE_RACE;
-                    break;
-            }
+            $session = $this->helper->detectSession(strtolower($name = $session_data['Type']));
 
             // Set session values
-            $session->setType($type)
-                    ->setDate($date)
+            $session->setDate($date)
                     ->setOtherSettings($other_settings);
 
             // Set game

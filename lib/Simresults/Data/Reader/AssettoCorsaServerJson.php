@@ -35,34 +35,11 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
         $data = json_decode($this->data, TRUE);
 
         // Init session
-        $session = Session::createInstance();
-
-        // Practice session by default
-        $type = Session::TYPE_PRACTICE;
-
-        // Check session name to get type
-        // TODO: Could we prevent duplicate code for this with other readers?
-        switch(strtolower($name = $this->helper->arrayGet($data, 'Type')))
-        {
-            case 'qualify session':
-            case 'qualify':
-                $type = Session::TYPE_QUALIFY;
-                break;
-            case 'warmup session':
-                $type = Session::TYPE_WARMUP;
-                break;
-            case 'race session':
-            case 'quick race':
-            case 'race':
-                $type = Session::TYPE_RACE;
-                break;
-        }
-
+        $name = $this->helper->arrayGet($data, 'Type');
+        $session = $this->helper->detectSession($name);
 
         // Set session values
-        $session->setType($type)
-                ->setName($name)
-                ->setMaxLaps(
+        $session->setMaxLaps(
                     (int) $this->helper->arrayGet($data, 'RaceLaps'));
 
         // Has Duration

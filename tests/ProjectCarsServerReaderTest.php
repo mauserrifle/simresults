@@ -1,5 +1,5 @@
     <?php
-use Simresults\Data_Reader_AssettoCorsaServerJson;
+use Simresults\Data_Reader_ProjectCarsServer as PcReader;
 use Simresults\Data_Reader;
 use Simresults\Session;
 use Simresults\Participant;
@@ -31,9 +31,9 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
      *
      * @expectedException Simresults\Exception\CannotReadData
      */
-    public function testCreatingNewAssettoCorsaReaderWithInvalidData()
+    public function testCreatingNewProjectCarsReaderWithInvalidData()
     {
-        $reader = new Data_Reader_AssettoCorsaServerJson('Unknown data for reader');
+        $reader = new PcReader('Unknown data for reader');
     }
 
 
@@ -432,6 +432,14 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
         // Get sessions without error
         $sessions = Data_Reader::factory($file_path)->getSessions();
 
+        // Validate game name for all sessions
+        foreach ($sessions as $session)
+        {
+            $game = $session->getGame();
+            $this->assertSame('Project Cars 2', $game->getName());
+        }
+
+
         $participants = $sessions[4]->getParticipants();
 
         // Test vehicle friendly name
@@ -524,6 +532,61 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
         $sessions = Data_Reader::factory($file_path)->getSessions();
     }
 
+    /**
+     * Test whether we can detect Automobilista2
+     *
+     */
+    public function testAutomobilista2Fixes()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/automobilista2/practice.and.race.json');
+
+        // Get sessions
+        $reader = Data_Reader::factory($file_path);
+        $sessions = $reader->getSessions();
+
+        foreach ($sessions as $session)
+        {
+            // Validate game name
+            $game = $session->getGame();
+            $this->assertSame('Automobilista 2', $game->getName());
+
+            $track = $session->getTrack();
+            $this->assertSame('Imola_GP_2018', $track->getVenue());
+        }
+
+        // Test vehicle names
+        foreach (array('Roco 001', 'MetalMoro MRX Duratec Turbo P3') as $key => $name)
+        {
+            foreach ($sessions[$key]->getParticipants() as $part) {
+                $vehicle = $part->getVehicle();
+                $this->assertSame($name, $vehicle->getName());
+            }
+        }
+
+        // Make sure the defined vehicle ids are not shared with Project Cars
+        // attribute files to prevent bad detection
+        foreach (PcReader::$automobilista2_vehicle_ids as $vehicleId)
+        {
+            // Get attribute json files from server api
+            $attribute_names = json_encode($reader->getAttributeNames());
+            $attribute_names2 = json_encode($reader->getAttributeNames2());
+
+            // Cast to string otherwise strpos won't work as expected
+            $vehicleId = (string) $vehicleId;
+
+            // Test whether vehicleId is in in attribute files
+            $vehicleIdShared = (
+                strpos($attribute_names, $vehicleId) !== FALSE OR
+                strpos($attribute_names2, $vehicleId) !== FALSE
+            );
+            $this->assertFalse($vehicleIdShared,
+                'Automobilista2 vehicle id '.
+                $vehicleId.' is shared with Project Cars');
+        }
+    }
+
 
 
 
@@ -539,26 +602,31 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
         $tests = array(
             array(
                 'type'     => Session::TYPE_PRACTICE,
+                'name'     => null,
                 'max_laps' => 15,
                 'time'     => 1446146942,
             ),
             array(
                 'type'     => Session::TYPE_PRACTICE,
+                'name'     => 'Practice2',
                 'max_laps' => 15,
                 'time'     => 1446147862,
             ),
             array(
                 'type'     => Session::TYPE_QUALIFY,
+                'name'     => 'Qualifying',
                 'max_laps' => 15,
                 'time'     => 1446148782,
             ),
             array(
                 'type'     => Session::TYPE_WARMUP,
+                'name'     => null,
                 'max_laps' => 5,
                 'time'     => 1446149702,
             ),
             array(
                 'type'     => Session::TYPE_RACE,
+                'name'     => null,
                 'max_laps' => 7,
                 'time'     => 1446150022,
             ),
@@ -573,6 +641,7 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
 
             //-- Validate
             $this->assertSame($test['type'], $session->getType());
+            $this->assertSame($test['name'], $session->getName());
             $this->assertSame($test['max_laps'], $session->getMaxLaps());
             $this->assertSame($test['time'],
                 $session->getDate()->getTimestamp());
