@@ -120,24 +120,24 @@ class Data_Reader_Rfactor2 extends Data_Reader {
         }
 
         // Using fixed setups?
-        $session->setSetupFixed( (bool) $this->dom_value(
+        $session->setSetupFixed( (bool) $this->tagValue(
             'FixedSetups', $xml_session));
 
 
         // Get other settings
         $session
-            ->addOtherSetting('MechFailRate', (int) $this->dom_value(
+            ->addOtherSetting('MechFailRate', (int) $this->tagValue(
                 'MechFailRate'))
-              ->addOtherSetting('DamageMult', (int) $this->dom_value(
+              ->addOtherSetting('DamageMult', (int) $this->tagValue(
                 'DamageMult'))
-            ->addOtherSetting('FuelMult', (int) $this->dom_value(
+            ->addOtherSetting('FuelMult', (int) $this->tagValue(
                 'FuelMult'))
-            ->addOtherSetting('TireMult', (int) $this->dom_value(
+            ->addOtherSetting('TireMult', (int) $this->tagValue(
                 'TireMult'));
 
         // Create session date
         $date = new \DateTime(
-            date('c', $this->dom_value('DateTime', $xml_session)));
+            date('c', $this->tagValue('DateTime', $xml_session)));
 
         // Set UTC timezone by default
         $date->setTimezone(new \DateTimeZone(self::$default_timezone));
@@ -146,7 +146,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
         $session->setDate($date);
 
         // Max laps is max value
-        if (($max_laps = (int) $this->dom_value('Laps', $xml_session)) === 2147483647)
+        if (($max_laps = (int) $this->tagValue('Laps', $xml_session)) === 2147483647)
         {
             // Just set it to 0
             $max_laps = 0;
@@ -155,10 +155,10 @@ class Data_Reader_Rfactor2 extends Data_Reader {
         // Set max laps and minutes
         $session
             ->setMaxLaps($max_laps)
-            ->setMaxMinutes( (int) $this->dom_value('Minutes', $xml_session));
+            ->setMaxMinutes( (int) $this->tagValue('Minutes', $xml_session));
 
         // Set which mod was used
-        $session->setMod($this->dom_value('Mod'));
+        $session->setMod($this->tagValue('Mod'));
 
         // Set server
         $session->setServer($this->getServer());
@@ -321,10 +321,10 @@ class Data_Reader_Rfactor2 extends Data_Reader {
 
         // Set track values
         $track
-            ->setVenue($this->dom_value('TrackVenue'))
-            ->setCourse($this->dom_value('TrackCourse'))
-            ->setEvent($this->dom_value('TrackEvent'))
-            ->setLength( (float) $this->dom_value('TrackLength'));
+            ->setVenue($this->tagValue('TrackVenue'))
+            ->setCourse($this->tagValue('TrackCourse'))
+            ->setEvent($this->tagValue('TrackEvent'))
+            ->setLength( (float) $this->tagValue('TrackLength'));
 
         // Return track
         return $track;
@@ -342,18 +342,18 @@ class Data_Reader_Rfactor2 extends Data_Reader {
         $game = new Game;
 
         // Get game version
-        $game_version = $this->dom_value('GameVersion');
+        $game_version = $this->tagValue('GameVersion');
 
         // Default game name
         $game_name = 'rFactor 2';
 
         // Mod is from gamestockcar
-        if (preg_match('/reiza[0-9]+\.rfm/i', $this->dom_value('Mod')))
+        if (preg_match('/reiza[0-9]+\.rfm/i', $this->tagValue('Mod')))
         {
             $game_name = 'Game Stock Car Extreme';
         }
         // Mod is from automobilista
-        elseif (preg_match('/.*?\.srs/i', $this->dom_value('Mod')))
+        elseif (preg_match('/.*?\.srs/i', $this->tagValue('Mod')))
         {
             $game_name = 'Automobilista';
         }
@@ -386,16 +386,16 @@ class Data_Reader_Rfactor2 extends Data_Reader {
         $server = new Server;
 
         // Not multiplayer. No server data available
-        if ($this->dom_value('Setting') !== 'Multiplayer')
+        if ($this->tagValue('Setting') !== 'Multiplayer')
         {
             return null;
         }
 
         // Set game values
         $server
-            ->setName($this->dom_value('ServerName'))
-            ->setMotd($this->dom_value('MOTD'))
-            ->setDedicated( (bool) $this->dom_value('Dedicated'));
+            ->setName($this->tagValue('ServerName'))
+            ->setMotd($this->tagValue('MOTD'))
+            ->setDedicated( (bool) $this->tagValue('Dedicated'));
 
         // Return game
         return $server;
@@ -434,22 +434,22 @@ class Data_Reader_Rfactor2 extends Data_Reader {
             $main_driver = new Driver;
 
             // Get position
-            $position = (int) $this->dom_value('Position', $driver_xml);
+            $position = (int) $this->tagValue('Position', $driver_xml);
 
             // Set driver values
             $main_driver
-                ->setName($this->dom_value('Name', $driver_xml))
-                ->setHuman( (bool) $this->dom_value('isPlayer', $driver_xml));
+                ->setName($this->tagValue('Name', $driver_xml))
+                ->setHuman( (bool) $this->tagValue('isPlayer', $driver_xml));
 
             // Create new vehicle
             $vehicle = new Vehicle;
 
             // Set vehicle values
             $vehicle
-                ->setName($this->dom_value('VehName', $driver_xml))
-                ->setType($this->dom_value('CarType', $driver_xml))
-                ->setClass($this->dom_value('CarClass', $driver_xml))
-                ->setNumber( (int) $this->dom_value('CarNumber', $driver_xml));
+                ->setName($this->tagValue('VehName', $driver_xml))
+                ->setType($this->tagValue('CarType', $driver_xml))
+                ->setClass($this->tagValue('CarClass', $driver_xml))
+                ->setNumber( (int) $this->tagValue('CarNumber', $driver_xml));
 
             // Create participant
             $participant = Participant::createInstance();
@@ -457,21 +457,21 @@ class Data_Reader_Rfactor2 extends Data_Reader {
             // Set participant values
             $participant
                 ->setTeam(
-                    $this->dom_value('TeamName', $driver_xml))
+                    $this->tagValue('TeamName', $driver_xml))
                 ->setPosition(
-                    (int) $this->dom_value('Position', $driver_xml))
+                    (int) $this->tagValue('Position', $driver_xml))
                 ->setClassPosition(
-                    (int) $this->dom_value('ClassPosition', $driver_xml))
+                    (int) $this->tagValue('ClassPosition', $driver_xml))
                 ->setGridPosition(
-                    (int) $this->dom_value('GridPos', $driver_xml))
+                    (int) $this->tagValue('GridPos', $driver_xml))
                 ->setClassGridPosition(
-                    (int) $this->dom_value('ClassGridPos', $driver_xml))
+                    (int) $this->tagValue('ClassGridPos', $driver_xml))
                 ->setPitstops(
-                    (int) $this->dom_value('Pitstops', $driver_xml));
+                    (int) $this->tagValue('Pitstops', $driver_xml));
 
             // Has finish time
             if ($finish_time = (float)
-                    $this->dom_value('FinishTime', $driver_xml))
+                    $this->tagValue('FinishTime', $driver_xml))
             {
                 // Overwrite total time, because rfactor results tend to be
                 // corrupted at times
@@ -479,7 +479,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
             }
 
             // Get finish status value
-            $finish_status = strtolower($this->dom_value(
+            $finish_status = strtolower($this->tagValue(
                 'FinishStatus', $driver_xml));
 
             // Has finished
@@ -501,7 +501,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                 $participant->setFinishStatus(Participant::FINISH_DNF);
 
                 // Set finish comment (if any)
-                if ($finish_status = $this->dom_value('DNFReason', $driver_xml))
+                if ($finish_status = $this->tagValue('DNFReason', $driver_xml))
                 {
                     $participant->setFinishComment($finish_status);
                 }
@@ -1225,7 +1225,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
     protected function getAllowedVehicles()
     {
         // Get allowed vehicles array by exploding the value
-        $allowed_vehicles = explode('|', $this->dom_value('VehiclesAllowed'));
+        $allowed_vehicles = explode('|', $this->tagValue('VehiclesAllowed'));
 
         // Clean array
         $allowed_vehicles = array_values(
@@ -1252,7 +1252,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
      * @param   DomElement  $dom   a own dom element
      * @return  mixed
      */
-    protected function dom_value($tag, $dom=null)
+    protected function tagValue($tag, $dom=null)
     {
         // No dom param
         if ( ! $dom)
