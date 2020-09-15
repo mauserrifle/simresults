@@ -827,13 +827,9 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
         $reader = Data_Reader::factory(
                 realpath(__DIR__.'/logs/rfactor2/multiple.qualy.xml'));
 
-        // Get session
+        // Validate chat message
         $session = $reader->getSession();
-
-        // Get chats
         $chats = $session->getChats();
-
-        // Validate first chat message
         $this->assertSame(
             "Larry Watson: no, I don't know why some times aren't counting",
             $chats[4]->getMessage());
