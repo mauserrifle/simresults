@@ -1269,7 +1269,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
             {
                 if (is_string($item->nodeValue) AND strpos($item->nodeValue, '&') !== FALSE)
                 {
-                    return html_entity_decode($item->nodeValue, $this->XMLflags());
+                    return $this->html_entity_decode($item->nodeValue);
                 }
                 else
                 {
@@ -1293,7 +1293,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
     {
         if (is_string($node->nodeValue) AND strpos($node->nodeValue, '&') !== FALSE)
         {
-            return html_entity_decode($node->nodeValue, $this->XMLflags());
+            return $this->html_entity_decode($node->nodeValue);
         }
         else
         {
@@ -1302,22 +1302,26 @@ class Data_Reader_Rfactor2 extends Data_Reader {
     }
 
     /**
-     * Returns the XML flags for decoding dom node values
+     * Helper to html entity decode a string
      *
-     * @return  int
+     * @param   string $string
+     * @return  string
      */
-    protected function XMLflags()
+    protected function html_entity_decode($string)
     {
         $flags = ENT_QUOTES;
         if (defined('ENT_XML1')) {
             $flags = $flags | ENT_XML1;
-        } else {
+        } elseif (defined('ENT_XHTML')) {
             $flags = $flags | ENT_XHTML;
+        } else {
+            // PHP 5.3 fallback
+            $flags = $flags | ENT_HTML401;
+            $string = str_replace('&apos;', "'", $string);
         }
 
-        return $flags;
+        return html_entity_decode($string, $flags);
     }
-
 
 
     /**
