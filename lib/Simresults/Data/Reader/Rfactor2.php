@@ -1316,11 +1316,14 @@ class Data_Reader_Rfactor2 extends Data_Reader {
             $flags = $flags | ENT_XHTML;
         } else {
             // PHP 5.3 fallback
-            $flags = $flags | ENT_HTML401;
+            $flags = null;
             $string = str_replace('&apos;', "'", $string);
         }
-
-        return html_entity_decode($string, $flags);
+        if ($flags) {
+            return html_entity_decode($string, $flags);
+        } else {
+            return html_entity_decode($string);
+        }
     }
 
 
