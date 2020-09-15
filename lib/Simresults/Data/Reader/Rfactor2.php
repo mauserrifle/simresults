@@ -537,7 +537,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
             foreach ($swaps_xml as $swap_xml_key => $swap_xml)
             {
                 // Empty driver name
-                if ( ! $driver_name = $swap_xml->nodeValue)
+                if ( ! $driver_name = $this->nodeValue($swap_xml))
                 {
                     // Skip this swap
                     continue;
@@ -620,7 +620,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                 // Match the aids
                 $matches = array();
                 preg_match_all('/([a-z]+)(=([a-z0-9]))?[,]?/i',
-                    (string) $aid_xml->nodeValue, $matches);
+                    (string) $this->nodeValue($aid_xml), $matches);
 
                 // Prepare aid items array
                 $aid_items = array();
@@ -691,7 +691,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                 $lap = new Lap;
 
                 // Lap time zero or lower
-                if (($lap_time = (float) $lap_xml->nodeValue) <= 0.0)
+                if (($lap_time = (float) $this->nodeValue($lap_xml)) <= 0.0)
                 {
                     // No lap time
                     $lap_time = null;
@@ -1018,7 +1018,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
             $chat = new Chat;
 
             // Set message
-            $chat->setMessage($chat_xml->nodeValue);
+            $chat->setMessage($this->nodeValue($chat_xml));
 
             // Clone session date
             $date = clone $session->getDate();
@@ -1085,7 +1085,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
             $incident = new Incident;
 
             // Set message
-            $incident->setMessage($incident_xml->nodeValue);
+            $incident->setMessage($this->nodeValue($incident_xml));
 
             // Clone session date
             $date = clone $session->getDate();
@@ -1169,9 +1169,10 @@ class Data_Reader_Rfactor2 extends Data_Reader {
             $penalty = new Penalty;
 
             // Set message
-            $penalty->setMessage($penalty_xml->nodeValue);
+            $penalty->setMessage($penalty_message = $this->nodeValue($penalty_xml));
 
-            if (preg_match('/^(.*?) (received|served|finished) (.*?) penalty.*/i', $penalty_xml->nodeValue, $matches))
+            if (preg_match('/^(.*?) (received|served|finished) (.*?) penalty.*/i',
+                    $penalty_message, $matches))
             {
                 // Participant known
                 if (isset($parts_by_name[$matches[1]])) {
@@ -1266,12 +1267,38 @@ class Data_Reader_Rfactor2 extends Data_Reader {
             // Has item
             if ($item = $tags->item(0))
             {
-                return $item->nodeValue;
+                if (is_string($item->nodeValue) AND strpos($item->nodeValue, '&') !== FALSE)
+                {
+                    return html_entity_decode($item->nodeValue, ENT_QUOTES | ENT_XML1);
+                }
+                else
+                {
+                    return $item->nodeValue;
+                }
             }
         }
 
         // Just return null
         return null;
+    }
+
+
+    /**
+     * Helper to get decoded nodeValue of DOM node
+     *
+     * @param   \DOMNode $node
+     * @return  mixed
+     */
+    protected function nodeValue(\DOMNode $node)
+    {
+        if (is_string($node->nodeValue) AND strpos($node->nodeValue, '&') !== FALSE)
+        {
+            return html_entity_decode($node->nodeValue, ENT_QUOTES | ENT_XML1);
+        }
+        else
+        {
+            return $node->nodeValue;
+        }
     }
 
 
