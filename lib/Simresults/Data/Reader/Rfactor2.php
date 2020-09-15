@@ -1311,6 +1311,8 @@ class Data_Reader_Rfactor2 extends Data_Reader {
         $flags = ENT_QUOTES;
         if (defined('ENT_XML1')) {
             $flags = $flags | ENT_XML1;
+        } else {
+            $flags = $flags | ENT_XHTML;
         }
 
         return $flags;
