@@ -1269,7 +1269,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
             {
                 if (is_string($item->nodeValue) AND strpos($item->nodeValue, '&') !== FALSE)
                 {
-                    return html_entity_decode($item->nodeValue, ENT_QUOTES | ENT_XML1);
+                    return html_entity_decode($item->nodeValue, $this->XMLflags());
                 }
                 else
                 {
@@ -1293,12 +1293,27 @@ class Data_Reader_Rfactor2 extends Data_Reader {
     {
         if (is_string($node->nodeValue) AND strpos($node->nodeValue, '&') !== FALSE)
         {
-            return html_entity_decode($node->nodeValue, ENT_QUOTES | ENT_XML1);
+            return html_entity_decode($node->nodeValue, $this->XMLflags());
         }
         else
         {
             return $node->nodeValue;
         }
+    }
+
+    /**
+     * Returns the XML flags for decoding dom node values
+     *
+     * @return  int
+     */
+    protected function XMLflags()
+    {
+        $flags = ENT_QUOTES;
+        if (defined('ENT_XML1')) {
+            $flags = $flags | ENT_XML1;
+        }
+
+        return $flags;
     }
 
 
