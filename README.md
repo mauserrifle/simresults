@@ -23,10 +23,14 @@ This project is created and maintained by
 Please consider [donating](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=L9L982XNK7DAA&lc=US&item_name=Simresults&item_number=Simresults&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted)
 to cover future development.
 
-* Website: <http://simresults.net>
-* Twitter: [@simresults](http://twitter.com/simresults)
+It's also possible to use the Simresults website remote results [API](https://simresults.net/api). This requires much less work and programming knowledge.
+
+* Website: [simresults.net](https://simresults.net)
+* Twitter (inactive): [@simresults](http://twitter.com/simresults) and [@mauserrifleNL](http://twitter.com/mauserrifleNL)
 * Email: <mauserrifle@gmail.com>
 * Donate: [Paypal](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=L9L982XNK7DAA&lc=US&item_name=Simresults&item_number=Simresults&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted)
+* Sponsor: [GitHub](https://github.com/sponsors/mauserrifle) (please email me for alternatives)
+
 
 ## Supported games
 
