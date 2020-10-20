@@ -214,6 +214,21 @@ class AssettoCorsaCompetizioneReaderTest extends PHPUnit_Framework_TestCase {
 
     }
 
+    /**
+     * Test no exception on missing carId in cars
+     */
+    public function testNoExceptionOnMissingCarIdInCars()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-competizione/'.
+            'race.with.missing.carId.attribute.json');
+
+        $session = Data_Reader::factory($file_path)->getSession();
+        $participants = $session->getParticipants();
+        $this->assertSame('Alberto For',
+            $participants[0]->getDriver()->getName());
+    }
 
     /**
      * Test no exception on missing driver id used in laps
