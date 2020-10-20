@@ -377,7 +377,10 @@ class AssettoCorsaCompetizioneReaderTest extends PHPUnit_Framework_TestCase {
         $server = $this->getWorkingReader()->getSession()->getServer();
 
         // Validate server
-        $this->assertSame('Unknown', $server->getName());
+        $this->assertSame(
+            "Simresults ServerName 7 of 10 (Practice 90' RACE Sept-27th)",
+            $server->getName()
+        );
     }
 
 

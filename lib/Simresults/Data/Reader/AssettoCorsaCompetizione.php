@@ -142,7 +142,7 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
 
         // Set server (we do not know...)
         $server = new Server;
-        $server->setName($this->helper->arrayGet($session_data, 'server', 'Unknown'));
+        $server->setName($this->helper->arrayGet($session_data, 'serverName', 'Unknown'));
         $session->setServer($server);
 
         // Set track
