@@ -166,7 +166,7 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
 
                 // Invalid lap
                 if ($lap_data['time'] === -1 AND
-                    $lap_data['cuts'] AND
+                    $this->helper->arrayGet($lap_data, 'cuts') AND
                     $session->getType() !== Session::TYPE_RACE)
                 {
                     $lap->setTime(null);
