@@ -145,13 +145,17 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
                 $lap->setNumber($lap_data['lap']+1);
 
                 // Set lap time in seconds
-                $lap->setTime(round($lap_data['time'] / 1000, 4));
+                if ($lap_data['time'] > 0) {
+                    $lap->setTime(round($lap_data['time'] / 1000, 4));
+                }
 
                 // Set sector times in seconds
                 foreach ($this->helper->arrayGet($lap_data, 'sectors', array())
                              as $sector_time)
                 {
-                    $lap->addSectorTime(round($sector_time / 1000, 4));
+                    if ($sector_time > 0) {
+                        $lap->addSectorTime(round($sector_time / 1000, 4));
+                    }
                 }
 
                 // Set compound info
