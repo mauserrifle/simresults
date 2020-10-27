@@ -1044,7 +1044,7 @@ class Session {
     }
 
     /**
-     * Get the max position within this session. Will search all laps for
+     * Get the max position within this session. Will search all grid/laps for
      * highest position number. This method can be more safe instead of the
      * number of participants when need to know the max position, for example
      * for graphs. Sometimes the positions are higher than the actual number
@@ -1060,6 +1060,10 @@ class Session {
         // Loop each participant
         foreach ($this->getParticipants() as $part)
         {
+            if ( ! $part->getLaps()) {
+                continue;
+            }
+
             if ($part->getGridPosition() AND
                 $part->getGridPosition() > $max_position)
             {

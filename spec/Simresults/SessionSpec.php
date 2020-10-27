@@ -187,6 +187,7 @@ class SessionSpec extends ObjectBehavior
     function it_has_max_position(
         Participant $part1, Participant $part2, Lap $lap1,Lap $lap2,Lap $lap3)
     {
+        // Test pure laps
         $lap1->getPosition()->willReturn(1);
         $lap2->getPosition()->willReturn(7);
         $lap3->getPosition()->willReturn(3);
@@ -198,13 +199,16 @@ class SessionSpec extends ObjectBehavior
         $part2->getGridPosition()->willReturn(null);
 
         $this->setParticipants(array($part1, $part2));
-
         $this->getMaxPosition()->shouldReturn(7);
 
+        // Test grid positions too
         $part1->getGridPosition()->willReturn(1);
         $part2->getGridPosition()->willReturn(8);
-
         $this->getMaxPosition()->shouldReturn(8);
+
+        // Test only reading grid positions when part has laps
+        $part2->getLaps()->willReturn(array());
+        $this->getMaxPosition()->shouldReturn(1);
     }
 
     function it_can_sort_laps_by_sector(
