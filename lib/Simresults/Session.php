@@ -1060,11 +1060,18 @@ class Session {
         // Loop each participant
         foreach ($this->getParticipants() as $part)
         {
+            if ($part->getGridPosition() AND
+                $part->getGridPosition() > $max_position)
+            {
+                $max_position = $part->getGridPosition();
+            }
+
             // Loop each lap
             foreach ($part->getLaps() as $lap)
             {
                 // Position is higher than current max
-                if ($lap->getPosition() > $max_position)
+                if ($lap->getPosition() AND
+                    $lap->getPosition() > $max_position)
                 {
                     // Set new max
                     $max_position = $lap->getPosition();

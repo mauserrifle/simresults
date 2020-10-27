@@ -194,9 +194,17 @@ class SessionSpec extends ObjectBehavior
         $part1->getLaps()->willReturn(array($lap1));
         $part2->getLaps()->willReturn(array($lap2, $lap3));
 
+        $part1->getGridPosition()->willReturn(null);
+        $part2->getGridPosition()->willReturn(null);
+
         $this->setParticipants(array($part1, $part2));
 
         $this->getMaxPosition()->shouldReturn(7);
+
+        $part1->getGridPosition()->willReturn(1);
+        $part2->getGridPosition()->willReturn(8);
+
+        $this->getMaxPosition()->shouldReturn(8);
     }
 
     function it_can_sort_laps_by_sector(
