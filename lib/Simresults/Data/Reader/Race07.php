@@ -28,7 +28,15 @@ class Data_Reader_Race07 extends Data_Reader {
      */
     public static function canRead($data)
     {
-        return (bool) self::parse_data($data);
+        if ( ! is_string($data)) {
+            return FALSE;
+        }
+
+        $data_lower = strtolower($data);
+        return (
+            strpos($data_lower, '[header]') !== FALSE AND
+            strpos($data_lower, 'game=') !== FALSE
+        );
     }
 
     /**
@@ -77,7 +85,7 @@ class Data_Reader_Race07 extends Data_Reader {
                 //--- Set game
                 $game = new Game;
                 $game->setName($data['header']['game'])
-                     -> setVersion($data['header']['version']);
+                     ->setVersion($data['header']['version']);
                 $session->setGame($game);
 
                 //--- Set server (we do not know...)
