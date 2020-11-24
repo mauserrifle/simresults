@@ -179,7 +179,7 @@ class RaceRoomReaderTest extends PHPUnit_Framework_TestCase {
     {
         // The path to the data source
         $file_path = realpath(__DIR__.
-            '/logs/raceroom-server/race.with.new.incident.indexes.json');
+            '/logs/raceroom-server/race.with.new.incident.indexes.and.sector.times.json');
 
         // Get session
         $session = Data_Reader::factory($file_path)->getSession(3);
@@ -194,6 +194,27 @@ class RaceRoomReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertSame($participants[0], $incidents[0]->getParticipant());
     }
 
+    /**
+     * Test reading sectors
+     */
+    public function testReadingSectors()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/raceroom-server/race.with.new.incident.indexes.and.sector.times.json');
+
+        // Get session
+        $session = Data_Reader::factory($file_path)->getSession(3);
+        $participants = $session->getParticipants();
+
+        // Get sector times
+        $sectors = $participants[0]->getBestLap()->getSectorTimes();
+
+        // Validate sectors
+        $this->assertSame(22.478, $sectors[0]);
+        $this->assertSame(40.117, $sectors[1]);
+        $this->assertSame(34.557, $sectors[2]);
+    }
 
 
 
