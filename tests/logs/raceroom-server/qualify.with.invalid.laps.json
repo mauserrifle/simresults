@@ -1,0 +1,4424 @@
+{
+  "Server": "Actrollvision BenQ Challenger Cup Season 2 Qualifier 1",
+  "StartTime": "/Date(1589028832901+0000)/",
+  "Time": "/Date(1589031256376)/",
+  "Experience": "RaceRoom Experience",
+  "Difficulty": "Custom",
+  "FuelUsage": "Off",
+  "TireWear": "Off",
+  "MechanicalDamage": null,
+  "FlagRules": "All",
+  "CutRules": "SlowDown",
+  "RaceSeriesFormat": null,
+  "WreckerPrevention": "On",
+  "MandatoryPitstop": "Off",
+  "Track": "Red Bull Ring Spielberg",
+  "TrackLayout": "Grand Prix Circuit",
+  "Sessions": [
+    {
+      "Type": "Practice",
+      "Players": [
+        {
+          "UserId": 792057,
+          "FullName": "Bence",
+          "Username": "Bence98",
+          "UserWeightPenalty": 0,
+          "CarId": 7850,
+          "Car": "Cupra TCR",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7873,
+          "CarPerformanceIndex": 160,
+          "Position": 1,
+          "PositionInClass": 1,
+          "StartPosition": 2,
+          "StartPositionInClass": 2,
+          "BestLapTime": 97316,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": []
+        },
+        {
+          "UserId": 4887506,
+          "FullName": "JESPER",
+          "Username": "JippTheChip",
+          "UserWeightPenalty": 0,
+          "CarId": 7847,
+          "Car": "Audi RS 3 LMS",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7862,
+          "CarPerformanceIndex": 160,
+          "Position": 2,
+          "PositionInClass": 2,
+          "StartPosition": 3,
+          "StartPositionInClass": 3,
+          "BestLapTime": 97360,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": []
+        },
+        {
+          "UserId": 5543098,
+          "FullName": "Chris",
+          "Username": "ACRNADE",
+          "UserWeightPenalty": 0,
+          "CarId": 7850,
+          "Car": "Cupra TCR",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7864,
+          "CarPerformanceIndex": 160,
+          "Position": 3,
+          "PositionInClass": 3,
+          "StartPosition": 1,
+          "StartPositionInClass": 1,
+          "BestLapTime": 97399,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": []
+        },
+        {
+          "UserId": 209745,
+          "FullName": "Max",
+          "Username": "Abarth555",
+          "UserWeightPenalty": 0,
+          "CarId": 7847,
+          "Car": "Audi RS 3 LMS",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7868,
+          "CarPerformanceIndex": 160,
+          "Position": 4,
+          "PositionInClass": 4,
+          "StartPosition": 8,
+          "StartPositionInClass": 8,
+          "BestLapTime": 97610,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": []
+        },
+        {
+          "UserId": 1187,
+          "FullName": "Jaroslav",
+          "Username": "Jardier",
+          "UserWeightPenalty": 0,
+          "CarId": 7850,
+          "Car": "Cupra TCR",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7873,
+          "CarPerformanceIndex": 160,
+          "Position": 5,
+          "PositionInClass": 5,
+          "StartPosition": 9,
+          "StartPositionInClass": 9,
+          "BestLapTime": 97665,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": []
+        },
+        {
+          "UserId": 5495287,
+          "FullName": "Antoine",
+          "Username": "afracing",
+          "UserWeightPenalty": 0,
+          "CarId": 7856,
+          "Car": "Hyundai i30 N TCR",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7866,
+          "CarPerformanceIndex": 160,
+          "Position": 6,
+          "PositionInClass": 6,
+          "StartPosition": 13,
+          "StartPositionInClass": 13,
+          "BestLapTime": 98103,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": []
+        },
+        {
+          "UserId": 5444050,
+          "FullName": "Olivier",
+          "Username": "REAMO",
+          "UserWeightPenalty": 0,
+          "CarId": 7856,
+          "Car": "Hyundai i30 N TCR",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7964,
+          "CarPerformanceIndex": 160,
+          "Position": 7,
+          "PositionInClass": 7,
+          "StartPosition": 5,
+          "StartPositionInClass": 5,
+          "BestLapTime": 98344,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": []
+        },
+        {
+          "UserId": 4657,
+          "FullName": "Adam",
+          "Username": "Timeluster",
+          "UserWeightPenalty": 0,
+          "CarId": 7847,
+          "Car": "Audi RS 3 LMS",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7862,
+          "CarPerformanceIndex": 160,
+          "Position": 8,
+          "PositionInClass": 8,
+          "StartPosition": 17,
+          "StartPositionInClass": 17,
+          "BestLapTime": 98380,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": []
+        },
+        {
+          "UserId": 59164,
+          "FullName": "Bastiaan",
+          "Username": "KrabbitNL",
+          "UserWeightPenalty": 0,
+          "CarId": 7847,
+          "Car": "Audi RS 3 LMS",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7870,
+          "CarPerformanceIndex": 160,
+          "Position": 9,
+          "PositionInClass": 9,
+          "StartPosition": 10,
+          "StartPositionInClass": 10,
+          "BestLapTime": 99008,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": []
+        },
+        {
+          "UserId": 461916,
+          "FullName": "Michel",
+          "Username": "michelkas1",
+          "UserWeightPenalty": 0,
+          "CarId": 7856,
+          "Car": "Hyundai i30 N TCR",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7964,
+          "CarPerformanceIndex": 160,
+          "Position": 10,
+          "PositionInClass": 10,
+          "StartPosition": 14,
+          "StartPositionInClass": 14,
+          "BestLapTime": 99206,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": []
+        },
+        {
+          "UserId": 971331,
+          "FullName": "Remon",
+          "Username": "Ramshoek",
+          "UserWeightPenalty": 0,
+          "CarId": 7850,
+          "Car": "Cupra TCR",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7872,
+          "CarPerformanceIndex": 160,
+          "Position": 11,
+          "PositionInClass": 11,
+          "StartPosition": 12,
+          "StartPositionInClass": 12,
+          "BestLapTime": 99213,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": []
+        },
+        {
+          "UserId": 5931666,
+          "FullName": "Bruno",
+          "Username": "BrunoBrito",
+          "UserWeightPenalty": 0,
+          "CarId": 7856,
+          "Car": "Hyundai i30 N TCR",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7962,
+          "CarPerformanceIndex": 160,
+          "Position": 12,
+          "PositionInClass": 12,
+          "StartPosition": 11,
+          "StartPositionInClass": 11,
+          "BestLapTime": 99421,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": []
+        },
+        {
+          "UserId": 5856747,
+          "FullName": "Cyril",
+          "Username": "Spiko_0",
+          "UserWeightPenalty": 0,
+          "CarId": 7856,
+          "Car": "Hyundai i30 N TCR",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7866,
+          "CarPerformanceIndex": 160,
+          "Position": 13,
+          "PositionInClass": 13,
+          "StartPosition": 4,
+          "StartPositionInClass": 4,
+          "BestLapTime": 99593,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": []
+        },
+        {
+          "UserId": 32699,
+          "FullName": "Nicolaj",
+          "Username": "NicoLauda",
+          "UserWeightPenalty": 0,
+          "CarId": 7850,
+          "Car": "Cupra TCR",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7871,
+          "CarPerformanceIndex": 160,
+          "Position": 14,
+          "PositionInClass": 14,
+          "StartPosition": 16,
+          "StartPositionInClass": 16,
+          "BestLapTime": 100094,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": []
+        },
+        {
+          "UserId": 950553,
+          "FullName": "James",
+          "Username": "racer-4zzzz",
+          "UserWeightPenalty": 0,
+          "CarId": 7847,
+          "Car": "Audi RS 3 LMS",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7870,
+          "CarPerformanceIndex": 160,
+          "Position": 15,
+          "PositionInClass": 15,
+          "StartPosition": 18,
+          "StartPositionInClass": 18,
+          "BestLapTime": 100928,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": []
+        },
+        {
+          "UserId": 980488,
+          "FullName": "Lars",
+          "Username": "woozie77",
+          "UserWeightPenalty": 0,
+          "CarId": 7847,
+          "Car": "Audi RS 3 LMS",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7869,
+          "CarPerformanceIndex": 160,
+          "Position": 16,
+          "PositionInClass": 16,
+          "StartPosition": 15,
+          "StartPositionInClass": 15,
+          "BestLapTime": -1000,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": []
+        },
+        {
+          "UserId": 212200,
+          "FullName": "Mihail",
+          "Username": "WorldWide",
+          "UserWeightPenalty": 0,
+          "CarId": 7856,
+          "Car": "Hyundai i30 N TCR",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7963,
+          "CarPerformanceIndex": 160,
+          "Position": 17,
+          "PositionInClass": 17,
+          "StartPosition": 7,
+          "StartPositionInClass": 7,
+          "BestLapTime": -1000,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": []
+        },
+        {
+          "UserId": 4865537,
+          "FullName": "Alin",
+          "Username": "alynflo",
+          "UserWeightPenalty": 0,
+          "CarId": 7847,
+          "Car": "Audi RS 3 LMS",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7869,
+          "CarPerformanceIndex": 160,
+          "Position": 18,
+          "PositionInClass": 18,
+          "StartPosition": 6,
+          "StartPositionInClass": 6,
+          "BestLapTime": -1000,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": []
+        }
+      ]
+    },
+    {
+      "Type": "Qualify",
+      "Players": [
+        {
+          "UserId": 792057,
+          "FullName": "Bence",
+          "Username": "Bence98",
+          "UserWeightPenalty": 0,
+          "CarId": 7850,
+          "Car": "Cupra TCR",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7873,
+          "CarPerformanceIndex": 160,
+          "Position": 1,
+          "PositionInClass": 1,
+          "StartPosition": 1,
+          "StartPositionInClass": 1,
+          "BestLapTime": 97073,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": [
+            {
+              "Time": 97132,
+              "SectorTimes": [
+                22433,
+                62502,
+                97132
+              ],
+              "PositionInClass": 1,
+              "Valid": false,
+              "Position": 1,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 97073,
+              "SectorTimes": [
+                22430,
+                62509,
+                97073
+              ],
+              "PositionInClass": 1,
+              "Valid": true,
+              "Position": 1,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                -1000,
+                -1000,
+                -1000
+              ],
+              "PositionInClass": 1,
+              "Valid": true,
+              "Position": 1,
+              "PitStopOccured": false,
+              "Incidents": []
+            }
+          ]
+        },
+        {
+          "UserId": 1187,
+          "FullName": "Jaroslav",
+          "Username": "Jardier",
+          "UserWeightPenalty": 0,
+          "CarId": 7850,
+          "Car": "Cupra TCR",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7873,
+          "CarPerformanceIndex": 160,
+          "Position": 2,
+          "PositionInClass": 2,
+          "StartPosition": 2,
+          "StartPositionInClass": 2,
+          "BestLapTime": 97280,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": [
+            {
+              "Time": 97350,
+              "SectorTimes": [
+                22581,
+                62803,
+                97350
+              ],
+              "PositionInClass": 1,
+              "Valid": true,
+              "Position": 1,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 97392,
+              "SectorTimes": [
+                22592,
+                62916,
+                97392
+              ],
+              "PositionInClass": 1,
+              "Valid": true,
+              "Position": 1,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 97447,
+              "SectorTimes": [
+                22558,
+                62806,
+                97447
+              ],
+              "PositionInClass": 1,
+              "Valid": true,
+              "Position": 1,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 97280,
+              "SectorTimes": [
+                22521,
+                62743,
+                97280
+              ],
+              "PositionInClass": 2,
+              "Valid": true,
+              "Position": 2,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 97482,
+              "SectorTimes": [
+                22489,
+                62722,
+                97482
+              ],
+              "PositionInClass": 2,
+              "Valid": true,
+              "Position": 2,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                -1000,
+                -1000,
+                -1000
+              ],
+              "PositionInClass": 2,
+              "Valid": true,
+              "Position": 2,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "UserId": 5543098,
+          "FullName": "Chris",
+          "Username": "ACRNADE",
+          "UserWeightPenalty": 0,
+          "CarId": 7850,
+          "Car": "Cupra TCR",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7864,
+          "CarPerformanceIndex": 160,
+          "Position": 3,
+          "PositionInClass": 3,
+          "StartPosition": 3,
+          "StartPositionInClass": 3,
+          "BestLapTime": 97292,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": [
+            {
+              "Time": 97352,
+              "SectorTimes": [
+                22620,
+                62879,
+                97352
+              ],
+              "PositionInClass": 2,
+              "Valid": true,
+              "Position": 2,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 97385,
+              "SectorTimes": [
+                22625,
+                62858,
+                97385
+              ],
+              "PositionInClass": 2,
+              "Valid": true,
+              "Position": 2,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 97996,
+              "SectorTimes": [
+                22727,
+                63089,
+                97996
+              ],
+              "PositionInClass": 3,
+              "Valid": true,
+              "Position": 3,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 97292,
+              "SectorTimes": [
+                22639,
+                62787,
+                97292
+              ],
+              "PositionInClass": 3,
+              "Valid": true,
+              "Position": 3,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                -1000,
+                -1000,
+                -1000
+              ],
+              "PositionInClass": 3,
+              "Valid": true,
+              "Position": 3,
+              "PitStopOccured": false,
+              "Incidents": []
+            }
+          ]
+        },
+        {
+          "UserId": 4887506,
+          "FullName": "JESPER",
+          "Username": "JippTheChip",
+          "UserWeightPenalty": 0,
+          "CarId": 7847,
+          "Car": "Audi RS 3 LMS",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7862,
+          "CarPerformanceIndex": 160,
+          "Position": 4,
+          "PositionInClass": 4,
+          "StartPosition": 4,
+          "StartPositionInClass": 4,
+          "BestLapTime": 97475,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": [
+            {
+              "Time": 97804,
+              "SectorTimes": [
+                22748,
+                63141,
+                97804
+              ],
+              "PositionInClass": 1,
+              "Valid": true,
+              "Position": 1,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 97543,
+              "SectorTimes": [
+                22681,
+                62938,
+                97543
+              ],
+              "PositionInClass": 4,
+              "Valid": true,
+              "Position": 4,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                },
+                {
+                  "Type": 3,
+                  "Points": 1,
+                  "OtherUserId": 0
+                },
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 97475,
+              "SectorTimes": [
+                22636,
+                62876,
+                97475
+              ],
+              "PositionInClass": 4,
+              "Valid": true,
+              "Position": 4,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                22720,
+                -1000,
+                -1000
+              ],
+              "PositionInClass": 4,
+              "Valid": true,
+              "Position": 4,
+              "PitStopOccured": false,
+              "Incidents": []
+            }
+          ]
+        },
+        {
+          "UserId": 209745,
+          "FullName": "Max",
+          "Username": "Abarth555",
+          "UserWeightPenalty": 0,
+          "CarId": 7847,
+          "Car": "Audi RS 3 LMS",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7868,
+          "CarPerformanceIndex": 160,
+          "Position": 5,
+          "PositionInClass": 5,
+          "StartPosition": 5,
+          "StartPositionInClass": 5,
+          "BestLapTime": 97495,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": [
+            {
+              "Time": 97726,
+              "SectorTimes": [
+                22620,
+                63097,
+                97726
+              ],
+              "PositionInClass": 2,
+              "Valid": true,
+              "Position": 2,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 97495,
+              "SectorTimes": [
+                22656,
+                62964,
+                97495
+              ],
+              "PositionInClass": 3,
+              "Valid": true,
+              "Position": 3,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                -1000,
+                -1000,
+                -1000
+              ],
+              "PositionInClass": 5,
+              "Valid": false,
+              "Position": 5,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 97714,
+              "SectorTimes": [
+                22642,
+                63024,
+                97714
+              ],
+              "PositionInClass": 4,
+              "Valid": true,
+              "Position": 4,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 97714,
+              "SectorTimes": [
+                22706,
+                63074,
+                97714
+              ],
+              "PositionInClass": 4,
+              "Valid": true,
+              "Position": 4,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                22681,
+                62894,
+                -1000
+              ],
+              "PositionInClass": 5,
+              "Valid": true,
+              "Position": 5,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "UserId": 5495287,
+          "FullName": "Antoine",
+          "Username": "afracing",
+          "UserWeightPenalty": 0,
+          "CarId": 7856,
+          "Car": "Hyundai i30 N TCR",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7866,
+          "CarPerformanceIndex": 160,
+          "Position": 6,
+          "PositionInClass": 6,
+          "StartPosition": 6,
+          "StartPositionInClass": 6,
+          "BestLapTime": 97574,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": [
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                -1000,
+                -1000,
+                -1000
+              ],
+              "PositionInClass": 6,
+              "Valid": false,
+              "Position": 6,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 97631,
+              "SectorTimes": [
+                22575,
+                62994,
+                97631
+              ],
+              "PositionInClass": 4,
+              "Valid": true,
+              "Position": 4,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                -1000,
+                -1000,
+                -1000
+              ],
+              "PositionInClass": 6,
+              "Valid": false,
+              "Position": 6,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 97574,
+              "SectorTimes": [
+                22531,
+                62909,
+                97574
+              ],
+              "PositionInClass": 6,
+              "Valid": true,
+              "Position": 6,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 97631,
+              "SectorTimes": [
+                22713,
+                63049,
+                97631
+              ],
+              "PositionInClass": 6,
+              "Valid": true,
+              "Position": 6,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                -1000,
+                -1000,
+                -1000
+              ],
+              "PositionInClass": 6,
+              "Valid": true,
+              "Position": 6,
+              "PitStopOccured": false,
+              "Incidents": []
+            }
+          ]
+        },
+        {
+          "UserId": 212200,
+          "FullName": "Mihail",
+          "Username": "WorldWide",
+          "UserWeightPenalty": 0,
+          "CarId": 7856,
+          "Car": "Hyundai i30 N TCR",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7963,
+          "CarPerformanceIndex": 160,
+          "Position": 7,
+          "PositionInClass": 7,
+          "StartPosition": 7,
+          "StartPositionInClass": 7,
+          "BestLapTime": 98048,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": [
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                -1000,
+                -1000,
+                -1000
+              ],
+              "PositionInClass": 7,
+              "Valid": false,
+              "Position": 7,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98446,
+              "SectorTimes": [
+                22717,
+                63496,
+                98446
+              ],
+              "PositionInClass": 6,
+              "Valid": true,
+              "Position": 6,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98308,
+              "SectorTimes": [
+                22704,
+                63323,
+                98308
+              ],
+              "PositionInClass": 7,
+              "Valid": true,
+              "Position": 7,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98048,
+              "SectorTimes": [
+                22672,
+                63189,
+                98048
+              ],
+              "PositionInClass": 7,
+              "Valid": true,
+              "Position": 7,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98615,
+              "SectorTimes": [
+                22908,
+                63689,
+                98615
+              ],
+              "PositionInClass": 7,
+              "Valid": true,
+              "Position": 7,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                22675,
+                63082,
+                -1000
+              ],
+              "PositionInClass": 7,
+              "Valid": true,
+              "Position": 7,
+              "PitStopOccured": false,
+              "Incidents": []
+            }
+          ]
+        },
+        {
+          "UserId": 971331,
+          "FullName": "Remon",
+          "Username": "Ramshoek",
+          "UserWeightPenalty": 0,
+          "CarId": 7850,
+          "Car": "Cupra TCR",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7872,
+          "CarPerformanceIndex": 160,
+          "Position": 8,
+          "PositionInClass": 8,
+          "StartPosition": 8,
+          "StartPositionInClass": 8,
+          "BestLapTime": 98224,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": [
+            {
+              "Time": 98224,
+              "SectorTimes": [
+                22759,
+                63453,
+                98224
+              ],
+              "PositionInClass": 4,
+              "Valid": true,
+              "Position": 4,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98982,
+              "SectorTimes": [
+                22966,
+                63618,
+                98982
+              ],
+              "PositionInClass": 5,
+              "Valid": true,
+              "Position": 5,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98634,
+              "SectorTimes": [
+                23129,
+                63555,
+                98634
+              ],
+              "PositionInClass": 6,
+              "Valid": true,
+              "Position": 6,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98530,
+              "SectorTimes": [
+                22741,
+                63414,
+                98530
+              ],
+              "PositionInClass": 8,
+              "Valid": true,
+              "Position": 8,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                -1000,
+                -1000,
+                -1000
+              ],
+              "PositionInClass": 8,
+              "Valid": true,
+              "Position": 8,
+              "PitStopOccured": false,
+              "Incidents": []
+            }
+          ]
+        },
+        {
+          "UserId": 461916,
+          "FullName": "Michel",
+          "Username": "michelkas1",
+          "UserWeightPenalty": 0,
+          "CarId": 7856,
+          "Car": "Hyundai i30 N TCR",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7964,
+          "CarPerformanceIndex": 160,
+          "Position": 9,
+          "PositionInClass": 9,
+          "StartPosition": 9,
+          "StartPositionInClass": 9,
+          "BestLapTime": 98315,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": [
+            {
+              "Time": 98897,
+              "SectorTimes": [
+                22932,
+                63753,
+                98897
+              ],
+              "PositionInClass": 8,
+              "Valid": true,
+              "Position": 8,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 98315,
+              "SectorTimes": [
+                22742,
+                63244,
+                98315
+              ],
+              "PositionInClass": 9,
+              "Valid": true,
+              "Position": 9,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                -1000,
+                -1000,
+                -1000
+              ],
+              "PositionInClass": 9,
+              "Valid": true,
+              "Position": 9,
+              "PitStopOccured": false,
+              "Incidents": []
+            }
+          ]
+        },
+        {
+          "UserId": 950553,
+          "FullName": "James",
+          "Username": "racer-4zzzz",
+          "UserWeightPenalty": 0,
+          "CarId": 7847,
+          "Car": "Audi RS 3 LMS",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7870,
+          "CarPerformanceIndex": 160,
+          "Position": 10,
+          "PositionInClass": 10,
+          "StartPosition": 10,
+          "StartPositionInClass": 10,
+          "BestLapTime": 98399,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": [
+            {
+              "Time": 98774,
+              "SectorTimes": [
+                22896,
+                63662,
+                98774
+              ],
+              "PositionInClass": 4,
+              "Valid": true,
+              "Position": 4,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98688,
+              "SectorTimes": [
+                22984,
+                63625,
+                98688
+              ],
+              "PositionInClass": 6,
+              "Valid": true,
+              "Position": 6,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98453,
+              "SectorTimes": [
+                22971,
+                63459,
+                98453
+              ],
+              "PositionInClass": 8,
+              "Valid": true,
+              "Position": 8,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98454,
+              "SectorTimes": [
+                22784,
+                63649,
+                98454
+              ],
+              "PositionInClass": 10,
+              "Valid": true,
+              "Position": 10,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98399,
+              "SectorTimes": [
+                22869,
+                63443,
+                98399
+              ],
+              "PositionInClass": 10,
+              "Valid": true,
+              "Position": 10,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                -1000,
+                -1000,
+                -1000
+              ],
+              "PositionInClass": 10,
+              "Valid": true,
+              "Position": 10,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "UserId": 4657,
+          "FullName": "Adam",
+          "Username": "Timeluster",
+          "UserWeightPenalty": 0,
+          "CarId": 7847,
+          "Car": "Audi RS 3 LMS",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7862,
+          "CarPerformanceIndex": 160,
+          "Position": 11,
+          "PositionInClass": 11,
+          "StartPosition": 11,
+          "StartPositionInClass": 11,
+          "BestLapTime": 98416,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": [
+            {
+              "Time": 99539,
+              "SectorTimes": [
+                23285,
+                64290,
+                99539
+              ],
+              "PositionInClass": 4,
+              "Valid": true,
+              "Position": 4,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                -1000,
+                -1000,
+                -1000
+              ],
+              "PositionInClass": 11,
+              "Valid": false,
+              "Position": 11,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 98923,
+              "SectorTimes": [
+                22992,
+                63849,
+                98923
+              ],
+              "PositionInClass": 10,
+              "Valid": true,
+              "Position": 10,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98416,
+              "SectorTimes": [
+                23236,
+                63692,
+                98416
+              ],
+              "PositionInClass": 9,
+              "Valid": true,
+              "Position": 9,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                -1000,
+                -1000,
+                -1000
+              ],
+              "PositionInClass": 11,
+              "Valid": false,
+              "Position": 11,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                22918,
+                63486,
+                -1000
+              ],
+              "PositionInClass": 11,
+              "Valid": true,
+              "Position": 11,
+              "PitStopOccured": false,
+              "Incidents": []
+            }
+          ]
+        },
+        {
+          "UserId": 5444050,
+          "FullName": "Olivier",
+          "Username": "REAMO",
+          "UserWeightPenalty": 0,
+          "CarId": 7856,
+          "Car": "Hyundai i30 N TCR",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7964,
+          "CarPerformanceIndex": 160,
+          "Position": 12,
+          "PositionInClass": 12,
+          "StartPosition": 12,
+          "StartPositionInClass": 12,
+          "BestLapTime": 98531,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": [
+            {
+              "Time": 99239,
+              "SectorTimes": [
+                23073,
+                63853,
+                99239
+              ],
+              "PositionInClass": 5,
+              "Valid": true,
+              "Position": 5,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                -1000,
+                -1000,
+                -1000
+              ],
+              "PositionInClass": 12,
+              "Valid": false,
+              "Position": 12,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 98531,
+              "SectorTimes": [
+                22856,
+                63535,
+                98531
+              ],
+              "PositionInClass": 8,
+              "Valid": true,
+              "Position": 8,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98559,
+              "SectorTimes": [
+                23078,
+                63591,
+                98559
+              ],
+              "PositionInClass": 11,
+              "Valid": true,
+              "Position": 11,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                -1000,
+                -1000,
+                -1000
+              ],
+              "PositionInClass": 12,
+              "Valid": false,
+              "Position": 12,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                -1000,
+                -1000,
+                -1000
+              ],
+              "PositionInClass": 12,
+              "Valid": true,
+              "Position": 12,
+              "PitStopOccured": false,
+              "Incidents": []
+            }
+          ]
+        },
+        {
+          "UserId": 980488,
+          "FullName": "Lars",
+          "Username": "woozie77",
+          "UserWeightPenalty": 0,
+          "CarId": 7847,
+          "Car": "Audi RS 3 LMS",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7869,
+          "CarPerformanceIndex": 160,
+          "Position": 13,
+          "PositionInClass": 13,
+          "StartPosition": 13,
+          "StartPositionInClass": 13,
+          "BestLapTime": 98663,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": [
+            {
+              "Time": 99308,
+              "SectorTimes": [
+                22874,
+                63959,
+                99308
+              ],
+              "PositionInClass": 9,
+              "Valid": true,
+              "Position": 9,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 3,
+                  "Points": 1,
+                  "OtherUserId": 0
+                },
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 98959,
+              "SectorTimes": [
+                22964,
+                63743,
+                98959
+              ],
+              "PositionInClass": 13,
+              "Valid": true,
+              "Position": 13,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98663,
+              "SectorTimes": [
+                22816,
+                63548,
+                98663
+              ],
+              "PositionInClass": 12,
+              "Valid": true,
+              "Position": 12,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                -1000,
+                -1000,
+                -1000
+              ],
+              "PositionInClass": 13,
+              "Valid": true,
+              "Position": 13,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 1,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "UserId": 59164,
+          "FullName": "Bastiaan",
+          "Username": "KrabbitNL",
+          "UserWeightPenalty": 0,
+          "CarId": 7847,
+          "Car": "Audi RS 3 LMS",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7870,
+          "CarPerformanceIndex": 160,
+          "Position": 14,
+          "PositionInClass": 14,
+          "StartPosition": 14,
+          "StartPositionInClass": 14,
+          "BestLapTime": 98820,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": [
+            {
+              "Time": 99264,
+              "SectorTimes": [
+                22998,
+                64003,
+                99264
+              ],
+              "PositionInClass": 6,
+              "Valid": true,
+              "Position": 6,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                -1000,
+                -1000,
+                -1000
+              ],
+              "PositionInClass": 14,
+              "Valid": false,
+              "Position": 14,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 3,
+                  "Points": 1,
+                  "OtherUserId": 0
+                },
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                -1000,
+                -1000,
+                -1000
+              ],
+              "PositionInClass": 14,
+              "Valid": false,
+              "Position": 14,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 98820,
+              "SectorTimes": [
+                22997,
+                63677,
+                98820
+              ],
+              "PositionInClass": 12,
+              "Valid": true,
+              "Position": 12,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                -1000,
+                -1000,
+                -1000
+              ],
+              "PositionInClass": 14,
+              "Valid": true,
+              "Position": 14,
+              "PitStopOccured": false,
+              "Incidents": []
+            }
+          ]
+        },
+        {
+          "UserId": 5856747,
+          "FullName": "Cyril",
+          "Username": "Spiko_0",
+          "UserWeightPenalty": 0,
+          "CarId": 7856,
+          "Car": "Hyundai i30 N TCR",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7866,
+          "CarPerformanceIndex": 160,
+          "Position": 15,
+          "PositionInClass": 15,
+          "StartPosition": 15,
+          "StartPositionInClass": 15,
+          "BestLapTime": 98935,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": [
+            {
+              "Time": 99957,
+              "SectorTimes": [
+                23078,
+                64463,
+                99957
+              ],
+              "PositionInClass": 4,
+              "Valid": true,
+              "Position": 4,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98935,
+              "SectorTimes": [
+                22894,
+                63868,
+                98935
+              ],
+              "PositionInClass": 7,
+              "Valid": true,
+              "Position": 7,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 99443,
+              "SectorTimes": [
+                22982,
+                64002,
+                99443
+              ],
+              "PositionInClass": 10,
+              "Valid": true,
+              "Position": 10,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 99093,
+              "SectorTimes": [
+                23076,
+                63876,
+                99093
+              ],
+              "PositionInClass": 13,
+              "Valid": true,
+              "Position": 13,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 99507,
+              "SectorTimes": [
+                23447,
+                64309,
+                99507
+              ],
+              "PositionInClass": 15,
+              "Valid": true,
+              "Position": 15,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                -1000,
+                -1000,
+                -1000
+              ],
+              "PositionInClass": 15,
+              "Valid": true,
+              "Position": 15,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 2,
+                  "Points": 4,
+                  "OtherUserId": 0
+                },
+                {
+                  "Type": 3,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "UserId": 5931666,
+          "FullName": "Bruno",
+          "Username": "BrunoBrito",
+          "UserWeightPenalty": 0,
+          "CarId": 7856,
+          "Car": "Hyundai i30 N TCR",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7962,
+          "CarPerformanceIndex": 160,
+          "Position": 16,
+          "PositionInClass": 16,
+          "StartPosition": 16,
+          "StartPositionInClass": 16,
+          "BestLapTime": 99382,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": [
+            {
+              "Time": 100262,
+              "SectorTimes": [
+                23096,
+                64552,
+                100262
+              ],
+              "PositionInClass": 7,
+              "Valid": true,
+              "Position": 7,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                -1000,
+                -1000,
+                -1000
+              ],
+              "PositionInClass": 16,
+              "Valid": false,
+              "Position": 16,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 3,
+                  "Points": 1,
+                  "OtherUserId": 0
+                },
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 99612,
+              "SectorTimes": [
+                22894,
+                64293,
+                99612
+              ],
+              "PositionInClass": 15,
+              "Valid": true,
+              "Position": 15,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 1,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 99382,
+              "SectorTimes": [
+                22806,
+                63669,
+                99382
+              ],
+              "PositionInClass": 16,
+              "Valid": true,
+              "Position": 16,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                -1000,
+                -1000,
+                -1000
+              ],
+              "PositionInClass": 16,
+              "Valid": true,
+              "Position": 16,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "UserId": 32699,
+          "FullName": "Nicolaj",
+          "Username": "NicoLauda",
+          "UserWeightPenalty": 0,
+          "CarId": 7850,
+          "Car": "Cupra TCR",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7871,
+          "CarPerformanceIndex": 160,
+          "Position": 17,
+          "PositionInClass": 17,
+          "StartPosition": 17,
+          "StartPositionInClass": 17,
+          "BestLapTime": 99469,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": [
+            {
+              "Time": 100221,
+              "SectorTimes": [
+                23139,
+                64902,
+                100221
+              ],
+              "PositionInClass": 8,
+              "Valid": true,
+              "Position": 8,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 3,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 100270,
+              "SectorTimes": [
+                23717,
+                64436,
+                100270
+              ],
+              "PositionInClass": 15,
+              "Valid": true,
+              "Position": 15,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 3,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 99469,
+              "SectorTimes": [
+                23167,
+                64062,
+                99469
+              ],
+              "PositionInClass": 16,
+              "Valid": true,
+              "Position": 16,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                23186,
+                64406,
+                -1000
+              ],
+              "PositionInClass": 17,
+              "Valid": true,
+              "Position": 17,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "UserId": 4865537,
+          "FullName": "Alin",
+          "Username": "alynflo",
+          "UserWeightPenalty": 0,
+          "CarId": 7847,
+          "Car": "Audi RS 3 LMS",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7869,
+          "CarPerformanceIndex": 160,
+          "Position": 18,
+          "PositionInClass": 18,
+          "StartPosition": 18,
+          "StartPositionInClass": 18,
+          "BestLapTime": 101028,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": [
+            {
+              "Time": 101028,
+              "SectorTimes": [
+                23633,
+                65248,
+                101028
+              ],
+              "PositionInClass": 8,
+              "Valid": true,
+              "Position": 8,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 101516,
+              "SectorTimes": [
+                23675,
+                65540,
+                101516
+              ],
+              "PositionInClass": 15,
+              "Valid": true,
+              "Position": 15,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                23713,
+                65553,
+                -1000
+              ],
+              "PositionInClass": 18,
+              "Valid": true,
+              "Position": 18,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 5,
+                  "Points": 2,
+                  "OtherUserId": 0
+                },
+                {
+                  "Type": 3,
+                  "Points": 1,
+                  "OtherUserId": 0
+                },
+                {
+                  "Type": 3,
+                  "Points": 1,
+                  "OtherUserId": 0
+                },
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Type": "Race",
+      "Players": [
+        {
+          "UserId": 792057,
+          "FullName": "Bence",
+          "Username": "Bence98",
+          "UserWeightPenalty": 0,
+          "CarId": 7850,
+          "Car": "Cupra TCR",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7873,
+          "CarPerformanceIndex": 160,
+          "Position": 1,
+          "PositionInClass": 1,
+          "StartPosition": 1,
+          "StartPositionInClass": 1,
+          "BestLapTime": 97152,
+          "TotalTime": 689261,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": [
+            {
+              "Time": 104829,
+              "SectorTimes": [
+                28383,
+                69995,
+                104829
+              ],
+              "PositionInClass": 1,
+              "Valid": false,
+              "Position": 1,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                },
+                {
+                  "Type": 3,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 97597,
+              "SectorTimes": [
+                22543,
+                62805,
+                97597
+              ],
+              "PositionInClass": 1,
+              "Valid": true,
+              "Position": 1,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 97501,
+              "SectorTimes": [
+                22516,
+                62933,
+                97501
+              ],
+              "PositionInClass": 1,
+              "Valid": true,
+              "Position": 1,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 97325,
+              "SectorTimes": [
+                22558,
+                62857,
+                97325
+              ],
+              "PositionInClass": 1,
+              "Valid": true,
+              "Position": 1,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 97152,
+              "SectorTimes": [
+                22478,
+                62595,
+                97152
+              ],
+              "PositionInClass": 1,
+              "Valid": true,
+              "Position": 1,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 97210,
+              "SectorTimes": [
+                22542,
+                62638,
+                97210
+              ],
+              "PositionInClass": 1,
+              "Valid": true,
+              "Position": 1,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 97642,
+              "SectorTimes": [
+                22477,
+                62828,
+                97642
+              ],
+              "PositionInClass": 1,
+              "Valid": true,
+              "Position": 1,
+              "PitStopOccured": false,
+              "Incidents": []
+            }
+          ]
+        },
+        {
+          "UserId": 1187,
+          "FullName": "Jaroslav",
+          "Username": "Jardier",
+          "UserWeightPenalty": 0,
+          "CarId": 7850,
+          "Car": "Cupra TCR",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7873,
+          "CarPerformanceIndex": 160,
+          "Position": 2,
+          "PositionInClass": 2,
+          "StartPosition": 2,
+          "StartPositionInClass": 2,
+          "BestLapTime": 97231,
+          "TotalTime": 691221,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": [
+            {
+              "Time": 105320,
+              "SectorTimes": [
+                28456,
+                70442,
+                105320
+              ],
+              "PositionInClass": 3,
+              "Valid": true,
+              "Position": 3,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 0,
+                  "Points": 4,
+                  "OtherUserId": 5543098
+                }
+              ]
+            },
+            {
+              "Time": 97855,
+              "SectorTimes": [
+                22737,
+                63327,
+                97855
+              ],
+              "PositionInClass": 3,
+              "Valid": false,
+              "Position": 3,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 97555,
+              "SectorTimes": [
+                22580,
+                62963,
+                97555
+              ],
+              "PositionInClass": 3,
+              "Valid": true,
+              "Position": 3,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 97231,
+              "SectorTimes": [
+                22599,
+                62839,
+                97231
+              ],
+              "PositionInClass": 3,
+              "Valid": true,
+              "Position": 3,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 97674,
+              "SectorTimes": [
+                22572,
+                63165,
+                97674
+              ],
+              "PositionInClass": 3,
+              "Valid": true,
+              "Position": 3,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98020,
+              "SectorTimes": [
+                22813,
+                63443,
+                98020
+              ],
+              "PositionInClass": 2,
+              "Valid": true,
+              "Position": 2,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 97563,
+              "SectorTimes": [
+                22731,
+                63023,
+                97563
+              ],
+              "PositionInClass": 2,
+              "Valid": true,
+              "Position": 2,
+              "PitStopOccured": false,
+              "Incidents": []
+            }
+          ]
+        },
+        {
+          "UserId": 4887506,
+          "FullName": "JESPER",
+          "Username": "JippTheChip",
+          "UserWeightPenalty": 0,
+          "CarId": 7847,
+          "Car": "Audi RS 3 LMS",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7862,
+          "CarPerformanceIndex": 160,
+          "Position": 3,
+          "PositionInClass": 3,
+          "StartPosition": 4,
+          "StartPositionInClass": 4,
+          "BestLapTime": 97341,
+          "TotalTime": 691778,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": [
+            {
+              "Time": 104960,
+              "SectorTimes": [
+                29150,
+                70340,
+                104960
+              ],
+              "PositionInClass": 2,
+              "Valid": true,
+              "Position": 2,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 97987,
+              "SectorTimes": [
+                22979,
+                63452,
+                97987
+              ],
+              "PositionInClass": 2,
+              "Valid": true,
+              "Position": 2,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 0,
+                  "Points": 4,
+                  "OtherUserId": 1187
+                }
+              ]
+            },
+            {
+              "Time": 97510,
+              "SectorTimes": [
+                22499,
+                62835,
+                97510
+              ],
+              "PositionInClass": 2,
+              "Valid": true,
+              "Position": 2,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 97341,
+              "SectorTimes": [
+                22597,
+                62757,
+                97341
+              ],
+              "PositionInClass": 2,
+              "Valid": true,
+              "Position": 2,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 97709,
+              "SectorTimes": [
+                22564,
+                63133,
+                97709
+              ],
+              "PositionInClass": 2,
+              "Valid": true,
+              "Position": 2,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98387,
+              "SectorTimes": [
+                22909,
+                63708,
+                98387
+              ],
+              "PositionInClass": 3,
+              "Valid": true,
+              "Position": 3,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 0,
+                  "Points": 4,
+                  "OtherUserId": 1187
+                }
+              ]
+            },
+            {
+              "Time": 97881,
+              "SectorTimes": [
+                22761,
+                63341,
+                97881
+              ],
+              "PositionInClass": 3,
+              "Valid": true,
+              "Position": 3,
+              "PitStopOccured": false,
+              "Incidents": []
+            }
+          ]
+        },
+        {
+          "UserId": 5543098,
+          "FullName": "Chris",
+          "Username": "ACRNADE",
+          "UserWeightPenalty": 0,
+          "CarId": 7850,
+          "Car": "Cupra TCR",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7864,
+          "CarPerformanceIndex": 160,
+          "Position": 4,
+          "PositionInClass": 4,
+          "StartPosition": 3,
+          "StartPositionInClass": 3,
+          "BestLapTime": 97547,
+          "TotalTime": 695020,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": [
+            {
+              "Time": 105710,
+              "SectorTimes": [
+                28684,
+                70758,
+                105710
+              ],
+              "PositionInClass": 4,
+              "Valid": true,
+              "Position": 4,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 0,
+                  "Points": 4,
+                  "OtherUserId": 1187
+                }
+              ]
+            },
+            {
+              "Time": 98378,
+              "SectorTimes": [
+                23016,
+                63782,
+                98378
+              ],
+              "PositionInClass": 4,
+              "Valid": true,
+              "Position": 4,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98533,
+              "SectorTimes": [
+                22778,
+                63932,
+                98533
+              ],
+              "PositionInClass": 5,
+              "Valid": true,
+              "Position": 5,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98494,
+              "SectorTimes": [
+                23441,
+                63840,
+                98494
+              ],
+              "PositionInClass": 5,
+              "Valid": true,
+              "Position": 5,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98553,
+              "SectorTimes": [
+                22516,
+                63965,
+                98553
+              ],
+              "PositionInClass": 4,
+              "Valid": true,
+              "Position": 4,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 97802,
+              "SectorTimes": [
+                22864,
+                63278,
+                97802
+              ],
+              "PositionInClass": 4,
+              "Valid": true,
+              "Position": 4,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 97547,
+              "SectorTimes": [
+                22646,
+                62914,
+                97547
+              ],
+              "PositionInClass": 4,
+              "Valid": true,
+              "Position": 4,
+              "PitStopOccured": false,
+              "Incidents": []
+            }
+          ]
+        },
+        {
+          "UserId": 209745,
+          "FullName": "Max",
+          "Username": "Abarth555",
+          "UserWeightPenalty": 0,
+          "CarId": 7847,
+          "Car": "Audi RS 3 LMS",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7868,
+          "CarPerformanceIndex": 160,
+          "Position": 5,
+          "PositionInClass": 5,
+          "StartPosition": 5,
+          "StartPositionInClass": 5,
+          "BestLapTime": 97880,
+          "TotalTime": 695798,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": [
+            {
+              "Time": 106298,
+              "SectorTimes": [
+                29399,
+                71109,
+                106298
+              ],
+              "PositionInClass": 6,
+              "Valid": true,
+              "Position": 6,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98663,
+              "SectorTimes": [
+                22723,
+                63837,
+                98663
+              ],
+              "PositionInClass": 6,
+              "Valid": true,
+              "Position": 6,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 97956,
+              "SectorTimes": [
+                22618,
+                63332,
+                97956
+              ],
+              "PositionInClass": 6,
+              "Valid": false,
+              "Position": 6,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 98516,
+              "SectorTimes": [
+                23306,
+                63935,
+                98516
+              ],
+              "PositionInClass": 6,
+              "Valid": true,
+              "Position": 6,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98444,
+              "SectorTimes": [
+                22576,
+                63782,
+                98444
+              ],
+              "PositionInClass": 5,
+              "Valid": true,
+              "Position": 5,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 97880,
+              "SectorTimes": [
+                22820,
+                63376,
+                97880
+              ],
+              "PositionInClass": 5,
+              "Valid": true,
+              "Position": 5,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98040,
+              "SectorTimes": [
+                22884,
+                63341,
+                98040
+              ],
+              "PositionInClass": 5,
+              "Valid": true,
+              "Position": 5,
+              "PitStopOccured": false,
+              "Incidents": []
+            }
+          ]
+        },
+        {
+          "UserId": 5495287,
+          "FullName": "Antoine",
+          "Username": "afracing",
+          "UserWeightPenalty": 0,
+          "CarId": 7856,
+          "Car": "Hyundai i30 N TCR",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7866,
+          "CarPerformanceIndex": 160,
+          "Position": 6,
+          "PositionInClass": 6,
+          "StartPosition": 6,
+          "StartPositionInClass": 6,
+          "BestLapTime": 97901,
+          "TotalTime": 696225,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": [
+            {
+              "Time": 105892,
+              "SectorTimes": [
+                29494,
+                70914,
+                105892
+              ],
+              "PositionInClass": 5,
+              "Valid": true,
+              "Position": 5,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98610,
+              "SectorTimes": [
+                22832,
+                63973,
+                98610
+              ],
+              "PositionInClass": 5,
+              "Valid": true,
+              "Position": 5,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98019,
+              "SectorTimes": [
+                22503,
+                63291,
+                98019
+              ],
+              "PositionInClass": 4,
+              "Valid": true,
+              "Position": 4,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98022,
+              "SectorTimes": [
+                23032,
+                63224,
+                98022
+              ],
+              "PositionInClass": 4,
+              "Valid": false,
+              "Position": 4,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 100235,
+              "SectorTimes": [
+                22730,
+                65524,
+                100235
+              ],
+              "PositionInClass": 6,
+              "Valid": false,
+              "Position": 6,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 97901,
+              "SectorTimes": [
+                22964,
+                63268,
+                97901
+              ],
+              "PositionInClass": 6,
+              "Valid": true,
+              "Position": 6,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 97543,
+              "SectorTimes": [
+                22516,
+                63017,
+                97543
+              ],
+              "PositionInClass": 6,
+              "Valid": false,
+              "Position": 6,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "UserId": 950553,
+          "FullName": "James",
+          "Username": "racer-4zzzz",
+          "UserWeightPenalty": 0,
+          "CarId": 7847,
+          "Car": "Audi RS 3 LMS",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7870,
+          "CarPerformanceIndex": 160,
+          "Position": 7,
+          "PositionInClass": 7,
+          "StartPosition": 10,
+          "StartPositionInClass": 10,
+          "BestLapTime": 98267,
+          "TotalTime": 698825,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": [
+            {
+              "Time": 107567,
+              "SectorTimes": [
+                31147,
+                72814,
+                107567
+              ],
+              "PositionInClass": 8,
+              "Valid": true,
+              "Position": 8,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 0,
+                  "Points": 4,
+                  "OtherUserId": 461916
+                }
+              ]
+            },
+            {
+              "Time": 99389,
+              "SectorTimes": [
+                22731,
+                64176,
+                99389
+              ],
+              "PositionInClass": 8,
+              "Valid": false,
+              "Position": 8,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                },
+                {
+                  "Type": 3,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 98267,
+              "SectorTimes": [
+                22730,
+                63472,
+                98267
+              ],
+              "PositionInClass": 7,
+              "Valid": true,
+              "Position": 7,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98543,
+              "SectorTimes": [
+                22878,
+                63540,
+                98543
+              ],
+              "PositionInClass": 7,
+              "Valid": false,
+              "Position": 7,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 98210,
+              "SectorTimes": [
+                22826,
+                63383,
+                98210
+              ],
+              "PositionInClass": 7,
+              "Valid": false,
+              "Position": 7,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 98533,
+              "SectorTimes": [
+                22787,
+                63472,
+                98533
+              ],
+              "PositionInClass": 7,
+              "Valid": false,
+              "Position": 7,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 98313,
+              "SectorTimes": [
+                22758,
+                63498,
+                98313
+              ],
+              "PositionInClass": 7,
+              "Valid": true,
+              "Position": 7,
+              "PitStopOccured": false,
+              "Incidents": []
+            }
+          ]
+        },
+        {
+          "UserId": 971331,
+          "FullName": "Remon",
+          "Username": "Ramshoek",
+          "UserWeightPenalty": 0,
+          "CarId": 7850,
+          "Car": "Cupra TCR",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7872,
+          "CarPerformanceIndex": 160,
+          "Position": 8,
+          "PositionInClass": 8,
+          "StartPosition": 8,
+          "StartPositionInClass": 8,
+          "BestLapTime": 98174,
+          "TotalTime": 700335,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": [
+            {
+              "Time": 106894,
+              "SectorTimes": [
+                30469,
+                71834,
+                106894
+              ],
+              "PositionInClass": 7,
+              "Valid": false,
+              "Position": 7,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 0,
+                  "Points": 4,
+                  "OtherUserId": 950553
+                }
+              ]
+            },
+            {
+              "Time": 99450,
+              "SectorTimes": [
+                23012,
+                63976,
+                99450
+              ],
+              "PositionInClass": 7,
+              "Valid": true,
+              "Position": 7,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 100379,
+              "SectorTimes": [
+                23149,
+                64695,
+                100379
+              ],
+              "PositionInClass": 8,
+              "Valid": false,
+              "Position": 8,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                },
+                {
+                  "Type": 3,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 98345,
+              "SectorTimes": [
+                22915,
+                63586,
+                98345
+              ],
+              "PositionInClass": 8,
+              "Valid": true,
+              "Position": 8,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98174,
+              "SectorTimes": [
+                22881,
+                63392,
+                98174
+              ],
+              "PositionInClass": 8,
+              "Valid": true,
+              "Position": 8,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98687,
+              "SectorTimes": [
+                23032,
+                63647,
+                98687
+              ],
+              "PositionInClass": 8,
+              "Valid": true,
+              "Position": 8,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98402,
+              "SectorTimes": [
+                22852,
+                63448,
+                98402
+              ],
+              "PositionInClass": 8,
+              "Valid": true,
+              "Position": 8,
+              "PitStopOccured": false,
+              "Incidents": []
+            }
+          ]
+        },
+        {
+          "UserId": 4657,
+          "FullName": "Adam",
+          "Username": "Timeluster",
+          "UserWeightPenalty": 0,
+          "CarId": 7847,
+          "Car": "Audi RS 3 LMS",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7862,
+          "CarPerformanceIndex": 160,
+          "Position": 9,
+          "PositionInClass": 9,
+          "StartPosition": 11,
+          "StartPositionInClass": 11,
+          "BestLapTime": 98139,
+          "TotalTime": 702717,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": [
+            {
+              "Time": 109809,
+              "SectorTimes": [
+                32591,
+                74824,
+                109809
+              ],
+              "PositionInClass": 11,
+              "Valid": true,
+              "Position": 11,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 0,
+                  "Points": 4,
+                  "OtherUserId": 4865537
+                },
+                {
+                  "Type": 0,
+                  "Points": 4,
+                  "OtherUserId": 5856747
+                },
+                {
+                  "Type": 0,
+                  "Points": 4,
+                  "OtherUserId": 59164
+                }
+              ]
+            },
+            {
+              "Time": 99666,
+              "SectorTimes": [
+                23702,
+                64574,
+                99666
+              ],
+              "PositionInClass": 10,
+              "Valid": true,
+              "Position": 10,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 0,
+                  "Points": 4,
+                  "OtherUserId": 212200
+                }
+              ]
+            },
+            {
+              "Time": 98139,
+              "SectorTimes": [
+                22856,
+                63257,
+                98139
+              ],
+              "PositionInClass": 10,
+              "Valid": true,
+              "Position": 10,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98398,
+              "SectorTimes": [
+                22786,
+                63508,
+                98398
+              ],
+              "PositionInClass": 10,
+              "Valid": true,
+              "Position": 10,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98753,
+              "SectorTimes": [
+                23246,
+                63944,
+                98753
+              ],
+              "PositionInClass": 10,
+              "Valid": true,
+              "Position": 10,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98651,
+              "SectorTimes": [
+                23062,
+                63685,
+                98651
+              ],
+              "PositionInClass": 9,
+              "Valid": true,
+              "Position": 9,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 99299,
+              "SectorTimes": [
+                23430,
+                64473,
+                99299
+              ],
+              "PositionInClass": 9,
+              "Valid": true,
+              "Position": 9,
+              "PitStopOccured": false,
+              "Incidents": []
+            }
+          ]
+        },
+        {
+          "UserId": 5444050,
+          "FullName": "Olivier",
+          "Username": "REAMO",
+          "UserWeightPenalty": 0,
+          "CarId": 7856,
+          "Car": "Hyundai i30 N TCR",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7964,
+          "CarPerformanceIndex": 160,
+          "Position": 10,
+          "PositionInClass": 10,
+          "StartPosition": 12,
+          "StartPositionInClass": 12,
+          "BestLapTime": 98630,
+          "TotalTime": 703112,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": [
+            {
+              "Time": 109149,
+              "SectorTimes": [
+                32111,
+                74063,
+                109149
+              ],
+              "PositionInClass": 9,
+              "Valid": false,
+              "Position": 9,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 0,
+                  "Points": 4,
+                  "OtherUserId": 980488
+                }
+              ]
+            },
+            {
+              "Time": 99172,
+              "SectorTimes": [
+                23077,
+                63925,
+                99172
+              ],
+              "PositionInClass": 9,
+              "Valid": true,
+              "Position": 9,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98630,
+              "SectorTimes": [
+                22930,
+                63631,
+                98630
+              ],
+              "PositionInClass": 9,
+              "Valid": true,
+              "Position": 9,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98971,
+              "SectorTimes": [
+                23013,
+                63877,
+                98971
+              ],
+              "PositionInClass": 9,
+              "Valid": true,
+              "Position": 9,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98726,
+              "SectorTimes": [
+                22862,
+                63670,
+                98726
+              ],
+              "PositionInClass": 9,
+              "Valid": true,
+              "Position": 9,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98817,
+              "SectorTimes": [
+                22872,
+                63639,
+                98817
+              ],
+              "PositionInClass": 10,
+              "Valid": false,
+              "Position": 10,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 99644,
+              "SectorTimes": [
+                23435,
+                64876,
+                99644
+              ],
+              "PositionInClass": 10,
+              "Valid": true,
+              "Position": 10,
+              "PitStopOccured": false,
+              "Incidents": []
+            }
+          ]
+        },
+        {
+          "UserId": 461916,
+          "FullName": "Michel",
+          "Username": "michelkas1",
+          "UserWeightPenalty": 0,
+          "CarId": 7856,
+          "Car": "Hyundai i30 N TCR",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7964,
+          "CarPerformanceIndex": 160,
+          "Position": 11,
+          "PositionInClass": 11,
+          "StartPosition": 9,
+          "StartPositionInClass": 9,
+          "BestLapTime": 98516,
+          "TotalTime": 706741,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": [
+            {
+              "Time": 112966,
+              "SectorTimes": [
+                36271,
+                77742,
+                112966
+              ],
+              "PositionInClass": 17,
+              "Valid": true,
+              "Position": 17,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 0,
+                  "Points": 4,
+                  "OtherUserId": 950553
+                },
+                {
+                  "Type": 5,
+                  "Points": 2,
+                  "OtherUserId": 0
+                },
+                {
+                  "Type": 0,
+                  "Points": 4,
+                  "OtherUserId": 5931666
+                }
+              ]
+            },
+            {
+              "Time": 99930,
+              "SectorTimes": [
+                23370,
+                64511,
+                99930
+              ],
+              "PositionInClass": 13,
+              "Valid": true,
+              "Position": 13,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 0,
+                  "Points": 4,
+                  "OtherUserId": 980488
+                },
+                {
+                  "Type": 0,
+                  "Points": 4,
+                  "OtherUserId": 4865537
+                }
+              ]
+            },
+            {
+              "Time": 98496,
+              "SectorTimes": [
+                22970,
+                63525,
+                98496
+              ],
+              "PositionInClass": 13,
+              "Valid": false,
+              "Position": 13,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 98516,
+              "SectorTimes": [
+                22931,
+                63565,
+                98516
+              ],
+              "PositionInClass": 13,
+              "Valid": true,
+              "Position": 13,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 99202,
+              "SectorTimes": [
+                23081,
+                64218,
+                99202
+              ],
+              "PositionInClass": 11,
+              "Valid": true,
+              "Position": 11,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 99101,
+              "SectorTimes": [
+                22887,
+                64118,
+                99101
+              ],
+              "PositionInClass": 11,
+              "Valid": true,
+              "Position": 11,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98527,
+              "SectorTimes": [
+                22819,
+                63584,
+                98527
+              ],
+              "PositionInClass": 11,
+              "Valid": false,
+              "Position": 11,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "UserId": 5856747,
+          "FullName": "Cyril",
+          "Username": "Spiko_0",
+          "UserWeightPenalty": 0,
+          "CarId": 7856,
+          "Car": "Hyundai i30 N TCR",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7866,
+          "CarPerformanceIndex": 160,
+          "Position": 12,
+          "PositionInClass": 12,
+          "StartPosition": 15,
+          "StartPositionInClass": 15,
+          "BestLapTime": 98779,
+          "TotalTime": 707714,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": [
+            {
+              "Time": 111870,
+              "SectorTimes": [
+                32947,
+                75382,
+                111870
+              ],
+              "PositionInClass": 13,
+              "Valid": true,
+              "Position": 13,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 0,
+                  "Points": 4,
+                  "OtherUserId": 32699
+                }
+              ]
+            },
+            {
+              "Time": 99473,
+              "SectorTimes": [
+                22881,
+                63811,
+                99473
+              ],
+              "PositionInClass": 12,
+              "Valid": false,
+              "Position": 12,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 98598,
+              "SectorTimes": [
+                22778,
+                63508,
+                98598
+              ],
+              "PositionInClass": 12,
+              "Valid": false,
+              "Position": 12,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 99678,
+              "SectorTimes": [
+                22762,
+                64254,
+                99678
+              ],
+              "PositionInClass": 12,
+              "Valid": false,
+              "Position": 12,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 99914,
+              "SectorTimes": [
+                23294,
+                64724,
+                99914
+              ],
+              "PositionInClass": 12,
+              "Valid": false,
+              "Position": 12,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 99399,
+              "SectorTimes": [
+                22640,
+                64113,
+                99399
+              ],
+              "PositionInClass": 12,
+              "Valid": true,
+              "Position": 12,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98779,
+              "SectorTimes": [
+                22943,
+                63474,
+                98779
+              ],
+              "PositionInClass": 12,
+              "Valid": true,
+              "Position": 12,
+              "PitStopOccured": false,
+              "Incidents": []
+            }
+          ]
+        },
+        {
+          "UserId": 980488,
+          "FullName": "Lars",
+          "Username": "woozie77",
+          "UserWeightPenalty": 0,
+          "CarId": 7847,
+          "Car": "Audi RS 3 LMS",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7869,
+          "CarPerformanceIndex": 160,
+          "Position": 13,
+          "PositionInClass": 13,
+          "StartPosition": 13,
+          "StartPositionInClass": 13,
+          "BestLapTime": 99239,
+          "TotalTime": 718982,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": [
+            {
+              "Time": 112883,
+              "SectorTimes": [
+                33627,
+                76270,
+                112883
+              ],
+              "PositionInClass": 16,
+              "Valid": false,
+              "Position": 16,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 0,
+                  "Points": 4,
+                  "OtherUserId": 5444050
+                },
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 101305,
+              "SectorTimes": [
+                23322,
+                65763,
+                101305
+              ],
+              "PositionInClass": 16,
+              "Valid": false,
+              "Position": 16,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 100800,
+              "SectorTimes": [
+                23436,
+                65293,
+                100800
+              ],
+              "PositionInClass": 15,
+              "Valid": true,
+              "Position": 15,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 99239,
+              "SectorTimes": [
+                23057,
+                63989,
+                99239
+              ],
+              "PositionInClass": 15,
+              "Valid": true,
+              "Position": 15,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 104770,
+              "SectorTimes": [
+                24156,
+                69322,
+                104770
+              ],
+              "PositionInClass": 14,
+              "Valid": true,
+              "Position": 14,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 3,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 99414,
+              "SectorTimes": [
+                23154,
+                63969,
+                99414
+              ],
+              "PositionInClass": 13,
+              "Valid": false,
+              "Position": 13,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 100568,
+              "SectorTimes": [
+                23198,
+                65195,
+                100568
+              ],
+              "PositionInClass": 13,
+              "Valid": false,
+              "Position": 13,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "UserId": 5931666,
+          "FullName": "Bruno",
+          "Username": "BrunoBrito",
+          "UserWeightPenalty": 0,
+          "CarId": 7856,
+          "Car": "Hyundai i30 N TCR",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7962,
+          "CarPerformanceIndex": 160,
+          "Position": 14,
+          "PositionInClass": 14,
+          "StartPosition": 16,
+          "StartPositionInClass": 16,
+          "BestLapTime": 100255,
+          "TotalTime": 719714,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": [
+            {
+              "Time": 113725,
+              "SectorTimes": [
+                33272,
+                77600,
+                113725
+              ],
+              "PositionInClass": 18,
+              "Valid": false,
+              "Position": 18,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 0,
+                  "Points": 4,
+                  "OtherUserId": 32699
+                },
+                {
+                  "Type": 3,
+                  "Points": 1,
+                  "OtherUserId": 0
+                },
+                {
+                  "Type": 0,
+                  "Points": 4,
+                  "OtherUserId": 461916
+                }
+              ]
+            },
+            {
+              "Time": 101247,
+              "SectorTimes": [
+                23249,
+                65465,
+                101247
+              ],
+              "PositionInClass": 17,
+              "Valid": true,
+              "Position": 17,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 101768,
+              "SectorTimes": [
+                23651,
+                65668,
+                101768
+              ],
+              "PositionInClass": 16,
+              "Valid": true,
+              "Position": 16,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 100870,
+              "SectorTimes": [
+                23855,
+                65062,
+                100870
+              ],
+              "PositionInClass": 16,
+              "Valid": false,
+              "Position": 16,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                },
+                {
+                  "Type": 3,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 100255,
+              "SectorTimes": [
+                23324,
+                64715,
+                100255
+              ],
+              "PositionInClass": 13,
+              "Valid": true,
+              "Position": 13,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 101111,
+              "SectorTimes": [
+                23410,
+                64713,
+                101111
+              ],
+              "PositionInClass": 14,
+              "Valid": true,
+              "Position": 14,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 100735,
+              "SectorTimes": [
+                22702,
+                65544,
+                100735
+              ],
+              "PositionInClass": 14,
+              "Valid": true,
+              "Position": 14,
+              "PitStopOccured": false,
+              "Incidents": []
+            }
+          ]
+        },
+        {
+          "UserId": 32699,
+          "FullName": "Nicolaj",
+          "Username": "NicoLauda",
+          "UserWeightPenalty": 0,
+          "CarId": 7850,
+          "Car": "Cupra TCR",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7871,
+          "CarPerformanceIndex": 160,
+          "Position": 15,
+          "PositionInClass": 15,
+          "StartPosition": 17,
+          "StartPositionInClass": 17,
+          "BestLapTime": 99672,
+          "TotalTime": 725494,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": [
+            {
+              "Time": 112757,
+              "SectorTimes": [
+                33699,
+                76885,
+                112757
+              ],
+              "PositionInClass": 15,
+              "Valid": true,
+              "Position": 15,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 0,
+                  "Points": 4,
+                  "OtherUserId": 5856747
+                }
+              ]
+            },
+            {
+              "Time": 101301,
+              "SectorTimes": [
+                23156,
+                64543,
+                101301
+              ],
+              "PositionInClass": 15,
+              "Valid": true,
+              "Position": 15,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 0,
+                  "Points": 4,
+                  "OtherUserId": 4865537
+                }
+              ]
+            },
+            {
+              "Time": 100274,
+              "SectorTimes": [
+                23389,
+                65089,
+                100274
+              ],
+              "PositionInClass": 14,
+              "Valid": true,
+              "Position": 14,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 99672,
+              "SectorTimes": [
+                22981,
+                64221,
+                99672
+              ],
+              "PositionInClass": 14,
+              "Valid": true,
+              "Position": 14,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 105454,
+              "SectorTimes": [
+                23832,
+                69886,
+                105454
+              ],
+              "PositionInClass": 15,
+              "Valid": false,
+              "Position": 15,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                },
+                {
+                  "Type": 3,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 106357,
+              "SectorTimes": [
+                23280,
+                70822,
+                106357
+              ],
+              "PositionInClass": 16,
+              "Valid": false,
+              "Position": 16,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 3,
+                  "Points": 1,
+                  "OtherUserId": 0
+                },
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 99677,
+              "SectorTimes": [
+                22904,
+                64191,
+                99677
+              ],
+              "PositionInClass": 15,
+              "Valid": true,
+              "Position": 15,
+              "PitStopOccured": false,
+              "Incidents": []
+            }
+          ]
+        },
+        {
+          "UserId": 4865537,
+          "FullName": "Alin",
+          "Username": "alynflo",
+          "UserWeightPenalty": 0,
+          "CarId": 7847,
+          "Car": "Audi RS 3 LMS",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7869,
+          "CarPerformanceIndex": 160,
+          "Position": 16,
+          "PositionInClass": 16,
+          "StartPosition": 18,
+          "StartPositionInClass": 18,
+          "BestLapTime": 101239,
+          "TotalTime": 735166,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": [
+            {
+              "Time": 112321,
+              "SectorTimes": [
+                32612,
+                75917,
+                112321
+              ],
+              "PositionInClass": 14,
+              "Valid": false,
+              "Position": 14,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 0,
+                  "Points": 4,
+                  "OtherUserId": 4657
+                }
+              ]
+            },
+            {
+              "Time": 101546,
+              "SectorTimes": [
+                23201,
+                64862,
+                101546
+              ],
+              "PositionInClass": 14,
+              "Valid": true,
+              "Position": 14,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 0,
+                  "Points": 4,
+                  "OtherUserId": 32699
+                },
+                {
+                  "Type": 0,
+                  "Points": 4,
+                  "OtherUserId": 461916
+                }
+              ]
+            },
+            {
+              "Time": 103134,
+              "SectorTimes": [
+                23264,
+                66579,
+                103134
+              ],
+              "PositionInClass": 17,
+              "Valid": false,
+              "Position": 17,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                },
+                {
+                  "Type": 3,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 102385,
+              "SectorTimes": [
+                24140,
+                66444,
+                102385
+              ],
+              "PositionInClass": 17,
+              "Valid": false,
+              "Position": 17,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                },
+                {
+                  "Type": 3,
+                  "Points": 1,
+                  "OtherUserId": 0
+                },
+                {
+                  "Type": 3,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 102442,
+              "SectorTimes": [
+                23871,
+                66407,
+                102442
+              ],
+              "PositionInClass": 16,
+              "Valid": false,
+              "Position": 16,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                },
+                {
+                  "Type": 3,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 101239,
+              "SectorTimes": [
+                23310,
+                65303,
+                101239
+              ],
+              "PositionInClass": 15,
+              "Valid": true,
+              "Position": 15,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 112096,
+              "SectorTimes": [
+                24058,
+                66330,
+                112096
+              ],
+              "PositionInClass": 16,
+              "Valid": false,
+              "Position": 16,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                },
+                {
+                  "Type": 3,
+                  "Points": 1,
+                  "OtherUserId": 0
+                },
+                {
+                  "Type": 1,
+                  "Points": 2,
+                  "OtherUserId": 0
+                },
+                {
+                  "Type": 3,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "UserId": 59164,
+          "FullName": "Bastiaan",
+          "Username": "KrabbitNL",
+          "UserWeightPenalty": 0,
+          "CarId": 7847,
+          "Car": "Audi RS 3 LMS",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7870,
+          "CarPerformanceIndex": 160,
+          "Position": 17,
+          "PositionInClass": 17,
+          "StartPosition": 14,
+          "StartPositionInClass": 14,
+          "BestLapTime": 99151,
+          "TotalTime": 0,
+          "FinishStatus": "DidNotFinish",
+          "RaceSessionLaps": [
+            {
+              "Time": 110731,
+              "SectorTimes": [
+                32262,
+                75209,
+                110731
+              ],
+              "PositionInClass": 12,
+              "Valid": true,
+              "Position": 12,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 0,
+                  "Points": 4,
+                  "OtherUserId": 4657
+                }
+              ]
+            },
+            {
+              "Time": 99657,
+              "SectorTimes": [
+                23386,
+                64425,
+                99657
+              ],
+              "PositionInClass": 11,
+              "Valid": false,
+              "Position": 11,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 99151,
+              "SectorTimes": [
+                23222,
+                64092,
+                99151
+              ],
+              "PositionInClass": 11,
+              "Valid": true,
+              "Position": 11,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 99291,
+              "SectorTimes": [
+                23141,
+                64059,
+                99291
+              ],
+              "PositionInClass": 11,
+              "Valid": true,
+              "Position": 11,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                },
+                {
+                  "Type": 1,
+                  "Points": 1,
+                  "OtherUserId": 0
+                },
+                {
+                  "Type": 1,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "UserId": 212200,
+          "FullName": "Mihail",
+          "Username": "WorldWide",
+          "UserWeightPenalty": 0,
+          "CarId": 7856,
+          "Car": "Hyundai i30 N TCR",
+          "CarWeightPenalty": 0,
+          "LiveryId": 7963,
+          "CarPerformanceIndex": 160,
+          "Position": 18,
+          "PositionInClass": 18,
+          "StartPosition": 7,
+          "StartPositionInClass": 7,
+          "BestLapTime": -1000,
+          "TotalTime": 0,
+          "FinishStatus": "DidNotFinish",
+          "RaceSessionLaps": [
+            {
+              "Time": 109395,
+              "SectorTimes": [
+                32219,
+                74514,
+                109395
+              ],
+              "PositionInClass": 10,
+              "Valid": false,
+              "Position": 10,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 0,
+                  "Points": 4,
+                  "OtherUserId": 461916
+                },
+                {
+                  "Type": 8,
+                  "Points": 3,
+                  "OtherUserId": -1
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -206,6 +206,14 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
                             }
                         }
 
+                        // Invalid lap
+                        if ($session->getType() !== Session::TYPE_RACE AND
+                            ! $this->helper->arrayGet($lap_data, 'Valid'))
+                        {
+                            $lap->setTime(null);
+                            $lap->setSectorTimes(array());
+                        }
+
                         // Add lap to participant
                         $participant->addLap($lap);
 
