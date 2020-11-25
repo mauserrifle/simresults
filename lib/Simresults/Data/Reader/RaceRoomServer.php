@@ -194,6 +194,27 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
                         $lap->setPitLap($lap_data['PitStopOccured']);
                         $lap->setTime($time=(round($lap_data['Time'] / 1000, 4)));
 
+                        // Set sector times in seconds
+                        $sectors_total = 0;
+                        foreach ($this->helper->arrayGet($lap_data, 'SectorTimes', array())
+                                     as $sector_time)
+                        {
+                            if ($sector_time > 0) {
+                                $sector_time_calc = $sector_time - $sectors_total;
+                                $lap->addSectorTime(round($sector_time_calc / 1000, 4));
+                                $sectors_total = $sector_time;
+                            }
+                        }
+
+                        // Invalid lap
+                        if ($session->getType() !== Session::TYPE_RACE AND
+                            array_key_exists('Valid', $lap_data) AND
+                            ! $lap_data['Valid'])
+                        {
+                            $lap->setTime(null);
+                            $lap->setSectorTimes(array());
+                        }
+
                         // Add lap to participant
                         $participant->addLap($lap);
 
