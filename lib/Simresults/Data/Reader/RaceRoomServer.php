@@ -208,7 +208,8 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
 
                         // Invalid lap
                         if ($session->getType() !== Session::TYPE_RACE AND
-                            ! $this->helper->arrayGet($lap_data, 'Valid'))
+                            array_key_exists('Valid', $lap_data) AND
+                            ! $lap_data['Valid'])
                         {
                             $lap->setTime(null);
                             $lap->setSectorTimes(array());
