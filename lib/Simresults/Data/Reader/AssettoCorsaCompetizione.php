@@ -51,6 +51,14 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
         61 => 'Porsche 718 Cayman GT4',
     );
 
+    protected $cup_categories = array(
+        0 => 'Overall',
+        1 => 'Pro-Am',
+        2 => 'Am',
+        3 => 'Silver',
+        4 => 'National',
+    );
+
     /**
      * @see Simresults\Data_Reader::canRead()
      */
@@ -185,6 +193,13 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
          */
 
         $participants_by_car_id = array();
+
+        // Initial position values per class/cup
+        $position_per_class = array();
+        foreach (array_keys($this->cup_categories) as $cup_id) {
+            $position_per_class[$cup_id] = 0;
+        }
+
         if (isset($session_result['leaderBoardLines']))
         foreach ($session_result['leaderBoardLines'] as $lead)
         {
@@ -241,6 +256,15 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
                 $race_number = $this->helper->arrayGet($lead['car'], 'raceNumber'))
             {
                 $vehicle->setNumber((int)$lead['car']['raceNumber']);
+            }
+
+            // Has cup category
+            $cup_category = $this->helper->arrayGet($lead['car'], 'cupCategory');
+            if (is_numeric($cup_category) AND isset($this->cup_categories[$cup_category]))
+            {
+                $vehicle->setClass($this->cup_categories[$cup_category]);
+                $position_per_class[$cup_category]++;
+                $participant->setClassPosition($position_per_class[$cup_category]);
             }
 
             $participant->setVehicle($vehicle);

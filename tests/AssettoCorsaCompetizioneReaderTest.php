@@ -440,12 +440,25 @@ class AssettoCorsaCompetizioneReaderTest extends PHPUnit_Framework_TestCase {
                           $participant->getVehicle()->getName());
         $this->assertSame('123', $participant->getDriver()->getDriverId());
         $this->assertSame(82, $participant->getVehicle()->getNumber());
+        $this->assertSame('Overall', $participant->getVehicle()->getClass());
         $this->assertSame('',
                           $participant->getTeam());
         $this->assertSame(1, $participant->getPosition());
+        $this->assertSame(1, $participant->getClassPosition());
         $this->assertSame(Participant::FINISH_NORMAL,
             $participant->getFinishStatus());
         $this->assertSame(2329.129, $participant->getTotalTime());
+
+        // Different cup
+        $participant = $participants[1];
+        $this->assertSame(2, $participant->getPosition());
+        $this->assertSame(1, $participant->getClassPosition());
+        $this->assertSame('Pro-Am', $participant->getVehicle()->getClass());
+        $participant = $participants[2];
+        $this->assertSame(3, $participant->getPosition());
+        $this->assertSame(2, $participant->getClassPosition());
+        $this->assertSame('Overall', $participant->getVehicle()->getClass());
+
     }
 
 
