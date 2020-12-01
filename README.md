@@ -223,7 +223,11 @@ are carefully documented.
 
 ## Sponsors
 
-Simresults development is sponsored by [Coach Dave - David Perel](https://www.davidperel.net/coaching/?ref=simresults).
+Big thanks to the following sponsors for supporting Simresults!
+Please pay them a visit :)
+
+* [Coach Dave - David Perel](https://www.davidperel.net/coaching/?ref=simresults)
+* [Sim Racing Online](https://simracingonline.co.uk/?ref=simresults)
 
 ## Bugs
 
