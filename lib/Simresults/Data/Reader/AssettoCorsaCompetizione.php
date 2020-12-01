@@ -193,7 +193,13 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
          */
 
         $participants_by_car_id = array();
+
+        // Initial position values per class/cup
         $position_per_class = array();
+        foreach (array_keys($this->cup_categories) as $cup_id) {
+            $position_per_class[$cup_id] = 0;
+        }
+
         if (isset($session_result['leaderBoardLines']))
         foreach ($session_result['leaderBoardLines'] as $lead)
         {
@@ -252,8 +258,10 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
                 $vehicle->setNumber((int)$lead['car']['raceNumber']);
             }
 
-            $cup_category = (int)$lead['car']['cupCategory'];
-            if(isset($this->cup_categories[$cup_category])) {
+            // Has cup category
+            $cup_category = $this->helper->arrayGet($lead['car'], 'cupCategory');
+            if (is_numeric($cup_category) AND isset($this->cup_categories[$cup_category]))
+            {
                 $vehicle->setClass($this->cup_categories[$cup_category]);
                 $position_per_class[$cup_category]++;
                 $participant->setClassPosition($position_per_class[$cup_category]);
