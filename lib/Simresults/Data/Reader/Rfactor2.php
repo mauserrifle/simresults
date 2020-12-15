@@ -137,7 +137,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
 
         // Create session date
         $date = new \DateTime(
-            date('c', $this->tagValue('DateTime', $xml_session)));
+            date('c', (int) $this->tagValue('DateTime', $xml_session)));
 
         // Set UTC timezone by default
         $date->setTimezone(new \DateTimeZone(self::$default_timezone));
