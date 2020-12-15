@@ -388,6 +388,7 @@ class RaceRoomReaderTest extends PHPUnit_Framework_TestCase {
                 'Experience'         =>  'RaceRoom Experience',
                 'Difficulty'         =>  'GetReal',
                 'FuelUsage'          =>  'Normal',
+                'TireWear'           =>  'Normal',
                 'MechanicalDamage'   =>  'Off',
                 'FlagRules'          =>  'Black',
                 'CutRules'           =>  'SlowDown',

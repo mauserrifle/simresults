@@ -43,13 +43,13 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
                 'Experience',
                 'Difficulty',
                 'FuelUsage',
+                'TireWear',
                 'MechanicalDamage',
                 'FlagRules',
                 'CutRules',
                 'RaceSeriesFormat',
                 'WreckerPrevention',
                 'MandatoryPitstop',
-                'MandatoryPitstop'
         );
         foreach ($known_setting_keys as $setting)
         {
