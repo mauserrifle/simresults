@@ -234,6 +234,35 @@ class RaceRoomReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertNull($participant->getLap(1)->getTime());
     }
 
+    /**
+     * Test ignoring last race lap with incidents on dnf
+     */
+    public function testIgnoringLastRaceLapWithIncidentsOnDnf()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/raceroom-server/driver.ken.j.dnf.but.with.all.laps.registered.with.incidents.json');
+
+        // Get session
+        $session = Data_Reader::factory($file_path)->getSession(3);
+        $this->assertSame(Session::TYPE_RACE, $session->getType());
+
+        $participants = $session->getParticipants();
+        $participant = $participants[7];
+
+        $this->assertSame('Ken J', $participant->getDriver()->getName());
+        $this->assertSame(12, count($participant->getLaps()));
+
+        // Test not ignoring lap without incidents
+        $file_path = realpath(__DIR__.
+            '/logs/raceroom-server/driver.ken.j.dnf.but.with.all.laps.registered.without.incidents.json');
+        $session = Data_Reader::factory($file_path)->getSession(3);
+        $participants = $session->getParticipants();
+        $participant = $participants[7];
+        $this->assertSame(Session::TYPE_RACE, $session->getType());
+        $this->assertSame(13, count($participant->getLaps()));
+    }
+
 
     /***
     **** Below tests use 1 race log file

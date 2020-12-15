@@ -1,0 +1,2573 @@
+{
+  "Server": "SRO Special Event",
+  "StartTime": 1607101107,
+  "Time": 1607107684,
+  "Experience": "RaceRoom Experience",
+  "Difficulty": "GetReal",
+  "FuelUsage": "Normal",
+  "TireWear": "Normal",
+  "MechanicalDamage": null,
+  "FlagRules": "None",
+  "CutRules": "Off",
+  "RaceSeriesFormat": null,
+  "WreckerPrevention": "Off",
+  "MandatoryPitstop": "Off",
+  "Track": "Portimao Circuit",
+  "TrackLayout": "Club",
+  "Sessions": [
+    {
+      "Type": "Practice",
+      "Players": [
+        {
+          "UserId": 5423159,
+          "FullName": "Csaba L",
+          "Username": "csabalako",
+          "UserWeightPenalty": 0,
+          "CarId": 8698,
+          "Car": "Lada Vesta",
+          "CarWeightPenalty": 0,
+          "LiveryId": 8713,
+          "CarPerformanceIndex": 160,
+          "Position": 1,
+          "PositionInClass": 1,
+          "StartPosition": 4,
+          "StartPositionInClass": 4,
+          "BestLapTime": 98876,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": []
+        },
+        {
+          "UserId": 4898484,
+          "FullName": "Manuel A",
+          "Username": "ManuelAlves",
+          "UserWeightPenalty": 0,
+          "CarId": 8698,
+          "Car": "Lada Vesta",
+          "CarWeightPenalty": 0,
+          "LiveryId": 8714,
+          "CarPerformanceIndex": 160,
+          "Position": 2,
+          "PositionInClass": 2,
+          "StartPosition": 6,
+          "StartPositionInClass": 6,
+          "BestLapTime": 99058,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": []
+        },
+        {
+          "UserId": 1167383,
+          "FullName": "Ken J",
+          "Username": "apa603",
+          "UserWeightPenalty": 0,
+          "CarId": 8698,
+          "Car": "Lada Vesta",
+          "CarWeightPenalty": 0,
+          "LiveryId": 8714,
+          "CarPerformanceIndex": 160,
+          "Position": 3,
+          "PositionInClass": 3,
+          "StartPosition": 3,
+          "StartPositionInClass": 3,
+          "BestLapTime": 99311,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": []
+        },
+        {
+          "UserId": 110002,
+          "FullName": "Flaviu B",
+          "Username": "t_rac3",
+          "UserWeightPenalty": 0,
+          "CarId": 8698,
+          "Car": "Lada Vesta",
+          "CarWeightPenalty": 0,
+          "LiveryId": 8714,
+          "CarPerformanceIndex": 160,
+          "Position": 4,
+          "PositionInClass": 4,
+          "StartPosition": 5,
+          "StartPositionInClass": 5,
+          "BestLapTime": 99397,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": []
+        },
+        {
+          "UserId": 220320,
+          "FullName": "Ed J",
+          "Username": "gtrslim",
+          "UserWeightPenalty": 0,
+          "CarId": 8698,
+          "Car": "Lada Vesta",
+          "CarWeightPenalty": 0,
+          "LiveryId": 8714,
+          "CarPerformanceIndex": 160,
+          "Position": 5,
+          "PositionInClass": 5,
+          "StartPosition": 1,
+          "StartPositionInClass": 1,
+          "BestLapTime": 100327,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": []
+        },
+        {
+          "UserId": 5933801,
+          "FullName": "Rob B",
+          "Username": "BengBandrover",
+          "UserWeightPenalty": 0,
+          "CarId": 8698,
+          "Car": "Lada Vesta",
+          "CarWeightPenalty": 0,
+          "LiveryId": 8714,
+          "CarPerformanceIndex": 160,
+          "Position": 6,
+          "PositionInClass": 6,
+          "StartPosition": 2,
+          "StartPositionInClass": 2,
+          "BestLapTime": 101588,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": []
+        },
+        {
+          "UserId": 480357,
+          "FullName": "Doug D",
+          "Username": "Doug_Spinster",
+          "UserWeightPenalty": 0,
+          "CarId": 8698,
+          "Car": "Lada Vesta",
+          "CarWeightPenalty": 0,
+          "LiveryId": 8713,
+          "CarPerformanceIndex": 160,
+          "Position": 7,
+          "PositionInClass": 7,
+          "StartPosition": 7,
+          "StartPositionInClass": 7,
+          "BestLapTime": 104578,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": []
+        },
+        {
+          "UserId": 934038,
+          "FullName": "Jos O",
+          "Username": "jogames14",
+          "UserWeightPenalty": 0,
+          "CarId": 8698,
+          "Car": "Lada Vesta",
+          "CarWeightPenalty": 0,
+          "LiveryId": 8713,
+          "CarPerformanceIndex": 160,
+          "Position": 8,
+          "PositionInClass": 8,
+          "StartPosition": 8,
+          "StartPositionInClass": 8,
+          "BestLapTime": -1000,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": []
+        }
+      ]
+    },
+    {
+      "Type": "Qualify",
+      "Players": [
+        {
+          "UserId": 4898484,
+          "FullName": "Manuel A",
+          "Username": "ManuelAlves",
+          "UserWeightPenalty": 0,
+          "CarId": 8698,
+          "Car": "Lada Vesta",
+          "CarWeightPenalty": 0,
+          "LiveryId": 8714,
+          "CarPerformanceIndex": 160,
+          "Position": 1,
+          "PositionInClass": 1,
+          "StartPosition": 1,
+          "StartPositionInClass": 1,
+          "BestLapTime": 97678,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": [
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                -1000,
+                -1000,
+                -1000
+              ],
+              "PositionInClass": 1,
+              "Valid": false,
+              "Position": 1,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98380,
+              "SectorTimes": [
+                27478,
+                47973,
+                98380
+              ],
+              "PositionInClass": 1,
+              "Valid": true,
+              "Position": 1,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 97678,
+              "SectorTimes": [
+                27181,
+                47560,
+                97678
+              ],
+              "PositionInClass": 1,
+              "Valid": true,
+              "Position": 1,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                -1000,
+                -1000,
+                -1000
+              ],
+              "PositionInClass": 1,
+              "Valid": false,
+              "Position": 1,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                },
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                -1000,
+                -1000,
+                -1000
+              ],
+              "PositionInClass": 1,
+              "Valid": true,
+              "Position": 1,
+              "PitStopOccured": false,
+              "Incidents": []
+            }
+          ]
+        },
+        {
+          "UserId": 5423159,
+          "FullName": "Csaba L",
+          "Username": "csabalako",
+          "UserWeightPenalty": 0,
+          "CarId": 8698,
+          "Car": "Lada Vesta",
+          "CarWeightPenalty": 0,
+          "LiveryId": 8713,
+          "CarPerformanceIndex": 160,
+          "Position": 2,
+          "PositionInClass": 2,
+          "StartPosition": 2,
+          "StartPositionInClass": 2,
+          "BestLapTime": 98742,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": [
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                -1000,
+                -1000,
+                -1000
+              ],
+              "PositionInClass": 2,
+              "Valid": false,
+              "Position": 2,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 106315,
+              "SectorTimes": [
+                27908,
+                49491,
+                106315
+              ],
+              "PositionInClass": 3,
+              "Valid": true,
+              "Position": 3,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98742,
+              "SectorTimes": [
+                27285,
+                48054,
+                98742
+              ],
+              "PositionInClass": 2,
+              "Valid": true,
+              "Position": 2,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                -1000,
+                -1000,
+                -1000
+              ],
+              "PositionInClass": 2,
+              "Valid": false,
+              "Position": 2,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 3,
+                  "Points": 1,
+                  "OtherUserId": 0
+                },
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 99410,
+              "SectorTimes": [
+                27375,
+                48294,
+                99410
+              ],
+              "PositionInClass": 2,
+              "Valid": true,
+              "Position": 2,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                27442,
+                48006,
+                -1000
+              ],
+              "PositionInClass": 2,
+              "Valid": true,
+              "Position": 2,
+              "PitStopOccured": false,
+              "Incidents": []
+            }
+          ]
+        },
+        {
+          "UserId": 110002,
+          "FullName": "Flaviu B",
+          "Username": "t_rac3",
+          "UserWeightPenalty": 0,
+          "CarId": 8698,
+          "Car": "Lada Vesta",
+          "CarWeightPenalty": 0,
+          "LiveryId": 8714,
+          "CarPerformanceIndex": 160,
+          "Position": 3,
+          "PositionInClass": 3,
+          "StartPosition": 3,
+          "StartPositionInClass": 3,
+          "BestLapTime": 98782,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": [
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                -1000,
+                -1000,
+                -1000
+              ],
+              "PositionInClass": 3,
+              "Valid": false,
+              "Position": 3,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98782,
+              "SectorTimes": [
+                27608,
+                48432,
+                98782
+              ],
+              "PositionInClass": 2,
+              "Valid": true,
+              "Position": 2,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                -1000,
+                -1000,
+                -1000
+              ],
+              "PositionInClass": 3,
+              "Valid": false,
+              "Position": 3,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 98832,
+              "SectorTimes": [
+                27345,
+                47947,
+                98832
+              ],
+              "PositionInClass": 3,
+              "Valid": true,
+              "Position": 3,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                -1000,
+                -1000,
+                -1000
+              ],
+              "PositionInClass": 3,
+              "Valid": false,
+              "Position": 3,
+              "PitStopOccured": true,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                -1000,
+                -1000,
+                -1000
+              ],
+              "PositionInClass": 3,
+              "Valid": true,
+              "Position": 3,
+              "PitStopOccured": false,
+              "Incidents": []
+            }
+          ]
+        },
+        {
+          "UserId": 1167383,
+          "FullName": "Ken J",
+          "Username": "apa603",
+          "UserWeightPenalty": 0,
+          "CarId": 8698,
+          "Car": "Lada Vesta",
+          "CarWeightPenalty": 0,
+          "LiveryId": 8714,
+          "CarPerformanceIndex": 160,
+          "Position": 4,
+          "PositionInClass": 4,
+          "StartPosition": 4,
+          "StartPositionInClass": 4,
+          "BestLapTime": 99207,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": [
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                -1000,
+                -1000,
+                -1000
+              ],
+              "PositionInClass": 4,
+              "Valid": false,
+              "Position": 4,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                -1000,
+                -1000,
+                -1000
+              ],
+              "PositionInClass": 4,
+              "Valid": false,
+              "Position": 4,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 3,
+                  "Points": 1,
+                  "OtherUserId": 0
+                },
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 99207,
+              "SectorTimes": [
+                28139,
+                49052,
+                99207
+              ],
+              "PositionInClass": 3,
+              "Valid": true,
+              "Position": 3,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 101121,
+              "SectorTimes": [
+                28469,
+                49693,
+                101121
+              ],
+              "PositionInClass": 4,
+              "Valid": true,
+              "Position": 4,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 99637,
+              "SectorTimes": [
+                27824,
+                48635,
+                99637
+              ],
+              "PositionInClass": 4,
+              "Valid": true,
+              "Position": 4,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                27734,
+                48418,
+                -1000
+              ],
+              "PositionInClass": 4,
+              "Valid": true,
+              "Position": 4,
+              "PitStopOccured": false,
+              "Incidents": []
+            }
+          ]
+        },
+        {
+          "UserId": 934038,
+          "FullName": "Jos O",
+          "Username": "jogames14",
+          "UserWeightPenalty": 0,
+          "CarId": 8698,
+          "Car": "Lada Vesta",
+          "CarWeightPenalty": 0,
+          "LiveryId": 8713,
+          "CarPerformanceIndex": 160,
+          "Position": 5,
+          "PositionInClass": 5,
+          "StartPosition": 5,
+          "StartPositionInClass": 5,
+          "BestLapTime": 100324,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": [
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                -1000,
+                -1000,
+                -1000
+              ],
+              "PositionInClass": 5,
+              "Valid": false,
+              "Position": 5,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 102627,
+              "SectorTimes": [
+                28976,
+                50187,
+                102627
+              ],
+              "PositionInClass": 4,
+              "Valid": true,
+              "Position": 4,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 101162,
+              "SectorTimes": [
+                27866,
+                49128,
+                101162
+              ],
+              "PositionInClass": 6,
+              "Valid": true,
+              "Position": 6,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                -1000,
+                -1000,
+                -1000
+              ],
+              "PositionInClass": 5,
+              "Valid": false,
+              "Position": 5,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 6,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 100324,
+              "SectorTimes": [
+                28074,
+                49399,
+                100324
+              ],
+              "PositionInClass": 5,
+              "Valid": true,
+              "Position": 5,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                28029,
+                -1000,
+                -1000
+              ],
+              "PositionInClass": 5,
+              "Valid": true,
+              "Position": 5,
+              "PitStopOccured": false,
+              "Incidents": []
+            }
+          ]
+        },
+        {
+          "UserId": 5933801,
+          "FullName": "Rob B",
+          "Username": "BengBandrover",
+          "UserWeightPenalty": 0,
+          "CarId": 8698,
+          "Car": "Lada Vesta",
+          "CarWeightPenalty": 0,
+          "LiveryId": 8714,
+          "CarPerformanceIndex": 160,
+          "Position": 6,
+          "PositionInClass": 6,
+          "StartPosition": 6,
+          "StartPositionInClass": 6,
+          "BestLapTime": 100363,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": [
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                -1000,
+                -1000,
+                -1000
+              ],
+              "PositionInClass": 6,
+              "Valid": false,
+              "Position": 6,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 100948,
+              "SectorTimes": [
+                28418,
+                49822,
+                100948
+              ],
+              "PositionInClass": 2,
+              "Valid": true,
+              "Position": 2,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 101388,
+              "SectorTimes": [
+                28858,
+                50285,
+                101388
+              ],
+              "PositionInClass": 3,
+              "Valid": true,
+              "Position": 3,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 105956,
+              "SectorTimes": [
+                28973,
+                53955,
+                105956
+              ],
+              "PositionInClass": 5,
+              "Valid": true,
+              "Position": 5,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 100363,
+              "SectorTimes": [
+                28030,
+                49059,
+                100363
+              ],
+              "PositionInClass": 5,
+              "Valid": true,
+              "Position": 5,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                -1000,
+                -1000,
+                -1000
+              ],
+              "PositionInClass": 6,
+              "Valid": true,
+              "Position": 6,
+              "PitStopOccured": false,
+              "Incidents": []
+            }
+          ]
+        },
+        {
+          "UserId": 480357,
+          "FullName": "Doug D",
+          "Username": "Doug_Spinster",
+          "UserWeightPenalty": 0,
+          "CarId": 8698,
+          "Car": "Lada Vesta",
+          "CarWeightPenalty": 0,
+          "LiveryId": 8713,
+          "CarPerformanceIndex": 160,
+          "Position": 7,
+          "PositionInClass": 7,
+          "StartPosition": 7,
+          "StartPositionInClass": 7,
+          "BestLapTime": 102709,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": [
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                -1000,
+                -1000,
+                -1000
+              ],
+              "PositionInClass": 7,
+              "Valid": false,
+              "Position": 7,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 102709,
+              "SectorTimes": [
+                28501,
+                50266,
+                102709
+              ],
+              "PositionInClass": 4,
+              "Valid": true,
+              "Position": 4,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                -1000,
+                -1000,
+                -1000
+              ],
+              "PositionInClass": 7,
+              "Valid": true,
+              "Position": 7,
+              "PitStopOccured": false,
+              "Incidents": []
+            }
+          ]
+        },
+        {
+          "UserId": 220320,
+          "FullName": "Ed J",
+          "Username": "gtrslim",
+          "UserWeightPenalty": 0,
+          "CarId": 8698,
+          "Car": "Lada Vesta",
+          "CarWeightPenalty": 0,
+          "LiveryId": 8714,
+          "CarPerformanceIndex": 160,
+          "Position": 8,
+          "PositionInClass": 8,
+          "StartPosition": 8,
+          "StartPositionInClass": 8,
+          "BestLapTime": 103234,
+          "TotalTime": -1,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": [
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                -1000,
+                -1000,
+                -1000
+              ],
+              "PositionInClass": 8,
+              "Valid": false,
+              "Position": 8,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 103234,
+              "SectorTimes": [
+                28520,
+                49663,
+                103234
+              ],
+              "PositionInClass": 6,
+              "Valid": true,
+              "Position": 6,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": -1000,
+              "SectorTimes": [
+                -1000,
+                -1000,
+                -1000
+              ],
+              "PositionInClass": 8,
+              "Valid": true,
+              "Position": 8,
+              "PitStopOccured": false,
+              "Incidents": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Type": "Race",
+      "Players": [
+        {
+          "UserId": 4898484,
+          "FullName": "Manuel A",
+          "Username": "ManuelAlves",
+          "UserWeightPenalty": 0,
+          "CarId": 8698,
+          "Car": "Lada Vesta",
+          "CarWeightPenalty": 0,
+          "LiveryId": 8714,
+          "CarPerformanceIndex": 160,
+          "Position": 1,
+          "PositionInClass": 1,
+          "StartPosition": 1,
+          "StartPositionInClass": 1,
+          "BestLapTime": 97745,
+          "TotalTime": 1284422,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": [
+            {
+              "Time": 105450,
+              "SectorTimes": [
+                34462,
+                55173,
+                105450
+              ],
+              "PositionInClass": 1,
+              "Valid": true,
+              "Position": 1,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 97745,
+              "SectorTimes": [
+                27101,
+                47542,
+                97745
+              ],
+              "PositionInClass": 1,
+              "Valid": true,
+              "Position": 1,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98155,
+              "SectorTimes": [
+                27232,
+                47701,
+                98155
+              ],
+              "PositionInClass": 1,
+              "Valid": true,
+              "Position": 1,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 97864,
+              "SectorTimes": [
+                27401,
+                47788,
+                97864
+              ],
+              "PositionInClass": 1,
+              "Valid": true,
+              "Position": 1,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 97907,
+              "SectorTimes": [
+                27194,
+                47658,
+                97907
+              ],
+              "PositionInClass": 1,
+              "Valid": true,
+              "Position": 1,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98246,
+              "SectorTimes": [
+                27166,
+                47729,
+                98246
+              ],
+              "PositionInClass": 1,
+              "Valid": true,
+              "Position": 1,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98067,
+              "SectorTimes": [
+                27275,
+                47765,
+                98067
+              ],
+              "PositionInClass": 1,
+              "Valid": true,
+              "Position": 1,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 99071,
+              "SectorTimes": [
+                27789,
+                48392,
+                99071
+              ],
+              "PositionInClass": 1,
+              "Valid": true,
+              "Position": 1,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98110,
+              "SectorTimes": [
+                27364,
+                47739,
+                98110
+              ],
+              "PositionInClass": 1,
+              "Valid": true,
+              "Position": 1,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98413,
+              "SectorTimes": [
+                27393,
+                47876,
+                98413
+              ],
+              "PositionInClass": 1,
+              "Valid": true,
+              "Position": 1,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98523,
+              "SectorTimes": [
+                27353,
+                47899,
+                98523
+              ],
+              "PositionInClass": 1,
+              "Valid": true,
+              "Position": 1,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98204,
+              "SectorTimes": [
+                27310,
+                47731,
+                98204
+              ],
+              "PositionInClass": 1,
+              "Valid": true,
+              "Position": 1,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98661,
+              "SectorTimes": [
+                27250,
+                48093,
+                98661
+              ],
+              "PositionInClass": 1,
+              "Valid": true,
+              "Position": 1,
+              "PitStopOccured": false,
+              "Incidents": []
+            }
+          ]
+        },
+        {
+          "UserId": 5423159,
+          "FullName": "Csaba L",
+          "Username": "csabalako",
+          "UserWeightPenalty": 0,
+          "CarId": 8698,
+          "Car": "Lada Vesta",
+          "CarWeightPenalty": 0,
+          "LiveryId": 8713,
+          "CarPerformanceIndex": 160,
+          "Position": 2,
+          "PositionInClass": 2,
+          "StartPosition": 2,
+          "StartPositionInClass": 2,
+          "BestLapTime": 98247,
+          "TotalTime": 1307253,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": [
+            {
+              "Time": 106476,
+              "SectorTimes": [
+                35601,
+                56255,
+                106476
+              ],
+              "PositionInClass": 2,
+              "Valid": true,
+              "Position": 2,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98683,
+              "SectorTimes": [
+                27744,
+                48300,
+                98683
+              ],
+              "PositionInClass": 2,
+              "Valid": true,
+              "Position": 2,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98247,
+              "SectorTimes": [
+                27198,
+                47716,
+                98247
+              ],
+              "PositionInClass": 2,
+              "Valid": true,
+              "Position": 2,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98674,
+              "SectorTimes": [
+                27297,
+                47709,
+                98674
+              ],
+              "PositionInClass": 2,
+              "Valid": true,
+              "Position": 2,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 99170,
+              "SectorTimes": [
+                27442,
+                47969,
+                99170
+              ],
+              "PositionInClass": 2,
+              "Valid": true,
+              "Position": 2,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 3,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 99665,
+              "SectorTimes": [
+                28672,
+                49359,
+                99665
+              ],
+              "PositionInClass": 3,
+              "Valid": true,
+              "Position": 3,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 3,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 98841,
+              "SectorTimes": [
+                27901,
+                48421,
+                98841
+              ],
+              "PositionInClass": 3,
+              "Valid": true,
+              "Position": 3,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 3,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 99881,
+              "SectorTimes": [
+                27422,
+                48477,
+                99881
+              ],
+              "PositionInClass": 3,
+              "Valid": true,
+              "Position": 3,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 0,
+                  "Points": 4,
+                  "OtherUserId": 1167383
+                }
+              ]
+            },
+            {
+              "Time": 98430,
+              "SectorTimes": [
+                27622,
+                48120,
+                98430
+              ],
+              "PositionInClass": 3,
+              "Valid": true,
+              "Position": 3,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98298,
+              "SectorTimes": [
+                27170,
+                47711,
+                98298
+              ],
+              "PositionInClass": 3,
+              "Valid": true,
+              "Position": 3,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 99153,
+              "SectorTimes": [
+                27618,
+                48441,
+                99153
+              ],
+              "PositionInClass": 3,
+              "Valid": true,
+              "Position": 3,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 99189,
+              "SectorTimes": [
+                27385,
+                48482,
+                99189
+              ],
+              "PositionInClass": 3,
+              "Valid": true,
+              "Position": 3,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 3,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 112540,
+              "SectorTimes": [
+                27541,
+                48028,
+                112540
+              ],
+              "PositionInClass": 2,
+              "Valid": true,
+              "Position": 2,
+              "PitStopOccured": false,
+              "Incidents": []
+            }
+          ]
+        },
+        {
+          "UserId": 934038,
+          "FullName": "Jos O",
+          "Username": "jogames14",
+          "UserWeightPenalty": 0,
+          "CarId": 8698,
+          "Car": "Lada Vesta",
+          "CarWeightPenalty": 0,
+          "LiveryId": 8713,
+          "CarPerformanceIndex": 160,
+          "Position": 3,
+          "PositionInClass": 3,
+          "StartPosition": 5,
+          "StartPositionInClass": 5,
+          "BestLapTime": 98776,
+          "TotalTime": 1307641,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": [
+            {
+              "Time": 109096,
+              "SectorTimes": [
+                37809,
+                58789,
+                109096
+              ],
+              "PositionInClass": 5,
+              "Valid": true,
+              "Position": 5,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 99350,
+              "SectorTimes": [
+                27957,
+                48751,
+                99350
+              ],
+              "PositionInClass": 5,
+              "Valid": true,
+              "Position": 5,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98776,
+              "SectorTimes": [
+                27399,
+                47970,
+                98776
+              ],
+              "PositionInClass": 5,
+              "Valid": true,
+              "Position": 5,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98975,
+              "SectorTimes": [
+                27690,
+                48249,
+                98975
+              ],
+              "PositionInClass": 5,
+              "Valid": true,
+              "Position": 5,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 99932,
+              "SectorTimes": [
+                28397,
+                49274,
+                99932
+              ],
+              "PositionInClass": 5,
+              "Valid": true,
+              "Position": 5,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 100254,
+              "SectorTimes": [
+                27457,
+                48952,
+                100254
+              ],
+              "PositionInClass": 4,
+              "Valid": true,
+              "Position": 4,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 99495,
+              "SectorTimes": [
+                27920,
+                48772,
+                99495
+              ],
+              "PositionInClass": 4,
+              "Valid": true,
+              "Position": 4,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 99909,
+              "SectorTimes": [
+                28387,
+                49476,
+                99909
+              ],
+              "PositionInClass": 4,
+              "Valid": true,
+              "Position": 4,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 99641,
+              "SectorTimes": [
+                27621,
+                48498,
+                99641
+              ],
+              "PositionInClass": 4,
+              "Valid": true,
+              "Position": 4,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 3,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 100972,
+              "SectorTimes": [
+                27852,
+                48680,
+                100972
+              ],
+              "PositionInClass": 4,
+              "Valid": true,
+              "Position": 4,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 101105,
+              "SectorTimes": [
+                28204,
+                49060,
+                101105
+              ],
+              "PositionInClass": 4,
+              "Valid": true,
+              "Position": 4,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 100277,
+              "SectorTimes": [
+                28323,
+                49346,
+                100277
+              ],
+              "PositionInClass": 4,
+              "Valid": true,
+              "Position": 4,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 99851,
+              "SectorTimes": [
+                27497,
+                48419,
+                99851
+              ],
+              "PositionInClass": 3,
+              "Valid": true,
+              "Position": 3,
+              "PitStopOccured": false,
+              "Incidents": []
+            }
+          ]
+        },
+        {
+          "UserId": 110002,
+          "FullName": "Flaviu B",
+          "Username": "t_rac3",
+          "UserWeightPenalty": 0,
+          "CarId": 8698,
+          "Car": "Lada Vesta",
+          "CarWeightPenalty": 0,
+          "LiveryId": 8714,
+          "CarPerformanceIndex": 160,
+          "Position": 4,
+          "PositionInClass": 4,
+          "StartPosition": 3,
+          "StartPositionInClass": 3,
+          "BestLapTime": 98755,
+          "TotalTime": 1307697,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": [
+            {
+              "Time": 108220,
+              "SectorTimes": [
+                36845,
+                57666,
+                108220
+              ],
+              "PositionInClass": 4,
+              "Valid": true,
+              "Position": 4,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 99167,
+              "SectorTimes": [
+                27579,
+                48181,
+                99167
+              ],
+              "PositionInClass": 4,
+              "Valid": true,
+              "Position": 4,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98918,
+              "SectorTimes": [
+                27408,
+                48166,
+                98918
+              ],
+              "PositionInClass": 4,
+              "Valid": true,
+              "Position": 4,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 99841,
+              "SectorTimes": [
+                27521,
+                48570,
+                99841
+              ],
+              "PositionInClass": 4,
+              "Valid": true,
+              "Position": 4,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 99367,
+              "SectorTimes": [
+                28121,
+                48730,
+                99367
+              ],
+              "PositionInClass": 4,
+              "Valid": true,
+              "Position": 4,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 104100,
+              "SectorTimes": [
+                27529,
+                48948,
+                104100
+              ],
+              "PositionInClass": 5,
+              "Valid": true,
+              "Position": 5,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 3,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 99337,
+              "SectorTimes": [
+                27439,
+                48397,
+                99337
+              ],
+              "PositionInClass": 5,
+              "Valid": true,
+              "Position": 5,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 99741,
+              "SectorTimes": [
+                27836,
+                49027,
+                99741
+              ],
+              "PositionInClass": 5,
+              "Valid": true,
+              "Position": 5,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 103096,
+              "SectorTimes": [
+                27499,
+                50422,
+                103096
+              ],
+              "PositionInClass": 5,
+              "Valid": true,
+              "Position": 5,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 1,
+                  "Points": 2,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 99247,
+              "SectorTimes": [
+                27823,
+                48423,
+                99247
+              ],
+              "PositionInClass": 5,
+              "Valid": true,
+              "Position": 5,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98755,
+              "SectorTimes": [
+                27422,
+                48208,
+                98755
+              ],
+              "PositionInClass": 5,
+              "Valid": true,
+              "Position": 5,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98971,
+              "SectorTimes": [
+                27322,
+                48208,
+                98971
+              ],
+              "PositionInClass": 5,
+              "Valid": true,
+              "Position": 5,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 3,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 98930,
+              "SectorTimes": [
+                27244,
+                48266,
+                98930
+              ],
+              "PositionInClass": 4,
+              "Valid": true,
+              "Position": 4,
+              "PitStopOccured": false,
+              "Incidents": []
+            }
+          ]
+        },
+        {
+          "UserId": 220320,
+          "FullName": "Ed J",
+          "Username": "gtrslim",
+          "UserWeightPenalty": 0,
+          "CarId": 8698,
+          "Car": "Lada Vesta",
+          "CarWeightPenalty": 0,
+          "LiveryId": 8714,
+          "CarPerformanceIndex": 160,
+          "Position": 5,
+          "PositionInClass": 5,
+          "StartPosition": 8,
+          "StartPositionInClass": 8,
+          "BestLapTime": 99168,
+          "TotalTime": 1322911,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": [
+            {
+              "Time": 112357,
+              "SectorTimes": [
+                39666,
+                60961,
+                112357
+              ],
+              "PositionInClass": 7,
+              "Valid": true,
+              "Position": 7,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 100942,
+              "SectorTimes": [
+                28382,
+                49637,
+                100942
+              ],
+              "PositionInClass": 7,
+              "Valid": true,
+              "Position": 7,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 102254,
+              "SectorTimes": [
+                28252,
+                50209,
+                102254
+              ],
+              "PositionInClass": 7,
+              "Valid": true,
+              "Position": 7,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 0,
+                  "Points": 4,
+                  "OtherUserId": 5933801
+                }
+              ]
+            },
+            {
+              "Time": 101065,
+              "SectorTimes": [
+                28330,
+                49770,
+                101065
+              ],
+              "PositionInClass": 7,
+              "Valid": true,
+              "Position": 7,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 100299,
+              "SectorTimes": [
+                28093,
+                49940,
+                100299
+              ],
+              "PositionInClass": 7,
+              "Valid": true,
+              "Position": 7,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 100490,
+              "SectorTimes": [
+                28384,
+                49866,
+                100490
+              ],
+              "PositionInClass": 7,
+              "Valid": true,
+              "Position": 7,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 3,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 99168,
+              "SectorTimes": [
+                27754,
+                48642,
+                99168
+              ],
+              "PositionInClass": 6,
+              "Valid": true,
+              "Position": 6,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 100090,
+              "SectorTimes": [
+                28052,
+                48889,
+                100090
+              ],
+              "PositionInClass": 6,
+              "Valid": true,
+              "Position": 6,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 101361,
+              "SectorTimes": [
+                27818,
+                48723,
+                101361
+              ],
+              "PositionInClass": 6,
+              "Valid": true,
+              "Position": 6,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 3,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 101203,
+              "SectorTimes": [
+                28135,
+                49186,
+                101203
+              ],
+              "PositionInClass": 6,
+              "Valid": true,
+              "Position": 6,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 3,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 100131,
+              "SectorTimes": [
+                27913,
+                48876,
+                100131
+              ],
+              "PositionInClass": 6,
+              "Valid": true,
+              "Position": 6,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 100918,
+              "SectorTimes": [
+                27727,
+                48681,
+                100918
+              ],
+              "PositionInClass": 6,
+              "Valid": true,
+              "Position": 6,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 102627,
+              "SectorTimes": [
+                28618,
+                49747,
+                102627
+              ],
+              "PositionInClass": 5,
+              "Valid": true,
+              "Position": 5,
+              "PitStopOccured": false,
+              "Incidents": []
+            }
+          ]
+        },
+        {
+          "UserId": 5933801,
+          "FullName": "Rob B",
+          "Username": "BengBandrover",
+          "UserWeightPenalty": 0,
+          "CarId": 8698,
+          "Car": "Lada Vesta",
+          "CarWeightPenalty": 0,
+          "LiveryId": 8714,
+          "CarPerformanceIndex": 160,
+          "Position": 6,
+          "PositionInClass": 6,
+          "StartPosition": 6,
+          "StartPositionInClass": 6,
+          "BestLapTime": 100312,
+          "TotalTime": 1342759,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": [
+            {
+              "Time": 111868,
+              "SectorTimes": [
+                38666,
+                60248,
+                111868
+              ],
+              "PositionInClass": 6,
+              "Valid": true,
+              "Position": 6,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 100467,
+              "SectorTimes": [
+                28421,
+                49419,
+                100467
+              ],
+              "PositionInClass": 6,
+              "Valid": true,
+              "Position": 6,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 102716,
+              "SectorTimes": [
+                28941,
+                50229,
+                102716
+              ],
+              "PositionInClass": 6,
+              "Valid": true,
+              "Position": 6,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 0,
+                  "Points": 4,
+                  "OtherUserId": 220320
+                }
+              ]
+            },
+            {
+              "Time": 101226,
+              "SectorTimes": [
+                28593,
+                49880,
+                101226
+              ],
+              "PositionInClass": 6,
+              "Valid": true,
+              "Position": 6,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 100312,
+              "SectorTimes": [
+                28431,
+                49699,
+                100312
+              ],
+              "PositionInClass": 6,
+              "Valid": true,
+              "Position": 6,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 3,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 100788,
+              "SectorTimes": [
+                28760,
+                49922,
+                100788
+              ],
+              "PositionInClass": 6,
+              "Valid": true,
+              "Position": 6,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 101434,
+              "SectorTimes": [
+                28726,
+                49640,
+                101434
+              ],
+              "PositionInClass": 7,
+              "Valid": true,
+              "Position": 7,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 101110,
+              "SectorTimes": [
+                28833,
+                50385,
+                101110
+              ],
+              "PositionInClass": 7,
+              "Valid": true,
+              "Position": 7,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 102333,
+              "SectorTimes": [
+                28841,
+                49976,
+                102333
+              ],
+              "PositionInClass": 7,
+              "Valid": true,
+              "Position": 7,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 101572,
+              "SectorTimes": [
+                28436,
+                50155,
+                101572
+              ],
+              "PositionInClass": 7,
+              "Valid": true,
+              "Position": 7,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 102843,
+              "SectorTimes": [
+                28464,
+                51022,
+                102843
+              ],
+              "PositionInClass": 7,
+              "Valid": true,
+              "Position": 7,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 101968,
+              "SectorTimes": [
+                28725,
+                49872,
+                101968
+              ],
+              "PositionInClass": 7,
+              "Valid": true,
+              "Position": 7,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 114116,
+              "SectorTimes": [
+                28932,
+                51771,
+                114116
+              ],
+              "PositionInClass": 6,
+              "Valid": true,
+              "Position": 6,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 3,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "UserId": 480357,
+          "FullName": "Doug D",
+          "Username": "Doug_Spinster",
+          "UserWeightPenalty": 0,
+          "CarId": 8698,
+          "Car": "Lada Vesta",
+          "CarWeightPenalty": 0,
+          "LiveryId": 8713,
+          "CarPerformanceIndex": 160,
+          "Position": 7,
+          "PositionInClass": 7,
+          "StartPosition": 7,
+          "StartPositionInClass": 7,
+          "BestLapTime": 102185,
+          "TotalTime": 1351437,
+          "FinishStatus": "Finished",
+          "RaceSessionLaps": [
+            {
+              "Time": 114730,
+              "SectorTimes": [
+                40639,
+                62195,
+                114730
+              ],
+              "PositionInClass": 8,
+              "Valid": true,
+              "Position": 8,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 102260,
+              "SectorTimes": [
+                28343,
+                49989,
+                102260
+              ],
+              "PositionInClass": 8,
+              "Valid": true,
+              "Position": 8,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 102932,
+              "SectorTimes": [
+                28417,
+                49720,
+                102932
+              ],
+              "PositionInClass": 8,
+              "Valid": true,
+              "Position": 8,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 102560,
+              "SectorTimes": [
+                29081,
+                50717,
+                102560
+              ],
+              "PositionInClass": 8,
+              "Valid": true,
+              "Position": 8,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 3,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 102185,
+              "SectorTimes": [
+                28350,
+                49876,
+                102185
+              ],
+              "PositionInClass": 8,
+              "Valid": true,
+              "Position": 8,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 102278,
+              "SectorTimes": [
+                28651,
+                50135,
+                102278
+              ],
+              "PositionInClass": 8,
+              "Valid": true,
+              "Position": 8,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 102761,
+              "SectorTimes": [
+                28507,
+                50714,
+                102761
+              ],
+              "PositionInClass": 8,
+              "Valid": true,
+              "Position": 8,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 102716,
+              "SectorTimes": [
+                28796,
+                50817,
+                102716
+              ],
+              "PositionInClass": 8,
+              "Valid": true,
+              "Position": 8,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 3,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 103138,
+              "SectorTimes": [
+                28396,
+                50792,
+                103138
+              ],
+              "PositionInClass": 8,
+              "Valid": true,
+              "Position": 8,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 102826,
+              "SectorTimes": [
+                28635,
+                50585,
+                102826
+              ],
+              "PositionInClass": 8,
+              "Valid": true,
+              "Position": 8,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 3,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            },
+            {
+              "Time": 104087,
+              "SectorTimes": [
+                29502,
+                51970,
+                104087
+              ],
+              "PositionInClass": 8,
+              "Valid": true,
+              "Position": 8,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 103436,
+              "SectorTimes": [
+                28582,
+                50230,
+                103436
+              ],
+              "PositionInClass": 8,
+              "Valid": true,
+              "Position": 8,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 105521,
+              "SectorTimes": [
+                28668,
+                50570,
+                105521
+              ],
+              "PositionInClass": 7,
+              "Valid": true,
+              "Position": 7,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 3,
+                  "Points": 1,
+                  "OtherUserId": 0
+                },
+                {
+                  "Type": 3,
+                  "Points": 1,
+                  "OtherUserId": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "UserId": 1167383,
+          "FullName": "Ken J",
+          "Username": "apa603",
+          "UserWeightPenalty": 0,
+          "CarId": 8698,
+          "Car": "Lada Vesta",
+          "CarWeightPenalty": 0,
+          "LiveryId": 8714,
+          "CarPerformanceIndex": 160,
+          "Position": 8,
+          "PositionInClass": 8,
+          "StartPosition": 4,
+          "StartPositionInClass": 4,
+          "BestLapTime": 98166,
+          "TotalTime": 0,
+          "FinishStatus": "DidNotFinish",
+          "RaceSessionLaps": [
+            {
+              "Time": 107538,
+              "SectorTimes": [
+                36157,
+                56893,
+                107538
+              ],
+              "PositionInClass": 3,
+              "Valid": true,
+              "Position": 3,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98702,
+              "SectorTimes": [
+                27429,
+                48741,
+                98702
+              ],
+              "PositionInClass": 3,
+              "Valid": true,
+              "Position": 3,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98166,
+              "SectorTimes": [
+                27555,
+                48068,
+                98166
+              ],
+              "PositionInClass": 3,
+              "Valid": true,
+              "Position": 3,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98420,
+              "SectorTimes": [
+                27507,
+                48057,
+                98420
+              ],
+              "PositionInClass": 3,
+              "Valid": true,
+              "Position": 3,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98713,
+              "SectorTimes": [
+                27407,
+                47926,
+                98713
+              ],
+              "PositionInClass": 3,
+              "Valid": true,
+              "Position": 3,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98978,
+              "SectorTimes": [
+                27839,
+                48635,
+                98978
+              ],
+              "PositionInClass": 2,
+              "Valid": true,
+              "Position": 2,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 99079,
+              "SectorTimes": [
+                27355,
+                48198,
+                99079
+              ],
+              "PositionInClass": 2,
+              "Valid": true,
+              "Position": 2,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98452,
+              "SectorTimes": [
+                27350,
+                48119,
+                98452
+              ],
+              "PositionInClass": 2,
+              "Valid": true,
+              "Position": 2,
+              "PitStopOccured": false,
+              "Incidents": [
+                {
+                  "Type": 0,
+                  "Points": 4,
+                  "OtherUserId": 5423159
+                }
+              ]
+            },
+            {
+              "Time": 98603,
+              "SectorTimes": [
+                27662,
+                48355,
+                98603
+              ],
+              "PositionInClass": 2,
+              "Valid": true,
+              "Position": 2,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98316,
+              "SectorTimes": [
+                27498,
+                47947,
+                98316
+              ],
+              "PositionInClass": 2,
+              "Valid": true,
+              "Position": 2,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98486,
+              "SectorTimes": [
+                27496,
+                48073,
+                98486
+              ],
+              "PositionInClass": 2,
+              "Valid": true,
+              "Position": 2,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 98573,
+              "SectorTimes": [
+                27511,
+                48204,
+                98573
+              ],
+              "PositionInClass": 2,
+              "Valid": true,
+              "Position": 2,
+              "PitStopOccured": false,
+              "Incidents": []
+            },
+            {
+              "Time": 135225,
+              "SectorTimes": [
+                27686,
+                48445,
+                135225
+              ],
+              "PositionInClass": 6,
+              "Valid": true,
+              "Position": 6,
+              "PitStopOccured": false,
+              "Incidents": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

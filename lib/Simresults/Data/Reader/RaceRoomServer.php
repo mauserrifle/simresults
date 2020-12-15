@@ -178,6 +178,19 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
                         // Negative lap time, skip
                         if ($lap_data['Time'] < 0) continue;
 
+                        // Last lap, is race session, driver is dnf and
+                        // lap has incidents. We should exclude this lap
+                        // since it is registered fully with sectors and total
+                        // time as-if it were completed
+                        if ($lap_key === (count($laps)-1) AND
+                            $session->getType() === Session::TYPE_RACE AND
+                            $participant->getFinishStatus() === Participant::FINISH_DNF AND
+                            $this->helper->arrayGet($lap_data, 'Incidents')
+                        )
+                        {
+                            continue;
+                        }
+
                         // Init new lap
                         $lap = new Lap;
 
