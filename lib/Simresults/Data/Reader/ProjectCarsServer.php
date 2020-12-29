@@ -163,6 +163,9 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 }
             }
 
+            if (array_key_exists('AllowedCutsBeforePenalty', $history['setup'])) {
+                $this->setCurrentGameName('Automobilista 2');
+            }
 
             // Loop all stages data
             foreach ($history['stages'] as $type_key => $session_data)
