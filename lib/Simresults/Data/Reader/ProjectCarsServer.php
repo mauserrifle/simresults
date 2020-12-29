@@ -254,7 +254,6 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 {
                     $track->setVenue($this->attribute_names_automobilista2['tracks'][$history
                         ['setup']['TrackId']]['name']);
-                    $this->setCurrentGameName('Automobilista 2');
                 }
                 else
                 {
