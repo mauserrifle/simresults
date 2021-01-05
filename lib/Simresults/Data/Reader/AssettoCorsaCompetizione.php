@@ -35,6 +35,8 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
         21 => 'Honda NSX Evo 2019 ',
         22 => 'McLaren 720S GT3 2019',
         23 => 'Porsche 911 II GT3 R 2019',
+        24 => 'Ferrari 488 GT3 Evo 2020',
+        25 => 'Mercedes-AMG GT3 Evo 2020',
         // GT4 DLC
         50 => 'Alpine A1110 GT4',
         51 => 'Aston Martin Vantage GT4',
@@ -47,6 +49,14 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
         59 => 'McLaren 570S GT4',
         60 => 'Mercedes AMG GT4',
         61 => 'Porsche 718 Cayman GT4',
+    );
+
+    protected $cup_categories = array(
+        0 => 'Overall',
+        1 => 'Pro-Am',
+        2 => 'Am',
+        3 => 'Silver',
+        4 => 'National',
     );
 
     /**
@@ -142,7 +152,7 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
 
         // Set server (we do not know...)
         $server = new Server;
-        $server->setName($this->helper->arrayGet($session_data, 'server', 'Unknown'));
+        $server->setName($this->helper->arrayGet($session_data, 'serverName', 'Unknown'));
         $session->setServer($server);
 
         // Set track
@@ -183,16 +193,32 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
          */
 
         $participants_by_car_id = array();
+
+        // Initial position values per class/cup
+        $position_per_class = array();
+        foreach (array_keys($this->cup_categories) as $cup_id) {
+            $position_per_class[$cup_id] = 0;
+        }
+
         if (isset($session_result['leaderBoardLines']))
         foreach ($session_result['leaderBoardLines'] as $lead)
         {
+            if (!isset($lead['car']['carId'])) {
+                continue;
+            }
+
             // Create drivers
             $drivers = array();
 
             foreach ($lead['car']['drivers'] as $driver_data)
             {
                 $driver = new Driver;
-                $driver->setName(trim($driver_data['firstName']. ' '.$driver_data['lastName']));
+                $driver->setName(trim($driver_data['firstName']
+                    . ' '.$driver_data['lastName']));
+
+                $driver->setDriverId($this->helper->arrayGet(
+                            $driver_data, 'playerId'));
+
                 $drivers[] = $driver;
             }
 
@@ -232,6 +258,15 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
                 $vehicle->setNumber((int)$lead['car']['raceNumber']);
             }
 
+            // Has cup category
+            $cup_category = $this->helper->arrayGet($lead['car'], 'cupCategory');
+            if (is_numeric($cup_category) AND isset($this->cup_categories[$cup_category]))
+            {
+                $vehicle->setClass($this->cup_categories[$cup_category]);
+                $position_per_class[$cup_category]++;
+                $participant->setClassPosition($position_per_class[$cup_category]);
+            }
+
             $participant->setVehicle($vehicle);
             $participants_by_car_id[$lead['car']['carId']] = $participant;
         }
@@ -248,7 +283,8 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
         if (isset($data['laps']))
         foreach ($data['laps'] as $lap_data)
         {
-            if (!isset($participants_by_car_id[$lap_data['carId']])) {
+            if (!isset($lap_data['carId']) OR
+                !isset($participants_by_car_id[$lap_data['carId']])) {
                 continue;
             }
 
@@ -306,6 +342,10 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
         $penalties = array();
         $penalties_data = $this->helper->arrayGet($data, 'penalties', array());
         foreach ($penalties_data as $penalty_data) {
+
+            if (!isset($penalty_data['carId'])) {
+                continue;
+            }
 
             // Create new penalty
             $penalty = new Penalty;

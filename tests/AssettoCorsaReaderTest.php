@@ -198,6 +198,29 @@ class AssettoCorsaReaderTest extends PHPUnit_Framework_TestCase {
         $session = Data_Reader::factory($file_path)->getSession();
     }
 
+     /**
+     * Test ignoring -1 lap times
+     */
+    public function testIgnoringMinusOneLapTimes()
+    {
+        // The path to the data source
+        $file_path = realpath(
+            __DIR__.'/logs/assettocorsa/3.sessions.with.-1.times.json');
+
+        // Get qualify
+        $session = Data_Reader::factory($file_path)->getSession(2);
+
+        // Test pole
+        $participants = $session->getParticipants();
+        $participant = $participants[0];
+        $this->assertSame('Andrea G', $participant->getDriver()->getName());
+        $this->assertSame(72.665, $participant->getbestLap()->getTime());
+        $this->assertCount(8, $participant->getLaps());
+
+        // Invalid lap (cuts)
+        $this->assertNull($participant->getLap(6)->getTime());
+        $this->assertSame(0, count($participant->getLap(6)->getSectorTimes()));
+    }
 
 
     /***

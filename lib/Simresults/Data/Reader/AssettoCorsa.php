@@ -145,13 +145,17 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
                 $lap->setNumber($lap_data['lap']+1);
 
                 // Set lap time in seconds
-                $lap->setTime(round($lap_data['time'] / 1000, 4));
+                if ($lap_data['time'] > 0) {
+                    $lap->setTime(round($lap_data['time'] / 1000, 4));
+                }
 
                 // Set sector times in seconds
                 foreach ($this->helper->arrayGet($lap_data, 'sectors', array())
                              as $sector_time)
                 {
-                    $lap->addSectorTime(round($sector_time / 1000, 4));
+                    if ($sector_time > 0) {
+                        $lap->addSectorTime(round($sector_time / 1000, 4));
+                    }
                 }
 
                 // Set compound info
@@ -159,6 +163,15 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
                     $this->helper->arrayGet($lap_data, 'tyre'));
                 $lap->setRearCompound(
                     $this->helper->arrayGet($lap_data, 'tyre'));
+
+                // Invalid lap
+                if ($lap_data['time'] === -1 AND
+                    $this->helper->arrayGet($lap_data, 'cuts') AND
+                    $session->getType() !== Session::TYPE_RACE)
+                {
+                    $lap->setTime(null);
+                    $lap->setSectorTimes(array());
+                }
 
                 // Add lap to participant
                 $lap_participant->addLap($lap);

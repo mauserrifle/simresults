@@ -1,7 +1,7 @@
 {
   "result" : "ok",
   "response" : {
-      "vehicle_classes" : {
+    "vehicle_classes" : {
     "description" : "All known vehicle classes",
     "list" : [
       {
@@ -49,8 +49,16 @@
         "name" : "P1"
       },
       {
+        "value" : 1553262379,
+        "name" : "GT4"
+      },
+      {
         "value" : 1559064669,
         "name" : "F-Vee"
+      },
+      {
+        "value" : 1734909113,
+        "name" : "Carrera Cup"
       },
       {
         "value" : 1754258698,
@@ -63,6 +71,10 @@
       {
         "value" : -1989076874,
         "name" : "Kart125cc"
+      },
+      {
+        "value" : -1983642801,
+        "name" : "MiniChallenge"
       },
       {
         "value" : -1774345913,
@@ -85,6 +97,10 @@
         "name" : "KartGX390"
       },
       {
+        "value" : -1418553548,
+        "name" : "Procar"
+      },
+      {
         "value" : -1388199464,
         "name" : "Hot Cars"
       },
@@ -101,12 +117,20 @@
         "name" : "CopaClassicB"
       },
       {
+        "value" : -1270088329,
+        "name" : "Group A"
+      },
+      {
         "value" : -1165550561,
         "name" : "CopaFusca"
       },
       {
         "value" : -1097982207,
         "name" : "SuperV8"
+      },
+      {
+        "value" : -962921788,
+        "name" : "TC60S"
       },
       {
         "value" : 341043806,
@@ -137,8 +161,16 @@
         "name" : "F-V12"
       },
       {
+        "value" : -112887377,
+        "name" : "GT3"
+      },
+      {
         "value" : -72151851,
         "name" : "Cat_Supersport"
+      },
+      {
+        "value" : -22587363,
+        "name" : "F-V10_Gen1"
       },
       {
         "value" : -4032086,
@@ -194,10 +226,39 @@
       }
     ]
   },
-    "vehicles" : {
-
+  "vehicles" : {
     "description" : "All known vehicles. Each structure contains the vehicle's id, name and (optionally) class.",
     "list" : [
+      {
+        "id" : 1368036017,
+        "name" : "BMW M1 Procar",
+        "class" : "Procar"
+      },
+      {
+        "id" : -934098507,
+        "name" : "BMW M3 Sport Evo Group A",
+        "class" : "Group A"
+      },
+      {
+        "id" : 262982797,
+        "name" : "Mercedes-Benz 190E 2.5-16 Evolution 2 DTM",
+        "class" : "Group A"
+      },
+      {
+        "id" : 1330326301,
+        "name" : "MINI Cooper S 1965",
+        "class" : "TC60S"
+      },
+      {
+        "id" : -830134672,
+        "name" : "Lotus 23",
+        "class" : "TC60S"
+      },
+      {
+        "id" : 1818602836,
+        "name" : "MINI Cooper",
+        "class" : "MiniChallenge"
+      },
       {
         "id" : -950775810,
         "name" : "Caterham Academy",
@@ -294,6 +355,16 @@
         "class" : "F-Vintage_Gen2"
       },
       {
+        "id" : -1201605905,
+        "name" : "Brabham BT26A",
+        "class" : "F-Vintage_Gen2"
+      },
+      {
+        "id" : 1061494025,
+        "name" : "Lotus Type 49C Cosworth",
+        "class" : "F-Vintage_Gen2"
+      },
+      {
         "id" : 435621847,
         "name" : "Lotus Type 72E",
         "class" : "F-Retro"
@@ -354,6 +425,16 @@
         "class" : "F-V10_Gen2"
       },
       {
+        "id" : 884102371,
+        "name" : "Formula V10 G1",
+        "class" : "F-V10_Gen1"
+      },
+      {
+        "id" : -1766950841,
+        "name" : "McLaren MP4/12",
+        "class" : "F-V10_Gen1"
+      },
+      {
         "id" : -2053858829,
         "name" : "Formula V12",
         "class" : "F-V12"
@@ -384,9 +465,59 @@
         "class" : "G55Supercup"
       },
       {
+        "id" : 379055283,
+        "name" : "Ginetta G55 GT4",
+        "class" : "GT4"
+      },
+      {
         "id" : 1433352906,
         "name" : "Ginetta G58",
         "class" : "P1"
+      },
+      {
+        "id" : -241187148,
+        "name" : "BMW M6 GT3",
+        "class" : "GT3"
+      },
+      {
+        "id" : 1353949246,
+        "name" : "Mercedes-AMG GT3",
+        "class" : "GT3"
+      },
+      {
+        "id" : 809291220,
+        "name" : "Porsche 911 GT3 R",
+        "class" : "GT3"
+      },
+      {
+        "id" : 2144142462,
+        "name" : "Porsche 911 GT3 Cup 3.8",
+        "class" : "Carrera Cup"
+      },
+      {
+        "id" : -109705417,
+        "name" : "Porsche 911 GT3 Cup 4.0",
+        "class" : "Carrera Cup"
+      },
+      {
+        "id" : 1464988033,
+        "name" : "Porsche Cayman GT4 Clubsport MR",
+        "class" : "GT4"
+      },
+      {
+        "id" : 850609487,
+        "name" : "McLaren 570S GT4",
+        "class" : "GT4"
+      },
+      {
+        "id" : -310556497,
+        "name" : "McLaren 720S GT3",
+        "class" : "GT3"
+      },
+      {
+        "id" : -2019695308,
+        "name" : "Camaro GT4.R",
+        "class" : "GT4"
       },
       {
         "id" : 844159614,
@@ -475,7 +606,7 @@
       },
       {
         "id" : 306371028,
-        "name" : "Superkart 250cc (PF=Yes)",
+        "name" : "Superkart 250cc",
         "class" : "SuperKart"
       },
       {
@@ -619,9 +750,8 @@
         "class" : "ARC_Cam"
       }
     ]
-
-    },
-    "tracks" : {
+  },
+  "tracks" : {
     "description" : "All known track ids",
     "list" : [
       {
@@ -663,6 +793,16 @@
         "id" : 1828328431,
         "name" : "Brasilia_Outer",
         "gridsize" : 30
+      },
+      {
+        "id" : -1786068114,
+        "name" : "Buskerud_Long",
+        "gridsize" : 24
+      },
+      {
+        "id" : 2097280990,
+        "name" : "Buskerud_Short",
+        "gridsize" : 24
       },
       {
         "id" : 1910889511,
@@ -755,6 +895,46 @@
         "gridsize" : 34
       },
       {
+        "id" : -435924753,
+        "name" : "Hockenheim_GP",
+        "gridsize" : 30
+      },
+      {
+        "id" : 239659483,
+        "name" : "Hockenheim_ShortA",
+        "gridsize" : 30
+      },
+      {
+        "id" : 230784137,
+        "name" : "Hockenheim_ShortB",
+        "gridsize" : 30
+      },
+      {
+        "id" : -327427534,
+        "name" : "Hockenheim_National",
+        "gridsize" : 30
+      },
+      {
+        "id" : -108270200,
+        "name" : "Hockenheim_2001",
+        "gridsize" : 30
+      },
+      {
+        "id" : 534374248,
+        "name" : "Hockenheim_1988",
+        "gridsize" : 36
+      },
+      {
+        "id" : -543681041,
+        "name" : "Hockenheim_1988_short",
+        "gridsize" : 36
+      },
+      {
+        "id" : 473366003,
+        "name" : "Hockenheim_1977",
+        "gridsize" : 36
+      },
+      {
         "id" : 2111076703,
         "name" : "Ibarra2",
         "gridsize" : 30
@@ -762,7 +942,7 @@
       {
         "id" : 731129913,
         "name" : "Imola_GP_2018",
-        "gridsize" : 30
+        "gridsize" : 32
       },
       {
         "id" : 1003427592,
@@ -787,12 +967,12 @@
       {
         "id" : 1312214486,
         "name" : "Interlagos_Historic",
-        "gridsize" : 30
+        "gridsize" : 32
       },
       {
         "id" : -1704124105,
         "name" : "Interlagos_Historic_Outer",
-        "gridsize" : 30
+        "gridsize" : 32
       },
       {
         "id" : 228315736,
@@ -885,6 +1065,31 @@
         "gridsize" : 30
       },
       {
+        "id" : 884472481,
+        "name" : "Nordschleife_2020",
+        "gridsize" : 28
+      },
+      {
+        "id" : -472366150,
+        "name" : "Nordschleife_2020_24hr",
+        "gridsize" : 30
+      },
+      {
+        "id" : 899109770,
+        "name" : "Nurb_GP_2020",
+        "gridsize" : 30
+      },
+      {
+        "id" : -581740816,
+        "name" : "Nurb_GP_2020_Veedol",
+        "gridsize" : 30
+      },
+      {
+        "id" : 1133983668,
+        "name" : "Nurb_GP_2020_Sprint",
+        "gridsize" : 30
+      },
+      {
         "id" : 809214670,
         "name" : "Ortona1",
         "gridsize" : 30
@@ -930,6 +1135,51 @@
         "gridsize" : 36
       },
       {
+        "id" : -526206945,
+        "name" : "Silverstone_1975",
+        "gridsize" : 34
+      },
+      {
+        "id" : -533867030,
+        "name" : "Silverstone_1975_No_Chicane",
+        "gridsize" : 34
+      },
+      {
+        "id" : -797317755,
+        "name" : "Silverstone_1991",
+        "gridsize" : 36
+      },
+      {
+        "id" : 509991425,
+        "name" : "Silverstone_2001",
+        "gridsize" : 36
+      },
+      {
+        "id" : 1648317775,
+        "name" : "Silverstone_2001_International",
+        "gridsize" : 36
+      },
+      {
+        "id" : -507834810,
+        "name" : "Silverstone_2001_National",
+        "gridsize" : 36
+      },
+      {
+        "id" : -931849903,
+        "name" : "Silverstone_GP",
+        "gridsize" : 34
+      },
+      {
+        "id" : 964004535,
+        "name" : "Silverstone_Intl_2019",
+        "gridsize" : 34
+      },
+      {
+        "id" : -1061474453,
+        "name" : "Silverstone_Natl_2019",
+        "gridsize" : 36
+      },
+      {
         "id" : -1470317805,
         "name" : "Snetterton_100",
         "gridsize" : 20
@@ -943,6 +1193,26 @@
         "id" : 987592900,
         "name" : "Snetterton_300",
         "gridsize" : 26
+      },
+      {
+        "id" : 756011139,
+        "name" : "Speedland1",
+        "gridsize" : 14
+      },
+      {
+        "id" : -588458518,
+        "name" : "Speedland2",
+        "gridsize" : 14
+      },
+      {
+        "id" : -327486946,
+        "name" : "Speedland3",
+        "gridsize" : 14
+      },
+      {
+        "id" : -1941017299,
+        "name" : "Speedland4",
+        "gridsize" : 14
       },
       {
         "id" : -100668052,

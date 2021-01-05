@@ -214,6 +214,21 @@ class AssettoCorsaCompetizioneReaderTest extends PHPUnit_Framework_TestCase {
 
     }
 
+    /**
+     * Test no exception on missing carId in cars
+     */
+    public function testNoExceptionOnMissingCarIdInCars()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-competizione/'.
+            'race.with.missing.carId.attribute.json');
+
+        $session = Data_Reader::factory($file_path)->getSession();
+        $participants = $session->getParticipants();
+        $this->assertSame('Alberto For',
+            $participants[0]->getDriver()->getName());
+    }
 
     /**
      * Test no exception on missing driver id used in laps
@@ -377,7 +392,10 @@ class AssettoCorsaCompetizioneReaderTest extends PHPUnit_Framework_TestCase {
         $server = $this->getWorkingReader()->getSession()->getServer();
 
         // Validate server
-        $this->assertSame('Unknown', $server->getName());
+        $this->assertSame(
+            "Simresults ServerName 7 of 10 (Practice 90' RACE Sept-27th)",
+            $server->getName()
+        );
     }
 
 
@@ -420,13 +438,27 @@ class AssettoCorsaCompetizioneReaderTest extends PHPUnit_Framework_TestCase {
                           $participant->getDriver()->getName());
         $this->assertSame('Mercedes AMG GT3',
                           $participant->getVehicle()->getName());
+        $this->assertSame('123', $participant->getDriver()->getDriverId());
         $this->assertSame(82, $participant->getVehicle()->getNumber());
+        $this->assertSame('Overall', $participant->getVehicle()->getClass());
         $this->assertSame('',
                           $participant->getTeam());
         $this->assertSame(1, $participant->getPosition());
+        $this->assertSame(1, $participant->getClassPosition());
         $this->assertSame(Participant::FINISH_NORMAL,
             $participant->getFinishStatus());
         $this->assertSame(2329.129, $participant->getTotalTime());
+
+        // Different cup
+        $participant = $participants[1];
+        $this->assertSame(2, $participant->getPosition());
+        $this->assertSame(1, $participant->getClassPosition());
+        $this->assertSame('Pro-Am', $participant->getVehicle()->getClass());
+        $participant = $participants[2];
+        $this->assertSame(3, $participant->getPosition());
+        $this->assertSame(2, $participant->getClassPosition());
+        $this->assertSame('Overall', $participant->getVehicle()->getClass());
+
     }
 
 

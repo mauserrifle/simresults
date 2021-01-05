@@ -585,6 +585,16 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
                 'Automobilista2 vehicle id '.
                 $vehicleId.' is shared with Project Cars');
         }
+
+
+
+        // Detect game based on AllowedCutsBeforePenalty
+        $file_path = realpath(__DIR__.
+            '/logs/automobilista2/modified.track.and.vehicle.ids.and.added.allowedcutsbeforepenalty.setup.json');
+        $reader = Data_Reader::factory($file_path);
+        $session = $reader->getSession();
+        $game = $session->getGame();
+        $this->assertSame('Automobilista 2', $game->getName());
     }
 
 

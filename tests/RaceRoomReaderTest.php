@@ -179,7 +179,7 @@ class RaceRoomReaderTest extends PHPUnit_Framework_TestCase {
     {
         // The path to the data source
         $file_path = realpath(__DIR__.
-            '/logs/raceroom-server/race.with.new.incident.indexes.json');
+            '/logs/raceroom-server/race.with.new.incident.indexes.and.sector.times.json');
 
         // Get session
         $session = Data_Reader::factory($file_path)->getSession(3);
@@ -194,7 +194,74 @@ class RaceRoomReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertSame($participants[0], $incidents[0]->getParticipant());
     }
 
+    /**
+     * Test reading sectors
+     */
+    public function testReadingSectors()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/raceroom-server/race.with.new.incident.indexes.and.sector.times.json');
 
+        // Get session
+        $session = Data_Reader::factory($file_path)->getSession(3);
+        $participants = $session->getParticipants();
+
+        // Get sector times
+        $sectors = $participants[0]->getBestLap()->getSectorTimes();
+
+        // Validate sectors
+        $this->assertSame(22.478, $sectors[0]);
+        $this->assertSame(40.117, $sectors[1]);
+        $this->assertSame(34.557, $sectors[2]);
+    }
+
+    /**
+     * Test ignoring invalid laps
+     */
+    public function testIgnoringInvalidLaps()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/raceroom-server/qualify.with.invalid.laps.json');
+
+        // Get session
+        $session = Data_Reader::factory($file_path)->getSession(2);
+        $participants = $session->getParticipants();
+        $participant = $participants[0];
+
+        $this->assertSame('Bence', $participant->getDriver()->getName());
+        $this->assertNull($participant->getLap(1)->getTime());
+    }
+
+    /**
+     * Test ignoring last race lap with incidents on dnf
+     */
+    public function testIgnoringLastRaceLapWithIncidentsOnDnf()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/raceroom-server/driver.ken.j.dnf.but.with.all.laps.registered.with.incidents.json');
+
+        // Get session
+        $session = Data_Reader::factory($file_path)->getSession(3);
+        $this->assertSame(Session::TYPE_RACE, $session->getType());
+
+        $participants = $session->getParticipants();
+        $participant = $participants[7];
+
+        $this->assertSame('Ken J', $participant->getDriver()->getName());
+        $this->assertSame(12, count($participant->getLaps()));
+
+        // Test not ignoring lap without incidents
+        $file_path = realpath(__DIR__.
+            '/logs/raceroom-server/driver.ken.j.dnf.but.with.all.laps.registered.without.incidents.json');
+        $session = Data_Reader::factory($file_path)->getSession(3);
+        $participants = $session->getParticipants();
+        $participant = $participants[7];
+        $this->assertSame(Session::TYPE_RACE, $session->getType());
+        $this->assertSame(13, count($participant->getLaps()));
+    }
 
 
     /***
@@ -321,6 +388,7 @@ class RaceRoomReaderTest extends PHPUnit_Framework_TestCase {
                 'Experience'         =>  'RaceRoom Experience',
                 'Difficulty'         =>  'GetReal',
                 'FuelUsage'          =>  'Normal',
+                'TireWear'           =>  'Normal',
                 'MechanicalDamage'   =>  'Off',
                 'FlagRules'          =>  'Black',
                 'CutRules'           =>  'SlowDown',

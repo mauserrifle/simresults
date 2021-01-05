@@ -116,8 +116,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
 
 
         // Initial game. But might be changed later based on data
-        $this->current_game = new Game;
-        $this->current_game->setName('Project Cars');
+        $this->setCurrentGameName('Project Cars');
 
         // Init sessions array
         $sessions = array();
@@ -164,6 +163,9 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 }
             }
 
+            if (array_key_exists('AllowedCutsBeforePenalty', $history['setup'])) {
+                $this->setCurrentGameName('Automobilista 2');
+            }
 
             // Loop all stages data
             foreach ($history['stages'] as $type_key => $session_data)
@@ -866,14 +868,14 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
         // Is Automobilista2 based on hardcoded unique ids
         if (in_array($vehicle_id, self::$automobilista2_vehicle_ids))
         {
-            $this->current_game->setName('Automobilista 2');
+            $this->setCurrentGameName('Automobilista 2');
             $vehicle->setName( (string) $vehicle_id);
         }
 
         // Have friendly vehicle name from Project Cars
         if (isset($this->attribute_names['vehicles'][$vehicle_id]))
         {
-            $this->current_game->setName('Project Cars');
+            $this->setCurrentGameName('Project Cars');
             $vehicle->setName($this->attribute_names['vehicles']
                 [$vehicle_id]['name']);
             $vehicle->setClass($this->attribute_names['vehicles']
@@ -882,7 +884,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
         // Have friendly vehicle name from Project Cars 2
         elseif (isset($this->attribute_names2['vehicles'][$vehicle_id]))
         {
-            $this->current_game->setName('Project Cars 2');
+            $this->setCurrentGameName('Project Cars 2');
             $vehicle->setName($this->attribute_names2['vehicles']
                 [$vehicle_id]['name']);
             $vehicle->setClass($this->attribute_names2['vehicles']
@@ -891,7 +893,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
         // Have friendly vehicle name from Automobilista 2
         elseif (isset($this->attribute_names_automobilista2['vehicles'][$vehicle_id]))
         {
-            $this->current_game->setName('Automobilista 2');
+            $this->setCurrentGameName('Automobilista 2');
             $vehicle->setName($this->attribute_names_automobilista2['vehicles']
                 [$vehicle_id]['name']);
             $vehicle->setClass($this->attribute_names_automobilista2['vehicles']
@@ -968,6 +970,26 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
     public function getAttributeNamesAutomobilista2()
     {
         return $this->getAttributeNames('ProjectCarsAutomobilista2Attributes.json');
+    }
+
+    /**
+     * Helper to set the current game name
+     *
+     * @param string $name
+     */
+    protected function setCurrentGameName($name)
+    {
+        if ($this->current_game === NULL) {
+            $this->current_game = new Game;
+        }
+
+        // Automobilista 2 already detected, do not proceed with the setting
+        // the current given name
+        if ($this->current_game->getName() === 'Automobilista 2') {
+            return;
+        }
+
+        $this->current_game->setName($name);
     }
 
 }

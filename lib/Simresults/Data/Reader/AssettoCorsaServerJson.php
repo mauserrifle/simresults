@@ -141,6 +141,7 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
 
 
         // Process laps
+        if ($data['Laps'])
         foreach ($data['Laps'] as $lap_data)
         {
             // Init new lap
