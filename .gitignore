@@ -6,6 +6,7 @@ composer.phar
 /.settings
 /.buildpath
 /.project
+/.phpunit.result.cache
 
 # Ignore lock files
 .~lock*

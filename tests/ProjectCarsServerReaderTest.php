@@ -13,14 +13,14 @@ use Simresults\Incident;
  * @copyright  (c) 2013 Maurice van der Star
  * @license    http://opensource.org/licenses/ISC
  */
-class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
+class ProjectCarsServerReaderTest extends \PHPUnit\Framework\TestCase {
 
     /**
      * Set error reporting
      *
      * @see PHPUnit_Framework_TestCase::setUp()
      */
-    protected function setUp()
+    protected function setUp(): void
     {
         error_reporting(E_ALL);
     }
@@ -28,11 +28,10 @@ class ProjectCarsServerReaderTest extends PHPUnit_Framework_TestCase {
 
     /**
      * Test exception when no data is supplied
-     *
-     * @expectedException Simresults\Exception\CannotReadData
      */
     public function testCreatingNewProjectCarsReaderWithInvalidData()
     {
+        $this->expectException(\Simresults\Exception\CannotReadData::class);
         $reader = new PcReader('Unknown data for reader');
     }
 

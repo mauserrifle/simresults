@@ -8,35 +8,33 @@ use Simresults\Data_Reader;
  * @copyright  (c) 2013 Maurice van der Star
  * @license    http://opensource.org/licenses/ISC
  */
-class ReaderTest extends PHPUnit_Framework_TestCase {
+class ReaderTest extends \PHPUnit\Framework\TestCase {
 
     /**
      * Set error reporting
      *
      * @see PHPUnit_Framework_TestCase::setUp()
      */
-    protected function setUp()
+    protected function setUp(): void
     {
         error_reporting(E_ALL);
     }
 
     /**
      * Test exception when no data is supplied
-     *
-     * @expectedException Simresults\Exception\NoData
      */
     public function testBuildingReaderWithoutData()
     {
+        $this->expectException(\Simresults\Exception\NoData::class);
         $reader = Data_Reader::factory('');
     }
 
     /**
      * Test exception when no reader is found
-     *
-     * @expectedException Simresults\Exception\CannotFindReader
      */
     public function testBuildingReaderWithUnkownData()
     {
+        $this->expectException(\Simresults\Exception\CannotFindReader::class);
         $reader = Data_Reader::factory('Unknown data to readers');
     }
 

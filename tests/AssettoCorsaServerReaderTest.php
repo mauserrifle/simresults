@@ -11,14 +11,14 @@ use Simresults\Participant;
  * @copyright  (c) 2013 Maurice van der Star
  * @license    http://opensource.org/licenses/ISC
  */
-class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
+class AssettoCorsaServerReaderTest extends \PHPUnit\Framework\TestCase {
 
     /**
      * Set error reporting
      *
      * @see PHPUnit_Framework_TestCase::setUp()
      */
-    protected function setUp()
+    protected function setUp(): void
     {
         error_reporting(E_ALL);
     }
@@ -26,11 +26,10 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
 
     /**
      * Test exception when no data is supplied
-     *
-     * @expectedException Simresults\Exception\CannotReadData
      */
     public function testCreatingNewAssettoCorsaServerReaderWithInvalidData()
     {
+        $this->expectException(\Simresults\Exception\CannotReadData::class);
         $reader = new Data_Reader_AssettoCorsaServer('Unknown data for reader');
     }
 
@@ -762,11 +761,11 @@ class AssettoCorsaServerReaderTest extends PHPUnit_Framework_TestCase {
      *
      * TODO: This should be in ReaderTest. But we used static methods within
      * the Reader so testing was bit of a pain.
-     *
-     * @expectedException Simresults\Exception\NoSession
      */
     public function testNoSessionException()
     {
+        $this->expectException(\Simresults\Exception\NoSession::class);
+
         // The path to the data source
         $file_path = realpath(__DIR__.
             '/logs/assettocorsa-server/'.

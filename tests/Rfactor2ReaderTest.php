@@ -15,14 +15,14 @@ use Simresults\Penalty;
  * @copyright  (c) 2013 Maurice van der Star
  * @license    http://opensource.org/licenses/ISC
  */
-class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
+class Rfactor2ReaderTest extends \PHPUnit\Framework\TestCase {
 
     /**
      * Set error reporting
      *
      * @see PHPUnit_Framework_TestCase::setUp()
      */
-    protected function setUp()
+    protected function setUp(): void
     {
         error_reporting(E_ALL);
     }
@@ -30,11 +30,10 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
 
     /**
      * Test exception when no data is supplied
-     *
-     * @expectedException Simresults\Exception\CannotReadData
      */
     public function testCreatingNewRfactor2ReaderWithInvalidData()
     {
+        $this->expectException(\Simresults\Exception\CannotReadData::class);
         $reader = new Data_Reader_Rfactor2('Unknown data for reader');
     }
 
@@ -49,11 +48,11 @@ class Rfactor2ReaderTest extends PHPUnit_Framework_TestCase {
 
     /**
      * Test exception when the log file has no session included
-     *
-     * @expectedException Simresults\Exception\Reader
      */
     public function testCreatingNewRfactor2ReaderWithNoSession()
     {
+        $this->expectException(Simresults\Exception\Reader::class);
+
         // The path to the data source
         $file_path = realpath(__DIR__.'/logs/rfactor2/nosession.xml');
 
