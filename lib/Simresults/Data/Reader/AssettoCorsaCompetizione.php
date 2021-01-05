@@ -283,7 +283,8 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
         if (isset($data['laps']))
         foreach ($data['laps'] as $lap_data)
         {
-            if (!isset($participants_by_car_id[$lap_data['carId']])) {
+            if (!isset($lap_data['carId']) OR
+                !isset($participants_by_car_id[$lap_data['carId']])) {
                 continue;
             }
 
@@ -341,6 +342,10 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
         $penalties = array();
         $penalties_data = $this->helper->arrayGet($data, 'penalties', array());
         foreach ($penalties_data as $penalty_data) {
+
+            if (!isset($penalty_data['carId'])) {
+                continue;
+            }
 
             // Create new penalty
             $penalty = new Penalty;
