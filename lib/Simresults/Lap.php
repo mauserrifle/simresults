@@ -228,7 +228,7 @@ class Lap {
      * @param   int  $position
      * @return  Lap
      */
-    public function setPosition($position)
+    public function setPosition($position=null)
     {
         $this->position = $position;
         return $this;

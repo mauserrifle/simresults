@@ -272,7 +272,7 @@ class Participant {
      * @param   int          $position
      * @return  Participant
      */
-    public function setPosition($position)
+    public function setPosition($position=null)
     {
         $this->position = $position;
         return $this;
