@@ -1181,8 +1181,9 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                  */
 
                 // Split session log data with lap data as delimiter
-                $data_session2_split2 = explode(
-                    $lap_data, $data);
+                // Old unused explode, not sure what the intent was..
+                //$data_session2_split2 = explode(
+                //    $lap_data, $data);
 
                 // Get second part (so after this lap)
                 $data_session2_split2 = $data_session2_split[1];
