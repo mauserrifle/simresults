@@ -1,6 +1,5 @@
 <?php
 namespace Simresults;
-use Simresults\Helper;
 
 /**
  * The reader for Race07
@@ -24,7 +23,7 @@ class Data_Reader_Race07 extends Data_Reader {
 
 
     /**
-     * @see Simresults\Data_Reader::canRead()
+     * @inheritDoc
      */
     public static function canRead($data)
     {
@@ -351,8 +350,6 @@ class Data_Reader_Race07 extends Data_Reader {
                         // Set lap times
                         $lap->setTime($lap_data['time'])
                             ->setElapsedSeconds($lap_data['elapsed_time']);
-
-                        $all_laps_missing = false;
                     }
 
                     // Add lap to participant
@@ -400,7 +397,7 @@ class Data_Reader_Race07 extends Data_Reader {
     }
 
     /**
-     * @see Simresults\Data_Reader::init()
+     * @see Data_Reader::init()
      */
     protected function init()
     {
@@ -412,7 +409,8 @@ class Data_Reader_Race07 extends Data_Reader {
      * be converted to lowercase names. Note that any second session will
      * miss header data!
      *
-     * @return   array
+     * @param  string  $full_data
+     * @return   array|null
      *
      */
     protected static function parse_data($full_data)
@@ -453,7 +451,7 @@ class Data_Reader_Race07 extends Data_Reader {
                 }
 
                 // No section, we failed
-                if ( ! $section) return FALSE;
+                if ( ! $section) return null;
 
                 // Get key and value
                 $split = explode('=', $line, 2);

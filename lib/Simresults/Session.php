@@ -232,7 +232,7 @@ class Session {
     /**
      * Get the track this session was driven on
      *
-     * @return  Server
+     * @return  Track
      */
     public function getTrack()
     {
@@ -706,6 +706,7 @@ class Session {
      * Get the laps sorted by sector
      *
      * @param  int  $sector
+     * @return array
      */
     public function getLapsSortedBySector($sector)
     {
@@ -804,6 +805,7 @@ class Session {
      * 107% rule.
      *
      * @param  int  $above_percent
+     * @return array
      */
     public function getBadLaps($above_percent = 107)
     {
@@ -944,7 +946,7 @@ class Session {
      * Get the leading participant for a given lap number
      *
      * @param   int  $lap_number
-     * @return  Participant
+     * @return  Participant|null
      */
     public function getLeadingParticipant($lap_number)
     {
@@ -965,6 +967,8 @@ class Session {
                 return $part;
             }
         }
+
+        return null;
     }
 
     /**

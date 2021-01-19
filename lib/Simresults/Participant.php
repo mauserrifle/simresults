@@ -145,6 +145,7 @@ class Participant {
      * Return one driver. Defaults to the first driver
      *
      * @param  int  $driver_number
+     * @return Driver
      */
     public function getDriver($driver_number = 1)
     {
@@ -437,6 +438,8 @@ class Participant {
         {
             return array_pop($laps);
         }
+
+        return null;
     }
 
     /**
@@ -706,6 +709,9 @@ class Participant {
 
     /**
      * Returns the laps sorted by the given sector time (ASC)
+     *
+     * @param int $sector
+     * @return array
      */
     public function getLapsSortedBySector($sector)
     {
@@ -729,7 +735,7 @@ class Participant {
      * Returns the difference in starting and ending position. Returns null
      * when unknown
      *
-     * @return  int|nuill
+     * @return  int|null
      */
     public function getPositionDifference()
     {
@@ -951,7 +957,8 @@ class Participant {
     /**
      * Get the consistency as percentage
      *
-     * @return  float
+     * @param boolean $ignore_first_lap
+     * @return  float|null
      */
     public function getConsistencyPercentage($ignore_first_lap = true)
     {

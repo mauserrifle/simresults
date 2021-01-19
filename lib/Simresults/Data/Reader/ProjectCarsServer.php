@@ -70,7 +70,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
 
 
     /**
-     * @see Simresults\Data_Reader::canRead()
+     * @inheritDoc
      */
     public static function canRead($data)
     {
@@ -861,7 +861,6 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
      *
      * @param   int  $vehicle_id
      * @param   Vehicle  $vehicle
-     * @return  string
      */
     protected function setVehicleName($vehicle_id, Vehicle $vehicle)
     {
@@ -911,6 +910,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
     /**
      * Get the attribute names of the project cars attributes json
      *
+     * @param string $file
      * @return array
      */
     public function getAttributeNames($file='ProjectCarsAttributes.json')

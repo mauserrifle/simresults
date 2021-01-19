@@ -57,7 +57,6 @@ class Cache {
     /**
      * Remove all items from the cache
      *
-     * @param  string $key
      * @return bool
      */
     public function flush()
@@ -70,6 +69,7 @@ class Cache {
      * Helper to cache methods of an extended class that should cache the
      * parent
      *
+     * @param  mixed  $object
      * @param  string $method
      * @param  array  $args
      * @return mixed

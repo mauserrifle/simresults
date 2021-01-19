@@ -16,17 +16,17 @@ class Data_Reader_Rfactor2 extends Data_Reader {
     protected $dom;
 
     /**
-     * @var Cached participants
+     * @var  array  Cached participants
      */
     protected $participants;
 
     /**
-     * @var Cached laps
+     * @var  array  Cached laps
      */
     protected $laps;
 
     /**
-     * @see Simresults\Data_Reader::canRead()
+     * @inheritDoc
      */
     public static function canRead($data)
     {
@@ -1003,7 +1003,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
     /**
      * Sets the chats on a session instance
      *
-     * @param  Sesssion  $session
+     * @param  Session  $session
      */
     protected function setChats(Session $session)
     {
@@ -1045,7 +1045,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
     /**
      * Sets the incidents on a session instance
      *
-     * @param  Sesssion  $session
+     * @param  Session  $session
      */
     protected function setIncidents(Session $session)
     {
@@ -1141,7 +1141,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
 
     /**
      * Sets the penalties on a session instance
-     * @param  Sesssion  $session
+     * @param  Session  $session
      */
     protected function setPenalties(Session $session)
     {
@@ -1249,7 +1249,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
      *     item(0)->nodeValue
      *
      * @param   string      $tag
-     * @param   DomElement  $dom   a own dom element
+     * @param   \DomElement  $dom   a own dom element
      * @return  mixed
      */
     protected function tagValue($tag, $dom=null)

@@ -97,6 +97,7 @@ abstract class Data_Reader {
      * Construct new reader with given string data
      *
      * @param   string  $data
+     * @param   Helper  $helper
      * @throws  Exception\CannotReadData
      */
     public function __construct($data, Helper $helper=null)
@@ -135,6 +136,7 @@ abstract class Data_Reader {
      * Returns one session
      *
      * @throws  Exception\NoSession    when session is not found
+     * @param int $session_number
      * @return  Session
      */
     public function getSession($session_number=1)
