@@ -596,6 +596,25 @@ class ProjectCarsServerReaderTest extends \PHPUnit\Framework\TestCase {
         $this->assertSame('Automobilista 2', $game->getName());
     }
 
+    public function testFixingMissingSteamIds()
+    {
+        $file_path = realpath(__DIR__.
+            '/logs/automobilista2/practice.and.race.json');
+
+        $reader = Data_Reader::factory($file_path);
+        $sessions = $reader->getSessions();
+
+        foreach ($sessions as $session)
+        {
+            if (!$participants = $session->getParticipants()) {
+                continue;
+            }
+
+            $participant = $participants[0];
+            $this->assertSame('76561198415727989',
+                              $participant->getDriver()->getDriverId());
+        }
+    }
 
 
 

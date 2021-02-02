@@ -754,6 +754,28 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
             $prevous_session = $session;
         }
 
+        // Collect all known steam ids by driver name to fix missing ids across sessions
+        $participants_steamid_by_name = array();
+        foreach ($sessions as $session)
+        foreach ($session->getParticipants() as $part)
+        foreach ($part->getDrivers() as $driver)
+        {
+            if (!$driver_id = $driver->getDriverId()) {
+                continue;
+            }
+            $participants_steamid_by_name[$driver->getName()] = $driver->getDriverId();
+        }
+        // // Fix all missing steam ids
+        foreach ($sessions as $session)
+        foreach ($session->getParticipants() as $part)
+        foreach ($part->getDrivers() as $driver)
+        {
+            if (!$driver->getDriverId() AND
+                isset($participants_steamid_by_name[$driver->getName()]))
+            {
+                $driver->setDriverId($participants_steamid_by_name[$part->getDriver()->getName()]);
+            }
+        }
 
         // Return sessions
         return $sessions;
