@@ -32,6 +32,8 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
 
     /**
      * @var array Some Automobilista 2 vehicle ids so we can detect the game
+     *            Warning: This is an old detection method. Just here for
+     *            legacy reasons.
      */
     public static $automobilista2_vehicle_ids = array(
         1932261404,
