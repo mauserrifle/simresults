@@ -4,10 +4,6 @@ namespace Simresults;
 /**
  * The reader for Project Cars sms_stats data files.
  *
- * WARNING: This file is highly experimental and has been made in a hurry.
- *          Expect alot of duplicate code that has to be refactored soon
- *          (TODO).
- *
  * @author     Maurice van der Star <mauserrifle@gmail.com>
  * @copyright  (c) 2013 Maurice van der Star
  * @license    http://opensource.org/licenses/ISC
