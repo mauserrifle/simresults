@@ -279,6 +279,13 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
          * Laps
          */
 
+        // Remember lap number per participant
+        $lap_number_counter = array();
+
+        // Remember all first sectors excluding the first lap (it is bugged)
+        // We will use this later to calculate averages.
+        $all_first_sectors_excl_first_lap = array();
+
         // Process laps
         if (isset($data['laps']))
         foreach ($data['laps'] as $lap_data)
@@ -287,6 +294,15 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
                 !isset($participants_by_car_id[$lap_data['carId']])) {
                 continue;
             }
+
+            // Determine lap number of this participant
+            $lap_number = null;
+            if (!isset($lap_number_counter[$lap_data['carId']])) {
+               $lap_number = $lap_number_counter[$lap_data['carId']] = 1;
+            } else {
+                $lap_number = ++$lap_number_counter[$lap_data['carId']];
+            }
+
 
             // Init new lap
             $lap = new Lap;
@@ -322,8 +338,13 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
 
                 // Set sector times in seconds
                 foreach ($this->helper->arrayGet($lap_data, 'splits', array())
-                             as $sector_time)
+                             as $sector_key => $sector_time)
                 {
+                    // Collect all first sector times excluding lap 1
+                    if ($lap_number > 1 AND $sector_key === 0) {
+                        $all_first_sectors_excl_first_lap[] = $sector_time;
+                    }
+
                     $lap->addSectorTime(round($sector_time / 1000, 4));
                 }
             }
@@ -332,6 +353,43 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
             $lap_participant->addLap($lap);
         }
 
+
+        /**
+         * Data fixing of laps for race sessions
+         *
+         * The  timer starts when the player enters the session or presses drive.
+         * So we cannot trust sector 1 times or total times.
+         */
+        if ($session->getType() === Session::TYPE_RACE AND
+            $all_first_sectors_excl_first_lap)
+        {
+            // Calculate sector 1 average excluding lap 1
+            $all_first_sectors_excl_first_lap_average = (
+                array_sum($all_first_sectors_excl_first_lap)
+                /
+                count($all_first_sectors_excl_first_lap)
+            );
+
+            // Base new sector 1 time on average + 5 seconds (due grid start)
+            $new_sector1_time = round(
+                ($all_first_sectors_excl_first_lap_average + 5000) / 1000, 4);
+
+            // Set all lap 1 first sectors to the new sector time.
+            foreach ($participants_by_car_id as $part)
+            foreach ($part->getLaps() as $lap)
+            {
+                // Is first lap and has sectors
+                if ($lap->getNumber() === 1 AND $sectors = $lap->getSectorTimes())
+                {
+                    // Set new average and set sector times
+                    $sectors[0] = $new_sector1_time;
+                    $lap->setSectorTimes($sectors);
+
+                    // Set new total time based on the sum
+                    $lap->setTime(round(array_sum($sectors), 4));
+                }
+            }
+        }
 
 
         /**
