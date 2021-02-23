@@ -1106,6 +1106,16 @@ class Session {
             // No vehicle
             if ( ! $part->getVehicle()) continue;
 
+            if (!isset($participants[$part->getVehicle()->getClass()])) {
+                $participants[$part->getVehicle()->getClass()] = array();
+            }
+
+            // Set new position
+            $part->setPosition(
+                1+
+                count($participants[$part->getVehicle()->getClass()])
+            );
+
             $participants[$part->getVehicle()->getClass()][] = $part;
         }
 

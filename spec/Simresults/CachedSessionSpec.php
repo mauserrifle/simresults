@@ -152,6 +152,10 @@ class CachedSessionSpec extends ObjectBehavior
         $part3->getVehicle()->willReturn($vehicle3);
         $part3->getLaps()->willReturn(array(new Lap));
 
+        $part1->setPosition(1)->shouldBeCalled();
+        $part2->setPosition(1)->shouldBeCalled();
+        $part3->setPosition(1)->shouldBeCalled();
+
         $this->setParticipants(array($part1, $part2, $part3));
 
         // Get sorted laps already. Will use lateron to check cache
