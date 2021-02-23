@@ -360,6 +360,36 @@ class AssettoCorsaCompetizioneReaderTest extends \PHPUnit\Framework\TestCase {
         ), $session->getOtherSettings());
     }
 
+    /**
+     * Test GT3 and GT4 vehicle classes instead of cup category when GT4 cars
+     * detected
+     */
+    public function testGtVehicleClassesWhenGt4IsDetected()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-competizione/'.
+            'race.modified.with.gt4.json');
+
+        $session = Data_Reader::factory($file_path)->getSession();
+        $participants = $session->getParticipants();
+
+        $participant = $participants[0];
+        $this->assertSame(1, $participant->getPosition());
+        $this->assertSame(1, $participant->getClassPosition());
+        $this->assertSame('GT4', $participant->getVehicle()->getClass());
+
+        $participant = $participants[1];
+        $this->assertSame(2, $participant->getPosition());
+        $this->assertSame(1, $participant->getClassPosition());
+        $this->assertSame('GT3', $participant->getVehicle()->getClass());
+
+        $participant = $participants[2];
+        $this->assertSame(3, $participant->getPosition());
+        $this->assertSame(2, $participant->getClassPosition());
+        $this->assertSame('GT3', $participant->getVehicle()->getClass());
+    }
+
 
 
     /***
