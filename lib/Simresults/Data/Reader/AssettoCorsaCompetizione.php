@@ -462,7 +462,7 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
                 ' - '.
                 $penalty_data['penalty'].
                 ' - violation in lap '.$penalty_data['violationInLap'].
-                ' - cleared in lap '.$penalty_data['violationInLap']
+                ' - cleared in lap '.$penalty_data['clearedInLap']
 
             );
 
