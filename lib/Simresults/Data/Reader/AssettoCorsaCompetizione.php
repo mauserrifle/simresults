@@ -458,7 +458,7 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
             $penalty->setMessage(
                 $penalty_participant->getDriver($driverIndex+1)->getName().
                 ' - '.
-                $penalty_data['reason'].
+                $this->helper->arrayGet($penalty_data, 'reason', 'Unknown reason').
                 ' - '.
                 $penalty_data['penalty'].
                 ' - violation in lap '.$penalty_data['violationInLap'].
