@@ -188,8 +188,6 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
             }
         }
 
-        $session_includes_gt3 = false;
-        $session_includes_gt4 = false;
 
         /**
          * Participants
@@ -197,11 +195,10 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
 
         $participants_by_car_id = array();
 
-        // Initial position values per class/cup
-        $position_per_class = array();
-        foreach (array_keys($this->cup_categories) as $cup_id) {
-            $position_per_class[$cup_id] = 0;
-        }
+        $position_per_class = array(
+            'GT3' => 0,
+            'GT4' => 0,
+        );
 
         if (isset($session_result['leaderBoardLines']))
         foreach ($session_result['leaderBoardLines'] as $lead)
@@ -248,12 +245,6 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
                 $vehicle_name = 'Car model '.$car_model;
                 if (isset($this->cars[(int)$car_model])) {
                     $vehicle_name = $this->cars[(int)$car_model];
-
-                    if (strpos(strtoupper($vehicle_name), 'GT4') !== false) {
-                        $session_includes_gt4 = true;
-                    } else {
-                        $session_includes_gt3 = true;
-                    }
                 }
             }
 
@@ -268,48 +259,26 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
                 $vehicle->setNumber((int)$lead['car']['raceNumber']);
             }
 
+            // Class
+            if (strpos(strtoupper($vehicle_name), 'GT4') !== false) {
+                $vehicle->setClass('GT4');
+                $participant->setClassPosition(++$position_per_class['GT4']);
+            }
+            else {
+                $vehicle->setClass('GT3');
+                $participant->setClassPosition(++$position_per_class['GT3']);
+            }
+
             // Has cup category
             $cup_category = $this->helper->arrayGet($lead['car'], 'cupCategory');
             if (is_numeric($cup_category) AND isset($this->cup_categories[$cup_category]))
             {
-                $vehicle->setClass($this->cup_categories[$cup_category]);
-                $position_per_class[$cup_category]++;
-                $participant->setClassPosition($position_per_class[$cup_category]);
+                $vehicle->setCup($this->cup_categories[$cup_category]);
             }
 
             $participant->setVehicle($vehicle);
             $participants_by_car_id[$lead['car']['carId']] = $participant;
         }
-
-
-
-        // Session includes gt3 and gt4
-        // This is a QUICKFIX to override cup category as vehicle class
-        // TODO: Seperate cup category in future to dedicated participant fields
-        if ($session_includes_gt3 AND $session_includes_gt4)
-        {
-            $position_per_class = array(
-                'GT3' => 0,
-                'GT4' => 0,
-            );
-
-            foreach ($participants_by_car_id as $part)
-            {
-                $vehicle = $part->getVehicle();
-                $vehicle_name = $vehicle->getName();
-
-                if (strpos(strtoupper($vehicle_name), 'GT4') !== false) {
-                    $vehicle->setClass('GT4');
-                    $part->setClassPosition(++$position_per_class['GT4']);
-                }
-                else {
-                    $vehicle->setClass('GT3');
-                    $part->setClassPosition(++$position_per_class['GT3']);
-                }
-            }
-        }
-
-
 
 
 

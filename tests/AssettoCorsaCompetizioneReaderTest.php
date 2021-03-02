@@ -361,8 +361,7 @@ class AssettoCorsaCompetizioneReaderTest extends \PHPUnit\Framework\TestCase {
     }
 
     /**
-     * Test GT3 and GT4 vehicle classes instead of cup category when GT4 cars
-     * detected
+     * Test mixed GT3 and GT4 vehicle classes
      */
     public function testGtVehicleClassesWhenGt4IsDetected()
     {
@@ -469,7 +468,8 @@ class AssettoCorsaCompetizioneReaderTest extends \PHPUnit\Framework\TestCase {
                           $participant->getVehicle()->getName());
         $this->assertSame('123', $participant->getDriver()->getDriverId());
         $this->assertSame(82, $participant->getVehicle()->getNumber());
-        $this->assertSame('Overall', $participant->getVehicle()->getClass());
+        $this->assertSame('GT3', $participant->getVehicle()->getClass());
+        $this->assertSame('Overall', $participant->getVehicle()->getCup());
         $this->assertSame('',
                           $participant->getTeam());
         $this->assertSame(1, $participant->getPosition());
@@ -481,12 +481,14 @@ class AssettoCorsaCompetizioneReaderTest extends \PHPUnit\Framework\TestCase {
         // Different cup
         $participant = $participants[1];
         $this->assertSame(2, $participant->getPosition());
-        $this->assertSame(1, $participant->getClassPosition());
-        $this->assertSame('Pro-Am', $participant->getVehicle()->getClass());
+        $this->assertSame(2, $participant->getClassPosition());
+        $this->assertSame('GT3', $participant->getVehicle()->getClass());
+        $this->assertSame('Pro-Am', $participant->getVehicle()->getCup());
         $participant = $participants[2];
         $this->assertSame(3, $participant->getPosition());
-        $this->assertSame(2, $participant->getClassPosition());
-        $this->assertSame('Overall', $participant->getVehicle()->getClass());
+        $this->assertSame(3, $participant->getClassPosition());
+        $this->assertSame('GT3', $participant->getVehicle()->getClass());
+        $this->assertSame('Overall', $participant->getVehicle()->getCup());
 
     }
 
