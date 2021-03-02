@@ -233,7 +233,8 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
                             $lead['car'], 'teamName'));
 
             // Total time available
-            if ($total_time=$lead['timing']['totalTime'])
+            if (is_numeric($lead['timing']['totalTime']) AND
+                $total_time=$lead['timing']['totalTime'])
             {
                 $participant->setTotalTime(round($total_time / 1000, 4));
             }
