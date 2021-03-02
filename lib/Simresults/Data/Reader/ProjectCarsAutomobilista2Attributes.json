@@ -41,6 +41,10 @@
         "name" : "Opala79"
       },
       {
+        "value" : 1323122160,
+        "name" : "GT1"
+      },
+      {
         "value" : 1342781418,
         "name" : "F-Trainer_A"
       },
@@ -105,6 +109,10 @@
         "name" : "Hot Cars"
       },
       {
+        "value" : 29233678,
+        "name" : "StockCarV8_2021"
+      },
+      {
         "value" : -1358908608,
         "name" : "GT5"
       },
@@ -127,6 +135,10 @@
       {
         "value" : -1097982207,
         "name" : "SuperV8"
+      },
+      {
+        "value" : -1070382248,
+        "name" : "G40Cup"
       },
       {
         "value" : -962921788,
@@ -223,6 +235,10 @@
       {
         "value" : 974213152,
         "name" : "F-Retro"
+      },
+      {
+        "value" : 995310913,
+        "name" : "Group C"
       }
     ]
   },
@@ -296,62 +312,62 @@
       },
       {
         "id" : 697161929,
-        "name" : "Formula Classic Gen1 Model 1",
+        "name" : "Formula Classic Gen1 Model1",
         "class" : "F-Classic_Gen1"
       },
       {
         "id" : -1819510420,
-        "name" : "Formula Classic Gen1 Model 2",
+        "name" : "Formula Classic Gen1 Model2",
         "class" : "F-Classic_Gen1"
       },
       {
         "id" : -1667467124,
-        "name" : "Formula Classic Gen2 Model 1",
+        "name" : "Formula Classic Gen2 Model1",
         "class" : "F-Classic_Gen2"
       },
       {
         "id" : -1004811218,
-        "name" : "Formula Classic Gen2 Model 2",
+        "name" : "Formula Classic Gen2 Model2",
         "class" : "F-Classic_Gen2"
       },
       {
         "id" : -494068343,
-        "name" : "Formula Classic Gen2 Model 3",
+        "name" : "Formula Classic Gen2 Model3",
         "class" : "F-Classic_Gen2"
       },
       {
         "id" : -1700189536,
-        "name" : "Formula Classic Gen3 Model 1",
+        "name" : "Formula Classic Gen3 Model1",
         "class" : "F-Classic_Gen3"
       },
       {
         "id" : -1662617552,
-        "name" : "Formula Classic Gen3 Model 2",
+        "name" : "Formula Classic Gen3 Model2",
         "class" : "F-Classic_Gen3"
       },
       {
         "id" : -1828044943,
-        "name" : "Formula Classic Gen3 Model 3",
+        "name" : "Formula Classic Gen3 Model3",
         "class" : "F-Classic_Gen3"
       },
       {
         "id" : -1261768631,
-        "name" : "Formula Vintage G1M1",
+        "name" : "Formula Vintage Gen1 Model1",
         "class" : "F-Vintage_Gen1"
       },
       {
         "id" : 318400650,
-        "name" : "Formula Vintage G1M2",
+        "name" : "Formula Vintage Gen1 Model2",
         "class" : "F-Vintage_Gen1"
       },
       {
         "id" : -1988395354,
-        "name" : "Formula Vintage G2M1",
+        "name" : "Formula Vintage Gen2 Model1",
         "class" : "F-Vintage_Gen2"
       },
       {
         "id" : 617290135,
-        "name" : "Formula Vintage G2M2",
+        "name" : "Formula Vintage Gen2 Model2",
         "class" : "F-Vintage_Gen2"
       },
       {
@@ -421,12 +437,12 @@
       },
       {
         "id" : 523915852,
-        "name" : "Formula V10",
+        "name" : "Formula V10 Gen2",
         "class" : "F-V10_Gen2"
       },
       {
         "id" : 884102371,
-        "name" : "Formula V10 G1",
+        "name" : "Formula V10 Gen1",
         "class" : "F-V10_Gen1"
       },
       {
@@ -458,6 +474,16 @@
         "id" : -2086797102,
         "name" : "VW",
         "class" : "CopaTruck"
+      },
+      {
+        "id" : 310900789,
+        "name" : "Ginetta G40",
+        "class" : "GT5"
+      },
+      {
+        "id" : -751207847,
+        "name" : "Ginetta G40 Cup",
+        "class" : "G40Cup"
       },
       {
         "id" : 2091910841,
@@ -520,6 +546,31 @@
         "class" : "GT4"
       },
       {
+        "id" : -1001569309,
+        "name" : "McLaren F1 GTR",
+        "class" : "GT1"
+      },
+      {
+        "id" : 1979398129,
+        "name" : "Mercedes-Benz CLK-LM",
+        "class" : "GT1"
+      },
+      {
+        "id" : 1076438091,
+        "name" : "Porsche 911 GT1-98",
+        "class" : "GT1"
+      },
+      {
+        "id" : 957632269,
+        "name" : "Porsche 962C",
+        "class" : "Group C"
+      },
+      {
+        "id" : 65306143,
+        "name" : "Sauber C9 Mercedes-Benz",
+        "class" : "Group C"
+      },
+      {
         "id" : 844159614,
         "name" : "Kart 125cc 2STROKE",
         "class" : "Kart125cc"
@@ -543,6 +594,11 @@
         "id" : 95104745,
         "name" : "MCR S2000",
         "class" : "P4"
+      },
+      {
+        "id" : -204135982,
+        "name" : "McLaren F1 LM",
+        "class" : "Street"
       },
       {
         "id" : 1932261404,
@@ -591,18 +647,28 @@
       },
       {
         "id" : 1323381033,
-        "name" : "Stock Car Brasil",
+        "name" : "Chevrolet Cruze Stock Car 2019",
         "class" : "StockCarV8"
       },
       {
         "id" : 1836524676,
-        "name" : "Stock Car 2020",
+        "name" : "Chevrolet Cruza Stock Car 2020",
         "class" : "StockCarV8_2020"
       },
       {
+        "id" : -1357079805,
+        "name" : "Chevrolet Cruza Stock Car 2021",
+        "class" : "StockCarV8_2021"
+      },
+      {
         "id" : 619110280,
-        "name" : "Stock Car Corolla",
+        "name" : "Toyota Corolla Stock Car 2020",
         "class" : "StockCarV8_2020"
+      },
+      {
+        "id" : 806954123,
+        "name" : "Toyota Corolla Stock Car 2021",
+        "class" : "StockCarV8_2021"
       },
       {
         "id" : 306371028,
@@ -691,7 +757,7 @@
       },
       {
         "id" : -815324367,
-        "name" : "Fusca CA",
+        "name" : "Fusca Classic FL",
         "class" : "CopaClassicFL"
       },
       {
@@ -706,22 +772,22 @@
       },
       {
         "id" : -45848101,
-        "name" : "Copa Classic A",
+        "name" : "Gol Classic FL",
         "class" : "CopaClassicFL"
       },
       {
         "id" : -333355648,
-        "name" : "Copa Classic B",
+        "name" : "Gol Classic B",
         "class" : "CopaClassicB"
       },
       {
         "id" : 1661024873,
-        "name" : "Pas Classic A",
+        "name" : "Passat Classic FL",
         "class" : "CopaClassicFL"
       },
       {
         "id" : 1700425966,
-        "name" : "Pas Classic B",
+        "name" : "Passat Classic B",
         "class" : "CopaClassicB"
       },
       {
@@ -736,17 +802,17 @@
       },
       {
         "id" : 390318757,
-        "name" : "Pas HotCars",
+        "name" : "Passat HotCars",
         "class" : "Hot Cars"
       },
       {
         "id" : 1653755268,
-        "name" : "Col HC",
+        "name" : "Gol HC",
         "class" : "Hot Cars"
       },
       {
         "id" : 1785300635,
-        "name" : "ARC Camaro",
+        "name" : "Aussie Racing Camaro",
         "class" : "ARC_Cam"
       }
     ]
@@ -757,17 +823,17 @@
       {
         "id" : -559709709,
         "name" : "Adelaide_Historic",
-        "gridsize" : 28
+        "gridsize" : 26
       },
       {
         "id" : 827815091,
         "name" : "Adelaide_Modern",
-        "gridsize" : 30
+        "gridsize" : 39
       },
       {
         "id" : 832629329,
         "name" : "Azure_Circuit",
-        "gridsize" : 21
+        "gridsize" : 32
       },
       {
         "id" : 1080325116,
@@ -777,12 +843,12 @@
       {
         "id" : 1534602052,
         "name" : "BrandsHatch_GP",
-        "gridsize" : 30
+        "gridsize" : 32
       },
       {
         "id" : -572148012,
         "name" : "BrandsHatch_Indy",
-        "gridsize" : 30
+        "gridsize" : 32
       },
       {
         "id" : 202837760,
@@ -807,7 +873,7 @@
       {
         "id" : 1910889511,
         "name" : "CadwellPark",
-        "gridsize" : 30
+        "gridsize" : 20
       },
       {
         "id" : 2135405654,
@@ -817,7 +883,7 @@
       {
         "id" : -916478809,
         "name" : "Cascavel2",
-        "gridsize" : 39
+        "gridsize" : 38
       },
       {
         "id" : 844082431,
@@ -832,22 +898,22 @@
       {
         "id" : -923996694,
         "name" : "CurveloLong",
-        "gridsize" : 30
+        "gridsize" : 38
       },
       {
         "id" : -203742941,
         "name" : "CurveloShort",
-        "gridsize" : 30
+        "gridsize" : 38
       },
       {
         "id" : 1497365379,
         "name" : "Donington_GP",
-        "gridsize" : 39
+        "gridsize" : 38
       },
       {
         "id" : -865646115,
         "name" : "Donington_Nat",
-        "gridsize" : 39
+        "gridsize" : 38
       },
       {
         "id" : 1650761166,
@@ -857,17 +923,17 @@
       {
         "id" : -438882031,
         "name" : "GoianiaMixed",
-        "gridsize" : 30
+        "gridsize" : 36
       },
       {
         "id" : 693994049,
         "name" : "GoianiaOuter",
-        "gridsize" : 30
+        "gridsize" : 36
       },
       {
         "id" : -916412256,
         "name" : "GoianiaShort",
-        "gridsize" : 30
+        "gridsize" : 36
       },
       {
         "id" : -939269561,
@@ -892,7 +958,7 @@
       {
         "id" : 2058166835,
         "name" : "Guapore",
-        "gridsize" : 34
+        "gridsize" : 40
       },
       {
         "id" : -435924753,
@@ -940,6 +1006,11 @@
         "gridsize" : 30
       },
       {
+        "id" : -676667056,
+        "name" : "Ibarra_Reverse",
+        "gridsize" : 30
+      },
+      {
         "id" : 731129913,
         "name" : "Imola_GP_2018",
         "gridsize" : 32
@@ -947,7 +1018,7 @@
       {
         "id" : 1003427592,
         "name" : "Imola_GP_1972",
-        "gridsize" : 30
+        "gridsize" : 20
       },
       {
         "id" : 1544603199,
@@ -957,12 +1028,12 @@
       {
         "id" : -29732804,
         "name" : "Imola_GP_2001",
-        "gridsize" : 30
+        "gridsize" : 26
       },
       {
         "id" : -1478712571,
         "name" : "Interlagos_GP",
-        "gridsize" : 30
+        "gridsize" : 46
       },
       {
         "id" : 1312214486,
@@ -977,47 +1048,47 @@
       {
         "id" : 228315736,
         "name" : "InterlagosKart1",
-        "gridsize" : 30
+        "gridsize" : 38
       },
       {
         "id" : 870961348,
         "name" : "InterlagosKart2",
-        "gridsize" : 30
+        "gridsize" : 38
       },
       {
         "id" : 1869056157,
         "name" : "InterlagosKart3",
-        "gridsize" : 30
+        "gridsize" : 38
       },
       {
         "id" : -89774641,
         "name" : "Jacarepagua_Historic",
-        "gridsize" : 30
+        "gridsize" : 40
       },
       {
         "id" : 1406264747,
         "name" : "Jerez_GP2019",
-        "gridsize" : 30
+        "gridsize" : 42
       },
       {
         "id" : -1602971785,
         "name" : "Jerez_Standard",
-        "gridsize" : 30
+        "gridsize" : 42
       },
       {
         "id" : 1261622488,
         "name" : "Kansai_GP",
-        "gridsize" : 30
+        "gridsize" : 52
       },
       {
         "id" : 1035236174,
         "name" : "Kansai_Classic",
-        "gridsize" : 30
+        "gridsize" : 52
       },
       {
         "id" : 530399487,
         "name" : "Kansai_East",
-        "gridsize" : 30
+        "gridsize" : 52
       },
       {
         "id" : 85029775,
@@ -1047,12 +1118,12 @@
       {
         "id" : 1373891276,
         "name" : "LondrinaKart1",
-        "gridsize" : 30
+        "gridsize" : 32
       },
       {
         "id" : 16295271,
         "name" : "LondrinaKart2",
-        "gridsize" : 30
+        "gridsize" : 32
       },
       {
         "id" : -696853932,
@@ -1062,7 +1133,7 @@
       {
         "id" : -1239363445,
         "name" : "Montreal_Modern",
-        "gridsize" : 30
+        "gridsize" : 40
       },
       {
         "id" : 884472481,
@@ -1087,6 +1158,11 @@
       {
         "id" : 1133983668,
         "name" : "Nurb_GP_2020_Sprint",
+        "gridsize" : 30
+      },
+      {
+        "id" : 1819021861,
+        "name" : "Nurb_GP_2020_Sprint_S",
         "gridsize" : 30
       },
       {
@@ -1137,12 +1213,12 @@
       {
         "id" : -526206945,
         "name" : "Silverstone_1975",
-        "gridsize" : 34
+        "gridsize" : 36
       },
       {
         "id" : -533867030,
         "name" : "Silverstone_1975_No_Chicane",
-        "gridsize" : 34
+        "gridsize" : 36
       },
       {
         "id" : -797317755,
@@ -1167,12 +1243,12 @@
       {
         "id" : -931849903,
         "name" : "Silverstone_GP",
-        "gridsize" : 34
+        "gridsize" : 32
       },
       {
         "id" : 964004535,
         "name" : "Silverstone_Intl_2019",
-        "gridsize" : 34
+        "gridsize" : 32
       },
       {
         "id" : -1061474453,
@@ -1193,6 +1269,16 @@
         "id" : 987592900,
         "name" : "Snetterton_300",
         "gridsize" : 26
+      },
+      {
+        "id" : 1283905272,
+        "name" : "Spa_Francorchamps_1993",
+        "gridsize" : 30
+      },
+      {
+        "id" : -1262750090,
+        "name" : "Spa_Francorchamps_2020",
+        "gridsize" : 30
       },
       {
         "id" : 756011139,
