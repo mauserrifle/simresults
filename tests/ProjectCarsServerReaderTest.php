@@ -596,7 +596,11 @@ class ProjectCarsServerReaderTest extends \PHPUnit\Framework\TestCase {
         $this->assertSame('Automobilista 2', $game->getName());
     }
 
-    public function testFixingMissingSteamIds()
+    /**
+     * Test fixing missing steam ids by parsing all sessions first and then fix
+     * the ids later
+     */
+    public function testFixingMissingSteamIdsFix()
     {
         $file_path = realpath(__DIR__.
             '/logs/automobilista2/practice.and.race.json');
@@ -614,6 +618,26 @@ class ProjectCarsServerReaderTest extends \PHPUnit\Framework\TestCase {
             $this->assertSame('76561198415727989',
                               $participant->getDriver()->getDriverId());
         }
+    }
+
+    /**
+     * Test fixing missing steam ids by parsing the players array for this
+     * specific information
+     */
+    public function testFixingMissingSteamIdsFixUsingPlayersArray()
+    {
+        $file_path = realpath(__DIR__.
+            '/logs/automobilista2/missing.steam.ids.json');
+
+        $reader = Data_Reader::factory($file_path);
+        $sessions = $reader->getSessions();
+
+        // First session participants
+        $participants = $sessions[0]->getParticipants();
+
+        $participant = $participants[0];
+        $this->assertSame('12345678247139514',
+                          $participant->getDriver()->getDriverId());
     }
 
 

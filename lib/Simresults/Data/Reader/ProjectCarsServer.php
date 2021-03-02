@@ -750,7 +750,14 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
             $prevous_session = $session;
         }
 
-        // Collect all known steam ids by driver name to fix missing ids across sessions
+
+
+
+        /**
+         * Collect all known steam ids by driver name to fix missing ids across sessions
+         */
+
+        // Collect steam ids from regular session parsing
         $participants_steamid_by_name = array();
         foreach ($sessions as $session)
         foreach ($session->getParticipants() as $part)
@@ -761,6 +768,20 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
             }
             $participants_steamid_by_name[$driver->getName()] = $driver->getDriverId();
         }
+        // Collect steamids from players array
+        if ($players = $this->helper->arrayGet($data, 'players'))
+        {
+            foreach ($players as $steamid => $player)
+            {
+                // Not a proper steam id or id already found, ignore this data
+                if (!is_numeric($steamid) OR strlen($steamid) < 17 OR
+                    isset($participants_steamid_by_name[$player['name']])) {
+                    continue;
+                }
+
+                $participants_steamid_by_name[$player['name']] = $steamid;
+            }
+        }
         // // Fix all missing steam ids
         foreach ($sessions as $session)
         foreach ($session->getParticipants() as $part)
@@ -769,7 +790,8 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
             if (!$driver->getDriverId() AND
                 isset($participants_steamid_by_name[$driver->getName()]))
             {
-                $driver->setDriverId($participants_steamid_by_name[$part->getDriver()->getName()]);
+                $driver->setDriverId((string)$participants_steamid_by_name
+                    [$part->getDriver()->getName()]);
             }
         }
 
