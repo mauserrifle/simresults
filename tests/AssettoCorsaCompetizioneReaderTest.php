@@ -516,11 +516,11 @@ class AssettoCorsaCompetizioneReaderTest extends \PHPUnit\Framework\TestCase {
 
         // Validate laps
         $this->assertSame(1, $lap->getNumber());
-        $this->assertNull($lap->getPosition());
+        $this->assertSame(2, $lap->getPosition());
         // First sector based on lap 2+ averages + grid start correction.
         // We cannot trust lap 1 sector 1  and total time. The  timer starts
         // when the player enters the session or presses drive.
-        $this->assertSame(124.7296, $lap->getTime());
+        $this->assertSame(124.7316, $lap->getTime());
         $this->assertSame(0, $lap->getElapsedSeconds());
         $this->assertSame($participants[0], $lap->getParticipant());
         $this->assertSame($driver, $lap->getDriver());
@@ -532,7 +532,7 @@ class AssettoCorsaCompetizioneReaderTest extends \PHPUnit\Framework\TestCase {
         // First sector based on lap 2+ averages + grid start correction.
         // We cannot trust lap 1 sector 1  and total time. The  timer starts
         // when the player enters the session or presses drive.
-        $this->assertSame(51.7726, $sectors[0]);
+        $this->assertSame(51.7746, $sectors[0]);
         $this->assertSame(27.762, $sectors[1]);
         $this->assertSame(45.195, $sectors[2]);
 
@@ -541,11 +541,11 @@ class AssettoCorsaCompetizioneReaderTest extends \PHPUnit\Framework\TestCase {
         $this->assertSame(2, $lap->getNumber());
         $this->assertSame(3, $lap->getPosition());
         $this->assertSame(336.123, $lap->getTime());
-        $this->assertSame(124.7296, $lap->getElapsedSeconds());
+        $this->assertSame(124.7316, $lap->getElapsedSeconds());
 
         // Validate extra positions
         $laps = $participants[2]->getLaps();
-        $this->assertNull($laps[0]->getPosition());
+        $this->assertSame(3, $laps[0]->getPosition());
         $this->assertSame(1 , $laps[1]->getPosition());
     }
 

@@ -201,7 +201,7 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
         );
 
         if (isset($session_result['leaderBoardLines']))
-        foreach ($session_result['leaderBoardLines'] as $lead)
+        foreach ($session_result['leaderBoardLines'] as $lead_key => $lead)
         {
             if (!isset($lead['car']['carId'])) {
                 continue;
@@ -228,6 +228,11 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
                         ->setFinishStatus(Participant::FINISH_NORMAL)
                         ->setTeam($this->helper->arrayGet(
                             $lead['car'], 'teamName'));
+
+            // Doesn't seem to be correct. Order seems in finish order
+            // if ($session->getType() === Session::TYPE_RACE) {
+            //     $participant->setGridPosition($lead_key+1);
+            // }
 
             // Total time available
             if (is_numeric($lead['timing']['totalTime']) AND
@@ -289,6 +294,9 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
         // Remember lap number per participant
         $lap_number_counter = array();
 
+        // Remember positions per lap number
+        $lap_position_counter = array();
+
         // Remember all first sectors excluding the first lap (it is bugged)
         // We will use this later to calculate averages.
         $all_first_sectors_excl_first_lap = array();
@@ -310,6 +318,14 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
                 $lap_number = ++$lap_number_counter[$lap_data['carId']];
             }
 
+            // Determine lap position
+            $lap_position = null;
+            if (!isset($lap_position_counter[$lap_number])) {
+               $lap_position = $lap_position_counter[$lap_number] = 1;
+            } else {
+                $lap_position = ++$lap_position_counter[$lap_number];
+            }
+
 
             // Init new lap
             $lap = new Lap;
@@ -318,6 +334,12 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
 
             // Set participant
             $lap->setParticipant($lap_participant);
+
+            // Only set position known for lap 1 (due sector 1 issues). Do not
+            // set for other laps  because it seem to be bugged the order.
+            if ($lap_number === 1) {
+                $lap->setPosition($lap_position);
+            }
 
             $driverIndex = 0;
             if (isset($lap_data['driverIndex'])) {
@@ -388,7 +410,11 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
                 // Is first lap and has sectors
                 if ($lap->getNumber() === 1 AND $sectors = $lap->getSectorTimes())
                 {
-                    // Set new average and set sector times
+                    // Set new average + lap position*0.001 and set sector times
+                    if ($lap->getPosition()) {
+                        $new_sector1_time += round(($lap->getPosition() * 0.001), 4);
+                    }
+
                     $sectors[0] = $new_sector1_time;
                     $lap->setSectorTimes($sectors);
 
