@@ -333,13 +333,8 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
             $lap_participant = $participants_by_car_id[$lap_data['carId']];
 
             // Set participant
-            $lap->setParticipant($lap_participant);
-
-            // Only set position known for lap 1 (due sector 1 issues). Do not
-            // set for other laps  because it seem to be bugged the order.
-            if ($lap_number === 1) {
-                $lap->setPosition($lap_position);
-            }
+            $lap->setParticipant($lap_participant)
+                 ->setPosition($lap_position);
 
             $driverIndex = 0;
             if (isset($lap_data['driverIndex'])) {

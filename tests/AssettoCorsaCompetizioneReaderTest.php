@@ -539,14 +539,14 @@ class AssettoCorsaCompetizioneReaderTest extends \PHPUnit\Framework\TestCase {
         // Second lap
         $lap = $laps[1];
         $this->assertSame(2, $lap->getNumber());
-        $this->assertSame(3, $lap->getPosition());
+        $this->assertSame(1, $lap->getPosition());
         $this->assertSame(336.123, $lap->getTime());
         $this->assertSame(124.7316, $lap->getElapsedSeconds());
 
         // Validate extra positions
         $laps = $participants[2]->getLaps();
         $this->assertSame(3, $laps[0]->getPosition());
-        $this->assertSame(1 , $laps[1]->getPosition());
+        $this->assertSame(2 , $laps[1]->getPosition());
     }
 
 
