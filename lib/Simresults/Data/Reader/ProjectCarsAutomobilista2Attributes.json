@@ -17,6 +17,10 @@
         "name" : "StockCarV8_2020"
       },
       {
+        "value" : 1214699363,
+        "name" : "F-Retro_Gen1"
+      },
+      {
         "value" : 1217280833,
         "name" : "OldStock"
       },
@@ -99,6 +103,10 @@
       {
         "value" : -1614293342,
         "name" : "KartGX390"
+      },
+      {
+        "value" : -1453448982,
+        "name" : "StockCar99"
       },
       {
         "value" : -1418553548,
@@ -213,6 +221,10 @@
         "name" : "Opala86"
       },
       {
+        "value" : 719172364,
+        "name" : "F-Retro_Gen2"
+      },
+      {
         "value" : 801463365,
         "name" : "GTOpen"
       },
@@ -231,10 +243,6 @@
       {
         "value" : 913480074,
         "name" : "F-Classic_Gen1"
-      },
-      {
-        "value" : 974213152,
-        "name" : "F-Retro"
       },
       {
         "value" : 995310913,
@@ -383,27 +391,37 @@
       {
         "id" : 435621847,
         "name" : "Lotus Type 72E",
-        "class" : "F-Retro"
+        "class" : "F-Retro_Gen1"
       },
       {
         "id" : -1025098540,
         "name" : "Brabham BT44",
-        "class" : "F-Retro"
+        "class" : "F-Retro_Gen1"
+      },
+      {
+        "id" : 369722929,
+        "name" : "Formula Retro Gen2",
+        "class" : "F-Retro_Gen2"
       },
       {
         "id" : 1437730287,
         "name" : "Formula Retro V8",
-        "class" : "F-Retro"
+        "class" : "F-Retro_Gen1"
       },
       {
         "id" : -532210519,
         "name" : "Formula Retro V12",
-        "class" : "F-Retro"
+        "class" : "F-Retro_Gen1"
       },
       {
         "id" : 553963368,
         "name" : "McLaren M23",
-        "class" : "F-Retro"
+        "class" : "F-Retro_Gen1"
+      },
+      {
+        "id" : 1439296671,
+        "name" : "Lotus 79",
+        "class" : "F-Retro_Gen2"
       },
       {
         "id" : -2140090167,
@@ -652,12 +670,12 @@
       },
       {
         "id" : 1836524676,
-        "name" : "Chevrolet Cruza Stock Car 2020",
+        "name" : "Chevrolet Cruze Stock Car 2020",
         "class" : "StockCarV8_2020"
       },
       {
         "id" : -1357079805,
-        "name" : "Chevrolet Cruza Stock Car 2021",
+        "name" : "Chevrolet Cruze Stock Car 2021",
         "class" : "StockCarV8_2021"
       },
       {
@@ -669,6 +687,11 @@
         "id" : 806954123,
         "name" : "Toyota Corolla Stock Car 2021",
         "class" : "StockCarV8_2021"
+      },
+      {
+        "id" : -371227432,
+        "name" : "Chevrolet Omega Stock Car 1999",
+        "class" : "StockCar99"
       },
       {
         "id" : 306371028,
@@ -1063,6 +1086,26 @@
       {
         "id" : -89774641,
         "name" : "Jacarepagua_Historic",
+        "gridsize" : 40
+      },
+      {
+        "id" : 393495474,
+        "name" : "Jacarepagua_2005",
+        "gridsize" : 40
+      },
+      {
+        "id" : -1081969582,
+        "name" : "Jacarepagua_OVAL",
+        "gridsize" : 40
+      },
+      {
+        "id" : -467386624,
+        "name" : "Jacarepagua_SCB",
+        "gridsize" : 40
+      },
+      {
+        "id" : 1891554116,
+        "name" : "Jacarepagua_SHORT",
         "gridsize" : 40
       },
       {
