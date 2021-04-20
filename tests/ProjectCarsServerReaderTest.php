@@ -640,6 +640,24 @@ class ProjectCarsServerReaderTest extends \PHPUnit\Framework\TestCase {
                           $participant->getDriver()->getDriverId());
     }
 
+    public function testNotUsingFinalResultWhenFinishedDriverIsMissing()
+    {
+        $file_path = realpath(__DIR__.
+            '/logs/projectcars2-server/race3.with.missing.driver.in.final.results.json');
+
+        $reader = Data_Reader::factory($file_path);
+        $sessions = $reader->getSessions();
+
+        // Get third race session
+        $session = $sessions[10];
+        $this->assertSame(Session::TYPE_RACE, $session->getType());
+        $participants = $session->getParticipants();
+
+        // Test whether participant is on position 5 instead of 7
+        $participant = $participants[4];
+        $this->assertSame('Stefan S', $participant->getDriver()->getName());
+    }
+
 
 
     /***
@@ -772,20 +790,20 @@ class ProjectCarsServerReaderTest extends \PHPUnit\Framework\TestCase {
          */
         $participant = $participants[0];
 
-        $this->assertSame('ItchyTrigaFinga',
+        $this->assertSame('RouTeaX',
                           $participant->getDriver()->getName());
         $this->assertSame('Ford Mustang Cobra TransAm',
                           $participant->getVehicle()->getName());
         $this->assertSame('Trans-Am',
                           $participant->getVehicle()->getClass());
-        $this->assertSame('76561198015591839',
+        $this->assertSame('76561198113826575',
                           $participant->getDriver()->getDriverId());
         $this->assertTrue($participant->getDriver()->isHuman());
         $this->assertSame(1, $participant->getPosition());
-        $this->assertSame(11, $participant->getGridPosition());
+        $this->assertSame(3, $participant->getGridPosition());
         $this->assertSame(Participant::FINISH_NORMAL,
             $participant->getFinishStatus());
-        $this->assertSame(516.67499999999995, $participant->getTotalTime());
+        $this->assertSame(581.39, $participant->getTotalTime());
 
 
         // Test any other participants to validate proper position
@@ -808,8 +826,8 @@ class ProjectCarsServerReaderTest extends \PHPUnit\Framework\TestCase {
             ->getParticipants();
 
 
-        // Get the laps of second participants (first is missing a lap)
-        $participant = $participants[1];
+        // Get the laps of first participant
+        $participant = $participants[0];
         $laps = $participant->getLaps();
 
         // Validate we have 7 laps
@@ -850,8 +868,8 @@ class ProjectCarsServerReaderTest extends \PHPUnit\Framework\TestCase {
 
         // Validate extra positions
         $laps = $participants[3]->getLaps();
-        $this->assertSame(6, $laps[0]->getPosition());
-        $this->assertSame(7, $laps[2]->getPosition());
+        $this->assertSame(9, $laps[0]->getPosition());
+        $this->assertSame(6, $laps[2]->getPosition());
     }
 
     /**
@@ -864,8 +882,8 @@ class ProjectCarsServerReaderTest extends \PHPUnit\Framework\TestCase {
             ->getParticipants();
 
 
-        // Get the laps of second participants (first is missing a lap)
-        $participant = $participants[1];
+        // Get the laps of first participant
+        $participant = $participants[0];
         $laps = $participant->getLaps();
 
         // Second lap cuts
@@ -901,7 +919,7 @@ class ProjectCarsServerReaderTest extends \PHPUnit\Framework\TestCase {
             $incidents[4]->getDate()->getTimestamp());
         $this->assertSame(53, $incidents[4]->getElapsedSeconds());
         $this->assertSame(Incident::TYPE_CAR, $incidents[4]->getType());
-        $this->assertSame($participants[4], $incidents[4]->getParticipant());
+        $this->assertSame($participants[6], $incidents[4]->getParticipant());
         $this->assertSame($participants[9], $incidents[4]->getOtherParticipant());
 
         // Validate incident that would have a unknown participant. But now

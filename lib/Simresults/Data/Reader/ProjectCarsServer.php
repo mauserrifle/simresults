@@ -285,6 +285,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 // Parse event data such as laps
                 $cut_data = array();
                 $driver_has_entered_pit = array();
+                $finished_participants_by_id = array();
                 foreach ($session_data['events'] as $event)
                 {
                     // Get participant
@@ -389,6 +390,12 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                             $event['attributes']['NewState'] === 'Retired')
                     {
                         $part->setFinishStatus(Participant::FINISH_DNF);
+                    }
+                    elseif ($event['event_name'] === 'State' AND
+                            $event['attributes']['NewState'] === 'Finished')
+                    {
+                        $part->setFinishStatus(Participant::FINISH_NORMAL);
+                        $finished_participants_by_id[$event['participantid']] = $part;
                     }
                     elseif ($event['event_name'] === 'State' AND
                             $event['attributes']['NewState'] === 'EnteringPits' AND
@@ -604,43 +611,15 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 // Get participant with normal array keys
                 $participants = array_values($participants);
 
-
-                // Session has predefined race result positions
-                // WARNING: We only do this for race sessions because for
-                // qualify and practice some drivers are missing from the
-                // result
+                // Session has predefined race result positions and it is a
+                // race session
                 if ($results = $session_data['results'] AND
                     $session->getType() === Session::TYPE_RACE)
                 {
-                    // Sort participants using our own sort
-                    $tmp_sort =
-                        $this->helper->sortParticipantsByTotalTime($participants);
-
-                    // Find whether our leading participant using our own sort
-                    // is in the result
-                    $leading_is_in_result = false;
-                    foreach ($results as $result)
-                    {
-                        // Participant not found, continue to next
-                        if ( ! isset($participants_by_id[
-                                         $result['participantid']]))
-                        {
-                            continue;
-                        }
-
-                        // Get participant
-                        $participant = $participants_by_id[
-                            $result['participantid']];
-
-                        // Leading found
-                        if ($participant === $tmp_sort[0])
-                        {
-                            $leading_is_in_result = true;
-                        }
-                    }
-
-                    // Leading participant is in the results array
-                    if ($leading_is_in_result)
+                    // Result includes atleast all the finished drivers from
+                    // events
+                    if ($this->finalResultsContainAllFinishedDrivers(
+                        $results, $finished_participants_by_id))
                     {
                         // Init sorted result array
                         $participants_resultsorted = array();
@@ -1032,6 +1011,23 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
         }
 
         $this->current_game->setName($name);
+    }
+
+    protected function finalResultsContainAllFinishedDrivers($results, $finished_participants_by_id)
+    {
+        $result_ids = array();
+        foreach ($results as $result) {
+            $result_ids[] = $result['participantid'];
+        }
+
+        foreach ($finished_participants_by_id as $id => $part)
+        {
+            if ( ! array_key_exists($id, $result_ids)) {
+                return false;
+            }
+        }
+
+        return true;
     }
 
 }
