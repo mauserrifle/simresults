@@ -1043,7 +1043,7 @@ class AssettoCorsaServerReaderTest extends \PHPUnit\Framework\TestCase {
 
         // Validate laps
         $this->assertSame(1, $lap->getNumber());
-        $this->assertNull($lap->getPosition());
+        $this->assertSame(2, $lap->getPosition());
         // 01:41.9000
         $this->assertSame(101.9000, $lap->getTime());
         $this->assertSame(0, $lap->getElapsedSeconds());

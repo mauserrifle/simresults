@@ -352,9 +352,8 @@ abstract class Data_Reader {
             {
                 $session_lasted_laps = $session->getLastedLaps();
 
-                // Loop each lap number, beginning from 2, because we can't
-                // figure out positions for lap 1 if this data is missing
-                for($i=2; $i <= $session_lasted_laps; $i++)
+                // Loop each lap number
+                for($i=1; $i <= $session_lasted_laps; $i++)
                 {
                     // Get laps by lap number from session
                     $laps_sorted = $session->getLapsByLapNumberSortedByTime($i);
