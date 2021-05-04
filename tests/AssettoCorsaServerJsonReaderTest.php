@@ -287,7 +287,7 @@ class AssettoCorsaServerJsonReaderTest extends \PHPUnit\Framework\TestCase {
 
         // Validate laps
         $this->assertSame(1, $lap->getNumber());
-        $this->assertNull($lap->getPosition());
+        $this->assertSame(1, $lap->getPosition());
         $this->assertSame(104.357, $lap->getTime());
         $this->assertSame(0, $lap->getElapsedSeconds());
         $this->assertSame($participants[0], $lap->getParticipant());
@@ -310,8 +310,8 @@ class AssettoCorsaServerJsonReaderTest extends \PHPUnit\Framework\TestCase {
 
         // Validate extra positions
         $laps = $participants[3]->getLaps();
-        $this->assertNull($laps[0]->getPosition());
-        $this->assertSame(5, $laps[1]->getPosition());
+        $this->assertSame(5, $laps[0]->getPosition());
+        $this->assertSame(7, $laps[1]->getPosition());
     }
 
 

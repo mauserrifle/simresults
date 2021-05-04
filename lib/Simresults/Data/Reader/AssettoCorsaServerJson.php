@@ -138,7 +138,11 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
         }
 
 
+        // Remember lap number per participant
+        $lap_number_counter = array();
 
+        // Remember positions per lap number
+        $lap_position_counter = array();
 
         // Process laps
         if ($data['Laps'])
@@ -172,6 +176,25 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
             // Set first driver of participant as lap driver. AC does
             // not support swapping
             $lap->setDriver($lap_participant->getDriver());
+
+            // Determine lap number of this participant
+            $lap_number = null;
+            if (!isset($lap_number_counter[$lap_data['DriverName']])) {
+               $lap_number = $lap_number_counter[$lap_data['DriverName']] = 1;
+            } else {
+                $lap_number = ++$lap_number_counter[$lap_data['DriverName']];
+            }
+
+            // Determine lap position
+            $lap_position = null;
+            if (!isset($lap_position_counter[$lap_number])) {
+               $lap_position = $lap_position_counter[$lap_number] = 1;
+            } else {
+                $lap_position = ++$lap_position_counter[$lap_number];
+            }
+
+            $lap->setNumber($lap_number)
+                ->setPosition($lap_position);
 
             // Set lap time in seconds
             if ($lap_data['LapTime'] !== 99999) {
