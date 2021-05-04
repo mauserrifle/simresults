@@ -334,6 +334,13 @@ class AssettoCorsaServerJsonReaderTest extends \PHPUnit\Framework\TestCase {
             'PPolaina reported contact with another vehicle '
            .'Tabak. Impact speed: 7.37918',
             $incidents[0]->getMessage());
+
+        $this->assertSame(Incident::TYPE_ENV, $incidents[14]->getType());
+        $this->assertSame($participants[1], $incidents[14]->getParticipant());
+        $this->assertNull($incidents[14]->getOtherParticipant());
+        $this->assertSame(
+            'End 222 reported contact with environment. Impact speed: 77.08348',
+            $incidents[14]->getMessage());
     }
 
 

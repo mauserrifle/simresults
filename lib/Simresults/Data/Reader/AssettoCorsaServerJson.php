@@ -234,28 +234,52 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
                 continue;
             }
 
-            // No participant found
-            if ( ! isset($participants_by_name[$event['Driver']['Name']]) OR
-                 ! isset($participants_by_name[$event['OtherDriver']['Name']])) {
-                continue;
-            }
-
-            $part = $participants_by_name[$event['Driver']['Name']];
-            $other_part = $participants_by_name[$event['OtherDriver']['Name']];
+            $type = $type_events[$event['Type']];
 
             $incident = new Incident;
+            $incident->setType($type);
 
-            $incident->setMessage(sprintf(
-               '%s reported contact with another vehicle '.
-                '%s. Impact speed: %s' ,
-                $event['Driver']['Name'],
-                $event['OtherDriver']['Name'],
-                $event['ImpactSpeed']
-            ));
+            if ($type === Incident::TYPE_CAR)
+            {
+                // No participant found
+                if ( ! isset($participants_by_name[$event['Driver']['Name']]) OR
+                     ! isset($participants_by_name[$event['OtherDriver']['Name']])) {
+                    continue;
+                }
 
-            $incident->setType($type_events[$event['Type']]);
-            $incident->setParticipant($part);
-            $incident->setOtherParticipant($other_part);
+                $part = $participants_by_name[$event['Driver']['Name']];
+                $other_part = $participants_by_name[$event['OtherDriver']['Name']];
+
+
+                $incident->setMessage(sprintf(
+                   '%s reported contact with another vehicle '.
+                    '%s. Impact speed: %s' ,
+                    $event['Driver']['Name'],
+                    $event['OtherDriver']['Name'],
+                    $event['ImpactSpeed']
+                ));
+
+                 $incident->setParticipant($part)
+                          ->setOtherParticipant($other_part);
+            }
+            elseif ($type === Incident::TYPE_ENV)
+            {
+                // No participant found
+                if ( ! isset($participants_by_name[$event['Driver']['Name']])) {
+                    continue;
+                }
+
+                $part = $participants_by_name[$event['Driver']['Name']];
+
+                $incident->setMessage(sprintf(
+                   '%s reported contact with environment. '.
+                    'Impact speed: %s' ,
+                    $event['Driver']['Name'],
+                    $event['ImpactSpeed']
+                ));
+
+                 $incident->setParticipant($part);
+            }
 
             $session->addIncident($incident);
         }
