@@ -302,7 +302,7 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
         $all_first_sectors_excl_first_lap = array();
 
         // Process laps
-        if (isset($data['laps']))
+        if (isset($data['laps']) AND is_array($data['laps']))
         foreach ($data['laps'] as $lap_data)
         {
             if (!isset($lap_data['carId']) OR
