@@ -69,6 +69,10 @@
         "name" : "Carrera Cup"
       },
       {
+        "value" : 1740243009,
+        "name" : "GTE"
+      },
+      {
         "value" : 1754258698,
         "name" : "F-Trainer"
       },
@@ -115,6 +119,10 @@
       {
         "value" : -1388199464,
         "name" : "Hot Cars"
+      },
+      {
+        "value" : -1372148105,
+        "name" : "DPI"
       },
       {
         "value" : 29233678,
@@ -284,6 +292,11 @@
         "class" : "MiniChallenge"
       },
       {
+        "id" : 912279169,
+        "name" : "Cadillac DPi-VR",
+        "class" : "DPI"
+      },
+      {
         "id" : -950775810,
         "name" : "Caterham Academy",
         "class" : "Cat_Academy"
@@ -399,11 +412,6 @@
         "class" : "F-Retro_Gen1"
       },
       {
-        "id" : 369722929,
-        "name" : "Formula Retro Gen2",
-        "class" : "F-Retro_Gen2"
-      },
-      {
         "id" : 1437730287,
         "name" : "Formula Retro V8",
         "class" : "F-Retro_Gen1"
@@ -419,8 +427,18 @@
         "class" : "F-Retro_Gen1"
       },
       {
+        "id" : 369722929,
+        "name" : "Formula Retro Gen2",
+        "class" : "F-Retro_Gen2"
+      },
+      {
         "id" : 1439296671,
         "name" : "Lotus 79",
+        "class" : "F-Retro_Gen2"
+      },
+      {
+        "id" : 476615325,
+        "name" : "Brabham BT46B",
         "class" : "F-Retro_Gen2"
       },
       {
@@ -519,9 +537,29 @@
         "class" : "P1"
       },
       {
+        "id" : -1729418598,
+        "name" : "Chevrolet Corvette C8.R",
+        "class" : "GTE"
+      },
+      {
+        "id" : 24108228,
+        "name" : "Porsche 911 RSR GTE",
+        "class" : "GTE"
+      },
+      {
+        "id" : 901145560,
+        "name" : "BMW M8 GTE",
+        "class" : "GTE"
+      },
+      {
         "id" : -241187148,
         "name" : "BMW M6 GT3",
         "class" : "GT3"
+      },
+      {
+        "id" : -1966031044,
+        "name" : "BMW M4 GT4",
+        "class" : "GT4"
       },
       {
         "id" : 1353949246,
@@ -929,6 +967,16 @@
         "gridsize" : 38
       },
       {
+        "id" : 467707118,
+        "name" : "Daytona_Road_Course",
+        "gridsize" : 32
+      },
+      {
+        "id" : 705412912,
+        "name" : "Daytona_Nascar_Road_Course",
+        "gridsize" : 32
+      },
+      {
         "id" : 1497365379,
         "name" : "Donington_GP",
         "gridsize" : 38
@@ -1149,6 +1197,11 @@
         "gridsize" : 25
       },
       {
+        "id" : 568559152,
+        "name" : "Laguna_Seca_2020",
+        "gridsize" : 30
+      },
+      {
         "id" : -1540556268,
         "name" : "Londrina_short",
         "gridsize" : 46
@@ -1161,11 +1214,16 @@
       {
         "id" : 1373891276,
         "name" : "LondrinaKart1",
-        "gridsize" : 32
+        "gridsize" : 28
       },
       {
         "id" : 16295271,
         "name" : "LondrinaKart2",
+        "gridsize" : 28
+      },
+      {
+        "id" : 1731699995,
+        "name" : "Long_Beach",
         "gridsize" : 32
       },
       {
@@ -1346,12 +1404,12 @@
       {
         "id" : -100668052,
         "name" : "Spielberg_Historic",
-        "gridsize" : 17
+        "gridsize" : 20
       },
       {
         "id" : -213305159,
         "name" : "Spielberg_Vintage",
-        "gridsize" : 17
+        "gridsize" : 20
       },
       {
         "id" : 735562025,
