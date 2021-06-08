@@ -158,23 +158,11 @@ autoloader.
 
 ### Example for Linux/OSX
 
-Install composer:
+[Install composer](https://getcomposer.org/download/).
 
-    curl -s http://getcomposer.org/installer | php
+Add the Simresults package to the `composer.json` file:
 
-
-Create file `composer.json`:
-
-    {
-        "require": {
-            "mauserrifle/simresults":"dev-develop"
-        }
-    }
-
-Run composer install
-
-    ./composer.phar install
-
+    composer require mauserrifle/simresults:dev-develop
 
 Create index.php:
 
