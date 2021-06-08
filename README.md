@@ -134,8 +134,6 @@ lap.
 
 `lib/Data/Reader/RaceRoomServer.php`
 
-* Limited data. Only contains the best lap of drivers.
-
 ### RACE 07 reader
 
 `lib/Data/Reader/Race07.php`
@@ -143,6 +141,12 @@ lap.
 * Also works for the following games: RACE, GTR, GTR2, GT Legends,
   BMW M3 Challenge, F1 challenge 99-02 and all expansions of these games
 * Checks and fixes log variations like non-zero based laps and missing lap data
+
+### iRacing reader
+
+`lib/Data/Reader/Iracing.php`
+
+* Limited data. Only contains the best lap of drivers.
 
 ## Requirements
 
