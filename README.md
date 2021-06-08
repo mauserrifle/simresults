@@ -280,4 +280,4 @@ To run the tests, use the following command:
 ## License
 
 The Simresults library is open-sourced software licensed under the
-[ISC license](http://opensource.org/licenses/ISC).
+[ISC license](https://raw.githubusercontent.com/mauserrifle/simresults/develop/LICENSE).
