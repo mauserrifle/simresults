@@ -134,8 +134,6 @@ lap.
 
 `lib/Data/Reader/RaceRoomServer.php`
 
-* Limited data. Only contains the best lap of drivers.
-
 ### RACE 07 reader
 
 `lib/Data/Reader/Race07.php`
@@ -144,9 +142,15 @@ lap.
   BMW M3 Challenge, F1 challenge 99-02 and all expansions of these games
 * Checks and fixes log variations like non-zero based laps and missing lap data
 
+### iRacing reader
+
+`lib/Data/Reader/Iracing.php`
+
+* Limited data. Only contains the best lap of drivers.
+
 ## Requirements
 
-- PHP >= 5.3
+- PHP >= 7.2
 - Composer (for easy installing and autoloading)
 
 ## Installation and example
@@ -158,23 +162,11 @@ autoloader.
 
 ### Example for Linux/OSX
 
-Install composer:
+[Install composer](https://getcomposer.org/download/).
 
-    curl -s http://getcomposer.org/installer | php
+Add the Simresults package to the `composer.json` file:
 
-
-Create file `composer.json`:
-
-    {
-        "require": {
-            "mauserrifle/simresults":"dev-develop"
-        }
-    }
-
-Run composer install
-
-    ./composer.phar install
-
+    composer require mauserrifle/simresults:dev-develop
 
 Create index.php:
 
@@ -227,7 +219,6 @@ Big thanks to the following sponsors for supporting Simresults!
 Please pay them a visit :)
 
 * [Coach Dave - David Perel](https://www.davidperel.net/coaching/?ref=simresults)
-* [Sim Racing Online](https://simracingonline.co.uk/?ref=simresults)
 
 ## Bugs
 
@@ -281,4 +272,4 @@ To run the tests, use the following command:
 ## License
 
 The Simresults library is open-sourced software licensed under the
-[ISC license](http://opensource.org/licenses/ISC).
+[ISC license](https://raw.githubusercontent.com/mauserrifle/simresults/develop/LICENSE).

@@ -60,7 +60,7 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
     );
 
     /**
-     * @see Simresults\Data_Reader::canRead()
+     * @inheritDoc
      */
     public static function canRead($data)
     {
@@ -188,20 +188,20 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
             }
         }
 
+
         /**
          * Participants
          */
 
         $participants_by_car_id = array();
 
-        // Initial position values per class/cup
-        $position_per_class = array();
-        foreach (array_keys($this->cup_categories) as $cup_id) {
-            $position_per_class[$cup_id] = 0;
-        }
+        $position_per_class = array(
+            'GT3' => 0,
+            'GT4' => 0,
+        );
 
         if (isset($session_result['leaderBoardLines']))
-        foreach ($session_result['leaderBoardLines'] as $lead)
+        foreach ($session_result['leaderBoardLines'] as $lead_key => $lead)
         {
             if (!isset($lead['car']['carId'])) {
                 continue;
@@ -229,8 +229,14 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
                         ->setTeam($this->helper->arrayGet(
                             $lead['car'], 'teamName'));
 
+            // Doesn't seem to be correct. Order seems in finish order
+            // if ($session->getType() === Session::TYPE_RACE) {
+            //     $participant->setGridPosition($lead_key+1);
+            // }
+
             // Total time available
-            if ($total_time=$lead['timing']['totalTime'])
+            if (is_numeric($lead['timing']['totalTime']) AND
+                $total_time=$lead['timing']['totalTime'])
             {
                 $participant->setTotalTime(round($total_time / 1000, 4));
             }
@@ -258,13 +264,21 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
                 $vehicle->setNumber((int)$lead['car']['raceNumber']);
             }
 
+            // Class
+            if (strpos(strtoupper($vehicle_name), 'GT4') !== false) {
+                $vehicle->setClass('GT4');
+                $participant->setClassPosition(++$position_per_class['GT4']);
+            }
+            else {
+                $vehicle->setClass('GT3');
+                $participant->setClassPosition(++$position_per_class['GT3']);
+            }
+
             // Has cup category
             $cup_category = $this->helper->arrayGet($lead['car'], 'cupCategory');
             if (is_numeric($cup_category) AND isset($this->cup_categories[$cup_category]))
             {
-                $vehicle->setClass($this->cup_categories[$cup_category]);
-                $position_per_class[$cup_category]++;
-                $participant->setClassPosition($position_per_class[$cup_category]);
+                $vehicle->setCup($this->cup_categories[$cup_category]);
             }
 
             $participant->setVehicle($vehicle);
@@ -273,14 +287,22 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
 
 
 
-
-
         /**
          * Laps
          */
 
+        // Remember lap number per participant
+        $lap_number_counter = array();
+
+        // Remember positions per lap number
+        $lap_position_counter = array();
+
+        // Remember all first sectors excluding the first lap (it is bugged)
+        // We will use this later to calculate averages.
+        $all_first_sectors_excl_first_lap = array();
+
         // Process laps
-        if (isset($data['laps']))
+        if (isset($data['laps']) AND is_array($data['laps']))
         foreach ($data['laps'] as $lap_data)
         {
             if (!isset($lap_data['carId']) OR
@@ -288,13 +310,31 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
                 continue;
             }
 
+            // Determine lap number of this participant
+            $lap_number = null;
+            if (!isset($lap_number_counter[$lap_data['carId']])) {
+               $lap_number = $lap_number_counter[$lap_data['carId']] = 1;
+            } else {
+                $lap_number = ++$lap_number_counter[$lap_data['carId']];
+            }
+
+            // Determine lap position
+            $lap_position = null;
+            if (!isset($lap_position_counter[$lap_number])) {
+               $lap_position = $lap_position_counter[$lap_number] = 1;
+            } else {
+                $lap_position = ++$lap_position_counter[$lap_number];
+            }
+
+
             // Init new lap
             $lap = new Lap;
 
             $lap_participant = $participants_by_car_id[$lap_data['carId']];
 
             // Set participant
-            $lap->setParticipant($lap_participant);
+            $lap->setParticipant($lap_participant)
+                 ->setPosition($lap_position);
 
             $driverIndex = 0;
             if (isset($lap_data['driverIndex'])) {
@@ -322,8 +362,13 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
 
                 // Set sector times in seconds
                 foreach ($this->helper->arrayGet($lap_data, 'splits', array())
-                             as $sector_time)
+                             as $sector_key => $sector_time)
                 {
+                    // Collect all first sector times excluding lap 1
+                    if ($lap_number > 1 AND $sector_key === 0) {
+                        $all_first_sectors_excl_first_lap[] = $sector_time;
+                    }
+
                     $lap->addSectorTime(round($sector_time / 1000, 4));
                 }
             }
@@ -332,6 +377,47 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
             $lap_participant->addLap($lap);
         }
 
+
+        /**
+         * Data fixing of laps for race sessions
+         *
+         * The  timer starts when the player enters the session or presses drive.
+         * So we cannot trust sector 1 times or total times.
+         */
+        if ($session->getType() === Session::TYPE_RACE AND
+            $all_first_sectors_excl_first_lap)
+        {
+            // Calculate sector 1 average excluding lap 1
+            $all_first_sectors_excl_first_lap_average = (
+                array_sum($all_first_sectors_excl_first_lap)
+                /
+                count($all_first_sectors_excl_first_lap)
+            );
+
+            // Base new sector 1 time on average + 5 seconds (due grid start)
+            $new_sector1_time = round(
+                ($all_first_sectors_excl_first_lap_average + 5000) / 1000, 4);
+
+            // Set all lap 1 first sectors to the new sector time.
+            foreach ($participants_by_car_id as $part)
+            foreach ($part->getLaps() as $lap)
+            {
+                // Is first lap and has sectors
+                if ($lap->getNumber() === 1 AND $sectors = $lap->getSectorTimes())
+                {
+                    // Set new average + lap position*0.001 and set sector times
+                    if ($lap->getPosition()) {
+                        $new_sector1_time += round(($lap->getPosition() * 0.001), 4);
+                    }
+
+                    $sectors[0] = $new_sector1_time;
+                    $lap->setSectorTimes($sectors);
+
+                    // Set new total time based on the sum
+                    $lap->setTime(round(array_sum($sectors), 4));
+                }
+            }
+        }
 
 
         /**
@@ -363,11 +449,11 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
             $penalty->setMessage(
                 $penalty_participant->getDriver($driverIndex+1)->getName().
                 ' - '.
-                $penalty_data['reason'].
+                $this->helper->arrayGet($penalty_data, 'reason', 'Unknown reason').
                 ' - '.
                 $penalty_data['penalty'].
                 ' - violation in lap '.$penalty_data['violationInLap'].
-                ' - cleared in lap '.$penalty_data['violationInLap']
+                ' - cleared in lap '.$penalty_data['clearedInLap']
 
             );
 

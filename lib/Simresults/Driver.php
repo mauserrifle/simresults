@@ -49,6 +49,8 @@ class Driver {
     /**
      * Get the name of the driver
      *
+     * @param boolean $shorten_lastname
+     * @param boolean $shorten_firstname
      * @return  string
      */
     public function getName($shorten_lastname=FALSE, $shorten_firstname=FALSE)
@@ -88,6 +90,8 @@ class Driver {
      * Get the name of the driver including AI mention when it's not a human
      * driver. For example: mauserrifle (AI).
      *
+     * @param boolean $shorten_lastname
+     * @param boolean $shorten_firstname
      * @return  string
      */
     public function getNameWithAiMention($shorten_lastname=FALSE, $shorten_firstname=FALSE)

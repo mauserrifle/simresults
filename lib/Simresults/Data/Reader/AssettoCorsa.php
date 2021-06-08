@@ -13,7 +13,7 @@ namespace Simresults;
 class Data_Reader_AssettoCorsa extends Data_Reader {
 
     /**
-     * @see Simresults\Data_Reader::canRead()
+     * @inheritDoc
      */
     public static function canRead($data)
     {

@@ -22,7 +22,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
     protected $last_known_tyre_driver;
 
     /**
-     * @see Simresults\Data_Reader::canRead()
+     * @inheritDoc
      */
     public static function canRead($data)
     {
@@ -286,7 +286,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
     }
 
     /**
-     * @see Simresults\Data_Reader::init()
+     * @see Data_Reader::init()
      */
     protected function init()
     {
@@ -297,13 +297,14 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
      * Parses and converts the data to an array. Keys will be converted to
      * lowercase names
      *
-     * @return   array
+     * @param string $data
+     * @return   array|null
      *
      */
     protected function parse_data($data)
     {
         // No server log
-        if (strpos($data, 'Server CFG Path') === false) return false;
+        if (strpos($data, 'Server CFG Path') === false) return null;
 
         // Make utf8
         $data = utf8_encode($data);
@@ -325,7 +326,7 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
         $data_sessions = explode('NextSession', $data);
 
        // No sessions
-        if ( ! $data_sessions) return false;
+        if ( ! $data_sessions) return null;
 
         // Init return array
         $return_array = array();
@@ -956,12 +957,12 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
     /**
      * Parses the lap data and manipulates the `participants_copy` array
      *
-     * @param   array     $data                  Session data that may be splitted by restarts
-     * @param   array     $all_sessions_data     All data of current session (not splitted)
-     * @param   array     $all_data              All data of entire log!!!
+     * @param   string     $data                  Session data that may be splitted by restarts
+     * @param   string    $all_sessions_data     All data of current session (not splitted)
+     * @param   string    $all_data              All data of entire log!!!
      * @param   array     $participants_copy     Participants (by reference!)
-     * @param   array     $participants_regex    Regex to match participants
-     * @param   array     $participant_regex_vehicle_match_key
+     * @param   string    $participant_regex    Regex to match participants
+     * @param   int       $participant_regex_vehicle_match_key
      * @param   boolean   $only_one_lap_per_driver
      *
      * @return  boolean  success or not
@@ -1042,9 +1043,9 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
 
                     // Check for unique tyres per driver so we can just force
                     // for better performance
-                    foreach ($driver_tyres as $driver_key => $driver_tyres)
+                    foreach ($driver_tyres as $driver_key => $tyres)
                     {
-                        $tyre_unique = array_unique($driver_tyres);
+                        $tyre_unique = array_unique($tyres);
 
                         // Just 1 tyre
                         if (count($tyre_unique) === 1)
@@ -1180,8 +1181,9 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                  */
 
                 // Split session log data with lap data as delimiter
-                $data_session2_split2 = explode(
-                    $lap_data, $data);
+                // Old unused explode, not sure what the intent was..
+                //$data_session2_split2 = explode(
+                //    $lap_data, $data);
 
                 // Get second part (so after this lap)
                 $data_session2_split2 = $data_session2_split[1];

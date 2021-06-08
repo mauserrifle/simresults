@@ -309,24 +309,35 @@ class SessionSpec extends ObjectBehavior
 
     function it_splits_sessions_by_vehicle_class(
         Participant $part1, Participant $part2, Participant $part3,
-        Vehicle $vehicle1, Vehicle $vehicle2, Vehicle $vehicle3)
+        Participant $part4,
+        Vehicle $vehicle1, Vehicle $vehicle2, Vehicle $vehicle3,
+        Vehicle $vehicle4)
     {
 
         $vehicle1->getClass()->willReturn('A class');
         $vehicle2->getClass()->willReturn('Another class');
         $vehicle3->getClass()->willReturn(null);
+        $vehicle4->getClass()->willReturn('A class');
 
         $part1->getVehicle()->willReturn($vehicle1);
         $part2->getVehicle()->willReturn($vehicle2);
         $part3->getVehicle()->willReturn($vehicle3);
+        $part4->getVehicle()->willReturn($vehicle4);
 
-        $this->setParticipants(array($part1, $part2, $part3));
+        $this->setParticipants(array($part1, $part2, $part3, $part4));
 
+        // We expect new position to be set
+        $part1->setPosition(1)->shouldBeCalled();
+        $part2->setPosition(1)->shouldBeCalled();
+        $part3->setPosition(1)->shouldBeCalled();
+        $part4->setPosition(2)->shouldBeCalled(); // Same class as part1
+
+        // Split and test session participants
         $sessions = $this->splitByVehicleClass();
-
         $sessions[0]->getParticipants()->shouldReturn(array($part3));
-        $sessions[1]->getParticipants()->shouldReturn(array($part1));
+        $sessions[1]->getParticipants()->shouldReturn(array($part1, $part4));
         $sessions[2]->getParticipants()->shouldReturn(array($part2));
+
     }
 
     function it_can_sort_participants_by_consistency(

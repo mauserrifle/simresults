@@ -209,7 +209,6 @@ class Lap {
      * When no vehicle is set on the lap, this method will return the single
      * vehicle set on the Participant
      *
-     * @param   int       $vehicle_number
      * @return  Vehicle
      */
     public function getVehicle()
@@ -228,7 +227,7 @@ class Lap {
      * @param   int  $position
      * @return  Lap
      */
-    public function setPosition($position)
+    public function setPosition($position=null)
     {
         $this->position = $position;
         return $this;
@@ -743,6 +742,7 @@ class Lap {
     /**
      * Returns the gap between this lap and the given lap
      *
+     * @param  Lap $lap
      * @return  float|null
      */
     public function getGap(Lap $lap)

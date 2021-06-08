@@ -13,14 +13,14 @@ use Simresults\Incident;
  * @copyright  (c) 2013 Maurice van der Star
  * @license    http://opensource.org/licenses/ISC
  */
-class AssettoCorsaServerJsonReaderTest extends PHPUnit_Framework_TestCase {
+class AssettoCorsaServerJsonReaderTest extends \PHPUnit\Framework\TestCase {
 
     /**
      * Set error reporting
      *
      * @see PHPUnit_Framework_TestCase::setUp()
      */
-    protected function setUp()
+    protected function setUp(): void
     {
         error_reporting(E_ALL);
     }
@@ -28,11 +28,10 @@ class AssettoCorsaServerJsonReaderTest extends PHPUnit_Framework_TestCase {
 
     /**
      * Test exception when no data is supplied
-     *
-     * @expectedException Simresults\Exception\CannotReadData
      */
     public function testCreatingNewAssettoCorsaReaderWithInvalidData()
     {
+        $this->expectException(\Simresults\Exception\CannotReadData::class);
         $reader = new Data_Reader_AssettoCorsaServerJson('Unknown data for reader');
     }
 
@@ -244,23 +243,14 @@ class AssettoCorsaServerJsonReaderTest extends PHPUnit_Framework_TestCase {
             $participant->getFinishStatus());
         $this->assertSame(1003.035, $participant->getTotalTime());
 
-        // Get one of last participants. Not the most last because they
-        // vary in order because of different usort behavior due pivots
-        // in PHP 5.6 vs HHVM/PHP7. But thats ok, those are all meaningless
-        // DNF anyway
-        $participant = $participants[count($participants)-5];
-        $this->assertSame('YoloAtGames',
-                          $participant->getDriver()->getName());
-        $this->assertSame('lotus_exos_125',
-                          $participant->getVehicle()->getName());
+        // Test last (DNF) participant. But not check specific driver
+        // attributes because the DNF drivers vary in order because of
+        // different usort behavior for equal values in PHP 5.6/HHVM/PHP7/PHP8.
+        // But thats ok, those are all meaningless DNF anyway
+        $participant = $participants[count($participants)-1];
+        $this->assertSame('lotus_exos_125', $participant->getVehicle()->getName());
         $this->assertSame(0, $participant->getVehicle()->getBallast());
         $this->assertSame(0, $participant->getVehicle()->getRestrictor());
-        $this->assertSame('0_Lotus', $participant->getVehicle()->getSkin());
-        $this->assertSame('',
-                          $participant->getTeam());
-        $this->assertSame('76561198156462312',
-                          $participant->getDriver()->getDriverId());
-        $this->assertSame(19, $participant->getPosition());
         $this->assertSame(Participant::FINISH_DNF,
             $participant->getFinishStatus());
         $this->assertSame(0, $participant->getTotalTime());
@@ -268,8 +258,10 @@ class AssettoCorsaServerJsonReaderTest extends PHPUnit_Framework_TestCase {
 
         // Test participants to have a no finish status when they did not
         // succeed in 50% laps
+        $participant = $participants[10];
         $this->assertSame(Participant::FINISH_NONE,
-            $participants[10]->getFinishStatus());
+            $participant->getFinishStatus());
+        $this->assertSame('PPolaina', $participant->getDriver()->getName());
     }
 
     /**
@@ -295,7 +287,7 @@ class AssettoCorsaServerJsonReaderTest extends PHPUnit_Framework_TestCase {
 
         // Validate laps
         $this->assertSame(1, $lap->getNumber());
-        $this->assertNull($lap->getPosition());
+        $this->assertSame(1, $lap->getPosition());
         $this->assertSame(104.357, $lap->getTime());
         $this->assertSame(0, $lap->getElapsedSeconds());
         $this->assertSame($participants[0], $lap->getParticipant());
@@ -318,8 +310,8 @@ class AssettoCorsaServerJsonReaderTest extends PHPUnit_Framework_TestCase {
 
         // Validate extra positions
         $laps = $participants[3]->getLaps();
-        $this->assertNull($laps[0]->getPosition());
-        $this->assertSame(5, $laps[1]->getPosition());
+        $this->assertSame(5, $laps[0]->getPosition());
+        $this->assertSame(7, $laps[1]->getPosition());
     }
 
 
@@ -342,6 +334,13 @@ class AssettoCorsaServerJsonReaderTest extends PHPUnit_Framework_TestCase {
             'PPolaina reported contact with another vehicle '
            .'Tabak. Impact speed: 7.37918',
             $incidents[0]->getMessage());
+
+        $this->assertSame(Incident::TYPE_ENV, $incidents[14]->getType());
+        $this->assertSame($participants[1], $incidents[14]->getParticipant());
+        $this->assertNull($incidents[14]->getOtherParticipant());
+        $this->assertSame(
+            'End 222 reported contact with environment. Impact speed: 77.08348',
+            $incidents[14]->getMessage());
     }
 
 

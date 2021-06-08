@@ -26,6 +26,12 @@ abstract class Data_Reader {
      */
     protected $helper;
 
+    /**
+     * @var boolean  Whether we will set finish status none if 50% of laps is
+     *               not completed
+     */
+    protected $finish_status_none_50percent_rule = true;
+
 
     /**
      * Create a new data reader for the given file or string.
@@ -48,6 +54,7 @@ abstract class Data_Reader {
             'Simresults\Data_Reader_ProjectCarsServer',
             'Simresults\Data_Reader_RaceRoomServer',
             'Simresults\Data_Reader_Race07',
+            'Simresults\Data_Reader_Iracing',
         );
 
         // File checking
@@ -90,6 +97,7 @@ abstract class Data_Reader {
      * Construct new reader with given string data
      *
      * @param   string  $data
+     * @param   Helper  $helper
      * @throws  Exception\CannotReadData
      */
     public function __construct($data, Helper $helper=null)
@@ -128,6 +136,7 @@ abstract class Data_Reader {
      * Returns one session
      *
      * @throws  Exception\NoSession    when session is not found
+     * @param int $session_number
      * @return  Session
      */
     public function getSession($session_number=1)
@@ -280,9 +289,8 @@ abstract class Data_Reader {
                         $participant->setFinishStatus(Participant::FINISH_DNF);
                     }
                     // Finished normally and matches 50% rule
-                    elseif ($participant->getFinishStatus()
-                            === Participant::FINISH_NORMAL
-                        AND
+                    elseif ($this->finish_status_none_50percent_rule AND
+                        $participant->getFinishStatus() === Participant::FINISH_NORMAL AND
                         (! $participant->getNumberOfCompletedLaps() OR
                          50 > ($participant->getNumberOfCompletedLaps() /
                         ($session->getLastedLaps() / 100))))
@@ -344,9 +352,8 @@ abstract class Data_Reader {
             {
                 $session_lasted_laps = $session->getLastedLaps();
 
-                // Loop each lap number, beginning from 2, because we can't
-                // figure out positions for lap 1 if this data is missing
-                for($i=2; $i <= $session_lasted_laps; $i++)
+                // Loop each lap number
+                for($i=1; $i <= $session_lasted_laps; $i++)
                 {
                     // Get laps by lap number from session
                     $laps_sorted = $session->getLapsByLapNumberSortedByTime($i);

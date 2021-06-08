@@ -6,6 +6,10 @@ composer.phar
 /.settings
 /.buildpath
 /.project
+/.phpunit.result.cache
+
+# Ignore phpstorm
+.idea
 
 # Ignore lock files
 .~lock*
@@ -22,3 +26,4 @@ composer.phar
 
 # Ignore vim tag files
 *.tags
+

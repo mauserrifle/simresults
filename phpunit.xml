@@ -4,6 +4,7 @@
          convertNoticesToExceptions="true"
          convertWarningsToExceptions="true"
          stopOnFailure="false"
+         beStrictAboutTestsThatDoNotTestAnything="false"
 >
     <testsuites>
         <testsuite name="Simresults Test Suite">

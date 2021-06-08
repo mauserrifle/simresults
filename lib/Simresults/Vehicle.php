@@ -26,6 +26,11 @@ class Vehicle {
     private $class;
 
     /**
+     * @var  string  The cup of the vehicle
+     */
+    private $cup;
+
+    /**
      * @var  int  The number of the vehicle
      */
     private $number;
@@ -109,6 +114,28 @@ class Vehicle {
     public function getClass()
     {
         return $this->class;
+    }
+
+    /**
+     * Set the cup of the vehicle
+     *
+     * @param   string   $cup
+     * @return  Vehicle
+     */
+    public function setCup($cup)
+    {
+        $this->cup = $cup;
+        return $this;
+    }
+
+    /**
+     * Get the cup of the vehicle
+     *
+     * @return  string
+     */
+    public function getCup()
+    {
+        return $this->cup;
     }
 
     /**

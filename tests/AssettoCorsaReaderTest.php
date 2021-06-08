@@ -14,14 +14,14 @@ use Simresults\Participant;
  * @copyright  (c) 2013 Maurice van der Star
  * @license    http://opensource.org/licenses/ISC
  */
-class AssettoCorsaReaderTest extends PHPUnit_Framework_TestCase {
+class AssettoCorsaReaderTest extends \PHPUnit\Framework\TestCase {
 
     /**
      * Set error reporting
      *
      * @see PHPUnit_Framework_TestCase::setUp()
      */
-    protected function setUp()
+    protected function setUp(): void
     {
         error_reporting(E_ALL);
     }
@@ -29,11 +29,10 @@ class AssettoCorsaReaderTest extends PHPUnit_Framework_TestCase {
 
     /**
      * Test exception when no data is supplied
-     *
-     * @expectedException Simresults\Exception\CannotReadData
      */
     public function testCreatingNewAssettoCorsaReaderWithInvalidData()
     {
+        $this->expectException(\Simresults\Exception\CannotReadData::class);
         $reader = new Data_Reader_AssettoCorsa('Unknown data for reader');
     }
 
@@ -45,11 +44,11 @@ class AssettoCorsaReaderTest extends PHPUnit_Framework_TestCase {
 
     /**
      * Test exception when the log file has no session included
-     *
-     * @expectedException Simresults\Exception\Reader
      */
     public function testCreatingNewAssettoCorsaReaderWithNoSessions()
     {
+        $this->expectException(\Simresults\Exception\Reader::class);
+
         // The path to the data source
         $file_path = realpath(__DIR__.'/logs/assettocorsa/nosessions.json');
 
@@ -332,7 +331,7 @@ class AssettoCorsaReaderTest extends PHPUnit_Framework_TestCase {
 
         // Validate laps
         $this->assertSame(1, $lap->getNumber());
-        $this->assertNull($lap->getPosition());
+        $this->assertSame(1, $lap->getPosition());
         $this->assertSame(173.883, $lap->getTime());
         $this->assertSame(0, $lap->getElapsedSeconds());
         $this->assertSame($participants[0], $lap->getParticipant());
@@ -355,7 +354,7 @@ class AssettoCorsaReaderTest extends PHPUnit_Framework_TestCase {
 
         // Validate extra positions
         $laps = $participants[3]->getLaps();
-        $this->assertNull($laps[0]->getPosition());
+        $this->assertSame(6, $laps[0]->getPosition());
         $this->assertSame(6, $laps[1]->getPosition());
     }
 

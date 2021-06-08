@@ -15,7 +15,7 @@ namespace Simresults;
 class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
 
     /**
-     * @see Simresults\Data_Reader::canRead()
+     * @inheritDoc
      */
     public static function canRead($data)
     {
@@ -138,7 +138,11 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
         }
 
 
+        // Remember lap number per participant
+        $lap_number_counter = array();
 
+        // Remember positions per lap number
+        $lap_position_counter = array();
 
         // Process laps
         if ($data['Laps'])
@@ -172,6 +176,25 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
             // Set first driver of participant as lap driver. AC does
             // not support swapping
             $lap->setDriver($lap_participant->getDriver());
+
+            // Determine lap number of this participant
+            $lap_number = null;
+            if (!isset($lap_number_counter[$lap_data['DriverName']])) {
+               $lap_number = $lap_number_counter[$lap_data['DriverName']] = 1;
+            } else {
+                $lap_number = ++$lap_number_counter[$lap_data['DriverName']];
+            }
+
+            // Determine lap position
+            $lap_position = null;
+            if (!isset($lap_position_counter[$lap_number])) {
+               $lap_position = $lap_position_counter[$lap_number] = 1;
+            } else {
+                $lap_position = ++$lap_position_counter[$lap_number];
+            }
+
+            $lap->setNumber($lap_number)
+                ->setPosition($lap_position);
 
             // Set lap time in seconds
             if ($lap_data['LapTime'] !== 99999) {
@@ -211,28 +234,52 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
                 continue;
             }
 
-            // No participant found
-            if ( ! isset($participants_by_name[$event['Driver']['Name']]) OR
-                 ! isset($participants_by_name[$event['OtherDriver']['Name']])) {
-                continue;
-            }
-
-            $part = $participants_by_name[$event['Driver']['Name']];
-            $other_part = $participants_by_name[$event['OtherDriver']['Name']];
+            $type = $type_events[$event['Type']];
 
             $incident = new Incident;
+            $incident->setType($type);
 
-            $incident->setMessage(sprintf(
-               '%s reported contact with another vehicle '.
-                '%s. Impact speed: %s' ,
-                $event['Driver']['Name'],
-                $event['OtherDriver']['Name'],
-                $event['ImpactSpeed']
-            ));
+            if ($type === Incident::TYPE_CAR)
+            {
+                // No participant found
+                if ( ! isset($participants_by_name[$event['Driver']['Name']]) OR
+                     ! isset($participants_by_name[$event['OtherDriver']['Name']])) {
+                    continue;
+                }
 
-            $incident->setType($type_events[$event['Type']]);
-            $incident->setParticipant($part);
-            $incident->setOtherParticipant($other_part);
+                $part = $participants_by_name[$event['Driver']['Name']];
+                $other_part = $participants_by_name[$event['OtherDriver']['Name']];
+
+
+                $incident->setMessage(sprintf(
+                   '%s reported contact with another vehicle '.
+                    '%s. Impact speed: %s' ,
+                    $event['Driver']['Name'],
+                    $event['OtherDriver']['Name'],
+                    $event['ImpactSpeed']
+                ));
+
+                 $incident->setParticipant($part)
+                          ->setOtherParticipant($other_part);
+            }
+            elseif ($type === Incident::TYPE_ENV)
+            {
+                // No participant found
+                if ( ! isset($participants_by_name[$event['Driver']['Name']])) {
+                    continue;
+                }
+
+                $part = $participants_by_name[$event['Driver']['Name']];
+
+                $incident->setMessage(sprintf(
+                   '%s reported contact with environment. '.
+                    'Impact speed: %s' ,
+                    $event['Driver']['Name'],
+                    $event['ImpactSpeed']
+                ));
+
+                 $incident->setParticipant($part);
+            }
 
             $session->addIncident($incident);
         }

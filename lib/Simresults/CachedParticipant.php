@@ -13,6 +13,11 @@ namespace Simresults;
  */
 class CachedParticipant extends Participant {
 
+    /**
+     * @var Cache
+     */
+    protected $cache;
+
     public function __construct(Helper $helper=null, Cache $cache=null)
     {
         if ( ! $cache) $cache = new Cache;

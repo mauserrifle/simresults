@@ -4,10 +4,6 @@ namespace Simresults;
 /**
  * The reader for Project Cars sms_stats data files.
  *
- * WARNING: This file is highly experimental and has been made in a hurry.
- *          Expect alot of duplicate code that has to be refactored soon
- *          (TODO).
- *
  * @author     Maurice van der Star <mauserrifle@gmail.com>
  * @copyright  (c) 2013 Maurice van der Star
  * @license    http://opensource.org/licenses/ISC
@@ -32,6 +28,8 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
 
     /**
      * @var array Some Automobilista 2 vehicle ids so we can detect the game
+     *            Warning: This is an old detection method. Just here for
+     *            legacy reasons.
      */
     public static $automobilista2_vehicle_ids = array(
         1932261404,
@@ -70,7 +68,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
 
 
     /**
-     * @see Simresults\Data_Reader::canRead()
+     * @inheritDoc
      */
     public static function canRead($data)
     {
@@ -287,6 +285,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 // Parse event data such as laps
                 $cut_data = array();
                 $driver_has_entered_pit = array();
+                $finished_participants_by_id = array();
                 foreach ($session_data['events'] as $event)
                 {
                     // Get participant
@@ -391,6 +390,12 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                             $event['attributes']['NewState'] === 'Retired')
                     {
                         $part->setFinishStatus(Participant::FINISH_DNF);
+                    }
+                    elseif ($event['event_name'] === 'State' AND
+                            $event['attributes']['NewState'] === 'Finished')
+                    {
+                        $part->setFinishStatus(Participant::FINISH_NORMAL);
+                        $finished_participants_by_id[$event['participantid']] = $part;
                     }
                     elseif ($event['event_name'] === 'State' AND
                             $event['attributes']['NewState'] === 'EnteringPits' AND
@@ -606,43 +611,15 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 // Get participant with normal array keys
                 $participants = array_values($participants);
 
-
-                // Session has predefined race result positions
-                // WARNING: We only do this for race sessions because for
-                // qualify and practice some drivers are missing from the
-                // result
+                // Session has predefined race result positions and it is a
+                // race session
                 if ($results = $session_data['results'] AND
                     $session->getType() === Session::TYPE_RACE)
                 {
-                    // Sort participants using our own sort
-                    $tmp_sort =
-                        $this->helper->sortParticipantsByTotalTime($participants);
-
-                    // Find whether our leading participant using our own sort
-                    // is in the result
-                    $leading_is_in_result = false;
-                    foreach ($results as $result)
-                    {
-                        // Participant not found, continue to next
-                        if ( ! isset($participants_by_id[
-                                         $result['participantid']]))
-                        {
-                            continue;
-                        }
-
-                        // Get participant
-                        $participant = $participants_by_id[
-                            $result['participantid']];
-
-                        // Leading found
-                        if ($participant === $tmp_sort[0])
-                        {
-                            $leading_is_in_result = true;
-                        }
-                    }
-
-                    // Leading participant is in the results array
-                    if ($leading_is_in_result)
+                    // Result includes atleast all the finished drivers from
+                    // events
+                    if ($this->finalResultsContainAllFinishedDrivers(
+                        $results, $finished_participants_by_id))
                     {
                         // Init sorted result array
                         $participants_resultsorted = array();
@@ -753,6 +730,50 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
         }
 
 
+
+
+        /**
+         * Collect all known steam ids by driver name to fix missing ids across sessions
+         */
+
+        // Collect steam ids from regular session parsing
+        $participants_steamid_by_name = array();
+        foreach ($sessions as $session)
+        foreach ($session->getParticipants() as $part)
+        foreach ($part->getDrivers() as $driver)
+        {
+            if (!$driver_id = $driver->getDriverId()) {
+                continue;
+            }
+            $participants_steamid_by_name[$driver->getName()] = $driver->getDriverId();
+        }
+        // Collect steamids from players array
+        if ($players = $this->helper->arrayGet($data, 'players'))
+        {
+            foreach ($players as $steamid => $player)
+            {
+                // Not a proper steam id or id already found, ignore this data
+                if (!is_numeric($steamid) OR strlen($steamid) < 17 OR
+                    isset($participants_steamid_by_name[$player['name']])) {
+                    continue;
+                }
+
+                $participants_steamid_by_name[$player['name']] = $steamid;
+            }
+        }
+        // // Fix all missing steam ids
+        foreach ($sessions as $session)
+        foreach ($session->getParticipants() as $part)
+        foreach ($part->getDrivers() as $driver)
+        {
+            if (!$driver->getDriverId() AND
+                isset($participants_steamid_by_name[$driver->getName()]))
+            {
+                $driver->setDriverId((string)$participants_steamid_by_name
+                    [$part->getDriver()->getName()]);
+            }
+        }
+
         // Return sessions
         return $sessions;
     }
@@ -861,7 +882,6 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
      *
      * @param   int  $vehicle_id
      * @param   Vehicle  $vehicle
-     * @return  string
      */
     protected function setVehicleName($vehicle_id, Vehicle $vehicle)
     {
@@ -911,6 +931,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
     /**
      * Get the attribute names of the project cars attributes json
      *
+     * @param string $file
      * @return array
      */
     public function getAttributeNames($file='ProjectCarsAttributes.json')
@@ -990,6 +1011,23 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
         }
 
         $this->current_game->setName($name);
+    }
+
+    protected function finalResultsContainAllFinishedDrivers($results, $finished_participants_by_id)
+    {
+        $result_ids = array();
+        foreach ($results as $result) {
+            $result_ids[] = $result['participantid'];
+        }
+
+        foreach ($finished_participants_by_id as $id => $part)
+        {
+            if ( ! array_key_exists($id, $result_ids)) {
+                return false;
+            }
+        }
+
+        return true;
     }
 
 }

@@ -13,14 +13,14 @@ use Simresults\Incident;
  * @copyright  (c) 2013 Maurice van der Star
  * @license    http://opensource.org/licenses/ISC
  */
-class RfactorReaderTest extends PHPUnit_Framework_TestCase {
+class RfactorReaderTest extends \PHPUnit\Framework\TestCase {
 
     /**
      * Set error reporting
      *
      * @see PHPUnit_Framework_TestCase::setUp()
      */
-    protected function setUp()
+    protected function setUp(): void
     {
         error_reporting(E_ALL);
     }

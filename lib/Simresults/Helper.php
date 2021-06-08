@@ -161,6 +161,8 @@ class Helper {
     /**
      * Returns the given laps sorted by a sector (ASC)
      *
+     * @param array $laps
+     * @param int $sector
      * @return  array  the laps
      */
     public function sortLapsBySector(array $laps, $sector)
@@ -213,6 +215,7 @@ class Helper {
     /**
      * Returns the given laps sorted by time (ASC)
      *
+     * @param array $laps
      * @return  array  the laps
      */
     public function sortLapsByTime(array $laps)
@@ -249,6 +252,7 @@ class Helper {
     /**
      * Returns the given laps sorted by elapsed time (ASC)
      *
+     * @param array $laps
      * @return  array  the laps
      */
     public function sortLapsByElapsedTime(array $laps)
@@ -653,7 +657,7 @@ class Helper {
      * If the session value differs from the session type detected, it will
      * be stored as session name.
      *
-     * @param   string  $value
+     * @param   string  $session_value
      * @param   array   $custom_values_to_type
      * @return  Session
      */

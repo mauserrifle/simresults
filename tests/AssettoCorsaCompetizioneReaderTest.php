@@ -13,14 +13,14 @@ use Simresults\Incident;
  * @copyright  (c) 2013 Maurice van der Star
  * @license    http://opensource.org/licenses/ISC
  */
-class AssettoCorsaCompetizioneReaderTest extends PHPUnit_Framework_TestCase {
+class AssettoCorsaCompetizioneReaderTest extends \PHPUnit\Framework\TestCase {
 
     /**
      * Set error reporting
      *
      * @see PHPUnit_Framework_TestCase::setUp()
      */
-    protected function setUp()
+    protected function setUp(): void
     {
         error_reporting(E_ALL);
     }
@@ -28,11 +28,10 @@ class AssettoCorsaCompetizioneReaderTest extends PHPUnit_Framework_TestCase {
 
     /**
      * Test exception when no data is supplied
-     *
-     * @expectedException Simresults\Exception\CannotReadData
      */
     public function testCreatingNewAssettoCorsaReaderWithInvalidData()
     {
+        $this->expectException(\Simresults\Exception\CannotReadData::class);
         $reader = new Data_Reader_AssettoCorsaCompetizione('Unknown data for reader');
     }
 
@@ -361,6 +360,35 @@ class AssettoCorsaCompetizioneReaderTest extends PHPUnit_Framework_TestCase {
         ), $session->getOtherSettings());
     }
 
+    /**
+     * Test mixed GT3 and GT4 vehicle classes
+     */
+    public function testGtVehicleClassesWhenGt4IsDetected()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-competizione/'.
+            'race.modified.with.gt4.json');
+
+        $session = Data_Reader::factory($file_path)->getSession();
+        $participants = $session->getParticipants();
+
+        $participant = $participants[0];
+        $this->assertSame(1, $participant->getPosition());
+        $this->assertSame(1, $participant->getClassPosition());
+        $this->assertSame('GT4', $participant->getVehicle()->getClass());
+
+        $participant = $participants[1];
+        $this->assertSame(2, $participant->getPosition());
+        $this->assertSame(1, $participant->getClassPosition());
+        $this->assertSame('GT3', $participant->getVehicle()->getClass());
+
+        $participant = $participants[2];
+        $this->assertSame(3, $participant->getPosition());
+        $this->assertSame(2, $participant->getClassPosition());
+        $this->assertSame('GT3', $participant->getVehicle()->getClass());
+    }
+
 
 
     /***
@@ -440,7 +468,8 @@ class AssettoCorsaCompetizioneReaderTest extends PHPUnit_Framework_TestCase {
                           $participant->getVehicle()->getName());
         $this->assertSame('123', $participant->getDriver()->getDriverId());
         $this->assertSame(82, $participant->getVehicle()->getNumber());
-        $this->assertSame('Overall', $participant->getVehicle()->getClass());
+        $this->assertSame('GT3', $participant->getVehicle()->getClass());
+        $this->assertSame('Overall', $participant->getVehicle()->getCup());
         $this->assertSame('',
                           $participant->getTeam());
         $this->assertSame(1, $participant->getPosition());
@@ -452,12 +481,14 @@ class AssettoCorsaCompetizioneReaderTest extends PHPUnit_Framework_TestCase {
         // Different cup
         $participant = $participants[1];
         $this->assertSame(2, $participant->getPosition());
-        $this->assertSame(1, $participant->getClassPosition());
-        $this->assertSame('Pro-Am', $participant->getVehicle()->getClass());
+        $this->assertSame(2, $participant->getClassPosition());
+        $this->assertSame('GT3', $participant->getVehicle()->getClass());
+        $this->assertSame('Pro-Am', $participant->getVehicle()->getCup());
         $participant = $participants[2];
         $this->assertSame(3, $participant->getPosition());
-        $this->assertSame(2, $participant->getClassPosition());
-        $this->assertSame('Overall', $participant->getVehicle()->getClass());
+        $this->assertSame(3, $participant->getClassPosition());
+        $this->assertSame('GT3', $participant->getVehicle()->getClass());
+        $this->assertSame('Overall', $participant->getVehicle()->getCup());
 
     }
 
@@ -485,8 +516,11 @@ class AssettoCorsaCompetizioneReaderTest extends PHPUnit_Framework_TestCase {
 
         // Validate laps
         $this->assertSame(1, $lap->getNumber());
-        $this->assertNull($lap->getPosition());
-        $this->assertSame(354.586, $lap->getTime());
+        $this->assertSame(2, $lap->getPosition());
+        // First sector based on lap 2+ averages + grid start correction.
+        // We cannot trust lap 1 sector 1  and total time. The  timer starts
+        // when the player enters the session or presses drive.
+        $this->assertSame(124.7316, $lap->getTime());
         $this->assertSame(0, $lap->getElapsedSeconds());
         $this->assertSame($participants[0], $lap->getParticipant());
         $this->assertSame($driver, $lap->getDriver());
@@ -495,7 +529,10 @@ class AssettoCorsaCompetizioneReaderTest extends PHPUnit_Framework_TestCase {
         $sectors = $lap->getSectorTimes();
 
         // Validate sectors
-        $this->assertSame(281.629, $sectors[0]);
+        // First sector based on lap 2+ averages + grid start correction.
+        // We cannot trust lap 1 sector 1  and total time. The  timer starts
+        // when the player enters the session or presses drive.
+        $this->assertSame(51.7746, $sectors[0]);
         $this->assertSame(27.762, $sectors[1]);
         $this->assertSame(45.195, $sectors[2]);
 
@@ -504,12 +541,12 @@ class AssettoCorsaCompetizioneReaderTest extends PHPUnit_Framework_TestCase {
         $this->assertSame(2, $lap->getNumber());
         $this->assertSame(1, $lap->getPosition());
         $this->assertSame(336.123, $lap->getTime());
-        $this->assertSame(354.586, $lap->getElapsedSeconds());
+        $this->assertSame(124.7316, $lap->getElapsedSeconds());
 
         // Validate extra positions
         $laps = $participants[2]->getLaps();
-        $this->assertNull($laps[0]->getPosition());
-        $this->assertSame(3 , $laps[1]->getPosition());
+        $this->assertSame(3, $laps[0]->getPosition());
+        $this->assertSame(2 , $laps[1]->getPosition());
     }
 
 
