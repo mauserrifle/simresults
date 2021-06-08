@@ -33,9 +33,12 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
         $data = json_decode($this->data, TRUE);
 
         // Get date
-        preg_match('/\d{10}/i', $data['Time'], $time_matches);
-        $date = new \DateTime; $date->setTimestamp($time_matches[0]);
-        $date->setTimezone(new \DateTimeZone(self::$default_timezone));
+        $date = null;
+        if (isset($data['Time'])) {
+            preg_match('/\d{10}/i', $data['Time'], $time_matches);
+            $date = new \DateTime; $date->setTimestamp($time_matches[0]);
+            $date->setTimezone(new \DateTimeZone(self::$default_timezone));
+        }
 
         // Get other settings
         $other_settings = array();
@@ -69,8 +72,10 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
             $session = $this->helper->detectSession(strtolower($name = $session_data['Type']));
 
             // Set session values
-            $session->setDate($date)
-                    ->setOtherSettings($other_settings);
+            if ($date) {
+                $session->setDate($date);
+            }
+            $session->setOtherSettings($other_settings);
 
             // Set game
             $game = new Game; $game->setName('RaceRoom Racing Experience');
