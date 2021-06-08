@@ -17,8 +17,8 @@ this library. This library does not supply any HTML templates or whatsoever.
 Any 'implementation' is up to you within your own project and is not limited
 to any framework.
 
-This project is created and maintained by
-[Maurice van der Star](http://twitter.com/mauserrifleNL)
+This project is created (2013) and maintained by
+[Maurice van der Star](https://github.com/sponsors/mauserrifle)
 
 Please consider [donating](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=L9L982XNK7DAA&lc=US&item_name=Simresults&item_number=Simresults&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted)
 to cover future development.
