@@ -157,6 +157,37 @@ class AssettoCorsaServerJsonReaderTest extends \PHPUnit\Framework\TestCase {
         $session = Data_Reader::factory($file_path)->getSession();
     }
 
+    /**
+     * Test cuts
+     */
+    public function testCuts()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-server-json/'.
+            '2015_10_17_9_30_QUALIFY.json');
+
+        // Get the session
+        $session = Data_Reader::factory($file_path)->getSession();
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Test first known cut
+        $lap = $participants[0]->getLap(2);
+        $cuts = $lap->getCuts();
+
+        // Not values known
+        $this->assertSame(null, $cuts[0]->getCutTime());
+        $this->assertSame(null, $cuts[0]->getTimeSkipped());
+        $this->assertSame(null, $cuts[0]->getElapsedSeconds());
+        $this->assertSame(null, $cuts[0]->getDate());
+
+        // TODO: Should we invalidate the lap on non-race or leave it
+        // to AC to decide? Need community feedback on this one before
+        // enabling
+        // $this->assertSame(null, $lap->getTime());
+    }
 
 
 
