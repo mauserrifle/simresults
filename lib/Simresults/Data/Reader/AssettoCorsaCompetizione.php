@@ -463,15 +463,25 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
             // Add penalty to penalties
             $penalties[] = $penalty;
 
+            $penalty_lap = $penalty_participant->getLap($penalty_data['violationInLap']);
+
             // Set invalid laps on non-race sessions
             if ($session->getType() !== Session::TYPE_RACE AND
                 $penalty_data['penalty'] === 'RemoveBestLaptime') {
 
-                $penalty_lap = $penalty_participant->getLap($penalty_data['violationInLap']);
                 if ($penalty_lap) {
                     $penalty_lap->setTime(null);
                     $penalty_lap->setSectorTimes(array());
                 }
+            }
+
+            // Reason cutting, add Cut to lap
+            if (strtolower($this->helper->arrayGet($penalty_data, 'reason')) === 'cutting' AND
+                $penalty_lap)
+            {
+                $cut = new Cut;
+                $cut->setLap($penalty_lap);
+                $penalty_lap->addCut($cut);
             }
         }
 

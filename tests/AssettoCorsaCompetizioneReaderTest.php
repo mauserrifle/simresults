@@ -199,7 +199,7 @@ class AssettoCorsaCompetizioneReaderTest extends \PHPUnit\Framework\TestCase {
         //-- Validate
         $this->assertSame(Session::TYPE_PRACTICE, $session->getType());
 
-        // Get participants
+        // Get penalties
         $penalties = $session->getPenalties();
 
         // Assert drivers
@@ -210,6 +210,17 @@ class AssettoCorsaCompetizioneReaderTest extends \PHPUnit\Framework\TestCase {
 
         $this->assertSame('Andrea Mel - Cutting - RemoveBestLaptime - violation in lap 13 - cleared in lap 13',
             $penalties[3]->getMessage());
+
+        // Assert lap cuts data
+        $participants = $session->getParticipants();
+        $cuts = $participants[0]->getLap(3)->getCuts();
+
+        // Not values known
+        $this->assertSame(null, $cuts[0]->getCutTime());
+        $this->assertSame(null, $cuts[0]->getTimeSkipped());
+        $this->assertSame(null, $cuts[0]->getElapsedSeconds());
+        $this->assertSame(null, $cuts[0]->getDate());
+
 
     }
 
