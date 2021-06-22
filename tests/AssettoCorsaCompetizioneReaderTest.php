@@ -184,7 +184,7 @@ class AssettoCorsaCompetizioneReaderTest extends \PHPUnit\Framework\TestCase {
 
 
     /**
-     * Test invalid laps
+     * Test penalties
      */
     public function testPenalties()
     {
@@ -220,8 +220,43 @@ class AssettoCorsaCompetizioneReaderTest extends \PHPUnit\Framework\TestCase {
         $this->assertSame(null, $cuts[0]->getTimeSkipped());
         $this->assertSame(null, $cuts[0]->getElapsedSeconds());
         $this->assertSame(null, $cuts[0]->getDate());
+    }
 
+    /**
+     * Test parsing penalties when theres no penalty given (such as cutting in
+     * race)
+     */
+    public function testPenaltiesWithNoPenalty()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-competizione/'.
+            'cuts.with.no.penalty.json');
 
+        // Get the race session
+        $session = Data_Reader::factory($file_path)->getSession();
+
+        // Get penalties
+        $penalties = $session->getPenalties();
+
+        // Assert drivers
+        $this->assertSame('Federico Siv - Cutting - No penalty - violation in lap 3 - cleared in lap 3',
+            $penalties[0]->getMessage());
+        $this->assertTrue($penalties[0]->isServed());
+        $this->assertSame('Federico Siv',$penalties[0]->getParticipant()->getDriver()->getName());
+
+        $this->assertSame('Andrea Mel - Cutting - No penalty - violation in lap 13 - cleared in lap 13',
+            $penalties[3]->getMessage());
+
+        // Assert lap cuts data
+        $participants = $session->getParticipants();
+        $cuts = $participants[0]->getLap(3)->getCuts();
+
+        // Not values known
+        $this->assertSame(null, $cuts[0]->getCutTime());
+        $this->assertSame(null, $cuts[0]->getTimeSkipped());
+        $this->assertSame(null, $cuts[0]->getElapsedSeconds());
+        $this->assertSame(null, $cuts[0]->getDate());
     }
 
     /**

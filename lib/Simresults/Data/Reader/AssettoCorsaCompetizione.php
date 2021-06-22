@@ -448,13 +448,18 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
             // Set message
             $penalty->setMessage(
                 $penalty_participant->getDriver($driverIndex+1)->getName().
+
                 ' - '.
                 $this->helper->arrayGet($penalty_data, 'reason', 'Unknown reason').
-                ' - '.
-                $penalty_data['penalty'].
-                ' - violation in lap '.$penalty_data['violationInLap'].
-                ' - cleared in lap '.$penalty_data['clearedInLap']
 
+                ' - '.
+                ($penalty_data['penalty'] === 'None' ? 'No penalty' : $penalty_data['penalty']).
+
+                ' - violation in lap '.
+                ($penalty_data['violationInLap']?:$penalty_data['clearedInLap']).
+
+                ' - cleared in lap '.
+                $penalty_data['clearedInLap']
             );
 
             $penalty->setParticipant($penalty_participant)
@@ -463,7 +468,7 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
             // Add penalty to penalties
             $penalties[] = $penalty;
 
-            $penalty_lap = $penalty_participant->getLap($penalty_data['violationInLap']);
+            $penalty_lap = $penalty_participant->getLap($penalty_data['violationInLap']?:$penalty_data['clearedInLap']);
 
             // Set invalid laps on non-race sessions
             if ($session->getType() !== Session::TYPE_RACE AND
