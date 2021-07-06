@@ -34,4 +34,22 @@ class VehicleSpec extends ObjectBehavior
         $this->getFriendlyName()
               ->shouldReturn('Lola T280 JL Lafosse - LolaT280 ( (LolaT280B)');
     }
+
+    function it_returns_friendly_name_removing_duplicate_name_words_in_class()
+    {
+        $this->setName('Porsche 911')
+             ->setClass('Porsche 911 GT3 Cup');
+
+        $this->getFriendlyName()
+             ->shouldReturn('Porsche 911 (GT3 Cup)');
+    }
+
+    function it_returns_friendly_name_removing_duplicate_name_words_in_type()
+    {
+        $this->setName('Porsche 911')
+             ->setType('Porsche 911 GT3 Cup');
+
+        $this->getFriendlyName()
+             ->shouldReturn('Porsche 911 - GT3 Cup');
+    }
 }
