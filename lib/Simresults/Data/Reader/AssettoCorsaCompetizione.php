@@ -429,7 +429,8 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
         $penalties_data = $this->helper->arrayGet($data, 'penalties', array());
         foreach ($penalties_data as $penalty_data) {
 
-            if (!isset($penalty_data['carId'])) {
+            if (!isset($penalty_data['carId']) OR
+                !isset($participants_by_car_id[$penalty_data['carId']])) {
                 continue;
             }
 
