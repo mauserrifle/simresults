@@ -69,7 +69,8 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
         {
 
             // Init session
-            $session = $this->helper->detectSession(strtolower($name = $session_data['Type']));
+            $session = $this->helper->detectSession(strtolower($name =
+                $this->helper->arrayGet($session_data, 'Type')));
 
             // Set session values
             if ($date) {
