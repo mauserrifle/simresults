@@ -145,10 +145,14 @@ class Participant {
      * Return one driver. Defaults to the first driver
      *
      * @param  int  $driver_number
-     * @return Driver
+     * @return Driver|null
      */
     public function getDriver($driver_number = 1)
     {
+        if ( ! isset($this->drivers[$driver_number-1])) {
+            return null;
+        }
+
         return $this->drivers[$driver_number-1];
     }
 

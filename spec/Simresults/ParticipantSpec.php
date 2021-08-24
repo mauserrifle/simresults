@@ -210,6 +210,9 @@ class ParticipantSpec extends ObjectBehavior
         $this->getDriver()->shouldReturn($driver1);
         $this->getDriver(1)->shouldReturn($driver1);
         $this->getDriver(2)->shouldReturn($driver2);
+
+        $this->setDrivers(array());
+        $this->getDriver(1)->shouldReturn(null);
     }
 
     public function it_calculates_the_percentage_a_driver_has_driven(
