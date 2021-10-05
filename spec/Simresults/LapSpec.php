@@ -5,6 +5,7 @@ namespace spec\Simresults;
 use Simresults\Lap;
 use Simresults\Participant;
 use Simresults\Vehicle;
+use Simresults\Cut;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
@@ -206,5 +207,21 @@ class LapSpec extends ObjectBehavior
         // Is pit lap but participant does not have an average lap
         $participant->getAverageLap(true)->willReturn(null);
         $this->setPitLap(true)->getPitTime()->shouldReturn(0);
+    }
+
+    function it_can_be_valid_for_best(Cut $cut)
+    {
+        // Default
+        $this->isValidForBest()->shouldReturn(false);
+
+        // Determine by completed lap
+        $this->setTime(130.7517)->isValidForBest()->shouldReturn(true);
+
+        // Determine when there are cuts
+        $this->addCut($cut)->isValidForBest()->shouldReturn(false);
+
+        // Test hard override
+        $this->setValidForBest(true)->isValidForBest()->shouldReturn(true);
+        $this->setValidForBest(false)->isValidForBest()->shouldReturn(false);
     }
 }

@@ -4,6 +4,7 @@ namespace spec\Simresults;
 
 use Simresults\Participant;
 use Simresults\Lap;
+use Simresults\Cut;
 use Simresults\Vehicle;
 use Simresults\Driver;
 use Simresults\Helper;
@@ -96,14 +97,16 @@ class ParticipantSpec extends ObjectBehavior
         $this->getBestLap()->shouldReturn(null);
 
         // One completed lap
-        $lap1->isCompleted()->willReturn(true);
-        $lap1->getTime()->willReturn(50.20);
+        $lap1->isValidForBest()->willReturn(true);
         $this->getBestLap()->shouldReturn($lap1);
 
         // Another faster lap completed
-        $lap2->isCompleted()->willReturn(true);
-        $lap2->getTime()->willReturn(49.10);
+        $lap2->isValidForBest()->willReturn(true);
         $this->getBestLap()->shouldReturn($lap2);
+
+        // Invalid lap
+        $lap2->isValidForBest()->willReturn(false);
+        $this->getBestLap()->shouldReturn($lap1);
     }
 
     function it_has_total_time_or_calculates_it_from_laps(
@@ -342,6 +345,10 @@ class ParticipantSpec extends ObjectBehavior
 
         $this->getConsistency()->shouldReturn(6.519);
         $this->getConsistencyPercentage()->shouldReturn(95.72);
+
+        // Invalid for best lap should not be processed
+        $lap1->addCut(new Cut);
+        $this->getConsistency(false)->shouldReturn(6.519);
     }
 
     function it_adds_laps_and_will_fix_missing_number(Lap $lap1, Lap $lap2)

@@ -629,8 +629,7 @@ class Session {
         // Only return a completed lap
         foreach ($laps as $lap)
         {
-            if ($lap->isCompleted())
-            {
+            if ($lap->isValidForBest()) {
                 return $lap;
             }
         }
@@ -673,7 +672,12 @@ class Session {
     public function getBestLapByLapNumber($lap_number)
     {
         $laps = $this->getLapsByLapNumberSortedByTime($lap_number);
-        return array_shift($laps);
+        foreach ($laps as $lap) {
+            if ($lap->isValidForBest()) {
+                return $lap;
+            }
+        }
+        return null;
     }
 
     /**

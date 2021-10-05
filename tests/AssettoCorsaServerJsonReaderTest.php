@@ -61,7 +61,7 @@ class AssettoCorsaServerJsonReaderTest extends \PHPUnit\Framework\TestCase {
         $this->assertSame('Timo Haapala',
             $participants[0]->getDriver()->getName());
         $this->assertSame('blackbird0011',
-            $participants[8]->getDriver()->getName());
+            $participants[7]->getDriver()->getName());
     }
 
     /**

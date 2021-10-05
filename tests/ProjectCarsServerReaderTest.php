@@ -99,9 +99,9 @@ class ProjectCarsServerReaderTest extends \PHPUnit\Framework\TestCase {
         $this->assertSame('ivanmille',
             $participants[0]->getDriver()->getName());
 
-        // Validate patrok
-        $this->assertSame('patrok1207³',
-            $participants[9]->getDriver()->getName());
+        // Validate pock1910
+        $this->assertSame('pock1910',
+            $participants[13]->getDriver()->getName());
     }
 
     /**
@@ -800,7 +800,7 @@ class ProjectCarsServerReaderTest extends \PHPUnit\Framework\TestCase {
                           $participant->getDriver()->getDriverId());
         $this->assertTrue($participant->getDriver()->isHuman());
         $this->assertSame(1, $participant->getPosition());
-        $this->assertSame(3, $participant->getGridPosition());
+        $this->assertSame(10, $participant->getGridPosition());
         $this->assertSame(Participant::FINISH_NORMAL,
             $participant->getFinishStatus());
         $this->assertSame(581.39, $participant->getTotalTime());

@@ -666,7 +666,7 @@ class Participant {
         // Only return a completed lap
         foreach ($laps as $lap)
         {
-            if ($lap->isCompleted())
+            if ($lap->isValidForBest())
             {
                 return $lap;
             }
@@ -922,16 +922,18 @@ class Participant {
         }
 
         // Get best lap
-        $best_lap = $this->getBestLap();
+        if (!$best_lap = $this->getBestLap()) {
+            return null;
+        }
 
         // Get total time of all non-best
         $total_time = 0;
         $total_time_laps_num = 0;
         foreach ($this->getLaps() as $key => $lap)
         {
-            // Is best lap, not completed, pit lap, just too slow compared to
-            // the best lap (+21s) or first lap that should be ignored
-            if ($lap === $best_lap OR ! $lap->isCompleted() OR
+            // Is best lap, not valid (cuts), pit lap, just too slow compared
+            // to the best lap (+21s) or first lap that should be ignored
+            if ($lap === $best_lap OR ! $lap->isValidForBest() OR
                 $lap->isPitLap() OR
                 $lap->getTime() >= ($best_lap->getTime()+21) OR
                 ($ignore_first_lap AND $key === 0))

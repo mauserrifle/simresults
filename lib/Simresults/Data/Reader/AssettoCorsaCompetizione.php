@@ -346,9 +346,17 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
             // Set driver based on driver index (swapping support)
             $lap->setDriver($lap_participant->getDriver($driverIndex+1));
 
+            // Is valid for best?
+            $valid_for_best = $this->helper->arrayGet($lap_data, 'isValidForBest');
+            if (is_bool($valid_for_best)) {
+                $lap->setValidForBest($valid_for_best);
+            }
+
             // Always include race laps or valid laps for other sessions
-            if ($session->getType() === Session::TYPE_RACE OR
-                $this->helper->arrayGet($lap_data, 'isValidForBest')) {
+            // TODO: Should we just include them in other sessions since
+            // we check for valid laps?
+            if ($session->getType() === Session::TYPE_RACE OR $valid_for_best)
+            {
 
                 $lap_time = $this->helper->arrayGet($lap_data, 'laptime');
                 if ( ! $lap_time) {

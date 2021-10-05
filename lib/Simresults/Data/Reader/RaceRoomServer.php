@@ -234,6 +234,12 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
                             $lap->setSectorTimes(array());
                         }
 
+                        if (array_key_exists('Valid', $lap_data) AND
+                            is_bool($lap_data['Valid']))
+                        {
+                            $lap->setValidForBest($lap_data['Valid']);
+                        }
+
                         // Add lap to participant
                         $participant->addLap($lap);
 
