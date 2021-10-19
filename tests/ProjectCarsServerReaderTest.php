@@ -640,6 +640,33 @@ class ProjectCarsServerReaderTest extends \PHPUnit\Framework\TestCase {
                           $participant->getDriver()->getDriverId());
     }
 
+
+    /**
+     * Test fixing wrong car name matches with Automobilista 2
+     */
+    public function testFixingWrongCarNameMatchAutomobilista2()
+    {
+        $file_path = realpath(__DIR__.
+            '/logs/automobilista2/log.for.car.name.mismatch.with.pc2.json');
+
+        $reader = Data_Reader::factory($file_path);
+        $sessions = $reader->getSessions();
+
+        // First session participants
+        $participants = $sessions[0]->getParticipants();
+
+        // Detect fallback on Project Cars data
+        $participant = $participants[0];
+        $this->assertSame('MetalMoro AJR Chevy V8',
+            $participant->getVehicle()->getName());
+
+        // Detect proper Automobilista2 car
+        $participant = $participants[1];
+        $this->assertSame('Ginetta G58',
+            $participant->getVehicle()->getName());
+    }
+
+
     public function testNotUsingFinalResultWhenFinishedDriverIsMissing()
     {
         $file_path = realpath(__DIR__.

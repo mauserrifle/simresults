@@ -132,6 +132,8 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
             $initial_participants_by_name = array();
 
             // Loop all member entries and create participants
+            // Also detect game already so if we detected Automobilista 2, we
+            // will never again detect the other games
             foreach ($history['members'] as $part_ref => $part_data)
             {
                 // Get participant
@@ -144,6 +146,12 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
 
                 $initial_participants_by_name[$part_data['name']] =
                     $participant;
+
+                // Dummy vehicle to detect game
+                if (isset($part_data['setup']['VehicleId'])) {
+                    $vehicle = new Vehicle;
+                    $this->setVehicleName($part_data['setup']['VehicleId'], $vehicle);
+                }
             }
 
 
@@ -885,13 +893,70 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
      */
     protected function setVehicleName($vehicle_id, Vehicle $vehicle)
     {
+        // Automobilista 2 already detected, we will favor Automobilista
+        // with fallback to project cars
+        if ($this->current_game->getName() === 'Automobilista 2') {
+            $this->setVehicleNameAutomobilista2($vehicle_id, $vehicle);
+            if (!$vehicle->getName()) {
+                $this->setVehicleNameProjectCars($vehicle_id, $vehicle);
+            }
+        }
         // Is Automobilista2 based on hardcoded unique ids
+        elseif (in_array($vehicle_id, self::$automobilista2_vehicle_ids)) {
+            $this->setVehicleNameAutomobilista2($vehicle_id, $vehicle);
+        }
+        // Detect using Project Cars with Automobilista 2 fallback
+        else {
+            $this->setVehicleNameProjectCars($vehicle_id, $vehicle);
+            if (!$vehicle->getName()) {
+                $this->setVehicleNameAutomobilista2($vehicle_id, $vehicle);
+            }
+        }
+
+        // Still no vehicle name, use vehicle id as name
+        if (!$vehicle->getName()) {
+            $vehicle->setName( (string) $vehicle_id);
+        }
+    }
+
+
+    /**
+     * Set vehicle name by vehicle id and vehicle object using only the
+     * automobilista 2 data
+     *
+     * @param   int  $vehicle_id
+     * @param   Vehicle  $vehicle
+     */
+    protected function setVehicleNameAutomobilista2($vehicle_id, Vehicle $vehicle)
+    {
+        // Vehicle name in hardcoded unique ids
         if (in_array($vehicle_id, self::$automobilista2_vehicle_ids))
         {
             $this->setCurrentGameName('Automobilista 2');
             $vehicle->setName( (string) $vehicle_id);
         }
 
+        // Vehicle name in data, overwrite id name from above code (that's why
+        // no elseif)
+        if (isset($this->attribute_names_automobilista2['vehicles'][$vehicle_id]))
+        {
+            $this->setCurrentGameName('Automobilista 2');
+            $vehicle->setName($this->attribute_names_automobilista2['vehicles']
+                [$vehicle_id]['name']);
+            $vehicle->setClass($this->attribute_names_automobilista2['vehicles']
+                [$vehicle_id]['class']);
+        }
+    }
+
+    /**
+     * Set vehicle name by vehicle id and vehicle object using only the
+     * project cars data
+     *
+     * @param   int  $vehicle_id
+     * @param   Vehicle  $vehicle
+     */
+    protected function setVehicleNameProjectCars($vehicle_id, Vehicle $vehicle)
+    {
         // Have friendly vehicle name from Project Cars
         if (isset($this->attribute_names['vehicles'][$vehicle_id]))
         {
@@ -910,22 +975,8 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
             $vehicle->setClass($this->attribute_names2['vehicles']
                 [$vehicle_id]['class']);
         }
-        // Have friendly vehicle name from Automobilista 2
-        elseif (isset($this->attribute_names_automobilista2['vehicles'][$vehicle_id]))
-        {
-            $this->setCurrentGameName('Automobilista 2');
-            $vehicle->setName($this->attribute_names_automobilista2['vehicles']
-                [$vehicle_id]['name']);
-            $vehicle->setClass($this->attribute_names_automobilista2['vehicles']
-                [$vehicle_id]['class']);
-        }
-        // Fallback to vehicle id
-        else
-        {
-            $vehicle->setName( (string) $vehicle_id);
-        }
-
     }
+
 
 
     /**
