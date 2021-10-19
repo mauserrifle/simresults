@@ -655,12 +655,10 @@ class ProjectCarsServerReaderTest extends \PHPUnit\Framework\TestCase {
         // First session participants
         $participants = $sessions[0]->getParticipants();
 
-        // Detect fallback on Project Cars data
+        // Detect proper Automobilista2 car
         $participant = $participants[0];
         $this->assertSame('MetalMoro AJR Chevy V8',
             $participant->getVehicle()->getName());
-
-        // Detect proper Automobilista2 car
         $participant = $participants[1];
         $this->assertSame('Ginetta G58',
             $participant->getVehicle()->getName());

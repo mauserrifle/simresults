@@ -894,12 +894,8 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
     protected function setVehicleName($vehicle_id, Vehicle $vehicle)
     {
         // Automobilista 2 already detected, we will favor Automobilista
-        // with fallback to project cars
         if ($this->current_game->getName() === 'Automobilista 2') {
             $this->setVehicleNameAutomobilista2($vehicle_id, $vehicle);
-            if (!$vehicle->getName()) {
-                $this->setVehicleNameProjectCars($vehicle_id, $vehicle);
-            }
         }
         // Is Automobilista2 based on hardcoded unique ids
         elseif (in_array($vehicle_id, self::$automobilista2_vehicle_ids)) {
