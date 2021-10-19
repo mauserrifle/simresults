@@ -57,6 +57,10 @@
         "name" : "P1"
       },
       {
+        "value" : 1357714335,
+        "name" : "TC60S2"
+      },
+      {
         "value" : 1553262379,
         "name" : "GT4"
       },
@@ -155,6 +159,10 @@
       {
         "value" : -1070382248,
         "name" : "G40Cup"
+      },
+      {
+        "value" : -1016264564,
+        "name" : "TC70S"
       },
       {
         "value" : -962921788,
@@ -279,12 +287,12 @@
       {
         "id" : 1330326301,
         "name" : "MINI Cooper S 1965",
-        "class" : "TC60S"
+        "class" : "TC60S2"
       },
       {
         "id" : -830134672,
         "name" : "Lotus 23",
-        "class" : "TC60S"
+        "class" : "TC60S2"
       },
       {
         "id" : 1818602836,
@@ -537,6 +545,16 @@
         "class" : "P1"
       },
       {
+        "id" : -215037480,
+        "name" : "Chevrolet Corvette C3",
+        "class" : "TC60S"
+      },
+      {
+        "id" : 1965836946,
+        "name" : "Chevrolet Corvette C3",
+        "class" : "TC70S"
+      },
+      {
         "id" : -1729418598,
         "name" : "Chevrolet Corvette C8.R",
         "class" : "GTE"
@@ -560,6 +578,11 @@
         "id" : -1966031044,
         "name" : "BMW M4 GT4",
         "class" : "GT4"
+      },
+      {
+        "id" : 143364290,
+        "name" : "BMW 2002 Turbo",
+        "class" : "TC60S"
       },
       {
         "id" : 1353949246,
@@ -792,6 +815,11 @@
         "class" : "OldStock"
       },
       {
+        "id" : 2016280350,
+        "name" : "Porsche 911 RSR 74",
+        "class" : "TC70S"
+      },
+      {
         "id" : -609305506,
         "name" : "Puma GTB",
         "class" : "CopaClassicFL"
@@ -992,6 +1020,11 @@
         "gridsize" : 30
       },
       {
+        "id" : -1015082583,
+        "name" : "Cascais_Alternate",
+        "gridsize" : 30
+      },
+      {
         "id" : -438882031,
         "name" : "GoianiaMixed",
         "gridsize" : 36
@@ -1104,6 +1137,11 @@
       {
         "id" : -1478712571,
         "name" : "Interlagos_GP",
+        "gridsize" : 46
+      },
+      {
+        "id" : 420324528,
+        "name" : "Interlagos_SCB",
         "gridsize" : 46
       },
       {
@@ -1237,6 +1275,41 @@
         "gridsize" : 40
       },
       {
+        "id" : -2054918047,
+        "name" : "Monza_1971_10k",
+        "gridsize" : 22
+      },
+      {
+        "id" : 612695202,
+        "name" : "Monza_1971_10knc",
+        "gridsize" : 22
+      },
+      {
+        "id" : -332593300,
+        "name" : "Monza_1971",
+        "gridsize" : 22
+      },
+      {
+        "id" : 1003665316,
+        "name" : "Monza_1991",
+        "gridsize" : 32
+      },
+      {
+        "id" : -1956398437,
+        "name" : "Monza_1971_Junior",
+        "gridsize" : 22
+      },
+      {
+        "id" : -1257095693,
+        "name" : "Monza_2020",
+        "gridsize" : 32
+      },
+      {
+        "id" : -2098177408,
+        "name" : "Monza_2020_Junior",
+        "gridsize" : 32
+      },
+      {
         "id" : 884472481,
         "name" : "Nordschleife_2020",
         "gridsize" : 28
@@ -1305,6 +1378,11 @@
         "id" : 1820168870,
         "name" : "OultonPark_Island",
         "gridsize" : 28
+      },
+      {
+        "id" : 761562120,
+        "name" : "Salvador_Street_Circuit",
+        "gridsize" : 34
       },
       {
         "id" : 1932830334,
