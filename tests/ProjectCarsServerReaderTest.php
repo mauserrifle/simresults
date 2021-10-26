@@ -664,6 +664,30 @@ class ProjectCarsServerReaderTest extends \PHPUnit\Framework\TestCase {
             $participant->getVehicle()->getName());
     }
 
+    public function testLappedDriversBadDataFile()
+    {
+        $file_path = realpath(__DIR__.
+            '/logs/automobilista2/result.with.race.with.lapped.cars.bad.data.json');
+
+        $reader = Data_Reader::factory($file_path);
+        $sessions = $reader->getSessions();
+
+        // First session participants
+        $participants = $sessions[14]->getParticipants();
+
+        // Detect proper driver order
+        $participant = $participants[0];
+        $this->assertSame('MikeyBoy',
+            $participant->getDriver()->getName());
+        $participant = $participants[1];
+        $this->assertSame('kbucks',
+            $participant->getDriver()->getName());
+        // THE MAIN CHECK (WAS BUGGED);
+        $participant = $participants[2];
+        $this->assertSame('Janis Dancis', // The main
+            $participant->getDriver()->getName());
+    }
+
 
     public function testNotUsingFinalResultWhenFinishedDriverIsMissing()
     {
@@ -828,7 +852,7 @@ class ProjectCarsServerReaderTest extends \PHPUnit\Framework\TestCase {
         $this->assertSame(10, $participant->getGridPosition());
         $this->assertSame(Participant::FINISH_NORMAL,
             $participant->getFinishStatus());
-        $this->assertSame(581.39, $participant->getTotalTime());
+        $this->assertSame(581.406, $participant->getTotalTime());
 
 
         // Test any other participants to validate proper position

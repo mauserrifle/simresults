@@ -624,60 +624,60 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 if ($results = $session_data['results'] AND
                     $session->getType() === Session::TYPE_RACE)
                 {
-                    // Result includes atleast all the finished drivers from
-                    // events
-                    if ($this->finalResultsContainAllFinishedDrivers(
-                        $results, $finished_participants_by_id))
+                    // Init sorted result array
+                    $participants_resultsorted = array();
+
+                    // Get sorted participts from result array, add to sorted
+                    // array and remove participant from normal array
+                    foreach ($results as $result)
                     {
-                        // Init sorted result array
-                        $participants_resultsorted = array();
-
-                        foreach ($results as $result)
+                        // Participant not found, continue to next
+                        if ( ! isset($participants_by_id[
+                                         $result['participantid']]))
                         {
-                            // Participant not found, continue to next
-                            if ( ! isset($participants_by_id[
-                                             $result['participantid']]))
-                            {
-                                continue;
-                            }
-
-                            // Get participant
-                            $participant = $participants_by_id[
-                                $result['participantid']];
-
-                            // Set total time
-                            $participant->setTotalTime(round(
-                                $result['attributes']['TotalTime'] / 1000, 4));
-
-                            // Add to sorted array and remove from normal array
-                            $participants_resultsorted[] = $participant;
-                            unset($participants[
-                                array_search($participant, $participants, true)]);
+                            continue;
                         }
 
-                        // Sort participants not sorted by result by total time
-                        $participants =
-                            $this->helper->sortParticipantsByTotalTime($participants);
+                        // Get participant
+                        $participant = $participants_by_id[
+                            $result['participantid']];
 
+                        // Set total time
+                        $participant->setTotalTime(round(
+                            $result['attributes']['TotalTime'] / 1000, 4));
 
-                        // Merge the sorted participants result with normal sort
-                        // array. Merge them and remove any duplicates
-                        // NOTE: We are not using array_unique as it's causing
-                        // recursive depedency
-                        $merged = array_merge(
-                            $participants_resultsorted, $participants);
-                        $final  = array();
-
-                        foreach ($merged as $current) {
-                            if ( ! in_array($current, $final, true)) {
-                                $final[] = $current;
-                            }
-                        }
-
-                        $participants = $final;
+                        // Add to sorted array and remove from normal array
+                        $participants_resultsorted[] = $participant;
+                        unset($participants[
+                            array_search($participant, $participants, true)]);
                     }
-                    // Cannot trust the results, just fallback to laps sorting
-                    else
+
+                    // Sort leftover participants not sorted by result by
+                    // total time
+                    $participants =
+                        $this->helper->sortParticipantsByTotalTime($participants);
+
+
+                    // Merge the sorted participants result with normal sort
+                    // array. Merge them and remove any duplicates
+                    // NOTE: We are not using array_unique as it's causing
+                    // recursive depedency
+                    $merged = array_merge(
+                        $participants_resultsorted, $participants);
+                    $final  = array();
+
+                    foreach ($merged as $current) {
+                        if ( ! in_array($current, $final, true)) {
+                            $final[] = $current;
+                        }
+                    }
+
+                    $participants = $final;
+
+                    // We cannot trust the sorted results only, so we also
+                    // fallback to laps sorting
+                    if (!$this->finalResultsContainAllFinishedDrivers(
+                        $results, $finished_participants_by_id))
                     {
                         // Sort participants
                         $this->sortParticipantsAndFixPositions(
