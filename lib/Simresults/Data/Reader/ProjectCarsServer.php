@@ -139,11 +139,19 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 // Get participant
                 $participant = $this->getParticipant($part_data);
 
-                // Add participant to collection
+                // Old refid code
                 // $initial_participants_by_ref[$part_ref] = $participant;
-                $initial_participants_by_id[$part_data['participantid']] =
-                    $participant;
 
+                // Only store participant by id if it has not yet been
+                // processed. IF it is already present, then the log is
+                // bugged. The first registration has priority
+                if (!isset($initial_participants_by_id[$part_data['participantid']])) {
+                    // Add participant to collection
+                    $initial_participants_by_id[$part_data['participantid']] =
+                        $participant;
+                }
+
+                // Always store by name backup
                 $initial_participants_by_name[$part_data['name']] =
                     $participant;
 

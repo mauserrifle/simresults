@@ -688,6 +688,26 @@ class ProjectCarsServerReaderTest extends \PHPUnit\Framework\TestCase {
             $participant->getDriver()->getName());
     }
 
+    public function testFixingConflictingParticipantIds()
+    {
+        $file_path = realpath(__DIR__.
+            '/logs/automobilista2/qualify.with.conflicting.participantids.json');
+
+        $reader = Data_Reader::factory($file_path);
+        $sessions = $reader->getSessions();
+
+        $participants = $sessions[0]->getParticipants();
+
+        $participant = $participants[0];
+        $this->assertSame('Chris C',
+            $participant->getDriver()->getName());
+        $participant = $participants[1];
+        // THE MAIN CHECK (WAS BUGGED) due conflict with GIZMO (same
+        // participantid);
+        $this->assertSame('TechAde',
+            $participant->getDriver()->getName());
+    }
+
 
     public function testNotUsingFinalResultWhenFinishedDriverIsMissing()
     {
