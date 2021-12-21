@@ -136,6 +136,10 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
             // will never again detect the other games
             foreach ($history['members'] as $part_ref => $part_data)
             {
+                if (!isset($part_data['participantid'])) {
+                    continue;
+                }
+
                 // Get participant
                 $participant = $this->getParticipant($part_data);
 
@@ -231,7 +235,9 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
 
                 // Date of this session
                 $date = new \DateTime;
-                $date->setTimestamp($session_data['start_time']);
+                if (isset($session_data['start_time'])) {
+                    $date->setTimestamp($session_data['start_time']);
+                }
                 $date->setTimezone(new \DateTimeZone(self::$default_timezone));
 
                 // Set session values
@@ -434,6 +440,10 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                     // Loop each result and process the lap
                     foreach ($results as $result)
                     {
+                        if (!isset($result['participantid'])) {
+                            continue;
+                        }
+
                         // Participant not found, continue to next
                         if ( ! isset($participants_by_id[
                                          $result['participantid']]))
@@ -639,6 +649,10 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                     // array and remove participant from normal array
                     foreach ($results as $result)
                     {
+                        if (!isset($result['participantid'])) {
+                            continue;
+                        }
+
                         // Participant not found, continue to next
                         if ( ! isset($participants_by_id[
                                          $result['participantid']]))
