@@ -37,6 +37,9 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
         23 => 'Porsche 911 II GT3 R 2019',
         24 => 'Ferrari 488 GT3 Evo 2020',
         25 => 'Mercedes-AMG GT3 Evo 2020',
+
+        30 => 'BMW M4 GT3 2022',
+
         // GT4 DLC
         50 => 'Alpine A1110 GT4',
         51 => 'Aston Martin Vantage GT4',
