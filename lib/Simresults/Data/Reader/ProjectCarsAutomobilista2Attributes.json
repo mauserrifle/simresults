@@ -81,6 +81,10 @@
         "name" : "F-Trainer"
       },
       {
+        "value" : 2084530285,
+        "name" : "F-USA_Gen2"
+      },
+      {
         "value" : 227192681,
         "name" : "F-Vintage_Gen2"
       },
@@ -143,6 +147,10 @@
       {
         "value" : -1276839914,
         "name" : "CopaClassicB"
+      },
+      {
+        "value" : -1271013239,
+        "name" : "TSICup"
       },
       {
         "value" : -1270088329,
@@ -281,7 +289,7 @@
       },
       {
         "id" : 262982797,
-        "name" : "Mercedes-Benz 190E 2.5-16 Evolution 2 DTM",
+        "name" : "Mercedes-Benz 190E 2.5-16 Evo II DTM",
         "class" : "Group A"
       },
       {
@@ -296,7 +304,7 @@
       },
       {
         "id" : 1818602836,
-        "name" : "MINI Cooper",
+        "name" : "MINI Cooper JCW",
         "class" : "MiniChallenge"
       },
       {
@@ -326,17 +334,17 @@
       },
       {
         "id" : -2123166417,
-        "name" : "Camaro SS",
+        "name" : "Chevrolet Camaro SS",
         "class" : "Street"
       },
       {
         "id" : 428770333,
-        "name" : "F301",
+        "name" : "Dallara F301",
         "class" : "F-3"
       },
       {
         "id" : 302183120,
-        "name" : "F309",
+        "name" : "Dallara F309",
         "class" : "F-3"
       },
       {
@@ -506,17 +514,17 @@
       },
       {
         "id" : -819133010,
-        "name" : "MAN",
+        "name" : "MAN TGX",
         "class" : "CopaTruck"
       },
       {
         "id" : 1647822272,
-        "name" : "Mercedes-Benz",
+        "name" : "Mercedes-Benz Actros",
         "class" : "CopaTruck"
       },
       {
         "id" : -2086797102,
-        "name" : "VW",
+        "name" : "VW Constellation",
         "class" : "CopaTruck"
       },
       {
@@ -551,7 +559,7 @@
       },
       {
         "id" : 1965836946,
-        "name" : "Chevrolet Corvette C3",
+        "name" : "Chevrolet Corvette C3-R",
         "class" : "TC70S"
       },
       {
@@ -621,7 +629,7 @@
       },
       {
         "id" : -2019695308,
-        "name" : "Camaro GT4.R",
+        "name" : "Chevrolet Camaro GT4.R",
         "class" : "GT4"
       },
       {
@@ -631,7 +639,7 @@
       },
       {
         "id" : 1979398129,
-        "name" : "Mercedes-Benz CLK-LM",
+        "name" : "Mercedes-Benz CLK LM",
         "class" : "GT1"
       },
       {
@@ -646,7 +654,7 @@
       },
       {
         "id" : 65306143,
-        "name" : "Sauber C9 Mercedes-Benz",
+        "name" : "Sauber Mercedes C9",
         "class" : "Group C"
       },
       {
@@ -801,17 +809,17 @@
       },
       {
         "id" : -1201567586,
-        "name" : "Opala 79",
+        "name" : "Chevrolet Opala Stock Cars 1979",
         "class" : "Opala79"
       },
       {
         "id" : 245459304,
-        "name" : "Opala Stock Cars 1986",
+        "name" : "Chevrolet Opala Stock Cars 1986",
         "class" : "Opala86"
       },
       {
         "id" : -62148492,
-        "name" : "Opala OldStock",
+        "name" : "Chevrolet Opala Old Stock Race",
         "class" : "OldStock"
       },
       {
@@ -836,7 +844,7 @@
       },
       {
         "id" : -1155860123,
-        "name" : "Chevette",
+        "name" : "Chevrolet Chevette",
         "class" : "CopaClassicB"
       },
       {
@@ -881,28 +889,68 @@
       },
       {
         "id" : -1086802614,
-        "name" : "Fusca HC1",
+        "name" : "Fusca 1 Hot Cars",
         "class" : "Hot Cars"
       },
       {
         "id" : 150641251,
-        "name" : "Fusca HC2",
+        "name" : "Fusca 2 Hot Cars",
         "class" : "Hot Cars"
       },
       {
         "id" : 390318757,
-        "name" : "Passat HotCars",
+        "name" : "Passat Hot Cars",
         "class" : "Hot Cars"
       },
       {
         "id" : 1653755268,
-        "name" : "Gol HC",
+        "name" : "Gol Hot Cars",
         "class" : "Hot Cars"
       },
       {
         "id" : 1785300635,
         "name" : "Aussie Racing Camaro",
         "class" : "ARC_Cam"
+      },
+      {
+        "id" : -1170240161,
+        "name" : "VW Polo",
+        "class" : "TSICup"
+      },
+      {
+        "id" : -1137512839,
+        "name" : "VW Virtus",
+        "class" : "TSICup"
+      },
+      {
+        "id" : 1408764300,
+        "name" : "Lola T98",
+        "class" : "F-USA_Gen2"
+      },
+      {
+        "id" : -406287657,
+        "name" : "Reynard 98i Ford",
+        "class" : "F-USA_Gen2"
+      },
+      {
+        "id" : 2011027431,
+        "name" : "Reynard 98i Honda",
+        "class" : "F-USA_Gen2"
+      },
+      {
+        "id" : 174857498,
+        "name" : "Reynard 98i Mercedes",
+        "class" : "F-USA_Gen2"
+      },
+      {
+        "id" : -1212556546,
+        "name" : "Reynard 98i Toyota",
+        "class" : "F-USA_Gen2"
+      },
+      {
+        "id" : 943684424,
+        "name" : "Swift 009c",
+        "class" : "F-USA_Gen2"
       }
     ]
   },
@@ -920,9 +968,9 @@
         "gridsize" : 39
       },
       {
-        "id" : 832629329,
-        "name" : "Azure_Circuit",
-        "gridsize" : 32
+        "id" : -1939104917,
+        "name" : "Azure_Circuit_2021",
+        "gridsize" : 24
       },
       {
         "id" : 1080325116,
@@ -973,6 +1021,11 @@
         "id" : -916478809,
         "name" : "Cascavel2",
         "gridsize" : 38
+      },
+      {
+        "id" : -2123543761,
+        "name" : "Cleveland_GP",
+        "gridsize" : 32
       },
       {
         "id" : 844082431,
@@ -1222,7 +1275,7 @@
       {
         "id" : 85029775,
         "name" : "Kansai_West",
-        "gridsize" : 16
+        "gridsize" : 18
       },
       {
         "id" : 2018595322,
@@ -1558,6 +1611,26 @@
         "id" : -1235504884,
         "name" : "Virginia_South",
         "gridsize" : 16
+      },
+      {
+        "id" : -875185854,
+        "name" : "Watkins_Glen_GP",
+        "gridsize" : 32
+      },
+      {
+        "id" : -191952188,
+        "name" : "Watkins_Glen_GPIL",
+        "gridsize" : 32
+      },
+      {
+        "id" : 2035789624,
+        "name" : "Watkins_Glen_S",
+        "gridsize" : 32
+      },
+      {
+        "id" : -619438500,
+        "name" : "Watkins_Glen_SIL",
+        "gridsize" : 32
       }
     ]
   }
