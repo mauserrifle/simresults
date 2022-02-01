@@ -159,6 +159,11 @@ class Helper {
             return $seconds;
         }
 
+        if (is_scalar($formatted_time)) {
+            // Throw invalid argument by default
+            throw new \InvalidArgumentException("Invalid argument formatted_time: $formatted_time");
+        }
+
         // Throw invalid argument by default
         throw new \InvalidArgumentException;
     }
