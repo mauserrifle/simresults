@@ -435,7 +435,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                  */
 
                 // Has results array we can read finish statusses from
-                if ($results = $session_data['results'])
+                if ($results = $session_data['results'] AND is_array($results))
                 {
                     // Loop each result and process the lap
                     foreach ($results as $result)
