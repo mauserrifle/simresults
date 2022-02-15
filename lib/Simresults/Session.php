@@ -851,7 +851,10 @@ class Session {
             foreach ($participant->getLaps() as $lap)
             {
                 // Collect cuts of participant
-                $cuts = array_merge($cuts, $lap->getCuts());
+                // Loop instead of array_merge for improved performance
+                foreach ($lap->getCuts() as $cut) {
+                    $cuts[] = $cut;
+                }
             }
         }
 
