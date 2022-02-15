@@ -609,7 +609,11 @@ class Session {
         foreach ($this->getParticipants() as $participant)
         {
             // Collect laps of participant
-            $laps = array_merge($laps, $participant->getLaps());
+            // Loop instead of array_merge for improved performance
+            foreach ($participant->getLaps() as $lap)
+            {
+                $laps[] = $lap;
+            }
         }
 
         // Return sorted laps
@@ -718,7 +722,12 @@ class Session {
         $laps = array();
         foreach ($this->getParticipants() as $part)
         {
-            $laps = array_merge($laps, $part->getLaps());
+            // Collect laps of participant
+            // Loop instead of array_merge for improved performance
+            foreach ($part->getLaps() as $lap)
+            {
+                $laps[] = $lap;
+            }
         }
 
         // Return sorted laps
