@@ -93,6 +93,16 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
             }
         } catch(\Exception $ex) {}
 
+        // Try windows fallback 2 (untested and provided by community user)
+        try {
+            $dataParsed = mb_convert_encoding($data, 'UTF-16', 'UTF-16LE');
+
+            if ($dataParsed = json_decode($dataParsed, TRUE)) {
+                return (isset($dataParsed['sessionType']) OR
+                        isset($dataParsed['sessionDef']));
+            }
+        } catch(\Exception $ex) {}
+
         return false;
     }
 
@@ -110,7 +120,12 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
             } catch(\Exception $ex) {}
 
             if ( ! $data) {
-                $data = json_decode(preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $data), TRUE);
+                $data = json_decode(preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $this->data), TRUE);
+
+                if ( ! $data) {
+                    $data = mb_convert_encoding($this->data, 'UTF-16', 'UTF-16LE');
+                    $data = json_decode($data, TRUE);
+                }
             }
         }
 
