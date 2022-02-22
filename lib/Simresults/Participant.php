@@ -927,8 +927,7 @@ class Participant {
         }
 
         // Get total time of all non-best
-        $total_time = 0;
-        $total_time_laps_num = 0;
+        $times = array();
         foreach ($this->getLaps() as $key => $lap)
         {
             // Is best lap, not valid (cuts), pit lap, just too slow compared
@@ -941,20 +940,27 @@ class Participant {
                 continue;
             }
 
-            // Add lap time to total time
-            $total_time += $lap->getTime();
 
-            $total_time_laps_num++;
+            // Add lap time to total time
+            $times[] = $lap->getTime();
         }
 
+        // No laps collected OR all laps are the same time. Ignore for
+        // consistency
+        if (!$times OR count(array_unique($times)) === 1) {
+            return null;
+        }
+
+        // Get total time
+        $total_time = array_sum($times);
+
         // No total time
-        if ( ! $total_time)
-        {
+        if ( ! $total_time) {
             return null;
         }
 
         // Get average of total time
-        $average = $total_time / $total_time_laps_num;
+        $average = $total_time / count($times);
 
         // Return consistency
         return round($average - $best_lap->getTime(), 4);
