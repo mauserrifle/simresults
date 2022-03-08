@@ -51,17 +51,20 @@ class HelperSpec extends ObjectBehavior
 
     function it_converts_time_strings_to_seconds()
     {
-        $this->secondsfromformattedtime('01:40.5279')
+        $this->secondsFromFormattedTime('01:40.5279')
              ->shouldReturn(100.5279);
-        $this->secondsfromformattedtime('01:31:56.5879')
+        $this->secondsFromFormattedTime('01:31:56.5879')
              ->shouldReturn(5516.5879);
-        $this->secondsfromformattedtime('02:03:506', true)
+        $this->secondsFromFormattedTime('02:03:506', true)
              ->shouldReturn(123.506);
-        $this->secondsfromformattedtime('01:02:03:506', true)
+        $this->secondsFromFormattedTime('01:02:03:506', true)
              ->shouldReturn(3723.506);
 
         $this->shouldThrow('InvalidArgumentException')
              ->duringSecondsfromformattedtime('40.5279');
+
+        $this->secondsFromFormattedTime('')
+             ->shouldReturn(null);
     }
 
     function it_can_get_values_from_arrays()

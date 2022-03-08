@@ -132,18 +132,38 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
             $initial_participants_by_name = array();
 
             // Loop all member entries and create participants
+            // Also detect game already so if we detected Automobilista 2, we
+            // will never again detect the other games
             foreach ($history['members'] as $part_ref => $part_data)
             {
+                if (!isset($part_data['participantid'])) {
+                    continue;
+                }
+
                 // Get participant
                 $participant = $this->getParticipant($part_data);
 
-                // Add participant to collection
+                // Old refid code
                 // $initial_participants_by_ref[$part_ref] = $participant;
-                $initial_participants_by_id[$part_data['participantid']] =
-                    $participant;
 
+                // Only store participant by id if it has not yet been
+                // processed. IF it is already present, then the log is
+                // bugged. The first registration has priority
+                if (!isset($initial_participants_by_id[$part_data['participantid']])) {
+                    // Add participant to collection
+                    $initial_participants_by_id[$part_data['participantid']] =
+                        $participant;
+                }
+
+                // Always store by name backup
                 $initial_participants_by_name[$part_data['name']] =
                     $participant;
+
+                // Dummy vehicle to detect game
+                if (isset($part_data['setup']['VehicleId'])) {
+                    $vehicle = new Vehicle;
+                    $this->setVehicleName($part_data['setup']['VehicleId'], $vehicle);
+                }
             }
 
 
@@ -215,7 +235,9 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
 
                 // Date of this session
                 $date = new \DateTime;
-                $date->setTimestamp($session_data['start_time']);
+                if (isset($session_data['start_time'])) {
+                    $date->setTimestamp($session_data['start_time']);
+                }
                 $date->setTimezone(new \DateTimeZone(self::$default_timezone));
 
                 // Set session values
@@ -413,11 +435,15 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                  */
 
                 // Has results array we can read finish statusses from
-                if ($results = $session_data['results'])
+                if ($results = $session_data['results'] AND is_array($results))
                 {
                     // Loop each result and process the lap
                     foreach ($results as $result)
                     {
+                        if (!isset($result['participantid'])) {
+                            continue;
+                        }
+
                         // Participant not found, continue to next
                         if ( ! isset($participants_by_id[
                                          $result['participantid']]))
@@ -616,60 +642,64 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 if ($results = $session_data['results'] AND
                     $session->getType() === Session::TYPE_RACE)
                 {
-                    // Result includes atleast all the finished drivers from
-                    // events
-                    if ($this->finalResultsContainAllFinishedDrivers(
-                        $results, $finished_participants_by_id))
+                    // Init sorted result array
+                    $participants_resultsorted = array();
+
+                    // Get sorted participts from result array, add to sorted
+                    // array and remove participant from normal array
+                    foreach ($results as $result)
                     {
-                        // Init sorted result array
-                        $participants_resultsorted = array();
+                        if (!isset($result['participantid'])) {
+                            continue;
+                        }
 
-                        foreach ($results as $result)
+                        // Participant not found, continue to next
+                        if ( ! isset($participants_by_id[
+                                         $result['participantid']]))
                         {
-                            // Participant not found, continue to next
-                            if ( ! isset($participants_by_id[
-                                             $result['participantid']]))
-                            {
-                                continue;
-                            }
-
-                            // Get participant
-                            $participant = $participants_by_id[
-                                $result['participantid']];
-
-                            // Set total time
-                            $participant->setTotalTime(round(
-                                $result['attributes']['TotalTime'] / 1000, 4));
-
-                            // Add to sorted array and remove from normal array
-                            $participants_resultsorted[] = $participant;
-                            unset($participants[
-                                array_search($participant, $participants, true)]);
+                            continue;
                         }
 
-                        // Sort participants not sorted by result by total time
-                        $participants =
-                            $this->helper->sortParticipantsByTotalTime($participants);
+                        // Get participant
+                        $participant = $participants_by_id[
+                            $result['participantid']];
 
+                        // Set total time
+                        $participant->setTotalTime(round(
+                            $result['attributes']['TotalTime'] / 1000, 4));
 
-                        // Merge the sorted participants result with normal sort
-                        // array. Merge them and remove any duplicates
-                        // NOTE: We are not using array_unique as it's causing
-                        // recursive depedency
-                        $merged = array_merge(
-                            $participants_resultsorted, $participants);
-                        $final  = array();
-
-                        foreach ($merged as $current) {
-                            if ( ! in_array($current, $final, true)) {
-                                $final[] = $current;
-                            }
-                        }
-
-                        $participants = $final;
+                        // Add to sorted array and remove from normal array
+                        $participants_resultsorted[] = $participant;
+                        unset($participants[
+                            array_search($participant, $participants, true)]);
                     }
-                    // Cannot trust the results, just fallback to laps sorting
-                    else
+
+                    // Sort leftover participants not sorted by result by
+                    // total time
+                    $participants =
+                        $this->helper->sortParticipantsByTotalTime($participants);
+
+
+                    // Merge the sorted participants result with normal sort
+                    // array. Merge them and remove any duplicates
+                    // NOTE: We are not using array_unique as it's causing
+                    // recursive depedency
+                    $merged = array_merge(
+                        $participants_resultsorted, $participants);
+                    $final  = array();
+
+                    foreach ($merged as $current) {
+                        if ( ! in_array($current, $final, true)) {
+                            $final[] = $current;
+                        }
+                    }
+
+                    $participants = $final;
+
+                    // We cannot trust the sorted results only, so we also
+                    // fallback to laps sorting
+                    if (!$this->finalResultsContainAllFinishedDrivers(
+                        $results, $finished_participants_by_id))
                     {
                         // Sort participants
                         $this->sortParticipantsAndFixPositions(
@@ -885,13 +915,66 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
      */
     protected function setVehicleName($vehicle_id, Vehicle $vehicle)
     {
+        // Automobilista 2 already detected, we will favor Automobilista
+        if ($this->current_game->getName() === 'Automobilista 2') {
+            $this->setVehicleNameAutomobilista2($vehicle_id, $vehicle);
+        }
         // Is Automobilista2 based on hardcoded unique ids
+        elseif (in_array($vehicle_id, self::$automobilista2_vehicle_ids)) {
+            $this->setVehicleNameAutomobilista2($vehicle_id, $vehicle);
+        }
+        // Detect using Project Cars with Automobilista 2 fallback
+        else {
+            $this->setVehicleNameProjectCars($vehicle_id, $vehicle);
+            if (!$vehicle->getName()) {
+                $this->setVehicleNameAutomobilista2($vehicle_id, $vehicle);
+            }
+        }
+
+        // Still no vehicle name, use vehicle id as name
+        if (!$vehicle->getName()) {
+            $vehicle->setName( (string) $vehicle_id);
+        }
+    }
+
+
+    /**
+     * Set vehicle name by vehicle id and vehicle object using only the
+     * automobilista 2 data
+     *
+     * @param   int  $vehicle_id
+     * @param   Vehicle  $vehicle
+     */
+    protected function setVehicleNameAutomobilista2($vehicle_id, Vehicle $vehicle)
+    {
+        // Vehicle name in hardcoded unique ids
         if (in_array($vehicle_id, self::$automobilista2_vehicle_ids))
         {
             $this->setCurrentGameName('Automobilista 2');
             $vehicle->setName( (string) $vehicle_id);
         }
 
+        // Vehicle name in data, overwrite id name from above code (that's why
+        // no elseif)
+        if (isset($this->attribute_names_automobilista2['vehicles'][$vehicle_id]))
+        {
+            $this->setCurrentGameName('Automobilista 2');
+            $vehicle->setName($this->attribute_names_automobilista2['vehicles']
+                [$vehicle_id]['name']);
+            $vehicle->setClass($this->attribute_names_automobilista2['vehicles']
+                [$vehicle_id]['class']);
+        }
+    }
+
+    /**
+     * Set vehicle name by vehicle id and vehicle object using only the
+     * project cars data
+     *
+     * @param   int  $vehicle_id
+     * @param   Vehicle  $vehicle
+     */
+    protected function setVehicleNameProjectCars($vehicle_id, Vehicle $vehicle)
+    {
         // Have friendly vehicle name from Project Cars
         if (isset($this->attribute_names['vehicles'][$vehicle_id]))
         {
@@ -910,22 +993,8 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
             $vehicle->setClass($this->attribute_names2['vehicles']
                 [$vehicle_id]['class']);
         }
-        // Have friendly vehicle name from Automobilista 2
-        elseif (isset($this->attribute_names_automobilista2['vehicles'][$vehicle_id]))
-        {
-            $this->setCurrentGameName('Automobilista 2');
-            $vehicle->setName($this->attribute_names_automobilista2['vehicles']
-                [$vehicle_id]['name']);
-            $vehicle->setClass($this->attribute_names_automobilista2['vehicles']
-                [$vehicle_id]['class']);
-        }
-        // Fallback to vehicle id
-        else
-        {
-            $vehicle->setName( (string) $vehicle_id);
-        }
-
     }
+
 
 
     /**

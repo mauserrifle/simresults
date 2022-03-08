@@ -609,7 +609,11 @@ class Session {
         foreach ($this->getParticipants() as $participant)
         {
             // Collect laps of participant
-            $laps = array_merge($laps, $participant->getLaps());
+            // Loop instead of array_merge for improved performance
+            foreach ($participant->getLaps() as $lap)
+            {
+                $laps[] = $lap;
+            }
         }
 
         // Return sorted laps
@@ -629,8 +633,7 @@ class Session {
         // Only return a completed lap
         foreach ($laps as $lap)
         {
-            if ($lap->isCompleted())
-            {
+            if ($lap->isValidForBest()) {
                 return $lap;
             }
         }
@@ -673,7 +676,12 @@ class Session {
     public function getBestLapByLapNumber($lap_number)
     {
         $laps = $this->getLapsByLapNumberSortedByTime($lap_number);
-        return array_shift($laps);
+        foreach ($laps as $lap) {
+            if ($lap->isValidForBest()) {
+                return $lap;
+            }
+        }
+        return null;
     }
 
     /**
@@ -714,7 +722,12 @@ class Session {
         $laps = array();
         foreach ($this->getParticipants() as $part)
         {
-            $laps = array_merge($laps, $part->getLaps());
+            // Collect laps of participant
+            // Loop instead of array_merge for improved performance
+            foreach ($part->getLaps() as $lap)
+            {
+                $laps[] = $lap;
+            }
         }
 
         // Return sorted laps
@@ -847,7 +860,10 @@ class Session {
             foreach ($participant->getLaps() as $lap)
             {
                 // Collect cuts of participant
-                $cuts = array_merge($cuts, $lap->getCuts());
+                // Loop instead of array_merge for improved performance
+                foreach ($lap->getCuts() as $cut) {
+                    $cuts[] = $cut;
+                }
             }
         }
 

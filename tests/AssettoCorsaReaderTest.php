@@ -219,6 +219,13 @@ class AssettoCorsaReaderTest extends \PHPUnit\Framework\TestCase {
         // Invalid lap (cuts)
         $this->assertNull($participant->getLap(6)->getTime());
         $this->assertSame(0, count($participant->getLap(6)->getSectorTimes()));
+        $cuts = $participant->getLap(6)->getCuts();
+        // Not values known
+        $this->assertSame(null, $cuts[0]->getCutTime());
+        $this->assertSame(null, $cuts[0]->getTimeSkipped());
+        $this->assertSame(null, $cuts[0]->getElapsedSeconds());
+        $this->assertSame(null, $cuts[0]->getDate());
+
     }
 
 

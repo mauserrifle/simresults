@@ -99,9 +99,9 @@ class ProjectCarsServerReaderTest extends \PHPUnit\Framework\TestCase {
         $this->assertSame('ivanmille',
             $participants[0]->getDriver()->getName());
 
-        // Validate patrok
-        $this->assertSame('patrok1207³',
-            $participants[9]->getDriver()->getName());
+        // Validate pock1910
+        $this->assertSame('pock1910',
+            $participants[13]->getDriver()->getName());
     }
 
     /**
@@ -640,6 +640,75 @@ class ProjectCarsServerReaderTest extends \PHPUnit\Framework\TestCase {
                           $participant->getDriver()->getDriverId());
     }
 
+
+    /**
+     * Test fixing wrong car name matches with Automobilista 2
+     */
+    public function testFixingWrongCarNameMatchAutomobilista2()
+    {
+        $file_path = realpath(__DIR__.
+            '/logs/automobilista2/log.for.car.name.mismatch.with.pc2.json');
+
+        $reader = Data_Reader::factory($file_path);
+        $sessions = $reader->getSessions();
+
+        // First session participants
+        $participants = $sessions[0]->getParticipants();
+
+        // Detect proper Automobilista2 car
+        $participant = $participants[0];
+        $this->assertSame('MetalMoro AJR Chevy V8',
+            $participant->getVehicle()->getName());
+        $participant = $participants[1];
+        $this->assertSame('Ginetta G58',
+            $participant->getVehicle()->getName());
+    }
+
+    public function testLappedDriversBadDataFile()
+    {
+        $file_path = realpath(__DIR__.
+            '/logs/automobilista2/result.with.race.with.lapped.cars.bad.data.json');
+
+        $reader = Data_Reader::factory($file_path);
+        $sessions = $reader->getSessions();
+
+        // First session participants
+        $participants = $sessions[14]->getParticipants();
+
+        // Detect proper driver order
+        $participant = $participants[0];
+        $this->assertSame('MikeyBoy',
+            $participant->getDriver()->getName());
+        $participant = $participants[1];
+        $this->assertSame('kbucks',
+            $participant->getDriver()->getName());
+        // THE MAIN CHECK (WAS BUGGED);
+        $participant = $participants[2];
+        $this->assertSame('Janis Dancis', // The main
+            $participant->getDriver()->getName());
+    }
+
+    public function testFixingConflictingParticipantIds()
+    {
+        $file_path = realpath(__DIR__.
+            '/logs/automobilista2/qualify.with.conflicting.participantids.json');
+
+        $reader = Data_Reader::factory($file_path);
+        $sessions = $reader->getSessions();
+
+        $participants = $sessions[0]->getParticipants();
+
+        $participant = $participants[0];
+        $this->assertSame('Chris C',
+            $participant->getDriver()->getName());
+        $participant = $participants[1];
+        // THE MAIN CHECK (WAS BUGGED) due conflict with GIZMO (same
+        // participantid);
+        $this->assertSame('TechAde',
+            $participant->getDriver()->getName());
+    }
+
+
     public function testNotUsingFinalResultWhenFinishedDriverIsMissing()
     {
         $file_path = realpath(__DIR__.
@@ -800,10 +869,10 @@ class ProjectCarsServerReaderTest extends \PHPUnit\Framework\TestCase {
                           $participant->getDriver()->getDriverId());
         $this->assertTrue($participant->getDriver()->isHuman());
         $this->assertSame(1, $participant->getPosition());
-        $this->assertSame(3, $participant->getGridPosition());
+        $this->assertSame(10, $participant->getGridPosition());
         $this->assertSame(Participant::FINISH_NORMAL,
             $participant->getFinishStatus());
-        $this->assertSame(581.39, $participant->getTotalTime());
+        $this->assertSame(581.406, $participant->getTotalTime());
 
 
         // Test any other participants to validate proper position

@@ -145,10 +145,14 @@ class Participant {
      * Return one driver. Defaults to the first driver
      *
      * @param  int  $driver_number
-     * @return Driver
+     * @return Driver|null
      */
     public function getDriver($driver_number = 1)
     {
+        if ( ! isset($this->drivers[$driver_number-1])) {
+            return null;
+        }
+
         return $this->drivers[$driver_number-1];
     }
 
@@ -662,7 +666,7 @@ class Participant {
         // Only return a completed lap
         foreach ($laps as $lap)
         {
-            if ($lap->isCompleted())
+            if ($lap->isValidForBest())
             {
                 return $lap;
             }
@@ -918,16 +922,17 @@ class Participant {
         }
 
         // Get best lap
-        $best_lap = $this->getBestLap();
+        if (!$best_lap = $this->getBestLap()) {
+            return null;
+        }
 
         // Get total time of all non-best
-        $total_time = 0;
-        $total_time_laps_num = 0;
+        $times = array();
         foreach ($this->getLaps() as $key => $lap)
         {
-            // Is best lap, not completed, pit lap, just too slow compared to
-            // the best lap (+21s) or first lap that should be ignored
-            if ($lap === $best_lap OR ! $lap->isCompleted() OR
+            // Is best lap, not valid (cuts), pit lap, just too slow compared
+            // to the best lap (+21s) or first lap that should be ignored
+            if ($lap === $best_lap OR ! $lap->isValidForBest() OR
                 $lap->isPitLap() OR
                 $lap->getTime() >= ($best_lap->getTime()+21) OR
                 ($ignore_first_lap AND $key === 0))
@@ -935,20 +940,27 @@ class Participant {
                 continue;
             }
 
-            // Add lap time to total time
-            $total_time += $lap->getTime();
 
-            $total_time_laps_num++;
+            // Add lap time to total time
+            $times[] = $lap->getTime();
         }
 
+        // No laps collected OR all laps are the same time. Ignore for
+        // consistency
+        if (!$times OR count(array_unique($times)) === 1) {
+            return null;
+        }
+
+        // Get total time
+        $total_time = array_sum($times);
+
         // No total time
-        if ( ! $total_time)
-        {
+        if ( ! $total_time) {
             return null;
         }
 
         // Get average of total time
-        $average = $total_time / $total_time_laps_num;
+        $average = $total_time / count($times);
 
         // Return consistency
         return round($average - $best_lap->getTime(), 4);

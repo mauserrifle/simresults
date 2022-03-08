@@ -237,10 +237,20 @@ class Vehicle {
         //--- Build initial vehicle name
         $vehicle_name = $this->getName();
 
-        // Has course name
-        if ($vehicle_type = $this->getType())
+        // Get type and class and replace any duplicate name parts
+        if ($vehicle_type = $this->getType()) {
+            $vehicle_type =
+                trim(str_replace($vehicle_name, '', $vehicle_type));
+        }
+        if ($vehicle_class = $this->getClass()) {
+            $vehicle_class =
+                trim(str_replace($vehicle_name, '', $vehicle_class));
+        }
+
+        // Has type
+        if ($vehicle_type)
         {
-            // Course name is not already part of the name
+            // Type is not already part of the name
             if ( ! preg_match(
                        sprintf('`\b(%s)\b`i',
                            str_replace('`', '\`', preg_quote($vehicle_type))),
@@ -251,15 +261,16 @@ class Vehicle {
             }
         }
 
-        // Has event name
-        if ($vehicle_class = $this->getClass())
+        // Has class
+        if ($vehicle_class)
         {
-            // Event name is not already part of the name
+            // Class is not already part of the name
             if ( ! preg_match(
                        sprintf('`\b(%s)\b`i',
                            str_replace('`', '\`', preg_quote($vehicle_class))),
                        $vehicle_name))
             {
+
                 // Add event to vehicle name
                 $vehicle_name .= sprintf(' (%s)',$vehicle_class);
             }

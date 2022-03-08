@@ -1,6 +1,9 @@
 # Simresults
 
-[![Build Status](https://travis-ci.org/mauserrifle/simresults.svg)](https://travis-ci.org/mauserrifle/simresults)
+[![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%207.3-8892BF.svg?style=flat-square)](https://php.net/)
+[![CI Status](https://github.com/mauserrifle/simresults/actions/workflows/ci.yml/badge.svg)](https://github.com/mauserrifle/simresults/actions)
+[![Total Downloads](https://img.shields.io/packagist/dt/mauserrifle/simresults)](https://packagist.org/packages/mauserrifle/simresults)
+[![License](https://img.shields.io/packagist/l/mauserrifle/simresults)](https://raw.githubusercontent.com/mauserrifle/simresults/develop/LICENSE)
 
 Simresults is an open-source, object-oriented library built using PHP. It
 allows you to read out log files of a race game and transforms them to a simple
@@ -17,8 +20,8 @@ this library. This library does not supply any HTML templates or whatsoever.
 Any 'implementation' is up to you within your own project and is not limited
 to any framework.
 
-This project is created and maintained by
-[Maurice van der Star](http://twitter.com/mauserrifleNL)
+This project is created (2013) and maintained by
+[Maurice van der Star](https://github.com/sponsors/mauserrifle)
 
 Please consider [donating](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=L9L982XNK7DAA&lc=US&item_name=Simresults&item_number=Simresults&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted)
 to cover future development.

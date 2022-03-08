@@ -108,6 +108,12 @@ class Lap {
      */
     protected $cuts = array();
 
+    /**
+     * @var  boolean  Whether the lap is valid for best. Null by default and
+     *       determined by completed lap and cuts.
+     */
+    protected $valid_for_best = null;
+
 
     /**
      * @var  Helper  The helper for sorting
@@ -615,6 +621,7 @@ class Lap {
     public function addCut(Cut $cut)
     {
         $this->cuts[] = $cut;
+        return $this;
     }
 
 
@@ -737,6 +744,33 @@ class Lap {
         return (
             $this->getTime() !== null
         );
+    }
+
+    /**
+     * Set whether this lap is valid for best. When not set, `isValidForBest`
+     * will determine by completed and cuts.
+     *
+     * @param   boolean  $valid_for_best
+     * @return  Lap
+     */
+    public function setValidForBest($valid_for_best)
+    {
+        $this->valid_for_best = $valid_for_best;
+        return $this;
+    }
+
+    /**
+     * Returns whether this lap is valid for best
+     *
+     * @return  boolean
+     */
+    public function isValidForBest()
+    {
+        if ($this->valid_for_best !== null) {
+            return $this->valid_for_best;
+        }
+
+        return ( $this->isCompleted() AND !$this->getNumberOfCuts() );
     }
 
     /**

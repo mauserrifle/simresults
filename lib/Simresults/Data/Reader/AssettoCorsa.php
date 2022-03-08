@@ -164,14 +164,27 @@ class Data_Reader_AssettoCorsa extends Data_Reader {
                 $lap->setRearCompound(
                     $this->helper->arrayGet($lap_data, 'tyre'));
 
-                // Invalid lap
-                if ($lap_data['time'] === -1 AND
-                    $this->helper->arrayGet($lap_data, 'cuts') AND
-                    $session->getType() !== Session::TYPE_RACE)
+                // Has cuts
+                if (is_numeric($cutsNum = $this->helper->arrayGet($lap_data, 'cuts')) AND
+                    $cutsNum > 0)
                 {
-                    $lap->setTime(null);
-                    $lap->setSectorTimes(array());
+                    // Cuts with no time because we only know the number of cuts
+                    for ($i=1; $i <= $cutsNum; $i++) {
+                        $cut = new Cut;
+                        $cut->setLap($lap);
+                        $lap->addCut($cut);
+                    }
+
+                    // Invalid lap
+                    if ($lap_data['time'] === -1 AND
+                        $session->getType() !== Session::TYPE_RACE)
+                    {
+                        $lap->setTime(null);
+                        $lap->setSectorTimes(array());
+                    }
                 }
+
+
 
                 // Add lap to participant
                 $lap_participant->addLap($lap);

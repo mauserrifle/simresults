@@ -4,6 +4,7 @@ namespace spec\Simresults;
 
 use Simresults\Participant;
 use Simresults\Lap;
+use Simresults\Cut;
 use Simresults\Vehicle;
 use Simresults\Driver;
 use Simresults\Helper;
@@ -96,14 +97,16 @@ class ParticipantSpec extends ObjectBehavior
         $this->getBestLap()->shouldReturn(null);
 
         // One completed lap
-        $lap1->isCompleted()->willReturn(true);
-        $lap1->getTime()->willReturn(50.20);
+        $lap1->isValidForBest()->willReturn(true);
         $this->getBestLap()->shouldReturn($lap1);
 
         // Another faster lap completed
-        $lap2->isCompleted()->willReturn(true);
-        $lap2->getTime()->willReturn(49.10);
+        $lap2->isValidForBest()->willReturn(true);
         $this->getBestLap()->shouldReturn($lap2);
+
+        // Invalid lap
+        $lap2->isValidForBest()->willReturn(false);
+        $this->getBestLap()->shouldReturn($lap1);
     }
 
     function it_has_total_time_or_calculates_it_from_laps(
@@ -210,6 +213,9 @@ class ParticipantSpec extends ObjectBehavior
         $this->getDriver()->shouldReturn($driver1);
         $this->getDriver(1)->shouldReturn($driver1);
         $this->getDriver(2)->shouldReturn($driver2);
+
+        $this->setDrivers(array());
+        $this->getDriver(1)->shouldReturn(null);
     }
 
     public function it_calculates_the_percentage_a_driver_has_driven(
@@ -324,21 +330,34 @@ class ParticipantSpec extends ObjectBehavior
         $this->setLaps(array($lap1, $lap2))
              ->getConsistency(false)->shouldReturn(null);
 
+        // No consistency when all valid laps are the exact same time
+        $lap1 = new Lap; $lap1->setTime(133.56);
+        $lap2 = new Lap; $lap2->setTime(133.56);
+        $lap3 = new Lap; $lap3->setTime(133.56);
+        $this->setLaps(array($lap1, $lap2, $lap3))
+             ->getConsistency(false)->shouldReturn(null);
+
         $lap1 = new Lap; $lap1->setTime(155.73);
         $lap2 = new Lap; $lap2->setTime(152.211); // Second is the best lap
         $lap3 = new Lap; $lap3->setTime(158.73);
-
+        $lap4 = new Lap; $lap4->setTime(157.71);
         //-- Laps below should be ignored
-        $lap4 = new Lap; $lap4->setTime(152.211+21); // +21s of best lap
-        $lap5 = new Lap; $lap5->setTime(161.731)->setPitLap(true);
+        $lap5 = new Lap; $lap5->setTime(152.211+21); // +21s of best lap
+        $lap6 = new Lap; $lap6->setTime(161.731)->setPitLap(true);
+        $lap7 = new Lap;
+        $this->setLaps(array($lap1, $lap2, $lap3, $lap4, $lap5, $lap6, $lap7));
 
-        $this->setLaps(array($lap1, $lap2, $lap3, $lap4, $lap5, new Lap));
+        // Including first lap
+        $this->getConsistency(false)->shouldReturn(5.179);
+        $this->getConsistencyPercentage(false)->shouldReturn(96.60);
 
-        $this->getConsistency(false)->shouldReturn(5.019);
-        $this->getConsistencyPercentage(false)->shouldReturn(96.70);
+        // Ignore first lap
+        $this->getConsistency()->shouldReturn(6.009);
+        $this->getConsistencyPercentage()->shouldReturn(96.05);
 
-        $this->getConsistency()->shouldReturn(6.519);
-        $this->getConsistencyPercentage()->shouldReturn(95.72);
+        // Make lap1 invalid for best lap--should not be processed
+        $lap1->addCut(new Cut);
+        $this->getConsistency(false)->shouldReturn(6.009);
     }
 
     function it_adds_laps_and_will_fix_missing_number(Lap $lap1, Lap $lap2)

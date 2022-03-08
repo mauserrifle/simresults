@@ -208,11 +208,32 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
                 $lap->addSectorTime(round($sector_time / 1000, 4));
             }
 
-                // Set compound info
-                $lap->setFrontCompound(
-                    $this->helper->arrayGet($lap_data, 'Tyre'));
-                $lap->setRearCompound(
-                    $this->helper->arrayGet($lap_data, 'Tyre'));
+            // Set compound info
+            $lap->setFrontCompound(
+                $this->helper->arrayGet($lap_data, 'Tyre'));
+            $lap->setRearCompound(
+                $this->helper->arrayGet($lap_data, 'Tyre'));
+
+            // Has cuts
+            if (is_numeric($cutsNum = $this->helper->arrayGet($lap_data, 'Cuts')) AND
+                $cutsNum > 0)
+            {
+                // Cuts with no time because we only know the number of cuts
+                for ($i=1; $i <= $cutsNum; $i++) {
+                    $cut = new Cut;
+                    $cut->setLap($lap);
+                    $lap->addCut($cut);
+                }
+
+                // TODO: Should we invalidate the lap on non-race or leave it
+                // to AC to decide? Need community feedback on this one before
+                // enabling
+                // if ($session->getType() !== Session::TYPE_RACE) {
+                //     $lap->setTime(null);
+                //     $lap->setSectorTimes(array());
+                // }
+            }
+
 
             // Add lap to participant
             $lap_participant->addLap($lap);

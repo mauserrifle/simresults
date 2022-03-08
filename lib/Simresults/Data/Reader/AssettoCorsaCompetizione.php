@@ -37,6 +37,9 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
         23 => 'Porsche 911 II GT3 R 2019',
         24 => 'Ferrari 488 GT3 Evo 2020',
         25 => 'Mercedes-AMG GT3 Evo 2020',
+
+        30 => 'BMW M4 GT3 2022',
+
         // GT4 DLC
         50 => 'Alpine A1110 GT4',
         51 => 'Aston Martin Vantage GT4',
@@ -90,6 +93,16 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
             }
         } catch(\Exception $ex) {}
 
+        // Try windows fallback 2 (untested and provided by community user)
+        try {
+            $dataParsed = mb_convert_encoding($data, 'UTF-16', 'UTF-16LE');
+
+            if ($dataParsed = json_decode($dataParsed, TRUE)) {
+                return (isset($dataParsed['sessionType']) OR
+                        isset($dataParsed['sessionDef']));
+            }
+        } catch(\Exception $ex) {}
+
         return false;
     }
 
@@ -107,7 +120,12 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
             } catch(\Exception $ex) {}
 
             if ( ! $data) {
-                $data = json_decode(preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $data), TRUE);
+                $data = json_decode(preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $this->data), TRUE);
+
+                if ( ! $data) {
+                    $data = mb_convert_encoding($this->data, 'UTF-16', 'UTF-16LE');
+                    $data = json_decode($data, TRUE);
+                }
             }
         }
 
@@ -346,9 +364,17 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
             // Set driver based on driver index (swapping support)
             $lap->setDriver($lap_participant->getDriver($driverIndex+1));
 
+            // Is valid for best?
+            $valid_for_best = $this->helper->arrayGet($lap_data, 'isValidForBest');
+            if (is_bool($valid_for_best)) {
+                $lap->setValidForBest($valid_for_best);
+            }
+
             // Always include race laps or valid laps for other sessions
-            if ($session->getType() === Session::TYPE_RACE OR
-                $this->helper->arrayGet($lap_data, 'isValidForBest')) {
+            // TODO: Should we just include them in other sessions since
+            // we check for valid laps?
+            if ($session->getType() === Session::TYPE_RACE OR $valid_for_best)
+            {
 
                 $lap_time = $this->helper->arrayGet($lap_data, 'laptime');
                 if ( ! $lap_time) {
@@ -429,7 +455,8 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
         $penalties_data = $this->helper->arrayGet($data, 'penalties', array());
         foreach ($penalties_data as $penalty_data) {
 
-            if (!isset($penalty_data['carId'])) {
+            if (!isset($penalty_data['carId']) OR
+                !isset($participants_by_car_id[$penalty_data['carId']])) {
                 continue;
             }
 
@@ -448,13 +475,18 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
             // Set message
             $penalty->setMessage(
                 $penalty_participant->getDriver($driverIndex+1)->getName().
+
                 ' - '.
                 $this->helper->arrayGet($penalty_data, 'reason', 'Unknown reason').
-                ' - '.
-                $penalty_data['penalty'].
-                ' - violation in lap '.$penalty_data['violationInLap'].
-                ' - cleared in lap '.$penalty_data['clearedInLap']
 
+                ' - '.
+                ($penalty_data['penalty'] === 'None' ? 'No penalty' : $penalty_data['penalty']).
+
+                ' - violation in lap '.
+                ($penalty_data['violationInLap']?:$penalty_data['clearedInLap']).
+
+                ' - cleared in lap '.
+                $penalty_data['clearedInLap']
             );
 
             $penalty->setParticipant($penalty_participant)
@@ -463,15 +495,25 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
             // Add penalty to penalties
             $penalties[] = $penalty;
 
+            $penalty_lap = $penalty_participant->getLap($penalty_data['violationInLap']?:$penalty_data['clearedInLap']);
+
             // Set invalid laps on non-race sessions
             if ($session->getType() !== Session::TYPE_RACE AND
                 $penalty_data['penalty'] === 'RemoveBestLaptime') {
 
-                $penalty_lap = $penalty_participant->getLap($penalty_data['violationInLap']);
                 if ($penalty_lap) {
                     $penalty_lap->setTime(null);
                     $penalty_lap->setSectorTimes(array());
                 }
+            }
+
+            // Reason cutting, add Cut to lap
+            if (strtolower($this->helper->arrayGet($penalty_data, 'reason')) === 'cutting' AND
+                $penalty_lap)
+            {
+                $cut = new Cut;
+                $cut->setLap($penalty_lap);
+                $penalty_lap->addCut($cut);
             }
         }
 

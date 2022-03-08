@@ -83,7 +83,7 @@ class SessionSpec extends ObjectBehavior
         $this->getBestLapsGroupedByParticipant()->shouldReturn($expect);
     }
 
-    function it_has_best_lap(Participant $part1, Participant $part2)
+    function it_has_best_lap(Participant $part1, Participant $part2, Cut $cut)
     {
         $this->getBestLap()->shouldReturn(null);
 
@@ -103,6 +103,10 @@ class SessionSpec extends ObjectBehavior
 
 
         $this->getBestLap()->shouldReturn($lap2);
+
+        // Exclude laps with cuts
+        $lap2->addCut(new Cut);
+        $this->getBestLap()->shouldReturn($lap1);
     }
 
     function it_has_bad_laps(Participant $part1, Participant $part2)
@@ -286,6 +290,9 @@ class SessionSpec extends ObjectBehavior
     {
         $this->beConstructedWith($helper);
 
+        $lap1->isValidForBest()->willReturn(true);
+        $lap2->isValidForBest()->willReturn(true);
+
         $part1->getLap(2)->willReturn($lap1);
         $part2->getLap(2)->willReturn($lap2);
 
@@ -295,6 +302,9 @@ class SessionSpec extends ObjectBehavior
                ->willReturn(array($lap2, $lap1));
 
         $this->getBestLapByLapNumber(2)->shouldReturn($lap2);
+
+        $lap2->isValidForBest()->willReturn(false);
+        $this->getBestLapByLapNumber(2)->shouldReturn($lap1);
     }
 
     function it_has_incidents_for_review(

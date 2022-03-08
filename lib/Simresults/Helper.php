@@ -78,12 +78,17 @@ class Helper {
      *                                           colon. If true, the last
      *                                           digits will allways be parsed
      *                                           as micro. Format: (h:)i:s:u
-     * @return  string
+     * @return  string|null
      */
     public function secondsFromFormattedTime(
         $formatted_time,
         $colon_micro_separator=false)
     {
+        // No data, just return null
+        if (!$formatted_time) {
+            return null;
+        }
+
         // Always micro seconds using a colon separator
         if ($colon_micro_separator)
         {
@@ -152,6 +157,11 @@ class Helper {
             $seconds = (float) ($seconds.'.'.$time_matches[3]);
 
             return $seconds;
+        }
+
+        if (is_scalar($formatted_time)) {
+            // Throw invalid argument by default
+            throw new \InvalidArgumentException("Invalid argument formatted_time: $formatted_time");
         }
 
         // Throw invalid argument by default

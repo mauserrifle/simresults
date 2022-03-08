@@ -1,0 +1,2127 @@
+// Persistent data for addon 'sms_stats', addon version 2.0
+// Automatically maintained by the addon, do not edit!
+
+{
+  "next_history_index" : 9,
+  "stats" : {
+    "history" : [
+      {
+        "end_time" : 0,
+        "finished" : false,
+        "index" : 8,
+        "members" : {
+          "21317" : {
+            "index" : 5,
+            "join_time" : 1637266297,
+            "leave_time" : -1,
+            "name" : "Rocco T",
+            "participantid" : 9,
+            "setup" : {
+              "LiveryId" : 52,
+              "RaceStatFlags" : 1073746021,
+              "VehicleId" : 379055283
+            },
+            "steamid" : "76561198086161703"
+          },
+          "26113" : {
+            "index" : 1,
+            "join_time" : 1637261050,
+            "leave_time" : 1637261590,
+            "name" : "GIZMO",
+            "participantid" : 1,
+            "setup" : {
+              "LiveryId" : 61,
+              "RaceStatFlags" : 1073747301,
+              "VehicleId" : 379055283
+            },
+            "steamid" : "76561198161097687"
+          },
+          "322" : {
+            "index" : 2,
+            "join_time" : 1637261074,
+            "leave_time" : -1,
+            "name" : "darylldaz",
+            "participantid" : 2,
+            "setup" : {
+              "LiveryId" : 51,
+              "RaceStatFlags" : 1073746021,
+              "VehicleId" : -1966031044
+            },
+            "steamid" : "76561198296322989"
+          },
+          "37569" : {
+            "index" : 1,
+            "join_time" : 1637261616,
+            "leave_time" : -1,
+            "name" : "Matt M",
+            "participantid" : 3,
+            "setup" : {
+              "LiveryId" : 56,
+              "RaceStatFlags" : 1073747301,
+              "VehicleId" : 1464988033
+            },
+            "steamid" : "76561198399173506"
+          },
+          "39552" : {
+            "index" : 0,
+            "join_time" : 1637262284,
+            "leave_time" : -1,
+            "name" : "TechAde",
+            "participantid" : 4,
+            "setup" : {
+              "LiveryId" : 58,
+              "RaceStatFlags" : 1073746021,
+              "VehicleId" : 850609487
+            },
+            "steamid" : "76561197992462926"
+          },
+          "3971" : {
+            "index" : 3,
+            "join_time" : 1637261717,
+            "leave_time" : 1637262127,
+            "name" : "GIZMO",
+            "participantid" : 4,
+            "setup" : {
+              "LiveryId" : 61,
+              "RaceStatFlags" : 1073763685,
+              "VehicleId" : 379055283
+            },
+            "steamid" : "76561198161097687"
+          },
+          "40579" : {
+            "index" : 3,
+            "join_time" : 1637262805,
+            "leave_time" : 1637263758,
+            "name" : "Chris C",
+            "participantid" : 5,
+            "setup" : {
+              "LiveryId" : 53,
+              "RaceStatFlags" : 1073747301,
+              "VehicleId" : 850609487
+            },
+            "steamid" : "76561199030628098"
+          },
+          "40964" : {
+            "index" : 4,
+            "join_time" : 1637263873,
+            "leave_time" : 1637264135,
+            "name" : "Chris C",
+            "participantid" : 7,
+            "setup" : {
+              "LiveryId" : 53,
+              "RaceStatFlags" : 1073747301,
+              "VehicleId" : 850609487
+            },
+            "steamid" : "76561199030628098"
+          },
+          "57092" : {
+            "index" : 4,
+            "join_time" : 1637264280,
+            "leave_time" : -1,
+            "name" : "Chris C",
+            "participantid" : 8,
+            "setup" : {
+              "LiveryId" : 53,
+              "RaceStatFlags" : 1073747301,
+              "VehicleId" : 850609487
+            },
+            "steamid" : "76561199030628098"
+          },
+          "57219" : {
+            "index" : 3,
+            "join_time" : 1637263822,
+            "leave_time" : -1,
+            "name" : "Zsolt C",
+            "participantid" : 6,
+            "setup" : {
+              "LiveryId" : 57,
+              "RaceStatFlags" : 1073747045,
+              "VehicleId" : 850609487
+            },
+            "steamid" : "76561198317705338"
+          }
+        },
+        "participants" : {
+          "0" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 58,
+            "Name" : "TechAde",
+            "RefId" : 29248,
+            "VehicleId" : 850609487
+          },
+          "1" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 61,
+            "Name" : "GIZMO",
+            "RefId" : 26113,
+            "VehicleId" : 379055283
+          },
+          "2" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 51,
+            "Name" : "darylldaz",
+            "RefId" : 322,
+            "VehicleId" : -1966031044
+          },
+          "3" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 56,
+            "Name" : "Matt M",
+            "RefId" : 37569,
+            "VehicleId" : 1464988033
+          },
+          "4" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 58,
+            "Name" : "TechAde",
+            "RefId" : 39552,
+            "VehicleId" : 850609487
+          },
+          "5" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 53,
+            "Name" : "Chris C",
+            "RefId" : 40579,
+            "VehicleId" : 850609487
+          },
+          "6" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 57,
+            "Name" : "Zsolt C",
+            "RefId" : 57219,
+            "VehicleId" : 850609487
+          },
+          "7" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 53,
+            "Name" : "Chris C",
+            "RefId" : 40964,
+            "VehicleId" : 850609487
+          },
+          "8" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 53,
+            "Name" : "Chris C",
+            "RefId" : 57092,
+            "VehicleId" : 850609487
+          },
+          "9" : {
+            "IsPlayer" : 1,
+            "LiveryId" : 52,
+            "Name" : "",
+            "RefId" : 21317,
+            "VehicleId" : 379055283
+          }
+        },
+        "setup" : {
+          "AllowedCutsBeforePenalty" : 5,
+          "AllowedViews" : 2,
+          "DamageScale" : 100,
+          "DamageType" : 3,
+          "DisablePitstopRefuelling" : 0,
+          "DriveThroughPenalty" : 1,
+          "Flags" : 17302200,
+          "FuelUsageType" : 0,
+          "GridLayout" : 0,
+          "GridSize" : 30,
+          "ManualPitStops" : 1,
+          "ManualRollingStarts" : 0,
+          "MaxPlayers" : 30,
+          "MinimumOnlineRank" : 0,
+          "MinimumOnlineStrength" : 100,
+          "MultiClassSlot1" : 1347575036,
+          "MultiClassSlot2" : 1553262379,
+          "MultiClassSlot3" : -1,
+          "MultiClassSlot4" : -1,
+          "MultiClassSlot5" : -1,
+          "MultiClassSlot6" : -1,
+          "MultiClassSlot7" : -1,
+          "MultiClassSlot8" : -1,
+          "MultiClassSlot9" : -1,
+          "MultiClassSlots" : 2,
+          "OpponentDifficulty" : 50,
+          "PenaltiesType" : 1,
+          "PitWhiteLinePenalty" : 1,
+          "PracticeDateHour" : 12,
+          "PracticeDateProgression" : 1,
+          "PracticeLength" : 120,
+          "PracticeLiveTrackPreset" : 0,
+          "PracticeWeatherProgression" : 0,
+          "PracticeWeatherSlot1" : -934211870,
+          "PracticeWeatherSlot2" : 296956818,
+          "PracticeWeatherSlot3" : -934211870,
+          "PracticeWeatherSlot4" : -934211870,
+          "PracticeWeatherSlots" : 2,
+          "QualifyDateHour" : 17,
+          "QualifyDateProgression" : 1,
+          "QualifyLength" : 15,
+          "QualifyLiveTrackPreset" : 0,
+          "QualifyWeatherProgression" : 0,
+          "QualifyWeatherSlot1" : 296956818,
+          "QualifyWeatherSlot2" : 888299130,
+          "QualifyWeatherSlot3" : -1293634875,
+          "QualifyWeatherSlot4" : 296956818,
+          "QualifyWeatherSlots" : 2,
+          "RaceDateDay" : 3,
+          "RaceDateHour" : 17,
+          "RaceDateMonth" : 7,
+          "RaceDateProgression" : 1,
+          "RaceDateYear" : 2021,
+          "RaceExtraLap" : 0,
+          "RaceFormationLap" : 0,
+          "RaceLength" : 16,
+          "RaceLiveTrackPreset" : 0,
+          "RaceMandatoryPitStops" : 0,
+          "RaceRollingStart" : 0,
+          "RaceWeatherProgression" : 0,
+          "RaceWeatherSlot1" : -934211870,
+          "RaceWeatherSlot2" : 296956818,
+          "RaceWeatherSlot3" : -1293634875,
+          "RaceWeatherSlot4" : 296956818,
+          "RaceWeatherSlots" : 2,
+          "ServerControlsSetup" : 1,
+          "ServerControlsTrack" : 1,
+          "ServerControlsVehicle" : 0,
+          "ServerControlsVehicleClass" : 1,
+          "TireWearType" : 6,
+          "TrackId" : -1478712571,
+          "VehicleClassId" : 1553262379,
+          "VehicleModelId" : -1236687924
+        },
+        "stages" : {
+          "qualifying1" : {
+            "end_time" : 1637266797,
+            "events" : [
+              {
+                "attributes" : {
+                  "NewState" : "Racing",
+                  "PreviousState" : "InGarage"
+                },
+                "event_name" : "State",
+                "is_player" : true,
+                "name" : "TechAde",
+                "participantid" : 4,
+                "refid" : 39552,
+                "time" : 1637265791
+              },
+              {
+                "attributes" : {
+                  "NewState" : "Racing",
+                  "PreviousState" : "InGarage"
+                },
+                "event_name" : "State",
+                "is_player" : true,
+                "name" : "darylldaz",
+                "participantid" : 2,
+                "refid" : 322,
+                "time" : 1637265833
+              },
+              {
+                "attributes" : {
+                  "NewState" : "Racing",
+                  "PreviousState" : "InGarage"
+                },
+                "event_name" : "State",
+                "is_player" : true,
+                "name" : "Matt M",
+                "participantid" : 3,
+                "refid" : 37569,
+                "time" : 1637265843
+              },
+              {
+                "attributes" : {
+                  "NewState" : "Racing",
+                  "PreviousState" : "InGarage"
+                },
+                "event_name" : "State",
+                "is_player" : true,
+                "name" : "Chris C",
+                "participantid" : 8,
+                "refid" : 57092,
+                "time" : 1637265852
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 0,
+                  "LapTime" : 67240,
+                  "RacePosition" : 3
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "TechAde",
+                "participantid" : 4,
+                "refid" : 39552,
+                "time" : 1637265862
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 0,
+                  "LapTime" : 27316,
+                  "RacePosition" : 5
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "darylldaz",
+                "participantid" : 2,
+                "refid" : 322,
+                "time" : 1637265864
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 8257,
+                  "PenaltyThreshold" : 0,
+                  "PenaltyValue" : 0,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 2593
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "TechAde",
+                "participantid" : 4,
+                "refid" : 39552,
+                "time" : 1637265869
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 9867,
+                  "PenaltyThreshold" : 0,
+                  "PenaltyValue" : 0,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 8622
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "darylldaz",
+                "participantid" : 2,
+                "refid" : 322,
+                "time" : 1637265871
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 0,
+                  "LapTime" : 69244,
+                  "RacePosition" : 3
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "TechAde",
+                "participantid" : 4,
+                "refid" : 39552,
+                "time" : 1637265874
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 7924,
+                  "PenaltyThreshold" : 0,
+                  "PenaltyValue" : 0,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 3708
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "TechAde",
+                "participantid" : 4,
+                "refid" : 39552,
+                "time" : 1637265882
+              },
+              {
+                "attributes" : {
+                  "NewState" : "Racing",
+                  "PreviousState" : "InGarage"
+                },
+                "event_name" : "State",
+                "is_player" : true,
+                "name" : "Zsolt C",
+                "participantid" : 6,
+                "refid" : 57219,
+                "time" : 1637265890
+              },
+              {
+                "attributes" : {
+                  "CountThisLapTimes" : 1,
+                  "DistanceTravelled" : 8554,
+                  "Lap" : 0,
+                  "LapTime" : 101889,
+                  "RacePosition" : 3,
+                  "Sector1Time" : 24365,
+                  "Sector2Time" : 52866,
+                  "Sector3Time" : 24658
+                },
+                "event_name" : "Lap",
+                "is_player" : true,
+                "name" : "TechAde",
+                "participantid" : 4,
+                "refid" : 39552,
+                "time" : 1637266011
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 0,
+                  "LapTime" : 29775,
+                  "RacePosition" : 3
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "Zsolt C",
+                "participantid" : 6,
+                "refid" : 57219,
+                "time" : 1637266029
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 1857,
+                  "PenaltyThreshold" : 0,
+                  "PenaltyValue" : 0,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 1565
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "Zsolt C",
+                "participantid" : 6,
+                "refid" : 57219,
+                "time" : 1637266031
+              },
+              {
+                "attributes" : {
+                  "CountThisLapTimes" : 1,
+                  "DistanceTravelled" : 8550,
+                  "Lap" : 0,
+                  "LapTime" : 106273,
+                  "RacePosition" : 5,
+                  "Sector1Time" : 25640,
+                  "Sector2Time" : 55572,
+                  "Sector3Time" : 25061
+                },
+                "event_name" : "Lap",
+                "is_player" : true,
+                "name" : "darylldaz",
+                "participantid" : 2,
+                "refid" : 322,
+                "time" : 1637266050
+              },
+              {
+                "attributes" : {
+                  "CountThisLapTimes" : 1,
+                  "DistanceTravelled" : 8414,
+                  "Lap" : 0,
+                  "LapTime" : 101484,
+                  "RacePosition" : 3,
+                  "Sector1Time" : 24404,
+                  "Sector2Time" : 53073,
+                  "Sector3Time" : 24007
+                },
+                "event_name" : "Lap",
+                "is_player" : true,
+                "name" : "Chris C",
+                "participantid" : 8,
+                "refid" : 57092,
+                "time" : 1637266064
+              },
+              {
+                "attributes" : {
+                  "CountThisLapTimes" : 1,
+                  "DistanceTravelled" : 8462,
+                  "Lap" : 0,
+                  "LapTime" : 117807,
+                  "RacePosition" : 5,
+                  "Sector1Time" : 37020,
+                  "Sector2Time" : 55789,
+                  "Sector3Time" : 24998
+                },
+                "event_name" : "Lap",
+                "is_player" : true,
+                "name" : "Matt M",
+                "participantid" : 3,
+                "refid" : 37569,
+                "time" : 1637266071
+              },
+              {
+                "attributes" : {
+                  "CountThisLapTimes" : 1,
+                  "DistanceTravelled" : 8453,
+                  "Lap" : 0,
+                  "LapTime" : 103138,
+                  "RacePosition" : 5,
+                  "Sector1Time" : 24324,
+                  "Sector2Time" : 54156,
+                  "Sector3Time" : 24658
+                },
+                "event_name" : "Lap",
+                "is_player" : true,
+                "name" : "Zsolt C",
+                "participantid" : 6,
+                "refid" : 57219,
+                "time" : 1637266101
+              },
+              {
+                "attributes" : {
+                  "CountThisLapTimes" : 1,
+                  "DistanceTravelled" : 4230,
+                  "Lap" : 1,
+                  "LapTime" : 102016,
+                  "RacePosition" : 2,
+                  "Sector1Time" : 24421,
+                  "Sector2Time" : 53055,
+                  "Sector3Time" : 24540
+                },
+                "event_name" : "Lap",
+                "is_player" : true,
+                "name" : "TechAde",
+                "participantid" : 4,
+                "refid" : 39552,
+                "time" : 1637266113
+              },
+              {
+                "attributes" : {
+                  "CountThisLapTimes" : 1,
+                  "DistanceTravelled" : 4244,
+                  "Lap" : 1,
+                  "LapTime" : 105229,
+                  "RacePosition" : 4,
+                  "Sector1Time" : 25693,
+                  "Sector2Time" : 54417,
+                  "Sector3Time" : 25120
+                },
+                "event_name" : "Lap",
+                "is_player" : true,
+                "name" : "darylldaz",
+                "participantid" : 2,
+                "refid" : 322,
+                "time" : 1637266155
+              },
+              {
+                "attributes" : {
+                  "CountThisLapTimes" : 1,
+                  "DistanceTravelled" : 4219,
+                  "Lap" : 1,
+                  "LapTime" : 100441,
+                  "RacePosition" : 1,
+                  "Sector1Time" : 23760,
+                  "Sector2Time" : 52461,
+                  "Sector3Time" : 24220
+                },
+                "event_name" : "Lap",
+                "is_player" : true,
+                "name" : "Chris C",
+                "participantid" : 8,
+                "refid" : 57092,
+                "time" : 1637266164
+              },
+              {
+                "attributes" : {
+                  "NewState" : "InGarage",
+                  "PreviousState" : "Racing"
+                },
+                "event_name" : "State",
+                "is_player" : true,
+                "name" : "Chris C",
+                "participantid" : 8,
+                "refid" : 57092,
+                "time" : 1637266167
+              },
+              {
+                "attributes" : {
+                  "CountThisLapTimes" : 1,
+                  "DistanceTravelled" : 4243,
+                  "Lap" : 1,
+                  "LapTime" : 104564,
+                  "RacePosition" : 5,
+                  "Sector1Time" : 24726,
+                  "Sector2Time" : 54783,
+                  "Sector3Time" : 25056
+                },
+                "event_name" : "Lap",
+                "is_player" : true,
+                "name" : "Matt M",
+                "participantid" : 3,
+                "refid" : 37569,
+                "time" : 1637266176
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 2,
+                  "LapTime" : 11033,
+                  "RacePosition" : 4
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "Matt M",
+                "participantid" : 3,
+                "refid" : 37569,
+                "time" : 1637266189
+              },
+              {
+                "attributes" : {
+                  "NewState" : "InGarage",
+                  "PreviousState" : "Racing"
+                },
+                "event_name" : "State",
+                "is_player" : true,
+                "name" : "Matt M",
+                "participantid" : 3,
+                "refid" : 37569,
+                "time" : 1637266194
+              },
+              {
+                "attributes" : {
+                  "CountThisLapTimes" : 1,
+                  "DistanceTravelled" : 4234,
+                  "Lap" : 1,
+                  "LapTime" : 103133,
+                  "RacePosition" : 3,
+                  "Sector1Time" : 24800,
+                  "Sector2Time" : 53990,
+                  "Sector3Time" : 24343
+                },
+                "event_name" : "Lap",
+                "is_player" : true,
+                "name" : "Zsolt C",
+                "participantid" : 6,
+                "refid" : 57219,
+                "time" : 1637266204
+              },
+              {
+                "attributes" : {
+                  "NewState" : "Racing",
+                  "PreviousState" : "InGarage"
+                },
+                "event_name" : "State",
+                "is_player" : true,
+                "name" : "Chris C",
+                "participantid" : 8,
+                "refid" : 57092,
+                "time" : 1637266210
+              },
+              {
+                "attributes" : {
+                  "CountThisLapTimes" : 1,
+                  "DistanceTravelled" : 4228,
+                  "Lap" : 2,
+                  "LapTime" : 102385,
+                  "RacePosition" : 2,
+                  "Sector1Time" : 24566,
+                  "Sector2Time" : 52677,
+                  "Sector3Time" : 25142
+                },
+                "event_name" : "Lap",
+                "is_player" : true,
+                "name" : "TechAde",
+                "participantid" : 4,
+                "refid" : 39552,
+                "time" : 1637266215
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 3,
+                  "LapTime" : 8013,
+                  "RacePosition" : 2
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "TechAde",
+                "participantid" : 4,
+                "refid" : 39552,
+                "time" : 1637266227
+              },
+              {
+                "attributes" : {
+                  "NewState" : "InGarage",
+                  "PreviousState" : "Racing"
+                },
+                "event_name" : "State",
+                "is_player" : true,
+                "name" : "TechAde",
+                "participantid" : 4,
+                "refid" : 39552,
+                "time" : 1637266227
+              },
+              {
+                "attributes" : {
+                  "NewState" : "Racing",
+                  "PreviousState" : "InGarage"
+                },
+                "event_name" : "State",
+                "is_player" : true,
+                "name" : "TechAde",
+                "participantid" : 4,
+                "refid" : 39552,
+                "time" : 1637266254
+              },
+              {
+                "attributes" : {
+                  "NewState" : "Racing",
+                  "PreviousState" : "InGarage"
+                },
+                "event_name" : "State",
+                "is_player" : true,
+                "name" : "Matt M",
+                "participantid" : 3,
+                "refid" : 37569,
+                "time" : 1637266256
+              },
+              {
+                "attributes" : {
+                  "CountThisLapTimes" : 1,
+                  "DistanceTravelled" : 4242,
+                  "Lap" : 2,
+                  "LapTime" : 105441,
+                  "RacePosition" : 5,
+                  "Sector1Time" : 25151,
+                  "Sector2Time" : 55222,
+                  "Sector3Time" : 25068
+                },
+                "event_name" : "Lap",
+                "is_player" : true,
+                "name" : "darylldaz",
+                "participantid" : 2,
+                "refid" : 322,
+                "time" : 1637266261
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 3,
+                  "LapTime" : 5173,
+                  "RacePosition" : 5
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "darylldaz",
+                "participantid" : 2,
+                "refid" : 322,
+                "time" : 1637266267
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 3234,
+                  "PenaltyThreshold" : 0,
+                  "PenaltyValue" : 1000,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 4162
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "darylldaz",
+                "participantid" : 2,
+                "refid" : 322,
+                "time" : 1637266269
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 3,
+                  "LapTime" : 11656,
+                  "RacePosition" : 5
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "darylldaz",
+                "participantid" : 2,
+                "refid" : 322,
+                "time" : 1637266275
+              },
+              {
+                "attributes" : {
+                  "ElapsedTime" : 7897,
+                  "PenaltyThreshold" : 0,
+                  "PenaltyValue" : 0,
+                  "PlaceGain" : 0,
+                  "SkippedTime" : 3705
+                },
+                "event_name" : "CutTrackEnd",
+                "is_player" : true,
+                "name" : "darylldaz",
+                "participantid" : 2,
+                "refid" : 322,
+                "time" : 1637266280
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 2,
+                  "LapTime" : 26688,
+                  "RacePosition" : 4
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "Matt M",
+                "participantid" : 3,
+                "refid" : 37569,
+                "time" : 1637266286
+              },
+              {
+                "attributes" : {
+                  "NewState" : "InGarage",
+                  "PreviousState" : "Racing"
+                },
+                "event_name" : "State",
+                "is_player" : true,
+                "name" : "Matt M",
+                "participantid" : 3,
+                "refid" : 37569,
+                "time" : 1637266292
+              },
+              {
+                "attributes" : {
+                  "CountThisLapTimes" : 1,
+                  "DistanceTravelled" : 4221,
+                  "Lap" : 2,
+                  "LapTime" : 102273,
+                  "RacePosition" : 3,
+                  "Sector1Time" : 24395,
+                  "Sector2Time" : 53303,
+                  "Sector3Time" : 24576
+                },
+                "event_name" : "Lap",
+                "is_player" : true,
+                "name" : "Zsolt C",
+                "participantid" : 6,
+                "refid" : 57219,
+                "time" : 1637266306
+              },
+              {
+                "attributes" : {
+                  "NewState" : "InGarage",
+                  "PreviousState" : "Racing"
+                },
+                "event_name" : "State",
+                "is_player" : true,
+                "name" : "darylldaz",
+                "participantid" : 2,
+                "refid" : 322,
+                "time" : 1637266308
+              },
+              {
+                "attributes" : {
+                  "CountThisLapTimes" : 0,
+                  "DistanceTravelled" : 4388,
+                  "Lap" : 2,
+                  "LapTime" : 148722,
+                  "RacePosition" : 1,
+                  "Sector1Time" : 69763,
+                  "Sector2Time" : 54723,
+                  "Sector3Time" : 24236
+                },
+                "event_name" : "Lap",
+                "is_player" : true,
+                "name" : "Chris C",
+                "participantid" : 8,
+                "refid" : 57092,
+                "time" : 1637266313
+              },
+              {
+                "attributes" : {
+                  "CountThisLapTimes" : 1,
+                  "DistanceTravelled" : 4682,
+                  "Lap" : 3,
+                  "LapTime" : 115860,
+                  "RacePosition" : 2,
+                  "Sector1Time" : 36821,
+                  "Sector2Time" : 54600,
+                  "Sector3Time" : 24438
+                },
+                "event_name" : "Lap",
+                "is_player" : true,
+                "name" : "TechAde",
+                "participantid" : 4,
+                "refid" : 39552,
+                "time" : 1637266356
+              },
+              {
+                "attributes" : {
+                  "NewState" : "Racing",
+                  "PreviousState" : "InGarage"
+                },
+                "event_name" : "State",
+                "is_player" : true,
+                "name" : "darylldaz",
+                "participantid" : 2,
+                "refid" : 322,
+                "time" : 1637266370
+              },
+              {
+                "attributes" : {
+                  "CountThisLapTimes" : 1,
+                  "DistanceTravelled" : 4225,
+                  "Lap" : 3,
+                  "LapTime" : 102205,
+                  "RacePosition" : 3,
+                  "Sector1Time" : 24642,
+                  "Sector2Time" : 52943,
+                  "Sector3Time" : 24620
+                },
+                "event_name" : "Lap",
+                "is_player" : true,
+                "name" : "Zsolt C",
+                "participantid" : 6,
+                "refid" : 57219,
+                "time" : 1637266409
+              },
+              {
+                "attributes" : {
+                  "NewState" : "Racing",
+                  "PreviousState" : "InGarage"
+                },
+                "event_name" : "State",
+                "is_player" : true,
+                "name" : "",
+                "participantid" : 9,
+                "refid" : 21317,
+                "time" : 1637266414
+              },
+              {
+                "attributes" : {
+                  "CountThisLapTimes" : 1,
+                  "DistanceTravelled" : 4219,
+                  "Lap" : 2,
+                  "LapTime" : 101590,
+                  "RacePosition" : 1,
+                  "Sector1Time" : 23762,
+                  "Sector2Time" : 53857,
+                  "Sector3Time" : 23970
+                },
+                "event_name" : "Lap",
+                "is_player" : true,
+                "name" : "Chris C",
+                "participantid" : 8,
+                "refid" : 57092,
+                "time" : 1637266414
+              },
+              {
+                "attributes" : {
+                  "IsMainBranch" : 1,
+                  "Lap" : 4,
+                  "LapTime" : 4751,
+                  "RacePosition" : 3
+                },
+                "event_name" : "CutTrackStart",
+                "is_player" : true,
+                "name" : "Zsolt C",
+                "participantid" : 6,
+                "refid" : 57219,
+                "time" : 1637266416
+              },
+              {
+                "attributes" : {
+                  "NewState" : "InGarage",
+                  "PreviousState" : "Racing"
+                },
+                "event_name" : "State",
+                "is_player" : true,
+                "name" : "Zsolt C",
+                "participantid" : 6,
+                "refid" : 57219,
+                "time" : 1637266426
+              },
+              {
+                "attributes" : {
+                  "CountThisLapTimes" : 1,
+                  "DistanceTravelled" : 4224,
+                  "Lap" : 4,
+                  "LapTime" : 102580,
+                  "RacePosition" : 2,
+                  "Sector1Time" : 25085,
+                  "Sector2Time" : 53153,
+                  "Sector3Time" : 24341
+                },
+                "event_name" : "Lap",
+                "is_player" : true,
+                "name" : "TechAde",
+                "participantid" : 4,
+                "refid" : 39552,
+                "time" : 1637266459
+              },
+              {
+                "attributes" : {
+                  "CountThisLapTimes" : 1,
+                  "DistanceTravelled" : 5721,
+                  "Lap" : 3,
+                  "LapTime" : 123397,
+                  "RacePosition" : 5,
+                  "Sector1Time" : 41207,
+                  "Sector2Time" : 56844,
+                  "Sector3Time" : 25347
+                },
+                "event_name" : "Lap",
+                "is_player" : true,
+                "name" : "darylldaz",
+                "participantid" : 2,
+                "refid" : 322,
+                "time" : 1637266477
+              },
+              {
+                "attributes" : {
+                  "CountThisLapTimes" : 1,
+                  "DistanceTravelled" : 4219,
+                  "Lap" : 3,
+                  "LapTime" : 101353,
+                  "RacePosition" : 1,
+                  "Sector1Time" : 24033,
+                  "Sector2Time" : 53210,
+                  "Sector3Time" : 24110
+                },
+                "event_name" : "Lap",
+                "is_player" : true,
+                "name" : "Chris C",
+                "participantid" : 8,
+                "refid" : 57092,
+                "time" : 1637266516
+              },
+              {
+                "attributes" : {
+                  "NewState" : "InGarage",
+                  "PreviousState" : "Racing"
+                },
+                "event_name" : "State",
+                "is_player" : true,
+                "name" : "Chris C",
+                "participantid" : 8,
+                "refid" : 57092,
+                "time" : 1637266557
+              },
+              {
+                "attributes" : {
+                  "CountThisLapTimes" : 1,
+                  "DistanceTravelled" : 4233,
+                  "Lap" : 5,
+                  "LapTime" : 101721,
+                  "RacePosition" : 2,
+                  "Sector1Time" : 24800,
+                  "Sector2Time" : 52606,
+                  "Sector3Time" : 24315
+                },
+                "event_name" : "Lap",
+                "is_player" : true,
+                "name" : "TechAde",
+                "participantid" : 4,
+                "refid" : 39552,
+                "time" : 1637266560
+              },
+              {
+                "attributes" : {
+                  "CountThisLapTimes" : 1,
+                  "DistanceTravelled" : 4246,
+                  "Lap" : 4,
+                  "LapTime" : 106680,
+                  "RacePosition" : 5,
+                  "Sector1Time" : 25577,
+                  "Sector2Time" : 56049,
+                  "Sector3Time" : 25055
+                },
+                "event_name" : "Lap",
+                "is_player" : true,
+                "name" : "darylldaz",
+                "participantid" : 2,
+                "refid" : 322,
+                "time" : 1637266583
+              },
+              {
+                "attributes" : {
+                  "NewState" : "InGarage",
+                  "PreviousState" : "Racing"
+                },
+                "event_name" : "State",
+                "is_player" : true,
+                "name" : "darylldaz",
+                "participantid" : 2,
+                "refid" : 322,
+                "time" : 1637266587
+              },
+              {
+                "attributes" : {
+                  "CountThisLapTimes" : 1,
+                  "DistanceTravelled" : 8455,
+                  "Lap" : 0,
+                  "LapTime" : 103004,
+                  "RacePosition" : 6,
+                  "Sector1Time" : 25027,
+                  "Sector2Time" : 52966,
+                  "Sector3Time" : 25011
+                },
+                "event_name" : "Lap",
+                "is_player" : true,
+                "name" : "",
+                "participantid" : 9,
+                "refid" : 21317,
+                "time" : 1637266633
+              },
+              {
+                "attributes" : {
+                  "CountThisLapTimes" : 1,
+                  "DistanceTravelled" : 4224,
+                  "Lap" : 6,
+                  "LapTime" : 101650,
+                  "RacePosition" : 2,
+                  "Sector1Time" : 24441,
+                  "Sector2Time" : 52846,
+                  "Sector3Time" : 24363
+                },
+                "event_name" : "Lap",
+                "is_player" : true,
+                "name" : "TechAde",
+                "participantid" : 4,
+                "refid" : 39552,
+                "time" : 1637266662
+              },
+              {
+                "attributes" : {
+                  "NewState" : "Finished",
+                  "PreviousState" : "InGarage"
+                },
+                "event_name" : "State",
+                "is_player" : true,
+                "name" : "Matt M",
+                "participantid" : 3,
+                "refid" : 37569,
+                "time" : 1637266665
+              },
+              {
+                "attributes" : {
+                  "NewState" : "Finished",
+                  "PreviousState" : "InGarage"
+                },
+                "event_name" : "State",
+                "is_player" : true,
+                "name" : "Chris C",
+                "participantid" : 8,
+                "refid" : 57092,
+                "time" : 1637266665
+              },
+              {
+                "attributes" : {
+                  "NewState" : "Finished",
+                  "PreviousState" : "InGarage"
+                },
+                "event_name" : "State",
+                "is_player" : true,
+                "name" : "Zsolt C",
+                "participantid" : 6,
+                "refid" : 57219,
+                "time" : 1637266665
+              },
+              {
+                "attributes" : {
+                  "NewState" : "InGarage",
+                  "PreviousState" : "Racing"
+                },
+                "event_name" : "State",
+                "is_player" : true,
+                "name" : "TechAde",
+                "participantid" : 4,
+                "refid" : 39552,
+                "time" : 1637266672
+              },
+              {
+                "attributes" : {
+                  "NewState" : "Finished",
+                  "PreviousState" : "InGarage"
+                },
+                "event_name" : "State",
+                "is_player" : true,
+                "name" : "TechAde",
+                "participantid" : 4,
+                "refid" : 39552,
+                "time" : 1637266672
+              },
+              {
+                "attributes" : {
+                  "NewState" : "Finished",
+                  "PreviousState" : "Racing"
+                },
+                "event_name" : "State",
+                "is_player" : true,
+                "name" : "",
+                "participantid" : 9,
+                "refid" : 21317,
+                "time" : 1637266736
+              },
+              {
+                "attributes" : {
+                  "CountThisLapTimes" : 1,
+                  "DistanceTravelled" : 4221,
+                  "Lap" : 1,
+                  "LapTime" : 102825,
+                  "RacePosition" : 4,
+                  "Sector1Time" : 24862,
+                  "Sector2Time" : 52808,
+                  "Sector3Time" : 25156
+                },
+                "event_name" : "Lap",
+                "is_player" : true,
+                "name" : "",
+                "participantid" : 9,
+                "refid" : 21317,
+                "time" : 1637266736
+              },
+              {
+                "attributes" : {
+                  "NewState" : "Retired",
+                  "PreviousState" : "InGarage"
+                },
+                "event_name" : "State",
+                "is_player" : true,
+                "name" : "darylldaz",
+                "participantid" : 2,
+                "refid" : 322,
+                "time" : 1637266786
+              }
+            ],
+            "results" : [
+              {
+                "attributes" : {
+                  "FastestLapTime" : 100441,
+                  "Lap" : 4,
+                  "RacePosition" : 1,
+                  "State" : "Finished",
+                  "TotalTime" : 900008,
+                  "VehicleId" : 850609487
+                },
+                "is_player" : true,
+                "name" : "Chris C",
+                "participantid" : 8,
+                "refid" : 57092,
+                "time" : 1637266786
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 101650,
+                  "Lap" : 7,
+                  "RacePosition" : 2,
+                  "State" : "Finished",
+                  "TotalTime" : 906847,
+                  "VehicleId" : 850609487
+                },
+                "is_player" : true,
+                "name" : "TechAde",
+                "participantid" : 4,
+                "refid" : 39552,
+                "time" : 1637266786
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 102205,
+                  "Lap" : 4,
+                  "RacePosition" : 3,
+                  "State" : "Finished",
+                  "TotalTime" : 900006,
+                  "VehicleId" : 850609487
+                },
+                "is_player" : true,
+                "name" : "Zsolt C",
+                "participantid" : 6,
+                "refid" : 57219,
+                "time" : 1637266786
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 102825,
+                  "Lap" : 2,
+                  "RacePosition" : 4,
+                  "State" : "Finished",
+                  "TotalTime" : 205830,
+                  "VehicleId" : 379055283
+                },
+                "is_player" : true,
+                "name" : "",
+                "participantid" : 9,
+                "refid" : 21317,
+                "time" : 1637266786
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 104564,
+                  "Lap" : 2,
+                  "RacePosition" : 5,
+                  "State" : "Finished",
+                  "TotalTime" : 900004,
+                  "VehicleId" : 1464988033
+                },
+                "is_player" : true,
+                "name" : "Matt M",
+                "participantid" : 3,
+                "refid" : 37569,
+                "time" : 1637266786
+              },
+              {
+                "attributes" : {
+                  "FastestLapTime" : 105229,
+                  "Lap" : 5,
+                  "RacePosition" : 6,
+                  "State" : "Retired",
+                  "TotalTime" : 1021010,
+                  "VehicleId" : -1966031044
+                },
+                "is_player" : true,
+                "name" : "darylldaz",
+                "participantid" : 2,
+                "refid" : 322,
+                "time" : 1637266786
+              }
+            ],
+            "start_time" : 1637265765
+          }
+        },
+        "start_time" : 1637258505
+      }
+    ],
+    "players" : {
+      "76561197992462926" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race" : {
+            "positions" : {
+              "2" : 3
+            },
+            "positions_per_size" : {
+              "0" : {
+                "2" : 1
+              }
+            },
+            "states" : {
+              "finished" : 3
+            }
+          },
+          "race_finishes" : 0,
+          "race_joins" : 6,
+          "race_loads" : 1,
+          "race_loads_done" : 1,
+          "track_distances" : {
+            "-1478712571" : 172983,
+            "-438882031" : 193623,
+            "2111076703" : 197584,
+            "844082431" : 207976
+          },
+          "tracks" : {},
+          "vehicle_distances" : {
+            "850609487" : 772166
+          },
+          "vehicles" : {}
+        },
+        "last_joined" : 1637262284,
+        "name" : "TechAde"
+      },
+      "76561198002506368" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race" : {
+            "positions" : {
+              "4" : 1
+            },
+            "positions_per_size" : {
+              "0" : {
+                "4" : 1
+              }
+            },
+            "states" : {
+              "finished" : 1
+            }
+          },
+          "race_finishes" : 0,
+          "race_joins" : 1,
+          "race_loads" : 1,
+          "race_loads_done" : 1,
+          "track_distances" : {
+            "844082431" : 141388
+          },
+          "tracks" : {},
+          "vehicle_distances" : {
+            "850609487" : 141388
+          },
+          "vehicles" : {}
+        },
+        "last_joined" : 1634841182,
+        "name" : "Marius K"
+      },
+      "76561198064430088" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race" : {
+            "positions" : {
+              "3" : 1
+            },
+            "positions_per_size" : {
+              "0" : {
+                "3" : 1
+              }
+            },
+            "states" : {
+              "finished" : 1
+            }
+          },
+          "race_finishes" : 0,
+          "race_joins" : 2,
+          "race_loads" : 2,
+          "race_loads_done" : 2,
+          "track_distances" : {
+            "2111076703" : "-4113551698"
+          },
+          "tracks" : {},
+          "vehicle_distances" : {
+            "850609487" : "-4113551698"
+          },
+          "vehicles" : {}
+        },
+        "last_joined" : 1636055252,
+        "name" : "J B Underwood"
+      },
+      "76561198083790419" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race" : {
+            "positions" : {
+              "8" : 1,
+              "9" : 1
+            },
+            "positions_per_size" : {
+              "0" : {
+                "8" : 1,
+                "9" : 1
+              }
+            },
+            "states" : {
+              "finished" : 2
+            }
+          },
+          "race_finishes" : 0,
+          "race_joins" : 2,
+          "race_loads" : 2,
+          "race_loads_done" : 2,
+          "track_distances" : {
+            "-438882031" : 169366,
+            "844082431" : 164231
+          },
+          "tracks" : {},
+          "vehicle_distances" : {
+            "379055283" : 333597
+          },
+          "vehicles" : {}
+        },
+        "last_joined" : 1634838836,
+        "name" : "Glen O"
+      },
+      "76561198086161703" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race" : {
+            "positions" : {
+              "3" : 1,
+              "5" : 1
+            },
+            "positions_per_size" : {
+              "0" : {
+                "3" : 1,
+                "5" : 1
+              }
+            },
+            "states" : {
+              "finished" : 2
+            }
+          },
+          "race_finishes" : 0,
+          "race_joins" : 3,
+          "race_loads" : 3,
+          "race_loads_done" : 3,
+          "track_distances" : {
+            "-1478712571" : 80379,
+            "2111076703" : 1204495,
+            "844082431" : 176963
+          },
+          "tracks" : {},
+          "vehicle_distances" : {
+            "379055283" : 1461837
+          },
+          "vehicles" : {}
+        },
+        "last_joined" : 1637266297,
+        "name" : "Rocco T"
+      },
+      "76561198161097687" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race_finishes" : 0,
+          "race_joins" : 4,
+          "race_loads" : 4,
+          "race_loads_done" : 4,
+          "track_distances" : {
+            "-1478712571" : 28400,
+            "2111076703" : 495671
+          },
+          "tracks" : {},
+          "vehicle_distances" : {
+            "379055283" : 524071
+          },
+          "vehicles" : {}
+        },
+        "last_joined" : 1637261717,
+        "name" : "GIZMO"
+      },
+      "76561198216343160" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race_finishes" : 0,
+          "race_joins" : 3,
+          "race_loads" : 3,
+          "race_loads_done" : 3,
+          "track_distances" : {
+            "-438882031" : 48783
+          },
+          "tracks" : {},
+          "vehicle_distances" : {
+            "379055283" : 48783
+          },
+          "vehicles" : {}
+        },
+        "last_joined" : 1634841889,
+        "name" : "jez.1"
+      },
+      "76561198296322989" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race" : {
+            "positions" : {
+              "7" : 1,
+              "9" : 2
+            },
+            "positions_per_size" : {
+              "0" : {
+                "7" : 1,
+                "9" : 1
+              }
+            },
+            "states" : {
+              "finished" : 3
+            }
+          },
+          "race_finishes" : 0,
+          "race_joins" : 7,
+          "race_loads" : 7,
+          "race_loads_done" : 7,
+          "track_distances" : {
+            "-1478712571" : 172754,
+            "-438882031" : 179764,
+            "2111076703" : 162876,
+            "844082431" : 165517
+          },
+          "tracks" : {},
+          "vehicle_distances" : {
+            "-1966031044" : 680911
+          },
+          "vehicles" : {}
+        },
+        "last_joined" : 1637261074,
+        "name" : "darylldaz"
+      },
+      "76561198317705338" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race" : {
+            "positions" : {
+              "5" : 1,
+              "8" : 1
+            },
+            "positions_per_size" : {
+              "0" : {
+                "5" : 1,
+                "8" : 1
+              }
+            },
+            "states" : {
+              "finished" : 2
+            }
+          },
+          "race_finishes" : 0,
+          "race_joins" : 3,
+          "race_loads" : 3,
+          "race_loads_done" : 3,
+          "track_distances" : {
+            "-1478712571" : 132424,
+            "-438882031" : 126211,
+            "2111076703" : 364443
+          },
+          "tracks" : {},
+          "vehicle_distances" : {
+            "850609487" : 623078
+          },
+          "vehicles" : {}
+        },
+        "last_joined" : 1637263822,
+        "name" : "Zsolt C"
+      },
+      "76561198321276946" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race" : {
+            "positions" : {
+              "10" : 2,
+              "4" : 1
+            },
+            "positions_per_size" : {
+              "0" : {
+                "10" : 1,
+                "4" : 1
+              }
+            },
+            "states" : {
+              "finished" : 3
+            }
+          },
+          "race_finishes" : 0,
+          "race_joins" : 3,
+          "race_loads" : 3,
+          "race_loads_done" : 3,
+          "track_distances" : {
+            "-438882031" : 103788,
+            "2111076703" : 96320,
+            "844082431" : 124165
+          },
+          "tracks" : {},
+          "vehicle_distances" : {
+            "850609487" : 324273
+          },
+          "vehicles" : {}
+        },
+        "last_joined" : 1636054501,
+        "name" : "Robert K"
+      },
+      "76561198328530299" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race" : {
+            "positions" : {
+              "11" : 1,
+              "6" : 1
+            },
+            "positions_per_size" : {
+              "0" : {
+                "11" : 1,
+                "6" : 1
+              }
+            },
+            "states" : {
+              "finished" : 1,
+              "retired" : 1
+            }
+          },
+          "race_finishes" : 0,
+          "race_joins" : 3,
+          "race_loads" : 3,
+          "race_loads_done" : 3,
+          "track_distances" : {
+            "2111076703" : "-2930506234",
+            "844082431" : 258828
+          },
+          "tracks" : {},
+          "vehicle_distances" : {
+            "850609487" : "-2930247406"
+          },
+          "vehicles" : {}
+        },
+        "last_joined" : 1636055420,
+        "name" : "Tucciix"
+      },
+      "76561198353687052" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race" : {
+            "positions" : {
+              "6" : 1
+            },
+            "positions_per_size" : {
+              "0" : {
+                "6" : 1
+              }
+            },
+            "states" : {
+              "finished" : 1
+            }
+          },
+          "race_finishes" : 0,
+          "race_joins" : 1,
+          "race_loads" : 1,
+          "race_loads_done" : 1,
+          "track_distances" : {
+            "844082431" : 133871
+          },
+          "tracks" : {},
+          "vehicle_distances" : {
+            "379055283" : 133871
+          },
+          "vehicles" : {}
+        },
+        "last_joined" : 1634837773,
+        "name" : "Rad"
+      },
+      "76561198388371499" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race" : {
+            "positions" : {
+              "10" : 1
+            },
+            "positions_per_size" : {
+              "0" : {
+                "10" : 1
+              }
+            },
+            "states" : {
+              "retired" : 1
+            }
+          },
+          "race_finishes" : 0,
+          "race_joins" : 2,
+          "race_loads" : 2,
+          "race_loads_done" : 2,
+          "track_distances" : {
+            "-438882031" : -999843238
+          },
+          "tracks" : {},
+          "vehicle_distances" : {
+            "1464988033" : 61312,
+            "850609487" : -999904550
+          },
+          "vehicles" : {}
+        },
+        "last_joined" : 1634234492,
+        "name" : "Alex M"
+      },
+      "76561198399173506" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race" : {
+            "positions" : {
+              "6" : 1,
+              "7" : 2
+            },
+            "positions_per_size" : {
+              "0" : {
+                "6" : 1,
+                "7" : 1
+              }
+            },
+            "states" : {
+              "finished" : 3
+            }
+          },
+          "race_finishes" : 0,
+          "race_joins" : 7,
+          "race_loads" : 7,
+          "race_loads_done" : 7,
+          "track_distances" : {
+            "-1478712571" : 159476,
+            "-438882031" : 157388,
+            "2111076703" : 115227,
+            "844082431" : 214170
+          },
+          "tracks" : {},
+          "vehicle_distances" : {
+            "1464988033" : 159476,
+            "379055283" : 486785
+          },
+          "vehicles" : {}
+        },
+        "last_joined" : 1637261616,
+        "name" : "Matt M"
+      },
+      "76561198831266644" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race" : {
+            "positions" : [
+              1
+            ],
+            "positions_per_size" : {
+              "0" : [
+                1
+              ]
+            },
+            "states" : {
+              "finished" : 1
+            }
+          },
+          "race_finishes" : 0,
+          "race_joins" : 3,
+          "race_loads" : 3,
+          "race_loads_done" : 3,
+          "track_distances" : {
+            "-438882031" : 129293,
+            "2111076703" : 11120803
+          },
+          "tracks" : {},
+          "vehicle_distances" : {
+            "850609487" : 11250096
+          },
+          "vehicles" : {}
+        },
+        "last_joined" : 1636055571,
+        "name" : "Sevenbelow7"
+      },
+      "76561198965487625" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race_finishes" : 0,
+          "race_joins" : 1,
+          "race_loads" : 1,
+          "race_loads_done" : 1,
+          "track_distances" : {
+            "2111076703" : 505837
+          },
+          "tracks" : {},
+          "vehicle_distances" : {
+            "850609487" : 505837
+          },
+          "vehicles" : {}
+        },
+        "last_joined" : 1636055623,
+        "name" : "Evo Mike"
+      },
+      "76561198996444696" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race_finishes" : 0,
+          "race_joins" : 3,
+          "race_loads" : 3,
+          "race_loads_done" : 3,
+          "track_distances" : {
+            "2111076703" : 9381
+          },
+          "tracks" : {},
+          "vehicle_distances" : {
+            "850609487" : 9381
+          },
+          "vehicles" : {}
+        },
+        "last_joined" : 1636056505,
+        "name" : "Oliboy82"
+      },
+      "76561199000302919" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race" : {
+            "positions" : {
+              "3" : 1,
+              "4" : 1,
+              "5" : 1
+            },
+            "positions_per_size" : {
+              "0" : {
+                "3" : 1,
+                "4" : 1,
+                "5" : 1
+              }
+            },
+            "states" : {
+              "finished" : 3
+            }
+          },
+          "race_finishes" : 0,
+          "race_joins" : 3,
+          "race_loads" : 3,
+          "race_loads_done" : 3,
+          "track_distances" : {
+            "-438882031" : 126399,
+            "2111076703" : 141108,
+            "844082431" : 121819
+          },
+          "tracks" : {},
+          "vehicle_distances" : {
+            "850609487" : 389326
+          },
+          "vehicles" : {}
+        },
+        "last_joined" : 1636052720,
+        "name" : "Captainslow-AJW"
+      },
+      "76561199030628098" : {
+        "counts" : {
+          "qualify" : {
+            "positions" : {},
+            "positions_per_size" : {},
+            "states" : {}
+          },
+          "race" : {
+            "positions" : {
+              "1" : 2,
+              "8" : 1
+            },
+            "positions_per_size" : {
+              "0" : {
+                "1" : 1,
+                "8" : 1
+              }
+            },
+            "states" : {
+              "finished" : 3
+            }
+          },
+          "race_finishes" : 0,
+          "race_joins" : 6,
+          "race_loads" : 6,
+          "race_loads_done" : 6,
+          "track_distances" : {
+            "-1478712571" : 371017,
+            "-438882031" : 109843,
+            "2111076703" : 162532,
+            "844082431" : 172731
+          },
+          "tracks" : {},
+          "vehicle_distances" : {
+            "850609487" : 816123
+          },
+          "vehicles" : {}
+        },
+        "last_joined" : 1637264280,
+        "name" : "Chris C"
+      }
+    },
+    "server" : {
+      "name" : "ANSR GT4 R4",
+      "steam_disconnects" : 0,
+      "steam_downtime" : 0,
+      "total_steam_downtime" : 0,
+      "total_uptime" : "38927.3",
+      "uptime" : "10131.5"
+    },
+    "session" : {
+      "counts" : {
+        "lobbies" : 8,
+        "player_finishes" : 0,
+        "player_loads" : 0,
+        "player_loads_done" : 0,
+        "race_finishes" : 3,
+        "race_loads" : 4,
+        "race_loads_done" : 4,
+        "sessions" : 5,
+        "stage_counts" : {
+          "practice1" : 4,
+          "qualifying1" : 4,
+          "race1" : 4
+        },
+        "stage_durations" : {
+          "practice1" : 27216469,
+          "qualifying1" : 3931703,
+          "race1" : 5095406
+        },
+        "track_distances" : {
+          "-1478712571" : 1117433,
+          "-438882031" : -998498780,
+          "2111076703" : "-7029481655",
+          "844082431" : 1881659
+        },
+        "tracks" : {
+          "-1478712571" : 1,
+          "-438882031" : 1,
+          "2111076703" : 1,
+          "844082431" : 1
+        },
+        "vehicle_distances" : {
+          "-1966031044" : 680911,
+          "1464988033" : 220788,
+          "379055283" : 2988944,
+          "850609487" : "-8028871986"
+        },
+        "vehicles" : {}
+      }
+    }
+  }
+}
+
+// EOF //

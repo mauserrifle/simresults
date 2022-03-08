@@ -797,43 +797,43 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                             $after_race_over, $data_session2, $data,
                             $participants_copy, $participant_regex,
                             $participant_regex_vehicle_match_key, true);
-                    }
 
-                    // Get total times
-                    // MATCH: 0) Rodrigo  Sanchez Paz BEST: 16666:39:999 TOTAL:
-                    //        0:00:000 Laps:0 SesID:4"
-                    preg_match_all(
-                        '/[0-9]+\).*? (.*?) BEST:.*?TOTAL: ([0-9]+.*?) '
-                        .'Laps:(.*?) SesID.*?/',
-                        $after_race_over, $time_matches);
-                    foreach ($time_matches[0] as $time_key => $time_data)
-                    {
-                        // Add name and laps just to be sure
-                        $name = trim($time_matches[1][$time_key]);
-                        $name_key = $this->getDriverKey($name);
-                        $participants_copy[$name_key]['name'] = $name;
-
-                        // Has laps
-                        if (isset($participants_copy[$name_key]['laps']))
+                        // Get total times
+                        // MATCH: 0) Rodrigo  Sanchez Paz BEST: 16666:39:999 TOTAL:
+                        //        0:00:000 Laps:0 SesID:4"
+                        preg_match_all(
+                            '/[0-9]+\).*? (.*?) BEST:.*?TOTAL: ([0-9]+.*?) '
+                            .'Laps:(.*?) SesID.*?/',
+                            $after_race_over, $time_matches);
+                        foreach ($time_matches[0] as $time_key => $time_data)
                         {
-                            // Laps count of BEST is higher than the laps we
-                            // actually found to parse
-                            if ($time_matches[3][$time_key] > count(
-                                    $participants_copy[$name_key]['laps']) )
+                            // Add name and laps just to be sure
+                            $name = trim($time_matches[1][$time_key]);
+                            $name_key = $this->getDriverKey($name);
+                            $participants_copy[$name_key]['name'] = $name;
+
+                            // Has laps
+                            if (isset($participants_copy[$name_key]['laps']))
                             {
-                                // Ignore this total time. It's not right.
-                                // Probably includes extra victory laps after
-                                // finishing
-                                continue;
+                                // Laps count of BEST is higher than the laps we
+                                // actually found to parse
+                                if ($time_matches[3][$time_key] > count(
+                                        $participants_copy[$name_key]['laps']) )
+                                {
+                                    // Ignore this total time. It's not right.
+                                    // Probably includes extra victory laps after
+                                    // finishing
+                                    continue;
+                                }
                             }
-                        }
 
-                        // Not 0
-                        if ($time_matches[2][$time_key] !== '0:00:000')
-                        {
-                            $participants_copy[$name_key]['total_time'] =
-                                $this->helper->secondsFromFormattedTime(
-                                      $time_matches[2][$time_key], true);
+                            // Not 0
+                            if ($time_matches[2][$time_key] !== '0:00:000')
+                            {
+                                $participants_copy[$name_key]['total_time'] =
+                                    $this->helper->secondsFromFormattedTime(
+                                          $time_matches[2][$time_key], true);
+                            }
                         }
                     }
 
