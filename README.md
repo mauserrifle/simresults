@@ -1,6 +1,9 @@
 # Simresults
 
-[![Build Status](https://github.com/mauserrifle/simresults/actions/workflows/ci.yml/badge.svg)](https://github.com/mauserrifle/simresults/actions)
+[![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%207.3-8892BF.svg?style=flat-square)](https://php.net/)
+[![CI Status](https://github.com/mauserrifle/simresults/actions/workflows/ci.yml/badge.svg)](https://github.com/mauserrifle/simresults/actions)
+[![Total Downloads](https://img.shields.io/packagist/dt/mauserrifle/simresults)](https://packagist.org/packages/mauserrifle/simresults)
+[![License](https://img.shields.io/packagist/l/mauserrifle/simresults)](https://raw.githubusercontent.com/mauserrifle/simresults/develop/LICENSE)
 
 Simresults is an open-source, object-oriented library built using PHP. It
 allows you to read out log files of a race game and transforms them to a simple
