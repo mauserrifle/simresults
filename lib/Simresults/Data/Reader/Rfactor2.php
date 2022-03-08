@@ -732,7 +732,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                     $fuel_data > 0 )
                 {
                     // Get proper percentage
-                    $fuel = $fuel_data*100;
+                    $fuel = round($fuel_data*100, 2);
                 }
 
 
@@ -743,7 +743,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                     $wear_data > 0 )
                 {
                     // Get proper percentage
-                    $front_compound_left_wear = $wear_data*100;
+                    $front_compound_left_wear = round($wear_data*100, 2);
                 }
 
                 $front_compound_right_wear = NULL;
@@ -751,7 +751,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                     $wear_data > 0 )
                 {
                     // Get proper percentage
-                    $front_compound_right_wear = $wear_data*100;
+                    $front_compound_right_wear = round($wear_data*100, 2);
                 }
 
                 $rear_compound_left_wear = NULL;
@@ -759,7 +759,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                     $wear_data > 0 )
                 {
                     // Get proper percentage
-                    $rear_compound_left_wear = $wear_data*100;
+                    $rear_compound_left_wear = round($wear_data*100, 2);
                 }
 
                 $rear_compound_right_wear = NULL;
@@ -767,7 +767,7 @@ class Data_Reader_Rfactor2 extends Data_Reader {
                     $wear_data > 0 )
                 {
                     // Get proper percentage
-                    $rear_compound_right_wear = $wear_data*100;
+                    $rear_compound_right_wear = round($wear_data*100, 2);
                 }
 
 
