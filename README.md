@@ -1,6 +1,6 @@
 # Simresults
 
-[![Build Status](https://travis-ci.org/mauserrifle/simresults.svg)](https://travis-ci.org/mauserrifle/simresults)
+[![Build Status](https://github.com/mauserrifle/simresults/actions/workflows/ci.yml/badge.svg)](https://github.com/mauserrifle/simresults/actions)
 
 Simresults is an open-source, object-oriented library built using PHP. It
 allows you to read out log files of a race game and transforms them to a simple
