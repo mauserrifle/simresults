@@ -25,6 +25,9 @@
         "psr-0": {"Simresults": "lib/"}
     },
     "scripts": {
-        "test":"vendor/bin/phpspec run && vendor/bin/phpunit"
+        "test":[
+            "vendor/bin/phpspec run",
+            "vendor/bin/phpunit"
+        ]
     }
 }
