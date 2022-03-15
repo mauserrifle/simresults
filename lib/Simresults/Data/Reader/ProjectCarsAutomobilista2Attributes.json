@@ -81,6 +81,10 @@
         "name" : "F-Trainer"
       },
       {
+        "value" : 2018873511,
+        "name" : "F-USA_Gen1"
+      },
+      {
         "value" : 2084530285,
         "name" : "F-USA_Gen2"
       },
@@ -181,6 +185,10 @@
         "name" : "SuperKart"
       },
       {
+        "value" : -883865111,
+        "name" : "F-USA_Gen3"
+      },
+      {
         "value" : -859240302,
         "name" : "CopaTruck"
       },
@@ -223,6 +231,10 @@
       {
         "value" : 430049282,
         "name" : "Street"
+      },
+      {
+        "value" : 477739468,
+        "name" : "F-Retro_Gen3"
       },
       {
         "value" : 492525831,
@@ -456,6 +468,21 @@
         "id" : 476615325,
         "name" : "Brabham BT46B",
         "class" : "F-Retro_Gen2"
+      },
+      {
+        "id" : 2005556145,
+        "name" : "McLaren MP4/1C",
+        "class" : "F-Retro_Gen3"
+      },
+      {
+        "id" : -953316099,
+        "name" : "Formula Retro Gen3 DFY",
+        "class" : "F-Retro_Gen3"
+      },
+      {
+        "id" : 1408558396,
+        "name" : "Formula Retro Gen3 Turbo",
+        "class" : "F-Retro_Gen3"
       },
       {
         "id" : -2140090167,
@@ -918,18 +945,68 @@
         "class" : "TSICup"
       },
       {
+        "id" : -1762971386,
+        "name" : "VW Polo GTS",
+        "class" : "TSICup"
+      },
+      {
         "id" : -1137512839,
         "name" : "VW Virtus",
         "class" : "TSICup"
       },
       {
+        "id" : -1310963279,
+        "name" : "VW Virtus GTS",
+        "class" : "TSICup"
+      },
+      {
+        "id" : -1477576480,
+        "name" : "Lola T95/00 Ford-Cosworth",
+        "class" : "F-USA_Gen1"
+      },
+      {
+        "id" : 1701517873,
+        "name" : "Lola T95/00 Mercedes-Benz",
+        "class" : "F-USA_Gen1"
+      },
+      {
         "id" : 1408764300,
-        "name" : "Lola T98",
+        "name" : "Lola T98/00 Ford-Cosworth",
         "class" : "F-USA_Gen2"
       },
       {
+        "id" : -845636149,
+        "name" : "Lola B2K00 Ford-Cosworth",
+        "class" : "F-USA_Gen3"
+      },
+      {
+        "id" : 1305671580,
+        "name" : "Lola B2K00 Mercedes-Benz",
+        "class" : "F-USA_Gen3"
+      },
+      {
+        "id" : -1883533152,
+        "name" : "Lola B2K00 Toyota",
+        "class" : "F-USA_Gen3"
+      },
+      {
+        "id" : -794072085,
+        "name" : "Reynard 95i Ford-Cosworth",
+        "class" : "F-USA_Gen1"
+      },
+      {
+        "id" : 243649723,
+        "name" : "Reynard 95i Honda",
+        "class" : "F-USA_Gen1"
+      },
+      {
+        "id" : -832846400,
+        "name" : "Reynard 95i Mercedes-Benz",
+        "class" : "F-USA_Gen1"
+      },
+      {
         "id" : -406287657,
-        "name" : "Reynard 98i Ford",
+        "name" : "Reynard 98i Ford-Cosworth",
         "class" : "F-USA_Gen2"
       },
       {
@@ -939,7 +1016,7 @@
       },
       {
         "id" : 174857498,
-        "name" : "Reynard 98i Mercedes",
+        "name" : "Reynard 98i Mercedes-Benz",
         "class" : "F-USA_Gen2"
       },
       {
@@ -948,8 +1025,28 @@
         "class" : "F-USA_Gen2"
       },
       {
+        "id" : 990042821,
+        "name" : "Reynard 2Ki Ford-Cosworth",
+        "class" : "F-USA_Gen3"
+      },
+      {
+        "id" : 1530597907,
+        "name" : "Reynard 2Ki Honda",
+        "class" : "F-USA_Gen3"
+      },
+      {
+        "id" : 290327508,
+        "name" : "Reynard 2Ki Mercedes-Benz",
+        "class" : "F-USA_Gen3"
+      },
+      {
+        "id" : -564338836,
+        "name" : "Reynard 2Ki Toyota",
+        "class" : "F-USA_Gen3"
+      },
+      {
         "id" : 943684424,
-        "name" : "Swift 009c",
+        "name" : "Swift 009c Ford-Cosworth",
         "class" : "F-USA_Gen2"
       }
     ]
@@ -1431,6 +1528,16 @@
         "id" : 1820168870,
         "name" : "OultonPark_Island",
         "gridsize" : 28
+      },
+      {
+        "id" : -398562049,
+        "name" : "Road_America_RC",
+        "gridsize" : 32
+      },
+      {
+        "id" : 372107672,
+        "name" : "Road_America_RCB",
+        "gridsize" : 32
       },
       {
         "id" : 761562120,
