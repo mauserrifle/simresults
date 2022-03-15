@@ -25,6 +25,150 @@ class RaceRoomReaderTest extends \PHPUnit\Framework\TestCase {
     }
 
 
+    /***
+    **** Below tests use 1 race log file
+    ***/
+
+
+    /**
+     * Test reading multiple sessions. Sessiosn without data should be ignored
+     * and not parsed.
+     */
+    public function testReadingMultipleSessions()
+    {
+        // Get sessions
+        $sessions = $this->getWorkingReader()->getSessions();
+
+        // Validate the number of sessions
+        $this->assertSame(2, sizeof($sessions));
+
+
+        // Get first session
+        $session = $sessions[0];
+        $date = $session->getDate();
+
+        //-- Validate
+
+        $this->assertSame(Session::TYPE_QUALIFY, $session->getType());
+        $this->assertSame(1459003463, $date->getTimestamp());
+        $this->assertSame('UTC', $date->getTimezone()->getName());
+
+
+        // Get second session
+        $session = $sessions[1];
+
+        //-- Validate
+        $this->assertSame(Session::TYPE_RACE, $session->getType());
+        $this->assertNull($session->getName());
+        $this->assertSame(1459003463, $date->getTimestamp());
+        $this->assertSame('UTC', $date->getTimezone()->getName());
+    }
+
+    /**
+     * Test reading the server of a session
+     */
+    public function testReadingSessionServer()
+    {
+        // Get the server
+        $server = $this->getWorkingReader()->getSession()->getServer();
+
+        // Validate server
+        $this->assertSame('!grass-saba!!', $server->getName());
+    }
+
+    /**
+     * Test reading the game of a session
+     */
+    public function testReadingSessionGame()
+    {
+        // Get the game
+        $game = $this->getWorkingReader()->getSession()->getGame();
+
+        // Validate game
+        $this->assertSame('RaceRoom Racing Experience', $game->getName());
+    }
+
+    /**
+     * Test reading the track of a session
+     */
+    public function testReadingSessionTrack()
+    {
+        // Get the track
+        $track = $this->getWorkingReader()->getSession()->getTrack();
+
+        // Validate track
+        $this->assertSame('Portimao Circuit', $track->getVenue());
+    }
+
+
+    /**
+     * Test reading the participants and their laps of a session
+     */
+    public function testReadingSessionParticipantsAndLaps()
+    {
+        // Test first participant
+        $participants = $this->getWorkingReader()->getSession(2)
+            ->getParticipants();
+        $participant = $participants[0];
+
+        $this->assertSame('chin matsuo', $participant->getDriver()->getName());
+        $this->assertSame('Ford GT GT1',
+                          $participant->getVehicle()->getName());
+        $this->assertSame(1, $participant->getPosition());
+        $this->assertSame(1216.072, $participant->getTotalTime());
+        $this->assertSame(Participant::FINISH_NORMAL,
+            $participant->getFinishStatus());
+        $this->assertSame(115.0910, $participant->getLap(1)->getTime());
+        $this->assertSame(100.417, $participant->getLap(5)->getTime());
+
+        // Test DQ participant
+        $participant = $participants[count($participants)-2];
+        $this->assertSame(Participant::FINISH_DQ,
+            $participant->getFinishStatus());
+
+        // Test last participant
+        $participant = $participants[count($participants)-1];
+        $this->assertSame('Akihiro Nakao', $participant->getDriver()->getName());
+        $this->assertSame('Saleen S7R', $participant->getVehicle()->getName());
+        $this->assertSame(4, $participant->getPosition());
+        $this->assertSame(Participant::FINISH_DNF,
+            $participant->getFinishStatus());
+    }
+
+    /**
+     * Test reading session settings
+     */
+    public function testReadingSessionSettings()
+    {
+        // Get session
+        $session = $this->getWorkingReader()->getSession();
+
+        // Validate drift data
+        $this->assertSame(
+            array(
+                'Experience'         =>  'RaceRoom Experience',
+                'Difficulty'         =>  'GetReal',
+                'FuelUsage'          =>  'Normal',
+                'TireWear'           =>  'Normal',
+                'MechanicalDamage'   =>  'Off',
+                'FlagRules'          =>  'Black',
+                'CutRules'           =>  'SlowDown',
+                'RaceSeriesFormat'   =>  'DTM2013',
+                'WreckerPrevention'  =>  'Off',
+                'MandatoryPitstop'   =>  'Off',
+            ),
+            $session->getOtherSettings()
+        );
+    }
+
+
+
+
+
+    /***
+    **** Below tests use different logs to test differences and bugs
+    ***/
+
 
     /**
      * Test reading laps using the best lap and check for unknown usernames
@@ -264,141 +408,7 @@ class RaceRoomReaderTest extends \PHPUnit\Framework\TestCase {
     }
 
 
-    /***
-    **** Below tests use 1 race log file
-    ***/
 
-
-    /**
-     * Test reading multiple sessions. Sessiosn without data should be ignored
-     * and not parsed.
-     */
-    public function testReadingMultipleSessions()
-    {
-        // Get sessions
-        $sessions = $this->getWorkingReader()->getSessions();
-
-        // Validate the number of sessions
-        $this->assertSame(2, sizeof($sessions));
-
-
-        // Get first session
-        $session = $sessions[0];
-        $date = $session->getDate();
-
-        //-- Validate
-
-        $this->assertSame(Session::TYPE_QUALIFY, $session->getType());
-        $this->assertSame(1459003463, $date->getTimestamp());
-        $this->assertSame('UTC', $date->getTimezone()->getName());
-
-
-        // Get second session
-        $session = $sessions[1];
-
-        //-- Validate
-        $this->assertSame(Session::TYPE_RACE, $session->getType());
-        $this->assertNull($session->getName());
-        $this->assertSame(1459003463, $date->getTimestamp());
-        $this->assertSame('UTC', $date->getTimezone()->getName());
-    }
-
-    /**
-     * Test reading the server of a session
-     */
-    public function testReadingSessionServer()
-    {
-        // Get the server
-        $server = $this->getWorkingReader()->getSession()->getServer();
-
-        // Validate server
-        $this->assertSame('!grass-saba!!', $server->getName());
-    }
-
-    /**
-     * Test reading the game of a session
-     */
-    public function testReadingSessionGame()
-    {
-        // Get the game
-        $game = $this->getWorkingReader()->getSession()->getGame();
-
-        // Validate game
-        $this->assertSame('RaceRoom Racing Experience', $game->getName());
-    }
-
-    /**
-     * Test reading the track of a session
-     */
-    public function testReadingSessionTrack()
-    {
-        // Get the track
-        $track = $this->getWorkingReader()->getSession()->getTrack();
-
-        // Validate track
-        $this->assertSame('Portimao Circuit', $track->getVenue());
-    }
-
-
-    /**
-     * Test reading the participants and their laps of a session
-     */
-    public function testReadingSessionParticipantsAndLaps()
-    {
-        // Test first participant
-        $participants = $this->getWorkingReader()->getSession(2)
-            ->getParticipants();
-        $participant = $participants[0];
-
-        $this->assertSame('chin matsuo', $participant->getDriver()->getName());
-        $this->assertSame('Ford GT GT1',
-                          $participant->getVehicle()->getName());
-        $this->assertSame(1, $participant->getPosition());
-        $this->assertSame(1216.072, $participant->getTotalTime());
-        $this->assertSame(Participant::FINISH_NORMAL,
-            $participant->getFinishStatus());
-        $this->assertSame(115.0910, $participant->getLap(1)->getTime());
-        $this->assertSame(100.417, $participant->getLap(5)->getTime());
-
-        // Test DQ participant
-        $participant = $participants[count($participants)-2];
-        $this->assertSame(Participant::FINISH_DQ,
-            $participant->getFinishStatus());
-
-        // Test last participant
-        $participant = $participants[count($participants)-1];
-        $this->assertSame('Akihiro Nakao', $participant->getDriver()->getName());
-        $this->assertSame('Saleen S7R', $participant->getVehicle()->getName());
-        $this->assertSame(4, $participant->getPosition());
-        $this->assertSame(Participant::FINISH_DNF,
-            $participant->getFinishStatus());
-    }
-
-    /**
-     * Test reading session settings
-     */
-    public function testReadingSessionSettings()
-    {
-        // Get session
-        $session = $this->getWorkingReader()->getSession();
-
-        // Validate drift data
-        $this->assertSame(
-            array(
-                'Experience'         =>  'RaceRoom Experience',
-                'Difficulty'         =>  'GetReal',
-                'FuelUsage'          =>  'Normal',
-                'TireWear'           =>  'Normal',
-                'MechanicalDamage'   =>  'Off',
-                'FlagRules'          =>  'Black',
-                'CutRules'           =>  'SlowDown',
-                'RaceSeriesFormat'   =>  'DTM2013',
-                'WreckerPrevention'  =>  'Off',
-                'MandatoryPitstop'   =>  'Off',
-            ),
-            $session->getOtherSettings()
-        );
-    }
 
 
 

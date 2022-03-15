@@ -26,171 +26,6 @@ class AssettoCorsaServerJsonReaderTest extends \PHPUnit\Framework\TestCase {
     }
 
 
-    /**
-     * Test exception when no data is supplied
-     */
-    public function testCreatingNewAssettoCorsaReaderWithInvalidData()
-    {
-        $this->expectException(\Simresults\Exception\CannotReadData::class);
-        $reader = new Data_Reader_AssettoCorsaServerJson('Unknown data for reader');
-    }
-
-
-
-    /**
-     * Test qualify sessions
-     */
-    public function testQualifySession()
-    {
-        // The path to the data source
-        $file_path = realpath(__DIR__.
-            '/logs/assettocorsa-server-json/'.
-            '2015_10_17_9_30_QUALIFY.json');
-
-        // Get the race session
-        $session = Data_Reader::factory($file_path)->getSession();
-
-        //-- Validate
-        $this->assertSame(Session::TYPE_QUALIFY, $session->getType());
-        $this->assertNull($session->getName());
-
-        // Get participants
-        $participants = $session->getParticipants();
-
-        // Assert drivers
-        $this->assertSame('Timo Haapala',
-            $participants[0]->getDriver()->getName());
-        $this->assertSame('blackbird0011',
-            $participants[7]->getDriver()->getName());
-    }
-
-    /**
-     * Test reading a log with null events (not array) without errors
-     */
-    public function testReadingNullEventsWithoutExceptions()
-    {
-        // The path to the data source
-        $file_path = realpath(__DIR__.
-            '/logs/assettocorsa-server-json/'.
-            'race.changed.with.null.events.json');
-
-        // Get the race session
-        $session = Data_Reader::factory($file_path)->getSession();
-    }
-
-     /**
-     * Test tyre info
-     */
-    public function testReadingTyreInfo()
-    {
-        // The path to the data source
-        $file_path = realpath(
-            __DIR__.'/logs/assettocorsa-server-json/tyre.info.json');
-
-        // Get the data reader for the given data source
-        $session = Data_Reader::factory($file_path)->getSession(1);
-
-        $participants = $session->getParticipants();
-
-        $this->assertSame('S', $participants[0]->getLap(1)->getFrontCompound());
-        $this->assertSame('M', $participants[1]->getLap(1)->getRearCompound());
-    }
-
-     /**
-     * Test servername
-     */
-    public function testReadingServer()
-    {
-        // The path to the data source
-        $file_path = realpath(
-            __DIR__.'/logs/assettocorsa-server-json/tyre.info.json');
-
-        $session = Data_Reader::factory($file_path)->getSession();
-        $this->assertSame('Custom server', $session->getServer()->getName());
-    }
-
-
-     /**
-     * Test filtering empty driver name
-     */
-    public function testFilteringEmptyDriverName()
-    {
-        // The path to the data source
-        $file_path = realpath(
-            __DIR__.'/logs/assettocorsa-server-json/tyre.info.json');
-
-        $session = Data_Reader::factory($file_path)->getSession();
-        $participants = $session->getParticipants();
-
-        $this->assertCount(6, $participants);
-    }
-
-
-     /**
-     * Test ignoring duplicate result info
-     */
-    public function testIgnoringDuplicateResultInfo()
-    {
-        // The path to the data source
-        $file_path = realpath(
-            __DIR__.'/logs/assettocorsa-server-json/duplicate.result.info.for.miguel.json');
-
-        $session = Data_Reader::factory($file_path)->getSession();
-        $participants = $session->getParticipants();
-
-        // Make sure driver is not DNF anymore
-        $this->assertSame(Participant::FINISH_NORMAL,
-            $participants[4]->getFinishStatus());
-    }
-
-     /**
-     * Test no exceptions when BallastKG is missing
-     */
-    public function testFixingBallastExceptions()
-    {
-        // The path to the data source
-        $file_path = realpath(__DIR__.
-            '/logs/assettocorsa-server-json/'.
-            'no.ballastkg.json');
-
-        // Get the race session
-        $session = Data_Reader::factory($file_path)->getSession();
-    }
-
-    /**
-     * Test cuts
-     */
-    public function testCuts()
-    {
-        // The path to the data source
-        $file_path = realpath(__DIR__.
-            '/logs/assettocorsa-server-json/'.
-            '2015_10_17_9_30_QUALIFY.json');
-
-        // Get the session
-        $session = Data_Reader::factory($file_path)->getSession();
-
-        // Get participants
-        $participants = $session->getParticipants();
-
-        // Test first known cut
-        $lap = $participants[0]->getLap(2);
-        $cuts = $lap->getCuts();
-
-        // Not values known
-        $this->assertSame(null, $cuts[0]->getCutTime());
-        $this->assertSame(null, $cuts[0]->getTimeSkipped());
-        $this->assertSame(null, $cuts[0]->getElapsedSeconds());
-        $this->assertSame(null, $cuts[0]->getDate());
-
-        // TODO: Should we invalidate the lap on non-race or leave it
-        // to AC to decide? Need community feedback on this one before
-        // enabling
-        // $this->assertSame(null, $lap->getTime());
-    }
-
-
-
     /***
     **** Below tests use 1 race log file
     ***/
@@ -373,6 +208,181 @@ class AssettoCorsaServerJsonReaderTest extends \PHPUnit\Framework\TestCase {
             'End 222 reported contact with environment. Impact speed: 77.08348',
             $incidents[14]->getMessage());
     }
+
+
+
+
+
+
+    /***
+    **** Below tests use different logs to test differences and bugs
+    ***/
+
+
+    /**
+     * Test exception when no data is supplied
+     */
+    public function testCreatingNewAssettoCorsaReaderWithInvalidData()
+    {
+        $this->expectException(\Simresults\Exception\CannotReadData::class);
+        $reader = new Data_Reader_AssettoCorsaServerJson('Unknown data for reader');
+    }
+
+
+
+    /**
+     * Test qualify sessions
+     */
+    public function testQualifySession()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-server-json/'.
+            '2015_10_17_9_30_QUALIFY.json');
+
+        // Get the race session
+        $session = Data_Reader::factory($file_path)->getSession();
+
+        //-- Validate
+        $this->assertSame(Session::TYPE_QUALIFY, $session->getType());
+        $this->assertNull($session->getName());
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Assert drivers
+        $this->assertSame('Timo Haapala',
+            $participants[0]->getDriver()->getName());
+        $this->assertSame('blackbird0011',
+            $participants[7]->getDriver()->getName());
+    }
+
+    /**
+     * Test reading a log with null events (not array) without errors
+     */
+    public function testReadingNullEventsWithoutExceptions()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-server-json/'.
+            'race.changed.with.null.events.json');
+
+        // Get the race session
+        $session = Data_Reader::factory($file_path)->getSession();
+    }
+
+     /**
+     * Test tyre info
+     */
+    public function testReadingTyreInfo()
+    {
+        // The path to the data source
+        $file_path = realpath(
+            __DIR__.'/logs/assettocorsa-server-json/tyre.info.json');
+
+        // Get the data reader for the given data source
+        $session = Data_Reader::factory($file_path)->getSession(1);
+
+        $participants = $session->getParticipants();
+
+        $this->assertSame('S', $participants[0]->getLap(1)->getFrontCompound());
+        $this->assertSame('M', $participants[1]->getLap(1)->getRearCompound());
+    }
+
+     /**
+     * Test servername
+     */
+    public function testReadingServer()
+    {
+        // The path to the data source
+        $file_path = realpath(
+            __DIR__.'/logs/assettocorsa-server-json/tyre.info.json');
+
+        $session = Data_Reader::factory($file_path)->getSession();
+        $this->assertSame('Custom server', $session->getServer()->getName());
+    }
+
+
+     /**
+     * Test filtering empty driver name
+     */
+    public function testFilteringEmptyDriverName()
+    {
+        // The path to the data source
+        $file_path = realpath(
+            __DIR__.'/logs/assettocorsa-server-json/tyre.info.json');
+
+        $session = Data_Reader::factory($file_path)->getSession();
+        $participants = $session->getParticipants();
+
+        $this->assertCount(6, $participants);
+    }
+
+
+     /**
+     * Test ignoring duplicate result info
+     */
+    public function testIgnoringDuplicateResultInfo()
+    {
+        // The path to the data source
+        $file_path = realpath(
+            __DIR__.'/logs/assettocorsa-server-json/duplicate.result.info.for.miguel.json');
+
+        $session = Data_Reader::factory($file_path)->getSession();
+        $participants = $session->getParticipants();
+
+        // Make sure driver is not DNF anymore
+        $this->assertSame(Participant::FINISH_NORMAL,
+            $participants[4]->getFinishStatus());
+    }
+
+     /**
+     * Test no exceptions when BallastKG is missing
+     */
+    public function testFixingBallastExceptions()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-server-json/'.
+            'no.ballastkg.json');
+
+        // Get the race session
+        $session = Data_Reader::factory($file_path)->getSession();
+    }
+
+    /**
+     * Test cuts
+     */
+    public function testCuts()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/assettocorsa-server-json/'.
+            '2015_10_17_9_30_QUALIFY.json');
+
+        // Get the session
+        $session = Data_Reader::factory($file_path)->getSession();
+
+        // Get participants
+        $participants = $session->getParticipants();
+
+        // Test first known cut
+        $lap = $participants[0]->getLap(2);
+        $cuts = $lap->getCuts();
+
+        // Not values known
+        $this->assertSame(null, $cuts[0]->getCutTime());
+        $this->assertSame(null, $cuts[0]->getTimeSkipped());
+        $this->assertSame(null, $cuts[0]->getElapsedSeconds());
+        $this->assertSame(null, $cuts[0]->getDate());
+
+        // TODO: Should we invalidate the lap on non-race or leave it
+        // to AC to decide? Need community feedback on this one before
+        // enabling
+        // $this->assertSame(null, $lap->getTime());
+    }
+
+
 
 
 
