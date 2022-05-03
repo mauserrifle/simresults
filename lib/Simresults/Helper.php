@@ -159,6 +159,13 @@ class Helper {
             return $seconds;
         }
 
+        // Matched s.u (already formatted)
+        if (is_numeric($formatted_time))
+        {
+            // Just return the already formatted time as float
+            return (float) $formatted_time;
+        }
+
         if (is_scalar($formatted_time)) {
             // Throw invalid argument by default
             throw new \InvalidArgumentException("Invalid argument formatted_time: $formatted_time");
