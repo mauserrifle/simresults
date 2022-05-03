@@ -121,7 +121,7 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
             $participant = $participants_by_name[$player_data['DriverName']];
 
             // Total time available
-            if ($total_time=$player_data['TotalTime'])
+            if ($total_time=$this->helper->arrayGet($player_data, 'TotalTime'))
             {
                 $participant->setTotalTime(round($total_time / 1000, 4));
             }
