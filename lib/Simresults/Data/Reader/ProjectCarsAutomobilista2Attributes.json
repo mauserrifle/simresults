@@ -173,6 +173,10 @@
         "name" : "G40Cup"
       },
       {
+        "value" : -1049783369,
+        "name" : "StockCarV8_2022"
+      },
+      {
         "value" : -1016264564,
         "name" : "TC70S"
       },
@@ -243,6 +247,10 @@
       {
         "value" : 4952537,
         "name" : "LancerCup"
+      },
+      {
+        "value" : 49926370,
+        "name" : "F-Ultimate_Gen2"
       },
       {
         "value" : 520250275,
@@ -515,6 +523,11 @@
         "class" : "F-Ultimate"
       },
       {
+        "id" : -377858367,
+        "name" : "Formula Ultimate Gen2",
+        "class" : "F-Ultimate_Gen2"
+      },
+      {
         "id" : 523915852,
         "name" : "Formula V10 Gen2",
         "class" : "F-V10_Gen2"
@@ -775,6 +788,11 @@
         "class" : "StockCarV8_2021"
       },
       {
+        "id" : 1767659669,
+        "name" : "Chevrolet Cruze Stock Car 2022",
+        "class" : "StockCarV8_2022"
+      },
+      {
         "id" : 619110280,
         "name" : "Toyota Corolla Stock Car 2020",
         "class" : "StockCarV8_2020"
@@ -783,6 +801,11 @@
         "id" : 806954123,
         "name" : "Toyota Corolla Stock Car 2021",
         "class" : "StockCarV8_2021"
+      },
+      {
+        "id" : 539628044,
+        "name" : "Toyota Corolla Stock Car 2022",
+        "class" : "StockCarV8_2022"
       },
       {
         "id" : -371227432,
@@ -1173,6 +1196,11 @@
         "id" : -1015082583,
         "name" : "Cascais_Alternate",
         "gridsize" : 30
+      },
+      {
+        "id" : 1674501695,
+        "name" : "Galeao_Airport",
+        "gridsize" : 46
       },
       {
         "id" : -438882031,
