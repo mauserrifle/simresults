@@ -11,51 +11,53 @@ namespace Simresults;
 class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
 
     protected $cars = array(
-        0 => 'Porsche 991 GT3',
-        1 => 'Mercedes AMG GT3',
-        2 => 'Ferrari 488 GT3',
-        3 => 'Audi R8 LMS 2015',
-        4 => 'Lamborghini Huracan GT3 2015',
-        5 => 'Mclaren 650s GT3',
-        6 => 'Nissan GT R Nismo GT3 2018',
-        7 => 'BMW M6 GT3',
-        8 => 'Bentley Continental GT3 2018',
-        9 => 'Porsche 991 II GT3 Cup ',
-        10 => 'Nissan GT-R Nismo GT3 2015',
-        11 => 'Bentley Continental GT3 2016',
-        12 => 'Aston Martin Vantage V12 GT3',
-        13 => 'Lamborghini Gallardo R-EX',
-        14 => 'Jaguar G3',
-        15 => 'Lexus RC F GT3',
-        16 => 'Lamborghini Huracan Evo 2019',
-        17 => 'Honda NSX GT3 2016',
-        18 => 'Lamborghini Huracan SuperTrofeo (Gen1)',
-        19 => 'Audi R8 LMS Evo 2019',
-        20 => 'AMR V8 Vantage 2019',
-        21 => 'Honda NSX Evo 2019 ',
-        22 => 'McLaren 720S GT3 2019',
-        23 => 'Porsche 911 II GT3 R 2019',
-        24 => 'Ferrari 488 GT3 Evo 2020',
-        25 => 'Mercedes-AMG GT3 Evo 2020',
-        26 => 'Ferrari 488 Challenge Evo',
-        27 => 'BMW M2 CS Racing',
-        28 => 'Porsche 992 GT3 Cup',
-        29 => 'Lamborghini Huracán ST EVO2',
-        30 => 'BMW M4 GT3 2022',
-        31 => 'Audi R8 LMS Evo II',
+        0 => array('name' => 'Porsche 991 GT3', 'class' => 'GT3'),
+        1 => array('name' => 'Mercedes AMG GT3', 'class' => 'GT3'),
+        2 => array('name' => 'Ferrari 488 GT3', 'class' => 'GT3'),
+        3 => array('name' => 'Audi R8 LMS 2015', 'class' => 'GT3'),
+        4 => array('name' => 'Lamborghini Huracan GT3 2015', 'class' => 'GT3'),
+        5 => array('name' => 'Mclaren 650s GT3', 'class' => 'GT3'),
+        6 => array('name' => 'Nissan GT R Nismo GT3 2018', 'class' => 'GT3'),
+        7 => array('name' => 'BMW M6 GT3', 'class' => 'GT3'),
+        8 => array('name' => 'Bentley Continental GT3 2018', 'class' => 'GT3'),
+        9 => array('name' => 'Porsche 991 II GT3 Cup ', 'class' => 'GT3'),
+        10 => array('name' => 'Nissan GT-R Nismo GT3 2015', 'class' => 'GT3'),
+        11 => array('name' => 'Bentley Continental GT3 2016', 'class' => 'GT3'),
+        12 => array('name' => 'Aston Martin Vantage V12 GT3', 'class' => 'GT3'),
+        13 => array('name' => 'Lamborghini Gallardo R-EX', 'class' => 'GT3'),
+        14 => array('name' => 'Jaguar G3', 'class' => 'GT3'),
+        15 => array('name' => 'Lexus RC F GT3', 'class' => 'GT3'),
+        16 => array('name' => 'Lamborghini Huracan Evo 2019', 'class' => 'GT3'),
+        17 => array('name' => 'Honda NSX GT3 2016', 'class' => 'GT3'),
+        18 => array('name' => 'Lamborghini Huracan SuperTrofeo (Gen1)', 'class' => 'GT3'),
+        19 => array('name' => 'Audi R8 LMS Evo 2019', 'class' => 'GT3'),
+        20 => array('name' => 'AMR V8 Vantage 2019', 'class' => 'GT3'),
+        21 => array('name' => 'Honda NSX Evo 2019 ', 'class' => 'GT3'),
+        22 => array('name' => 'McLaren 720S GT3 2019', 'class' => 'GT3'),
+        23 => array('name' => 'Porsche 911 II GT3 R 2019', 'class' => 'GT3'),
+        24 => array('name' => 'Ferrari 488 GT3 Evo 2020', 'class' => 'GT3'),
+        25 => array('name' => 'Mercedes-AMG GT3 Evo 2020', 'class' => 'GT3'),
+        26 => array('name' => 'Ferrari 488 Challenge Evo', 'class' => 'GT3'),
+
+        27 => array('name' => 'BMW M2 CS Racing', 'class' => 'TCX'),
+
+        28 => array('name' => 'Porsche 992 GT3 Cup', 'class' => 'GT3'),
+        29 => array('name' => 'Lamborghini Huracán ST EVO2', 'class' => 'GT3'),
+        30 => array('name' => 'BMW M4 GT3 2022', 'class' => 'GT3'),
+        31 => array('name' => 'Audi R8 LMS Evo II', 'class' => 'GT3'),
 
         // GT4 DLC
-        50 => 'Alpine A1110 GT4',
-        51 => 'Aston Martin Vantage GT4',
-        52 => 'Audi R8 LMS GT4',
-        53 => 'BMW M4 GT4',
-        55 => 'Chevrolet Camaro GT4',
-        56 => 'Ginetta G55 GT4',
-        57 => 'KTM X-Bow GT4',
-        58 => 'Maserati MC GT4',
-        59 => 'McLaren 570S GT4',
-        60 => 'Mercedes AMG GT4',
-        61 => 'Porsche 718 Cayman GT4',
+        50 => array('name' => 'Alpine A1110 GT4', 'class' => 'GT4'),
+        51 => array('name' => 'Aston Martin Vantage GT4', 'class' => 'GT4'),
+        52 => array('name' => 'Audi R8 LMS GT4', 'class' => 'GT4'),
+        53 => array('name' => 'BMW M4 GT4', 'class' => 'GT4'),
+        55 => array('name' => 'Chevrolet Camaro GT4', 'class' => 'GT4'),
+        56 => array('name' => 'Ginetta G55 GT4', 'class' => 'GT4'),
+        57 => array('name' => 'KTM X-Bow GT4', 'class' => 'GT4'),
+        58 => array('name' => 'Maserati MC GT4', 'class' => 'GT4'),
+        59 => array('name' => 'McLaren 570S GT4', 'class' => 'GT4'),
+        60 => array('name' => 'Mercedes AMG GT4', 'class' => 'GT4'),
+        61 => array('name' => 'Porsche 718 Cayman GT4', 'class' => 'GT4'),
     );
 
     protected $cup_categories = array(
@@ -266,34 +268,39 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
 
             // Find vehicle name
             $vehicle_name = 'Unknown';
+            $vehicle_class = null;
             $car_model = $this->helper->arrayGet($lead['car'], 'carModel');
             if (is_numeric($car_model))
             {
                 $vehicle_name = 'Car model '.$car_model;
                 if (isset($this->cars[(int)$car_model])) {
-                    $vehicle_name = $this->cars[(int)$car_model];
+                    $model = $this->cars[(int)$car_model];
+                    if (isset($model['name'])) {
+                        $vehicle_name = $model['name'];
+                    }
+                    if (isset($model['class'])) {
+                        $vehicle_class = $model['class'];
+                    }
                 }
             }
 
             // Create vehicle and add to participant
             $vehicle = new Vehicle;
             $vehicle->setName($vehicle_name);
+            if ($vehicle_class) {
+                $vehicle->setClass($vehicle_class);
+            }
+
+            if (!isset($position_per_class[$vehicle_class?:'Unknown'])) {
+                $position_per_class[$vehicle_class?:'Unknown'] = 0;
+            }
+            $participant->setClassPosition(++$position_per_class[$vehicle_class?:'Unknown']);
 
             // Has vehicle number
             if (NULL !==
                 $race_number = $this->helper->arrayGet($lead['car'], 'raceNumber'))
             {
                 $vehicle->setNumber((int)$lead['car']['raceNumber']);
-            }
-
-            // Class
-            if (strpos(strtoupper($vehicle_name), 'GT4') !== false) {
-                $vehicle->setClass('GT4');
-                $participant->setClassPosition(++$position_per_class['GT4']);
-            }
-            else {
-                $vehicle->setClass('GT3');
-                $participant->setClassPosition(++$position_per_class['GT3']);
             }
 
             // Has cup category
