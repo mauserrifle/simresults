@@ -20,7 +20,7 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
         6 => array('name' => 'Nissan GT R Nismo GT3 2018', 'class' => 'GT3'),
         7 => array('name' => 'BMW M6 GT3', 'class' => 'GT3'),
         8 => array('name' => 'Bentley Continental GT3 2018', 'class' => 'GT3'),
-        9 => array('name' => 'Porsche 991 II GT3 Cup ', 'class' => 'GT3'),
+        9 => array('name' => 'Porsche 991 II GT3 Cup ', 'class' => 'Cup'),
         10 => array('name' => 'Nissan GT-R Nismo GT3 2015', 'class' => 'GT3'),
         11 => array('name' => 'Bentley Continental GT3 2016', 'class' => 'GT3'),
         12 => array('name' => 'Aston Martin Vantage V12 GT3', 'class' => 'GT3'),
@@ -29,7 +29,7 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
         15 => array('name' => 'Lexus RC F GT3', 'class' => 'GT3'),
         16 => array('name' => 'Lamborghini Huracan Evo 2019', 'class' => 'GT3'),
         17 => array('name' => 'Honda NSX GT3 2016', 'class' => 'GT3'),
-        18 => array('name' => 'Lamborghini Huracan SuperTrofeo (Gen1)', 'class' => 'GT3'),
+        18 => array('name' => 'Lamborghini Huracan SuperTrofeo (Gen1)', 'class' => 'ST'),
         19 => array('name' => 'Audi R8 LMS Evo 2019', 'class' => 'GT3'),
         20 => array('name' => 'AMR V8 Vantage 2019', 'class' => 'GT3'),
         21 => array('name' => 'Honda NSX Evo 2019 ', 'class' => 'GT3'),
@@ -37,12 +37,12 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
         23 => array('name' => 'Porsche 911 II GT3 R 2019', 'class' => 'GT3'),
         24 => array('name' => 'Ferrari 488 GT3 Evo 2020', 'class' => 'GT3'),
         25 => array('name' => 'Mercedes-AMG GT3 Evo 2020', 'class' => 'GT3'),
-        26 => array('name' => 'Ferrari 488 Challenge Evo', 'class' => 'GT3'),
+        26 => array('name' => 'Ferrari 488 Challenge Evo', 'class' => 'GTC'),
 
         27 => array('name' => 'BMW M2 CS Racing', 'class' => 'TCX'),
 
-        28 => array('name' => 'Porsche 992 GT3 Cup', 'class' => 'GT3'),
-        29 => array('name' => 'Lamborghini Huracán ST EVO2', 'class' => 'GT3'),
+        28 => array('name' => 'Porsche 992 GT3 Cup', 'class' => 'Cup'),
+        29 => array('name' => 'Lamborghini Huracán ST EVO2', 'class' => 'ST'),
         30 => array('name' => 'BMW M4 GT3 2022', 'class' => 'GT3'),
         31 => array('name' => 'Audi R8 LMS Evo II', 'class' => 'GT3'),
 
