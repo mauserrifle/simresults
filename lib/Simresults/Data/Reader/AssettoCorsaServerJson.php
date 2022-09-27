@@ -145,7 +145,7 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
         $lap_position_counter = array();
 
         // Process laps
-        if ($data['Laps'])
+        if (isset($data['Laps']) AND $data['Laps'])
         foreach ($data['Laps'] as $lap_data)
         {
             // Init new lap
@@ -242,7 +242,7 @@ class Data_Reader_AssettoCorsaServerJson extends Data_Reader {
 
 
         // Get car incidents from events
-        if ($data['Events'])
+        if (isset($data['Events']) AND $data['Events'])
         foreach ($data['Events'] as $event)
         {
             $type_events = array(
