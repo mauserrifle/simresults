@@ -237,8 +237,16 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
             foreach ($lead['car']['drivers'] as $driver_data)
             {
                 $driver = new Driver;
-                $driver->setName(trim($driver_data['firstName']
-                    . ' '.$driver_data['lastName']));
+
+                $name = null;
+                if ($first_name = $this->helper->arrayGet($driver_data, 'firstName')) {
+                    $name .= $first_name;
+                }
+                if ($last_name = $this->helper->arrayGet($driver_data, 'lastName')) {
+                    $name .= ' '.$last_name;
+                }
+
+                $driver->setName(trim($name));
 
                 $driver->setDriverId($this->helper->arrayGet(
                             $driver_data, 'playerId'));
