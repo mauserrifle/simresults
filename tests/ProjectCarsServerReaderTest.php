@@ -938,7 +938,7 @@ class ProjectCarsServerReaderTest extends \PHPUnit\Framework\TestCase {
 
         // Detect proper Automobilista2 car
         $participant = $participants[0];
-        $this->assertSame('MetalMoro AJR Chevy V8',
+        $this->assertSame('MetalMoro AJR Chevrolet',
             $participant->getVehicle()->getName());
         $participant = $participants[1];
         $this->assertSame('Ginetta G58',
