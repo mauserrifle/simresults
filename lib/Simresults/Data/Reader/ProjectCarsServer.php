@@ -643,6 +643,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 // Session has predefined race result positions and it is a
                 // race session
                 if ($results = $session_data['results'] AND
+                    is_array($results) AND
                     $session->getType() === Session::TYPE_RACE)
                 {
                     // Init sorted result array
