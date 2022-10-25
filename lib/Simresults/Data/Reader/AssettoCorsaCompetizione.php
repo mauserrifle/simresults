@@ -234,6 +234,7 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
             // Create drivers
             $drivers = array();
 
+            if (isset($lead['car']['drivers']))
             foreach ($lead['car']['drivers'] as $driver_data)
             {
                 $driver = new Driver;
