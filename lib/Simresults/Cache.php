@@ -92,7 +92,7 @@ class Cache {
             return $this->get($cache_key);
         }
 
-        $result =  call_user_func_array(array($object, 'parent::'.$method), $args);
+        $result = $object->parentCall($method, $args);
         $this->put($cache_key, $result);
 
         return $result;

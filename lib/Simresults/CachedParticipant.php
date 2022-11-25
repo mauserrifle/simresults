@@ -13,6 +13,8 @@ namespace Simresults;
  */
 class CachedParticipant extends Participant {
 
+    use CacheParentCallTrait;
+
     /**
      * @var Cache
      */
@@ -33,7 +35,8 @@ class CachedParticipant extends Participant {
     public function getLap($lap_number)
     {
         return $this->cache->cacheParentCall(
-            $this, __FUNCTION__, func_get_args());    }
+            $this, __FUNCTION__, func_get_args());
+    }
 
     /**
      * {@inheritdoc}

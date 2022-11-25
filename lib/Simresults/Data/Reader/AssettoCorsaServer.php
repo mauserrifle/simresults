@@ -307,7 +307,10 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
         if (strpos($data, 'Server CFG Path') === false) return null;
 
         // Make utf8
-        $data = utf8_encode($data);
+        // $data = mb_convert_encoding($data, 'UTF-8', mb_list_encodings());
+        // $data = iconv('ISO-8859-1', 'UTF-8', $data);
+        // $data = \UConverter::transcode($data, 'UTF8', 'ISO-8859-1');
+        $data = mb_convert_encoding($data, 'UTF-8', 'ISO-8859-1');
 
         // Contains windows new lines as text (so not real ones). User might
         // edited the file in a very wrong way

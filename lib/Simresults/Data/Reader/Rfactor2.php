@@ -1337,7 +1337,10 @@ class Data_Reader_Rfactor2 extends Data_Reader {
     {
         // Make sure the data is utf-8 encoded, rFactor2 logs are windows
         // encoded by default
-        $xml = utf8_encode($xml);
+        // $xml = mb_convert_encoding($xml, 'UTF-8', mb_list_encodings());
+        // $xml = iconv('ISO-8859-1', 'UTF-8', $xml);
+        // $xml = \UConverter::transcode($xml, 'UTF8', 'ISO-8859-1');
+        $xml = mb_convert_encoding($xml, 'UTF-8', 'ISO-8859-1');
 
         // Remove any unwanted chars after the end of the file (after last
         // XML closing tag)

@@ -13,6 +13,8 @@ namespace Simresults;
  */
 class CachedSession extends Session {
 
+    use CacheParentCallTrait;
+
     /**
      * @var Cache
      */
