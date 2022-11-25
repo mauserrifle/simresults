@@ -98,9 +98,9 @@ class Helper {
                 $formatted_time, $time_matches))
             {
                 // Get seconds
-                $seconds = ($time_matches[1] * 3600) +
-                           ($time_matches[2] * 60) +
-                           $time_matches[3];
+                $seconds = ((int)$time_matches[1] * 3600) +
+                           ((int)$time_matches[2] * 60) +
+                           (int)$time_matches[3];
 
                 // Add microseconds to seconds using string functions and convert back
                 // to float
@@ -115,8 +115,8 @@ class Helper {
                 $formatted_time, $time_matches))
             {
                 // Get seconds
-                $seconds = ($time_matches[1] * 60) +
-                           $time_matches[2];
+                $seconds = ((int)$time_matches[1] * 60) +
+                           (int)$time_matches[2];
 
                 // Add microseconds to seconds using string functions and convert back
                 // to float
@@ -132,9 +132,9 @@ class Helper {
             $formatted_time, $time_matches))
         {
             // Get seconds
-            $seconds = ($time_matches[1] * 3600) +
-                       ($time_matches[2] * 60) +
-                       $time_matches[3];
+            $seconds = ((int)$time_matches[1] * 3600) +
+                       ((int)$time_matches[2] * 60) +
+                       (int)$time_matches[3];
 
             // Add microseconds to seconds using string functions and convert back
             // to float
@@ -149,8 +149,8 @@ class Helper {
             $formatted_time, $time_matches))
         {
             // Get seconds
-            $seconds = ($time_matches[1] * 60) +
-                       $time_matches[2];
+            $seconds = ((int)$time_matches[1] * 60) +
+                       (int)$time_matches[2];
 
             // Add microseconds to seconds using string functions and convert back
             // to float
