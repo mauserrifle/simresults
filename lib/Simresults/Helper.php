@@ -159,6 +159,22 @@ class Helper {
             return $seconds;
         }
 
+        // Matched i.s:u
+        if (preg_match (
+            '/(.*)\.(.*)\:(.*)/i',
+            $formatted_time, $time_matches))
+        {
+            // Get seconds
+            $seconds = ((int)$time_matches[1] * 60) +
+                       (int)$time_matches[2];
+
+            // Add microseconds to seconds using string functions and convert back
+            // to float
+            $seconds = (float) ($seconds.'.'.$time_matches[3]);
+
+            return $seconds;
+        }
+
         // Matched s.u (already formatted)
         if (is_numeric($formatted_time))
         {
