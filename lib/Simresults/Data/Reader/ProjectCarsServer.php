@@ -292,7 +292,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 $participants_with_events = array();
 
                 // Parse events first only to collect missing participants
-                if (isset($session_data['events']))
+                if (isset($session_data['events']) AND is_array($session_data['events']))
                 foreach ($session_data['events'] as $event)
                 {
                     // Participant unknown
