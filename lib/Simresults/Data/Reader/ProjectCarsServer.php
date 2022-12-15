@@ -309,7 +309,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 $cut_data = array();
                 $driver_has_entered_pit = array();
                 $finished_participants_by_id = array();
-                if (isset($session_data['events']))
+                if (isset($session_data['events']) AND is_array($session_data['events']))
                 foreach ($session_data['events'] as $event)
                 {
                     // Get participant
@@ -592,7 +592,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                  */
 
                 // Get additional info from participants entries
-                if (isset($history['participants']))
+                if (isset($history['participants']) AND is_array($history['participants']))
                 foreach ($history['participants'] as $part_data)
                 {
                     // Driver not known
