@@ -623,6 +623,11 @@
         "class" : "GTE"
       },
       {
+        "id" : 373176631,
+        "name" : "Chevrolet Corvette GTP",
+        "class" : "Group C"
+      },
+      {
         "id" : 24108228,
         "name" : "Porsche 911 RSR GTE",
         "class" : "GTE"
@@ -1413,6 +1418,16 @@
         "gridsize" : 26
       },
       {
+        "id" : -468654879,
+        "name" : "Indianapolis_2022_Oval",
+        "gridsize" : 32
+      },
+      {
+        "id" : 328837350,
+        "name" : "Indianapolis_2022_RC",
+        "gridsize" : 32
+      },
+      {
         "id" : -1478712571,
         "name" : "Interlagos_GP",
         "gridsize" : 46
@@ -1736,6 +1751,16 @@
         "id" : 987592900,
         "name" : "Snetterton_300",
         "gridsize" : 26
+      },
+      {
+        "id" : -1736505524,
+        "name" : "Spa_Francorchamps_1970",
+        "gridsize" : 22
+      },
+      {
+        "id" : 1170932587,
+        "name" : "Spa_Francorchamps_1970_1000km",
+        "gridsize" : 22
       },
       {
         "id" : 1283905272,
