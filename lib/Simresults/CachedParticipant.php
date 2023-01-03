@@ -41,6 +41,15 @@ class CachedParticipant extends Participant {
     /**
      * {@inheritdoc}
      */
+    public function getVehicle($ignore_lap_vehicles=false)
+    {
+        return $this->cache->cacheParentCall(
+            $this, __FUNCTION__, func_get_args());
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function getVehicles()
     {
         return $this->cache->cacheParentCall(

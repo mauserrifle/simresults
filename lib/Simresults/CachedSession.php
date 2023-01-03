@@ -50,6 +50,15 @@ class CachedSession extends Session {
     /**
      * {@inheritdoc}
      */
+    public function getBestLap()
+    {
+        return $this->cache->cacheParentCall(
+            $this, __FUNCTION__, func_get_args());
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function getBestLapByLapNumber($lap_number)
     {
         return $this->cache->cacheParentCall(
@@ -113,6 +122,15 @@ class CachedSession extends Session {
     /**
      * {@inheritdoc}
      */
+    public function getCuts()
+    {
+        return $this->cache->cacheParentCall(
+            $this, __FUNCTION__, func_get_args());
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function getLedMostParticipant()
     {
         return $this->cache->cacheParentCall(
@@ -137,6 +155,14 @@ class CachedSession extends Session {
             $this, __FUNCTION__, func_get_args());
     }
 
+    /**
+     * {@inheritdoc}
+     */
+    public function getParticipantsSortedByConsistency()
+    {
+        return $this->cache->cacheParentCall(
+            $this, __FUNCTION__, func_get_args());
+    }
 
     /**
      * {@inheritdoc}
@@ -151,6 +177,15 @@ class CachedSession extends Session {
      * {@inheritdoc}
      */
     public function getMaxPosition()
+    {
+        return $this->cache->cacheParentCall(
+            $this, __FUNCTION__, func_get_args());
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function splitByVehicleClass()
     {
         return $this->cache->cacheParentCall(
             $this, __FUNCTION__, func_get_args());

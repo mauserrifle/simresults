@@ -48,6 +48,11 @@ class CachedSessionSpec extends ObjectBehavior
         $this->itCaches('getLapsSortedByTime', array($this->lap1));
     }
 
+    function it_caches_best_lap()
+    {
+        $this->itCaches('getBestLap', $this->lap1);
+    }
+
     function it_caches_laps_by_number_sorted_by_time()
     {
         $this->itCaches('getLapsByLapNumberSortedByTime',
@@ -95,6 +100,12 @@ class CachedSessionSpec extends ObjectBehavior
         $this->itCaches('getBadLaps', array(), array(107));
     }
 
+    function it_caches_cuts(Cache $cache)
+    {
+        // This test cache
+        $this->itCaches('getCuts', array());
+    }
+
     function it_caches_led_most_participant()
     {
         $this->itCaches('getLedMostParticipant', $this->part1);
@@ -112,6 +123,11 @@ class CachedSessionSpec extends ObjectBehavior
             $this->part1, array(1));
     }
 
+    function it_caches_participants_sorted_by_consistency()
+    {
+        $this->itCaches('getParticipantsSortedByConsistency', [$this->part1]);
+    }
+
     function it_caches_lasted_laps()
     {
         $this->itCaches('getLastedLaps', 1);
@@ -122,6 +138,10 @@ class CachedSessionSpec extends ObjectBehavior
         $this->itCaches('getMaxPosition', 1);
     }
 
+    function it_caches_split_by_vehicle_class()
+    {
+        $this->itCaches('splitByVehicleClass', array());
+    }
 
     /**
      * @todo Fix below test? Somehow we cant test __clone :(. If we fix we dont
