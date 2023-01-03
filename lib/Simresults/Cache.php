@@ -76,15 +76,33 @@ class Cache {
      */
     public function cacheParentCall($object, $method, $args)
     {
-        // TODO: Find alternative due to spl_object_hash performance hit?
-        $cache_key = spl_object_hash($object).
-                    '-'.
+        $cache_key = null;
+
+        if (function_exists('spl_object_id')) {
+            $cache_key  = spl_object_id($object);
+        } else {
+            $cache_key  = spl_object_hash($object);
+        }
+
+        $cache_key .= '-'.
                     get_class($object).
                     '::'.
                     $method;
 
         if ($args) {
-            $cache_key .= '-'.implode('-', $args);
+            // Fix object arguments
+            $cacheArgs = array_map(function($el) {
+                if (is_object($el)) {
+                    if (function_exists('spl_object_id')) {
+                        return spl_object_id($el);
+                    } else {
+                        return spl_object_hash($el);
+                    }
+                }
+                return $el;
+            }, $args);
+
+            $cache_key .= '-'.implode('-', $cacheArgs);
         }
 
         if (null !== $value = $this->get($cache_key))

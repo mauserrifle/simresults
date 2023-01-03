@@ -4,6 +4,7 @@ namespace spec\Simresults;
 
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
+use Simresults\Participant;
 use Simresults\CacheParentCallTrait;
 
 /**
@@ -42,10 +43,15 @@ class CacheSpec extends ObjectBehavior
 
     function it_can_help_implement_parent_cache_in_extended_classes(aClass $object)
     {
-        $object->aMethod(1, 2)->willReturn(array('some data'));
-        $object->parentCall('aMethod', array(1,2))->willReturn(array('some data'));
-        $this->cacheParentCall($object, 'aMethod', array(1, 2))
+        // Test with object argument too so we test whether no error occurs on
+        // this
+        $participantArg = new Participant;
+
+        $object->aMethod(1, $participantArg)->willReturn(array('some data'));
+        $object->parentCall('aMethod', array(1,$participantArg))->willReturn(array('some data'));
+        $this->cacheParentCall($object, 'aMethod', array(1, $participantArg))
             ->shouldReturn(array('some data'));
+
     }
 }
 
