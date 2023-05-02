@@ -46,6 +46,10 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
         30 => array('name' => 'BMW M4 GT3', 'class' => 'GT3'),
         31 => array('name' => 'Audi R8 LMS Evo2 2022', 'class' => 'GT3'),
 
+        32 => array('name' => 'Ferrari 296 GT3', 'class' => 'GT3'),
+        33 => array('name' => 'Lamborghini Huracan Evo2', 'class' => 'GT3'),
+        34 => array('name' => 'Porsche 992 GT3 R', 'class' => 'GT3'),
+
         // GT4 DLC
         50 => array('name' => 'Alpine A110 GT4', 'class' => 'GT4'),
         51 => array('name' => 'Aston Martin Vantage GT4', 'class' => 'GT4'),
