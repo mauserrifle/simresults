@@ -180,7 +180,7 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
 
         // Set server (we do not know...)
         $server = new Server;
-        $server->setName($this->helper->arrayGet($session_data, 'serverName', 'Unknown'));
+        $server->setName($serverName=$this->helper->arrayGet($session_data, 'serverName', 'Unknown'));
         $session->setServer($server);
 
         // Set track
@@ -215,6 +215,21 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
                 }
             }
         }
+
+
+        /**
+         * Console fixes
+         */
+
+        $carsWithConsoleFixes = $this->cars;
+        if (preg_match('/ps5|xbox/i', $serverName)) {
+            // Swap car ids
+            // TODO: Create tests
+            $carsWithConsoleFixes[30] = $this->cars[26];
+            $carsWithConsoleFixes[26] = $this->cars[30];
+        }
+
+
 
 
         /**
@@ -286,8 +301,8 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
             if (is_numeric($car_model))
             {
                 $vehicle_name = 'Car model '.$car_model;
-                if (isset($this->cars[(int)$car_model])) {
-                    $model = $this->cars[(int)$car_model];
+                if (isset($carsWithConsoleFixes[(int)$car_model])) {
+                    $model = $carsWithConsoleFixes[(int)$car_model];
                     if (isset($model['name'])) {
                         $vehicle_name = $model['name'];
                     }
