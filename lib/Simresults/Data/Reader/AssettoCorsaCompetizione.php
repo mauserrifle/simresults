@@ -268,27 +268,30 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
          */
 
         $carsWithConsoleFixes = $this->cars;
-        if (preg_match('/ps5|xbox/i', $serverName)) {
+        if (preg_match('/xbox/i', $serverName)) {
             // Swap car ids
             // TODO: Create tests
 
-            $carsWithConsoleFixes = $this->carsConsole;
-
             // Ferrari 488 Challenger Evo (26) becomes BMW M4 GT3 (30)
-            // $carsWithConsoleFixes[26] = $this->cars[30];
+            $carsWithConsoleFixes[26] = $this->cars[30];
 
-            // // BMW M2 Club Sport Racing (27) becomes Ferrari 488 Challenger Evo (26)
-            // $carsWithConsoleFixes[27] = $this->cars[26];
+            // BMW M2 Club Sport Racing (27) becomes Ferrari 488 Challenger Evo (26)
+            $carsWithConsoleFixes[27] = $this->cars[26];
 
-            // // Porsche 992 GT3 Cup (28) becomes BMW M2 Club Sport Racing (27)
-            // $carsWithConsoleFixes[28] = $this->cars[27];
+            // Porsche 992 GT3 Cup (28) becomes BMW M2 Club Sport Racing (27)
+            $carsWithConsoleFixes[28] = $this->cars[27];
 
-            // // Lamborghini Huracan Supertrofeo Evo2 (29) becomes Porsche 992 GT3 Cup (28)
-            // $carsWithConsoleFixes[29] = $this->cars[28];
+            // Lamborghini Huracan Supertrofeo Evo2 (29) becomes Porsche 992 GT3 Cup (28)
+            $carsWithConsoleFixes[29] = $this->cars[28];
 
-            // // BMW M4 GT3 (30) becomes Lamborghini Huracan Supertrofeo Evo2 (29)
-            // $carsWithConsoleFixes[30] = $this->cars[29];
+            // BMW M4 GT3 (30) becomes Lamborghini Huracan Supertrofeo Evo2 (29)
+            $carsWithConsoleFixes[30] = $this->cars[29];
         }
+        if (preg_match('/ps5/i', $serverName)) {
+            $carsWithConsoleFixes = $this->carsPs5;
+        }
+
+
 
 
         /**
