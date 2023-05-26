@@ -64,7 +64,7 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
         61 => array('name' => 'Porsche 718 Cayman GT4', 'class' => 'GT4'),
     );
 
-    protected $carsConsole = array(
+    protected $carsPs5 = array(
         0 => array('name' => 'Porsche 991 GT3 R', 'class' => 'GT3'),
         1 => array('name' => 'Mercedes AMG GT3', 'class' => 'GT3'),
         2 => array('name' => 'Ferrari 488 GT3', 'class' => 'GT3'),
