@@ -64,6 +64,52 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
         61 => array('name' => 'Porsche 718 Cayman GT4', 'class' => 'GT4'),
     );
 
+    protected $carsConsole = array(
+        0 => array('name' => 'Porsche 991 GT3 R', 'class' => 'GT3'),
+        1 => array('name' => 'Mercedes AMG GT3', 'class' => 'GT3'),
+        2 => array('name' => 'Ferrari 488 GT3', 'class' => 'GT3'),
+        3 => array('name' => 'Audi R8 LMS', 'class' => 'GT3'),
+        4 => array('name' => 'Lamborghini Huracan GT3', 'class' => 'GT3'),
+        5 => array('name' => 'McLaren 650s GT3', 'class' => 'GT3'),
+        6 => array('name' => 'Nissan GT-R Nismo GT3 Evo', 'class' => 'GT3'),
+        7 => array('name' => 'BMW M6 GT3', 'class' => 'GT3'),
+        8 => array('name' => 'Bentley Continental GT3 Evo', 'class' => 'GT3'),
+        9 => array('name' => 'Porsche 991 II GT3 Cup', 'class' => 'GT3'),
+        10 => array('name' => 'Nissan GT-R Nismo GT3', 'class' => 'GT3'),
+        11 => array('name' => 'Bentley Continental GT3', 'class' => 'GT3'),
+        12 => array('name' => 'Aston Martin V12 Vantage GT3', 'class' => 'GT3'),
+        13 => array('name' => 'Reiter Engineering R-EX GT3', 'class' => 'GT3'),
+        14 => array('name' => 'Emil Frey Jaguar G3', 'class' => 'GT3'),
+        15 => array('name' => 'Lexus RC F GT3', 'class' => 'GT3'),
+        16 => array('name' => 'Lamborghini Huracan GT3 Evo', 'class' => 'GT3'),
+        17 => array('name' => 'Honda NSX GT3', 'class' => 'GT3'),
+        18 => array('name' => 'Lamborghini Huracan ST', 'class' => 'GT3'),
+        19 => array('name' => 'Audi R8 LMS Evo', 'class' => 'GT3'),
+        20 => array('name' => 'Aston Martin V8 Vantage GT3', 'class' => 'GT3'),
+        21 => array('name' => 'Honda NSX GT3 Evo', 'class' => 'GT3'),
+        22 => array('name' => 'McLaren 720s GT3', 'class' => 'GT3'),
+        23 => array('name' => 'Porsche 991 II GT3 R Evo', 'class' => 'GT3'),
+        24 => array('name' => 'Ferrari 488 GT3 Evo', 'class' => 'GT3'),
+        25 => array('name' => 'Mercedes AMG GT3 Evo', 'class' => 'GT3'),
+        26 => array('name' => 'BMW M4 GT3', 'class' => 'GT3'),
+        27 => array('name' => 'Ferrari 488 Challenge Evo', 'class' => 'GTC'),
+        28 => array('name' => 'BMW M2 CS Racing', 'class' => 'TCX'),
+        29 => array('name' => 'Porsche 992 GT3 Cup', 'class' => 'GT3'),
+        30 => array('name' => 'Lamborghini Huracan ST Evo 2', 'class' => 'GT3'),
+        31 => array('name' => 'Audi R8 LMS Evo II', 'class' => 'GT3'),
+        50 => array('name' => 'Alpine A110 GT4', 'class' => 'GT4'),
+        51 => array('name' => 'Aston Martin V8 Vantage GT4', 'class' => 'GT4'),
+        52 => array('name' => 'Audi R8 LMS GT4', 'class' => 'GT4'),
+        53 => array('name' => 'BMW M4 GT4', 'class' => 'GT4'),
+        55 => array('name' => 'Chevrolet Camaro GT4.R', 'class' => 'GT4'),
+        56 => array('name' => 'Ginetta G55 GT4', 'class' => 'GT4'),
+        57 => array('name' => 'KTM X-Bow GT4', 'class' => 'GT4'),
+        58 => array('name' => 'Maserati GranTurismo MC GT4', 'class' => 'GT4'),
+        59 => array('name' => 'McLaren 570s GT4', 'class' => 'GT4'),
+        60 => array('name' => 'Mercedes AMG GT4', 'class' => 'GT4'),
+        61 => array('name' => 'Porsche 718 Cayman GT4 Clubsport', 'class' => 'GT4'),
+    );
+
     protected $cup_categories = array(
         0 => 'Overall',
         1 => 'Pro-Am',
@@ -226,23 +272,23 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
             // Swap car ids
             // TODO: Create tests
 
+            $carsWithConsoleFixes = $this->carsConsole;
+
             // Ferrari 488 Challenger Evo (26) becomes BMW M4 GT3 (30)
-            $carsWithConsoleFixes[26] = $this->cars[30];
+            // $carsWithConsoleFixes[26] = $this->cars[30];
 
-            // BMW M2 Club Sport Racing (27) becomes Ferrari 488 Challenger Evo (26)
-            $carsWithConsoleFixes[27] = $this->cars[26];
+            // // BMW M2 Club Sport Racing (27) becomes Ferrari 488 Challenger Evo (26)
+            // $carsWithConsoleFixes[27] = $this->cars[26];
 
-            // Porsche 992 GT3 Cup (28) becomes BMW M2 Club Sport Racing (27)
-            $carsWithConsoleFixes[28] = $this->cars[27];
+            // // Porsche 992 GT3 Cup (28) becomes BMW M2 Club Sport Racing (27)
+            // $carsWithConsoleFixes[28] = $this->cars[27];
 
-            // Lamborghini Huracan Supertrofeo Evo2 (29) becomes Porsche 992 GT3 Cup (28)
-            $carsWithConsoleFixes[29] = $this->cars[28];
+            // // Lamborghini Huracan Supertrofeo Evo2 (29) becomes Porsche 992 GT3 Cup (28)
+            // $carsWithConsoleFixes[29] = $this->cars[28];
 
-            // BMW M4 GT3 (30) becomes Lamborghini Huracan Supertrofeo Evo2 (29)
-            $carsWithConsoleFixes[30] = $this->cars[29];
+            // // BMW M4 GT3 (30) becomes Lamborghini Huracan Supertrofeo Evo2 (29)
+            // $carsWithConsoleFixes[30] = $this->cars[29];
         }
-
-
 
 
         /**
