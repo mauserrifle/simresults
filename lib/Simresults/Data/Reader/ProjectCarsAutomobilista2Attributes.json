@@ -69,6 +69,10 @@
         "name" : "F-Vee"
       },
       {
+        "value" : 1574895952,
+        "name" : "Hypercars"
+      },
+      {
         "value" : 1734909113,
         "name" : "Carrera Cup"
       },
@@ -161,6 +165,10 @@
         "name" : "Group A"
       },
       {
+        "value" : -1200372575,
+        "name" : "Supercars"
+      },
+      {
         "value" : -1165550561,
         "name" : "CopaFusca"
       },
@@ -171,6 +179,10 @@
       {
         "value" : -1070382248,
         "name" : "G40Cup"
+      },
+      {
+        "value" : -1068384799,
+        "name" : "F-Classic_Gen4"
       },
       {
         "value" : -1049783369,
@@ -217,12 +229,20 @@
         "name" : "F-V12"
       },
       {
+        "value" : -217808338,
+        "name" : "StockCarV8_2023"
+      },
+      {
         "value" : -112887377,
         "name" : "GT3"
       },
       {
         "value" : -72151851,
         "name" : "Cat_Supersport"
+      },
+      {
+        "value" : -37194732,
+        "name" : "F-Inter"
       },
       {
         "value" : -22587363,
@@ -373,6 +393,21 @@
         "class" : "F-3"
       },
       {
+        "id" : -489015418,
+        "name" : "McLaren MP4/4",
+        "class" : "F-Classic_Gen2"
+      },
+      {
+        "id" : -61299331,
+        "name" : "McLaren MP4/5B",
+        "class" : "F-Classic_Gen3"
+      },
+      {
+        "id" : 271036494,
+        "name" : "McLaren MP4/6",
+        "class" : "F-Classic_Gen4"
+      },
+      {
         "id" : 697161929,
         "name" : "Formula Classic Gen1 Model1",
         "class" : "F-Classic_Gen1"
@@ -413,6 +448,26 @@
         "class" : "F-Classic_Gen3"
       },
       {
+        "id" : 264295457,
+        "name" : "Formula Classic Gen3 Model4",
+        "class" : "F-Classic_Gen3"
+      },
+      {
+        "id" : 1294128988,
+        "name" : "Formula Classic Gen4 Model1",
+        "class" : "F-Classic_Gen4"
+      },
+      {
+        "id" : 157362639,
+        "name" : "Formula Classic Gen4 Model2",
+        "class" : "F-Classic_Gen4"
+      },
+      {
+        "id" : 121318055,
+        "name" : "Formula Classic Gen4 Model3",
+        "class" : "F-Classic_Gen4"
+      },
+      {
         "id" : -1261768631,
         "name" : "Formula Vintage Gen1 Model1",
         "class" : "F-Vintage_Gen1"
@@ -439,13 +494,18 @@
       },
       {
         "id" : 1061494025,
-        "name" : "Lotus Type 49C Cosworth",
+        "name" : "Lotus 49C",
         "class" : "F-Vintage_Gen2"
       },
       {
         "id" : 435621847,
-        "name" : "Lotus Type 72E",
+        "name" : "Lotus 72E",
         "class" : "F-Retro_Gen1"
+      },
+      {
+        "id" : 1959097924,
+        "name" : "Lotus 98T",
+        "class" : "F-Classic_Gen1"
       },
       {
         "id" : -1025098540,
@@ -483,6 +543,16 @@
         "class" : "F-Retro_Gen2"
       },
       {
+        "id" : 240609990,
+        "name" : "Brabham BT49",
+        "class" : "F-Retro_Gen2"
+      },
+      {
+        "id" : 280856873,
+        "name" : "Brabham BT52",
+        "class" : "F-Retro_Gen3"
+      },
+      {
         "id" : 2005556145,
         "name" : "McLaren MP4/1C",
         "class" : "F-Retro_Gen3"
@@ -516,6 +586,11 @@
         "id" : 1982976051,
         "name" : "Formula Trainer Advanced",
         "class" : "F-Trainer_A"
+      },
+      {
+        "id" : -67190685,
+        "name" : "Formula Inter MG-15",
+        "class" : "F-Inter"
       },
       {
         "id" : 1948072701,
@@ -623,6 +698,11 @@
         "class" : "GTE"
       },
       {
+        "id" : 798477355,
+        "name" : "Chevrolet Corvette C8 Z06",
+        "class" : "Supercars"
+      },
+      {
         "id" : 373176631,
         "name" : "Chevrolet Corvette GTP",
         "class" : "Group C"
@@ -665,6 +745,11 @@
       {
         "id" : 809291220,
         "name" : "Porsche 911 GT3 R",
+        "class" : "GT3"
+      },
+      {
+        "id" : -1416203489,
+        "name" : "Nissan GT-R Nismo GT3",
         "class" : "GT3"
       },
       {
@@ -713,6 +798,16 @@
         "class" : "GT1"
       },
       {
+        "id" : -343023508,
+        "name" : "Nissan R390 GT1",
+        "class" : "GT1"
+      },
+      {
+        "id" : 1891730007,
+        "name" : "Nissan R89C",
+        "class" : "Group C"
+      },
+      {
         "id" : 957632269,
         "name" : "Porsche 962C",
         "class" : "Group C"
@@ -721,6 +816,11 @@
         "id" : 65306143,
         "name" : "Sauber Mercedes C9",
         "class" : "Group C"
+      },
+      {
+        "id" : 1630268373,
+        "name" : "Brabham BT62",
+        "class" : "Hypercars"
       },
       {
         "id" : 844159614,
@@ -750,7 +850,12 @@
       {
         "id" : -204135982,
         "name" : "McLaren F1 LM",
-        "class" : "Street"
+        "class" : "Supercars"
+      },
+      {
+        "id" : -975958992,
+        "name" : "McLaren Senna",
+        "class" : "Hypercars"
       },
       {
         "id" : 1932261404,
@@ -818,6 +923,11 @@
         "class" : "StockCarV8_2022"
       },
       {
+        "id" : -1698500493,
+        "name" : "Chevrolet Cruze Stock Car 2023",
+        "class" : "StockCarV8_2023"
+      },
+      {
         "id" : 619110280,
         "name" : "Toyota Corolla Stock Car 2020",
         "class" : "StockCarV8_2020"
@@ -833,6 +943,11 @@
         "class" : "StockCarV8_2022"
       },
       {
+        "id" : 821932703,
+        "name" : "Toyota Corolla Stock Car 2023",
+        "class" : "StockCarV8_2023"
+      },
+      {
         "id" : -371227432,
         "name" : "Chevrolet Omega Stock Car 1999",
         "class" : "StockCar99"
@@ -845,7 +960,7 @@
       {
         "id" : 1560162507,
         "name" : "Ultima GTR",
-        "class" : "Street"
+        "class" : "Supercars"
       },
       {
         "id" : 306785397,
@@ -1105,802 +1220,1330 @@
       {
         "id" : -559709709,
         "name" : "Adelaide_Historic",
-        "gridsize" : 26
+        "gridsize" : 26,
+        "default_day" : 13,
+        "default_month" : 11,
+        "default_year" : 1988
       },
       {
         "id" : 827815091,
         "name" : "Adelaide_Modern",
-        "gridsize" : 39
+        "gridsize" : 39,
+        "default_day" : 5,
+        "default_month" : 3,
+        "default_year" : 2020
       },
       {
         "id" : -1939104917,
         "name" : "Azure_Circuit_2021",
-        "gridsize" : 24
+        "gridsize" : 24,
+        "default_day" : 23,
+        "default_month" : 5,
+        "default_year" : 2021
+      },
+      {
+        "id" : -620880244,
+        "name" : "Bathurst_1983",
+        "gridsize" : 32,
+        "default_day" : 1,
+        "default_month" : 2,
+        "default_year" : 1983
       },
       {
         "id" : 1080325116,
         "name" : "Bathurst_2020",
-        "gridsize" : 36
+        "gridsize" : 36,
+        "default_day" : 1,
+        "default_month" : 2,
+        "default_year" : 2020
       },
       {
         "id" : 1534602052,
         "name" : "BrandsHatch_GP",
-        "gridsize" : 32
+        "gridsize" : 32,
+        "default_day" : 11,
+        "default_month" : 6,
+        "default_year" : 2020
       },
       {
         "id" : -572148012,
         "name" : "BrandsHatch_Indy",
-        "gridsize" : 32
+        "gridsize" : 32,
+        "default_day" : 11,
+        "default_month" : 6,
+        "default_year" : 2020
       },
       {
         "id" : 202837760,
         "name" : "Brasilia_Full",
-        "gridsize" : 30
+        "gridsize" : 30,
+        "default_day" : 2,
+        "default_month" : 6,
+        "default_year" : 2014
       },
       {
         "id" : 1828328431,
         "name" : "Brasilia_Outer",
-        "gridsize" : 30
+        "gridsize" : 30,
+        "default_day" : 2,
+        "default_month" : 6,
+        "default_year" : 2014
       },
       {
         "id" : -1914387303,
         "name" : "Buenos_Aires_Circuito_6",
-        "gridsize" : 32
+        "gridsize" : 32,
+        "default_day" : 20,
+        "default_month" : 2,
+        "default_year" : 2020
       },
       {
         "id" : -44643975,
         "name" : "Buenos_Aires_Circuito_6T",
-        "gridsize" : 32
+        "gridsize" : 32,
+        "default_day" : 20,
+        "default_month" : 2,
+        "default_year" : 2020
       },
       {
         "id" : -1297377774,
         "name" : "Buenos_Aires_Circuito_7",
-        "gridsize" : 32
+        "gridsize" : 32,
+        "default_day" : 20,
+        "default_month" : 2,
+        "default_year" : 2020
       },
       {
         "id" : -444279793,
         "name" : "Buenos_Aires_Circuito_8",
-        "gridsize" : 32
+        "gridsize" : 32,
+        "default_day" : 20,
+        "default_month" : 2,
+        "default_year" : 2020
       },
       {
         "id" : 325651039,
         "name" : "Buenos_Aires_Circuito_9",
-        "gridsize" : 32
+        "gridsize" : 32,
+        "default_day" : 20,
+        "default_month" : 2,
+        "default_year" : 2020
       },
       {
         "id" : 799677855,
         "name" : "Buenos_Aires_Circuito_12",
-        "gridsize" : 32
+        "gridsize" : 32,
+        "default_day" : 20,
+        "default_month" : 2,
+        "default_year" : 2020
       },
       {
         "id" : -430748509,
         "name" : "Buenos_Aires_Circuito_15",
-        "gridsize" : 32
+        "gridsize" : 32,
+        "default_day" : 20,
+        "default_month" : 2,
+        "default_year" : 2020
       },
       {
         "id" : -1786068114,
         "name" : "Buskerud_Long",
-        "gridsize" : 24
+        "gridsize" : 24,
+        "default_day" : 30,
+        "default_month" : 7,
+        "default_year" : 2020
       },
       {
         "id" : 2097280990,
         "name" : "Buskerud_Short",
-        "gridsize" : 24
+        "gridsize" : 24,
+        "default_day" : 30,
+        "default_month" : 7,
+        "default_year" : 2020
       },
       {
         "id" : 1910889511,
         "name" : "CadwellPark",
-        "gridsize" : 20
+        "gridsize" : 20,
+        "default_day" : 5,
+        "default_month" : 6,
+        "default_year" : 2020
       },
       {
         "id" : 2135405654,
         "name" : "CampoGrande1",
-        "gridsize" : 46
+        "gridsize" : 46,
+        "default_day" : 7,
+        "default_month" : 6,
+        "default_year" : 2020
       },
       {
         "id" : -916478809,
         "name" : "Cascavel2",
-        "gridsize" : 38
+        "gridsize" : 38,
+        "default_day" : 18,
+        "default_month" : 10,
+        "default_year" : 2020
       },
       {
         "id" : -2123543761,
         "name" : "Cleveland_GP",
-        "gridsize" : 32
+        "gridsize" : 32,
+        "default_day" : 5,
+        "default_month" : 6,
+        "default_year" : 2020
       },
       {
         "id" : -1142444519,
         "name" : "Cordoba_International",
-        "gridsize" : 24
+        "gridsize" : 24,
+        "default_day" : 3,
+        "default_month" : 6,
+        "default_year" : 2020
       },
       {
         "id" : -1043857231,
         "name" : "Cordoba_GP",
-        "gridsize" : 24
+        "gridsize" : 24,
+        "default_day" : 18,
+        "default_month" : 2,
+        "default_year" : 2020
       },
       {
         "id" : -171682166,
         "name" : "Cordoba_NATL",
-        "gridsize" : 24
+        "gridsize" : 24,
+        "default_day" : 9,
+        "default_month" : 10,
+        "default_year" : 2022
       },
       {
         "id" : 844082431,
         "name" : "CuritibaInternacional",
-        "gridsize" : 30
+        "gridsize" : 30,
+        "default_day" : 17,
+        "default_month" : 3,
+        "default_year" : 2020
       },
       {
         "id" : -549646259,
         "name" : "Curitiba_outer",
-        "gridsize" : 30
+        "gridsize" : 30,
+        "default_day" : 17,
+        "default_month" : 3,
+        "default_year" : 2020
       },
       {
         "id" : -923996694,
         "name" : "CurveloLong",
-        "gridsize" : 38
+        "gridsize" : 38,
+        "default_day" : 1,
+        "default_month" : 4,
+        "default_year" : 2020
       },
       {
         "id" : -203742941,
         "name" : "CurveloShort",
-        "gridsize" : 38
+        "gridsize" : 38,
+        "default_day" : 1,
+        "default_month" : 4,
+        "default_year" : 2020
       },
       {
         "id" : 2054003546,
         "name" : "Daytona_Speedway_Tri_Oval",
-        "gridsize" : 32
+        "gridsize" : 32,
+        "default_day" : 14,
+        "default_month" : 2,
+        "default_year" : 2021
       },
       {
         "id" : 467707118,
         "name" : "Daytona_Road_Course",
-        "gridsize" : 32
+        "gridsize" : 32,
+        "default_day" : 4,
+        "default_month" : 2,
+        "default_year" : 2021
       },
       {
         "id" : 705412912,
         "name" : "Daytona_Nascar_Road_Course",
-        "gridsize" : 32
+        "gridsize" : 32,
+        "default_day" : 14,
+        "default_month" : 2,
+        "default_year" : 2021
       },
       {
         "id" : 1497365379,
         "name" : "Donington_GP",
-        "gridsize" : 38
+        "gridsize" : 38,
+        "default_day" : 11,
+        "default_month" : 8,
+        "default_year" : 2020
       },
       {
         "id" : -865646115,
         "name" : "Donington_Nat",
-        "gridsize" : 38
+        "gridsize" : 38,
+        "default_day" : 11,
+        "default_month" : 8,
+        "default_year" : 2020
+      },
+      {
+        "id" : -869897529,
+        "name" : "Cascais_1988",
+        "gridsize" : 30,
+        "default_day" : 25,
+        "default_month" : 9,
+        "default_year" : 1988
       },
       {
         "id" : 1650761166,
         "name" : "Cascais",
-        "gridsize" : 30
+        "gridsize" : 30,
+        "default_day" : 26,
+        "default_month" : 3,
+        "default_year" : 2020
       },
       {
         "id" : -1015082583,
         "name" : "Cascais_Alternate",
-        "gridsize" : 30
+        "gridsize" : 30,
+        "default_day" : 26,
+        "default_month" : 3,
+        "default_year" : 2020
       },
       {
         "id" : 1602044389,
         "name" : "Fontana_OVAL",
-        "gridsize" : 32
+        "gridsize" : 32,
+        "default_day" : 30,
+        "default_month" : 5,
+        "default_year" : 2022
       },
       {
         "id" : -1899621736,
         "name" : "Fontana_SCC",
-        "gridsize" : 30
+        "gridsize" : 30,
+        "default_day" : 30,
+        "default_month" : 5,
+        "default_year" : 2022
       },
       {
         "id" : 1674501695,
         "name" : "Galeao_Airport",
-        "gridsize" : 32
+        "gridsize" : 32,
+        "default_day" : 10,
+        "default_month" : 4,
+        "default_year" : 2022
       },
       {
         "id" : 2044979547,
         "name" : "Gateway_OVAL",
-        "gridsize" : 32
+        "gridsize" : 32,
+        "default_day" : 20,
+        "default_month" : 8,
+        "default_year" : 2022
       },
       {
         "id" : -385022794,
         "name" : "Gateway_RC1",
-        "gridsize" : 32
+        "gridsize" : 32,
+        "default_day" : 20,
+        "default_month" : 8,
+        "default_year" : 2022
       },
       {
         "id" : 175033766,
         "name" : "Gateway_RC2",
-        "gridsize" : 32
+        "gridsize" : 32,
+        "default_day" : 20,
+        "default_month" : 8,
+        "default_year" : 2022
       },
       {
         "id" : -438882031,
         "name" : "GoianiaMixed",
-        "gridsize" : 36
+        "gridsize" : 36,
+        "default_day" : 29,
+        "default_month" : 3,
+        "default_year" : 2020
       },
       {
         "id" : 693994049,
         "name" : "GoianiaOuter",
-        "gridsize" : 36
+        "gridsize" : 36,
+        "default_day" : 29,
+        "default_month" : 3,
+        "default_year" : 2020
       },
       {
         "id" : -916412256,
         "name" : "GoianiaShort",
-        "gridsize" : 36
+        "gridsize" : 36,
+        "default_day" : 29,
+        "default_month" : 3,
+        "default_year" : 2020
       },
       {
         "id" : -939269561,
         "name" : "CopaSaoPauloStage2",
-        "gridsize" : 28
+        "gridsize" : 28,
+        "default_day" : 3,
+        "default_month" : 5,
+        "default_year" : 2020
       },
       {
         "id" : -844021865,
         "name" : "GranjaVianaKart101",
-        "gridsize" : 28
+        "gridsize" : 28,
+        "default_day" : 3,
+        "default_month" : 5,
+        "default_year" : 2020
       },
       {
         "id" : 553029608,
         "name" : "GranjaVianaKart102",
-        "gridsize" : 28
+        "gridsize" : 28,
+        "default_day" : 3,
+        "default_month" : 5,
+        "default_year" : 2020
       },
       {
         "id" : 1153901510,
         "name" : "GranjaVianaKart121",
-        "gridsize" : 28
+        "gridsize" : 28,
+        "default_day" : 3,
+        "default_month" : 5,
+        "default_year" : 2020
       },
       {
         "id" : 2058166835,
         "name" : "Guapore",
-        "gridsize" : 40
+        "gridsize" : 40,
+        "default_day" : 9,
+        "default_month" : 5,
+        "default_year" : 2020
       },
       {
         "id" : -435924753,
         "name" : "Hockenheim_GP",
-        "gridsize" : 30
+        "gridsize" : 30,
+        "default_day" : 27,
+        "default_month" : 8,
+        "default_year" : 2020
       },
       {
         "id" : 239659483,
         "name" : "Hockenheim_ShortA",
-        "gridsize" : 30
+        "gridsize" : 30,
+        "default_day" : 31,
+        "default_month" : 8,
+        "default_year" : 2020
       },
       {
         "id" : 230784137,
         "name" : "Hockenheim_ShortB",
-        "gridsize" : 30
+        "gridsize" : 30,
+        "default_day" : 31,
+        "default_month" : 8,
+        "default_year" : 2020
       },
       {
         "id" : -327427534,
         "name" : "Hockenheim_National",
-        "gridsize" : 30
+        "gridsize" : 30,
+        "default_day" : 31,
+        "default_month" : 8,
+        "default_year" : 2020
       },
       {
         "id" : -108270200,
         "name" : "Hockenheim_2001",
-        "gridsize" : 30
+        "gridsize" : 30,
+        "default_day" : 31,
+        "default_month" : 8,
+        "default_year" : 2001
       },
       {
         "id" : 534374248,
         "name" : "Hockenheim_1988",
-        "gridsize" : 36
+        "gridsize" : 36,
+        "default_day" : 31,
+        "default_month" : 8,
+        "default_year" : 1988
       },
       {
         "id" : -543681041,
         "name" : "Hockenheim_1988_short",
-        "gridsize" : 36
+        "gridsize" : 36,
+        "default_day" : 30,
+        "default_month" : 7,
+        "default_year" : 1988
       },
       {
         "id" : 473366003,
         "name" : "Hockenheim_1977",
-        "gridsize" : 36
+        "gridsize" : 36,
+        "default_day" : 31,
+        "default_month" : 8,
+        "default_year" : 1977
       },
       {
         "id" : 2111076703,
         "name" : "Ibarra2",
-        "gridsize" : 30
+        "gridsize" : 30,
+        "default_day" : 17,
+        "default_month" : 3,
+        "default_year" : 2020
       },
       {
         "id" : -676667056,
         "name" : "Ibarra_Reverse",
-        "gridsize" : 30
+        "gridsize" : 30,
+        "default_day" : 17,
+        "default_month" : 3,
+        "default_year" : 2020
       },
       {
         "id" : 731129913,
         "name" : "Imola_GP_2018",
-        "gridsize" : 32
+        "gridsize" : 32,
+        "default_day" : 3,
+        "default_month" : 5,
+        "default_year" : 2020
       },
       {
         "id" : 1003427592,
         "name" : "Imola_GP_1972",
-        "gridsize" : 20
+        "gridsize" : 20,
+        "default_day" : 1,
+        "default_month" : 5,
+        "default_year" : 1972
       },
       {
         "id" : 1544603199,
         "name" : "Imola_GP_1988",
-        "gridsize" : 26
+        "gridsize" : 26,
+        "default_day" : 1,
+        "default_month" : 5,
+        "default_year" : 1988
       },
       {
         "id" : -29732804,
         "name" : "Imola_GP_2001",
-        "gridsize" : 26
+        "gridsize" : 26,
+        "default_day" : 15,
+        "default_month" : 4,
+        "default_year" : 2001
       },
       {
         "id" : -468654879,
         "name" : "Indianapolis_2022_Oval",
-        "gridsize" : 32
+        "gridsize" : 32,
+        "default_day" : 29,
+        "default_month" : 5,
+        "default_year" : 2022
       },
       {
         "id" : 328837350,
         "name" : "Indianapolis_2022_RC",
-        "gridsize" : 32
+        "gridsize" : 32,
+        "default_day" : 29,
+        "default_month" : 5,
+        "default_year" : 2022
       },
       {
         "id" : -1478712571,
         "name" : "Interlagos_GP",
-        "gridsize" : 46
+        "gridsize" : 46,
+        "default_day" : 23,
+        "default_month" : 8,
+        "default_year" : 2020
       },
       {
         "id" : 420324528,
         "name" : "Interlagos_SCB",
-        "gridsize" : 46
+        "gridsize" : 46,
+        "default_day" : 23,
+        "default_month" : 8,
+        "default_year" : 2020
       },
       {
         "id" : 1312214486,
         "name" : "Interlagos_Historic",
-        "gridsize" : 32
+        "gridsize" : 32,
+        "default_day" : 26,
+        "default_month" : 2,
+        "default_year" : 1976
       },
       {
         "id" : -1704124105,
         "name" : "Interlagos_Historic_Outer",
-        "gridsize" : 32
+        "gridsize" : 32,
+        "default_day" : 26,
+        "default_month" : 2,
+        "default_year" : 1976
       },
       {
         "id" : 228315736,
         "name" : "InterlagosKart1",
-        "gridsize" : 38
+        "gridsize" : 38,
+        "default_day" : 1,
+        "default_month" : 11,
+        "default_year" : 2020
       },
       {
         "id" : 870961348,
         "name" : "InterlagosKart2",
-        "gridsize" : 38
+        "gridsize" : 38,
+        "default_day" : 1,
+        "default_month" : 11,
+        "default_year" : 2020
       },
       {
         "id" : 1869056157,
         "name" : "InterlagosKart3",
-        "gridsize" : 38
+        "gridsize" : 38,
+        "default_day" : 1,
+        "default_month" : 11,
+        "default_year" : 2020
       },
       {
         "id" : -89774641,
         "name" : "Jacarepagua_Historic",
-        "gridsize" : 40
+        "gridsize" : 40,
+        "default_day" : 3,
+        "default_month" : 4,
+        "default_year" : 1988
       },
       {
         "id" : 393495474,
         "name" : "Jacarepagua_2005",
-        "gridsize" : 40
+        "gridsize" : 40,
+        "default_day" : 9,
+        "default_month" : 4,
+        "default_year" : 2005
       },
       {
         "id" : -1081969582,
         "name" : "Jacarepagua_OVAL",
-        "gridsize" : 32
+        "gridsize" : 32,
+        "default_day" : 9,
+        "default_month" : 4,
+        "default_year" : 2005
       },
       {
         "id" : -467386624,
         "name" : "Jacarepagua_SCB",
-        "gridsize" : 40
+        "gridsize" : 40,
+        "default_day" : 9,
+        "default_month" : 4,
+        "default_year" : 2012
       },
       {
         "id" : 1891554116,
         "name" : "Jacarepagua_SHORT",
-        "gridsize" : 40
+        "gridsize" : 40,
+        "default_day" : 9,
+        "default_month" : 4,
+        "default_year" : 2012
+      },
+      {
+        "id" : -1548942089,
+        "name" : "Jerez_GP1988",
+        "gridsize" : 32,
+        "default_day" : 2,
+        "default_month" : 10,
+        "default_year" : 1988
       },
       {
         "id" : 1406264747,
         "name" : "Jerez_GP2019",
-        "gridsize" : 42
+        "gridsize" : 42,
+        "default_day" : 26,
+        "default_month" : 4,
+        "default_year" : 2020
       },
       {
         "id" : -1602971785,
         "name" : "Jerez_Standard",
-        "gridsize" : 42
+        "gridsize" : 42,
+        "default_day" : 26,
+        "default_month" : 4,
+        "default_year" : 2020
       },
       {
         "id" : 1261622488,
         "name" : "Kansai_GP",
-        "gridsize" : 52
+        "gridsize" : 52,
+        "default_day" : 5,
+        "default_month" : 10,
+        "default_year" : 2020
       },
       {
         "id" : 1035236174,
         "name" : "Kansai_Classic",
-        "gridsize" : 52
+        "gridsize" : 52,
+        "default_day" : 5,
+        "default_month" : 10,
+        "default_year" : 2020
       },
       {
         "id" : 530399487,
         "name" : "Kansai_East",
-        "gridsize" : 52
+        "gridsize" : 52,
+        "default_day" : 5,
+        "default_month" : 10,
+        "default_year" : 2020
       },
       {
         "id" : 85029775,
         "name" : "Kansai_West",
-        "gridsize" : 18
+        "gridsize" : 18,
+        "default_day" : 5,
+        "default_month" : 10,
+        "default_year" : 2020
       },
       {
         "id" : 2018595322,
         "name" : "Kyalami_2019",
-        "gridsize" : 40
+        "gridsize" : 40,
+        "default_day" : 15,
+        "default_month" : 4,
+        "default_year" : 2020
       },
       {
         "id" : -1384297883,
         "name" : "Kyalami_Historic",
-        "gridsize" : 25
+        "gridsize" : 25,
+        "default_day" : 5,
+        "default_month" : 3,
+        "default_year" : 1976
       },
       {
         "id" : 568559152,
         "name" : "Laguna_Seca_2020",
-        "gridsize" : 30
+        "gridsize" : 30,
+        "default_day" : 30,
+        "default_month" : 8,
+        "default_year" : 2020
       },
       {
         "id" : -1540556268,
         "name" : "Londrina_short",
-        "gridsize" : 46
+        "gridsize" : 46,
+        "default_day" : 17,
+        "default_month" : 5,
+        "default_year" : 2020
       },
       {
         "id" : -1959616750,
         "name" : "Londrina_long",
-        "gridsize" : 46
+        "gridsize" : 46,
+        "default_day" : 17,
+        "default_month" : 5,
+        "default_year" : 2020
       },
       {
         "id" : 1373891276,
         "name" : "LondrinaKart1",
-        "gridsize" : 28
+        "gridsize" : 28,
+        "default_day" : 7,
+        "default_month" : 4,
+        "default_year" : 2020
       },
       {
         "id" : 16295271,
         "name" : "LondrinaKart2",
-        "gridsize" : 28
+        "gridsize" : 28,
+        "default_day" : 7,
+        "default_month" : 4,
+        "default_year" : 2020
       },
       {
         "id" : 1731699995,
         "name" : "Long_Beach",
-        "gridsize" : 32
+        "gridsize" : 32,
+        "default_day" : 15,
+        "default_month" : 9,
+        "default_year" : 2020
       },
       {
         "id" : -696853932,
         "name" : "Montreal_Historic",
-        "gridsize" : 40
+        "gridsize" : 40,
+        "default_day" : 12,
+        "default_month" : 6,
+        "default_year" : 1988
       },
       {
         "id" : -1239363445,
         "name" : "Montreal_Modern",
-        "gridsize" : 40
+        "gridsize" : 40,
+        "default_day" : 9,
+        "default_month" : 6,
+        "default_year" : 2020
       },
       {
         "id" : -2054918047,
         "name" : "Monza_1971_10k",
-        "gridsize" : 22
+        "gridsize" : 22,
+        "default_day" : 25,
+        "default_month" : 4,
+        "default_year" : 1971
       },
       {
         "id" : 612695202,
         "name" : "Monza_1971_10knc",
-        "gridsize" : 22
+        "gridsize" : 22,
+        "default_day" : 25,
+        "default_month" : 4,
+        "default_year" : 1971
       },
       {
         "id" : -332593300,
         "name" : "Monza_1971",
-        "gridsize" : 22
+        "gridsize" : 22,
+        "default_day" : 5,
+        "default_month" : 9,
+        "default_year" : 1971
       },
       {
         "id" : 1003665316,
         "name" : "Monza_1991",
-        "gridsize" : 32
+        "gridsize" : 32,
+        "default_day" : 8,
+        "default_month" : 9,
+        "default_year" : 1991
       },
       {
         "id" : -1956398437,
         "name" : "Monza_1971_Junior",
-        "gridsize" : 22
+        "gridsize" : 22,
+        "default_day" : 5,
+        "default_month" : 9,
+        "default_year" : 1971
       },
       {
         "id" : -1257095693,
         "name" : "Monza_2020",
-        "gridsize" : 32
+        "gridsize" : 32,
+        "default_day" : 6,
+        "default_month" : 9,
+        "default_year" : 2020
       },
       {
         "id" : -2098177408,
         "name" : "Monza_2020_Junior",
-        "gridsize" : 32
+        "gridsize" : 32,
+        "default_day" : 16,
+        "default_month" : 4,
+        "default_year" : 2020
       },
       {
         "id" : 884472481,
         "name" : "Nordschleife_2020",
-        "gridsize" : 28
+        "gridsize" : 28,
+        "default_day" : 1,
+        "default_month" : 8,
+        "default_year" : 2020
       },
       {
         "id" : -472366150,
         "name" : "Nordschleife_2020_24hr",
-        "gridsize" : 30
+        "gridsize" : 30,
+        "default_day" : 1,
+        "default_month" : 8,
+        "default_year" : 2020
       },
       {
         "id" : 899109770,
         "name" : "Nurb_GP_2020",
-        "gridsize" : 30
+        "gridsize" : 30,
+        "default_day" : 1,
+        "default_month" : 9,
+        "default_year" : 2020
       },
       {
         "id" : -581740816,
         "name" : "Nurb_GP_2020_Veedol",
-        "gridsize" : 30
+        "gridsize" : 30,
+        "default_day" : 1,
+        "default_month" : 9,
+        "default_year" : 2020
       },
       {
         "id" : 1133983668,
         "name" : "Nurb_GP_2020_Sprint",
-        "gridsize" : 30
+        "gridsize" : 30,
+        "default_day" : 1,
+        "default_month" : 9,
+        "default_year" : 2020
       },
       {
         "id" : 1819021861,
         "name" : "Nurb_GP_2020_Sprint_S",
-        "gridsize" : 30
+        "gridsize" : 30,
+        "default_day" : 1,
+        "default_month" : 9,
+        "default_year" : 2020
+      },
+      {
+        "id" : -1099915987,
+        "name" : "Nurb_1971_Gesamt",
+        "gridsize" : 32,
+        "default_day" : 5,
+        "default_month" : 7,
+        "default_year" : 1971
+      },
+      {
+        "id" : 399001429,
+        "name" : "Nurb_1971_Nords",
+        "gridsize" : 32,
+        "default_day" : 5,
+        "default_month" : 7,
+        "default_year" : 1971
+      },
+      {
+        "id" : 199279675,
+        "name" : "Nurb_1971_Suds",
+        "gridsize" : 32,
+        "default_day" : 5,
+        "default_month" : 7,
+        "default_year" : 1971
       },
       {
         "id" : 809214670,
         "name" : "Ortona1",
-        "gridsize" : 30
+        "gridsize" : 30,
+        "default_day" : 22,
+        "default_month" : 9,
+        "default_year" : 2020
       },
       {
         "id" : 1549441566,
         "name" : "Ortona2",
-        "gridsize" : 30
+        "gridsize" : 30,
+        "default_day" : 22,
+        "default_month" : 9,
+        "default_year" : 2020
       },
       {
         "id" : -1213903939,
         "name" : "Ortona3",
-        "gridsize" : 30
+        "gridsize" : 30,
+        "default_day" : 22,
+        "default_month" : 9,
+        "default_year" : 2020
       },
       {
         "id" : 59749392,
         "name" : "Ortona4",
-        "gridsize" : 30
+        "gridsize" : 30,
+        "default_day" : 22,
+        "default_month" : 9,
+        "default_year" : 2020
       },
       {
         "id" : -498735748,
         "name" : "OultonPark_International",
-        "gridsize" : 28
+        "gridsize" : 28,
+        "default_day" : 11,
+        "default_month" : 7,
+        "default_year" : 2020
       },
       {
         "id" : -914088887,
         "name" : "OultonPark_Classic",
-        "gridsize" : 28
+        "gridsize" : 28,
+        "default_day" : 11,
+        "default_month" : 7,
+        "default_year" : 2020
       },
       {
         "id" : -92069206,
         "name" : "OultonPark_Fosters",
-        "gridsize" : 28
+        "gridsize" : 28,
+        "default_day" : 11,
+        "default_month" : 7,
+        "default_year" : 2020
       },
       {
         "id" : 1820168870,
         "name" : "OultonPark_Island",
-        "gridsize" : 28
+        "gridsize" : 28,
+        "default_day" : 11,
+        "default_month" : 7,
+        "default_year" : 2020
       },
       {
         "id" : -398562049,
         "name" : "Road_America_RC",
-        "gridsize" : 32
+        "gridsize" : 32,
+        "default_day" : 1,
+        "default_month" : 10,
+        "default_year" : 2021
       },
       {
         "id" : 372107672,
         "name" : "Road_America_RCB",
-        "gridsize" : 32
+        "gridsize" : 32,
+        "default_day" : 1,
+        "default_month" : 10,
+        "default_year" : 2021
       },
       {
         "id" : 761562120,
         "name" : "Salvador_Street_Circuit",
-        "gridsize" : 34
+        "gridsize" : 34,
+        "default_day" : 19,
+        "default_month" : 5,
+        "default_year" : 2020
       },
       {
         "id" : 1932830334,
         "name" : "SantaCruzDoSul",
-        "gridsize" : 36
+        "gridsize" : 36,
+        "default_day" : 19,
+        "default_month" : 7,
+        "default_year" : 2020
       },
       {
         "id" : -526206945,
         "name" : "Silverstone_1975",
-        "gridsize" : 36
+        "gridsize" : 36,
+        "default_day" : 19,
+        "default_month" : 7,
+        "default_year" : 1975
       },
       {
         "id" : -533867030,
         "name" : "Silverstone_1975_No_Chicane",
-        "gridsize" : 36
+        "gridsize" : 36,
+        "default_day" : 19,
+        "default_month" : 7,
+        "default_year" : 1975
       },
       {
         "id" : -797317755,
         "name" : "Silverstone_1991",
-        "gridsize" : 36
+        "gridsize" : 36,
+        "default_day" : 14,
+        "default_month" : 7,
+        "default_year" : 1991
       },
       {
         "id" : 509991425,
         "name" : "Silverstone_2001",
-        "gridsize" : 36
+        "gridsize" : 36,
+        "default_day" : 15,
+        "default_month" : 7,
+        "default_year" : 2001
       },
       {
         "id" : 1648317775,
         "name" : "Silverstone_2001_International",
-        "gridsize" : 36
+        "gridsize" : 36,
+        "default_day" : 15,
+        "default_month" : 7,
+        "default_year" : 2001
       },
       {
         "id" : -507834810,
         "name" : "Silverstone_2001_National",
-        "gridsize" : 36
+        "gridsize" : 36,
+        "default_day" : 15,
+        "default_month" : 7,
+        "default_year" : 2001
       },
       {
         "id" : -931849903,
         "name" : "Silverstone_GP",
-        "gridsize" : 32
+        "gridsize" : 32,
+        "default_day" : 14,
+        "default_month" : 7,
+        "default_year" : 2020
       },
       {
         "id" : 964004535,
         "name" : "Silverstone_Intl_2019",
-        "gridsize" : 32
+        "gridsize" : 32,
+        "default_day" : 14,
+        "default_month" : 7,
+        "default_year" : 2020
       },
       {
         "id" : -1061474453,
         "name" : "Silverstone_Natl_2019",
-        "gridsize" : 36
+        "gridsize" : 36,
+        "default_day" : 14,
+        "default_month" : 7,
+        "default_year" : 2020
       },
       {
         "id" : -1470317805,
         "name" : "Snetterton_100",
-        "gridsize" : 20
+        "gridsize" : 20,
+        "default_day" : 22,
+        "default_month" : 6,
+        "default_year" : 2020
       },
       {
         "id" : -1338478783,
         "name" : "Snetterton_200",
-        "gridsize" : 26
+        "gridsize" : 26,
+        "default_day" : 22,
+        "default_month" : 6,
+        "default_year" : 2020
       },
       {
         "id" : 987592900,
         "name" : "Snetterton_300",
-        "gridsize" : 26
+        "gridsize" : 26,
+        "default_day" : 22,
+        "default_month" : 6,
+        "default_year" : 2020
       },
       {
         "id" : -1736505524,
         "name" : "Spa_Francorchamps_1970",
-        "gridsize" : 22
+        "gridsize" : 32,
+        "default_day" : 7,
+        "default_month" : 6,
+        "default_year" : 1970
       },
       {
         "id" : 1170932587,
         "name" : "Spa_Francorchamps_1970_1000km",
-        "gridsize" : 22
+        "gridsize" : 32,
+        "default_day" : 17,
+        "default_month" : 5,
+        "default_year" : 1970
       },
       {
         "id" : 1283905272,
         "name" : "Spa_Francorchamps_1993",
-        "gridsize" : 30
+        "gridsize" : 30,
+        "default_day" : 25,
+        "default_month" : 8,
+        "default_year" : 1993
       },
       {
         "id" : -1262750090,
         "name" : "Spa_Francorchamps_2020",
-        "gridsize" : 30
+        "gridsize" : 30,
+        "default_day" : 30,
+        "default_month" : 8,
+        "default_year" : 2020
       },
       {
         "id" : 775712153,
         "name" : "Spa_Francorchamps_2022",
-        "gridsize" : 30
+        "gridsize" : 30,
+        "default_day" : 27,
+        "default_month" : 8,
+        "default_year" : 2022
       },
       {
         "id" : 756011139,
         "name" : "Speedland1",
-        "gridsize" : 14
+        "gridsize" : 14,
+        "default_day" : 30,
+        "default_month" : 1,
+        "default_year" : 2020
       },
       {
         "id" : -588458518,
         "name" : "Speedland2",
-        "gridsize" : 14
+        "gridsize" : 14,
+        "default_day" : 30,
+        "default_month" : 1,
+        "default_year" : 2020
       },
       {
         "id" : -327486946,
         "name" : "Speedland3",
-        "gridsize" : 14
+        "gridsize" : 14,
+        "default_day" : 30,
+        "default_month" : 1,
+        "default_year" : 2020
       },
       {
         "id" : -1941017299,
         "name" : "Speedland4",
-        "gridsize" : 14
+        "gridsize" : 14,
+        "default_day" : 30,
+        "default_month" : 1,
+        "default_year" : 2020
       },
       {
         "id" : -100668052,
         "name" : "Spielberg_Historic",
-        "gridsize" : 20
+        "gridsize" : 20,
+        "default_day" : 22,
+        "default_month" : 4,
+        "default_year" : 1977
       },
       {
         "id" : -213305159,
         "name" : "Spielberg_Vintage",
-        "gridsize" : 20
+        "gridsize" : 20,
+        "default_day" : 22,
+        "default_month" : 4,
+        "default_year" : 1974
       },
       {
         "id" : 735562025,
         "name" : "Spielberg_Modern",
-        "gridsize" : 32
+        "gridsize" : 32,
+        "default_day" : 5,
+        "default_month" : 7,
+        "default_year" : 2020
       },
       {
         "id" : 1819432538,
         "name" : "Spielberg_Short",
-        "gridsize" : 32
+        "gridsize" : 32,
+        "default_day" : 5,
+        "default_month" : 7,
+        "default_year" : 2020
       },
       {
         "id" : 2074495683,
         "name" : "Taruma_Internacional",
-        "gridsize" : 32
+        "gridsize" : 32,
+        "default_day" : 28,
+        "default_month" : 4,
+        "default_year" : 2020
       },
       {
         "id" : -108853074,
         "name" : "Taruma_Chicane",
-        "gridsize" : 32
+        "gridsize" : 32,
+        "default_day" : 28,
+        "default_month" : 4,
+        "default_year" : 2020
       },
       {
         "id" : 163877389,
         "name" : "Termas_Rio_Hondo",
-        "gridsize" : 34
+        "gridsize" : 34,
+        "default_day" : 29,
+        "default_month" : 5,
+        "default_year" : 2022
       },
       {
         "id" : 1882187011,
         "name" : "VeloCitta1",
-        "gridsize" : 34
+        "gridsize" : 34,
+        "default_day" : 28,
+        "default_month" : 6,
+        "default_year" : 2020
       },
       {
         "id" : 1557615576,
         "name" : "VeloCittaTD",
-        "gridsize" : 34
+        "gridsize" : 34,
+        "default_day" : 28,
+        "default_month" : 6,
+        "default_year" : 2020
       },
       {
         "id" : 1956507207,
         "name" : "VeloCittaClubDay",
-        "gridsize" : 34
+        "gridsize" : 34,
+        "default_day" : 28,
+        "default_month" : 6,
+        "default_year" : 2020
       },
       {
         "id" : 193535285,
         "name" : "Velopark_2010",
-        "gridsize" : 34
+        "gridsize" : 34,
+        "default_day" : 12,
+        "default_month" : 4,
+        "default_year" : 2020
       },
       {
         "id" : -1642426225,
         "name" : "Velopark_2017",
-        "gridsize" : 34
+        "gridsize" : 34,
+        "default_day" : 12,
+        "default_month" : 4,
+        "default_year" : 2020
       },
       {
         "id" : 1063112912,
         "name" : "Virginia_Full",
-        "gridsize" : 28
+        "gridsize" : 28,
+        "default_day" : 17,
+        "default_month" : 9,
+        "default_year" : 2020
       },
       {
         "id" : -1592912773,
         "name" : "Virginia_Grand",
-        "gridsize" : 28
+        "gridsize" : 28,
+        "default_day" : 17,
+        "default_month" : 9,
+        "default_year" : 2020
       },
       {
         "id" : 2134032188,
         "name" : "Virginia_North",
-        "gridsize" : 28
+        "gridsize" : 28,
+        "default_day" : 17,
+        "default_month" : 9,
+        "default_year" : 2020
       },
       {
         "id" : 1284894334,
         "name" : "Virginia_Patriot",
-        "gridsize" : 14
+        "gridsize" : 14,
+        "default_day" : 17,
+        "default_month" : 9,
+        "default_year" : 2020
       },
       {
         "id" : -1235504884,
         "name" : "Virginia_South",
-        "gridsize" : 16
+        "gridsize" : 16,
+        "default_day" : 17,
+        "default_month" : 9,
+        "default_year" : 2020
       },
       {
         "id" : -875185854,
         "name" : "Watkins_Glen_GP",
-        "gridsize" : 32
+        "gridsize" : 32,
+        "default_day" : 1,
+        "default_month" : 10,
+        "default_year" : 2021
       },
       {
         "id" : -191952188,
         "name" : "Watkins_Glen_GPIL",
-        "gridsize" : 32
+        "gridsize" : 32,
+        "default_day" : 1,
+        "default_month" : 10,
+        "default_year" : 2021
       },
       {
         "id" : 2035789624,
         "name" : "Watkins_Glen_S",
-        "gridsize" : 32
+        "gridsize" : 32,
+        "default_day" : 1,
+        "default_month" : 10,
+        "default_year" : 2021
       },
       {
         "id" : -619438500,
         "name" : "Watkins_Glen_SIL",
-        "gridsize" : 32
+        "gridsize" : 32,
+        "default_day" : 1,
+        "default_month" : 10,
+        "default_year" : 2021
       }
     ]
   }
