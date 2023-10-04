@@ -175,6 +175,33 @@ class Helper {
             return $seconds;
         }
 
+
+        // Matched h:i:s
+        if (preg_match (
+            '/^(.*):(.*):(.*)$/i',
+            $formatted_time, $time_matches))
+        {
+            // Get seconds
+            $seconds = ((int)$time_matches[1] * 3600) +
+                       ((int)$time_matches[2] * 60) +
+                       (int)$time_matches[3];
+
+            return $seconds;
+        }
+
+        // Matched i:s
+        if (preg_match (
+            '/^(.*):(.*)$/i',
+            $formatted_time, $time_matches))
+        {
+            // Get seconds
+            $seconds = ((int)$time_matches[1] * 60) +
+                       (int)$time_matches[2];
+
+            return $seconds;
+        }
+
+
         // Matched s.u (already formatted)
         if (is_numeric($formatted_time))
         {
