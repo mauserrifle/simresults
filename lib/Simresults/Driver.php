@@ -71,11 +71,13 @@ class Driver {
             if (count($names) > 1 AND $shorten_lastname) {
                 $last_name = array_pop($names);
 
-                // First character is not a letter, we will not threat this as
+                // First character is not a letter, we will not treat this as
                 // lastname and will try to get another part when more lastname
                 // parts are available
                 if (!preg_match('/[a-z]/i', $last_name[0]) and count($names) > 1) {
-                    $last_name = array_pop($names);
+                    if ( ($last_name_new = trim(array_pop($names))) and preg_match('/[a-z]/i', $last_name_new) ) {
+                        $last_name = $last_name_new;
+		    }
                 }
 
                 $name = $names[0]." ".$last_name[0];
