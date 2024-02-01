@@ -63,6 +63,13 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
         59 => array('name' => 'McLaren 570S GT4', 'class' => 'GT4'),
         60 => array('name' => 'Mercedes AMG GT4', 'class' => 'GT4'),
         61 => array('name' => 'Porsche 718 Cayman GT4', 'class' => 'GT4'),
+
+        80 => array('name' => 'Audi R8 LMS GT2', 'class' => 'GT2'),
+        82 => array('name' => 'KTM XBOW GT2', 'class' => 'GT2'),
+        83 => array('name' => 'Maserati MC20 GT2', 'class' => 'GT2'),
+        84 => array('name' => 'Mercedes AMG GT2', 'class' => 'GT2'),
+        85 => array('name' => 'Porsche 911 GT2 RS CS Evo', 'class' => 'GT2'),
+        86 => array('name' => 'Porsche 935', 'class' => 'GT2'),
     );
 
     protected $carsPs5 = array(
@@ -113,6 +120,13 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
         59 => array('name' => 'McLaren 570s GT4', 'class' => 'GT4'),
         60 => array('name' => 'Mercedes AMG GT4', 'class' => 'GT4'),
         61 => array('name' => 'Porsche 718 Cayman GT4 Clubsport', 'class' => 'GT4'),
+
+        80 => array('name' => 'Audi R8 LMS GT2', 'class' => 'GT2'),
+        82 => array('name' => 'KTM XBOW GT2', 'class' => 'GT2'),
+        83 => array('name' => 'Maserati MC20 GT2', 'class' => 'GT2'),
+        84 => array('name' => 'Mercedes AMG GT2', 'class' => 'GT2'),
+        85 => array('name' => 'Porsche 911 GT2 RS CS Evo', 'class' => 'GT2'),
+        86 => array('name' => 'Porsche 935', 'class' => 'GT2'),
     );
 
     protected $cup_categories = array(
