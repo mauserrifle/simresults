@@ -25,6 +25,10 @@ class RfactorReaderTest extends \PHPUnit\Framework\TestCase {
         error_reporting(E_ALL);
     }
 
+    /***
+    **** Below tests are rFactor 1 specific, but rFactor 2 reader is used.
+    ***/
+
     /**
      * Test reading the incidents (officially rfactor 2 XML does not include,
      * but we test this for compatibility with rf1 logs)

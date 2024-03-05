@@ -26,6 +26,287 @@ class ProjectCarsServerReaderTest extends \PHPUnit\Framework\TestCase {
     }
 
 
+
+    /***
+    **** Below tests use 1 race log file
+    ***/
+
+    /**
+     * Test reading the first 5 sessions
+     */
+    public function testReadingMultipleSessions()
+    {
+        $tests = array(
+            array(
+                'type'     => Session::TYPE_PRACTICE,
+                'name'     => null,
+                'max_laps' => 15,
+                'time'     => 1446146942,
+            ),
+            array(
+                'type'     => Session::TYPE_PRACTICE,
+                'name'     => 'Practice2',
+                'max_laps' => 15,
+                'time'     => 1446147862,
+            ),
+            array(
+                'type'     => Session::TYPE_QUALIFY,
+                'name'     => 'Qualifying',
+                'max_laps' => 15,
+                'time'     => 1446148782,
+            ),
+            array(
+                'type'     => Session::TYPE_WARMUP,
+                'name'     => null,
+                'max_laps' => 5,
+                'time'     => 1446149702,
+            ),
+            array(
+                'type'     => Session::TYPE_RACE,
+                'name'     => null,
+                'max_laps' => 7,
+                'time'     => 1446150022,
+            ),
+        );
+
+
+        // Get sessions and test them
+        $sessions = $this->getWorkingReader()->getSessions();
+        foreach ($tests as $test_key => $test)
+        {
+            $session = $sessions[$test_key];
+
+            //-- Validate
+            $this->assertSame($test['type'], $session->getType());
+            $this->assertSame($test['name'], $session->getName());
+            $this->assertSame($test['max_laps'], $session->getMaxLaps());
+            $this->assertSame($test['time'],
+                $session->getDate()->getTimestamp());
+            $this->assertSame('UTC',
+                $session->getDate()->getTimezone()->getName());
+
+            $this->assertSame(array(
+                'DamageType'                  => 3,
+                'FuelUsageType'               => 0,
+                'PenaltiesType'               => 0,
+                'ServerControlsSetup'         => 1,
+                'ServerControlsTrack'         => 1,
+                'ServerControlsVehicle'       => 0,
+                'ServerControlsVehicleClass'  => 1,
+                'TireWearType'                => 6,
+                ),
+                $session->getOtherSettings());
+        }
+
+
+    }
+
+    /**
+     * Test reading the server of a session
+     */
+    public function testReadingSessionServer()
+    {
+        // Get the server
+        $server = $this->getWorkingReader()->getSession()->getServer();
+
+        // Validate server
+        $this->assertSame('[ITA]www.racingnetwork.eu', $server->getName());
+        // TODO: Settings
+    }
+
+    /**
+     * Test reading the game of a session
+     */
+    public function testReadingSessionGame()
+    {
+        // Get the game
+        $game = $this->getWorkingReader()->getSession()->getGame();
+
+        // Validate game
+        $this->assertSame('Project Cars', $game->getName());
+    }
+
+    /**
+     * Test reading the track of a session
+     */
+    public function testReadingSessionTrack()
+    {
+        // Get the track
+        $track = $this->getWorkingReader()->getSession()->getTrack();
+
+        // Validate track
+        $this->assertSame('Mazda Raceway Laguna Seca', $track->getVenue());
+    }
+
+    /**
+     * Test reading the participants of a session
+     */
+    public function testReadingSessionParticipants()
+    {
+        // Get participants
+        $participants = $this->getWorkingReader()->getSession(5)
+            ->getParticipants();
+
+
+        // Validatet he number because we filter all who have no events
+        $this->assertSame(10, count($participants));
+
+
+        /**
+         * Validate first participant
+         */
+        $participant = $participants[0];
+
+        $this->assertSame('RouTeaX',
+                          $participant->getDriver()->getName());
+        $this->assertSame('Ford Mustang Cobra TransAm',
+                          $participant->getVehicle()->getName());
+        $this->assertSame('Trans-Am',
+                          $participant->getVehicle()->getClass());
+        $this->assertSame('76561198113826575',
+                          $participant->getDriver()->getDriverId());
+        $this->assertTrue($participant->getDriver()->isHuman());
+        $this->assertSame(1, $participant->getPosition());
+        $this->assertSame(10, $participant->getGridPosition());
+        $this->assertSame(Participant::FINISH_NORMAL,
+            $participant->getFinishStatus());
+        $this->assertSame(581.406, $participant->getTotalTime());
+
+
+        // Test any other participants to validate proper position
+        $participant = $participants[8];
+        $this->assertSame('SUCKER', $participant->getDriver()->getName());
+    }
+
+    /**
+     * Test reading laps of participants
+     *       Elapsed seconds based on session start and lap time?
+     *
+     * TODO: Double check gaps calculation. See gaps Race 1 @
+     *       http://simresults.net/151107-1jd
+     *       First driver should be second
+     */
+    public function testReadingLapsOfParticipants()
+    {
+        // Get participants
+        $participants = $this->getWorkingReader()->getSession(5)
+            ->getParticipants();
+
+
+        // Get the laps of first participant
+        $participant = $participants[0];
+        $laps = $participant->getLaps();
+
+        // Validate we have 7 laps
+        $this->assertSame(7, count($laps));
+
+        // Get driver of first participant (only one cause there are no swaps)
+        $driver = $participant->getDriver();
+
+        // Get first lap only
+        $lap = $laps[0];
+
+        // Validate laps
+        $this->assertSame(1, $lap->getNumber());
+        $this->assertSame(3, $lap->getPosition());
+        $this->assertSame(90.030, $lap->getTime());
+        $this->assertSame(0, $lap->getElapsedSeconds());
+        $this->assertSame($participant, $lap->getParticipant());
+        $this->assertSame($driver, $lap->getDriver());
+        $this->assertSame(0, $lap->getNumberOfCuts());
+
+        // Get sector times
+        $sectors = $lap->getSectorTimes();
+
+        // Validate sectors
+        $this->assertSame(36.008, $sectors[0]);
+        $this->assertSame(22.301, $sectors[1]);
+        $this->assertSame(31.7210, $sectors[2]);
+
+        // Second lap
+        $lap = $laps[1];
+        $this->assertSame(2, $lap->getNumber());
+        $this->assertSame(3, $lap->getPosition());
+        $this->assertSame(84.2240, $lap->getTime());
+        $this->assertSame(90.0300, $lap->getElapsedSeconds());
+        $this->assertSame(3, $lap->getNumberOfCuts());
+        $this->assertSame(2.872, $lap->getCutsTimeSkipped());
+        $this->assertSame(3.023, $lap->getCutsTime());
+
+        // Validate extra positions
+        $laps = $participants[3]->getLaps();
+        $this->assertSame(9, $laps[0]->getPosition());
+        $this->assertSame(6, $laps[2]->getPosition());
+    }
+
+    /**
+     * Test reading detailed cuts data
+     */
+    public function testCuts()
+    {
+        // Get participants
+        $participants = $this->getWorkingReader()->getSession(5)
+            ->getParticipants();
+
+
+        // Get the laps of first participant
+        $participant = $participants[0];
+        $laps = $participant->getLaps();
+
+        // Second lap cuts
+        $cuts = $laps[1]->getCuts();
+
+        // Validate
+        $this->assertSame(3, count($cuts));
+        $this->assertSame(2.8780, $cuts[0]->getCutTime());
+        $this->assertSame(2.7480, $cuts[0]->getTimeSkipped());
+        $this->assertSame(1446150159, $cuts[0]->getDate()->getTimestamp());
+        $this->assertSame(137, $cuts[0]->getElapsedSeconds());
+        $this->assertSame(9.888, $cuts[0]->getElapsedSecondsInLap());
+        $this->assertSame($laps[1], $cuts[0]->getLap());
+    }
+
+
+    /**
+     * Test reading incidents between cars
+     */
+    public function testIncidents()
+    {
+        $session = $this->getWorkingReader()->getSession(5);
+
+        $participants = $session->getParticipants();
+        $incidents = $session->getIncidents();
+
+        // Validate first incident
+        $this->assertSame(
+            'JarZon reported contact with another vehicle '
+           .'Seb Solo. CollisionMagnitude: 780',
+            $incidents[4]->getMessage());
+        $this->assertSame(1446150075,
+            $incidents[4]->getDate()->getTimestamp());
+        $this->assertSame(53, $incidents[4]->getElapsedSeconds());
+        $this->assertSame(Incident::TYPE_CAR, $incidents[4]->getType());
+        $this->assertSame($participants[6], $incidents[4]->getParticipant());
+        $this->assertSame($participants[9], $incidents[4]->getOtherParticipant());
+
+        // Validate incident that would have a unknown participant. But now
+        // it should not because we ignore these
+        $this->assertSame(
+            'JarZon reported contact with another vehicle '
+           .'Trey. CollisionMagnitude: 327',
+            $incidents[5]->getMessage());
+        $this->assertSame(1446150147,
+            $incidents[5]->getDate()->getTimestamp());
+        $this->assertSame(125, $incidents[5]->getElapsedSeconds());
+    }
+
+
+
+
+    /***
+    **** Below tests use different logs to test differences and bugs
+    ***/
+
     /**
      * Test exception when no data is supplied
      */
@@ -657,7 +938,7 @@ class ProjectCarsServerReaderTest extends \PHPUnit\Framework\TestCase {
 
         // Detect proper Automobilista2 car
         $participant = $participants[0];
-        $this->assertSame('MetalMoro AJR Chevy V8',
+        $this->assertSame('MetalMoro AJR Chevrolet',
             $participant->getVehicle()->getName());
         $participant = $participants[1];
         $this->assertSame('Ginetta G58',
@@ -728,279 +1009,6 @@ class ProjectCarsServerReaderTest extends \PHPUnit\Framework\TestCase {
     }
 
 
-
-    /***
-    **** Below tests use 1 race log file
-    ***/
-
-    /**
-     * Test reading the first 5 sessions
-     */
-    public function testReadingMultipleSessions()
-    {
-        $tests = array(
-            array(
-                'type'     => Session::TYPE_PRACTICE,
-                'name'     => null,
-                'max_laps' => 15,
-                'time'     => 1446146942,
-            ),
-            array(
-                'type'     => Session::TYPE_PRACTICE,
-                'name'     => 'Practice2',
-                'max_laps' => 15,
-                'time'     => 1446147862,
-            ),
-            array(
-                'type'     => Session::TYPE_QUALIFY,
-                'name'     => 'Qualifying',
-                'max_laps' => 15,
-                'time'     => 1446148782,
-            ),
-            array(
-                'type'     => Session::TYPE_WARMUP,
-                'name'     => null,
-                'max_laps' => 5,
-                'time'     => 1446149702,
-            ),
-            array(
-                'type'     => Session::TYPE_RACE,
-                'name'     => null,
-                'max_laps' => 7,
-                'time'     => 1446150022,
-            ),
-        );
-
-
-        // Get sessions and test them
-        $sessions = $this->getWorkingReader()->getSessions();
-        foreach ($tests as $test_key => $test)
-        {
-            $session = $sessions[$test_key];
-
-            //-- Validate
-            $this->assertSame($test['type'], $session->getType());
-            $this->assertSame($test['name'], $session->getName());
-            $this->assertSame($test['max_laps'], $session->getMaxLaps());
-            $this->assertSame($test['time'],
-                $session->getDate()->getTimestamp());
-            $this->assertSame('UTC',
-                $session->getDate()->getTimezone()->getName());
-
-            $this->assertSame(array(
-                'DamageType'                  => 3,
-                'FuelUsageType'               => 0,
-                'PenaltiesType'               => 0,
-                'ServerControlsSetup'         => 1,
-                'ServerControlsTrack'         => 1,
-                'ServerControlsVehicle'       => 0,
-                'ServerControlsVehicleClass'  => 1,
-                'TireWearType'                => 6,
-                ),
-                $session->getOtherSettings());
-        }
-
-
-    }
-
-    /**
-     * Test reading the server of a session
-     */
-    public function testReadingSessionServer()
-    {
-        // Get the server
-        $server = $this->getWorkingReader()->getSession()->getServer();
-
-        // Validate server
-        $this->assertSame('[ITA]www.racingnetwork.eu', $server->getName());
-        // TODO: Settings
-    }
-
-    /**
-     * Test reading the game of a session
-     */
-    public function testReadingSessionGame()
-    {
-        // Get the game
-        $game = $this->getWorkingReader()->getSession()->getGame();
-
-        // Validate game
-        $this->assertSame('Project Cars', $game->getName());
-    }
-
-    /**
-     * Test reading the track of a session
-     */
-    public function testReadingSessionTrack()
-    {
-        // Get the track
-        $track = $this->getWorkingReader()->getSession()->getTrack();
-
-        // Validate track
-        $this->assertSame('Mazda Raceway Laguna Seca', $track->getVenue());
-    }
-
-    /**
-     * Test reading the participants of a session
-     */
-    public function testReadingSessionParticipants()
-    {
-        // Get participants
-        $participants = $this->getWorkingReader()->getSession(5)
-            ->getParticipants();
-
-
-        // Validatet he number because we filter all who have no events
-        $this->assertSame(10, count($participants));
-
-
-        /**
-         * Validate first participant
-         */
-        $participant = $participants[0];
-
-        $this->assertSame('RouTeaX',
-                          $participant->getDriver()->getName());
-        $this->assertSame('Ford Mustang Cobra TransAm',
-                          $participant->getVehicle()->getName());
-        $this->assertSame('Trans-Am',
-                          $participant->getVehicle()->getClass());
-        $this->assertSame('76561198113826575',
-                          $participant->getDriver()->getDriverId());
-        $this->assertTrue($participant->getDriver()->isHuman());
-        $this->assertSame(1, $participant->getPosition());
-        $this->assertSame(10, $participant->getGridPosition());
-        $this->assertSame(Participant::FINISH_NORMAL,
-            $participant->getFinishStatus());
-        $this->assertSame(581.406, $participant->getTotalTime());
-
-
-        // Test any other participants to validate proper position
-        $participant = $participants[8];
-        $this->assertSame('SUCKER', $participant->getDriver()->getName());
-    }
-
-    /**
-     * Test reading laps of participants
-     *       Elapsed seconds based on session start and lap time?
-     *
-     * TODO: Double check gaps calculation. See gaps Race 1 @
-     *       http://simresults.net/151107-1jd
-     *       First driver should be second
-     */
-    public function testReadingLapsOfParticipants()
-    {
-        // Get participants
-        $participants = $this->getWorkingReader()->getSession(5)
-            ->getParticipants();
-
-
-        // Get the laps of first participant
-        $participant = $participants[0];
-        $laps = $participant->getLaps();
-
-        // Validate we have 7 laps
-        $this->assertSame(7, count($laps));
-
-        // Get driver of first participant (only one cause there are no swaps)
-        $driver = $participant->getDriver();
-
-        // Get first lap only
-        $lap = $laps[0];
-
-        // Validate laps
-        $this->assertSame(1, $lap->getNumber());
-        $this->assertSame(3, $lap->getPosition());
-        $this->assertSame(90.030, $lap->getTime());
-        $this->assertSame(0, $lap->getElapsedSeconds());
-        $this->assertSame($participant, $lap->getParticipant());
-        $this->assertSame($driver, $lap->getDriver());
-        $this->assertSame(0, $lap->getNumberOfCuts());
-
-        // Get sector times
-        $sectors = $lap->getSectorTimes();
-
-        // Validate sectors
-        $this->assertSame(36.008, $sectors[0]);
-        $this->assertSame(22.301, $sectors[1]);
-        $this->assertSame(31.7210, $sectors[2]);
-
-        // Second lap
-        $lap = $laps[1];
-        $this->assertSame(2, $lap->getNumber());
-        $this->assertSame(3, $lap->getPosition());
-        $this->assertSame(84.2240, $lap->getTime());
-        $this->assertSame(90.0300, $lap->getElapsedSeconds());
-        $this->assertSame(3, $lap->getNumberOfCuts());
-        $this->assertSame(2.872, $lap->getCutsTimeSkipped());
-        $this->assertSame(3.023, $lap->getCutsTime());
-
-        // Validate extra positions
-        $laps = $participants[3]->getLaps();
-        $this->assertSame(9, $laps[0]->getPosition());
-        $this->assertSame(6, $laps[2]->getPosition());
-    }
-
-    /**
-     * Test reading detailed cuts data
-     */
-    public function testCuts()
-    {
-        // Get participants
-        $participants = $this->getWorkingReader()->getSession(5)
-            ->getParticipants();
-
-
-        // Get the laps of first participant
-        $participant = $participants[0];
-        $laps = $participant->getLaps();
-
-        // Second lap cuts
-        $cuts = $laps[1]->getCuts();
-
-        // Validate
-        $this->assertSame(3, count($cuts));
-        $this->assertSame(2.8780, $cuts[0]->getCutTime());
-        $this->assertSame(2.7480, $cuts[0]->getTimeSkipped());
-        $this->assertSame(1446150159, $cuts[0]->getDate()->getTimestamp());
-        $this->assertSame(137, $cuts[0]->getElapsedSeconds());
-        $this->assertSame(9.888, $cuts[0]->getElapsedSecondsInLap());
-        $this->assertSame($laps[1], $cuts[0]->getLap());
-    }
-
-
-    /**
-     * Test reading incidents between cars
-     */
-    public function testIncidents()
-    {
-        $session = $this->getWorkingReader()->getSession(5);
-
-        $participants = $session->getParticipants();
-        $incidents = $session->getIncidents();
-
-        // Validate first incident
-        $this->assertSame(
-            'JarZon reported contact with another vehicle '
-           .'Seb Solo. CollisionMagnitude: 780',
-            $incidents[4]->getMessage());
-        $this->assertSame(1446150075,
-            $incidents[4]->getDate()->getTimestamp());
-        $this->assertSame(53, $incidents[4]->getElapsedSeconds());
-        $this->assertSame(Incident::TYPE_CAR, $incidents[4]->getType());
-        $this->assertSame($participants[6], $incidents[4]->getParticipant());
-        $this->assertSame($participants[9], $incidents[4]->getOtherParticipant());
-
-        // Validate incident that would have a unknown participant. But now
-        // it should not because we ignore these
-        $this->assertSame(
-            'JarZon reported contact with another vehicle '
-           .'Trey. CollisionMagnitude: 327',
-            $incidents[5]->getMessage());
-        $this->assertSame(1446150147,
-            $incidents[5]->getDate()->getTimestamp());
-        $this->assertSame(125, $incidents[5]->getElapsedSeconds());
-    }
 
 
 

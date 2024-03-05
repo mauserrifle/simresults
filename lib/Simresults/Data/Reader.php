@@ -55,6 +55,7 @@ abstract class Data_Reader {
             'Simresults\Data_Reader_RaceRoomServer',
             'Simresults\Data_Reader_Race07',
             'Simresults\Data_Reader_Iracing',
+            'Simresults\Data_Reader_SecondMonitor',
         );
 
         // File checking
@@ -462,6 +463,13 @@ abstract class Data_Reader {
 
         return $participants;
     }
+
+
+    public function arrayGet($array, $key, $default = NULL)
+    {
+        return $this->helper->arrayGet($array, $key, $default);
+    }
+
 
 
 

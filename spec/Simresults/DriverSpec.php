@@ -92,6 +92,11 @@ class DriverSpec extends ObjectBehavior
         $this->setName('Aname with a space at the end ');
         $this->getName()->shouldReturn('Aname with a space at the end');
         $this->getName(true, true)->shouldReturn('A. e');
+
+        // Ignore non letters as lastname
+        $this->setName('G Mossoni [FNX]');
+        $this->getName()->shouldReturn('G Mossoni [FNX]');
+        $this->getName(true, true)->shouldReturn('G. M');
     }
 
 }

@@ -47,6 +47,11 @@ class CachedParticipantSpec extends ObjectBehavior
         $this->itCaches('getLap', $this->lap1, array(1));
     }
 
+    function it_caches_vehicle()
+    {
+        $this->itCaches('getVehicle', $this->vehicle1);
+    }
+
     function it_caches_vehicles()
     {
         $this->itCaches('getVehicles', array($this->vehicle1));

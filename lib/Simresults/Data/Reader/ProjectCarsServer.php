@@ -292,6 +292,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 $participants_with_events = array();
 
                 // Parse events first only to collect missing participants
+                if (isset($session_data['events']) AND is_array($session_data['events']))
                 foreach ($session_data['events'] as $event)
                 {
                     // Participant unknown
@@ -308,6 +309,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 $cut_data = array();
                 $driver_has_entered_pit = array();
                 $finished_participants_by_id = array();
+                if (isset($session_data['events']) AND is_array($session_data['events']))
                 foreach ($session_data['events'] as $event)
                 {
                     // Get participant
@@ -590,6 +592,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                  */
 
                 // Get additional info from participants entries
+                if (isset($history['participants']) AND is_array($history['participants']))
                 foreach ($history['participants'] as $part_data)
                 {
                     // Driver not known
@@ -640,6 +643,7 @@ class Data_Reader_ProjectCarsServer extends Data_Reader {
                 // Session has predefined race result positions and it is a
                 // race session
                 if ($results = $session_data['results'] AND
+                    is_array($results) AND
                     $session->getType() === Session::TYPE_RACE)
                 {
                     // Init sorted result array

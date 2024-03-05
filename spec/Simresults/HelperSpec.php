@@ -60,8 +60,20 @@ class HelperSpec extends ObjectBehavior
         $this->secondsFromFormattedTime('01:02:03:506', true)
              ->shouldReturn(3723.506);
 
+        $this->secondsFromFormattedTime('40.5279')
+             ->shouldReturn(40.5279);
+
+        $this->secondsFromFormattedTime('1.15:332')
+             ->shouldReturn(75.332);
+
+        $this->secondsFromFormattedTime('00:00:23')
+             ->shouldReturn(23);
+
+        $this->secondsFromFormattedTime('00:23')
+             ->shouldReturn(23);
+
         $this->shouldThrow('InvalidArgumentException')
-             ->duringSecondsfromformattedtime('40.5279');
+             ->duringSecondsfromformattedtime('40.52.79');
 
         $this->secondsFromFormattedTime('')
              ->shouldReturn(null);
