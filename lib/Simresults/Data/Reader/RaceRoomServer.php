@@ -94,6 +94,8 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
 
             // Get participants and their best lap (only lap)
             $participants = array();
+            $participants_by_user_id = array();
+            $incidents_to_fix_other_participant = array();
             $players_data = $this->helper->arrayGet($session_data, 'Players', array());
             foreach ($players_data as $player_index => $player_data)
             {
@@ -321,6 +323,14 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
                                 $incident->setParticipant($participant);
                                 $incident->setType($type);
 
+                                if ($other_user_id = $this->helper->arrayGet($incident_data, 'OtherUserId')
+                                ){
+                                    $incidents_to_fix_other_participant[] = array(
+                                        'incident' => $incident,
+                                        'other_user_id' => $other_user_id
+                                    );
+                                }
+
                                 $session->addIncident($incident);
                             }
 
@@ -354,12 +364,26 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
 
                 // Add participant to collection
                 $participants[] = $participant;
+
+                if ($user_id = $this->helper->arrayGet($player_data, 'UserId')) {
+                    $participants_by_user_id[$user_id] = $participant;
+                }
             }
 
+            // Fix incident other player data
+            if ($incidents_to_fix_other_participant) {
+                foreach ($incidents_to_fix_other_participant as $incident_data) {
+                    if ($other_participant = $this->helper->arrayGet($participants_by_user_id, $incident_data['other_user_id'])
+                    ) {
+                        $incident = $incident_data['incident'];
+                        $incident->setOtherParticipant($other_participant);
 
-
-
-
+                        $message = $incident->getMessage();
+                        $message = str_replace($type_messages[0], $other_participant->getDriver()->getName().', '.$type_messages[0], $message);
+                        $incident->setMessage($message);
+                    }
+                }
+            }
 
             // Add participants to session
             $session->setParticipants($participants);

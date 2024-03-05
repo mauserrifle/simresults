@@ -361,6 +361,23 @@ class RaceRoomReaderTest extends \PHPUnit\Framework\TestCase {
     }
 
     /**
+     * Test reading other participant in incidents
+     */
+    public function testReadingOtherParticipantIncidents()
+    {
+        // The path to the data source
+        $file_path = realpath(__DIR__.
+            '/logs/raceroom-server/race.with.new.incident.indexes.and.sector.times.json');
+
+        // Get session
+        $session = Data_Reader::factory($file_path)->getSession(3);
+        $incidents = $session->getIncidents();
+        $this->assertSame('Jaroslav', $incidents[4]->getOtherParticipant()->getDriver()->getName());
+        $this->assertSame('LAP 2, JESPER, Jaroslav, Car to car collision, Points: 4', $incidents[4]->getMessage());
+    }
+
+
+    /**
      * Test ignoring invalid laps
      */
     public function testIgnoringInvalidLaps()
