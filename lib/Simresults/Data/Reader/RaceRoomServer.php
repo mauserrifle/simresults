@@ -208,7 +208,7 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
                             }
 
                             // But only when the log is not of a newer type
-                            if (!$has_other) {
+                            if (!$has_other OR $date->getTimestamp() < strtotime('2024-01-01')) {
                                 continue;
                             }
                         }
