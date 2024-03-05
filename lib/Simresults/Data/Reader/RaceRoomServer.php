@@ -186,17 +186,31 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
                         // Negative lap time, skip
                         if ($lap_data['Time'] < 0) continue;
 
-                        // Last lap, is race session, driver is dnf and
-                        // lap has incidents. We should exclude this lap
-                        // since it is registered fully with sectors and total
-                        // time as-if it were completed
+                        $incidents = $this->helper->arrayGet($lap_data, 'Incidents');
+
+                        // Last lap, is race session, driver is dnf and lap has
+                        // incidents. We should exclude this lap since it is
+                        // registered fully with sectors and total time as-if
+                        // it were completed. But only when the log is not of
+                        // a newer type.
                         if ($lap_key === (count($laps)-1) AND
                             $session->getType() === Session::TYPE_RACE AND
                             $participant->getFinishStatus() === Participant::FINISH_DNF AND
-                            $this->helper->arrayGet($lap_data, 'Incidents')
+                            $incidents
                         )
                         {
-                            continue;
+                            $has_other = false;
+                            foreach ($incidents as $incident) {
+                                if ($this->helper->arrayGet($incident, 'OtherUserId')) {
+                                    $has_other = true;
+                                    break;
+                                }
+                            }
+
+                            // But only when the log is not of a newer type
+                            if (!$has_other) {
+                                continue;
+                            }
                         }
 
                         // Init new lap
@@ -247,7 +261,7 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
 
 
                         // Has incidents
-                        if ($incidents = $this->helper->arrayGet($lap_data, 'Incidents'))
+                        if ($incidents)
                         {
                             // Type 0 = Car to car collision
                             // Type 1 = Collision with a track object
