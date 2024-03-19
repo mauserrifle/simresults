@@ -328,6 +328,11 @@
         "class" : "Group A"
       },
       {
+        "id" : -842343170,
+        "name" : "BMW M Hybrid V8",
+        "class" : "LMDh"
+      },
+      {
         "id" : 262982797,
         "name" : "Mercedes-Benz 190E 2.5-16 Evo II DTM",
         "class" : "Group A"
@@ -338,7 +343,7 @@
         "class" : "TC60S2"
       },
       {
-        "id" : 400701189,
+        "id" : -1075591999,
         "name" : "MINI Cooper S 1965 B",
         "class" : "CopaClassicB"
       },
@@ -356,6 +361,11 @@
         "id" : 912279169,
         "name" : "Cadillac DPi-VR",
         "class" : "DPI"
+      },
+      {
+        "id" : 16119375,
+        "name" : "Cadillac V-Series.R",
+        "class" : "LMDh"
       },
       {
         "id" : -950775810,
@@ -406,6 +416,16 @@
         "id" : 271036494,
         "name" : "McLaren MP4/6",
         "class" : "F-Classic_Gen4"
+      },
+      {
+        "id" : -520644472,
+        "name" : "McLaren MP4/7A",
+        "class" : "F-Hitech_Gen1"
+      },
+      {
+        "id" : -1271841366,
+        "name" : "McLaren MP4/8",
+        "class" : "F-Hitech_Gen2"
       },
       {
         "id" : 697161929,
@@ -486,6 +506,51 @@
         "id" : 617290135,
         "name" : "Formula Vintage Gen2 Model2",
         "class" : "F-Vintage_Gen2"
+      },
+      {
+        "id" : -546064616,
+        "name" : "Formula HiTech Gen1 Model1",
+        "class" : "F-Hitech_Gen1"
+      },
+      {
+        "id" : -1021087696,
+        "name" : "Formula HiTech Gen1 Model2",
+        "class" : "F-Hitech_Gen1"
+      },
+      {
+        "id" : -1740598979,
+        "name" : "Formula HiTech Gen1 Model3",
+        "class" : "F-Hitech_Gen1"
+      },
+      {
+        "id" : 1820184336,
+        "name" : "Formula HiTech Gen1 Model4",
+        "class" : "F-Hitech_Gen1"
+      },
+      {
+        "id" : 1511161791,
+        "name" : "Formula HiTech Gen2 Model1",
+        "class" : "F-Hitech_Gen2"
+      },
+      {
+        "id" : -873293860,
+        "name" : "Formula HiTech Gen2 Model2",
+        "class" : "F-Hitech_Gen2"
+      },
+      {
+        "id" : -1932898643,
+        "name" : "Formula HiTech Gen2 Model3",
+        "class" : "F-Hitech_Gen2"
+      },
+      {
+        "id" : 1609162502,
+        "name" : "Formula Junior",
+        "class" : "F-Junior"
+      },
+      {
+        "id" : -360792512,
+        "name" : "Formula USA 2023",
+        "class" : "F-USA_2023"
       },
       {
         "id" : -1201605905,
@@ -644,7 +709,7 @@
       },
       {
         "id" : -2086797102,
-        "name" : "VW Constellation",
+        "name" : "Volkswagen Constellation",
         "class" : "CopaTruck"
       },
       {
@@ -681,6 +746,11 @@
         "id" : 1433352906,
         "name" : "Ginetta G58",
         "class" : "P1"
+      },
+      {
+        "id" : 1989434463,
+        "name" : "Ginetta G58 Gen2",
+        "class" : "P1Gen2"
       },
       {
         "id" : -215037480,
@@ -728,6 +798,11 @@
         "class" : "GT4"
       },
       {
+        "id" : 1311912387,
+        "name" : "BMW M4 GT3",
+        "class" : "GT3_Gen2"
+      },
+      {
         "id" : 143364290,
         "name" : "BMW 2002 Turbo",
         "class" : "TC60S"
@@ -738,14 +813,29 @@
         "class" : "GT3"
       },
       {
+        "id" : 160008140,
+        "name" : "Mercedes-AMG GT3 Evo",
+        "class" : "GT3_Gen2"
+      },
+      {
         "id" : -855144880,
         "name" : "Mercedes-AMG GT4",
         "class" : "GT4"
       },
       {
+        "id" : -811404968,
+        "name" : "Porsche 963",
+        "class" : "LMDh"
+      },
+      {
         "id" : 809291220,
         "name" : "Porsche 911 GT3 R",
         "class" : "GT3"
+      },
+      {
+        "id" : -519566358,
+        "name" : "Porsche 992 GT3 R",
+        "class" : "GT3_Gen2"
       },
       {
         "id" : -1416203489,
@@ -776,6 +866,11 @@
         "id" : -310556497,
         "name" : "McLaren 720S GT3",
         "class" : "GT3"
+      },
+      {
+        "id" : -1026941607,
+        "name" : "McLaren 720S GT3 Evo",
+        "class" : "GT3_Gen2"
       },
       {
         "id" : -2019695308,
@@ -878,6 +973,21 @@
         "class" : "P1"
       },
       {
+        "id" : -1164814162,
+        "name" : "MetalMoro AJR Gen2 Chevrolet",
+        "class" : "P1Gen2"
+      },
+      {
+        "id" : 995681332,
+        "name" : "MetalMoro AJR Gen2 Honda",
+        "class" : "P1Gen2"
+      },
+      {
+        "id" : -68656752,
+        "name" : "MetalMoro AJR Gen2 Nissan",
+        "class" : "P1Gen2"
+      },
+      {
         "id" : -50694644,
         "name" : "Mitsubishi Lancer R",
         "class" : "LancerCup"
@@ -923,7 +1033,7 @@
         "class" : "StockCarV8_2022"
       },
       {
-        "id" : -1698500493,
+        "id" : 1137681361,
         "name" : "Chevrolet Cruze Stock Car 2023",
         "class" : "StockCarV8_2023"
       },
@@ -943,7 +1053,7 @@
         "class" : "StockCarV8_2022"
       },
       {
-        "id" : 821932703,
+        "id" : -1274933694,
         "name" : "Toyota Corolla Stock Car 2023",
         "class" : "StockCarV8_2023"
       },
@@ -996,6 +1106,11 @@
         "id" : -1870819346,
         "name" : "Sigma P1",
         "class" : "P2"
+      },
+      {
+        "id" : -1720554236,
+        "name" : "Sigma P1 G5",
+        "class" : "P1Gen2"
       },
       {
         "id" : -1201567586,
@@ -1104,22 +1219,22 @@
       },
       {
         "id" : -1170240161,
-        "name" : "VW Polo",
+        "name" : "Volkswagen Polo",
         "class" : "TSICup"
       },
       {
         "id" : -1762971386,
-        "name" : "VW Polo GTS",
+        "name" : "Volkswagen Polo GTS",
         "class" : "TSICup"
       },
       {
         "id" : -1137512839,
-        "name" : "VW Virtus",
+        "name" : "Volkswagen Virtus",
         "class" : "TSICup"
       },
       {
         "id" : -1310963279,
-        "name" : "VW Virtus GTS",
+        "name" : "Volkswagen Virtus GTS",
         "class" : "TSICup"
       },
       {
@@ -1211,6 +1326,36 @@
         "id" : 943684424,
         "name" : "Swift 009c Ford-Cosworth",
         "class" : "F-USA_Gen2"
+      },
+      {
+        "id" : -354497004,
+        "name" : "Formula Dirt",
+        "class" : "F-Dirt"
+      },
+      {
+        "id" : -1084561430,
+        "name" : "Kart Cross",
+        "class" : "Kartcross"
+      },
+      {
+        "id" : -69155277,
+        "name" : "MINI Countryman R60 RX",
+        "class" : "RX"
+      },
+      {
+        "id" : -983006067,
+        "name" : "Citroen DS3 RX",
+        "class" : "RX"
+      },
+      {
+        "id" : 2037619631,
+        "name" : "Volkswagen Polo RX",
+        "class" : "RX"
+      },
+      {
+        "id" : 512055145,
+        "name" : "Mitsubishi Lancer Evo10 RX",
+        "class" : "RX"
       }
     ]
   },
@@ -1234,12 +1379,60 @@
         "default_year" : 2020
       },
       {
+        "id" : 1328659519,
+        "name" : "Ascurra_Dirt",
+        "gridsize" : 16,
+        "default_day" : 28,
+        "default_month" : 9,
+        "default_year" : 2022
+      },
+      {
+        "id" : -2021270791,
+        "name" : "Ascurra_RX",
+        "gridsize" : 8,
+        "default_day" : 28,
+        "default_month" : 9,
+        "default_year" : 2023
+      },
+      {
         "id" : -1939104917,
         "name" : "Azure_Circuit_2021",
-        "gridsize" : 24,
+        "gridsize" : 26,
         "default_day" : 23,
         "default_month" : 5,
         "default_year" : 2021
+      },
+      {
+        "id" : -1976262540,
+        "name" : "Barcelona_1991",
+        "gridsize" : 32,
+        "default_day" : 29,
+        "default_month" : 9,
+        "default_year" : 1991
+      },
+      {
+        "id" : 788137081,
+        "name" : "Circuit_de_Catalunya_GP",
+        "gridsize" : 32,
+        "default_day" : 22,
+        "default_month" : 5,
+        "default_year" : 2022
+      },
+      {
+        "id" : -2045930240,
+        "name" : "Circuit_de_Catalunya_GP_NC",
+        "gridsize" : 32,
+        "default_day" : 22,
+        "default_month" : 5,
+        "default_year" : 2022
+      },
+      {
+        "id" : -1460882916,
+        "name" : "Circuit_de_Catalunya_NATL_NC",
+        "gridsize" : 32,
+        "default_day" : 22,
+        "default_month" : 5,
+        "default_year" : 2022
       },
       {
         "id" : -620880244,
@@ -1364,7 +1557,7 @@
       {
         "id" : 1910889511,
         "name" : "CadwellPark",
-        "gridsize" : 20,
+        "gridsize" : 26,
         "default_day" : 5,
         "default_month" : 6,
         "default_year" : 2020
@@ -1396,7 +1589,7 @@
       {
         "id" : -1142444519,
         "name" : "Cordoba_International",
-        "gridsize" : 24,
+        "gridsize" : 26,
         "default_day" : 3,
         "default_month" : 6,
         "default_year" : 2020
@@ -1404,7 +1597,7 @@
       {
         "id" : -1043857231,
         "name" : "Cordoba_GP",
-        "gridsize" : 24,
+        "gridsize" : 26,
         "default_day" : 18,
         "default_month" : 2,
         "default_year" : 2020
@@ -1412,7 +1605,7 @@
       {
         "id" : -171682166,
         "name" : "Cordoba_NATL",
-        "gridsize" : 24,
+        "gridsize" : 26,
         "default_day" : 9,
         "default_month" : 10,
         "default_year" : 2022
@@ -1528,6 +1721,14 @@
         "default_day" : 30,
         "default_month" : 5,
         "default_year" : 2022
+      },
+      {
+        "id" : -1399336065,
+        "name" : "Foz_RX",
+        "gridsize" : 8,
+        "default_day" : 23,
+        "default_month" : 4,
+        "default_year" : 2023
       },
       {
         "id" : 1674501695,
@@ -1716,7 +1917,7 @@
       {
         "id" : 1003427592,
         "name" : "Imola_GP_1972",
-        "gridsize" : 20,
+        "gridsize" : 26,
         "default_day" : 1,
         "default_month" : 5,
         "default_year" : 1972
@@ -1754,12 +1955,28 @@
         "default_year" : 2022
       },
       {
+        "id" : 930258290,
+        "name" : "Interlagos_1991",
+        "gridsize" : 32,
+        "default_day" : 24,
+        "default_month" : 3,
+        "default_year" : 1991
+      },
+      {
+        "id" : 1641699173,
+        "name" : "Interlagos_1993",
+        "gridsize" : 32,
+        "default_day" : 26,
+        "default_month" : 2,
+        "default_year" : 1993
+      },
+      {
         "id" : -1478712571,
         "name" : "Interlagos_GP",
         "gridsize" : 46,
-        "default_day" : 23,
-        "default_month" : 8,
-        "default_year" : 2020
+        "default_day" : 12,
+        "default_month" : 11,
+        "default_year" : 2021
       },
       {
         "id" : 420324528,
@@ -1798,7 +2015,7 @@
         "name" : "InterlagosKart2",
         "gridsize" : 38,
         "default_day" : 1,
-        "default_month" : 11,
+        "default_month" : 7,
         "default_year" : 2020
       },
       {
@@ -1900,7 +2117,7 @@
       {
         "id" : 85029775,
         "name" : "Kansai_West",
-        "gridsize" : 18,
+        "gridsize" : 26,
         "default_day" : 5,
         "default_month" : 10,
         "default_year" : 2020
@@ -1908,7 +2125,7 @@
       {
         "id" : 2018595322,
         "name" : "Kyalami_2019",
-        "gridsize" : 40,
+        "gridsize" : 32,
         "default_day" : 15,
         "default_month" : 4,
         "default_year" : 2020
@@ -1916,7 +2133,7 @@
       {
         "id" : -1384297883,
         "name" : "Kyalami_Historic",
-        "gridsize" : 25,
+        "gridsize" : 26,
         "default_day" : 5,
         "default_month" : 3,
         "default_year" : 1976
@@ -1928,6 +2145,22 @@
         "default_day" : 30,
         "default_month" : 8,
         "default_year" : 2020
+      },
+      {
+        "id" : 1060182346,
+        "name" : "Le_Mans_24h",
+        "gridsize" : 60,
+        "default_day" : 10,
+        "default_month" : 6,
+        "default_year" : 2023
+      },
+      {
+        "id" : 1446740417,
+        "name" : "Le_Mans_Circuit_Bugatti",
+        "gridsize" : 32,
+        "default_day" : 11,
+        "default_month" : 6,
+        "default_year" : 2022
       },
       {
         "id" : -1540556268,
@@ -1970,6 +2203,14 @@
         "default_year" : 2020
       },
       {
+        "id" : 880948150,
+        "name" : "Montreal_Historic_1991",
+        "gridsize" : 40,
+        "default_day" : 12,
+        "default_month" : 6,
+        "default_year" : 1991
+      },
+      {
         "id" : -696853932,
         "name" : "Montreal_Historic",
         "gridsize" : 40,
@@ -1988,7 +2229,7 @@
       {
         "id" : -2054918047,
         "name" : "Monza_1971_10k",
-        "gridsize" : 22,
+        "gridsize" : 26,
         "default_day" : 25,
         "default_month" : 4,
         "default_year" : 1971
@@ -1996,7 +2237,7 @@
       {
         "id" : 612695202,
         "name" : "Monza_1971_10knc",
-        "gridsize" : 22,
+        "gridsize" : 26,
         "default_day" : 25,
         "default_month" : 4,
         "default_year" : 1971
@@ -2004,7 +2245,7 @@
       {
         "id" : -332593300,
         "name" : "Monza_1971",
-        "gridsize" : 22,
+        "gridsize" : 26,
         "default_day" : 5,
         "default_month" : 9,
         "default_year" : 1971
@@ -2020,7 +2261,7 @@
       {
         "id" : -1956398437,
         "name" : "Monza_1971_Junior",
-        "gridsize" : 22,
+        "gridsize" : 26,
         "default_day" : 5,
         "default_month" : 9,
         "default_year" : 1971
@@ -2112,6 +2353,14 @@
         "default_day" : 5,
         "default_month" : 7,
         "default_year" : 1971
+      },
+      {
+        "id" : -1012344423,
+        "name" : "Nurb_2020_RX",
+        "gridsize" : 8,
+        "default_day" : 13,
+        "default_month" : 11,
+        "default_year" : 2022
       },
       {
         "id" : 809214670,
@@ -2284,7 +2533,7 @@
       {
         "id" : -1470317805,
         "name" : "Snetterton_100",
-        "gridsize" : 20,
+        "gridsize" : 26,
         "default_day" : 22,
         "default_month" : 6,
         "default_year" : 2020
@@ -2346,6 +2595,14 @@
         "default_year" : 2022
       },
       {
+        "id" : -1531498465,
+        "name" : "Spa_Francorchamps_2022_RX",
+        "gridsize" : 8,
+        "default_day" : 27,
+        "default_month" : 8,
+        "default_year" : 2022
+      },
+      {
         "id" : 756011139,
         "name" : "Speedland1",
         "gridsize" : 14,
@@ -2380,7 +2637,7 @@
       {
         "id" : -100668052,
         "name" : "Spielberg_Historic",
-        "gridsize" : 20,
+        "gridsize" : 26,
         "default_day" : 22,
         "default_month" : 4,
         "default_year" : 1977
@@ -2388,7 +2645,7 @@
       {
         "id" : -213305159,
         "name" : "Spielberg_Vintage",
-        "gridsize" : 20,
+        "gridsize" : 26,
         "default_day" : 22,
         "default_month" : 4,
         "default_year" : 1974
@@ -2508,10 +2765,42 @@
       {
         "id" : -1235504884,
         "name" : "Virginia_South",
-        "gridsize" : 16,
+        "gridsize" : 26,
         "default_day" : 17,
         "default_month" : 9,
         "default_year" : 2020
+      },
+      {
+        "id" : 779269607,
+        "name" : "Tykki_Dirt1",
+        "gridsize" : 16,
+        "default_day" : 28,
+        "default_month" : 5,
+        "default_year" : 2022
+      },
+      {
+        "id" : -1929604728,
+        "name" : "Tykki_Dirt2",
+        "gridsize" : 16,
+        "default_day" : 28,
+        "default_month" : 5,
+        "default_year" : 2022
+      },
+      {
+        "id" : 1637229097,
+        "name" : "Tykki_RX",
+        "gridsize" : 8,
+        "default_day" : 28,
+        "default_month" : 5,
+        "default_year" : 2022
+      },
+      {
+        "id" : -1627472795,
+        "name" : "Tykki_Tarmac",
+        "gridsize" : 16,
+        "default_day" : 28,
+        "default_month" : 5,
+        "default_year" : 2022
       },
       {
         "id" : -875185854,
@@ -2544,6 +2833,22 @@
         "default_day" : 1,
         "default_month" : 10,
         "default_year" : 2021
+      },
+      {
+        "id" : 761864750,
+        "name" : "Hockenheim_RX",
+        "gridsize" : 8,
+        "default_day" : 27,
+        "default_month" : 8,
+        "default_year" : 2023
+      },
+      {
+        "id" : -1698375535,
+        "name" : "Circuit_de_Catalunya_RX",
+        "gridsize" : 8,
+        "default_day" : 30,
+        "default_month" : 10,
+        "default_year" : 2022
       }
     ]
   }
