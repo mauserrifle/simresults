@@ -306,7 +306,7 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
             // BMW M4 GT3 (30) becomes Lamborghini Huracan Supertrofeo Evo2 (29)
             $carsWithConsoleFixes[30] = $this->cars[29];
         }
-        if (preg_match('/ps5/i', $serverName)) {
+        if (preg_match('/(ps5|crossplay)/i', $serverName)) {
             $carsWithConsoleFixes = $this->carsPs5;
         }
 
