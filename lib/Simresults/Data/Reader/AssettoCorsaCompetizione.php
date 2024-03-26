@@ -347,6 +347,9 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
                     $name .= ' '.$last_name;
                 }
 
+                // Quickfix: Remove new line
+                $name = str_replace("\n", ' ', $name);
+
                 $driver->setName(trim($name));
 
                 $driver->setDriverId($this->helper->arrayGet(
