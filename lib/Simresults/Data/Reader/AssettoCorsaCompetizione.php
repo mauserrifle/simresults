@@ -331,6 +331,8 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
                 continue;
             }
 
+            $team_name_driver = null;
+
             // Create drivers
             $drivers = array();
 
@@ -344,11 +346,18 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
                     $name .= $first_name;
                 }
                 if ($last_name = $this->helper->arrayGet($driver_data, 'lastName')) {
+
+                    // Team name parsing where some leagues add it to the last name after newline
+                    if (preg_match("/^(.*)\n(.*)$/i", $last_name, $last_name_matches)) {
+                        $last_name = $last_name_matches[1];
+
+                        if (!$team_name_driver) { // Only first do occurence
+                            $team_name_driver = $last_name_matches[2];
+                        }
+                    }
+
                     $name .= ' '.$last_name;
                 }
-
-                // Quickfix: Remove new line
-                $name = str_replace("\n", ' ', $name);
 
                 $driver->setName(trim($name));
 
@@ -363,7 +372,7 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
             $participant->setDrivers($drivers)
                         ->setFinishStatus(Participant::FINISH_NORMAL)
                         ->setTeam($this->helper->arrayGet(
-                            $lead['car'], 'teamName'));
+                            $lead['car'], 'teamName')?:$team_name_driver);
 
             // Doesn't seem to be correct. Order seems in finish order
             // if ($session->getType() === Session::TYPE_RACE) {
