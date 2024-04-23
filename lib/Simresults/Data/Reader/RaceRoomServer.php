@@ -187,6 +187,9 @@ class Data_Reader_RaceRoomServer extends Data_Reader {
                         if ($lap_data['Time'] < 0) continue;
 
                         $incidents = $this->helper->arrayGet($lap_data, 'Incidents');
+                        if ($incidents) {
+                            $incidents = array_unique($incidents, SORT_REGULAR);
+                        }
 
                         // Last lap, is race session, driver is dnf and lap has
                         // incidents. We should exclude this lap since it is
