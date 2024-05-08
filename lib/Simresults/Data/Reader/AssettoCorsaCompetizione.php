@@ -51,6 +51,8 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
         34 => array('name' => 'Porsche 992 GT3 R', 'class' => 'GT3'),
         35 => array('name' => 'McLaren 720S GT3 Evo 2023', 'class' => 'GT3'),
 
+        36 => array('name' => 'Ford Mustang GT3', 'class' => 'GT3'),
+
         // GT4 DLC
         50 => array('name' => 'Alpine A110 GT4', 'class' => 'GT4'),
         51 => array('name' => 'Aston Martin Vantage GT4', 'class' => 'GT4'),
