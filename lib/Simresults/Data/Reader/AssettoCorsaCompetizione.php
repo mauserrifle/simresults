@@ -496,7 +496,7 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
             }
 
             // Set driver based on driver index (swapping support)
-            $lap->setDriver($lap_participant->getDriver($driverIndex+1) ?:$lap_participant->getDriver(0));
+            $lap->setDriver($lap_participant->getDriver($driverIndex+1) ?:$lap_participant->getDriver(1));
 
             // Is valid for best?
             $valid_for_best = $this->helper->arrayGet($lap_data, 'isValidForBest');
