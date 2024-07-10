@@ -105,8 +105,7 @@ class AssettoCorsaCompetizioneReaderTest extends \PHPUnit\Framework\TestCase {
         $this->assertSame(82, $participant->getVehicle()->getNumber());
         $this->assertSame('GT3', $participant->getVehicle()->getClass());
         $this->assertSame('Overall', $participant->getVehicle()->getCup());
-        $this->assertSame('',
-                          $participant->getTeam());
+        $this->assertSame(null, $participant->getTeam());
         $this->assertSame(1, $participant->getPosition());
         $this->assertSame(1, $participant->getClassPosition());
         $this->assertSame(Participant::FINISH_NORMAL,
@@ -125,6 +124,12 @@ class AssettoCorsaCompetizioneReaderTest extends \PHPUnit\Framework\TestCase {
         $this->assertSame('GT3', $participant->getVehicle()->getClass());
         $this->assertSame('Overall', $participant->getVehicle()->getCup());
 
+
+
+        // Test team name parsing in name (using newlines)
+        $participant = $participants[2];
+        $this->assertSame('Federico Siv', $participant->getDriver()->getName());
+        $this->assertSame('TEAMname', $participant->getTeam());
     }
 
 

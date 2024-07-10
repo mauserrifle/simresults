@@ -51,6 +51,8 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
         34 => array('name' => 'Porsche 992 GT3 R', 'class' => 'GT3'),
         35 => array('name' => 'McLaren 720S GT3 Evo 2023', 'class' => 'GT3'),
 
+        36 => array('name' => 'Ford Mustang GT3', 'class' => 'GT3'),
+
         // GT4 DLC
         50 => array('name' => 'Alpine A110 GT4', 'class' => 'GT4'),
         51 => array('name' => 'Aston Martin Vantage GT4', 'class' => 'GT4'),
@@ -306,7 +308,7 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
             // BMW M4 GT3 (30) becomes Lamborghini Huracan Supertrofeo Evo2 (29)
             $carsWithConsoleFixes[30] = $this->cars[29];
         }
-        if (preg_match('/ps5/i', $serverName)) {
+        if (preg_match('/(ps5|crossplay)/i', $serverName)) {
             $carsWithConsoleFixes = $this->carsPs5;
         }
 
@@ -331,6 +333,8 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
                 continue;
             }
 
+            $team_name_driver = null;
+
             // Create drivers
             $drivers = array();
 
@@ -344,6 +348,16 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
                     $name .= $first_name;
                 }
                 if ($last_name = $this->helper->arrayGet($driver_data, 'lastName')) {
+
+                    // Team name parsing where some leagues add it to the last name after newline
+                    if (preg_match("/^(.*)\n(.*)$/i", $last_name, $last_name_matches)) {
+                        $last_name = $last_name_matches[1];
+
+                        if (!$team_name_driver) { // Only first do occurence
+                            $team_name_driver = $last_name_matches[2];
+                        }
+                    }
+
                     $name .= ' '.$last_name;
                 }
 
@@ -360,7 +374,7 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
             $participant->setDrivers($drivers)
                         ->setFinishStatus(Participant::FINISH_NORMAL)
                         ->setTeam($this->helper->arrayGet(
-                            $lead['car'], 'teamName'));
+                            $lead['car'], 'teamName')?:$team_name_driver);
 
             // Doesn't seem to be correct. Order seems in finish order
             // if ($session->getType() === Session::TYPE_RACE) {
@@ -482,7 +496,7 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
             }
 
             // Set driver based on driver index (swapping support)
-            $lap->setDriver($lap_participant->getDriver($driverIndex+1));
+            $lap->setDriver($lap_participant->getDriver($driverIndex+1) ?:$lap_participant->getDriver(1));
 
             // Is valid for best?
             $valid_for_best = $this->helper->arrayGet($lap_data, 'isValidForBest');
@@ -592,9 +606,11 @@ class Data_Reader_AssettoCorsaCompetizione extends Data_Reader {
                 $driverIndex = $penalty_data['driverId'];;
             }
 
+            $penalty_driver = $penalty_participant->getDriver($driverIndex+1) ?: $penalty_participant->getDriver(0);
+
             // Set message
             $penalty->setMessage(
-                $penalty_participant->getDriver($driverIndex+1)->getName().
+                $penalty_driver->getName().
 
                 ' - '.
                 $this->helper->arrayGet($penalty_data, 'reason', 'Unknown reason').
