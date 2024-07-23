@@ -1170,12 +1170,19 @@ class Data_Reader_AssettoCorsaServer extends Data_Reader {
                 $data_session2_split = $data_session2_split[0];
 
                 // Tyre info found
-                if(preg_match_all($tyres_regex =
-                '/'.preg_quote($name, '/').".*? changed tyres to (.*?)\n"
-                .'/i', $data_session2_split, $tyre_matches))
-                {
-                    $tyre_unique = array_unique($tyre_matches[1]);
-                    $tyre = array_pop($tyre_matches[1]);
+                try {
+                    if(preg_match_all($tyres_regex =
+                    '/'.preg_quote($name, '/').".*? changed tyres to (.*?)\n"
+                    .'/i', $data_session2_split, $tyre_matches))
+                    {
+                        $tyre_unique = array_unique($tyre_matches[1]);
+                        $tyre = array_pop($tyre_matches[1]);
+                    }
+                } catch (\Exception $ex) {
+                    // Only bubble up exception when not too large exception
+                    if (!preg_match('/too large/i', $ex->getMessage())) {
+                        throw $ex;
+                    }
                 }
 
 
