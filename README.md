@@ -35,6 +35,13 @@ It's also possible to use the Simresults website remote results [API](https://si
 * Sponsor: [GitHub](https://github.com/sponsors/mauserrifle) (please email me for alternatives)
 
 
+## Sponsors
+
+Big thanks to the following sponsors for supporting Simresults!
+Please pay them a visit :)
+
+* [XCL - Simracing for PS5 & Xbox S/X](https://www.xboxcommunityleague.com/?ref=simresults)
+
 ## Supported games
 
 Simresults supports a wide range of games:
@@ -215,13 +222,6 @@ Open <http://localhost:8000> and all should work!
 
 For further usage please read the classes code within the `lib` folder. They
 are carefully documented.
-
-## Sponsors
-
-Big thanks to the following sponsors for supporting Simresults!
-Please pay them a visit :)
-
-* [Coach Dave - David Perel](https://www.davidperel.net/coaching/?ref=simresults)
 
 ## Bugs
 
