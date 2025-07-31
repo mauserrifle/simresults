@@ -72,7 +72,14 @@ class Data_Reader_Rfactor2 extends Data_Reader {
         if (
             $xml_session = $this->dom->getElementsByTagName('Race')->item(0) OR
             $xml_session = $this->dom->getElementsByTagName('Race2')->item(0) OR
-            $xml_session = $this->dom->getElementsByTagName('Race3')->item(0)
+            $xml_session = $this->dom->getElementsByTagName('Race3')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('Race4')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('Race5')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('Race6')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('Race7')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('Race8')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('Race9')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('Race10')->item(0)
         	)
         {
             // Set type to race
@@ -85,14 +92,31 @@ class Data_Reader_Rfactor2 extends Data_Reader {
             $xml_session = $this->dom->getElementsByTagName('Qualify2')->item(0) OR
             $xml_session = $this->dom->getElementsByTagName('Qualify3')->item(0) OR
             $xml_session = $this->dom->getElementsByTagName('Qualify4')->item(0) OR
-            $xml_session = $this->dom->getElementsByTagName('Qualify5')->item(0)
+            $xml_session = $this->dom->getElementsByTagName('Qualify5')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('Qualify6')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('Qualify7')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('Qualify8')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('Qualify9')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('Qualify10')->item(0)
             )
         {
             // Set type to qualify
             $session->setType(Session::TYPE_QUALIFY);
         }
         // Is warmup session
-        elseif ($xml_session = $this->dom->getElementsByTagName('Warmup')->item(0))
+        elseif (
+            $xml_session = $this->dom->getElementsByTagName('Warmup')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('Warmup1')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('Warmup2')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('Warmup3')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('Warmup4')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('Warmup5')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('Warmup6')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('Warmup7')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('Warmup8')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('Warmup9')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('Warmup10')->item(0)
+        )
         {
             // Set type to warmup
             $session->setType(Session::TYPE_WARMUP);
@@ -103,10 +127,24 @@ class Data_Reader_Rfactor2 extends Data_Reader {
             $xml_session = $this->dom->getElementsByTagName('Practice1')->item(0) OR
             $xml_session = $this->dom->getElementsByTagName('Practice2')->item(0) OR
             $xml_session = $this->dom->getElementsByTagName('Practice3')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('Practice4')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('Practice5')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('Practice6')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('Practice7')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('Practice8')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('Practice9')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('Practice10')->item(0) OR
             $xml_session = $this->dom->getElementsByTagName('TestDay')->item(0) OR
             $xml_session = $this->dom->getElementsByTagName('TestDay1')->item(0) OR
             $xml_session = $this->dom->getElementsByTagName('TestDay2')->item(0) OR
-            $xml_session = $this->dom->getElementsByTagName('TestDay3')->item(0)
+            $xml_session = $this->dom->getElementsByTagName('TestDay3')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('TestDay4')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('TestDay5')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('TestDay6')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('TestDay7')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('TestDay8')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('TestDay9')->item(0) OR
+            $xml_session = $this->dom->getElementsByTagName('TestDay10')->item(0)
             )
         {
             // Set type to practice
