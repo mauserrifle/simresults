@@ -1,0 +1,276 @@
+{
+  "server_name": "Ox seiner",
+  "server_id": null,
+  "server_ip": null,
+  "season_guid": "404c69d9-da9f-4267-90ae-50bac89ae47c",
+  "session_name": "Race Weekend",
+  "session_type": "WarmUp",
+  "track_name": "Fuji Speedway",
+  "track_layout_name": "GP",
+  "championship_id": {
+    "a": "4633194501054087783",
+    "b": "10425358950569010300"
+  },
+  "event_index": 0,
+  "session_index": 0,
+  "is_static": false,
+  "is_completed": true,
+  "specialization": {
+    "@type": "type.googleapis.com/TimeAttack.Specialization",
+    "base": {
+      "session_duration_ms": 60000,
+      "session_laps": 0,
+      "maximum_session_overtime_duration_ms": 1000,
+      "maximum_session_overtime_before_next_session": 90000,
+      "intro_music": true,
+      "end_music": true,
+      "end_replay_type": "None"
+    },
+    "base_file": null,
+    "base_source": "Custom",
+    "penalty_transformations": {
+      "transformations": []
+    },
+    "penalty_transformations_file": "EA1",
+    "penalty_transformations_source": "Custom",
+    "penalty_investigations": {
+      "triggers": [
+        {
+          "race_car_cut": {
+            "tyres_out": 3,
+            "wet_multiplier": 0
+          },
+          "command_name": null,
+          "checks": []
+        },
+        {
+          "wrong_way": {
+            "min_speed": 2,
+            "speed_multiplier": 0.1,
+            "out_of_track_multiplier": 2
+          },
+          "command_name": null,
+          "checks": [
+            {
+              "data": {
+                "type": "PenaltyType_Warning",
+                "penalty_time_ms": 0,
+                "laps_for_clearing": 0
+              },
+              "weight": 30
+            },
+            {
+              "data": {
+                "type": "PenaltyType_Disqualification",
+                "penalty_time_ms": 0,
+                "laps_for_clearing": 0
+              },
+              "weight": 100
+            }
+          ]
+        },
+        {
+          "speeding": {
+            "required_speed": 60,
+            "check_if_higher": true
+          },
+          "command_name": "pitlane",
+          "checks": [
+            {
+              "data": {
+                "type": "PenaltyType_Warning",
+                "penalty_time_ms": 0,
+                "laps_for_clearing": 0
+              },
+              "weight": 62
+            },
+            {
+              "data": {
+                "type": "PenaltyType_MP_TeleportToPit",
+                "penalty_time_ms": 10000,
+                "laps_for_clearing": 0
+              },
+              "weight": 70
+            }
+          ]
+        }
+      ]
+    },
+    "penalty_investigations_file": "EA1",
+    "penalty_investigations_source": "Custom",
+    "rules": []
+  },
+  "car_standings": [
+    {
+      "car_id": {
+        "a": "4872188903426044455",
+        "b": "4271286360426394266"
+      },
+      "total_km": 0,
+      "total_fuel_liters": 0,
+      "energy_source_consumed": 0,
+      "energy_source_type": "FuelLiter",
+      "starting_position": 0,
+      "tyre_tread_consumed": []
+    },
+    {
+      "car_id": {
+        "a": "4929191242968328562",
+        "b": "10807124543174951850"
+      },
+      "total_km": 0,
+      "total_fuel_liters": 0,
+      "energy_source_consumed": 0,
+      "energy_source_type": "FuelLiter",
+      "starting_position": 0,
+      "tyre_tread_consumed": []
+    },
+    {
+      "car_id": {
+        "a": "5249392933132923263",
+        "b": "12894939361181291168"
+      },
+      "total_km": 0,
+      "total_fuel_liters": 0,
+      "energy_source_consumed": 0,
+      "energy_source_type": "FuelLiter",
+      "starting_position": 0,
+      "tyre_tread_consumed": []
+    },
+    {
+      "car_id": {
+        "a": "5607986281223846145",
+        "b": "14042606877886317713"
+      },
+      "total_km": 0,
+      "total_fuel_liters": 0,
+      "energy_source_consumed": 0,
+      "energy_source_type": "FuelLiter",
+      "starting_position": 0,
+      "tyre_tread_consumed": []
+    }
+  ],
+  "driver_standings": [
+    {
+      "a": "5569906338623785954",
+      "b": "12947352131427972023"
+    },
+    {
+      "a": "4838086743967746914",
+      "b": "10507147020085211560"
+    },
+    {
+      "a": "4663555137757405397",
+      "b": "17563839448667834249"
+    },
+    {
+      "a": "4958883287094801082",
+      "b": "9828827818846527410"
+    }
+  ],
+  "time_standings": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "drivers": [
+    {
+      "guid": {
+        "a": "5569906338623785954",
+        "b": "12947352131427972023"
+      },
+      "first_name": "Juegor",
+      "last_name": "Jx",
+      "nickname": "Juegor",
+      "player_id": "76561199641337111",
+      "nation": "DEU",
+      "year_of_birth": 1974
+    },
+    {
+      "guid": {
+        "a": "4838086743967746914",
+        "b": "10507147020085211560"
+      },
+      "first_name": "Daniel",
+      "last_name": "Nx",
+      "nickname": "Nx",
+      "player_id": "76561198086631371",
+      "nation": "DEU",
+      "year_of_birth": 1999
+    },
+    {
+      "guid": {
+        "a": "4663555137757405397",
+        "b": "17563839448667834249"
+      },
+      "first_name": "Nico",
+      "last_name": "der X",
+      "nickname": "der X",
+      "player_id": "76561198935804583",
+      "nation": "DEU",
+      "year_of_birth": 2003
+    },
+    {
+      "guid": {
+        "a": "4958883287094801082",
+        "b": "9828827818846527410"
+      },
+      "first_name": "Stephan",
+      "last_name": "Ossa",
+      "nickname": "Ox",
+      "player_id": "76561198128235053",
+      "nation": "DEU",
+      "year_of_birth": 1966
+    }
+  ],
+  "laps": [],
+  "car_points": [],
+  "driver_points": [],
+  "cars": [
+    {
+      "car_id": {
+        "a": "4872188903426044455",
+        "b": "4271286360426394266"
+      },
+      "model_displayname": "Mercedes-AMG GT2",
+      "model_mechanical_preset": "preset_amggt2_mech_1",
+      "performance_indicator": 17.9641457,
+      "race_number": 2
+    },
+    {
+      "car_id": {
+        "a": "4929191242968328562",
+        "b": "10807124543174951850"
+      },
+      "model_displayname": "Audi R8 LMS GT3 Evo II",
+      "model_mechanical_preset": "preset_r8gt3_mech_1",
+      "performance_indicator": 20.5500355,
+      "race_number": 1
+    },
+    {
+      "car_id": {
+        "a": "5249392933132923263",
+        "b": "12894939361181291168"
+      },
+      "model_displayname": "Ferrari 296 GT3",
+      "model_mechanical_preset": "preset_296gt3_mech_1",
+      "performance_indicator": 22.2773342,
+      "race_number": 3
+    },
+    {
+      "car_id": {
+        "a": "5607986281223846145",
+        "b": "14042606877886317713"
+      },
+      "model_displayname": "BMW M4 GT3 Evo",
+      "model_mechanical_preset": "preset_m4gt3_mech_1",
+      "performance_indicator": 21.1347866,
+      "race_number": 0
+    }
+  ],
+  "collisions": [],
+  "penalty_collection": {
+    "session_penalties": []
+  }
+}

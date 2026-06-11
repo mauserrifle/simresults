@@ -1,0 +1,791 @@
+{
+  "server_name": "Ox seiner",
+  "server_id": null,
+  "server_ip": null,
+  "season_guid": "404c69d9-da9f-4267-90ae-50bac89ae47c",
+  "session_name": "Race Weekend",
+  "session_type": "Qualify",
+  "track_name": "Fuji Speedway",
+  "track_layout_name": "GP",
+  "championship_id": {
+    "a": "4633194501054087783",
+    "b": "10425358950569010300"
+  },
+  "event_index": 0,
+  "session_index": 0,
+  "is_static": false,
+  "is_completed": true,
+  "specialization": {
+    "@type": "type.googleapis.com/TimeAttack.Specialization",
+    "base": {
+      "session_duration_ms": 900000,
+      "session_laps": 0,
+      "maximum_session_overtime_duration_ms": 180000,
+      "maximum_session_overtime_before_next_session": 90000,
+      "intro_music": true,
+      "end_music": true,
+      "end_replay_type": "None"
+    },
+    "base_file": null,
+    "base_source": "Custom",
+    "penalty_transformations": {
+      "transformations": []
+    },
+    "penalty_transformations_file": "EA1",
+    "penalty_transformations_source": "Custom",
+    "penalty_investigations": {
+      "triggers": [
+        {
+          "race_car_cut": {
+            "tyres_out": 3,
+            "wet_multiplier": 0
+          },
+          "command_name": null,
+          "checks": []
+        },
+        {
+          "wrong_way": {
+            "min_speed": 2,
+            "speed_multiplier": 0.1,
+            "out_of_track_multiplier": 2
+          },
+          "command_name": null,
+          "checks": [
+            {
+              "data": {
+                "type": "PenaltyType_Warning",
+                "penalty_time_ms": 0,
+                "laps_for_clearing": 0
+              },
+              "weight": 30
+            },
+            {
+              "data": {
+                "type": "PenaltyType_Disqualification",
+                "penalty_time_ms": 0,
+                "laps_for_clearing": 0
+              },
+              "weight": 100
+            }
+          ]
+        },
+        {
+          "speeding": {
+            "required_speed": 60,
+            "check_if_higher": true
+          },
+          "command_name": "pitlane",
+          "checks": [
+            {
+              "data": {
+                "type": "PenaltyType_Warning",
+                "penalty_time_ms": 0,
+                "laps_for_clearing": 0
+              },
+              "weight": 62
+            },
+            {
+              "data": {
+                "type": "PenaltyType_MP_TeleportToPit",
+                "penalty_time_ms": 10000,
+                "laps_for_clearing": 0
+              },
+              "weight": 70
+            }
+          ]
+        }
+      ]
+    },
+    "penalty_investigations_file": "EA1",
+    "penalty_investigations_source": "Custom",
+    "rules": []
+  },
+  "car_standings": [
+    {
+      "car_id": {
+        "a": "4929191242968328562",
+        "b": "10807124543174951850"
+      },
+      "total_km": 0,
+      "total_fuel_liters": 0,
+      "energy_source_consumed": 0,
+      "energy_source_type": "FuelLiter",
+      "starting_position": 0,
+      "tyre_tread_consumed": []
+    },
+    {
+      "car_id": {
+        "a": "5249392933132923263",
+        "b": "12894939361181291168"
+      },
+      "total_km": 0,
+      "total_fuel_liters": 0,
+      "energy_source_consumed": 0,
+      "energy_source_type": "FuelLiter",
+      "starting_position": 0,
+      "tyre_tread_consumed": []
+    },
+    {
+      "car_id": {
+        "a": "4872188903426044455",
+        "b": "4271286360426394266"
+      },
+      "total_km": 0,
+      "total_fuel_liters": 0,
+      "energy_source_consumed": 0,
+      "energy_source_type": "FuelLiter",
+      "starting_position": 0,
+      "tyre_tread_consumed": []
+    },
+    {
+      "car_id": {
+        "a": "5607986281223846145",
+        "b": "14042606877886317713"
+      },
+      "total_km": 0,
+      "total_fuel_liters": 0,
+      "energy_source_consumed": 0,
+      "energy_source_type": "FuelLiter",
+      "starting_position": 0,
+      "tyre_tread_consumed": []
+    }
+  ],
+  "driver_standings": [
+    {
+      "a": "4838086743967746914",
+      "b": "10507147020085211560"
+    },
+    {
+      "a": "4663555137757405397",
+      "b": "17563839448667834249"
+    },
+    {
+      "a": "5569906338623785954",
+      "b": "12947352131427972023"
+    },
+    {
+      "a": "4958883287094801082",
+      "b": "9828827818846527410"
+    }
+  ],
+  "time_standings": [
+    100992,
+    101766,
+    102768,
+    103041
+  ],
+  "drivers": [
+    {
+      "guid": {
+        "a": "5569906338623785954",
+        "b": "12947352131427972023"
+      },
+      "first_name": "Juegor",
+      "last_name": "Jx",
+      "nickname": "Juegor",
+      "player_id": "76561199641337111",
+      "nation": "DEU",
+      "year_of_birth": 1974
+    },
+    {
+      "guid": {
+        "a": "4838086743967746914",
+        "b": "10507147020085211560"
+      },
+      "first_name": "Daniel",
+      "last_name": "Nx",
+      "nickname": "Nx",
+      "player_id": "76561198086631371",
+      "nation": "DEU",
+      "year_of_birth": 1999
+    },
+    {
+      "guid": {
+        "a": "4663555137757405397",
+        "b": "17563839448667834249"
+      },
+      "first_name": "Nico",
+      "last_name": "der X",
+      "nickname": "der X",
+      "player_id": "76561198935804583",
+      "nation": "DEU",
+      "year_of_birth": 2003
+    },
+    {
+      "guid": {
+        "a": "4958883287094801082",
+        "b": "9828827818846527410"
+      },
+      "first_name": "Stephan",
+      "last_name": "Ox",
+      "nickname": "Ossacip",
+      "player_id": "76561198128235053",
+      "nation": "DEU",
+      "year_of_birth": 1966
+    }
+  ],
+  "laps": [
+    {
+      "car_key": {
+        "a": "4929191242968328562",
+        "b": "10807124543174951850"
+      },
+      "driver_key": {
+        "a": "4838086743967746914",
+        "b": "10507147020085211560"
+      },
+      "time": 101703,
+      "split": [
+        44136,
+        57567
+      ],
+      "flags": 1
+    },
+    {
+      "car_key": {
+        "a": "4929191242968328562",
+        "b": "10807124543174951850"
+      },
+      "driver_key": {
+        "a": "4838086743967746914",
+        "b": "10507147020085211560"
+      },
+      "time": 102051,
+      "split": [
+        43755,
+        58296
+      ],
+      "flags": 1
+    },
+    {
+      "car_key": {
+        "a": "4929191242968328562",
+        "b": "10807124543174951850"
+      },
+      "driver_key": {
+        "a": "4838086743967746914",
+        "b": "10507147020085211560"
+      },
+      "time": 100992,
+      "split": [
+        43704,
+        57288
+      ],
+      "flags": 2
+    },
+    {
+      "car_key": {
+        "a": "5607986281223846145",
+        "b": "14042606877886317713"
+      },
+      "driver_key": {
+        "a": "4958883287094801082",
+        "b": "9828827818846527410"
+      },
+      "time": 103134,
+      "split": [
+        45357,
+        57777
+      ],
+      "flags": 2
+    },
+    {
+      "car_key": {
+        "a": "5607986281223846145",
+        "b": "14042606877886317713"
+      },
+      "driver_key": {
+        "a": "4958883287094801082",
+        "b": "9828827818846527410"
+      },
+      "time": 103299,
+      "split": [
+        45288,
+        58011
+      ],
+      "flags": 2
+    },
+    {
+      "car_key": {
+        "a": "5607986281223846145",
+        "b": "14042606877886317713"
+      },
+      "driver_key": {
+        "a": "4958883287094801082",
+        "b": "9828827818846527410"
+      },
+      "time": 104295,
+      "split": [
+        45495,
+        58800
+      ],
+      "flags": 1
+    },
+    {
+      "car_key": {
+        "a": "5607986281223846145",
+        "b": "14042606877886317713"
+      },
+      "driver_key": {
+        "a": "4958883287094801082",
+        "b": "9828827818846527410"
+      },
+      "time": 159858,
+      "split": [
+        101232,
+        58626
+      ],
+      "flags": 1
+    },
+    {
+      "car_key": {
+        "a": "5607986281223846145",
+        "b": "14042606877886317713"
+      },
+      "driver_key": {
+        "a": "4958883287094801082",
+        "b": "9828827818846527410"
+      },
+      "time": 104283,
+      "split": [
+        45276,
+        59007
+      ],
+      "flags": 2
+    },
+    {
+      "car_key": {
+        "a": "5607986281223846145",
+        "b": "14042606877886317713"
+      },
+      "driver_key": {
+        "a": "4958883287094801082",
+        "b": "9828827818846527410"
+      },
+      "time": 104454,
+      "split": [
+        45177,
+        59277
+      ],
+      "flags": 1
+    },
+    {
+      "car_key": {
+        "a": "5607986281223846145",
+        "b": "14042606877886317713"
+      },
+      "driver_key": {
+        "a": "4958883287094801082",
+        "b": "9828827818846527410"
+      },
+      "time": 103041,
+      "split": [
+        45117,
+        57924
+      ],
+      "flags": 2
+    },
+    {
+      "car_key": {
+        "a": "5249392933132923263",
+        "b": "12894939361181291168"
+      },
+      "driver_key": {
+        "a": "4663555137757405397",
+        "b": "17563839448667834249"
+      },
+      "time": 102750,
+      "split": [
+        45123,
+        57627
+      ],
+      "flags": 2
+    },
+    {
+      "car_key": {
+        "a": "5249392933132923263",
+        "b": "12894939361181291168"
+      },
+      "driver_key": {
+        "a": "4663555137757405397",
+        "b": "17563839448667834249"
+      },
+      "time": 102330,
+      "split": [
+        44568,
+        57762
+      ],
+      "flags": 2
+    },
+    {
+      "car_key": {
+        "a": "5249392933132923263",
+        "b": "12894939361181291168"
+      },
+      "driver_key": {
+        "a": "4663555137757405397",
+        "b": "17563839448667834249"
+      },
+      "time": 102225,
+      "split": [
+        44538,
+        57687
+      ],
+      "flags": 2
+    },
+    {
+      "car_key": {
+        "a": "5249392933132923263",
+        "b": "12894939361181291168"
+      },
+      "driver_key": {
+        "a": "4663555137757405397",
+        "b": "17563839448667834249"
+      },
+      "time": 101766,
+      "split": [
+        44379,
+        57387
+      ],
+      "flags": 2
+    },
+    {
+      "car_key": {
+        "a": "5249392933132923263",
+        "b": "12894939361181291168"
+      },
+      "driver_key": {
+        "a": "4663555137757405397",
+        "b": "17563839448667834249"
+      },
+      "time": 104487,
+      "split": [
+        44868,
+        59619
+      ],
+      "flags": 1
+    },
+    {
+      "car_key": {
+        "a": "4872188903426044455",
+        "b": "4271286360426394266"
+      },
+      "driver_key": {
+        "a": "5569906338623785954",
+        "b": "12947352131427972023"
+      },
+      "time": 103692,
+      "split": [
+        45234,
+        58458
+      ],
+      "flags": 1
+    },
+    {
+      "car_key": {
+        "a": "4872188903426044455",
+        "b": "4271286360426394266"
+      },
+      "driver_key": {
+        "a": "5569906338623785954",
+        "b": "12947352131427972023"
+      },
+      "time": 103263,
+      "split": [
+        45408,
+        57855
+      ],
+      "flags": 2
+    },
+    {
+      "car_key": {
+        "a": "4872188903426044455",
+        "b": "4271286360426394266"
+      },
+      "driver_key": {
+        "a": "5569906338623785954",
+        "b": "12947352131427972023"
+      },
+      "time": 102768,
+      "split": [
+        45240,
+        57528
+      ],
+      "flags": 2
+    },
+    {
+      "car_key": {
+        "a": "4872188903426044455",
+        "b": "4271286360426394266"
+      },
+      "driver_key": {
+        "a": "5569906338623785954",
+        "b": "12947352131427972023"
+      },
+      "time": 104193,
+      "split": [
+        46074,
+        58119
+      ],
+      "flags": 1
+    },
+    {
+      "car_key": {
+        "a": "4872188903426044455",
+        "b": "4271286360426394266"
+      },
+      "driver_key": {
+        "a": "5569906338623785954",
+        "b": "12947352131427972023"
+      },
+      "time": 103056,
+      "split": [
+        44745,
+        58311
+      ],
+      "flags": 2
+    },
+    {
+      "car_key": {
+        "a": "4872188903426044455",
+        "b": "4271286360426394266"
+      },
+      "driver_key": {
+        "a": "5569906338623785954",
+        "b": "12947352131427972023"
+      },
+      "time": 109968,
+      "split": [
+        45405,
+        64563
+      ],
+      "flags": 1
+    }
+  ],
+  "car_points": [],
+  "driver_points": [],
+  "cars": [
+    {
+      "car_id": {
+        "a": "4872188903426044455",
+        "b": "4271286360426394266"
+      },
+      "model_displayname": "Mercedes-AMG GT2",
+      "model_mechanical_preset": "preset_amggt2_mech_1",
+      "performance_indicator": 17.9641457,
+      "race_number": 2
+    },
+    {
+      "car_id": {
+        "a": "4929191242968328562",
+        "b": "10807124543174951850"
+      },
+      "model_displayname": "Audi R8 LMS GT3 Evo II",
+      "model_mechanical_preset": "preset_r8gt3_mech_1",
+      "performance_indicator": 20.5500355,
+      "race_number": 1
+    },
+    {
+      "car_id": {
+        "a": "5249392933132923263",
+        "b": "12894939361181291168"
+      },
+      "model_displayname": "Ferrari 296 GT3",
+      "model_mechanical_preset": "preset_296gt3_mech_1",
+      "performance_indicator": 22.2773342,
+      "race_number": 3
+    },
+    {
+      "car_id": {
+        "a": "5607986281223846145",
+        "b": "14042606877886317713"
+      },
+      "model_displayname": "BMW M4 GT3 Evo",
+      "model_mechanical_preset": "preset_m4gt3_mech_1",
+      "performance_indicator": 21.1347866,
+      "race_number": 0
+    }
+  ],
+  "collisions": [
+    {
+      "local_timestamp": 1627712.4936,
+      "server_timestamp": 3830328.921740859,
+      "car_id": {
+        "a": "5249392933132923263",
+        "b": "12894939361181291168"
+      },
+      "collider": "Object",
+      "has_damage": false,
+      "relative_impact_kmh": 1.58531988,
+      "world_pos": {
+        "x": -355.055206,
+        "y": 564.858,
+        "z": 250.412338
+      },
+      "rel_pos": {
+        "x": -0.885947406,
+        "y": -0.132231295,
+        "z": 2.19014692
+      },
+      "normal": {
+        "x": -0.98534888,
+        "y": -0.0283194985,
+        "z": -0.168183237
+      }
+    },
+    {
+      "local_timestamp": 3776488.6478,
+      "server_timestamp": 4226853.2467879765,
+      "car_id": {
+        "a": "4929191242968328562",
+        "b": "10807124543174951850"
+      },
+      "collider": "Wall",
+      "has_damage": true,
+      "relative_impact_kmh": 27.7526093,
+      "world_pos": {
+        "x": -357.278503,
+        "y": 562.173157,
+        "z": 325.866791
+      },
+      "rel_pos": {
+        "x": 0.982196033,
+        "y": 0.21086356,
+        "z": -1.56835914
+      },
+      "normal": {
+        "x": 0.750882387,
+        "y": 0,
+        "z": -0.660436
+      }
+    },
+    {
+      "local_timestamp": 2171717.4935999997,
+      "server_timestamp": 4374336.626369032,
+      "car_id": {
+        "a": "5249392933132923263",
+        "b": "12894939361181291168"
+      },
+      "collider": "Wall",
+      "has_damage": true,
+      "relative_impact_kmh": 87.7093353,
+      "world_pos": {
+        "x": 81.2484283,
+        "y": 580.253296,
+        "z": -326.555786
+      },
+      "rel_pos": {
+        "x": -1.02077079,
+        "y": -0.344071358,
+        "z": 2.15217352
+      },
+      "normal": {
+        "x": -0.768733323,
+        "y": 0,
+        "z": -0.639569461
+      }
+    },
+    {
+      "local_timestamp": 2172977.4935999997,
+      "server_timestamp": 4375596.559984516,
+      "car_id": {
+        "a": "5249392933132923263",
+        "b": "12894939361181291168"
+      },
+      "collider": "Object",
+      "has_damage": false,
+      "relative_impact_kmh": 103.525375,
+      "world_pos": {
+        "x": 106.787491,
+        "y": 580.54126,
+        "z": -367.712646
+      },
+      "rel_pos": {
+        "x": 0.366176307,
+        "y": -0.2645877,
+        "z": 2.57664084
+      },
+      "normal": {
+        "x": -0.304192215,
+        "y": 0.20324108,
+        "z": 0.930677235
+      }
+    },
+    {
+      "local_timestamp": 2175377.4935999997,
+      "server_timestamp": 4377996.126898064,
+      "car_id": {
+        "a": "5249392933132923263",
+        "b": "12894939361181291168"
+      },
+      "collider": "Wall",
+      "has_damage": true,
+      "relative_impact_kmh": 29.3829899,
+      "world_pos": {
+        "x": 159.924774,
+        "y": 580.687,
+        "z": -395.187256
+      },
+      "rel_pos": {
+        "x": -1.02077079,
+        "y": -0.344071358,
+        "z": 2.15217352
+      },
+      "normal": {
+        "x": -0.643983,
+        "y": 0,
+        "z": -0.765039802
+      }
+    },
+    {
+      "local_timestamp": 2175785.4935999997,
+      "server_timestamp": 4378404.126898064,
+      "car_id": {
+        "a": "5249392933132923263",
+        "b": "12894939361181291168"
+      },
+      "collider": "Object",
+      "has_damage": false,
+      "relative_impact_kmh": 0.294889838,
+      "world_pos": {
+        "x": 163.351227,
+        "y": 580.653259,
+        "z": -400.055115
+      },
+      "rel_pos": {
+        "x": -0.89,
+        "y": -0.324160278,
+        "z": 2.25757909
+      },
+      "normal": {
+        "x": -0.0108799962,
+        "y": 0.999836683,
+        "z": -0.0144322468
+      }
+    }
+  ],
+  "penalty_collection": {
+    "session_penalties": [
+      {
+        "car_id": {
+          "a": "5249392933132923263",
+          "b": "12894939361181291168"
+        },
+        "pending_penalties": [],
+        "cleared_penalties": [
+          {
+            "penalty_data": {
+              "type": "PenaltyType_MP_TeleportToPit",
+              "penalty_time_ms": 10000,
+              "laps_for_clearing": 0
+            },
+            "investigation": "InvestigationType_Speeding",
+            "given_lap_count": 4,
+            "given_session_time_ms": "646872",
+            "cleared_session_time_ms": "858424"
+          }
+        ]
+      }
+    ]
+  }
+}
