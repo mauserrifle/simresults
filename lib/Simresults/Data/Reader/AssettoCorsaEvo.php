@@ -167,14 +167,13 @@ class Data_Reader_AssettoCorsaEvo extends Data_Reader {
             }
 
             if (count($splits) >= 2) {
-                $lap->addSectorTime(round(($splits[1] - $splits[0]) / 1000, 4)); // Sector 2
-            }
+                $lap->addSectorTime(round($splits[1] / 1000, 4)); // Sector 2
 
-            // Calculate Sector 3 if we have lap time + at least one split
-            if ($lap_time and count($splits) >= 1) {
-                $lastSplit = end($splits);
-                $sector3 = round(($lap_time - $lastSplit) / 1000, 4);
-                $lap->addSectorTime($sector3);
+                // Calculate Sector 3 if we have total time
+                if ($lap_time) {
+                    $sector3 = round(($lap_time - $splits[1]) / 1000, 4);
+                    $lap->addSectorTime($sector3);
+                }
             }
 
             // Add lap to participant

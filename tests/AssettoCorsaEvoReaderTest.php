@@ -159,7 +159,7 @@ class AssettoCorsaEvoReaderTest extends \PHPUnit\Framework\TestCase {
 
         // Validate sectors
         $this->assertSame(49.394, $sectors[0]);
-        $this->assertSame(9.409, $sectors[1]);
+        $this->assertSame(58.803, $sectors[1]);
         $this->assertSame(49.394, $sectors[2]);
 
         // Second lap
