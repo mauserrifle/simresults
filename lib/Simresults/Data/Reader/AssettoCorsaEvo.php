@@ -163,7 +163,7 @@ class Data_Reader_AssettoCorsaEvo extends Data_Reader {
 
             $splits = $lap_data['split'] ?? [];
             if (count($splits) >= 1) {
-                $lap->addSectorTime(round($splits[0] / 1000, 4));           // Sector 1
+                $lap->addSectorTime(round($splits[0] / 1000, 4)); // Sector 1
             }
 
             if (count($splits) >= 2) {
@@ -171,7 +171,7 @@ class Data_Reader_AssettoCorsaEvo extends Data_Reader {
 
                 // Calculate Sector 3 if we have total time
                 if ($lap_time) {
-                    $sector3 = round(($lap_time - $splits[1]) / 1000, 4);
+                    $sector3 = round(($lap_time - $splits[1] - $splits[0]) / 1000, 4);
                     $lap->addSectorTime($sector3);
                 }
             }
