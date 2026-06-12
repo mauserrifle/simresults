@@ -217,6 +217,77 @@ class Data_Reader_AssettoCorsaEvo extends Data_Reader {
             }
         }
 
+        /**
+         * Penalties
+         */
+
+        // Penalties
+        $penalties = [];
+        $session_penalties_data = $session_data['penalty_collection']['session_penalties']??[];
+        foreach ($session_penalties_data as $session_penalty_data) {
+
+            $penalty_car_id = $session_penalty_data['car_id']['a'].'-'.$session_penalty_data['car_id']['b'];
+
+            if (!$penalty_participant = $participants_by_car_id[$penalty_car_id]) {
+                continue;
+            }
+
+            $cleared_penalties_data = $session_penalty_data['cleared_penalties']??[] ;
+            foreach ($cleared_penalties_data as &$item) {
+                $item['cleared'] = true;
+            }
+            unset($item);
+            $pending_penalties_data = $session_penalty_data['pending_penalties']??[] ;
+            foreach ($pending_penalties_data as &$item) {
+                $item['cleared'] = false;
+            }
+            unset($item);
+
+            foreach (array_merge($pending_penalties_data, $cleared_penalties_data) as $penalty_data) {
+                // Create new penalty
+                $penalty = new Penalty;
+                $penalty->setParticipant($penalty_participant)
+                        ->setServed($penalty_data['cleared'])
+                        ->setElapsedSeconds($penalty_data['given_session_time_ms'] / 1000);
+
+
+                $penalty_lap = $penalty_participant->getLap($penalty_data['given_lap_count']);
+                $penalty_driver = $penalty_lap->getDriver();
+
+                $penalty_type = ($penalty_data['penalty_data']['type']??'Unknown type');
+                $penalty_reason = ($penalty_data['investigation']??'Unknown reason');
+
+                if (stripos($penalty_reason, 'cut') !== false) {
+                    $cut = new Cut;
+                    $cut->setLap($penalty_lap)
+                        ->setElapsedSeconds($penalty->getElapsedSeconds());
+                    $penalty_lap->addCut($cut);
+                }
+
+                // Set message
+                $penalty->setMessage(
+                    $penalty_driver->getName().
+
+                    ' - '.
+                    ($penalty_reason).
+
+                    ' - '.
+                    $penalty_type.
+
+                    ' - violation in lap '.
+                    ($penalty_data['given_lap_count']??'?').
+
+                    ' - cleared at (minutes) '.
+                    (($penalty_data['cleared_session_time_ms'] / 1000)/60)
+                );
+
+                // Add penalty to penalties
+                $penalties[] = $penalty;
+            }
+        }
+
+        $session->setPenalties($penalties);
+
         // Set participants with normal array keys
         $session->setParticipants(array_values($participants_by_car_id));
 

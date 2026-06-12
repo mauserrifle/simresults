@@ -177,6 +177,40 @@ class AssettoCorsaEvoReaderTest extends \PHPUnit\Framework\TestCase {
         $this->assertSame(4 , $laps[1]->getPosition());
     }
 
+    /**
+     * Test penalties
+     */
+    public function testPenalties()
+    {
+        // Get the session
+        $session = $this->getWorkingReader()->getSession();
+
+        //-- Validate
+        $this->assertSame(Session::TYPE_RACE, $session->getType());
+
+        // Get penalties
+        $penalties = $session->getPenalties();
+
+        // Assert drivers
+        $this->assertSame('Juegor Jx - InvestigationType_Speeding - PenaltyType_Drive_Through - violation in lap 19 - cleared at (minutes) 36.566766666667',
+            $penalties[0]->getMessage());
+        $this->assertTrue($penalties[0]->isServed());
+        $this->assertSame('Juegor Jx',$penalties[0]->getParticipant()->getDriver()->getName());
+
+        $this->assertSame('Juegor Jx - InvestigationType_Racecar_Cut - PenaltyType_Warning - violation in lap 3 - cleared at (minutes) 52.234166666667',
+            $penalties[1]->getMessage());
+
+        // Assert lap cuts data
+        $participants = $session->getParticipants();
+        $cuts = $participants[3]->getLap(3)->getCuts();
+
+        // Not values known
+        $this->assertSame(null, $cuts[0]->getCutTime());
+        $this->assertSame(null, $cuts[0]->getTimeSkipped());
+        $this->assertSame(389.453, $cuts[0]->getElapsedSeconds());
+        $this->assertSame(null, $cuts[0]->getDate());
+    }
+
 
     /***
      **** Below tests use different logs to test differences and bugs
