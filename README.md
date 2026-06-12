@@ -37,10 +37,7 @@ It's also possible to use the Simresults website remote results [API](https://si
 
 ## Sponsors
 
-Big thanks to the following sponsors for supporting Simresults!
-Please pay them a visit :)
-
-* [XCL - Simracing for PS5 & Xbox S/X](https://www.xboxcommunityleague.com/?ref=simresults)
+Consider sponsoring Simresults and be featured on this page! :)
 
 ## Supported games
 
