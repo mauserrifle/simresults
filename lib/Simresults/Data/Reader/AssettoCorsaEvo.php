@@ -27,7 +27,6 @@ class Data_Reader_AssettoCorsaEvo extends Data_Reader {
     protected function readSessions()
     {
         // TODO
-        // Penalties
         // Flagged laps
         // Collisions
 
