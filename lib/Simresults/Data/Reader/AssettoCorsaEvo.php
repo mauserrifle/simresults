@@ -10,6 +10,8 @@ namespace Simresults;
  */
 class Data_Reader_AssettoCorsaEvo extends Data_Reader {
 
+    protected $classes = ['Cup', 'GT2', 'GT3', 'GT4', 'GTC', 'ST', 'TCX'];
+
     /**
      * @inheritDoc
      */
@@ -62,8 +64,15 @@ class Data_Reader_AssettoCorsaEvo extends Data_Reader {
         foreach ($session_data['cars'] as $car_data) {
             // Create vehicle and add to participant
             $vehicle = new Vehicle;
-            $vehicle->setName($car_data['model_displayname']??'Unknown')
+            $vehicle->setName($vehicle_name = $car_data['model_displayname']??'Unknown')
                     ->setNumber($car_data['race_number']??null);
+
+            foreach ($this->classes as $class) {
+                if (stripos(strtolower($vehicle_name), strtolower($class)) !== false) {
+                    $vehicle->setClass($class);
+                    break;
+                }
+            }
 
             $car_id = $car_data['car_id']['a'].'-'.$car_data['car_id']['b'];
             $cars_by_id[$car_id] = $vehicle;
@@ -94,6 +103,7 @@ class Data_Reader_AssettoCorsaEvo extends Data_Reader {
         // Collect participants in order of standings, but only when there are laps
         // because we cannot assign a car without laps...
         $participants_by_car_id = [];
+        $position_per_class = [];
         if ($laps_data)
         foreach ($session_data['car_standings']??[] as $standing_data)  {
 
@@ -108,6 +118,13 @@ class Data_Reader_AssettoCorsaEvo extends Data_Reader {
             $participant->setVehicle($vehicle)
                         ->setFinishStatus(Participant::FINISH_NORMAL)
                         ->setGridPosition($standing_data['start_position']??null);
+
+
+            $vehicle_class = $vehicle->getClass()?:'Unknown';
+            if (!isset($position_per_class[$vehicle_class])) {
+                $position_per_class[$vehicle_class] = 0;
+            }
+            $participant->setClassPosition(++$position_per_class[$vehicle_class]);
 
             $participants_by_car_id[$car_id] = $participant;
         }

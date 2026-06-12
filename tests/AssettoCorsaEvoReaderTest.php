@@ -102,11 +102,11 @@ class AssettoCorsaEvoReaderTest extends \PHPUnit\Framework\TestCase {
         $this->assertSame('76561198935804583', $participant->getDriver()->getDriverId());
         $this->assertSame(3, $participant->getVehicle()->getNumber());
         // TODO: Parse class and cup?
-        //$this->assertSame('GT3', $participant->getVehicle()->getClass());
+        $this->assertSame('GT3', $participant->getVehicle()->getClass());
         //$this->assertSame('Overall', $participant->getVehicle()->getCup());
         $this->assertSame(null, $participant->getTeam());
         $this->assertSame(1, $participant->getPosition());
-        //$this->assertSame(1, $participant->getClassPosition());
+        $this->assertSame(1, $participant->getClassPosition());
         $this->assertSame(Participant::FINISH_NORMAL,
             $participant->getFinishStatus());
         $this->assertSame(3050.033, $participant->getTotalTime());
@@ -114,13 +114,13 @@ class AssettoCorsaEvoReaderTest extends \PHPUnit\Framework\TestCase {
         // Second
         $participant = $participants[1];
         $this->assertSame(2, $participant->getPosition());
-        //$this->assertSame(2, $participant->getClassPosition());
-        //$this->assertSame('GT3', $participant->getVehicle()->getClass());
+        $this->assertSame(2, $participant->getClassPosition());
+        $this->assertSame('GT3', $participant->getVehicle()->getClass());
         //$this->assertSame('Pro-Am', $participant->getVehicle()->getCup());
         $participant = $participants[2];
         $this->assertSame(3, $participant->getPosition());
-        //$this->assertSame(3, $participant->getClassPosition());
-        //$this->assertSame('GT3', $participant->getVehicle()->getClass());
+        $this->assertSame(3, $participant->getClassPosition());
+        $this->assertSame('GT3', $participant->getVehicle()->getClass());
         //$this->assertSame('Overall', $participant->getVehicle()->getCup());
     }
 
