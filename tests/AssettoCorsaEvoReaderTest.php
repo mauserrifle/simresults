@@ -40,6 +40,8 @@ class AssettoCorsaEvoReaderTest extends \PHPUnit\Framework\TestCase {
         //-- Validate
         $this->assertSame(Session::TYPE_RACE, $session->getType());
         $this->assertSame(29, $session->getLastedLaps());
+        $this->assertSame(null, $session->getMaxLaps());
+        $this->assertSame(50, $session->getMaxMinutes());
 //        $this->assertSame(array(
 //            'isWetSession' => 1
 //        ), $session->getOtherSettings());

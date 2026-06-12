@@ -33,6 +33,15 @@ class Data_Reader_AssettoCorsaEvo extends Data_Reader {
         $session_data = self::readLog($this->data);
         $session = $this->helper->detectSession($session_data['session_type']);
 
+        if ($base = $session_data['specialization']['base']??null) {
+            if ($session_laps = $base['session_laps']??null) {
+                $session->setMaxLaps($session_laps);
+            }
+            if ($session_duration_ms = $base['session_duration_ms']??null) {
+                $session->setMaxMinutes($session_duration_ms / 60000);
+            }
+        }
+
         // Set game
         $game = new Game; $game->setName('Assetto Corsa Evo');
         $session->setGame($game);
