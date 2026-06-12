@@ -8,7 +8,7 @@ namespace Simresults;
  * @copyright  (c) 2013 Maurice van der Star
  * @license    http://opensource.org/licenses/ISC
  */
-class Data_Reader_AssettoCorsaEvo extends Data_Reader {
+class Data_Reader_AssettoCorsaEvoServer extends Data_Reader {
 
     protected $classes = ['Cup', 'GT2', 'GT3', 'GT4', 'GTC', 'ST', 'TCX'];
 

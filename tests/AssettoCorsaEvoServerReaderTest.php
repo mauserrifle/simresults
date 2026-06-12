@@ -1,6 +1,6 @@
 <?php
 use Simresults\Data_Reader;
-use Simresults\Data_Reader_AssettoCorsaEvo;
+use Simresults\Data_Reader_AssettoCorsaEvoServer;
 use Simresults\Session;
 use Simresults\Participant;
 use Simresults\Incident;
@@ -13,7 +13,7 @@ use Simresults\Incident;
  * @copyright  (c) 2013 Maurice van der Star
  * @license    http://opensource.org/licenses/ISC
  */
-class AssettoCorsaEvoReaderTest extends \PHPUnit\Framework\TestCase {
+class AssettoCorsaEvoServerReaderTest extends \PHPUnit\Framework\TestCase {
 
     /**
      * Set error reporting
@@ -251,7 +251,7 @@ class AssettoCorsaEvoReaderTest extends \PHPUnit\Framework\TestCase {
     public function testCreatingNewAssettoCorsaReaderWithInvalidData()
     {
         $this->expectException(\Simresults\Exception\CannotReadData::class);
-        $reader = new Data_Reader_AssettoCorsaEvo('Unknown data for reader');
+        $reader = new Data_Reader_AssettoCorsaEvoServer('Unknown data for reader');
     }
 
     /**

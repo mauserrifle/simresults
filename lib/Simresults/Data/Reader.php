@@ -51,7 +51,7 @@ abstract class Data_Reader {
             'Simresults\Data_Reader_AssettoCorsaServerJson',
             'Simresults\Data_Reader_AssettoCorsaServer',
             'Simresults\Data_Reader_AssettoCorsaCompetizione',
-            'Simresults\Data_Reader_AssettoCorsaEvo',
+            'Simresults\Data_Reader_AssettoCorsaEvoServer',
             'Simresults\Data_Reader_ProjectCarsServer',
             'Simresults\Data_Reader_RaceRoomServer',
             'Simresults\Data_Reader_Race07',

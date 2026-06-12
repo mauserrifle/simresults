@@ -141,9 +141,9 @@ lap.
 
 `lib/Data/Reader/AssettoCorsaCompetizione.php`
 
-### Assetto Corsa Evo
+### Assetto Corsa Evo server reader
 
-`lib/Data/Reader/AssettoCorsaEvo.php`
+`lib/Data/Reader/AssettoCorsaEvoServer.php`
 
 ### RaceRoom Server reader
 
