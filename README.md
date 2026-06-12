@@ -52,6 +52,7 @@ Simresults supports a wide range of games:
 * Project Cars 2
 * Assetto Corsa
 * Assetto Corsa Competizione
+* Assetto Corsa Evo
 * Automobilista
 * Automobilista 2
 * Game Stock Car 2012
@@ -139,6 +140,10 @@ lap.
 ### Assetto Corsa Competizione
 
 `lib/Data/Reader/AssettoCorsaCompetizione.php`
+
+### Assetto Corsa Evo
+
+`lib/Data/Reader/AssettoCorsaEvo.php`
 
 ### RaceRoom Server reader
 
