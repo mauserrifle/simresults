@@ -134,9 +134,6 @@ class Data_Reader_AssettoCorsaEvoServer extends Data_Reader {
         // Remember lap number per participant
         $lap_number_counter = array();
 
-        // Remember positions per lap number
-        $lap_position_counter = array();
-
         // Collect laps
         foreach ($laps_data as $lap_data)  {
 
@@ -155,23 +152,13 @@ class Data_Reader_AssettoCorsaEvoServer extends Data_Reader {
                 $lap_number = ++$lap_number_counter[$car_id];
             }
 
-            // Determine lap position
-            $lap_position = null;
-            if (!isset($lap_position_counter[$lap_number])) {
-                $lap_position = $lap_position_counter[$lap_number] = 1;
-            } else {
-                $lap_position = ++$lap_position_counter[$lap_number];
-            }
-
-
             // Init new lap
             $lap = new Lap;
 
             $lap_participant = $participants_by_car_id[$car_id];
 
             // Set participant
-            $lap->setParticipant($lap_participant)
-                ->setPosition($lap_position);
+            $lap->setParticipant($lap_participant);
 
             $driver_id = $lap_data['driver_key']['a'].'-'.$lap_data['driver_key']['b'];
 
