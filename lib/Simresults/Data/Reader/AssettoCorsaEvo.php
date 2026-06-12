@@ -28,7 +28,6 @@ class Data_Reader_AssettoCorsaEvo extends Data_Reader {
     {
         // TODO
         // Flagged laps
-        // Collisions
 
         // Init session
         $session_data = self::readLog($this->data);
@@ -286,6 +285,71 @@ class Data_Reader_AssettoCorsaEvo extends Data_Reader {
         }
 
         $session->setPenalties($penalties);
+
+
+        /**
+         * Incidents
+         */
+
+        $incidents = [];
+        foreach ($session_data['collisions'] as $collision_data) {
+
+            $collision_car_id = $collision_data['car_id']['a'].'-'.$collision_data['car_id']['b'];
+
+            if (!$collision_participant = $participants_by_car_id[$collision_car_id]) {
+                continue;
+            }
+
+            $type_collisions = array(
+                'Car' => Incident::TYPE_CAR,
+                'Object' => Incident::TYPE_ENV,
+                'Wall' => Incident::TYPE_ENV,
+            );
+
+             // Type not known. continue to next
+            if ( ! in_array($collision_data['collider'], array_keys($type_collisions))) {
+                continue;
+            }
+            $collision_type = $type_collisions[$collision_data['collider']];
+
+
+            $incident = new Incident;
+            $incident->setType($collision_type)
+                     ->setParticipant($collision_participant);
+
+
+            $driver_names = [];
+            foreach ($collision_participant->getDrivers() as $driver) {
+                $driver_names[] = $driver->getName();
+            }
+            $driver_names_string = implode(', ', $driver_names);
+
+
+            if ($collision_type === Incident::TYPE_CAR)
+            {
+                $incident->setMessage(sprintf(
+                    '%s reported contact with another vehicle. '.
+                    'Impact speed: %s' ,
+                    $driver_names_string,
+                    $collision_data['relative_impact_kmh']
+                ));
+            }
+            elseif ($collision_type === Incident::TYPE_ENV)
+            {
+                $incident->setMessage(sprintf(
+                    '%s reported contact with environment. '.
+                    'Impact speed: %s' ,
+                    $driver_names_string,
+                    $collision_data['relative_impact_kmh']
+                ));
+            }
+
+            $incidents[] = $incident;
+        }
+
+        $session->setIncidents($incidents);
+
+
 
         // Set participants with normal array keys
         $session->setParticipants(array_values($participants_by_car_id));

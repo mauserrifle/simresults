@@ -3,6 +3,7 @@ use Simresults\Data_Reader;
 use Simresults\Data_Reader_AssettoCorsaEvo;
 use Simresults\Session;
 use Simresults\Participant;
+use Simresults\Incident;
 
 /**
  * Tests for the Assetto Corsa Evo JSON reader
@@ -210,6 +211,34 @@ class AssettoCorsaEvoReaderTest extends \PHPUnit\Framework\TestCase {
         $this->assertSame(389.453, $cuts[0]->getElapsedSeconds());
         $this->assertSame(null, $cuts[0]->getDate());
     }
+
+    /**
+     * Test reading incidents
+     */
+    public function testIncidents()
+    {
+        // Get participants
+        $session = $this->getWorkingReader()->getSession();
+
+        $incidents = $session->getIncidents();
+        $participants = $session->getParticipants();
+
+        // Validate first incident
+        $this->assertSame(Incident::TYPE_ENV, $incidents[0]->getType());
+        $this->assertSame($participants[3], $incidents[0]->getParticipant());
+        $this->assertSame(null, $incidents[0]->getOtherParticipant());
+        $this->assertSame(
+            'Juegor Jx reported contact with environment. Impact speed: 96.2583466',
+            $incidents[0]->getMessage());
+
+        $this->assertSame(Incident::TYPE_CAR, $incidents[14]->getType());
+        $this->assertSame($participants[0], $incidents[14]->getParticipant());
+        $this->assertNull($incidents[14]->getOtherParticipant());
+        $this->assertSame(
+            'Nico der X reported contact with another vehicle. Impact speed: 0.570071578',
+            $incidents[14]->getMessage());
+    }
+
 
 
     /***
