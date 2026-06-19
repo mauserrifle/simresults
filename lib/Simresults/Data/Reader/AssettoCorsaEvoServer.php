@@ -217,7 +217,7 @@ class Data_Reader_AssettoCorsaEvoServer extends Data_Reader {
 
             $penalty_car_id = $session_penalty_data['car_id']['a'].'-'.$session_penalty_data['car_id']['b'];
 
-            if (!$penalty_participant = $participants_by_car_id[$penalty_car_id]) {
+            if (!$penalty_participant = $participants_by_car_id[$penalty_car_id]??null) {
                 continue;
             }
 
@@ -240,8 +240,13 @@ class Data_Reader_AssettoCorsaEvoServer extends Data_Reader {
                         ->setElapsedSeconds($penalty_data['given_session_time_ms'] / 1000);
 
 
-                $penalty_lap = $penalty_participant->getLap($penalty_data['given_lap_count']);
-                $penalty_driver = $penalty_lap->getDriver();
+                if (!$penalty_lap = $penalty_participant->getLap($penalty_data['given_lap_count'])) {
+                    continue;
+                }
+
+                if (!$penalty_driver = $penalty_lap->getDriver()) {
+                    continue;
+                }
 
                 $penalty_type = ($penalty_data['penalty_data']['type']??'Unknown type');
                 $penalty_reason = ($penalty_data['investigation']??'Unknown reason');
@@ -287,7 +292,7 @@ class Data_Reader_AssettoCorsaEvoServer extends Data_Reader {
 
             $collision_car_id = $collision_data['car_id']['a'].'-'.$collision_data['car_id']['b'];
 
-            if (!$collision_participant = $participants_by_car_id[$collision_car_id]) {
+            if (!$collision_participant = $participants_by_car_id[$collision_car_id]??null) {
                 continue;
             }
 
