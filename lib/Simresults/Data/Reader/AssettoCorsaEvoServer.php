@@ -155,15 +155,19 @@ class Data_Reader_AssettoCorsaEvoServer extends Data_Reader {
             // Init new lap
             $lap = new Lap;
 
-            $lap_participant = $participants_by_car_id[$car_id];
+            if (!$lap_participant = $participants_by_car_id[$car_id]??null) {
+                continue;
+            }
 
             // Set participant
             $lap->setParticipant($lap_participant);
 
             $driver_id = $lap_data['driver_key']['a'].'-'.$lap_data['driver_key']['b'];
 
-            // Set driver based on driver index (swapping support)
-            $lap_driver = $drivers_by_id[$driver_id];
+            if (!$lap_driver = $drivers_by_id[$driver_id] and !$lap_driver = $lap_participant->getDriver()) {
+                continue;
+            }
+
             $lap->setDriver($lap_driver);
 
             $lap_time = $lap_data['time']??null;
