@@ -165,7 +165,11 @@ class Data_Reader_AssettoCorsaEvoServer extends Data_Reader {
             $driver_id = $lap_data['driver_key']['a'].'-'.$lap_data['driver_key']['b'];
 
             if (!$lap_driver = $drivers_by_id[$driver_id] and !$lap_driver = $lap_participant->getDriver()) {
-                continue;
+                // TODO unittest
+                $lap_driver = new Driver;
+                $lap_driver->setName('Unknown driver')
+                           ->setDriverId($driver_id);
+                $drivers_by_id[$driver_id] = $lap_driver;
             }
 
             $lap->setDriver($lap_driver);
