@@ -345,10 +345,14 @@ class Data_Reader_AssettoCorsaEvoServer extends Data_Reader {
 
         $session->setIncidents($incidents);
 
-
+        // Filter out participants without driver
+        $participants = array_filter($participants_by_car_id, function($item) {
+            return (bool)$item->getDriver();
+        });
 
         // Set participants with normal array keys
-        $session->setParticipants(array_values($participants_by_car_id));
+        $participants = array_values($participants);
+        $session->setParticipants($participants);
 
         return [$session];
     }
