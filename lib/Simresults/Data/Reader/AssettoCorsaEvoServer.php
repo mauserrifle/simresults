@@ -26,6 +26,9 @@ class Data_Reader_AssettoCorsaEvoServer extends Data_Reader {
      */
     protected function readSessions()
     {
+        // TODO
+        // Flagged laps
+
         // Init session
         $session_data = self::readLog($this->data);
         $session = $this->helper->detectSession($session_data['session_type']);
@@ -195,15 +198,6 @@ class Data_Reader_AssettoCorsaEvoServer extends Data_Reader {
                     $lap->addSectorTime($sector3);
                 }
             }
-
-            // TODO: setValidForBest. Use flags? Seems to mark a lot invalid.
-            // Wait for a better setting?
-            // Disabled trial code:
-            // if ($flags = $lap_data['flags']??null) {
-            //     if (in_array($flags, [1,129])) {
-            //         $lap->setValidForBest(false);
-            //     }
-            // }
 
             // Add lap to participant
             $lap_participant->addLap($lap);
