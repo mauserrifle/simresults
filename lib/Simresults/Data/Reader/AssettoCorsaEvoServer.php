@@ -26,9 +26,6 @@ class Data_Reader_AssettoCorsaEvoServer extends Data_Reader {
      */
     protected function readSessions()
     {
-        // TODO
-        // Flagged laps
-
         // Init session
         $session_data = self::readLog($this->data);
         $session = $this->helper->detectSession($session_data['session_type']);
@@ -196,6 +193,13 @@ class Data_Reader_AssettoCorsaEvoServer extends Data_Reader {
                 elseif ($lap_time) {
                     $sector3 = round(($lap_time - $splits[1] - $splits[0]) / 1000, 4);
                     $lap->addSectorTime($sector3);
+                }
+            }
+
+            // Invalid?
+            if ($flags = $lap_data['flags']??null) {
+                if (in_array($flags, [1,129])) {
+                    $lap->setValidForBest(false);
                 }
             }
 

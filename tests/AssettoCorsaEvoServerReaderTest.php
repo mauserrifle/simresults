@@ -156,6 +156,7 @@ class AssettoCorsaEvoServerReaderTest extends \PHPUnit\Framework\TestCase {
         $this->assertSame(0, $lap->getElapsedSeconds());
         $this->assertSame($participants[0], $lap->getParticipant());
         $this->assertSame($driver, $lap->getDriver());
+        $this->assertSame(false, $lap->isValidForBest());
 
         // Get sector times
         $sectors = $lap->getSectorTimes();
@@ -171,6 +172,7 @@ class AssettoCorsaEvoServerReaderTest extends \PHPUnit\Framework\TestCase {
         $this->assertSame(3, $lap->getPosition());
         $this->assertSame(103.689, $lap->getTime());
         $this->assertSame(108.197, $lap->getElapsedSeconds());
+        $this->assertSame(true, $lap->isValidForBest());
 
         // Validate extra positions
         $laps = $participants[2]->getLaps();
@@ -203,7 +205,11 @@ class AssettoCorsaEvoServerReaderTest extends \PHPUnit\Framework\TestCase {
 
         // Assert lap cuts data
         $participants = $session->getParticipants();
-        $cuts = $participants[3]->getLap(3)->getCuts();
+
+        $lap = $participants[3]->getLap(3);
+        $this->assertFalse($lap->isValidForBest());
+
+        $cuts = $lap->getCuts();
 
         // Not values known
         $this->assertSame(null, $cuts[0]->getCutTime());
